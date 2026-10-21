@@ -13,13 +13,13 @@ The eight printed I.7 steps are unchanged. The supplement is explicitly modern;
 I.7 labels. [Source notes](sources.md#the-supplementary-i7-case-study) distinguish
 the Heiberg passage from Heath's account of the additional argument.
 
-| Placement of Δ | What changes | Appropriate reason |
-| --- | --- | --- |
-| Outside ΑΒΓ | ∠ΔΓΒ is part of ∠ΑΓΔ | I.5's equal interior base angles connect two strict part comparisons |
-| Inside ΑΒΓ | ΓΒ leaves the interior of ∠ΑΓΔ | Extend the equal sides and use I.5's equal exterior angles |
-| On ΒΓ, between its ends | Triangle ΒΓΔ is degenerate | ΒΓ = ΒΔ + ΔΓ > ΒΔ, by whole and part of a segment |
-| Reflected across ΑΒ | Both distance pairs agree | The same-side hypothesis fails |
-| Coincident with Γ | Both distance pairs agree | The distinct-point hypothesis fails |
+| Placement of Δ          | What changes                   | Appropriate reason                                                   |
+| ----------------------- | ------------------------------ | -------------------------------------------------------------------- |
+| Outside ΑΒΓ             | ∠ΔΓΒ is part of ∠ΑΓΔ           | I.5's equal interior base angles connect two strict part comparisons |
+| Inside ΑΒΓ              | ΓΒ leaves the interior of ∠ΑΓΔ | Extend the equal sides and use I.5's equal exterior angles           |
+| On ΒΓ, between its ends | Triangle ΒΓΔ is degenerate     | ΒΓ = ΒΔ + ΔΓ > ΒΔ, by whole and part of a segment                    |
+| Reflected across ΑΒ     | Both distance pairs agree      | The same-side hypothesis fails                                       |
+| Coincident with Γ       | Both distance pairs agree      | The distinct-point hypothesis fails                                  |
 
 A subtle distinction matters: the interior placement does **not** necessarily
 reverse the printed numerical inequality. It invalidates the particular
