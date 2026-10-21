@@ -1,0 +1,17 @@
+{
+  "scope": "Independent real-plane numerical check; not a formal proof or exhaustive placement classification",
+  "cases": 1632,
+  "placements": {
+    "coincident": 24,
+    "outside": 984,
+    "inside": 576,
+    "boundary": 24,
+    "reflection": 24
+  },
+  "checks": 38328,
+  "lengthRelativeTolerance": 2e-12,
+  "maximumRelativeLengthError": 3.774758283725532e-15,
+  "angleToleranceDegrees": 2e-7,
+  "maximumAngleErrorDegrees": 8.9273310965865e-12,
+  "method": "Python distances, cosine law, Heron area sums and normal projections; TypeScript point outputs only"
+}

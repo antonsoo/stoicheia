@@ -1,0 +1,20 @@
+{
+  "scope": "Unpublished case-study implementation, before shared-link landing repair; not an observed public incident",
+  "asset": "assets/index-Cq4slvO4.js",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "top": 3962.9375,
+      "viewport": 812,
+      "open": true,
+      "focus": ""
+    },
+    {
+      "browser": "firefox",
+      "top": 3971.10009765625,
+      "viewport": 812,
+      "open": true,
+      "focus": ""
+    }
+  ]
+}

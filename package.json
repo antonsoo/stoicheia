@@ -35,7 +35,8 @@
     "test:browser": "node scripts/browser-check.mjs",
     "test:dev": "node scripts/quickstart-check.mjs",
     "verify:triangles": "node --import tsx scripts/triangle-cases.ts | python3 scripts/triangle-oracle.py",
-    "verify:bisections": "node --import tsx scripts/bisection-cases.ts | python3 scripts/bisection-oracle.py"
+    "verify:bisections": "node --import tsx scripts/bisection-cases.ts | python3 scripts/bisection-oracle.py",
+    "verify:cases": "node --import tsx scripts/casebook-cases.ts | python3 scripts/casebook-oracle.py"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

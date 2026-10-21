@@ -210,3 +210,9 @@ calculations and printing implementation are unchanged by that repair.
 That repair is also published, with its own [direct HTTPS record](mixed-edition-publication.json)
 for all 36 files and four browser/viewport workflows. The earlier course
 publication record remains tied to its original source revision.
+
+
+The later [I.7 case-study review](case-study.md) records the separate modern
+exploration of the missing interior placement, its source limits and independent
+geometry and browser evidence. The earlier course receipts above remain dated
+to their own reviewed builds.

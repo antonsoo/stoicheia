@@ -29,8 +29,13 @@ export function annotated(text: string): string {
 
 const n = (value: number) => Number(value.toFixed(3));
 
-export function drawScene(scene: Scene, title: string, standalone = false): string {
-  const width = 720;
+export function drawScene(
+  scene: Scene,
+  title: string,
+  standalone = false,
+  id = "diagram",
+  width = 720,
+): string {
   const height = scene.height ?? 470;
   const padding = 40;
   const [minX, minY, maxX, maxY] = scene.bounds;
@@ -123,7 +128,7 @@ export function drawScene(scene: Scene, title: string, standalone = false): stri
     })
     .join("");
   const styles = standalone ? `<style>${diagramStyles}</style>` : "";
-  return `<svg xmlns="http://www.w3.org/2000/svg" class="plate-svg" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="diagram-title diagram-description">${styles}<title id="diagram-title">${escapeHtml(title)}</title><desc id="diagram-description">${escapeHtml(scene.description)} ${escapeHtml(scene.warning)} ${escapeHtml(scene.notice?.text ?? "")}</desc><rect class="plate-background" width="${width}" height="${height}"/><g>${figures}${circles}${segments}${angles}${vertices}</g>${scene.notice ? `<text class="plate-notice" x="360" y="20" text-anchor="middle">${escapeHtml(scene.notice.title)}</text>` : ""}</svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" class="plate-svg" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="${escapeHtml(id)}-title ${escapeHtml(id)}-description">${styles}<title id="${escapeHtml(id)}-title">${escapeHtml(title)}</title><desc id="${escapeHtml(id)}-description">${escapeHtml(scene.description)} ${escapeHtml(scene.warning)} ${escapeHtml(scene.notice?.text ?? "")}</desc><rect class="plate-background" width="${width}" height="${height}"/><g>${figures}${circles}${segments}${angles}${vertices}</g>${scene.notice ? `<text class="plate-notice" x="${width / 2}" y="20" text-anchor="middle">${escapeHtml(scene.notice.title)}</text>` : ""}</svg>`;
 }
 
 // Shared with standalone downloads, which cannot depend on the app's CSS or fonts.

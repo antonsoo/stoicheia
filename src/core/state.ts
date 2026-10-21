@@ -1,3 +1,5 @@
+import { type CasebookState, casebookDefaults, decodeCasebook } from "./casebook";
+
 export type PropositionId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 
 export interface ReaderState {
@@ -12,6 +14,7 @@ export interface ReaderState {
   probe: number;
   variant: 0 | 1;
   take: number;
+  casebook: CasebookState;
 }
 
 export const stepCounts: Record<PropositionId, number> = {
@@ -39,6 +42,7 @@ export const defaults: ReaderState = {
   probe: 12,
   variant: 0,
   take: 0.55,
+  casebook: casebookDefaults,
 };
 
 function bounded(value: string | null, fallback: number, min: number, max: number): number {
@@ -68,6 +72,7 @@ export function decodeState(hash: string): ReaderState {
     ),
     variant: params.get("v") === "1" ? 1 : 0,
     take: Math.round(bounded(params.get("k"), defaults.take, 0.1, 0.9) * 100) / 100,
+    casebook: decodeCasebook(params),
   };
 }
 
@@ -84,5 +89,13 @@ export function encodeState(state: ReaderState): string {
     q: String(state.probe),
     v: String(state.variant),
     k: String(state.take),
+    ...(state.proposition === 7 && state.casebook.open
+      ? {
+          case: "1",
+          turn: String(state.casebook.turn),
+          "case-mode": state.casebook.mode,
+          "case-step": String(state.casebook.stage),
+        }
+      : {}),
   })}`;
 }

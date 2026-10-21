@@ -72,3 +72,14 @@
 - Require the expected SHA-256 for each precached response before activation.
 - Recover from failed first installations by registering again when no active
   worker remains; keep existing-edition update and explicit reload behaviour.
+
+
+## I.7's missing placement · 2026-10-21
+
+- Add a separate, source-grounded case study that moves the second meeting point
+  across the boundary of the original triangle. Explain the failed angle-part
+  relation and repair the interior case with I.5's exterior angles.
+- Compute the exact boundary case; distinguish it from reflection and coincidence.
+- Connect the repair to I.5's Greek and Latin statement, with original scans.
+- Save complete standalone case studies and share the actual placement and
+  argument step, landing directly at the exploration.

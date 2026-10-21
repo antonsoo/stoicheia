@@ -72,6 +72,11 @@ on the same port; stop the development server before starting the preview.
 - Move I.7’s second candidate while retaining its first distance, then reflect
   it across the base to see why the same-side hypothesis matters. In I.8, choose
   three lengths and compare the triangles by rigid motion.
+- Open I.7’s [missing-case exploration](https://antonsoo.github.io/stoicheia/#p=7&case=1&turn=55&case-step=2).
+  Move Δ into the first triangle, find why the printed whole-and-part reason
+  stops fitting, and repair it with I.5’s exterior angles. Inspect the exact
+  boundary, reflection and coincidence too. Share a placement or save its
+  complete argument and the Greek/Latin clause as a standalone case study.
 - Explore both circle crossings in I.9 at 40°, 60° and 90°. The alternate ray
   can bisect, vanish or lie outside the given angle. I.10 then reuses the circles
   to construct a midpoint from I.1, I.9 and I.4.
@@ -241,6 +246,10 @@ first installation. The review retains the blank-reader and wrong-page failures,
 corrected offline reloads and the clean-build evidence. Its separate
 [hosted receipt](docs/mixed-edition-publication.json) verifies the published repair.
 
+The [I.7 case-study review](docs/case-study.md) covers the added interior-case
+exploration, its separate numerical oracle (`npm run verify:cases`), downloaded
+studies, source-clause reading and shared-link landing behavior.
+
 ## Accuracy and limitations
 
 - This is I.1–10, not the whole _Elements_. The construction tools, translations
@@ -254,7 +263,9 @@ corrected offline reloads and the clean-build evidence. Its separate
   verification of Euclid’s postulates. The I.1 intersection gap and I.4 superposition assumption are explicitly
   discussed; the app does not claim to derive those assumptions from the postulates.
 - I.7’s printed proof treats a particular placement of the second meeting point;
-  the app names that limitation. I.8’s hypothetical displaced apex is not drawn
+  the reader names that limitation and offers a separate modern exploration of
+  the interior case, based on Heath’s commentary. Its fixed family of placements
+  is not an exhaustive case classification. I.8’s hypothetical displaced apex is not drawn
   with impossible equal-distance claims. I.9’s alternate choices explicitly
   distinguish equal angles from an internal bisection.
 - I.2 reuses the completed I.1 subconstruction, and I.3 reuses I.2. Their internal

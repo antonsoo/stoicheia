@@ -5,7 +5,10 @@ and run `npm run check` before proposing a change. The independent construction
 oracles are `npm run verify:oracle` (circle intersections) and
 `npm run verify:triangles` (congruence, angle subtraction and contradiction), plus
 `npm run verify:bisections` (uniqueness, three lengths and both bisections). They
-need Python 3, with no third-party packages.
+need Python 3, with no third-party packages. `npm run verify:cases` separately
+checks the I.7 supplement with area sums and cosine-law angles. Run
+`node scripts/casebook-browser.mjs` against the production preview for its
+keyboard, sharing, source, download, print and offline workflows.
 
 Keep geometry in `src/core`, editorial material in `src/content`, and rendering in
 the interface. A new geometric operation should have a reason in the source or

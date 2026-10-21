@@ -2100,3 +2100,264 @@ dialog::backdrop {
     display: none;
   }
 }
+
+/* I.7's modern case study remains separate from its printed parallel passage. */
+#casebook-root {
+  margin: 36px 0;
+  border: 1px solid var(--rule);
+  background: var(--folio);
+}
+#casebook > summary {
+  padding: 22px 28px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+#casebook > summary span:last-child {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+.case-intro {
+  padding: 12px 28px 20px;
+  max-width: 820px;
+}
+.case-intro h2 {
+  margin: 8px 0 14px;
+  font:
+    1.8rem / 1.3 "Noto Serif",
+    Georgia,
+    serif;
+}
+.case-intro p:last-child {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.case-layout {
+  display: grid;
+  grid-template-columns: 1.12fr 1fr;
+  border-block: 1px solid var(--rule);
+}
+.case-apparatus {
+  background: var(--paper);
+  padding: 20px 24px 28px;
+  min-width: 0;
+}
+.case-presets {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.case-presets button {
+  padding: 9px 11px;
+  font-size: 0.76rem;
+}
+.case-presets button[aria-pressed="true"] {
+  color: var(--folio);
+  background: var(--ink);
+}
+.case-placement {
+  text-align: center;
+  font-size: 0.86rem;
+  font-weight: 600;
+  margin: 20px 0 0;
+}
+#case-diagram svg {
+  display: block;
+  width: 100%;
+  max-height: 430px;
+}
+.case-turn label {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.case-turn output {
+  white-space: nowrap;
+  color: var(--muted);
+  font-weight: 400;
+}
+.case-turn input {
+  width: 100%;
+  margin: 12px 0;
+}
+.case-turn p {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.case-measures {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.76rem;
+}
+.case-measures caption {
+  text-align: left;
+  font-weight: 600;
+  margin: 16px 0 10px;
+}
+.case-measures td,
+.case-measures th {
+  text-align: left;
+  border-bottom: 1px solid var(--rule);
+  padding: 8px 4px;
+}
+.case-measures th {
+  font-weight: 500;
+}
+.case-reasoning {
+  padding: 24px 28px;
+  min-width: 0;
+}
+.case-stages {
+  display: grid;
+  gap: 8px;
+}
+.case-stages button {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 12px;
+  padding: 10px 12px;
+  font-size: 0.8rem;
+}
+.case-stages span {
+  font:
+    0.76rem ui-monospace,
+    monospace;
+}
+.case-stages button[aria-current="step"] {
+  background: var(--ink);
+  color: var(--folio);
+}
+#case-explanation {
+  margin: 28px 0;
+  line-height: 1.75;
+  font-size: 0.93rem;
+}
+#case-explanation h3 {
+  font:
+    1.4rem / 1.4 "Noto Serif",
+    Georgia,
+    serif;
+  margin: 8px 0 14px;
+}
+.case-chain {
+  padding: 16px;
+  background: var(--paper);
+  font:
+    0.82rem / 1.8 ui-monospace,
+    monospace;
+  overflow-wrap: anywhere;
+  border-left: 3px solid var(--accent);
+}
+.case-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.case-actions button {
+  font-size: 0.78rem;
+  padding: 10px 12px;
+}
+#case-share-field {
+  margin-top: 20px;
+}
+#case-share-field label {
+  font-size: 0.76rem;
+  display: block;
+  margin-bottom: 8px;
+}
+#case-url {
+  width: 100%;
+}
+.case-reading {
+  padding: 22px 28px;
+  border-bottom: 1px solid var(--rule);
+}
+.case-reading summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.case-reading p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  max-width: 850px;
+}
+.case-source p[lang] {
+  font:
+    1rem / 1.9 "Noto Serif",
+    Georgia,
+    serif;
+}
+.case-source mark {
+  background: #e6def0;
+  color: #193d60;
+}
+.case-credit {
+  padding: 20px 28px;
+  font-size: 0.76rem;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 1000px;
+}
+#open-casebook {
+  margin-top: 12px;
+  font-size: 0.78rem;
+}
+@media (max-width: 900px) {
+  .case-layout {
+    grid-template-columns: 1fr;
+  }
+  .case-reasoning {
+    border-top: 1px solid var(--rule);
+  }
+  #casebook > summary {
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .case-intro,
+  .case-apparatus,
+  .case-reasoning,
+  .case-reading,
+  .case-credit,
+  #casebook > summary {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .case-intro h2 {
+    font-size: 1.4rem;
+  }
+  .case-presets button {
+    flex: 1 1 28%;
+  }
+  .case-turn label {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .case-measures {
+    font-size: 0.72rem;
+  }
+}
+@media print {
+  #casebook-root {
+    display: none;
+  }
+}
+
+.case-phone-jump {
+  display: none;
+}
+@media (max-width: 900px) {
+  .case-phone-jump {
+    display: block;
+    margin: 12px 0 20px;
+    font-size: 0.8rem;
+  }
+}

@@ -1,3 +1,4 @@
+import { mountCasebook } from "./casebook";
 import { foundationById, foundations, reasonFoundations } from "./content/foundations";
 import { glossary } from "./content/glossary";
 import type { Passage } from "./content/lessons";
@@ -68,6 +69,7 @@ app.innerHTML = `
       <article class="insight"><p class="eyebrow">Beyond the drawing</p><h2 id="insight-title"></h2><p id="insight-text"></p><a id="commentary-link" target="_blank" rel="noreferrer">Read the mathematical commentary <span aria-hidden="true">↗</span></a></article>
       <form class="question" id="question"><p class="eyebrow">Check the reason</p><fieldset id="question-options"></fieldset><p id="question-feedback" role="status" aria-live="polite"></p></form>
     </section>
+    <section id="casebook-root" aria-label="The missing case in I.7" hidden></section>
     <details class="course-map"><summary><span>How the arguments depend on one another</span><span>Ten propositions · construction and proof</span></summary><table><thead><tr><th scope="col">Proposition</th><th scope="col">Earlier results it uses</th><th scope="col">What it earns</th></tr></thead><tbody>${propositionIds
       .map((id) => {
         const dependencies = [
@@ -107,6 +109,15 @@ app.innerHTML = `
   <dialog id="share-dialog" class="share-dialog" aria-labelledby="share-title"><button type="button" class="dialog-close" data-close="share-dialog" aria-label="Close share link">×</button><p class="eyebrow">Continue at the same place</p><h2 id="share-title">Share this step</h2><p>The link keeps the proposition, step and given lengths.</p><label for="share-url">Reader link</label><input id="share-url" type="url" readonly /><button type="button" class="primary" id="copy-link">Copy link</button><p id="copy-status" role="status"></p></dialog>
   <div class="toast" id="toast" role="status" hidden></div>
 `;
+
+const casebook = mountCasebook(element("#casebook-root"), {
+  read: () => state.casebook,
+  change: (next) => {
+    state = { ...state, casebook: next };
+    writeState();
+  },
+  download,
+});
 
 function sourceButtons(pages: number[], language: string): string {
   return pages
@@ -160,6 +171,11 @@ function renderDiagram(): void {
   notice.innerHTML = scene.notice
     ? `<h3>${escapeHtml(scene.notice.title)}</h3><p>${escapeHtml(scene.notice.text)}</p>`
     : "";
+  if (state.proposition === 7)
+    notice.insertAdjacentHTML(
+      "beforeend",
+      '<button type="button" id="open-casebook">Explore the missing interior case →</button>',
+    );
   const comparison = element("#comparison");
   comparison.hidden = !scene.comparison;
   comparison.innerHTML =
@@ -244,6 +260,8 @@ function renderLesson(): void {
   const motionControl = element("#motion-control");
   motionControl.innerHTML = explorationControls(state);
   motionControl.hidden = !motionControl.innerHTML;
+  element("#casebook-root").hidden = state.proposition !== 7;
+  casebook.render();
   element("#insight-title").textContent = lesson.insight.title;
   element("#insight-text").textContent = lesson.insight.text;
   element<HTMLAnchorElement>("#commentary-link").href = lesson.insight.link;
@@ -265,6 +283,7 @@ function goTo(proposition: PropositionId, result = false): void {
     // An I.7 reflection is not a request for I.9's alternate circle crossing.
     variant: changedLesson ? 0 : state.variant,
     motion: changedLesson ? 0 : state.motion,
+    casebook: changedLesson ? { ...state.casebook, open: false } : state.casebook,
   };
   writeState(true);
   renderLesson();
@@ -399,6 +418,9 @@ document.addEventListener("click", (event) => {
     return;
   }
   switch (button.id) {
+    case "open-casebook":
+      casebook.open();
+      break;
     case "open-practice":
       showPractice(
         readingExercises.findIndex((exercise) => exercise.proposition === state.proposition),
@@ -523,6 +545,7 @@ document.addEventListener("click", (event) => {
 document.addEventListener("input", (event) => {
   const input = event.target;
   if (!(input instanceof HTMLInputElement) || input.type !== "range") return;
+  if (input.id.startsWith("case-")) return;
   if (input.id === "motion") {
     state.motion = Number(input.value);
     element("#motion-output").textContent = `${input.value}%`;
@@ -615,6 +638,7 @@ window.addEventListener("popstate", () => {
   if (location.hash && !location.hash.startsWith("#p=")) return;
   state = decodeState(location.hash);
   renderLesson();
+  if (state.proposition === 7 && state.casebook.open) casebook.open();
 });
 
 // Closed details suppress their contents in native print layout. Expand the
@@ -632,6 +656,7 @@ window.addEventListener("afterprint", () => {
 });
 
 renderLesson();
+if (state.proposition === 7 && state.casebook.open) casebook.open();
 
 if (import.meta.env.PROD && "serviceWorker" in navigator) {
   prepareOffline(element("#offline-state"), element<HTMLButtonElement>("#reload-edition"));

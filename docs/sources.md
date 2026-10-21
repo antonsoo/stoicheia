@@ -185,3 +185,30 @@ Further commentary at Clark University:
 [I.8](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI8.html),
 [I.9](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI9.html),
 [I.10](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI10.html).
+
+
+## The supplementary I.7 case study
+
+The printed I.7 passage remains unchanged. A separate exploration extends ΑΓ
+beyond Γ to Ε and ΑΔ beyond Δ to Ζ, then uses the exterior-angle conclusion of
+I.5 to handle a candidate inside ΑΒΓ. The extra labels are modern and explicitly
+identified; neither additional Greek nor additional Latin is attributed to I.7.
+The language panel reuses I.5's actual statement, Greek p. 20 and Latin p. 21,
+highlighting `ὑπὸ τὴν βάσιν` and `sub basi`.
+
+The account was checked against T. L. Heath, _The Thirteen Books of Euclid's
+Elements_, second edition (1925), pp. 259–261, in
+[D. R. Wilkins's transcription](https://www.maths.tcd.ie/~dwilkins/Euclid/Euclid_HeathCommentaries/EuclidElements_HeathCommentary_ElementsBk1Prop07_DraftTranscription.pdf),
+including its interior-case diagram (PDF p. 3). Heath attributes the second case
+to Proclus. The workbench does not claim to have checked Proclus's original text.
+David E. Joyce's [I.7 guide](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI7.html)
+also identifies the missing interior placement and the relevance of I.5's second
+conclusion.
+
+The distinction being taught is a failed **containment reason**, not necessarily
+a reversed numerical inequality. In the interior placement, ∠ΔΓΒ is not part of
+∠ΑΓΔ; the exterior angle ∠ΕΓΔ supplies the appropriate containing angle. The
+boundary point is computed by a line-circle intersection and uses whole/part of
+a segment, without invoking I.5 on a degenerate triangle. Reflection and
+coincidence each remove a different hypothesis. The fixed numerical family and
+its limited scope are stated in the interface and saved studies.
