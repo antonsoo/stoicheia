@@ -3,6 +3,7 @@
 Read Euclid’s opening arguments in Greek, Latin and English, with a working diagram beside every step.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-193d60)](LICENSE)
+[![Read the course](https://img.shields.io/badge/read-the_course-193d60)](https://antonsoo.github.io/stoicheia/)
 
 ![Euclid I.2: the equal remainders construction beside its Greek, Latin and English text](docs/assets/hero.png)
 
@@ -17,17 +18,17 @@ vocabulary entries, thirteen foundation statements and twelve passage-based
 reading exercises. It is intended for an English-speaking reader who knows basic
 geometry and is beginning Greek or Latin.
 
-This is a local, unpublished source checkout. The intended repository is
-`github.com/antonsoo/stoicheia`; the intended Pages address after publication is
-`https://antonsoo.github.io/stoicheia/`. There is no package registry release.
+**[Open the course](https://antonsoo.github.io/stoicheia/)** ·
+[Source repository](https://github.com/antonsoo/stoicheia). The app is a static
+site; no package registry installation is required.
 
 ## Run it
 
-Node.js 24 or later. From the parent `showcases` directory:
+Node.js 24 or later:
 
 ```sh
-cd stoicheia
-npm ci
+git clone https://github.com/antonsoo/stoicheia.git
+cd stoicheia && npm ci
 npm run dev
 ```
 
@@ -180,8 +181,10 @@ versions, desktop and 375px viewports, rendered side equalities, source-page
 navigation, vocabulary focus return, invalid-length handling, shared links,
 standalone downloads, offline reloads with the local origin unavailable, accessibility
 audits and exact HTTP/build
-byte comparisons. These are local-build results; they establish no public
-deployment or remote CI result.
+byte comparisons. The separate [publication receipt](docs/publication-verification.json)
+records matching hashes for all 30 files served by GitHub Pages and direct hosted
+workflows in both browsers at both screen sizes. Neither receipt is a remote CI
+result.
 
 The development quickstart is checked separately with `npm run test:dev` while
 `npm run dev` is running. Its [receipt](docs/quickstart-verification.json) checks

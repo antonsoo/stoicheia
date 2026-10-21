@@ -134,7 +134,17 @@ evidence from physical phones.
 
 ## Publication evidence
 
-Local build and browser receipts establish the reviewed local artifact. A public
-host must be checked separately with `scripts/hosted-check.mjs`; its direct HTTPS
-receipt records served file hashes and actual hosted browser workflows. No local
-receipt establishes a remote CI result or a package registry release.
+The [public course](https://antonsoo.github.io/stoicheia/) and
+[source repository](https://github.com/antonsoo/stoicheia) are published.
+[Direct HTTPS verification](publication-verification.json) matched all 30 hosted
+files to the reviewed clean build and exercised Chromium and Firefox at desktop
+and phone widths. It covers the six final steps, superposition, angle subtraction,
+foundations and nested source scans, the contradiction notice, Greek-first
+reading, passage practice, shared URLs and worker-served offline-emulation reloads.
+The public origin was not disabled in this hosted check; the local suite supplies
+that stronger offline control.
+
+The public repository was also cloned over HTTPS, installed with Node 24.22.0,
+and run through the documented development quickstart in both browsers. GitHub
+Pages serves the reviewed `gh-pages` branch. These records make no remote CI or
+package registry release claim.
