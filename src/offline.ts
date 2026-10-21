@@ -45,6 +45,7 @@ export function prepareOffline(status: HTMLElement, reload: HTMLButtonElement): 
   let revision = 0;
   let verifiedCurrent = false;
   let installFailed = false;
+  const observedWorkers = new WeakSet<ServiceWorker>();
   const pending = () => {
     reload.hidden = true;
     status.textContent = installFailed
@@ -82,7 +83,8 @@ export function prepareOffline(status: HTMLElement, reload: HTMLButtonElement): 
     }
   };
   const observe = (worker: ServiceWorker | null) => {
-    if (!worker) return;
+    if (!worker || observedWorkers.has(worker)) return;
+    observedWorkers.add(worker);
     const changed = () => {
       if (worker.state === "redundant") installFailed = true;
       void refresh();
@@ -94,30 +96,37 @@ export function prepareOffline(status: HTMLElement, reload: HTMLButtonElement): 
   container.addEventListener("controllerchange", () => {
     void refresh();
   });
+  const register = () =>
+    container
+      .register(`${import.meta.env.BASE_URL}sw.js`, {
+        scope: import.meta.env.BASE_URL,
+        updateViaCache: "none",
+      })
+      .then((result) => {
+        if (registration !== result)
+          result.addEventListener("updatefound", () => {
+            installFailed = false;
+            observe(result.installing);
+          });
+        registration = result;
+        observe(result.installing);
+        void refresh();
+      })
+      .catch(() => {
+        installFailed = true;
+        void refresh();
+      });
   window.addEventListener("online", () => {
     installFailed = false;
-    registration?.update().catch(() => {
-      installFailed = true;
-      void refresh();
-    });
+    // A failed first installation has no active worker and can discard its
+    // registration. update() on that old object cannot start a fresh install.
+    if (registration?.active)
+      registration.update().catch(() => {
+        installFailed = true;
+        void refresh();
+      });
+    else void register();
     void refresh();
   });
-  container
-    .register(`${import.meta.env.BASE_URL}sw.js`, {
-      scope: import.meta.env.BASE_URL,
-      updateViaCache: "none",
-    })
-    .then((result) => {
-      registration = result;
-      result.addEventListener("updatefound", () => {
-        installFailed = false;
-        observe(result.installing);
-      });
-      observe(result.installing);
-      void refresh();
-    })
-    .catch(() => {
-      installFailed = true;
-      void refresh();
-    });
+  void register();
 }

@@ -1,0 +1,63 @@
+{
+  "scope": "Controlled mixed HTTP 200 responses during installation, not an observed public-host incident",
+  "phase": "reproduced before",
+  "workerSha256": "c8ef8a6fe7ec0d709442e9cb1566df592de558a88b9c2ed510ecc3ab3f7705e4",
+  "substitutions": {
+    "index": {
+      "expectedSha256": "f39f9b5a7f84b1638aca3239253ddacb1769833f1bd6398a2876b55ed0cf7ec1",
+      "receivedSha256": "4e212d2cb023c587125719dbf80aa20aeee5568e079ba7c593dac8308b380cb6"
+    },
+    "source": {
+      "expectedSha256": "78c48ad097ea261328c143863dc9febeadc3070b60a1bfec288b2d6e55caf931",
+      "receivedSha256": "c28d31907a99fe1b0e0556cb3e284b30418aed66cfa991a8d235409f356cc0bd"
+    }
+  },
+  "configurations": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "substitution": "index",
+      "substitutions": 1,
+      "status": "Edition ready offline, including source pages",
+      "offlineReloadFromWorker": true,
+      "offlineIndexSha256": "4e212d2cb023c587125719dbf80aa20aeee5568e079ba7c593dac8308b380cb6",
+      "readerMissingAfterReload": true,
+      "pageErrors": []
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "substitution": "source",
+      "substitutions": 1,
+      "status": "Edition ready offline, including source pages",
+      "offlineReloadFromWorker": true,
+      "offlineIndexSha256": "f39f9b5a7f84b1638aca3239253ddacb1769833f1bd6398a2876b55ed0cf7ec1",
+      "offlineSourceSha256": "c28d31907a99fe1b0e0556cb3e284b30418aed66cfa991a8d235409f356cc0bd",
+      "sourcePageCorrect": false,
+      "pageErrors": []
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "substitution": "index",
+      "substitutions": 1,
+      "status": "Edition ready offline, including source pages",
+      "offlineReloadFromWorker": true,
+      "offlineIndexSha256": "4e212d2cb023c587125719dbf80aa20aeee5568e079ba7c593dac8308b380cb6",
+      "readerMissingAfterReload": true,
+      "pageErrors": []
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "substitution": "source",
+      "substitutions": 1,
+      "status": "Edition ready offline, including source pages",
+      "offlineReloadFromWorker": true,
+      "offlineIndexSha256": "f39f9b5a7f84b1638aca3239253ddacb1769833f1bd6398a2876b55ed0cf7ec1",
+      "offlineSourceSha256": "c28d31907a99fe1b0e0556cb3e284b30418aed66cfa991a8d235409f356cc0bd",
+      "sourcePageCorrect": false,
+      "pageErrors": []
+    }
+  ]
+}

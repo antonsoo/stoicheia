@@ -8,6 +8,7 @@ import { chromium, firefox } from "playwright";
 
 const first = resolve(process.argv[2] ?? "");
 const next = resolve(process.argv[3] ?? "");
+const output = process.argv[4] ?? "docs/offline-tabs-verification.json";
 if (!process.argv[2] || !process.argv[3] || first === next)
   throw new Error("Pass two distinct production build directories.");
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
@@ -16,7 +17,7 @@ const nextWorker = hash(await readFile(join(next, "sw.js")));
 assert.notEqual(firstWorker, nextWorker);
 const report = {
   scope:
-    "Two edition-aware builds; the second is a controlled fixture built from the same source with one trailing newline added to the source manifest, not a second published release",
+    "Two distinct edition-aware builds; explicit reload preserves the original reading state before an origin-disabled offline reload",
   firstWorkerSha256: firstWorker,
   nextWorkerSha256: nextWorker,
   configurations: [],
@@ -121,5 +122,5 @@ for (const [name, type] of [
     await new Promise((r) => server.close(r));
   }
 }
-await writeFile("docs/offline-tabs-verification.json", `${JSON.stringify(report, null, 2)}\n`);
+await writeFile(output, `${JSON.stringify(report, null, 2)}\n`);
 console.log(JSON.stringify(report, null, 2));

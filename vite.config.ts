@@ -45,6 +45,16 @@ export default defineConfig(async ({ command }) => {
           const urls = files.map(
             (file) => base + path.relative("dist", file).split(path.sep).join("/"),
           );
+          const integrity = Object.fromEntries(
+            await Promise.all(
+              files.map(async (file, index) => [
+                urls[index],
+                `sha256-${createHash("sha256")
+                  .update(await readFile(file))
+                  .digest("base64")}`,
+              ]),
+            ),
+          );
           await writeFile(
             "dist/sw.js",
             `/* Offline edition ${edition}. Generated from the complete build. */
@@ -52,8 +62,12 @@ const CACHE = "stoicheia-${edition}";
 const EDITION = ${JSON.stringify(edition)};
 const BASE = ${JSON.stringify(base)};
 const FILES = ${JSON.stringify(urls)};
+const INTEGRITY = ${JSON.stringify(integrity)};
 self.addEventListener("install", event => {
-  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES)).then(() => self.skipWaiting()));
+  // HTTP success does not establish edition identity. A stale entry page or
+  // substituted scan must fail the complete install before this worker activates.
+  const requests = FILES.map(url => new Request(url, { cache: "reload", integrity: INTEGRITY[url] }));
+  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(requests)).then(() => self.skipWaiting()));
 });
 self.addEventListener("activate", event => {
   event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith("stoicheia-") && key !== CACHE).map(key => caches.delete(key)))).then(() => self.clients.claim()));
