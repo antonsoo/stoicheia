@@ -1,0 +1,14 @@
+{
+  "scope": "Real-plane numerical model, not a formal axiomatic proof",
+  "method": "Independent cosine-law angles, circle equations, ray-sum direction, orientation, strict triangle inequalities and midpoint oracle; I.3 copied length also checked",
+  "cases": {
+    "I.9": 378,
+    "I.10": 126,
+    "I.8-rejected": 112,
+    "I.8": 144,
+    "I.7": 576
+  },
+  "checks": 11381,
+  "maximum_relative_error": 5.3168197813770184e-14,
+  "tolerance": 5e-10
+}

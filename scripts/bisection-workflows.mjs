@@ -26,6 +26,7 @@ async function drawnLength(page, id) {
     );
 }
 async function snapshot(page, name, width) {
+  await page.locator("#toast").waitFor({ state: "hidden" });
   await page.locator("#workbench").evaluate((e) => e.scrollIntoView({ block: "start" }));
   await page.screenshot({ path: `docs/assets/${name}-${width}.png` });
 }

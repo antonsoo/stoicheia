@@ -41,3 +41,26 @@
   the passage for print only and restore its previous state afterward.
 - Include proposition and step titles, all three language readings and source
   attribution in print. Verify actual PDFs by independent text extraction.
+
+## Uniqueness and bisection · 2026-10-21
+
+- Complete I.7–10 in Greek, Heiberg Latin and new English: 85 aligned steps,
+  36 vocabulary entries, twenty passage exercises and twenty-eight printed pages.
+- Explore I.7’s same-side restriction with distinct, reflected and coincident
+  candidates; preserve its conditional angle equality and printed case limit.
+- Derive I.8’s triangle from three lengths and withhold impossible triples.
+- Construct I.9 through I.3 and I.1; explain the alternate crossing’s internal,
+  collapsed and opposite-ray cases, including in shared links and saved files.
+- Reuse I.1’s circles in I.10 and compute its midpoint by line intersection.
+- Put ten propositions in a native phone selector and keep the bisection angle
+  control beside the crossing choice.
+
+## Edition-aware offline readiness · 2026-10-21
+
+- Reproduce a new page claiming readiness while an older service worker remained
+  active; disconnecting reloaded the six-proposition course and lost I.10.
+- Verify the controlling worker’s edition and complete cached file list before
+  promising offline readiness. Recover from failed source downloads on reconnect.
+- Offer an explicit reload when another edition replaces an already-open tab,
+  preserving the shared proposition, step and geometric choices.
+- Reset proposition-specific exploration choices when opening another lesson.

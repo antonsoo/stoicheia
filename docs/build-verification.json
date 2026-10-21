@@ -1,8 +1,8 @@
 {
   "scope": "Clean Git export; local validation, distinct from remote deployment and CI",
-  "source_commit": "ea1dc1d0170826d221d61ca6b486654b43771494",
+  "source_commit": "ab098e7e389e4ff0af8bfb4494d08764c87fea0e",
   "node": "v24.22.0",
-  "build_inputs_sha256": "5c18a4e112ce43cbe5cf9d6c7b4c45f6a69e2f6034b282e661a971f4ec787fe7",
+  "build_inputs_sha256": "c40b3c6b9aa8185be6359128b32fec2df7fe8e100daf6c98d0e2e61bc0e674bc",
   "commands": [
     {
       "command": "npm ci",
@@ -10,7 +10,7 @@
     },
     {
       "command": "npm run check",
-      "result": "passed: lint, strict typecheck, 17 checks and production build"
+      "result": "passed: lint, strict typecheck, 22 checks and production build"
     },
     {
       "command": "npm run verify:oracle",
@@ -21,26 +21,46 @@
       "result": "passed: 672 cases and 8064 checks"
     },
     {
+      "command": "npm run verify:bisections",
+      "result": "passed: 1336 cases, including 112 rejected triples, and 11381 checks"
+    },
+    {
       "command": "npm run test:dev",
-      "result": "passed: Chromium and Firefox styled quickstart and navigation",
-      "server": "npm run dev"
+      "result": "passed: Chromium and Firefox styled quickstart and navigation"
     },
     {
       "command": "npm run test:browser",
-      "result": "passed: 4 browser/viewport configurations, 52 reading steps each, 72 accessibility audits and 30 exact served-file comparisons",
-      "server": "npm run preview"
+      "result": "passed: 4 browser/viewport configurations, 85 reading steps each, 120 accessibility audits and 36 exact served-file comparisons"
     },
     {
       "command": "node scripts/print-check.mjs",
-      "result": "passed: all paragraphs and step titles extracted from 12 Chromium PDFs; reading state restored. Firefox print layout and lifecycle checked separately.",
-      "server": "npm run preview"
+      "result": "passed: 570 language-paragraph and 170 step-title comparisons in 20 native Chromium PDFs; Firefox print layout and lifecycle checked separately"
+    },
+    {
+      "command": "node scripts/offline-upgrade-check.mjs PREVIOUS_DIST dist",
+      "result": "passed: delayed and failed source downloads, reconnect recovery, origin-disabled current-edition reload and source-image hash in both browsers"
+    },
+    {
+      "command": "Navigation layout inspection in Chromium and Firefox",
+      "result": "No page overflow or clipped lesson buttons at 1440, 1280, 1201, 1200, 1024, 768 and 375 pixels; five columns above 1200 and native picker otherwise"
     }
   ],
   "build_command": "npm run build",
   "output_directory": "dist/",
-  "independent_oracles": ["docs/geometry-oracle.json", "docs/triangle-oracle.json"],
+  "independent_oracles": [
+    "docs/geometry-oracle.json",
+    "docs/triangle-oracle.json",
+    "docs/bisection-oracle.json"
+  ],
   "browser_receipt": "docs/browser-verification.json",
   "quickstart_receipt": "docs/quickstart-verification.json",
-  "publication_receipt": "Publication, when performed, is recorded separately in docs/publication-verification.json.",
-  "print_receipt": "docs/print-verification.json"
+  "print_receipt": "docs/print-verification.json",
+  "upgrade_receipt": "docs/offline-upgrade-verification.json",
+  "separate_two_tab_check": {
+    "receipt": "docs/offline-tabs-verification.json",
+    "harness": "scripts/offline-tabs-check.mjs",
+    "boundary": "Executed from the review checkout against the preceding source revision and a second Node 24 build with one trailing newline added to the source manifest. The later source change only consolidates lesson-navigation CSS. The second build is a controlled fixture, not a published release.",
+    "source_commit": "5c91a8a26604b94635c7dd36d70a46bb871c9657"
+  },
+  "publication_receipt": "Publication is recorded separately in docs/publication-verification.json."
 }

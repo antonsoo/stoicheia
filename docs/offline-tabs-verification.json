@@ -1,0 +1,27 @@
+{
+  "scope": "Two edition-aware builds; the second is a controlled fixture built from the same source with one trailing newline added to the source manifest, not a second published release",
+  "firstWorkerSha256": "24a66eb117e750518bccfaec1eb16c5f98a58ea87482467cde59fd180c86e36f",
+  "nextWorkerSha256": "9b30a668f9d48defca559b4c66d5453958846b14b55983c44fe1c984f390d38a",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "prompt": "A different edition is now saved offline. Reload to read that edition.",
+      "readingTabNotAutomaticallyReloaded": true,
+      "explicitReloadPreservesPropositionStepAngleAndChoice": true,
+      "originDisabledOfflineReload": true,
+      "retainedOppositeRayWarning": true,
+      "pageErrors": 0
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "prompt": "A different edition is now saved offline. Reload to read that edition.",
+      "readingTabNotAutomaticallyReloaded": true,
+      "explicitReloadPreservesPropositionStepAngleAndChoice": true,
+      "originDisabledOfflineReload": true,
+      "retainedOppositeRayWarning": true,
+      "pageErrors": 0
+    }
+  ]
+}

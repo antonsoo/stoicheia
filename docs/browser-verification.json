@@ -8,7 +8,7 @@
         "width": 1440,
         "height": 1000
       },
-      "readingSteps": 52,
+      "readingSteps": 85,
       "accessibility": [
         "I.1 final step",
         "I.2 final step",
@@ -16,11 +16,23 @@
         "I.4 final step",
         "I.5 final step",
         "I.6 final step",
+        "I.7 final step",
+        "I.8 final step",
+        "I.9 final step",
+        "I.10 final step",
         "vocabulary dialog",
         "source dialog",
         "Latin-first reading",
         "foundations dialog with original texts",
         "reading practice with feedback",
+        "I.7 conditional angle equality",
+        "I.8 impossible three-length input",
+        "I.9 collapsed crossing",
+        "I.9 internal angle bisector",
+        "I.10 midpoint construction with reused circles",
+        "standalone chromium-1440-stoicheia-I8-study.html",
+        "standalone chromium-1440-stoicheia-I9-opposite-ray.html",
+        "standalone chromium-1440-stoicheia-I10-study.html",
         "I.3 invalid greater-lesser hypothesis",
         "complete aligned passage",
         "I.4 exact superposition",
@@ -29,6 +41,16 @@
         "standalone study sheet",
         "standalone contradiction study sheet"
       ],
+      "bisections": {
+        "scenarios": [
+          "I.7 same-side, reflected and coincident candidates",
+          "I.8 rigid superposition and impossible triples",
+          "I.9 both crossings below, at and above 60 degrees",
+          "I.9 warning survives shared link",
+          "I.10 reused circles and computed midpoint"
+        ],
+        "downloadsReopenedOffline": 5
+      },
       "offline": "Offline emulation plus unavailable origin: worker-served reload, proposition changes, source scan and standalone exports passed",
       "pageErrors": 0,
       "externalRequests": 0,
@@ -41,7 +63,7 @@
         "width": 375,
         "height": 812
       },
-      "readingSteps": 52,
+      "readingSteps": 85,
       "accessibility": [
         "I.1 final step",
         "I.2 final step",
@@ -49,11 +71,23 @@
         "I.4 final step",
         "I.5 final step",
         "I.6 final step",
+        "I.7 final step",
+        "I.8 final step",
+        "I.9 final step",
+        "I.10 final step",
         "vocabulary dialog",
         "source dialog",
         "Latin-first reading",
         "foundations dialog with original texts",
         "reading practice with feedback",
+        "I.7 conditional angle equality",
+        "I.8 impossible three-length input",
+        "I.9 collapsed crossing",
+        "I.9 internal angle bisector",
+        "I.10 midpoint construction with reused circles",
+        "standalone chromium-375-stoicheia-I8-study.html",
+        "standalone chromium-375-stoicheia-I9-opposite-ray.html",
+        "standalone chromium-375-stoicheia-I10-study.html",
         "I.3 invalid greater-lesser hypothesis",
         "complete aligned passage",
         "I.4 exact superposition",
@@ -62,6 +96,16 @@
         "standalone study sheet",
         "standalone contradiction study sheet"
       ],
+      "bisections": {
+        "scenarios": [
+          "I.7 same-side, reflected and coincident candidates",
+          "I.8 rigid superposition and impossible triples",
+          "I.9 both crossings below, at and above 60 degrees",
+          "I.9 warning survives shared link",
+          "I.10 reused circles and computed midpoint"
+        ],
+        "downloadsReopenedOffline": 5
+      },
       "offline": "Offline emulation plus unavailable origin: worker-served reload, proposition changes, source scan and standalone exports passed",
       "pageErrors": 0,
       "externalRequests": 0,
@@ -74,7 +118,7 @@
         "width": 1440,
         "height": 1000
       },
-      "readingSteps": 52,
+      "readingSteps": 85,
       "accessibility": [
         "I.1 final step",
         "I.2 final step",
@@ -82,11 +126,23 @@
         "I.4 final step",
         "I.5 final step",
         "I.6 final step",
+        "I.7 final step",
+        "I.8 final step",
+        "I.9 final step",
+        "I.10 final step",
         "vocabulary dialog",
         "source dialog",
         "Latin-first reading",
         "foundations dialog with original texts",
         "reading practice with feedback",
+        "I.7 conditional angle equality",
+        "I.8 impossible three-length input",
+        "I.9 collapsed crossing",
+        "I.9 internal angle bisector",
+        "I.10 midpoint construction with reused circles",
+        "standalone firefox-1440-stoicheia-I8-study.html",
+        "standalone firefox-1440-stoicheia-I9-opposite-ray.html",
+        "standalone firefox-1440-stoicheia-I10-study.html",
         "I.3 invalid greater-lesser hypothesis",
         "complete aligned passage",
         "I.4 exact superposition",
@@ -95,6 +151,16 @@
         "standalone study sheet",
         "standalone contradiction study sheet"
       ],
+      "bisections": {
+        "scenarios": [
+          "I.7 same-side, reflected and coincident candidates",
+          "I.8 rigid superposition and impossible triples",
+          "I.9 both crossings below, at and above 60 degrees",
+          "I.9 warning survives shared link",
+          "I.10 reused circles and computed midpoint"
+        ],
+        "downloadsReopenedOffline": 5
+      },
       "offline": "Offline emulation plus unavailable origin: worker-served reload, proposition changes, source scan and standalone exports passed",
       "pageErrors": 0,
       "externalRequests": 0,
@@ -107,7 +173,7 @@
         "width": 375,
         "height": 812
       },
-      "readingSteps": 52,
+      "readingSteps": 85,
       "accessibility": [
         "I.1 final step",
         "I.2 final step",
@@ -115,11 +181,23 @@
         "I.4 final step",
         "I.5 final step",
         "I.6 final step",
+        "I.7 final step",
+        "I.8 final step",
+        "I.9 final step",
+        "I.10 final step",
         "vocabulary dialog",
         "source dialog",
         "Latin-first reading",
         "foundations dialog with original texts",
         "reading practice with feedback",
+        "I.7 conditional angle equality",
+        "I.8 impossible three-length input",
+        "I.9 collapsed crossing",
+        "I.9 internal angle bisector",
+        "I.10 midpoint construction with reused circles",
+        "standalone firefox-375-stoicheia-I8-study.html",
+        "standalone firefox-375-stoicheia-I9-opposite-ray.html",
+        "standalone firefox-375-stoicheia-I10-study.html",
         "I.3 invalid greater-lesser hypothesis",
         "complete aligned passage",
         "I.4 exact superposition",
@@ -128,16 +206,26 @@
         "standalone study sheet",
         "standalone contradiction study sheet"
       ],
+      "bisections": {
+        "scenarios": [
+          "I.7 same-side, reflected and coincident candidates",
+          "I.8 rigid superposition and impossible triples",
+          "I.9 both crossings below, at and above 60 degrees",
+          "I.9 warning survives shared link",
+          "I.10 reused circles and computed midpoint"
+        ],
+        "downloadsReopenedOffline": 5
+      },
       "offline": "Offline emulation plus unavailable origin: worker-served reload, proposition changes, source scan and standalone exports passed",
       "pageErrors": 0,
       "externalRequests": 0,
       "cspViolations": 0
     }
   ],
-  "buildInputsSha256": "5c18a4e112ce43cbe5cf9d6c7b4c45f6a69e2f6034b282e661a971f4ec787fe7",
+  "buildInputsSha256": "c40b3c6b9aa8185be6359128b32fec2df7fe8e100daf6c98d0e2e61bc0e674bc",
   "servedByteMatches": [
-    "assets/index-BG9Jbv_R.css",
-    "assets/index-CpJz_uWN.js",
+    "assets/index-BalXma64.css",
+    "assets/index-CN-CTpJj.js",
     "favicon.svg",
     "fonts/NotoSerif-Regular.ttf",
     "fonts/OFL.txt",
@@ -164,8 +252,14 @@
     "sources/heiberg-023.jpg",
     "sources/heiberg-024.jpg",
     "sources/heiberg-025.jpg",
+    "sources/heiberg-026.jpg",
+    "sources/heiberg-027.jpg",
+    "sources/heiberg-028.jpg",
+    "sources/heiberg-029.jpg",
+    "sources/heiberg-030.jpg",
+    "sources/heiberg-031.jpg",
     "sources/manifest.json",
     "sw.js"
   ],
-  "offlineOriginProbeRejections": 45
+  "offlineOriginProbeRejections": 48
 }

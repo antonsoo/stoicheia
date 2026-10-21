@@ -12,9 +12,9 @@ A translation can make the argument readable while hiding the Greek that carries
 it. Stoicheia connects both: change the givens, follow the command on the plate,
 read the two source languages, and ask what established the equality.
 
-The opening course is **Book I, propositions 1–6**. It includes the complete
-statements and proofs, divided into 52 aligned reading steps, with 31 selected
-vocabulary entries, thirteen foundation statements and twelve passage-based
+The opening course is **Book I, propositions 1–10**. It includes the complete
+statements and proofs, divided into 85 aligned reading steps, with 36 selected
+vocabulary entries, thirteen foundation statements and twenty passage-based
 reading exercises. It is intended for an English-speaking reader who knows basic
 geometry and is beginning Greek or Latin.
 
@@ -46,6 +46,10 @@ on the same port; stop the development server before starting the preview.
 | I.4         | Triangle congruence from two sides and the included angle | Rigid superposition, corresponding vertices, and an unstated motion assumption                     |
 | I.5         | Equal interior and exterior base angles                   | Two overlapping triangle comparisons, then subtraction of equal angles                             |
 | I.6         | Equal sides from equal angles                             | A contradiction, with the impossible conjunction explicitly distinguished from the measured sketch |
+| I.7         | Uniqueness of a meeting point on one side of a base       | The same-side restriction, a conditional equality, and the printed proof’s placement assumptions   |
+| I.8         | Congruence from three side pairs                          | The angle is earned; impossible three-length inputs do not fabricate a triangle                    |
+| I.9         | An internal angle bisector                                | One circle crossing works throughout; the other can work, collapse, or point outward               |
+| I.10        | Equal halves of a segment                                 | Earlier constructions reuse two circles, and their intersection earns the midpoint                 |
 - Move through the commands and deductions at your own pace. Every step names its
   permission: postulate, definition, common notion, earlier proposition, or
   assumption. Earlier constructions can be opened from the reason that uses them.
@@ -53,7 +57,7 @@ on the same port; stop the development server before starting the preview.
   and explanation of the forms. The reading notes explain selected syntax in
   context, including the difference between commands and completed results.
 - Read Greek-first or Latin-first and reveal the other languages when ready.
-  Twelve exercises ask about the wording of actual passages, explain each
+  Twenty exercises ask about the wording of actual passages, explain each
   interpretation, and return you to the corresponding step.
 - Open a reason’s source to compare the definition, postulate or common notion
   in all three languages. The reader distinguishes Heiberg’s numbering from the
@@ -65,8 +69,14 @@ on the same port; stop the development server before starting the preview.
   translation. In I.5, trace each of the compared triangles and follow the
   whole-angle / removed-part / remainder table. I.6 keeps its temporary
   supposition visibly separate from the original given, including in downloads.
+- Move I.7’s second candidate while retaining its first distance, then reflect
+  it across the base to see why the same-side hypothesis matters. In I.8, choose
+  three lengths and compare the triangles by rigid motion.
+- Explore both circle crossings in I.9 at 40°, 60° and 90°. The alternate ray
+  can bisect, vanish or lie outside the given angle. I.10 then reuses the circles
+  to construct a midpoint from I.1, I.9 and I.4.
 - Open the printed page for either language, zoom it and pan with the keyboard.
-  All twenty-two source pages are bundled. The full aligned passage is available below
+  All twenty-eight source pages are bundled. The full aligned passage is available below
   the plate, with links back to individual steps.
 - Share the current proposition, step and parameters in a URL fragment. Save the
   current diagram as SVG or the entire lesson as a standalone HTML study sheet.
@@ -79,17 +89,22 @@ on the same port; stop the development server before starting the preview.
 - The production edition precaches its text, diagrams, font and source pages.
   Wait for “Edition ready offline” before disconnecting. Offline reloads require
   HTTPS or localhost and a browser that permits service workers. Development mode
-  deliberately does not install an offline worker.
+  deliberately does not install an offline worker. Readiness is checked against
+  the edition currently open; an older active worker cannot certify a newer
+  course. An open tab offers a reload when a different edition takes control.
 
 ![The Greek and Latin passage on a 375px screen](docs/assets/phone-passage.png)
 
 A [downloaded I.2 study sheet](examples/stoicheia-I2-study.html) is included as a
-working example, alongside [I.6’s contradiction sheet](examples/stoicheia-I6-study.html). Save either and open it directly in a browser to read without the app.
+working example, alongside [I.6’s contradiction sheet](examples/stoicheia-I6-study.html),
+[I.9’s outward-ray exploration](examples/stoicheia-I9-opposite-ray.html), and
+[I.10’s midpoint construction](examples/stoicheia-I10-study.html). Save a sheet and
+open it directly in a browser to read without the app.
 
 ## The source is part of the lesson
 
 The Greek and Latin are transcribed from J. L. Heiberg’s _Euclidis opera omnia_,
-volume I (Leipzig: Teubner, 1883), printed pp. 4–25. Heiberg’s Latin is a
+volume I (Leipzig: Teubner, 1883), printed pp. 4–31. Heiberg’s Latin is a
 **nineteenth-century translation**, not an ancient Latin text. The English is a
 new reading translation; explanations sometimes make an implied intersection
 explicit. Point names remain Greek throughout.
@@ -108,7 +123,11 @@ Clark University: [I.1](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI1.
 [I.3](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI3.html),
 [I.4](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI4.html),
 [I.5](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI5.html),
-[I.6](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI6.html).
+[I.6](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI6.html),
+[I.7](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI7.html),
+[I.8](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI8.html),
+[I.9](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI9.html),
+[I.10](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI10.html).
 
 ## How the construction works
 
@@ -151,6 +170,7 @@ or stored reading history.
 npm run check
 npm run verify:oracle
 npm run verify:triangles
+npm run verify:bisections
 ```
 
 The TypeScript checks cover constructions, invalid hypotheses, complete lesson
@@ -171,6 +191,12 @@ both I.5 triangle correspondences and the final angle subtraction, and requires
 I.6’s scalene sketch to have unequal base angles and a strictly smaller inner
 triangle. These are numerical checks, not a formal proof checker.
 
+The [bisection and uniqueness check](docs/bisection-oracle.json) independently
+inspects 1,336 cases, including 112 impossible three-length inputs, both I.9
+crossings and rotated I.10 constructions. Its 11,381 checks use cosine-law angles,
+circle equations, ray directions and an arithmetic midpoint oracle. I.9’s I.3
+length-copy result is also checked; agreement is not inferred from rounded labels.
+
 For browser verification, serve the production build with `npm run preview`, then
 run `npm run test:browser` in another terminal. Playwright needs matching Chromium
 and Firefox browsers already available. On a new development machine they can be
@@ -182,7 +208,7 @@ navigation, vocabulary focus return, invalid-length handling, shared links,
 standalone downloads, offline reloads with the local origin unavailable, accessibility
 audits and exact HTTP/build
 byte comparisons. The separate [publication receipt](docs/publication-verification.json)
-records matching hashes for all 30 files served by GitHub Pages and direct hosted
+records exact file hashes served by GitHub Pages and direct hosted
 workflows in both browsers at both screen sizes. Neither receipt is a remote CI
 result.
 
@@ -192,16 +218,23 @@ the actual styled layout and navigation in Chromium and Firefox. CSS is loaded
 through an HTML stylesheet link so Vite development works with the same
 `style-src 'self'` policy as the production site.
 
-The [print receipt](docs/print-verification.json) checks twelve actual Chromium
+The [print receipt](docs/print-verification.json) checks twenty actual Chromium
 PDFs (each proposition with its passage initially open and closed). Poppler’s
 `pdftotext` recovered every source-language and English paragraph and every step
 title. Reproduce with `node scripts/print-check.mjs` against the preview server;
 this additional check requires Poppler. Firefox print media and state restoration
 are checked separately; the receipt does not claim a native Firefox PDF.
 
+The [upgrade review](docs/offline-upgrade.md) records a reproduced false-readiness
+bug: the new I.10 page claimed to be saved while its download was pending, then
+reloaded the older six-proposition course offline. The fix checks the controlling
+edition and its complete file inventory. Delayed and failed downloads, recovery,
+source-image bytes and updates to an already-open tab are exercised in real
+Chromium and Firefox sessions.
+
 ## Accuracy and limitations
 
-- This is I.1–6, not the whole _Elements_. The construction tools, translations
+- This is I.1–10, not the whole _Elements_. The construction tools, translations
   and selected vocabulary are complete for that scope. There is no general Greek
   parser, pronunciation model or claim that every word is annotated.
 - The Greek follows a modern printed critical edition, not a surviving autograph
@@ -211,6 +244,10 @@ are checked separately; the receipt does not claim a native Firefox PDF.
   Independent numerical agreement and sampled browser checks are not formal
   verification of Euclid’s postulates. The I.1 intersection gap and I.4 superposition assumption are explicitly
   discussed; the app does not claim to derive those assumptions from the postulates.
+- I.7’s printed proof treats a particular placement of the second meeting point;
+  the app names that limitation. I.8’s hypothetical displaced apex is not drawn
+  with impossible equal-distance claims. I.9’s alternate choices explicitly
+  distinguish equal angles from an internal bisection.
 - I.2 reuses the completed I.1 subconstruction, and I.3 reuses I.2. Their internal
   working is shown in the corresponding earlier lesson rather than repeated in
   the later plate. Some unused source-circle labels are omitted from the plates.
