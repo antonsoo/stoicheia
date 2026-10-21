@@ -437,9 +437,13 @@ try {
             await page.screenshot({ path: "docs/assets/length-transfer.png", fullPage: true });
             await page.locator(".workbench").screenshot({ path: "docs/assets/hero.png" });
           } else {
-            await page.evaluate(() => window.scrollTo(0, 0));
+            await page
+              .locator("#workbench")
+              .evaluate((el) => el.scrollIntoView({ block: "start" }));
             await page.screenshot({ path: "docs/assets/phone-plate.png" });
-            await page.locator("#step-title").scrollIntoViewIfNeeded();
+            await page.locator('.lesson-tab[data-lesson="2"]').click();
+            await page.locator('#step-list [data-step="8"]').click();
+            await page.locator(".reader").evaluate((el) => el.scrollIntoView({ block: "start" }));
             await page.screenshot({ path: "docs/assets/phone-passage.png" });
           }
         }
@@ -459,14 +463,14 @@ try {
         });
         await page.keyboard.press("Escape");
         if (name === "chromium") {
-          await page.locator("#workbench").scrollIntoViewIfNeeded();
+          await page.locator("#workbench").evaluate((el) => el.scrollIntoView({ block: "start" }));
           await page.screenshot({
             path: `docs/assets/isosceles-${viewport.width}.png`,
             fullPage: viewport.width === 1440,
           });
           await page.locator('.lesson-tab[data-lesson="6"]').click();
           await page.locator('#step-list [data-step="4"]').click();
-          await page.locator("#workbench").scrollIntoViewIfNeeded();
+          await page.locator("#workbench").evaluate((el) => el.scrollIntoView({ block: "start" }));
           await page.screenshot({
             path: `docs/assets/contradiction-${viewport.width}.png`,
             fullPage: viewport.width === 1440,
@@ -475,7 +479,7 @@ try {
           await page.locator('#step-list [data-step="3"]').click();
           await page.locator("#motion").focus();
           await page.keyboard.press("Home");
-          await page.locator("#workbench").scrollIntoViewIfNeeded();
+          await page.locator("#workbench").evaluate((el) => el.scrollIntoView({ block: "start" }));
           await page.screenshot({
             path: `docs/assets/superposition-${viewport.width}.png`,
             fullPage: viewport.width === 1440,

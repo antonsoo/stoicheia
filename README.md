@@ -71,6 +71,10 @@ on the same port; stop the development server before starting the preview.
   current diagram as SVG or the entire lesson as a standalone HTML study sheet.
   The downloaded sheet contains the diagram, all three languages, reasons, relevant foundation statements, notes and
   attribution, and opens without scripts or network access.
+- Browser printing produces the full parallel passage, even when it is collapsed
+  on screen, and restores the previous reading state afterward. An actual
+  [I.5 print PDF](examples/stoicheia-I5-reading.pdf) is included. Use the study-sheet
+  download when you also want the diagram, reasons and notes.
 - The production edition precaches its text, diagrams, font and source pages.
   Wait for “Edition ready offline” before disconnecting. Offline reloads require
   HTTPS or localhost and a browser that permits service workers. Development mode
@@ -184,6 +188,13 @@ The development quickstart is checked separately with `npm run test:dev` while
 the actual styled layout and navigation in Chromium and Firefox. CSS is loaded
 through an HTML stylesheet link so Vite development works with the same
 `style-src 'self'` policy as the production site.
+
+The [print receipt](docs/print-verification.json) checks twelve actual Chromium
+PDFs (each proposition with its passage initially open and closed). Poppler’s
+`pdftotext` recovered every source-language and English paragraph and every step
+title. Reproduce with `node scripts/print-check.mjs` against the preview server;
+this additional check requires Poppler. Firefox print media and state restoration
+are checked separately; the receipt does not claim a native Firefox PDF.
 
 ## Accuracy and limitations
 

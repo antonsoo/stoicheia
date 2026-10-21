@@ -34,3 +34,10 @@
   return to the corresponding proof step.
 - Standalone study sheets now include each step’s reason and the relevant
   foundation texts, so the argument can be followed away from the app.
+
+## Printing · 2026-10-21
+
+- Correct blank native print output when the full passage is collapsed. Expand
+  the passage for print only and restore its previous state afterward.
+- Include proposition and step titles, all three language readings and source
+  attribution in print. Verify actual PDFs by independent text extraction.

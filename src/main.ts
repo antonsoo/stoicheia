@@ -80,7 +80,7 @@ app.innerHTML = `
         return `<tr><th scope="row"><button type="button" data-lesson="${id}">${lessons[id].numeral}</button></th><td>${dependencies.length ? dependencies.map((d) => `<button type="button" data-lesson="${d}">${lessons[d].numeral}</button>`).join(" ") : "Definitions, postulates and assumptions"}</td><td>${lessons[id].shortTitle}</td></tr>`;
       })
       .join("")}</tbody></table></details>
-    <details class="full-reading" id="full-reading"><summary><span>Read the complete passage</span><span>Greek · Latin · English</span></summary><div id="full-passage"></div></details>
+    <details class="full-reading" id="full-reading"><summary><span>Read the complete passage</span><span>Greek · Latin · English</span></summary><div id="full-passage"></div><p class="print-credit">Stoicheia · Euclid, Elements I.1–6. Greek and Latin: J. L. Heiberg, Euclidis opera omnia, vol. I (Leipzig, 1883), pp. 4–25; public domain. Latin is Heiberg’s nineteenth-century translation. English reading and notes: Stoicheia, 2026, MIT. Source and edition notes: antonsoo.github.io/stoicheia/</p></details>
     <details class="wordbook"><summary><span>A small working vocabulary</span><span>Words you meet in these proofs</span></summary><div class="glossary-list">${glossary.map((entry) => `<button type="button" data-gloss="${entry.id}"><span lang="grc">${escapeHtml(entry.greek)}</span><span lang="la">${escapeHtml(entry.latin)}</span><small>${escapeHtml(entry.meaning)}</small></button>`).join("")}</div></details>
     <section class="source-note" id="source-note"><div><p class="eyebrow">A printed source you can inspect</p><h2>One edition. Two languages.</h2><p>Greek text and Latin translation from J. L. Heiberg’s <cite>Euclidis opera omnia</cite>, volume I (1883), printed pages 4–25. The English and reading notes are new. Point labels stay Greek in all three languages.</p><button type="button" id="open-edition">Open the printed pages</button></div><div class="editorial-note"><h3>What changed in transcription</h3><p>Line breaks and inline reference marks are omitted. Greek ϑ is written θ; point labels use consistent Greek letters. Latin u/v spelling is retained. Square brackets in the definitions, common notions, I.1 and I.4 reproduce Heiberg’s editorial brackets. Angle and triangle symbols are written ∠ and △. The step divisions, geometry orientation, reasons and annotations are teaching aids. The usual five-common-notion numbering is used in the notes; Heiberg’s expanded list is identified where it differs.</p><p>The English sometimes names intersections implied by the Greek. It is a reading translation, not a critical edition. The language notes cover selected forms, not every word.</p><a href="${import.meta.env.BASE_URL}sources/manifest.json">Source and image provenance</a></div></section>
   </main>
@@ -593,6 +593,20 @@ window.addEventListener("popstate", () => {
   if (location.hash && !location.hash.startsWith("#p=")) return;
   state = decodeState(location.hash);
   renderLesson();
+});
+
+// Closed details suppress their contents in native print layout. Expand the
+// full reading only for printing, then preserve the reader's previous choice.
+let readingBeforePrint: boolean | null = null;
+window.addEventListener("beforeprint", () => {
+  const reading = element<HTMLDetailsElement>("#full-reading");
+  readingBeforePrint ??= reading.open;
+  reading.open = true;
+});
+window.addEventListener("afterprint", () => {
+  if (readingBeforePrint === null) return;
+  element<HTMLDetailsElement>("#full-reading").open = readingBeforePrint;
+  readingBeforePrint = null;
 });
 
 renderLesson();

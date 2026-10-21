@@ -71,7 +71,10 @@ for (const [name, engine] of [
       });
       await page.goto(url.href);
       await page.waitForFunction(
-        () => document.querySelector("#offline-state")?.textContent === "Edition ready offline",
+        () =>
+          document
+            .querySelector("#offline-state")
+            ?.textContent?.startsWith("Edition ready offline"),
         null,
         { timeout: 60000 },
       );
