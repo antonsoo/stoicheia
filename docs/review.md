@@ -206,3 +206,7 @@ repair: precached responses must match their expected bytes before activation.
 It retains controlled blank-reader and wrong-source-page failures, first-install
 recovery and separate clean-build/browser evidence. The course text, geometric
 calculations and printing implementation are unchanged by that repair.
+
+That repair is also published, with its own [direct HTTPS record](mixed-edition-publication.json)
+for all 36 files and four browser/viewport workflows. The earlier course
+publication record remains tied to its original source revision.

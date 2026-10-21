@@ -73,3 +73,14 @@ observed failure. The others require the repaired build. Their hashes distinguis
 the artifacts. Integrity is checked at installation; browser storage can still
 be cleared later. These checks do not change the course's mathematical or
 philological validation boundaries.
+
+## Published result
+
+The [live course](https://antonsoo.github.io/stoicheia/) serves this repair. Its
+[direct HTTPS record](mixed-edition-publication.json) matches all 36 production
+files to the reviewed build and exercises all ten final steps, source browsing,
+shared state, the bisection controls and worker-served offline-emulation reloads
+in Chromium and Firefox at desktop and phone widths. The public origin remains
+online in that hosted check; the local mixed-response and upgrade checks supply
+the origin-disabled controls. The source and `gh-pages` commits are recorded
+separately. This is not a remote CI or package-release claim.

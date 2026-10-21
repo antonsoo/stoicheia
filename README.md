@@ -238,7 +238,8 @@ A [mixed-response review](docs/mixed-edition.md) also reproduces successful HTTP
 responses containing an older entry page or the wrong source scan. The install
 now verifies each file’s bytes before activation and recovers after a failed
 first installation. The review retains the blank-reader and wrong-page failures,
-corrected offline reloads and the clean-build evidence.
+corrected offline reloads and the clean-build evidence. Its separate
+[hosted receipt](docs/mixed-edition-publication.json) verifies the published repair.
 
 ## Accuracy and limitations
 

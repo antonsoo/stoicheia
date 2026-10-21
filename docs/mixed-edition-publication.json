@@ -1,0 +1,357 @@
+{
+  "scope": "Direct HTTPS deployment: exact build bytes and real hosted browser workflows",
+  "checkedAt": "2026-10-21T23:18:18.852Z",
+  "url": "https://antonsoo.github.io/stoicheia/",
+  "sourceCommit": "0830f7d3bdfca108ff894a9b543cd458faedc72e",
+  "files": [
+    {
+      "file": "assets/index-B-MAc7Qb.js",
+      "bytes": 207563,
+      "sha256": "7f1ce225ffa0b2fd25bdd728cc7f6bde013ebf1c5d1b55f3796479f591b0ced7"
+    },
+    {
+      "file": "assets/index-BalXma64.css",
+      "bytes": 28577,
+      "sha256": "a54dc32a048568df0ed00123994547fb44ccb966206f72d61191d3808c00caba"
+    },
+    {
+      "file": "favicon.svg",
+      "bytes": 272,
+      "sha256": "c8cc87e2546804a2300df9c859c6eea024bab87a031dc81c276a10882df4968a"
+    },
+    {
+      "file": "fonts/NotoSerif-Regular.ttf",
+      "bytes": 444064,
+      "sha256": "5473d2e43bdd018ee124a4addba8091fd0a29894b121cbb741023af6549662b6"
+    },
+    {
+      "file": "fonts/OFL.txt",
+      "bytes": 4396,
+      "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a"
+    },
+    {
+      "file": "index.html",
+      "bytes": 1293,
+      "sha256": "fe26bf134652a1aeffaed178eafe3e0f22539be90474c4b0a6e00af0001d0bbf"
+    },
+    {
+      "file": "sources/heiberg-004.jpg",
+      "bytes": 320270,
+      "sha256": "b874eac6b40c554206427557ce221770b7b2c1b50afa17087fa6131282db8bc4"
+    },
+    {
+      "file": "sources/heiberg-005.jpg",
+      "bytes": 316399,
+      "sha256": "7f570bfd4809b2474674fbbfb62610f0b45869d4374cf277d5807deca361b772"
+    },
+    {
+      "file": "sources/heiberg-006.jpg",
+      "bytes": 320634,
+      "sha256": "b6b371b3e5eb13f4305dbf073e5f15ce178018a8ad8557df99431410ce6a69ae"
+    },
+    {
+      "file": "sources/heiberg-007.jpg",
+      "bytes": 334398,
+      "sha256": "c9efe81728c69d36b95838b8d80060eae8a0d316fb682a722a3273eb8ce1f3ea"
+    },
+    {
+      "file": "sources/heiberg-008.jpg",
+      "bytes": 273136,
+      "sha256": "5e7987d0e9686891261411810a828bd6ace64c6a21ea92600fdedbb2c6078a17"
+    },
+    {
+      "file": "sources/heiberg-009.jpg",
+      "bytes": 291149,
+      "sha256": "8844849fadfddacf9ddd2692a5917003f96a3b9a122825a891a1931d0580e75e"
+    },
+    {
+      "file": "sources/heiberg-010.jpg",
+      "bytes": 276612,
+      "sha256": "8d1db0bc4b9a8b93b72633ac544f16cdd7e03aef8111d5e68f25d192febe1dbd"
+    },
+    {
+      "file": "sources/heiberg-011.jpg",
+      "bytes": 279836,
+      "sha256": "f23df1af363dded2831f7e7f6fbea20827c1e9d650faeb03bb9995489ae93a72"
+    },
+    {
+      "file": "sources/heiberg-012.jpg",
+      "bytes": 289774,
+      "sha256": "e5cc7d6bf3a2ec8dc3bcbf88803b8ee9e3d0315ae29221ed7d2fe9768356c2fd"
+    },
+    {
+      "file": "sources/heiberg-013.jpg",
+      "bytes": 291315,
+      "sha256": "49235a355d10656aba59db1464aaefe34f5836a32ca5f214955d7b064a39273d"
+    },
+    {
+      "file": "sources/heiberg-014.jpg",
+      "bytes": 299613,
+      "sha256": "dc97350f09d7adca95cf3cc233cef8237da757ff4bd077c1b75390c8de3fb385"
+    },
+    {
+      "file": "sources/heiberg-015.jpg",
+      "bytes": 271550,
+      "sha256": "52e2aa1b336c6c88b3bf8a3ff1da916f37df2afe4de5d29d3659b13254e18a2c"
+    },
+    {
+      "file": "sources/heiberg-016.jpg",
+      "bytes": 295019,
+      "sha256": "52d0dd0e02d4088b80b547838d47621efd1b23784f33b62482216a71b0927afc"
+    },
+    {
+      "file": "sources/heiberg-017.jpg",
+      "bytes": 283679,
+      "sha256": "ff29baed3f8686d2d55b10131a85953cfec56f2388be0053e513c6ad362cc773"
+    },
+    {
+      "file": "sources/heiberg-018.jpg",
+      "bytes": 320531,
+      "sha256": "5db4489cfd168fb06c3593125ce62bd67b2d097b2146d9eaa655db878deaaa69"
+    },
+    {
+      "file": "sources/heiberg-019.jpg",
+      "bytes": 255868,
+      "sha256": "6cf9dc8ffa51ab9cad0cd0c0b89d81d6bf11b20dfe605dc4e6a7c552efc3ecda"
+    },
+    {
+      "file": "sources/heiberg-020.jpg",
+      "bytes": 293742,
+      "sha256": "a8755a2c4cd74bb7de6d77da6c18bc4bbccb9742dd71feadb24ec2682a82eb3b"
+    },
+    {
+      "file": "sources/heiberg-021.jpg",
+      "bytes": 291018,
+      "sha256": "3412b172ffa4825a145107528219d3e9816aa007569326c05afa76c7340b24b0"
+    },
+    {
+      "file": "sources/heiberg-022.jpg",
+      "bytes": 293560,
+      "sha256": "9f1e3d75f5d7b78fba0a4ae1c27ea786b1dab1652545215512203604eb158019"
+    },
+    {
+      "file": "sources/heiberg-023.jpg",
+      "bytes": 278117,
+      "sha256": "90ac8cd3b7c27a32078961e3a3a6413133fece7989ce3d7841a28c1cfc948afe"
+    },
+    {
+      "file": "sources/heiberg-024.jpg",
+      "bytes": 306364,
+      "sha256": "6a0b4031ea7536cf2c506e0164841ec388db0e69171d4851d771a5f96c3aa9b8"
+    },
+    {
+      "file": "sources/heiberg-025.jpg",
+      "bytes": 293436,
+      "sha256": "dcc612163f25b70db7f0cd45536506bbe4fe8fad1c93a692f3d2700e0e8747ed"
+    },
+    {
+      "file": "sources/heiberg-026.jpg",
+      "bytes": 293850,
+      "sha256": "e8e28946e679e899e2269397536f70cadda8bd139e2903be9ba472ecc1d31051"
+    },
+    {
+      "file": "sources/heiberg-027.jpg",
+      "bytes": 273902,
+      "sha256": "451b57f13004a6d271d1e06a74e05b4d38e9bb06f5ad89b8d02a628d2f669139"
+    },
+    {
+      "file": "sources/heiberg-028.jpg",
+      "bytes": 296351,
+      "sha256": "76f2906d1259b6dcffecee73d1519f133d58790e051c5759780526ad65fc827c"
+    },
+    {
+      "file": "sources/heiberg-029.jpg",
+      "bytes": 292126,
+      "sha256": "ef2054064c3b605004d0046476eadfeecb35f30ccefa0ede16dbaec135dc88be"
+    },
+    {
+      "file": "sources/heiberg-030.jpg",
+      "bytes": 268412,
+      "sha256": "c28d31907a99fe1b0e0556cb3e284b30418aed66cfa991a8d235409f356cc0bd"
+    },
+    {
+      "file": "sources/heiberg-031.jpg",
+      "bytes": 235508,
+      "sha256": "78c48ad097ea261328c143863dc9febeadc3070b60a1bfec288b2d6e55caf931"
+    },
+    {
+      "file": "sources/manifest.json",
+      "bytes": 9579,
+      "sha256": "c56cdc7ff976f0ff488e5c17bc7a6b0d9edb44892880f5fe64f55864dc15e309"
+    },
+    {
+      "file": "sw.js",
+      "bytes": 6531,
+      "sha256": "6f242bb864da732eb3d909066f7928b174f674b12ff437f889599074f8bf842e"
+    }
+  ],
+  "configurations": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "finalSteps": 10,
+      "workflows": [
+        "rigid superposition",
+        "I.5 angle subtraction",
+        "foundation and nested source scan",
+        "I.6 hypothetical sketch",
+        "Greek-first reveal",
+        "passage exercise",
+        "shared URL reload",
+        "I.7 reflected candidate",
+        "I.8 three-side superposition",
+        "I.9 collapsed and outward crossing, then internal bisector",
+        "I.10 midpoint and printed page 31"
+      ],
+      "offline": "Worker-served reload and source scan under browser offline emulation; public origin not disabled",
+      "pageErrors": 0,
+      "externalRequests": 0,
+      "cspViolations": 0,
+      "browserAssets": [
+        {
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-BalXma64.css",
+          "status": 200
+        },
+        {
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-B-MAc7Qb.js",
+          "status": 200
+        },
+        {
+          "url": "https://antonsoo.github.io/stoicheia/fonts/NotoSerif-Regular.ttf",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "finalSteps": 10,
+      "workflows": [
+        "rigid superposition",
+        "I.5 angle subtraction",
+        "foundation and nested source scan",
+        "I.6 hypothetical sketch",
+        "Greek-first reveal",
+        "passage exercise",
+        "shared URL reload",
+        "I.7 reflected candidate",
+        "I.8 three-side superposition",
+        "I.9 collapsed and outward crossing, then internal bisector",
+        "I.10 midpoint and printed page 31"
+      ],
+      "offline": "Worker-served reload and source scan under browser offline emulation; public origin not disabled",
+      "pageErrors": 0,
+      "externalRequests": 0,
+      "cspViolations": 0,
+      "browserAssets": [
+        {
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-BalXma64.css",
+          "status": 200
+        },
+        {
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-B-MAc7Qb.js",
+          "status": 200
+        },
+        {
+          "url": "https://antonsoo.github.io/stoicheia/fonts/NotoSerif-Regular.ttf",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "finalSteps": 10,
+      "workflows": [
+        "rigid superposition",
+        "I.5 angle subtraction",
+        "foundation and nested source scan",
+        "I.6 hypothetical sketch",
+        "Greek-first reveal",
+        "passage exercise",
+        "shared URL reload",
+        "I.7 reflected candidate",
+        "I.8 three-side superposition",
+        "I.9 collapsed and outward crossing, then internal bisector",
+        "I.10 midpoint and printed page 31"
+      ],
+      "offline": "Worker-served reload and source scan under browser offline emulation; public origin not disabled",
+      "pageErrors": 0,
+      "externalRequests": 0,
+      "cspViolations": 0,
+      "browserAssets": [
+        {
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-BalXma64.css",
+          "status": 200
+        },
+        {
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-B-MAc7Qb.js",
+          "status": 200
+        },
+        {
+          "url": "https://antonsoo.github.io/stoicheia/fonts/NotoSerif-Regular.ttf",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "finalSteps": 10,
+      "workflows": [
+        "rigid superposition",
+        "I.5 angle subtraction",
+        "foundation and nested source scan",
+        "I.6 hypothetical sketch",
+        "Greek-first reveal",
+        "passage exercise",
+        "shared URL reload",
+        "I.7 reflected candidate",
+        "I.8 three-side superposition",
+        "I.9 collapsed and outward crossing, then internal bisector",
+        "I.10 midpoint and printed page 31"
+      ],
+      "offline": "Worker-served reload and source scan under browser offline emulation; public origin not disabled",
+      "pageErrors": 0,
+      "externalRequests": 0,
+      "cspViolations": 0,
+      "browserAssets": [
+        {
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-BalXma64.css",
+          "status": 200
+        },
+        {
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-B-MAc7Qb.js",
+          "status": 200
+        },
+        {
+          "url": "https://antonsoo.github.io/stoicheia/fonts/NotoSerif-Regular.ttf",
+          "status": 200
+        }
+      ]
+    }
+  ],
+  "reviewedBuildSource": "40516a9cc4b667e873eef539fb20fcb6edf3239c",
+  "deployment": {
+    "branch": "gh-pages",
+    "commit": "63cfcd7127f4033f7e191c8ced30d41a2fff70c5",
+    "observedPagesBuildStatus": "built",
+    "updatedAt": "2026-10-21T23:17:16Z"
+  }
+}
