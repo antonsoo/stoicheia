@@ -1,0 +1,116 @@
+{
+  "scope": "Locally served production build; no public deployment",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "readingSteps": 26,
+      "accessibility": [
+        "I.1 final step",
+        "I.2 final step",
+        "I.3 final step",
+        "vocabulary dialog",
+        "source dialog",
+        "I.3 invalid greater-lesser hypothesis",
+        "complete aligned passage",
+        "standalone study sheet"
+      ],
+      "offline": "Offline emulation plus unavailable origin: worker-served reload, proposition changes, source scan and standalone exports passed",
+      "pageErrors": 0,
+      "externalRequests": 0,
+      "cspViolations": 0
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "readingSteps": 26,
+      "accessibility": [
+        "I.1 final step",
+        "I.2 final step",
+        "I.3 final step",
+        "vocabulary dialog",
+        "source dialog",
+        "I.3 invalid greater-lesser hypothesis",
+        "complete aligned passage",
+        "standalone study sheet"
+      ],
+      "offline": "Offline emulation plus unavailable origin: worker-served reload, proposition changes, source scan and standalone exports passed",
+      "pageErrors": 0,
+      "externalRequests": 0,
+      "cspViolations": 0
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "readingSteps": 26,
+      "accessibility": [
+        "I.1 final step",
+        "I.2 final step",
+        "I.3 final step",
+        "vocabulary dialog",
+        "source dialog",
+        "I.3 invalid greater-lesser hypothesis",
+        "complete aligned passage",
+        "standalone study sheet"
+      ],
+      "offline": "Offline emulation plus unavailable origin: worker-served reload, proposition changes, source scan and standalone exports passed",
+      "pageErrors": 0,
+      "externalRequests": 0,
+      "cspViolations": 0
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "readingSteps": 26,
+      "accessibility": [
+        "I.1 final step",
+        "I.2 final step",
+        "I.3 final step",
+        "vocabulary dialog",
+        "source dialog",
+        "I.3 invalid greater-lesser hypothesis",
+        "complete aligned passage",
+        "standalone study sheet"
+      ],
+      "offline": "Offline emulation plus unavailable origin: worker-served reload, proposition changes, source scan and standalone exports passed",
+      "pageErrors": 0,
+      "externalRequests": 0,
+      "cspViolations": 0
+    }
+  ],
+  "servedByteMatches": [
+    "assets/index-CecVnwzE.js",
+    "assets/index-DHF8sYDI.css",
+    "favicon.svg",
+    "fonts/NotoSerif-Regular.ttf",
+    "fonts/OFL.txt",
+    "index.html",
+    "sources/heiberg-010.jpg",
+    "sources/heiberg-011.jpg",
+    "sources/heiberg-012.jpg",
+    "sources/heiberg-013.jpg",
+    "sources/heiberg-014.jpg",
+    "sources/heiberg-015.jpg",
+    "sources/heiberg-016.jpg",
+    "sources/heiberg-017.jpg",
+    "sources/manifest.json",
+    "sw.js"
+  ],
+  "offlineOriginProbeRejections": 46
+}

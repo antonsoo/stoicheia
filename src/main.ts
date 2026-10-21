@@ -94,27 +94,38 @@ function writeState(push = false): void {
 function renderDiagram(): void {
   const lesson = lessons[state.proposition];
   const scene = makeScene(state);
+  const step = lesson.steps[state.step];
+  if (!step) return;
+  const reason = reasons[step.reason];
+  element("#phase-label").textContent = scene.warning ? "Check givens" : step.phase;
+  element("#reason").innerHTML = scene.warning
+    ? '<p class="eyebrow">Check the hypothesis <span>unmet</span></p><h3>This construction needs a shorter reference</h3><p>I.3 assumes Γ &lt; ΑΒ. Restore that inequality before applying these instructions. An equal or longer Γ does not meet the task as stated.</p>'
+    : `<p class="eyebrow">Why this is allowed <span>${escapeHtml(reason?.kind ?? "deduction")}</span></p><h3>${escapeHtml(reason?.title ?? "")}</h3><p>${escapeHtml(reason?.text ?? "")}</p>${reason?.lesson ? `<button type="button" class="reason-link" data-lesson="${reason.lesson}" data-open-result="true">Open ${lessons[reason.lesson].numeral}’s construction <span aria-hidden="true">→</span></button>` : ""}`;
   element("#diagram").innerHTML = drawScene(
     scene,
     `${lesson.numeral} · ${lesson.steps[state.step]?.title ?? ""}`,
   );
   element("#equations").innerHTML = scene.equalities.length
     ? scene.equalities.map((line) => `<span>${escapeHtml(line)}</span>`).join("")
-    : `<span class="equation-placeholder">${state.step === 0 ? "Start with what is given." : "Construct first. Then prove the equalities."}</span>`;
+    : `<span class="equation-placeholder">${scene.warning ? "Required: Γ < ΑΒ" : state.step === 0 ? "Start with what is given." : "Construct first. Then prove the equalities."}</span>`;
+  element("#next").innerHTML =
+    state.step === lesson.steps.length - 1
+      ? scene.warning
+        ? "End of text"
+        : 'Complete <span aria-hidden="true">✓</span>'
+      : 'Next step <span aria-hidden="true">→</span>';
   const warning = element("#hypothesis-warning");
   warning.hidden = !scene.warning;
   warning.textContent = scene.warning;
   element("#measurements").innerHTML =
-    `<table><caption>Numerical check <span>relative units; the proof is above</span></caption><tbody><tr>${scene.measurements.map((measurement) => `<th scope="col">${escapeHtml(measurement.label)}</th>`).join("")}</tr><tr>${scene.measurements.map((measurement) => `<td>${measurement.value.toFixed(2)}</td>`).join("")}</tr></tbody></table>`;
+    `<table><caption>Numerical check <span>relative units</span></caption><tbody><tr>${scene.measurements.map((measurement) => `<th scope="col">${escapeHtml(measurement.label)}</th>`).join("")}</tr><tr>${scene.measurements.map((measurement) => `<td>${measurement.value.toFixed(2)}</td>`).join("")}</tr></tbody></table>`;
 }
 
 function renderStep(): void {
   const lesson = lessons[state.proposition];
   const step = lesson.steps[state.step];
   if (!step) return;
-  const reason = reasons[step.reason];
   element("#step-title").textContent = step.title;
-  element("#phase-label").textContent = step.phase;
   element("#reading-label").textContent =
     step.phase === "Prove" || step.phase === "Conclude" ? "Read the argument" : "Read the command";
   element("#current-passage").innerHTML = parallel(step);
@@ -122,17 +133,11 @@ function renderStep(): void {
   element("#step-position").textContent = `Step ${state.step + 1} of ${lesson.steps.length}`;
   element<HTMLButtonElement>("#previous").disabled = state.step === 0;
   element<HTMLButtonElement>("#next").disabled = state.step === lesson.steps.length - 1;
-  element("#next").innerHTML =
-    state.step === lesson.steps.length - 1
-      ? 'Complete <span aria-hidden="true">✓</span>'
-      : 'Next step <span aria-hidden="true">→</span>';
   for (const button of document.querySelectorAll<HTMLButtonElement>("#step-list button")) {
     const current = Number(button.dataset.step) === state.step;
     button.setAttribute("aria-current", current ? "step" : "false");
     button.classList.toggle("visited", Number(button.dataset.step) < state.step);
   }
-  element("#reason").innerHTML =
-    `<p class="eyebrow">Why this is allowed <span>${escapeHtml(reason?.kind ?? "deduction")}</span></p><h3>${escapeHtml(reason?.title ?? "")}</h3><p>${escapeHtml(reason?.text ?? "")}</p>${reason?.lesson ? `<button type="button" class="reason-link" data-lesson="${reason.lesson}" data-open-result="true">Open ${lessons[reason.lesson].numeral}’s construction <span aria-hidden="true">→</span></button>` : ""}`;
   renderDiagram();
   writeState();
 }

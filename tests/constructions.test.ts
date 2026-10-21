@@ -112,6 +112,10 @@ test("shared links round-trip the complete reading state", () => {
   });
   assert.equal(decodeState("#p=2&s=Infinity&r=&size=0").step, 0);
   assert.equal(decodeState("#p=<script>&s=-2").proposition, 1);
+  const fractional = decodeState("#p=2&size=137.6&r=0.654&a=25.4");
+  assert.equal(fractional.size, 138);
+  assert.equal(fractional.ratio, 0.65);
+  assert.equal(fractional.angle, 25);
 });
 
 test("vocabulary recognizes accented inflected forms in both languages", () => {

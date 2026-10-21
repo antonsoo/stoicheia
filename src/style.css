@@ -530,6 +530,7 @@ input[type="range"] {
   background: #f6f0fa;
 }
 .reader {
+  align-self: stretch;
   min-width: 0;
   border-left: 1px solid var(--rule);
   background: var(--folio);
