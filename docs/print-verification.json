@@ -1,0 +1,153 @@
+{
+  "scope": "Actual Chromium print PDFs, text extracted independently by Poppler pdftotext; Firefox print-layout lifecycle checked separately",
+  "pdfs": [
+    {
+      "proposition": 1,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 33,
+      "stepTitles": 10,
+      "pages": 5,
+      "extractedCharacters": 4188,
+      "bytes": 47520,
+      "sha256": "bf91d3570acd49eb9a09c03ac1165026cb9ec08e098d74850f71eeda7a3d71ab",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 1,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 33,
+      "stepTitles": 10,
+      "pages": 5,
+      "extractedCharacters": 4188,
+      "bytes": 47520,
+      "sha256": "bf91d3570acd49eb9a09c03ac1165026cb9ec08e098d74850f71eeda7a3d71ab",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 2,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 36,
+      "stepTitles": 11,
+      "pages": 5,
+      "extractedCharacters": 4479,
+      "bytes": 50577,
+      "sha256": "094a74daf36d47fcc8350100ea4201c9ce933e73248b18b09f1261bb229cc83b",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 2,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 36,
+      "stepTitles": 11,
+      "pages": 5,
+      "extractedCharacters": 4479,
+      "bytes": 50577,
+      "sha256": "094a74daf36d47fcc8350100ea4201c9ce933e73248b18b09f1261bb229cc83b",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 3,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 18,
+      "stepTitles": 5,
+      "pages": 3,
+      "extractedCharacters": 2882,
+      "bytes": 44094,
+      "sha256": "35afa915ef666360af239b01ebf98b1c857e341294113128aa621900603e9bed",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 3,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 18,
+      "stepTitles": 5,
+      "pages": 3,
+      "extractedCharacters": 2882,
+      "bytes": 44094,
+      "sha256": "35afa915ef666360af239b01ebf98b1c857e341294113128aa621900603e9bed",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 4,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 27,
+      "stepTitles": 8,
+      "pages": 5,
+      "extractedCharacters": 6523,
+      "bytes": 56211,
+      "sha256": "e33002f6d5a393308f258b9ac4770e9c8a170df9c627fe6d72d2af601cf596aa",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 4,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 27,
+      "stepTitles": 8,
+      "pages": 5,
+      "extractedCharacters": 6523,
+      "bytes": 56211,
+      "sha256": "e33002f6d5a393308f258b9ac4770e9c8a170df9c627fe6d72d2af601cf596aa",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 5,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 36,
+      "stepTitles": 11,
+      "pages": 6,
+      "extractedCharacters": 6496,
+      "bytes": 57821,
+      "sha256": "0f17ca4bcc8555f85eea0716cf53065c688d935677e57cb515c8ea40aedd7882",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 5,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 36,
+      "stepTitles": 11,
+      "pages": 6,
+      "extractedCharacters": 6496,
+      "bytes": 57821,
+      "sha256": "0f17ca4bcc8555f85eea0716cf53065c688d935677e57cb515c8ea40aedd7882",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 6,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 24,
+      "stepTitles": 7,
+      "pages": 3,
+      "extractedCharacters": 3752,
+      "bytes": 48821,
+      "sha256": "88000d609dc13082a6b9ec2d14e2e1d67f65bd0b85afb9ac8fc5b818ca14c71c",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 6,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 24,
+      "stepTitles": 7,
+      "pages": 3,
+      "extractedCharacters": 3752,
+      "bytes": 48821,
+      "sha256": "88000d609dc13082a6b9ec2d14e2e1d67f65bd0b85afb9ac8fc5b818ca14c71c",
+      "readingStateRestored": true
+    }
+  ],
+  "firefox": [
+    {
+      "passageInitiallyOpen": false,
+      "fullTextVisibleForPrint": true,
+      "stateRestored": true,
+      "boundary": "Emulated print media and dispatched lifecycle events, not a native Firefox PDF"
+    },
+    {
+      "passageInitiallyOpen": true,
+      "fullTextVisibleForPrint": true,
+      "stateRestored": true,
+      "boundary": "Emulated print media and dispatched lifecycle events, not a native Firefox PDF"
+    }
+  ],
+  "chromiumVersion": "153.0.8010.12",
+  "firefoxVersion": "155.0"
+}

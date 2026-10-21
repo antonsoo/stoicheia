@@ -1,8 +1,8 @@
 {
-  "scope": "Clean Git export; local validation, no remote CI or deployment claim",
-  "source_commit": "35fa930e5e7d62015a4e75ff644adb96fafaa9f2",
+  "scope": "Clean Git export; local validation, distinct from remote deployment and CI",
+  "source_commit": "ea1dc1d0170826d221d61ca6b486654b43771494",
   "node": "v24.22.0",
-  "build_inputs_sha256": "2d85cfe586300c5973b107480f6ba57d046466ba32b8f289f323bd780cfcdba4",
+  "build_inputs_sha256": "5c18a4e112ce43cbe5cf9d6c7b4c45f6a69e2f6034b282e661a971f4ec787fe7",
   "commands": [
     {
       "command": "npm ci",
@@ -10,11 +10,15 @@
     },
     {
       "command": "npm run check",
-      "result": "passed: lint, strict typecheck, 9 checks and production build"
+      "result": "passed: lint, strict typecheck, 17 checks and production build"
     },
     {
       "command": "npm run verify:oracle",
-      "result": "passed: 720 cases and 4,320 point comparisons"
+      "result": "passed: 720 cases, 4320 point comparisons and 5760 equality checks"
+    },
+    {
+      "command": "npm run verify:triangles",
+      "result": "passed: 672 cases and 8064 checks"
     },
     {
       "command": "npm run test:dev",
@@ -23,14 +27,20 @@
     },
     {
       "command": "npm run test:browser",
-      "result": "passed: 4 browser/viewport configurations and 16 exact served-file comparisons",
+      "result": "passed: 4 browser/viewport configurations, 52 reading steps each, 72 accessibility audits and 30 exact served-file comparisons",
+      "server": "npm run preview"
+    },
+    {
+      "command": "node scripts/print-check.mjs",
+      "result": "passed: all paragraphs and step titles extracted from 12 Chromium PDFs; reading state restored. Firefox print layout and lifecycle checked separately.",
       "server": "npm run preview"
     }
   ],
   "build_command": "npm run build",
   "output_directory": "dist/",
-  "independent_oracle": "docs/geometry-oracle.json",
+  "independent_oracles": ["docs/geometry-oracle.json", "docs/triangle-oracle.json"],
   "browser_receipt": "docs/browser-verification.json",
   "quickstart_receipt": "docs/quickstart-verification.json",
-  "public_release": false
+  "publication_receipt": "Publication, when performed, is recorded separately in docs/publication-verification.json.",
+  "print_receipt": "docs/print-verification.json"
 }
