@@ -54,7 +54,9 @@ export function cutOff(a: Point, b: Point, c: Point, d: Point, side: 1 | -1 = 1)
       "I.3 requires two positive unequal lengths; the reference must be shorter.",
     );
   }
-  const copy = transfer(a, c, d, side);
+  // If the reference starts at the target, use its other endpoint for I.2.
+  // This keeps the equilateral subconstruction nondegenerate (as needed in I.5).
+  const copy = distance(a, c) === 0 ? transfer(a, d, c, side) : transfer(a, c, d, side);
   const radius = distance(a, copy.l);
   const e = add(a, scale(unit(a, b), radius));
   return { a, b, c, d, copy, e, radius };

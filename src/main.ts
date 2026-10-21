@@ -1,10 +1,11 @@
 import { glossary } from "./content/glossary";
 import type { Passage } from "./content/lessons";
 import { lessons, reasons } from "./content/lessons";
+import { parameterControls } from "./controls";
 import { makeScene } from "./core/scene";
 import type { PropositionId } from "./core/state";
 import { decodeState, defaults, encodeState, stepCounts } from "./core/state";
-import { annotated, drawScene, escapeHtml, studySheet } from "./render";
+import { annotated, comparisonTable, drawScene, escapeHtml, studySheet } from "./render";
 
 function element<T extends Element = HTMLElement>(selector: string): T {
   const node = document.querySelector<T>(selector);
@@ -22,32 +23,34 @@ app.innerHTML = `
       <svg viewBox="0 0 72 56" aria-hidden="true"><circle cx="26" cy="30" r="22"/><circle cx="48" cy="30" r="22"/><path d="M26 30 37 10.947 48 30Z"/></svg>
       <span>Stoicheia<span class="brand-greek" lang="grc">ΣΤΟΙΧΕΙΑ</span></span>
     </a>
-    <div class="masthead-note">Geometry, in its own words.<span>Euclid’s first constructions · Greek / Latin / English</span></div>
+    <div class="masthead-note">Geometry, in its own words.<span>Euclid I.1–6 · Greek / Latin / English</span></div>
     <button type="button" class="quiet" id="about-sources">About the texts <span aria-hidden="true">↗</span></button>
   </header>
   <main>
     <nav class="lesson-nav" aria-label="Propositions">
-      ${([1, 2, 3] as const).map((id) => `<button type="button" data-lesson="${id}" class="lesson-tab"><span class="tab-numeral">${lessons[id].numeral}</span><span>${lessons[id].shortTitle}</span><span class="tab-greek" lang="grc">${lessons[id].greekNumeral}</span></button>`).join("")}
+      ${([1, 2, 3, 4, 5, 6] as const).map((id) => `<button type="button" data-lesson="${id}" class="lesson-tab"><span class="tab-numeral">${lessons[id].numeral}</span><span>${lessons[id].shortTitle}</span><span class="tab-greek" lang="grc">${lessons[id].greekNumeral}</span></button>`).join("")}
     </nav>
     <div class="lesson-heading"><div><p class="eyebrow" id="book-label"></p><h1 id="lesson-title"></h1></div><p id="lesson-introduction"></p></div>
-    <section id="workbench" class="workbench" aria-label="Construction and parallel reader" tabindex="-1">
+    <section id="workbench" class="workbench" aria-label="Geometric plate and parallel reader" tabindex="-1">
       <div class="construction">
         <div class="plate-top"><span id="plate-number"></span><span id="phase-label"></span></div>
-        <div id="diagram"></div>
+        <div id="diagram"></div><div id="motion-control" class="motion-control" hidden></div>
+        <div class="step-controls">
+          <button type="button" id="previous" class="arrow" aria-label="Previous step">←</button>
+          <div class="step-progress"><p id="step-position" aria-live="polite" aria-atomic="true"></p><div id="step-list" class="step-list" aria-label="Reading steps"></div></div>
+          <button type="button" id="next" class="next-button">Next step <span aria-hidden="true">→</span></button>
+        </div>
+        <button type="button" class="phone-reader-jump" id="read-sentence">Read this sentence ↓</button>
+        <aside id="diagram-notice" class="diagram-notice" hidden></aside><div id="comparison" class="comparison" hidden></div>
         <div id="equations" class="equations" aria-label="Established equalities"></div>
         <p id="hypothesis-warning" class="warning" role="status" hidden></p>
         <div class="plate-legend"><span><i class="legend-given"></i>given / established</span><span><i class="legend-active"></i>current operation</span></div>
-        <div class="step-controls">
-          <button type="button" id="previous" class="arrow" aria-label="Previous step">←</button>
-          <div class="step-progress"><p id="step-position" aria-live="polite" aria-atomic="true"></p><div id="step-list" class="step-list" aria-label="Construction steps"></div></div>
-          <button type="button" id="next" class="next-button">Next step <span aria-hidden="true">→</span></button>
-        </div>
         <details class="parameters" id="parameters"><summary>Change the givens <span>the argument should survive</span></summary><div id="parameter-controls"></div></details>
         <div class="plate-actions"><button type="button" id="save-diagram">Save diagram</button><button type="button" id="save-sheet">Save study sheet</button><button type="button" id="share">Share this step</button></div>
       </div>
       <article class="reader" aria-labelledby="step-title">
         <div class="reader-top"><span class="eyebrow" id="reading-label">Read the command</span><span class="vocabulary-hint">Underlined words open vocabulary</span></div>
-        <h2 id="step-title" tabindex="-1"></h2>
+        <h2 id="step-title" tabindex="-1"></h2><button type="button" class="phone-reader-jump" id="back-to-plate">Back to the plate ↑</button>
         <div id="current-passage"></div>
         <details class="language-note" open><summary>Read the language</summary><p id="language-note"></p></details>
         <div class="reason" id="reason"></div>
@@ -57,10 +60,23 @@ app.innerHTML = `
       <article class="insight"><p class="eyebrow">Beyond the drawing</p><h2 id="insight-title"></h2><p id="insight-text"></p><a id="commentary-link" target="_blank" rel="noreferrer">Read the mathematical commentary <span aria-hidden="true">↗</span></a></article>
       <form class="question" id="question"><p class="eyebrow">Check the reason</p><fieldset id="question-options"></fieldset><p id="question-feedback" role="status" aria-live="polite"></p></form>
     </section>
-    <section class="reading-trail" aria-label="How the constructions depend on one another"><div><p class="eyebrow">An earned set of tools</p><p>Each result becomes a new permission.</p></div><div class="trail-links">${([1, 2, 3] as const).map((id, index) => `${index ? '<span aria-hidden="true">→</span>' : ""}<button type="button" data-lesson="${id}"><b>${lessons[id].numeral}</b><span>${lessons[id].shortTitle}</span></button>`).join("")}</div></section>
+    <details class="course-map"><summary><span>How the arguments depend on one another</span><span>Six propositions · two kinds of work</span></summary><table><thead><tr><th scope="col">Proposition</th><th scope="col">Earlier results it uses</th><th scope="col">What it earns</th></tr></thead><tbody>${(
+      [1, 2, 3, 4, 5, 6] as const
+    )
+      .map((id) => {
+        const dependencies = [
+          ...new Set(
+            lessons[id].steps
+              .map((step) => reasons[step.reason]?.lesson)
+              .filter((value): value is PropositionId => value !== undefined),
+          ),
+        ];
+        return `<tr><th scope="row"><button type="button" data-lesson="${id}">${lessons[id].numeral}</button></th><td>${dependencies.length ? dependencies.map((d) => `<button type="button" data-lesson="${d}">${lessons[d].numeral}</button>`).join(" ") : "Definitions, postulates and assumptions"}</td><td>${lessons[id].shortTitle}</td></tr>`;
+      })
+      .join("")}</tbody></table></details>
     <details class="full-reading" id="full-reading"><summary><span>Read the complete passage</span><span>Greek · Latin · English</span></summary><div id="full-passage"></div></details>
     <details class="wordbook"><summary><span>A small working vocabulary</span><span>Words you meet in these proofs</span></summary><div class="glossary-list">${glossary.map((entry) => `<button type="button" data-gloss="${entry.id}"><span lang="grc">${escapeHtml(entry.greek)}</span><span lang="la">${escapeHtml(entry.latin)}</span><small>${escapeHtml(entry.meaning)}</small></button>`).join("")}</div></details>
-    <section class="source-note" id="source-note"><div><p class="eyebrow">A printed source you can inspect</p><h2>One edition. Two languages.</h2><p>Greek text and Latin translation from J. L. Heiberg’s <cite>Euclidis opera omnia</cite>, volume I (1883), printed pages 10–17. The English and reading notes are new. Point labels stay Greek in all three languages.</p><button type="button" id="open-edition">Open the printed pages</button></div><div class="editorial-note"><h3>What changed in transcription</h3><p>Line breaks and inline reference marks are omitted. Greek ϑ is written θ; point labels use consistent Greek letters. Latin u/v spelling is retained. Square brackets in I.1 reproduce Heiberg’s editorial brackets. The step divisions, geometry orientation, reasons and annotations are teaching aids.</p><p>The English sometimes names intersections implied by the Greek. It is a reading translation, not a critical edition. The language notes cover selected forms, not every word.</p><a href="${import.meta.env.BASE_URL}sources/manifest.json">Source and image provenance</a></div></section>
+    <section class="source-note" id="source-note"><div><p class="eyebrow">A printed source you can inspect</p><h2>One edition. Two languages.</h2><p>Greek text and Latin translation from J. L. Heiberg’s <cite>Euclidis opera omnia</cite>, volume I (1883), printed pages 10–25. The English and reading notes are new. Point labels stay Greek in all three languages.</p><button type="button" id="open-edition">Open the printed pages</button></div><div class="editorial-note"><h3>What changed in transcription</h3><p>Line breaks and inline reference marks are omitted. Greek ϑ is written θ; point labels use consistent Greek letters. Latin u/v spelling is retained. Square brackets in I.1 and I.4 reproduce Heiberg’s editorial brackets. Angle and triangle symbols are written ∠ and △. The step divisions, geometry orientation, reasons and annotations are teaching aids. The usual five-common-notion numbering is used in the notes; Heiberg’s expanded list is identified where it differs.</p><p>The English sometimes names intersections implied by the Greek. It is a reading translation, not a critical edition. The language notes cover selected forms, not every word.</p><a href="${import.meta.env.BASE_URL}sources/manifest.json">Source and image provenance</a></div></section>
   </main>
   <footer class="footer"><p>Stoicheia <span lang="grc">/ στοιχεῖα</span> · elements</p><p>Made for slow reading. No account. No tracking.</p><span id="offline-state" role="status">Preparing offline edition…</span></footer>
   <dialog id="vocabulary-dialog" class="vocabulary-dialog" aria-labelledby="gloss-title"><button type="button" class="dialog-close" data-close="vocabulary-dialog" aria-label="Close vocabulary">×</button><p class="eyebrow">Working vocabulary</p><div id="gloss-content"></div><button type="button" class="primary" data-close="vocabulary-dialog">Return to the proof</button></dialog>
@@ -99,10 +115,29 @@ function renderDiagram(): void {
   element("#phase-label").textContent = scene.warning ? "Check givens" : step.phase;
   element("#reason").innerHTML = scene.warning
     ? '<p class="eyebrow">Check the hypothesis <span>unmet</span></p><h3>This construction needs a shorter reference</h3><p>I.3 assumes Γ &lt; ΑΒ. Restore that inequality before applying these instructions. An equal or longer Γ does not meet the task as stated.</p>'
-    : `<p class="eyebrow">Why this is allowed <span>${escapeHtml(reason?.kind ?? "deduction")}</span></p><h3>${escapeHtml(reason?.title ?? "")}</h3><p>${escapeHtml(reason?.text ?? "")}</p>${reason?.lesson ? `<button type="button" class="reason-link" data-lesson="${reason.lesson}" data-open-result="true">Open ${lessons[reason.lesson].numeral}’s construction <span aria-hidden="true">→</span></button>` : ""}`;
+    : `<p class="eyebrow">Why this is allowed <span>${escapeHtml(reason?.kind ?? "deduction")}</span></p><h3>${escapeHtml(reason?.title ?? "")}</h3><p>${escapeHtml(reason?.text ?? "")}</p>${reason?.lesson ? `<button type="button" class="reason-link" data-lesson="${reason.lesson}" data-open-result="true">Open ${lessons[reason.lesson].numeral}’s result <span aria-hidden="true">→</span></button>` : ""}`;
   element("#diagram").innerHTML = drawScene(
     scene,
     `${lesson.numeral} · ${lesson.steps[state.step]?.title ?? ""}`,
+  );
+  const notice = element("#diagram-notice");
+  notice.hidden = !scene.notice;
+  notice.innerHTML = scene.notice
+    ? `<h3>${escapeHtml(scene.notice.title)}</h3><p>${escapeHtml(scene.notice.text)}</p>`
+    : "";
+  const comparison = element("#comparison");
+  comparison.hidden = !scene.comparison;
+  comparison.innerHTML =
+    comparisonTable(scene) +
+    (scene.figures?.length === 2
+      ? `<div class="compare-actions" aria-label="Trace the compared regions"><button type="button" data-trace="both" aria-pressed="true">Both regions</button><button type="button" data-trace="first" aria-pressed="false">Trace ${escapeHtml(scene.comparison?.first ?? "first")}</button><button type="button" data-trace="second" aria-pressed="false">Trace ${escapeHtml(scene.comparison?.second ?? "second")}</button></div>`
+      : "");
+  element("#diagram").removeAttribute("data-trace");
+  element("#equations").setAttribute(
+    "aria-label",
+    state.proposition === 6 && state.step >= 1 && state.step <= 4
+      ? "Given and temporary assumptions in the proof"
+      : "Established equalities",
   );
   element("#equations").innerHTML = scene.equalities.length
     ? scene.equalities.map((line) => `<span>${escapeHtml(line)}</span>`).join("")
@@ -117,7 +152,7 @@ function renderDiagram(): void {
   warning.hidden = !scene.warning;
   warning.textContent = scene.warning;
   element("#measurements").innerHTML =
-    `<table><caption>Numerical check <span>relative units</span></caption><tbody><tr>${scene.measurements.map((measurement) => `<th scope="col">${escapeHtml(measurement.label)}</th>`).join("")}</tr><tr>${scene.measurements.map((measurement) => `<td>${measurement.value.toFixed(2)}</td>`).join("")}</tr></tbody></table>`;
+    `<table><caption>Numerical check <span>measured sketch · relative units / degrees</span></caption><tbody><tr>${scene.measurements.map((measurement) => `<th scope="col">${escapeHtml(measurement.label)}</th>`).join("")}</tr><tr>${scene.measurements.map((measurement) => `<td>${measurement.value.toFixed(2)}</td>`).join("")}</tr></tbody></table>`;
 }
 
 function renderStep(): void {
@@ -147,7 +182,7 @@ function renderLesson(): void {
   element("#book-label").textContent = `Euclid · Book I · Proposition ${state.proposition}`;
   element("#lesson-title").textContent = lesson.title;
   element("#lesson-introduction").textContent = lesson.introduction;
-  element("#plate-number").textContent = `Construction plate ${lesson.numeral}`;
+  element("#plate-number").textContent = `Geometric plate ${lesson.numeral}`;
   for (const button of document.querySelectorAll<HTMLButtonElement>(".lesson-tab"))
     button.setAttribute(
       "aria-current",
@@ -164,11 +199,13 @@ function renderLesson(): void {
         `<button type="button" data-step="${index}" aria-label="Step ${index + 1}: ${escapeHtml(step.title)}" title="${escapeHtml(step.title)}">${index + 1}</button>`,
     )
     .join("");
-  element("#parameter-controls").innerHTML = `
-    <label class="range-label" for="size">${state.proposition === 2 ? "Separation ΑΒ" : "Given length ΑΒ"}<output id="size-output" for="size">${state.size.toFixed(0)}</output></label><input id="size" type="range" min="100" max="240" step="1" value="${state.size}" />
-    ${state.proposition > 1 ? `<label class="range-label" for="ratio">Reference ${state.proposition === 2 ? "ΒΓ" : "Γ"} <span>(% of ΑΒ)</span><output id="ratio-output" for="ratio">${Math.round(state.ratio * 100)}%</output></label><input id="ratio" type="range" min="20" max="140" step="1" value="${Math.round(state.ratio * 100)}" />` : ""}
-    ${state.proposition === 2 ? `<label class="range-label" for="angle">Reference angle <span>(a teaching choice)</span><output id="angle-output" for="angle">${state.angle.toFixed(0)}°</output></label><input id="angle" type="range" min="10" max="75" step="1" value="${state.angle}" />` : ""}
-    <div class="parameter-buttons"><button type="button" id="flip">Flip the ${state.proposition === 3 ? "copied line" : "triangle"}</button><button type="button" id="reset">Reset givens</button></div><div id="measurements"></div>`;
+  element("#parameter-controls").innerHTML = parameterControls(state);
+  const motionControl = element("#motion-control");
+  motionControl.hidden = state.proposition !== 4;
+  motionControl.innerHTML =
+    state.proposition === 4
+      ? `<label class="range-label" for="motion">Superpose the triangles<output id="motion-output" for="motion">${state.motion}%</output></label><input type="range" id="motion" min="0" max="100" step="1" value="${state.motion}"/><p>Slide and rotate ΑΒΓ onto ΔΕΖ. Every intermediate position preserves its shape.</p>`
+      : "";
   element("#insight-title").textContent = lesson.insight.title;
   element("#insight-text").textContent = lesson.insight.text;
   element<HTMLAnchorElement>("#commentary-link").href = lesson.insight.link;
@@ -188,7 +225,7 @@ function goTo(proposition: PropositionId, result = false): void {
 }
 
 function showSource(page: number): void {
-  sourcePage = Math.min(17, Math.max(10, page));
+  sourcePage = Math.min(25, Math.max(10, page));
   const greek = sourcePage % 2 === 0;
   element("#source-title").textContent = `Printed page ${sourcePage}`;
   element("#source-language").textContent = greek ? "Greek text" : "Latin translation";
@@ -196,7 +233,7 @@ function showSource(page: number): void {
   img.src = `${import.meta.env.BASE_URL}sources/heiberg-${String(sourcePage).padStart(3, "0")}.jpg`;
   img.alt = `${greek ? "Greek" : "Latin"} page ${sourcePage} of Euclidis opera omnia, volume I, 1883. The page includes printed text and critical notes.`;
   element<HTMLButtonElement>("#source-previous").disabled = sourcePage === 10;
-  element<HTMLButtonElement>("#source-next").disabled = sourcePage === 17;
+  element<HTMLButtonElement>("#source-next").disabled = sourcePage === 25;
   element(".scan-scroll").scrollTop = 0;
   const dialog = element<HTMLDialogElement>("#source-dialog");
   if (!dialog.open) dialog.showModal();
@@ -227,6 +264,14 @@ function download(contents: string, type: string, filename: string): void {
 document.addEventListener("click", (event) => {
   const button = (event.target as Element).closest<HTMLButtonElement>("button");
   if (!button) return;
+  if (button.dataset.trace) {
+    element("#diagram").setAttribute("data-trace", button.dataset.trace);
+    for (const control of document.querySelectorAll<HTMLButtonElement>("[data-trace]")) {
+      if (control.tagName === "BUTTON")
+        control.setAttribute("aria-pressed", String(control === button));
+    }
+    return;
+  }
   if (button.dataset.close) {
     element<HTMLDialogElement>(`#${button.dataset.close}`).close();
     return;
@@ -257,6 +302,14 @@ document.addEventListener("click", (event) => {
     return;
   }
   switch (button.id) {
+    case "read-sentence":
+      element("#step-title").scrollIntoView({ behavior: "instant", block: "start" });
+      element<HTMLElement>("#step-title").focus({ preventScroll: true });
+      break;
+    case "back-to-plate":
+      element("#workbench").scrollIntoView({ behavior: "instant", block: "start" });
+      element<HTMLElement>("#workbench").focus({ preventScroll: true });
+      break;
     case "previous":
       state.step = Math.max(0, state.step - 1);
       renderStep();
@@ -341,6 +394,10 @@ document.addEventListener("click", (event) => {
 document.addEventListener("input", (event) => {
   const input = event.target;
   if (!(input instanceof HTMLInputElement) || input.type !== "range") return;
+  if (input.id === "motion") {
+    state.motion = Number(input.value);
+    element("#motion-output").textContent = `${input.value}%`;
+  }
   if (input.id === "size") {
     state.size = Number(input.value);
     element("#size-output").textContent = input.value;
@@ -349,8 +406,12 @@ document.addEventListener("input", (event) => {
     state.ratio = Number(input.value) / 100;
     element("#ratio-output").textContent = `${input.value}%`;
   }
+  if (input.id === "counter-ratio") {
+    state.ratio = Math.round(((Number(input.value) / 100 - 0.55) / 0.25) * 100) / 100;
+    element("#counter-ratio-output").textContent = `${input.value}%`;
+  }
   if (input.id === "angle") {
-    state.angle = Number(input.value);
+    state.angle = Number(input.value) / (state.proposition >= 4 ? 2 : 1);
     element("#angle-output").textContent = `${input.value}°`;
   }
   renderDiagram();

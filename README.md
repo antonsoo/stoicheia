@@ -1,6 +1,6 @@
 # Stoicheia
 
-Read Euclid’s first constructions in Greek, Latin and English, with a working diagram beside every step.
+Read Euclid’s opening arguments in Greek, Latin and English, with a working diagram beside every step.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-193d60)](LICENSE)
 
@@ -11,8 +11,8 @@ A translation can make the argument readable while hiding the Greek that carries
 it. Stoicheia connects both: change the givens, follow the command on the plate,
 read the two source languages, and ask what established the equality.
 
-The opening course is **Book I, propositions 1–3**. It includes the complete
-statements and proofs, divided into 26 aligned reading steps, with 19 selected
+The opening course is **Book I, propositions 1–6**. It includes the complete
+statements and proofs, divided into 52 aligned reading steps, with 31 selected
 vocabulary entries. It is intended for an English-speaking reader who knows basic
 geometry and is beginning Greek or Latin.
 
@@ -36,11 +36,14 @@ on the same port; stop the development server before starting the preview.
 
 ## Read, construct, inspect
 
-| Proposition | What you make                                     | What the lesson exposes                                                              |
-| ----------- | ------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| I.1         | Equilateral triangle on a given segment           | The two radius equalities, common notion 1, and the unstated intersection assumption |
-| I.2         | An equal length at a separate point               | The equilateral triangle supplies equal parts to subtract from equal radii           |
-| I.3         | A part of the longer segment equal to the shorter | I.2 becomes an available construction, and the greater–lesser hypothesis matters     |
+| Proposition | What you make                                             | What the lesson exposes                                                                            |
+| ----------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| I.1         | Equilateral triangle on a given segment                   | The two radius equalities, common notion 1, and the unstated intersection assumption               |
+| I.2         | An equal length at a separate point                       | The equilateral triangle supplies equal parts to subtract from equal radii                         |
+| I.3         | A part of the longer segment equal to the shorter         | I.2 becomes an available construction, and the greater–lesser hypothesis matters                   |
+| I.4         | Triangle congruence from two sides and the included angle | Rigid superposition, corresponding vertices, and an unstated motion assumption                     |
+| I.5         | Equal interior and exterior base angles                   | Two overlapping triangle comparisons, then subtraction of equal angles                             |
+| I.6         | Equal sides from equal angles                             | A contradiction, with the impossible conjunction explicitly distinguished from the measured sketch |
 - Move through the commands and deductions at your own pace. Every step names its
   permission: postulate, definition, common notion, earlier proposition, or
   assumption. Earlier constructions can be opened from the reason that uses them.
@@ -50,8 +53,12 @@ on the same port; stop the development server before starting the preview.
 - Change the given lengths with keyboard-accessible sliders. Flip the triangle,
   or change the reference angle in I.2. In I.3, a reference of 100% or more fails
   the stated hypothesis and withholds the constructed cut.
+- In I.4, move one triangle onto the other with a shape-preserving rotation and
+  translation. In I.5, trace each of the compared triangles and follow the
+  whole-angle / removed-part / remainder table. I.6 keeps its temporary
+  supposition visibly separate from the original given, including in downloads.
 - Open the printed page for either language, zoom it and pan with the keyboard.
-  All eight source pages are bundled. The full aligned passage is available below
+  All sixteen source pages are bundled. The full aligned passage is available below
   the plate, with links back to individual steps.
 - Share the current proposition, step and parameters in a URL fragment. Save the
   current diagram as SVG or the entire lesson as a standalone HTML study sheet.
@@ -65,12 +72,12 @@ on the same port; stop the development server before starting the preview.
 ![The Greek and Latin passage on a 375px screen](docs/assets/phone-passage.png)
 
 A [downloaded I.2 study sheet](examples/stoicheia-I2-study.html) is included as a
-working example. Save it and open it directly in a browser to read without the app.
+working example, alongside [I.6’s contradiction sheet](examples/stoicheia-I6-study.html). Save either and open it directly in a browser to read without the app.
 
 ## The source is part of the lesson
 
 The Greek and Latin are transcribed from J. L. Heiberg’s _Euclidis opera omnia_,
-volume I (Leipzig: Teubner, 1883), printed pp. 10–17. Heiberg’s Latin is a
+volume I (Leipzig: Teubner, 1883), printed pp. 10–25. Heiberg’s Latin is a
 **nineteenth-century translation**, not an ancient Latin text. The English is a
 new reading translation; explanations sometimes make an implied intersection
 explicit. Point names remain Greek throughout.
@@ -128,6 +135,7 @@ or stored reading history.
 ```sh
 npm run check
 npm run verify:oracle
+npm run verify:triangles
 ```
 
 The TypeScript checks cover constructions, invalid hypotheses, complete lesson
@@ -140,6 +148,13 @@ The retained [oracle result](docs/geometry-oracle.json) has 720 input cases,
 4,320 point comparisons and 5,760 equality checks. Maximum relative coordinate
 error is `1.1526305883259686e-15`, below the `2e-12` tolerance. These inputs rotate,
 translate and resize the constructions and exercise both triangle orientations.
+
+A second [independent check](docs/triangle-oracle.json) uses cosine-law angles,
+shoelace areas and Euclidean distances to inspect 480 I.4 motion cases, 96 I.5
+constructions and 96 I.6 hypothetical sketches. All 8,064 checks passed. It verifies
+both I.5 triangle correspondences and the final angle subtraction, and requires
+I.6’s scalene sketch to have unequal base angles and a strictly smaller inner
+triangle. These are numerical checks, not a formal proof checker.
 
 For browser verification, serve the production build with `npm run preview`, then
 run `npm run test:browser` in another terminal. Playwright needs matching Chromium
@@ -162,7 +177,7 @@ through an HTML stylesheet link so Vite development works with the same
 
 ## Accuracy and limitations
 
-- This is I.1–3, not the whole _Elements_. The construction tools, translations
+- This is I.1–6, not the whole _Elements_. The construction tools, translations
   and selected vocabulary are complete for that scope. There is no general Greek
   parser, pronunciation model or claim that every word is annotated.
 - The Greek follows a modern printed critical edition, not a surviving autograph
@@ -170,7 +185,7 @@ through an HTML stylesheet link so Vite development works with the same
   scans are supplied so errors can be identified and corrected.
 - Numerical constructions use floating-point coordinates in the real plane.
   Independent numerical agreement and sampled browser checks are not formal
-  verification of Euclid’s postulates. The I.1 intersection gap is explicitly
+  verification of Euclid’s postulates. The I.1 intersection gap and I.4 superposition assumption are explicitly
   discussed; the app does not claim to repair it.
 - I.2 reuses the completed I.1 subconstruction, and I.3 reuses I.2. Their internal
   working is shown in the corresponding earlier lesson rather than repeated in

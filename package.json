@@ -2,7 +2,7 @@
   "name": "@antonsoloviev/stoicheia",
   "version": "0.1.0",
   "private": true,
-  "description": "Read and construct Euclid I.1–3 in Greek, Latin and English.",
+  "description": "Read Euclid I.1–6 in Greek, Latin and English with interactive constructions and proofs.",
   "type": "module",
   "author": "Anton Soloviev <anton@praviel.com>",
   "license": "MIT",
@@ -33,7 +33,8 @@
     "check": "npm run lint && npm run typecheck && npm test && npm run build",
     "verify:oracle": "node --import tsx scripts/oracle-cases.ts | python3 scripts/circle-oracle.py",
     "test:browser": "node scripts/browser-check.mjs",
-    "test:dev": "node scripts/quickstart-check.mjs"
+    "test:dev": "node scripts/quickstart-check.mjs",
+    "verify:triangles": "node --import tsx scripts/triangle-cases.ts | python3 scripts/triangle-oracle.py"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

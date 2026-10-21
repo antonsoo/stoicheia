@@ -18,9 +18,9 @@ a new reading translation for this workbench.
 | I.2         | 12, 14              | 13, 15              |
 | I.3         | 14, 16              | 15, 17              |
 
-Bundled JPEGs are full-page renders of PDF pages 24–31 using Poppler's
+Bundled JPEGs are full-page renders of PDF pages 24–39 using Poppler's
 `pdftoppm`, maximum dimension 1550 px and JPEG quality 88. They include material
-outside I.1–3 (common notions, critical notes, and the start of I.4); that material
+outside I.1–6 (common notions, critical notes, and the start of I.7); that material
 is not transcribed in the reader. See [the manifest](../public/sources/manifest.json)
 for the download URL, source PDF hash, page mapping and JPEG hashes.
 
@@ -65,3 +65,54 @@ University. The app links these pages for further reading. In particular:
 Noto Serif is bundled under the SIL Open Font License. Its license is at
 [`public/fonts/OFL.txt`](../public/fonts/OFL.txt). There are no Google Fonts or
 other third-party requests during reading.
+
+## Triangle arguments, I.4–6
+
+The continued course uses these facing pages from the same volume:
+
+| Proposition | Greek printed pages | Latin printed pages |
+| ----------- | ------------------- | ------------------- |
+| I.4         | 16, 18              | 17, 19              |
+| I.5         | 20, 22              | 21, 23              |
+| I.6         | 22, 24              | 23, 25              |
+
+All sixteen printed pages 10–25 are bundled (PDF pages 24–39). The additional
+pages were visually inspected, including their point labels and the different
+Greek/Latin page breaks. The start of I.7 remains visible on pp. 24–25 but is not
+part of the reader. The I.4 `[ταῖς]` brackets are retained both in the statement
+and the repeated conclusion. I.6 retains the printed `ἐλάττονι`; the earlier
+`ἐλάσσονι` has not been silently substituted. Latin angle and triangle symbols
+are encoded as ∠ and △, with the printed equality sign encoded as `=`.
+
+Heiberg’s expanded common-notion numbering differs from the usual modern list:
+
+| Statement                                  | Usual five-item list | Heiberg (1883) |
+| ------------------------------------------ | -------------------- | -------------- |
+| Things that coincide are equal             | 4                    | 7              |
+| The whole is greater than the part         | 5                    | 8              |
+| Two straight lines cannot enclose a region | Not included         | 9              |
+
+The reader uses the usual numbering and names Heiberg’s numbering explicitly in
+the affected reasons. I.4’s argument that two distinct straight segments could
+not enclose a region is fully transcribed; it is not silently dropped to match a
+shorter modern presentation. Superposition is identified as an assumption that
+the five postulates do not explicitly authorize. The movable model preserves
+lengths by rotation and translation. Flipping both triangles does not claim to
+show an orientation-reversing correspondence.
+
+I.5 preserves both triangle comparisons, the subtraction of equal lengths and
+the subtraction of equal angles. Ζ corresponds to the F used in many English
+editions; Η corresponds to G. The plate keeps Heiberg’s Greek point labels.
+The first comparison is ΑΖΓ ↔ ΑΗΒ, the second ΒΖΓ ↔ ΓΗΒ.
+
+I.6’s middle diagram is explicitly a **hypothetical scalene sketch**, including
+in its exported SVG and HTML. It cannot satisfy both the original equal-angle
+given and the temporary unequal-side supposition. Its numerical measurements
+show actual unequal angles and a smaller inner triangle, rather than presenting
+those conditional equalities as measured facts. The original equal-angle figure
+returns when the supposition is discharged.
+
+Further mathematical commentary:
+[I.4](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI4.html),
+[I.5](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI5.html),
+[I.6](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI6.html).

@@ -1591,3 +1591,193 @@ dialog::backdrop {
 .scan-scroll {
   overscroll-behavior: contain;
 }
+
+/* The second half of the course compares figures, rather than only drawing lines. */
+.lesson-nav {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.figure {
+  stroke: none;
+  fill-opacity: 0.16;
+}
+.figure-first {
+  fill: #694780;
+}
+.figure-second {
+  fill: #207080;
+}
+.angle-mark {
+  fill: none;
+  stroke: var(--blue);
+  stroke-width: 1.6;
+}
+.angle-mark.active {
+  stroke: #694780;
+}
+.angle-mark.result {
+  stroke: #193d60;
+}
+.plate-notice {
+  font:
+    12px system-ui,
+    sans-serif;
+  fill: #193d60;
+}
+#diagram[data-trace="first"] .figure-second,
+#diagram[data-trace="second"] .figure-first {
+  visibility: hidden;
+}
+.motion-control,
+.comparison,
+.diagram-notice {
+  margin: 0 24px 20px;
+}
+.motion-control p,
+.parameter-note {
+  font-size: 0.8rem;
+  color: #52677b;
+  line-height: 1.5;
+  margin: 8px 0 0;
+}
+.motion-control input {
+  width: 100%;
+  accent-color: #694780;
+}
+.diagram-notice {
+  padding: 14px 16px;
+  background: #fbfcfe;
+  border-left: 3px solid #694780;
+}
+.diagram-notice h3 {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+.diagram-notice p {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  margin: 0;
+}
+.comparison-table,
+.course-map table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.82rem;
+}
+.comparison-table caption {
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.comparison-table th,
+.comparison-table td,
+.course-map th,
+.course-map td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid #bccbd7;
+}
+.comparison-table th:first-child {
+  color: #694780;
+}
+.comparison-table th:nth-child(2) {
+  color: #206475;
+}
+.comparison-table td:first-child,
+.comparison-table td:nth-child(2) {
+  white-space: nowrap;
+}
+.compare-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.compare-actions button {
+  padding: 8px 10px;
+  border: 1px solid #879db1;
+  min-height: 38px;
+  font-size: 0.8rem;
+}
+.compare-actions button[aria-pressed="true"] {
+  background: #193d60;
+  color: white;
+}
+.course-map {
+  margin: 32px 0;
+  border-top: 1px solid #bccbd7;
+  border-bottom: 1px solid #bccbd7;
+}
+.course-map summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 0;
+}
+.course-map summary span:last-child {
+  color: #52677b;
+  font-size: 0.85rem;
+}
+.course-map button {
+  padding: 10px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  min-width: 44px;
+  min-height: 44px;
+}
+@media (max-width: 700px) {
+  .lesson-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .motion-control,
+  .comparison,
+  .diagram-notice {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .comparison-table th,
+  .comparison-table td {
+    padding: 8px 5px;
+    font-size: 0.75rem;
+  }
+  .course-map summary {
+    flex-direction: column;
+  }
+  .course-map th,
+  .course-map td {
+    padding: 8px 5px;
+    font-size: 0.78rem;
+  }
+}
+.equations span {
+  white-space: normal;
+  text-align: center;
+  max-width: 100%;
+}
+.lesson-tab:nth-child(-n + 3) {
+  border-bottom: 1px solid var(--rule);
+}
+.lesson-tab:nth-child(3n) {
+  border-right: 0;
+}
+.phone-reader-jump {
+  display: none;
+}
+@media (max-width: 700px) {
+  .phone-reader-jump {
+    display: block;
+    min-height: 44px;
+    padding: 12px 20px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-size: 0.85rem;
+  }
+  .lesson-tab:nth-child(3n) {
+    border-right: 1px solid var(--rule);
+  }
+  .lesson-tab:nth-child(2n) {
+    border-right: 0;
+  }
+  .lesson-tab:nth-child(-n + 4) {
+    border-bottom: 1px solid var(--rule);
+  }
+}

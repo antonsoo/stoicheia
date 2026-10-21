@@ -1,6 +1,7 @@
 import type { Point } from "./geometry";
 import { add, cutOff, distance, equilateral, scale, subtract, transfer } from "./geometry";
 import type { ReaderState } from "./state";
+import { triangleScene } from "./triangle-scene";
 
 export type Ink = "given" | "working" | "active" | "result" | "auxiliary";
 export interface Segment {
@@ -25,7 +26,26 @@ export interface Vertex {
   dx: number;
   dy: number;
 }
+export interface AngleMark {
+  id: string;
+  first: Point;
+  at: Point;
+  last: Point;
+  ink: Ink;
+  rings: number;
+}
+export interface Comparison {
+  title: string;
+  first: string;
+  second: string;
+  rows: [string, string, string][];
+}
 export interface Scene {
+  height?: number;
+  angles?: AngleMark[];
+  figures?: { id: string; points: Point[]; tone: "first" | "second" }[];
+  comparison?: Comparison;
+  notice?: { title: string; text: string };
   segments: Segment[];
   circles: Circle[];
   vertices: Vertex[];
@@ -43,6 +63,7 @@ const polar = (r: number, degrees: number): Point => ({
 });
 
 export function makeScene(state: ReaderState): Scene {
+  if (state.proposition >= 4) return triangleScene(state);
   const { proposition, step, size: s, ratio, side } = state;
   const r = s * ratio;
   const scene: Scene = {

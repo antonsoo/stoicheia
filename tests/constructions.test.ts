@@ -77,15 +77,15 @@ test("invalid hypotheses do not fabricate construction points", () => {
 });
 
 test("every lesson has source pages, a reason, and a renderable scene for every step", () => {
-  for (const id of [1, 2, 3] as const) {
+  for (const id of [1, 2, 3, 4, 5, 6] as const) {
     const lesson = lessons[id];
     assert.equal(lesson.steps.length, stepCounts[id]);
     assert.equal(lesson.question.options.length, lesson.question.explanations.length);
     for (const [step, passage] of lesson.steps.entries()) {
       assert.ok(reasons[passage.reason]);
       assert.ok(passage.grc && passage.lat && passage.en && passage.language);
-      assert.ok(passage.greekPages.every((p) => p >= 10 && p <= 16 && p % 2 === 0));
-      assert.ok(passage.latinPages.every((p) => p >= 11 && p <= 17 && p % 2 === 1));
+      assert.ok(passage.greekPages.every((p) => p >= 10 && p <= 24 && p % 2 === 0));
+      assert.ok(passage.latinPages.every((p) => p >= 11 && p <= 25 && p % 2 === 1));
       for (const ratio of [0.2, 0.65, 0.99, 1, 1.4]) {
         for (const side of [-1, 1] as const) {
           const scene = makeScene({ ...defaults, proposition: id, step, ratio, side });
@@ -99,7 +99,15 @@ test("every lesson has source pages, a reason, and a renderable scene for every 
 });
 
 test("shared links round-trip the complete reading state", () => {
-  const state = { proposition: 2, step: 8, size: 137, ratio: 1.21, angle: 73, side: -1 } as const;
+  const state = {
+    proposition: 2,
+    step: 8,
+    size: 137,
+    ratio: 1.21,
+    angle: 73,
+    side: -1,
+    motion: 37,
+  } as const;
   assert.deepEqual(decodeState(encodeState(state)), state);
   assert.deepEqual(decodeState(""), defaults);
   assert.deepEqual(decodeState("#p=3&s=999&size=NaN&r=9&a=-500&side=-1"), {
@@ -109,6 +117,7 @@ test("shared links round-trip the complete reading state", () => {
     ratio: 1.4,
     angle: 10,
     side: -1,
+    motion: 0,
   });
   assert.equal(decodeState("#p=2&s=Infinity&r=&size=0").step, 0);
   assert.equal(decodeState("#p=<script>&s=-2").proposition, 1);

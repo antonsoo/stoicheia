@@ -41,7 +41,7 @@ const report = {
   configurations: [],
 };
 const sha256 = (bytes) => createHash("sha256").update(bytes).digest("hex");
-const counts = { 1: 10, 2: 11, 3: 5 };
+const counts = { 1: 10, 2: 11, 3: 5, 4: 8, 5: 11, 6: 7 };
 const artifacts = await mkdtemp(join(tmpdir(), "stoicheia-export-"));
 
 async function accessible(page, label, results) {
@@ -69,6 +69,7 @@ async function noOverflow(page) {
 }
 
 async function renderedEqualities(page, proposition, step) {
+  if (proposition >= 4) return;
   if (
     (proposition === 1 && step < 3) ||
     (proposition === 2 && step < 5) ||
@@ -163,7 +164,7 @@ try {
         assert.match(await page.locator("#offline-state").innerText(), /ready offline/);
         assert.equal(await page.evaluate(() => document.fonts.check('20px "Noto Serif"')), true);
 
-        for (const proposition of [1, 2, 3]) {
+        for (const proposition of [1, 2, 3, 4, 5, 6]) {
           await page.locator(`.lesson-tab[data-lesson="${proposition}"]`).click();
           for (let step = 0; step < counts[proposition]; step++) {
             assert.equal(
@@ -201,7 +202,7 @@ try {
 
         // Verify original printed pages, including zoom/pan and keyboard dismissal.
         await page.locator("#open-edition").click();
-        for (let printedPage = 10; printedPage <= 17; printedPage++) {
+        for (let printedPage = 10; printedPage <= 25; printedPage++) {
           await page.waitForFunction(() => {
             const image = document.querySelector("#source-image");
             return image.complete && image.naturalWidth > 0;
@@ -210,7 +211,7 @@ try {
             await page.locator("#source-title").innerText(),
             `Printed page ${printedPage}`,
           );
-          if (printedPage < 17) await page.locator("#source-next").click();
+          if (printedPage < 25) await page.locator("#source-next").click();
         }
         await page.locator("#source-zoom").click();
         assert.equal(await page.locator("#source-zoom").getAttribute("aria-pressed"), "true");
@@ -230,6 +231,8 @@ try {
         await accessible(page, "source dialog", audits);
         await page.keyboard.press("Escape");
 
+        await page.locator('.lesson-tab[data-lesson="3"]').click();
+        await page.locator('#step-list [data-step="4"]').click();
         // Native keyboard range changes must update the picture and the shared state.
         await page.locator("#parameters summary").click();
         await page.locator("#ratio").focus();
@@ -281,6 +284,113 @@ try {
         await page.goForward();
         assert.equal(await page.locator("#step-position").innerText(), "Step 11 of 11");
 
+        // The new lessons must do more than render text: inspect their actual SVG geometry.
+        await page.locator('.lesson-tab[data-lesson="4"]').click();
+        await page.locator('#step-list [data-step="3"]').click();
+        const renderedLength = async (id) =>
+          page
+            .locator(`#diagram [data-entity="${id}"]`)
+            .evaluate((line) =>
+              Math.hypot(
+                +line.getAttribute("x2") - +line.getAttribute("x1"),
+                +line.getAttribute("y2") - +line.getAttribute("y1"),
+              ),
+            );
+        const originalBase = await renderedLength("BC");
+        await page.locator("#motion").focus();
+        for (let index = 0; index < 37; index++) await page.keyboard.press("ArrowRight");
+        assert.equal(await page.locator("#motion").inputValue(), "37");
+        assert.ok(Math.abs((await renderedLength("BC")) - originalBase) < 0.01);
+        await page.keyboard.press("End");
+        assert.equal(await page.locator("#motion").inputValue(), "100");
+        assert.match(page.url(), /m=100/);
+        const overlay = await page.evaluate(() => {
+          const endpoints = (id) => {
+            const line = document.querySelector(`#diagram [data-entity="${id}"]`);
+            return ["x1", "y1", "x2", "y2"].map((key) => Number(line.getAttribute(key)));
+          };
+          return [endpoints("AB"), endpoints("DE"), endpoints("AC"), endpoints("DZ")];
+        });
+        assert.deepEqual(overlay[0], overlay[1]);
+        assert.deepEqual(overlay[2], overlay[3]);
+        await accessible(page, "I.4 exact superposition", audits);
+        await page.locator('.lesson-tab[data-lesson="5"]').click();
+        await page.locator('#step-list [data-step="4"]').click();
+        assert.match(
+          await page.locator(".comparison-table caption").innerText(),
+          /First comparison/,
+        );
+        await page.locator('button[data-trace="first"]').click();
+        assert.equal(
+          await page
+            .locator("#diagram .figure-second")
+            .evaluate((el) => getComputedStyle(el).visibility),
+          "hidden",
+        );
+        await page.locator('button[data-trace="second"]').click();
+        assert.equal(
+          await page
+            .locator("#diagram .figure-first")
+            .evaluate((el) => getComputedStyle(el).visibility),
+          "hidden",
+        );
+        await page.locator('button[data-trace="both"]').click();
+        assert.ok(Math.abs((await renderedLength("ZC")) - (await renderedLength("HB"))) < 0.01);
+        await page.locator('#step-list [data-step="7"]').click();
+        assert.match(
+          await page.locator(".comparison-table caption").innerText(),
+          /Second comparison/,
+        );
+        assert.ok(Math.abs((await renderedLength("BZ")) - (await renderedLength("CH"))) < 0.01);
+        await page.locator('#step-list [data-step="8"]').click();
+        assert.match(await page.locator(".comparison-table").innerText(), /equal remainders/);
+        await accessible(page, "I.5 angle subtraction", audits);
+        if (viewport.width === 375) {
+          await page.locator("#read-sentence").click();
+          assert.equal(
+            await page.locator("#step-title").evaluate((el) => el === document.activeElement),
+            true,
+          );
+          await page.locator("#back-to-plate").click();
+          assert.equal(
+            await page.locator("#workbench").evaluate((el) => el === document.activeElement),
+            true,
+          );
+        }
+        await page.locator('.lesson-tab[data-lesson="6"]').click();
+        await page.locator('#step-list [data-step="4"]').click();
+        assert.match(
+          await page.locator("#diagram-notice").innerText(),
+          /no Euclidean triangle satisfies both/,
+        );
+        assert.equal(await page.locator("#diagram [data-angle]").count(), 0);
+        await accessible(page, "I.6 hypothetical sketch", audits);
+        const [contradictionSheet] = await Promise.all([
+          page.waitForEvent("download"),
+          page.locator("#save-sheet").click(),
+        ]);
+        const contradictionPath = join(artifacts, `${name}-${viewport.width}-contradiction.html`);
+        await contradictionSheet.saveAs(contradictionPath);
+        assert.match(
+          await readFile(contradictionPath, "utf8"),
+          /no Euclidean triangle satisfies both/,
+        );
+        const [contradictionSvg] = await Promise.all([
+          page.waitForEvent("download"),
+          page.locator("#save-diagram").click(),
+        ]);
+        const contradictionSvgPath = join(artifacts, `${name}-${viewport.width}-contradiction.svg`);
+        await contradictionSvg.saveAs(contradictionSvgPath);
+        assert.match(await readFile(contradictionSvgPath, "utf8"), /Hypothetical sketch/);
+        if (name === "chromium" && viewport.width === 1440) {
+          await writeFile("examples/stoicheia-I6-study.html", await readFile(contradictionPath));
+        }
+        await page.locator('#step-list [data-step="5"]').click();
+        assert.equal(await page.locator("#diagram-notice").isHidden(), true);
+        assert.equal(await page.locator("#diagram [data-angle]").count(), 2);
+        await page.locator('.lesson-tab[data-lesson="2"]').click();
+        await page.locator('#step-list [data-step="10"]').click();
+
         // Downloads are exercised as actual files, with networking disabled on reopen.
         const [sheet] = await Promise.all([
           page.waitForEvent("download"),
@@ -331,6 +441,41 @@ try {
             await page.screenshot({ path: "docs/assets/phone-passage.png" });
           }
         }
+        await page.locator('.lesson-tab[data-lesson="5"]').click();
+        await page.locator('#step-list [data-step="8"]').click();
+        assert.match(
+          await page.locator(".comparison-table caption").innerText(),
+          /Subtract equal parts/,
+        );
+        await page.locator('#current-passage [data-source="22"]').click();
+        await page.waitForFunction(() => {
+          const img = document.querySelector("#source-image");
+          return img.complete && img.naturalWidth > 0;
+        });
+        await page.keyboard.press("Escape");
+        if (name === "chromium") {
+          await page.locator("#workbench").scrollIntoViewIfNeeded();
+          await page.screenshot({
+            path: `docs/assets/isosceles-${viewport.width}.png`,
+            fullPage: viewport.width === 1440,
+          });
+          await page.locator('.lesson-tab[data-lesson="6"]').click();
+          await page.locator('#step-list [data-step="4"]').click();
+          await page.locator("#workbench").scrollIntoViewIfNeeded();
+          await page.screenshot({
+            path: `docs/assets/contradiction-${viewport.width}.png`,
+            fullPage: viewport.width === 1440,
+          });
+          await page.locator('.lesson-tab[data-lesson="4"]').click();
+          await page.locator('#step-list [data-step="3"]').click();
+          await page.locator("#motion").focus();
+          await page.keyboard.press("Home");
+          await page.locator("#workbench").scrollIntoViewIfNeeded();
+          await page.screenshot({
+            path: `docs/assets/superposition-${viewport.width}.png`,
+            fullPage: viewport.width === 1440,
+          });
+        }
         console.log(`  ${name}: offline reader passed; reopening exports`);
         const saved = await context.newPage();
         await saved.goto(pathToFileURL(sheetPath).href);
@@ -339,6 +484,16 @@ try {
         assert.ok((await saved.locator("[lang=grc]").count()) >= 11);
         await noOverflow(saved);
         await accessible(saved, "standalone study sheet", audits);
+        await saved.goto(pathToFileURL(contradictionPath).href);
+        assert.equal(await saved.locator(".passage").count(), 7);
+        assert.match(
+          await saved.locator("aside").innerText(),
+          /no Euclidean triangle satisfies both/,
+        );
+        await noOverflow(saved);
+        await accessible(saved, "standalone contradiction study sheet", audits);
+        await saved.goto(pathToFileURL(contradictionSvgPath).href);
+        assert.match(await saved.locator(".plate-notice").textContent(), /Hypothetical sketch/);
         await saved.goto(pathToFileURL(svgPath).href);
         assert.equal(await saved.locator("svg").count(), 1);
         await saved.close();

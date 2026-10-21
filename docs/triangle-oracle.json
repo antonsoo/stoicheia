@@ -1,0 +1,12 @@
+{
+  "scope": "Real-plane numerical model; not formal verification of Euclid's axioms",
+  "method": "Independent cosine-law angles, shoelace areas, Euclidean distance, rigid-motion invariants, two triangle correspondences, equal-angle remainders and rejection of the I.6 conjunction",
+  "cases": {
+    "I.4": 480,
+    "I.5": 96,
+    "I.6": 96
+  },
+  "checks": 8064,
+  "max_relative_error": 3.637978807091713e-12,
+  "tolerance": 2e-11
+}

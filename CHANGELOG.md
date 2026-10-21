@@ -11,3 +11,14 @@
 - A locally bundled font and eight printed source pages, with an offline
   production edition and explicit transcription provenance.
 - Independent high-precision circle-intersection verification and browser checks.
+
+## Continued course · 2026-10-21
+
+- Full Greek, Heiberg Latin and new English for I.4–6; 52 aligned steps in total.
+- Rigid superposition, two isosceles triangle comparisons, angle subtraction and
+  an explicitly hypothetical contradiction diagram, preserved in downloads.
+- Expanded vocabulary, sixteen source pages, accurate dependency map and phone
+  navigation between plate and text.
+- Correct the I.3 shared-reference-endpoint case used by I.5.
+- Independently check triangle invariants, correspondences and contradiction
+  sketches with cosine-law angles and shoelace areas.

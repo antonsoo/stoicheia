@@ -14,9 +14,9 @@
     "bytes": 20890632,
     "sha256": "da285c581c2dda86e2b25e20db3ce604bf6fb8765228fcd71cfc89d47a9d1c17"
   },
-  "rendering": "pdftoppm -f 24 -l 31 -scale-to 1550 -jpeg -jpegopt quality=88 INPUT.pdf page",
+  "rendering": "pdftoppm -f 24 -l 39 -scale-to 1550 -jpeg -jpegopt quality=88 INPUT.pdf page",
   "transcription": {
-    "scope": "Full proposition statements and proofs I.1–3. Critical apparatus and unrelated text on the same pages are not transcribed.",
+    "scope": "Full proposition statements and proofs I.1–6. Critical apparatus and unrelated text on the same pages are not transcribed.",
     "normalizations": [
       "Printed ϑ normalized to θ.",
       "Consistent Unicode Greek letters for all geometric labels, including letters that resemble Latin glyphs.",
@@ -24,7 +24,8 @@
       "Inline editorial reference marks in the Latin omitted; reasons are separately identified teaching annotations.",
       "Greek punctuation represented with modern Unicode punctuation.",
       "Latin lowercase sentence openings and u/v spelling retained.",
-      "Heiberg’s square brackets in the I.1 repeated conclusion retained; the Latin does not repeat that bracketed text."
+      "Heiberg’s square brackets in I.1’s repeated conclusion and I.4’s [ταῖς] retained.",
+      "Printed Latin angle and triangle symbols represented by Unicode ∠ and △; equations use =."
     ],
     "english": "New reading translation. Explicit intersection descriptions and other explanatory expansions are teaching aids.",
     "comparison": "Hand transcription checked against each bundled scan. No unreviewed OCR output is presented as a source transcription."
@@ -101,6 +102,78 @@
       "file": "heiberg-017.jpg",
       "bytes": 283679,
       "sha256": "ff29baed3f8686d2d55b10131a85953cfec56f2388be0053e513c6ad362cc773"
+    },
+    {
+      "printed_page": 18,
+      "pdf_page": 32,
+      "archive_leaf": 32,
+      "language": "grc",
+      "file": "heiberg-018.jpg",
+      "bytes": 320531,
+      "sha256": "5db4489cfd168fb06c3593125ce62bd67b2d097b2146d9eaa655db878deaaa69"
+    },
+    {
+      "printed_page": 19,
+      "pdf_page": 33,
+      "archive_leaf": 33,
+      "language": "la",
+      "file": "heiberg-019.jpg",
+      "bytes": 255868,
+      "sha256": "6cf9dc8ffa51ab9cad0cd0c0b89d81d6bf11b20dfe605dc4e6a7c552efc3ecda"
+    },
+    {
+      "printed_page": 20,
+      "pdf_page": 34,
+      "archive_leaf": 34,
+      "language": "grc",
+      "file": "heiberg-020.jpg",
+      "bytes": 293742,
+      "sha256": "a8755a2c4cd74bb7de6d77da6c18bc4bbccb9742dd71feadb24ec2682a82eb3b"
+    },
+    {
+      "printed_page": 21,
+      "pdf_page": 35,
+      "archive_leaf": 35,
+      "language": "la",
+      "file": "heiberg-021.jpg",
+      "bytes": 291018,
+      "sha256": "3412b172ffa4825a145107528219d3e9816aa007569326c05afa76c7340b24b0"
+    },
+    {
+      "printed_page": 22,
+      "pdf_page": 36,
+      "archive_leaf": 36,
+      "language": "grc",
+      "file": "heiberg-022.jpg",
+      "bytes": 293560,
+      "sha256": "9f1e3d75f5d7b78fba0a4ae1c27ea786b1dab1652545215512203604eb158019"
+    },
+    {
+      "printed_page": 23,
+      "pdf_page": 37,
+      "archive_leaf": 37,
+      "language": "la",
+      "file": "heiberg-023.jpg",
+      "bytes": 278117,
+      "sha256": "90ac8cd3b7c27a32078961e3a3a6413133fece7989ce3d7841a28c1cfc948afe"
+    },
+    {
+      "printed_page": 24,
+      "pdf_page": 38,
+      "archive_leaf": 38,
+      "language": "grc",
+      "file": "heiberg-024.jpg",
+      "bytes": 306364,
+      "sha256": "6a0b4031ea7536cf2c506e0164841ec388db0e69171d4851d771a5f96c3aa9b8"
+    },
+    {
+      "printed_page": 25,
+      "pdf_page": 39,
+      "archive_leaf": 39,
+      "language": "la",
+      "file": "heiberg-025.jpg",
+      "bytes": 293436,
+      "sha256": "dcc612163f25b70db7f0cd45536506bbe4fe8fad1c93a692f3d2700e0e8747ed"
     }
   ]
 }

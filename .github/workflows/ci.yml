@@ -19,6 +19,7 @@ jobs:
       - run: npm ci
       - run: npm run check
       - run: npm run verify:oracle
+      - run: npm run verify:triangles
       - run: npx playwright install --with-deps chromium firefox
       - name: Verify the development quickstart
         run: |
