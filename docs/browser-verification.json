@@ -94,9 +94,10 @@
       "cspViolations": 0
     }
   ],
+  "buildInputsSha256": "2d85cfe586300c5973b107480f6ba57d046466ba32b8f289f323bd780cfcdba4",
   "servedByteMatches": [
-    "assets/index-CecVnwzE.js",
-    "assets/index-DHF8sYDI.css",
+    "assets/index-CZ3WwDdD.css",
+    "assets/index-CwwJtIV8.js",
     "favicon.svg",
     "fonts/NotoSerif-Regular.ttf",
     "fonts/OFL.txt",
@@ -112,5 +113,5 @@
     "sources/manifest.json",
     "sw.js"
   ],
-  "offlineOriginProbeRejections": 46
+  "offlineOriginProbeRejections": 34
 }

@@ -1,0 +1,36 @@
+{
+  "scope": "Clean Git export; local validation, no remote CI or deployment claim",
+  "source_commit": "35fa930e5e7d62015a4e75ff644adb96fafaa9f2",
+  "node": "v24.22.0",
+  "build_inputs_sha256": "2d85cfe586300c5973b107480f6ba57d046466ba32b8f289f323bd780cfcdba4",
+  "commands": [
+    {
+      "command": "npm ci",
+      "result": "passed in a fresh Git export"
+    },
+    {
+      "command": "npm run check",
+      "result": "passed: lint, strict typecheck, 9 checks and production build"
+    },
+    {
+      "command": "npm run verify:oracle",
+      "result": "passed: 720 cases and 4,320 point comparisons"
+    },
+    {
+      "command": "npm run test:dev",
+      "result": "passed: Chromium and Firefox styled quickstart and navigation",
+      "server": "npm run dev"
+    },
+    {
+      "command": "npm run test:browser",
+      "result": "passed: 4 browser/viewport configurations and 16 exact served-file comparisons",
+      "server": "npm run preview"
+    }
+  ],
+  "build_command": "npm run build",
+  "output_directory": "dist/",
+  "independent_oracle": "docs/geometry-oracle.json",
+  "browser_receipt": "docs/browser-verification.json",
+  "quickstart_receipt": "docs/quickstart-verification.json",
+  "public_release": false
+}
