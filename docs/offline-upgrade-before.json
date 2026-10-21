@@ -1,0 +1,41 @@
+{
+  "scope": "Reproduced before the edition-aware readiness change; new source page 31 held during service-worker installation, then origin disabled and browser set offline",
+  "previous_source_commit": "ea1dc1d0170826d221d61ca6b486654b43771494",
+  "new_source_commit": "a41afd56ca5bb485df3e668bf002d78d2f3463ae",
+  "previous_worker_sha256": "48b9623145dbff1ea1450443b2766c606d4eb7459b9cf64f929566941454e0b3",
+  "new_worker_sha256": "364a23621aa0b7a9bbaffccb2e2710a82f57dc6ed5b826eb2fd95ca56548a05d",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "pending": {
+        "status": "Edition ready offline, including source pages",
+        "lesson": "Euclid \u00b7 Book I \u00b7 Proposition 10",
+        "active": "activated",
+        "installing": "installing",
+        "caches": ["stoicheia-df552a2b04b453dc", "stoicheia-c7e6b6c12e4d2c39"]
+      },
+      "offline": {
+        "fromWorker": true,
+        "lessons": 6,
+        "lesson": "Euclid \u00b7 Book I \u00b7 Proposition 1"
+      }
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "pending": {
+        "status": "Edition ready offline, including source pages",
+        "lesson": "Euclid \u00b7 Book I \u00b7 Proposition 10",
+        "active": "activated",
+        "installing": "installing",
+        "caches": ["stoicheia-df552a2b04b453dc", "stoicheia-c7e6b6c12e4d2c39"]
+      },
+      "offline": {
+        "fromWorker": true,
+        "lessons": 6,
+        "lesson": "Euclid \u00b7 Book I \u00b7 Proposition 1"
+      }
+    }
+  ]
+}

@@ -17,27 +17,39 @@ async function filesIn(directory: string): Promise<string[]> {
   return nested.flat();
 }
 
-export default defineConfig({
-  base,
-  plugins: [
-    {
-      name: "offline-book",
-      apply: "build",
-      async closeBundle() {
-        const files = (await filesIn("dist")).filter((f) => !f.endsWith("sw.js")).sort();
-        const hash = createHash("sha256");
-        for (const file of files) {
-          hash.update(file);
-          hash.update(await readFile(file));
-        }
-        const version = hash.digest("hex").slice(0, 16);
-        const urls = files.map(
-          (file) => base + path.relative("dist", file).split(path.sep).join("/"),
-        );
-        await writeFile(
-          "dist/sw.js",
-          `/* Offline edition ${version}. Generated from the complete build. */
-const CACHE = "stoicheia-${version}";
+export default defineConfig(async ({ command }) => {
+  const inputFiles = [
+    ...(await filesIn("src")),
+    ...(await filesIn("public")),
+    "index.html",
+    "vite.config.ts",
+    "tsconfig.json",
+    "package.json",
+    "package-lock.json",
+  ].sort();
+  const inputHash = createHash("sha256");
+  for (const file of inputFiles) {
+    inputHash.update(file);
+    inputHash.update(await readFile(file));
+  }
+  const edition = command === "build" ? inputHash.digest("hex") : "development";
+  return {
+    base,
+    define: { __STOICHEIA_EDITION__: JSON.stringify(edition) },
+    plugins: [
+      {
+        name: "offline-book",
+        apply: "build",
+        async closeBundle() {
+          const files = (await filesIn("dist")).filter((f) => !f.endsWith("sw.js")).sort();
+          const urls = files.map(
+            (file) => base + path.relative("dist", file).split(path.sep).join("/"),
+          );
+          await writeFile(
+            "dist/sw.js",
+            `/* Offline edition ${edition}. Generated from the complete build. */
+const CACHE = "stoicheia-${edition}";
+const EDITION = ${JSON.stringify(edition)};
 const BASE = ${JSON.stringify(base)};
 const FILES = ${JSON.stringify(urls)};
 self.addEventListener("install", event => {
@@ -45,6 +57,13 @@ self.addEventListener("install", event => {
 });
 self.addEventListener("activate", event => {
   event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith("stoicheia-") && key !== CACHE).map(key => caches.delete(key)))).then(() => self.clients.claim()));
+});
+self.addEventListener("message", event => {
+  if (event.data?.type !== "STOICHEIA_INSPECT_EDITION" || !event.ports[0]) return;
+  event.waitUntil(caches.open(CACHE).then(cache => cache.keys()).then(keys => {
+    const saved = new Set(keys.map(request => new URL(request.url).pathname));
+    event.ports[0].postMessage({ type: "STOICHEIA_EDITION", edition: EDITION, complete: FILES.every(file => saved.has(file)) });
+  }).catch(() => event.ports[0].postMessage({ type: "STOICHEIA_EDITION", edition: EDITION, complete: false })));
 });
 self.addEventListener("fetch", event => {
   const url = new URL(event.request.url);
@@ -56,8 +75,9 @@ self.addEventListener("fetch", event => {
   }
 });
 `,
-        );
+          );
+        },
       },
-    },
-  ],
+    ],
+  };
 });

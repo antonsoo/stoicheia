@@ -1,0 +1,123 @@
+/** Readiness belongs to this page's edition, not merely to any active worker. */
+interface EditionReply {
+  type: "STOICHEIA_EDITION";
+  edition: string;
+  complete: boolean;
+}
+
+function inspectWorker(worker: ServiceWorker): Promise<EditionReply | null> {
+  return new Promise((resolve) => {
+    const channel = new MessageChannel();
+    const finish = (reply: EditionReply | null) => {
+      clearTimeout(timeout);
+      channel.port1.close();
+      resolve(reply);
+    };
+    // Older published workers do not implement this message. Their silence is
+    // not evidence that the newly loaded course has been cached.
+    const timeout = setTimeout(() => finish(null), 2000);
+    channel.port1.onmessage = (event: MessageEvent<unknown>) => {
+      const data = event.data;
+      if (
+        data &&
+        typeof data === "object" &&
+        "type" in data &&
+        data.type === "STOICHEIA_EDITION" &&
+        "edition" in data &&
+        typeof data.edition === "string" &&
+        "complete" in data &&
+        typeof data.complete === "boolean"
+      )
+        finish(data as EditionReply);
+      else finish(null);
+    };
+    try {
+      worker.postMessage({ type: "STOICHEIA_INSPECT_EDITION" }, [channel.port2]);
+    } catch {
+      finish(null);
+    }
+  });
+}
+
+export function prepareOffline(status: HTMLElement, reload: HTMLButtonElement): void {
+  const container = navigator.serviceWorker;
+  let registration: ServiceWorkerRegistration | undefined;
+  let revision = 0;
+  let verifiedCurrent = false;
+  let installFailed = false;
+  const pending = () => {
+    reload.hidden = true;
+    status.textContent = installFailed
+      ? "This edition could not be saved offline. Keep this tab open to continue reading."
+      : !registration || registration.installing || registration.waiting
+        ? "Saving this edition for offline reading…"
+        : "This edition is not saved offline. Keep this tab open to continue reading.";
+  };
+  const refresh = async () => {
+    const currentRevision = ++revision;
+    if (registration?.installing || registration?.waiting) {
+      pending();
+      return;
+    }
+    const worker = container.controller;
+    if (!worker) {
+      pending();
+      return;
+    }
+    const reply = await inspectWorker(worker);
+    // Activation can replace the controller while the older worker is replying.
+    if (currentRevision !== revision || worker !== container.controller) return;
+    if (reply?.edition === __STOICHEIA_EDITION__ && reply.complete) {
+      verifiedCurrent = true;
+      status.textContent = "Edition ready offline, including source pages";
+      reload.hidden = true;
+    } else if (reply?.edition === __STOICHEIA_EDITION__ && !reply.complete) {
+      status.textContent = "Offline copy is incomplete. Keep this tab open to continue reading.";
+      reload.hidden = true;
+    } else if (verifiedCurrent && reply?.complete && reply.edition !== __STOICHEIA_EDITION__) {
+      status.textContent = "A different edition is now saved offline. Reload to read that edition.";
+      reload.hidden = false;
+    } else {
+      pending();
+    }
+  };
+  const observe = (worker: ServiceWorker | null) => {
+    if (!worker) return;
+    const changed = () => {
+      if (worker.state === "redundant") installFailed = true;
+      void refresh();
+    };
+    worker.addEventListener("statechange", changed);
+    changed();
+  };
+  reload.addEventListener("click", () => location.reload());
+  container.addEventListener("controllerchange", () => {
+    void refresh();
+  });
+  window.addEventListener("online", () => {
+    installFailed = false;
+    registration?.update().catch(() => {
+      installFailed = true;
+      void refresh();
+    });
+    void refresh();
+  });
+  container
+    .register(`${import.meta.env.BASE_URL}sw.js`, {
+      scope: import.meta.env.BASE_URL,
+      updateViaCache: "none",
+    })
+    .then((result) => {
+      registration = result;
+      result.addEventListener("updatefound", () => {
+        installFailed = false;
+        observe(result.installing);
+      });
+      observe(result.installing);
+      void refresh();
+    })
+    .catch(() => {
+      installFailed = true;
+      void refresh();
+    });
+}

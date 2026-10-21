@@ -7,6 +7,7 @@ import { explorationControls, parameterControls } from "./controls";
 import { makeScene } from "./core/scene";
 import type { PropositionId } from "./core/state";
 import { decodeState, defaults, encodeState, propositionIds, stepCounts } from "./core/state";
+import { prepareOffline } from "./offline";
 import { annotated, comparisonTable, drawScene, escapeHtml, studySheet } from "./render";
 
 function element<T extends Element = HTMLElement>(selector: string): T {
@@ -83,7 +84,7 @@ app.innerHTML = `
     <details class="wordbook"><summary><span>A small working vocabulary</span><span>Words you meet in these proofs</span></summary><div class="glossary-list">${glossary.map((entry) => `<button type="button" data-gloss="${entry.id}"><span lang="grc">${escapeHtml(entry.greek)}</span><span lang="la">${escapeHtml(entry.latin)}</span><small>${escapeHtml(entry.meaning)}</small></button>`).join("")}</div></details>
     <section class="source-note" id="source-note"><div><p class="eyebrow">A printed source you can inspect</p><h2>One edition. Two languages.</h2><p>Greek text and Latin translation from J. L. Heiberg’s <cite>Euclidis opera omnia</cite>, volume I (1883), printed pages 4–31. The English and reading notes are new. Point labels stay Greek in all three languages.</p><button type="button" id="open-edition">Open the printed pages</button></div><div class="editorial-note"><h3>What changed in transcription</h3><p>Line breaks and inline reference marks are omitted. Greek ϑ is written θ; point labels use consistent Greek letters. Latin u/v spelling is retained. Square brackets in the definitions, common notions, I.1, I.4 and I.8 reproduce Heiberg’s editorial brackets. Angle and triangle symbols are written ∠ and △. The step divisions, geometry orientation, reasons and annotations are teaching aids. The usual five-common-notion numbering is used in the notes; Heiberg’s expanded list is identified where it differs.</p><p>The English sometimes names intersections implied by the Greek. It is a reading translation, not a critical edition. The language notes cover selected forms, not every word.</p><a href="${import.meta.env.BASE_URL}sources/manifest.json">Source and image provenance</a></div></section>
   </main>
-  <footer class="footer"><p>Stoicheia <span lang="grc">/ στοιχεῖα</span> · elements</p><p>Made for slow reading. No account. No tracking.</p><span id="offline-state" role="status">Preparing offline edition…</span></footer>
+  <footer class="footer"><p>Stoicheia <span lang="grc">/ στοιχεῖα</span> · elements</p><p>Made for slow reading. No account. No tracking.</p><span class="offline-status"><span id="offline-state" role="status">Preparing offline edition…</span><button type="button" id="reload-edition" hidden>Reload saved edition</button></span></footer>
   <dialog id="practice-dialog" class="practice-dialog" aria-labelledby="practice-title"><header><div><p class="eyebrow" id="practice-position"></p><h2 id="practice-title" tabindex="-1">Read the argument</h2></div><button type="button" class="dialog-close" data-close="practice-dialog" aria-label="Close reading practice">×</button></header><div class="practice-body"><p class="practice-intro">Read the highlighted wording in its original sentence. Try an interpretation, then compare the explanation.</p><div id="practice-source"></div><form id="practice-form"><fieldset id="practice-options"></fieldset><p id="practice-feedback" role="status" aria-live="polite"></p></form><div id="practice-translation" hidden></div><button type="button" id="practice-plate">Open this passage on the plate</button></div><footer class="practice-controls"><button type="button" id="practice-previous">← Previous reading</button><button type="button" id="practice-next">Next reading →</button></footer></dialog>
   <dialog id="foundation-dialog" class="foundation-dialog" aria-labelledby="foundation-title"><header><div><p class="eyebrow">The starting permissions</p><h2 id="foundation-title" tabindex="-1">Definitions, postulates &amp; common notions</h2></div><button type="button" class="dialog-close" data-close="foundation-dialog" aria-label="Close foundations">×</button></header><div class="foundation-layout"><nav class="foundation-nav" aria-label="Foundation statements">${(
     ["Definition", "Postulate", "Common notion"] as const
@@ -625,15 +626,7 @@ window.addEventListener("afterprint", () => {
 renderLesson();
 
 if (import.meta.env.PROD && "serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register(`${import.meta.env.BASE_URL}sw.js`, { scope: import.meta.env.BASE_URL })
-    .then(async () => {
-      await navigator.serviceWorker.ready;
-      element("#offline-state").textContent = "Edition ready offline, including source pages";
-    })
-    .catch(() => {
-      element("#offline-state").textContent = "Offline copy unavailable in this browser";
-    });
+  prepareOffline(element("#offline-state"), element<HTMLButtonElement>("#reload-edition"));
 } else {
   element("#offline-state").textContent = import.meta.env.DEV
     ? "Development preview"

@@ -163,7 +163,11 @@ try {
         console.log(`Checking ${name} ${viewport.width}px`);
         await page.goto(browserUrl, { waitUntil: "networkidle" });
         await page.evaluate(() => document.fonts.ready);
-        await page.waitForFunction(() => Boolean(navigator.serviceWorker.controller));
+        await page.waitForFunction(
+          () =>
+            Boolean(navigator.serviceWorker.controller) &&
+            document.querySelector("#offline-state").textContent.includes("ready offline"),
+        );
         assert.match(await page.locator("#offline-state").innerText(), /ready offline/);
         assert.equal(await page.evaluate(() => document.fonts.check('20px "Noto Serif"')), true);
 

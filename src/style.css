@@ -2111,3 +2111,18 @@ dialog::backdrop {
     display: none;
   }
 }
+
+.offline-status {
+  max-width: 300px;
+}
+#reload-edition {
+  margin-top: 8px;
+  padding: 7px 10px;
+  border: 1px solid var(--rule);
+  font-size: 0.78rem;
+}
+@media print {
+  .offline-status {
+    display: none;
+  }
+}
