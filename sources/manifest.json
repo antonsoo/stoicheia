@@ -1,0 +1,235 @@
+{
+  "edition": {
+    "title": "Euclidis opera omnia",
+    "volume": "I: Elementa, libros I–IV continens",
+    "editor_and_latin_translator": "J. L. Heiberg",
+    "publisher": "B. G. Teubner, Leipzig",
+    "year": 1883,
+    "catalog_url": "https://archive.org/details/euclidisoperaomn01eucluoft",
+    "scan_contributor": "Gerstein Science Information Centre, University of Toronto",
+    "rights": "Public domain; the Internet Archive record reports NOT_IN_COPYRIGHT."
+  },
+  "download": {
+    "url": "https://archive.org/download/euclidisoperaomn01eucluoft/euclidisoperaomn01eucluoft.pdf",
+    "bytes": 20890632,
+    "sha256": "da285c581c2dda86e2b25e20db3ce604bf6fb8765228fcd71cfc89d47a9d1c17"
+  },
+  "rendering": "pdftoppm -f 18 -l 39 -scale-to 1550 -jpeg -jpegopt quality=88 INPUT.pdf page",
+  "transcription": {
+    "scope": "Full proposition statements and proofs I.1–6; definitions 15, 16, 20; all five postulates; the five common notions in the usual modern list (Heiberg 1, 2, 3, 7, 8). Critical apparatus and other text are not transcribed.",
+    "normalizations": [
+      "Printed ϑ normalized to θ.",
+      "Consistent Unicode Greek letters for all geometric labels, including letters that resemble Latin glyphs.",
+      "Line breaks and end-of-line hyphenation removed.",
+      "Inline editorial reference marks in the Latin omitted; reasons are separately identified teaching annotations.",
+      "Greek punctuation represented with modern Unicode punctuation.",
+      "Latin lowercase sentence openings and u/v spelling retained.",
+      "Heiberg’s square brackets in I.1’s repeated conclusion and I.4’s [ταῖς] retained.",
+      "Printed Latin angle and triangle symbols represented by Unicode ∠ and △; equations use =.",
+      "Greek editorial brackets in definitions 15 and common notion 8 retained; facing Latin omissions preserved."
+    ],
+    "english": "New reading translation. Explicit intersection descriptions and other explanatory expansions are teaching aids.",
+    "comparison": "Hand transcription checked against bundled scans. The cropped right edge of printed p. 6 was cross-checked against the Greek quoted in Heath, The Thirteen Books of Euclid’s Elements (1925), pp. 187–188, via David R. Wilkins’s Trinity College Dublin transcription. No unreviewed OCR output is presented as source text.",
+    "supplementary_check": "https://www.maths.tcd.ie/~dwilkins/Euclid/Euclid_HeathCommentaries/EuclidElements_HeathCommentary_ElementsBk01Def19_DraftTranscription.pdf"
+  },
+  "pages": [
+    {
+      "printed_page": 4,
+      "pdf_page": 18,
+      "archive_leaf": 18,
+      "language": "grc",
+      "file": "heiberg-004.jpg",
+      "bytes": 320270,
+      "sha256": "b874eac6b40c554206427557ce221770b7b2c1b50afa17087fa6131282db8bc4"
+    },
+    {
+      "printed_page": 5,
+      "pdf_page": 19,
+      "archive_leaf": 19,
+      "language": "la",
+      "file": "heiberg-005.jpg",
+      "bytes": 316399,
+      "sha256": "7f570bfd4809b2474674fbbfb62610f0b45869d4374cf277d5807deca361b772"
+    },
+    {
+      "printed_page": 6,
+      "pdf_page": 20,
+      "archive_leaf": 20,
+      "language": "grc",
+      "file": "heiberg-006.jpg",
+      "bytes": 320634,
+      "sha256": "b6b371b3e5eb13f4305dbf073e5f15ce178018a8ad8557df99431410ce6a69ae"
+    },
+    {
+      "printed_page": 7,
+      "pdf_page": 21,
+      "archive_leaf": 21,
+      "language": "la",
+      "file": "heiberg-007.jpg",
+      "bytes": 334398,
+      "sha256": "c9efe81728c69d36b95838b8d80060eae8a0d316fb682a722a3273eb8ce1f3ea"
+    },
+    {
+      "printed_page": 8,
+      "pdf_page": 22,
+      "archive_leaf": 22,
+      "language": "grc",
+      "file": "heiberg-008.jpg",
+      "bytes": 273136,
+      "sha256": "5e7987d0e9686891261411810a828bd6ace64c6a21ea92600fdedbb2c6078a17"
+    },
+    {
+      "printed_page": 9,
+      "pdf_page": 23,
+      "archive_leaf": 23,
+      "language": "la",
+      "file": "heiberg-009.jpg",
+      "bytes": 291149,
+      "sha256": "8844849fadfddacf9ddd2692a5917003f96a3b9a122825a891a1931d0580e75e"
+    },
+    {
+      "printed_page": 10,
+      "pdf_page": 24,
+      "archive_leaf": 24,
+      "language": "grc",
+      "file": "heiberg-010.jpg",
+      "bytes": 276612,
+      "sha256": "8d1db0bc4b9a8b93b72633ac544f16cdd7e03aef8111d5e68f25d192febe1dbd"
+    },
+    {
+      "printed_page": 11,
+      "pdf_page": 25,
+      "archive_leaf": 25,
+      "language": "la",
+      "file": "heiberg-011.jpg",
+      "bytes": 279836,
+      "sha256": "f23df1af363dded2831f7e7f6fbea20827c1e9d650faeb03bb9995489ae93a72"
+    },
+    {
+      "printed_page": 12,
+      "pdf_page": 26,
+      "archive_leaf": 26,
+      "language": "grc",
+      "file": "heiberg-012.jpg",
+      "bytes": 289774,
+      "sha256": "e5cc7d6bf3a2ec8dc3bcbf88803b8ee9e3d0315ae29221ed7d2fe9768356c2fd"
+    },
+    {
+      "printed_page": 13,
+      "pdf_page": 27,
+      "archive_leaf": 27,
+      "language": "la",
+      "file": "heiberg-013.jpg",
+      "bytes": 291315,
+      "sha256": "49235a355d10656aba59db1464aaefe34f5836a32ca5f214955d7b064a39273d"
+    },
+    {
+      "printed_page": 14,
+      "pdf_page": 28,
+      "archive_leaf": 28,
+      "language": "grc",
+      "file": "heiberg-014.jpg",
+      "bytes": 299613,
+      "sha256": "dc97350f09d7adca95cf3cc233cef8237da757ff4bd077c1b75390c8de3fb385"
+    },
+    {
+      "printed_page": 15,
+      "pdf_page": 29,
+      "archive_leaf": 29,
+      "language": "la",
+      "file": "heiberg-015.jpg",
+      "bytes": 271550,
+      "sha256": "52e2aa1b336c6c88b3bf8a3ff1da916f37df2afe4de5d29d3659b13254e18a2c"
+    },
+    {
+      "printed_page": 16,
+      "pdf_page": 30,
+      "archive_leaf": 30,
+      "language": "grc",
+      "file": "heiberg-016.jpg",
+      "bytes": 295019,
+      "sha256": "52d0dd0e02d4088b80b547838d47621efd1b23784f33b62482216a71b0927afc"
+    },
+    {
+      "printed_page": 17,
+      "pdf_page": 31,
+      "archive_leaf": 31,
+      "language": "la",
+      "file": "heiberg-017.jpg",
+      "bytes": 283679,
+      "sha256": "ff29baed3f8686d2d55b10131a85953cfec56f2388be0053e513c6ad362cc773"
+    },
+    {
+      "printed_page": 18,
+      "pdf_page": 32,
+      "archive_leaf": 32,
+      "language": "grc",
+      "file": "heiberg-018.jpg",
+      "bytes": 320531,
+      "sha256": "5db4489cfd168fb06c3593125ce62bd67b2d097b2146d9eaa655db878deaaa69"
+    },
+    {
+      "printed_page": 19,
+      "pdf_page": 33,
+      "archive_leaf": 33,
+      "language": "la",
+      "file": "heiberg-019.jpg",
+      "bytes": 255868,
+      "sha256": "6cf9dc8ffa51ab9cad0cd0c0b89d81d6bf11b20dfe605dc4e6a7c552efc3ecda"
+    },
+    {
+      "printed_page": 20,
+      "pdf_page": 34,
+      "archive_leaf": 34,
+      "language": "grc",
+      "file": "heiberg-020.jpg",
+      "bytes": 293742,
+      "sha256": "a8755a2c4cd74bb7de6d77da6c18bc4bbccb9742dd71feadb24ec2682a82eb3b"
+    },
+    {
+      "printed_page": 21,
+      "pdf_page": 35,
+      "archive_leaf": 35,
+      "language": "la",
+      "file": "heiberg-021.jpg",
+      "bytes": 291018,
+      "sha256": "3412b172ffa4825a145107528219d3e9816aa007569326c05afa76c7340b24b0"
+    },
+    {
+      "printed_page": 22,
+      "pdf_page": 36,
+      "archive_leaf": 36,
+      "language": "grc",
+      "file": "heiberg-022.jpg",
+      "bytes": 293560,
+      "sha256": "9f1e3d75f5d7b78fba0a4ae1c27ea786b1dab1652545215512203604eb158019"
+    },
+    {
+      "printed_page": 23,
+      "pdf_page": 37,
+      "archive_leaf": 37,
+      "language": "la",
+      "file": "heiberg-023.jpg",
+      "bytes": 278117,
+      "sha256": "90ac8cd3b7c27a32078961e3a3a6413133fece7989ce3d7841a28c1cfc948afe"
+    },
+    {
+      "printed_page": 24,
+      "pdf_page": 38,
+      "archive_leaf": 38,
+      "language": "grc",
+      "file": "heiberg-024.jpg",
+      "bytes": 306364,
+      "sha256": "6a0b4031ea7536cf2c506e0164841ec388db0e69171d4851d771a5f96c3aa9b8"
+    },
+    {
+      "printed_page": 25,
+      "pdf_page": 39,
+      "archive_leaf": 39,
+      "language": "la",
+      "file": "heiberg-025.jpg",
+      "bytes": 293436,
+      "sha256": "dcc612163f25b70db7f0cd45536506bbe4fe8fad1c93a692f3d2700e0e8747ed"
+    }
+  ]
+}
