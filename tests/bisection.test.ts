@@ -96,3 +96,8 @@ test("I.10 earns the midpoint by intersecting the constructed bisector, on rotat
       assert.ok(sideOfLine(a, b, result.c) * sideOfLine(a, b, result.auxiliary) < 0);
     }
 });
+
+test("percentage controls cannot turn an exact degenerate triple into a tiny triangle", () => {
+  for (const size of [101, 109, 119, 143, 239])
+    assert.throws(() => triangleFromSides(size, size * 0.2, size * 1.2), RangeError);
+});

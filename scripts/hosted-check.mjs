@@ -4,6 +4,7 @@ import { createHash } from "node:crypto";
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import { join, relative } from "node:path";
 import { chromium, firefox } from "playwright";
+import { openLesson } from "./navigation.mjs";
 
 const base = process.argv[2];
 const sourceCommit = process.argv[3];
@@ -87,8 +88,12 @@ for (const [name, engine] of [
         [4, 8],
         [5, 11],
         [6, 7],
+        [7, 8],
+        [8, 8],
+        [9, 9],
+        [10, 8],
       ]) {
-        await page.locator(`.lesson-tab[data-lesson="${proposition}"]`).click();
+        await openLesson(page, proposition);
         await page.locator(`#step-list [data-step="${count - 1}"]`).click();
         assert.equal(await page.locator("#step-position").innerText(), `Step ${count} of ${count}`);
         assert.equal(
@@ -96,13 +101,13 @@ for (const [name, engine] of [
           true,
         );
       }
-      await page.locator('.lesson-tab[data-lesson="4"]').click();
+      await openLesson(page, 4);
       await page.locator('#step-list [data-step="3"]').click();
       await page.locator("#motion").focus();
       await page.keyboard.press("End");
       assert.equal(await page.locator("#motion-output").innerText(), "100%");
       assert.match(await page.locator("#diagram").textContent(), /Α \/ Δ/);
-      await page.locator('.lesson-tab[data-lesson="5"]').click();
+      await openLesson(page, 5);
       await page.locator('#step-list [data-step="8"]').click();
       assert.match(
         await page.locator(".comparison-table caption").innerText(),
@@ -117,7 +122,7 @@ for (const [name, engine] of [
       });
       await page.keyboard.press("Escape");
       await page.keyboard.press("Escape");
-      await page.locator('.lesson-tab[data-lesson="6"]').click();
+      await openLesson(page, 6);
       await page.locator('#step-list [data-step="4"]').click();
       assert.match(await page.locator("#diagram-notice").innerText(), /Hypothetical sketch/);
       await page.locator("#reading-mode").selectOption("greek");
@@ -125,13 +130,41 @@ for (const [name, engine] of [
       await page.locator("#reveal-translations").click();
       assert.equal(await page.locator("#current-passage .english").isVisible(), true);
       await page.locator("#open-practice").click();
-      assert.match(await page.locator("#practice-position").innerText(), /Reading 11 of 12/i);
+      assert.match(await page.locator("#practice-position").innerText(), /Reading 11 of 20/i);
       await page.locator("#practice-options input").nth(1).check();
       assert.equal(
         await page.locator("#practice-feedback").getAttribute("class"),
         "correct-feedback",
       );
       await page.keyboard.press("Escape");
+      await openLesson(page, 7);
+      await page.locator("#variant").selectOption("1");
+      assert.match(await page.locator("#diagram-notice").innerText(), /opposite sides/);
+      await openLesson(page, 8);
+      await page.locator('#step-list [data-step="6"]').click();
+      await page.locator("#motion").fill("100");
+      assert.match(await page.locator("#diagram").textContent(), /Α \/ Δ/);
+      await openLesson(page, 9);
+      await page.locator('#step-list [data-step="7"]').click();
+      await page.locator("#variant").selectOption("1");
+      await page.locator("#angle").fill("60");
+      assert.equal(await page.locator('#diagram [data-entity="AZ"]').count(), 0);
+      assert.match(await page.locator("#hypothesis-warning").innerText(), /zero length/);
+      await page.locator("#angle").fill("90");
+      assert.match(await page.locator("#diagram-notice").innerText(), /opposite bisector ray/);
+      await page.locator("#variant").selectOption("0");
+      assert.equal(await page.locator("#hypothesis-warning").isHidden(), true);
+      await openLesson(page, 10);
+      await page.locator('#step-list [data-step="6"]').click();
+      assert.match(await page.locator("#equations").innerText(), /ΑΔ = ΒΔ/);
+      await page.locator('#current-passage [data-source="31"]').click();
+      await page.waitForFunction(() => {
+        const i = document.querySelector("#source-image");
+        return i.complete && i.naturalWidth > 0;
+      });
+      await page.keyboard.press("Escape");
+      await openLesson(page, 6);
+      await page.locator('#step-list [data-step="4"]').click();
       const shared = page.url();
       await page.reload();
       assert.equal(page.url(), shared);
@@ -157,7 +190,7 @@ for (const [name, engine] of [
         browser: name,
         version: browser.version(),
         viewport,
-        finalSteps: 6,
+        finalSteps: 10,
         workflows: [
           "rigid superposition",
           "I.5 angle subtraction",
@@ -166,6 +199,10 @@ for (const [name, engine] of [
           "Greek-first reveal",
           "passage exercise",
           "shared URL reload",
+          "I.7 reflected candidate",
+          "I.8 three-side superposition",
+          "I.9 collapsed and outward crossing, then internal bisector",
+          "I.10 midpoint and printed page 31",
         ],
         offline:
           "Worker-served reload and source scan under browser offline emulation; public origin not disabled",

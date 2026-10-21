@@ -1,4 +1,5 @@
 import type { PropositionId } from "../core/state";
+import { laterExercises } from "./later-practice";
 import { lessons, type Passage } from "./lessons";
 
 export interface ReadingExercise {
@@ -225,6 +226,7 @@ export const readingExercises: ReadingExercise[] = [
       "The preceding equality supplies the missing relation: the lesser [equal] to the greater. That conflicts with the whole–part principle and rejects the added inequality.",
     ],
   },
+  ...laterExercises,
 ];
 
 export function exercisePassage(exercise: ReadingExercise): Passage {

@@ -20,11 +20,14 @@ a new reading translation for this workbench.
 | I.4         | 16, 18              | 17, 19              |
 | I.5         | 20, 22              | 21, 23              |
 | I.6         | 22, 24              | 23, 25              |
+| I.7         | 24, 26              | 25, 27              |
+| I.8         | 26, 28              | 27, 29              |
+| I.9         | 28, 30              | 29, 31              |
+| I.10        | 30                  | 31                  |
 
-Bundled JPEGs are full-page renders of PDF pages 18–39 using Poppler's
+Bundled JPEGs are full-page renders of PDF pages 18–45 using Poppler's
 `pdftoppm`, maximum dimension 1550 px and JPEG quality 88. They include material
-outside I.1–6 and the selected foundations (other definitions, critical notes,
-and the start of I.7). The reader transcribes only its named selections. See [the manifest](../public/sources/manifest.json)
+outside I.1–10 and the selected foundations (other definitions and critical notes). The reader transcribes only its named selections. See [the manifest](../public/sources/manifest.json)
 for the download URL, source PDF hash, page mapping and JPEG hashes.
 
 Changes from print:
@@ -81,8 +84,7 @@ The continued course uses these facing pages from the same volume:
 
 The propositions use printed pages 10–25 (PDF pages 24–39). The additional
 pages were visually inspected, including their point labels and the different
-Greek/Latin page breaks. The start of I.7 remains visible on pp. 24–25 but is not
-part of the reader. The I.4 `[ταῖς]` brackets are retained both in the statement
+Greek/Latin page breaks. The I.4 `[ταῖς]` brackets are retained both in the statement
 and the repeated conclusion. I.6 retains the printed `ἐλάττονι`; the earlier
 `ἐλάσσονι` has not been silently substituted. Latin angle and triangle symbols
 are encoded as ∠ and △, with the printed equality sign encoded as `=`.
@@ -125,7 +127,7 @@ Further mathematical commentary:
 The foundations reader includes definitions 15, 16 and 20, all five postulates,
 and the five usual common notions (Heiberg’s 1, 2, 3, 7 and 8), each with Greek,
 Heiberg Latin, a new English reading, and a contextual note. Printed pp. 4–9 are
-now bundled as well, giving twenty-two full pages in total (PDF pages 18–39).
+now bundled as well, giving twenty-eight full pages in total (PDF pages 18–45).
 Definition 15’s bracketed Greek clauses and common notion 8’s `[ἐστιν]` are kept;
 the corresponding Latin omissions are preserved.
 
@@ -140,3 +142,46 @@ The Greek on p. 10 includes bracketed common notions 4–6 and 9 which the facin
 Latin does not translate. The foundations list does not invent Latin for those
 entries. I.4 retains its own main-text two-line enclosure argument, in which the
 printed Latin does give the corresponding argument.
+
+## Uniqueness and bisection, I.7–10
+
+Six further full-page renders, printed pp. 26–31, complete these four propositions.
+Their Greek and Latin were checked directly against the scans, including the
+page breaks inside I.7’s first angle equality and I.8’s superposition argument.
+The editorial `[ταῖς]` is retained in I.8’s statement and repeated conclusion.
+I.9 prints `δυσὶ ταῖς`; I.10 prints `δύο ταῖς`. Both readings are retained.
+Latin short equations are not expanded into invented Latin sentences.
+
+I.7’s statement restricts the second meeting point to the same side of the base.
+Its printed proof follows one configuration with the candidate outside the first
+triangle; the reading note identifies that coverage limit. The plate preserves
+the first distance pair and displays the actual unequal second pair. The second
+isosceles comparison remains conditional. Reflection satisfies both distance
+pairs but fails the same-side hypothesis; coincidence fails the distinct-point
+hypothesis. Neither is presented as a counterexample to the stated theorem.
+
+I.8 starts from three lengths. Its numerical apex is obtained from two distance
+constraints and has no independently adjustable angle. Impossible or degenerate
+triples withhold the triangle and conclusion. The printed hypothetical apex Η
+is explained in text; the diagram does not fabricate an Η that satisfies the
+inconsistent constraints. Motion is the same explicitly qualified superposition
+used in I.4.
+
+I.9 actually obtains Ε through I.3. Its default equilateral vertex is on the side
+of ΔΕ opposite Α, consistent with the source figure. The other circle crossing
+has three behaviours in this real-plane model: an internal bisector below 60°,
+coincidence with Α at 60°, and an outward ray above 60°. The model-derived cases
+are teaching explorations, not additional claims transcribed from Euclid. The
+invalid choices retain warnings in the interface, shared state and saved files.
+
+I.10 reuses the two I.1 circles when applying I.9: the original base endpoints
+already have equal distances from the equilateral vertex. The auxiliary label
+`Ζ₉` distinguishes that reused I.9 point from the four labels in I.10’s text.
+The midpoint is computed by intersecting the constructed line with the original
+segment, then checked independently against the arithmetic midpoint.
+
+Further commentary at Clark University:
+[I.7](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI7.html),
+[I.8](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI8.html),
+[I.9](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI9.html),
+[I.10](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI10.html).

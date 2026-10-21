@@ -3,7 +3,7 @@
 Audience: an English-speaking reader who knows what a triangle is and wants to
 read actual Greek and historical Latin without first learning either language.
 The page's job is to connect each sentence to an allowed construction and its
-reason. The course is Euclid I.1–6: three constructions followed by three triangle arguments.
+reason. The course is Euclid I.1–10: five constructions connected by five triangle arguments.
 
 Palette: blue paper #e8eff4, ink #193d60, construction blue #386a94, active purple
 #694780, white folio #fbfcfe, muted ink #52677b. The manuscript is a printed book,

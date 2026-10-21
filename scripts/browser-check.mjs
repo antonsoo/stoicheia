@@ -8,7 +8,9 @@ import { join, relative } from "node:path";
 import { pathToFileURL } from "node:url";
 import AxeBuilder from "@axe-core/playwright";
 import { chromium, firefox } from "playwright";
+import { verifyBisections } from "./bisection-workflows.mjs";
 import { verifyLearning } from "./learning-workflows.mjs";
+import { openLesson } from "./navigation.mjs";
 
 const url = process.argv[2] ?? "http://127.0.0.1:4327/stoicheia/";
 // Cut access below the browser when checking offline behaviour. Request routing
@@ -42,7 +44,7 @@ const report = {
   configurations: [],
 };
 const sha256 = (bytes) => createHash("sha256").update(bytes).digest("hex");
-const counts = { 1: 10, 2: 11, 3: 5, 4: 8, 5: 11, 6: 7 };
+const counts = { 1: 10, 2: 11, 3: 5, 4: 8, 5: 11, 6: 7, 7: 8, 8: 8, 9: 9, 10: 8 };
 const artifacts = await mkdtemp(join(tmpdir(), "stoicheia-export-"));
 
 async function accessible(page, label, results) {
@@ -165,8 +167,8 @@ try {
         assert.match(await page.locator("#offline-state").innerText(), /ready offline/);
         assert.equal(await page.evaluate(() => document.fonts.check('20px "Noto Serif"')), true);
 
-        for (const proposition of [1, 2, 3, 4, 5, 6]) {
-          await page.locator(`.lesson-tab[data-lesson="${proposition}"]`).click();
+        for (const proposition of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) {
+          await openLesson(page, proposition);
           for (let step = 0; step < counts[proposition]; step++) {
             assert.equal(
               await page.locator("#step-position").innerText(),
@@ -183,9 +185,12 @@ try {
           assert.equal(await page.locator("#next").isDisabled(), true);
           await accessible(page, `I.${proposition} final step`, audits);
           const question = page.locator(".question input");
-          await question.nth(proposition === 2 ? 0 : 1).check();
+          const correctAnswer = { 1: 0, 2: 1, 3: 0, 4: 0, 5: 0, 6: 0, 7: 1, 8: 2, 9: 0, 10: 1 }[
+            proposition
+          ];
+          await question.nth((correctAnswer + 1) % 3).check();
           assert.ok(await page.locator("#question-feedback").innerText());
-          await question.nth(proposition === 2 ? 1 : 0).check();
+          await question.nth(correctAnswer).check();
           assert.equal(
             await page.locator("#question-feedback").getAttribute("class"),
             "correct-feedback",
@@ -203,7 +208,7 @@ try {
 
         // Verify original printed pages, including zoom/pan and keyboard dismissal.
         await page.locator("#open-edition").click();
-        for (let printedPage = 4; printedPage <= 25; printedPage++) {
+        for (let printedPage = 4; printedPage <= 31; printedPage++) {
           await page.waitForFunction(() => {
             const image = document.querySelector("#source-image");
             return image.complete && image.naturalWidth > 0;
@@ -212,7 +217,7 @@ try {
             await page.locator("#source-title").innerText(),
             `Printed page ${printedPage}`,
           );
-          if (printedPage < 25) await page.locator("#source-next").click();
+          if (printedPage < 31) await page.locator("#source-next").click();
         }
         await page.locator("#source-zoom").click();
         assert.equal(await page.locator("#source-zoom").getAttribute("aria-pressed"), "true");
@@ -233,7 +238,15 @@ try {
         await page.keyboard.press("Escape");
 
         await verifyLearning(page, viewport, accessible, audits);
-        await page.locator('.lesson-tab[data-lesson="3"]').click();
+        result.bisections = await verifyBisections(
+          page,
+          viewport,
+          name,
+          accessible,
+          audits,
+          artifacts,
+        );
+        await openLesson(page, 3);
         await page.locator('#step-list [data-step="4"]').click();
         // Native keyboard range changes must update the picture and the shared state.
         await page.locator("#parameters summary").click();
@@ -287,7 +300,7 @@ try {
         assert.equal(await page.locator("#step-position").innerText(), "Step 11 of 11");
 
         // The new lessons must do more than render text: inspect their actual SVG geometry.
-        await page.locator('.lesson-tab[data-lesson="4"]').click();
+        await openLesson(page, 4);
         await page.locator('#step-list [data-step="3"]').click();
         const renderedLength = async (id) =>
           page
@@ -316,7 +329,7 @@ try {
         assert.deepEqual(overlay[0], overlay[1]);
         assert.deepEqual(overlay[2], overlay[3]);
         await accessible(page, "I.4 exact superposition", audits);
-        await page.locator('.lesson-tab[data-lesson="5"]').click();
+        await openLesson(page, 5);
         await page.locator('#step-list [data-step="4"]').click();
         assert.match(
           await page.locator(".comparison-table caption").innerText(),
@@ -359,7 +372,7 @@ try {
             true,
           );
         }
-        await page.locator('.lesson-tab[data-lesson="6"]').click();
+        await openLesson(page, 6);
         await page.locator('#step-list [data-step="4"]').click();
         assert.match(
           await page.locator("#diagram-notice").innerText(),
@@ -390,7 +403,7 @@ try {
         await page.locator('#step-list [data-step="5"]').click();
         assert.equal(await page.locator("#diagram-notice").isHidden(), true);
         assert.equal(await page.locator("#diagram [data-angle]").count(), 2);
-        await page.locator('.lesson-tab[data-lesson="2"]').click();
+        await openLesson(page, 2);
         await page.locator('#step-list [data-step="10"]').click();
 
         // Downloads are exercised as actual files, with networking disabled on reopen.
@@ -425,14 +438,14 @@ try {
           return image.complete && image.naturalWidth > 0;
         });
         await page.keyboard.press("Escape");
-        await page.locator('.lesson-tab[data-lesson="1"]').click();
+        await openLesson(page, 1);
         await page.locator('#step-list [data-step="3"]').click();
         await renderedEqualities(page, 1, 3);
         await noOverflow(page);
         if (name === "chromium") {
           if (viewport.width === 1440) {
             await page.screenshot({ path: "docs/assets/first-construction.png", fullPage: true });
-            await page.locator('.lesson-tab[data-lesson="2"]').click();
+            await openLesson(page, 2);
             await page.locator('#step-list [data-step="8"]').click();
             await page.screenshot({ path: "docs/assets/length-transfer.png", fullPage: true });
             await page.locator(".workbench").screenshot({ path: "docs/assets/hero.png" });
@@ -441,13 +454,13 @@ try {
               .locator("#workbench")
               .evaluate((el) => el.scrollIntoView({ block: "start" }));
             await page.screenshot({ path: "docs/assets/phone-plate.png" });
-            await page.locator('.lesson-tab[data-lesson="2"]').click();
+            await openLesson(page, 2);
             await page.locator('#step-list [data-step="8"]').click();
             await page.locator(".reader").evaluate((el) => el.scrollIntoView({ block: "start" }));
             await page.screenshot({ path: "docs/assets/phone-passage.png" });
           }
         }
-        await page.locator('.lesson-tab[data-lesson="5"]').click();
+        await openLesson(page, 5);
         await page.locator('#step-list [data-step="8"]').click();
         await page.locator('#reason [data-foundation="cn3"]').click();
         assert.match(await page.locator("#foundation-content").innerText(), /subtrahuntur/);
@@ -468,14 +481,14 @@ try {
             path: `docs/assets/isosceles-${viewport.width}.png`,
             fullPage: viewport.width === 1440,
           });
-          await page.locator('.lesson-tab[data-lesson="6"]').click();
+          await openLesson(page, 6);
           await page.locator('#step-list [data-step="4"]').click();
           await page.locator("#workbench").evaluate((el) => el.scrollIntoView({ block: "start" }));
           await page.screenshot({
             path: `docs/assets/contradiction-${viewport.width}.png`,
             fullPage: viewport.width === 1440,
           });
-          await page.locator('.lesson-tab[data-lesson="4"]').click();
+          await openLesson(page, 4);
           await page.locator('#step-list [data-step="3"]').click();
           await page.locator("#motion").focus();
           await page.keyboard.press("Home");

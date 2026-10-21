@@ -1,8 +1,9 @@
 // biome-ignore-all lint/performance/useDomNodeTextContent: Checks visible learner state.
 import assert from "node:assert/strict";
+import { openLesson } from "./navigation.mjs";
 
 export async function verifyLearning(page, viewport, accessible, audits) {
-  await page.locator('.lesson-tab[data-lesson="1"]').click();
+  await openLesson(page, 1);
   await page.locator('#step-list [data-step="1"]').click();
   await page.locator("#reading-mode").selectOption("greek");
   assert.equal(await page.locator("#current-passage .greek").isVisible(), true);
@@ -76,11 +77,11 @@ export async function verifyLearning(page, viewport, accessible, audits) {
   assert.equal(await page.locator("#step-position").innerText(), originalStep);
 
   await page.locator("#open-practice").click();
-  const answers = [0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2];
-  for (let i = 0; i < 12; i++) {
+  const answers = [0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 2, 1, 0, 1, 2, 0, 1];
+  for (let i = 0; i < 20; i++) {
     assert.match(
       await page.locator("#practice-position").innerText(),
-      new RegExp(`Reading ${i + 1} of 12`, "i"),
+      new RegExp(`Reading ${i + 1} of 20`, "i"),
     );
     assert.ok(await page.locator("#practice-source mark").innerText());
     assert.equal(await page.locator("#practice-translation").isHidden(), true);
@@ -100,17 +101,17 @@ export async function verifyLearning(page, viewport, accessible, audits) {
       await accessible(page, "reading practice with feedback", audits);
       await page.screenshot({ path: `docs/assets/reading-practice-${viewport.width}.png` });
     }
-    if (i < 11) await page.locator("#practice-next").click();
+    if (i < 19) await page.locator("#practice-next").click();
   }
   assert.equal(await page.locator("#practice-next").isDisabled(), true);
   await page.locator("#practice-plate").click();
-  assert.match(await page.locator("#book-label").innerText(), /Proposition 6/i);
-  assert.equal(await page.locator("#step-position").innerText(), "Step 5 of 7");
+  assert.match(await page.locator("#book-label").innerText(), /Proposition 10/i);
+  assert.equal(await page.locator("#step-position").innerText(), "Step 5 of 8");
   assert.equal(await page.locator("#practice-dialog").evaluate((d) => d.open), false);
 
   // The I.3 exercises refer to the proposition's statement rather than a step.
   // Returning there must move keyboard focus with the visible reading position.
-  await page.locator('.lesson-tab[data-lesson="3"]').click();
+  await openLesson(page, 3);
   await page.locator("#open-practice").click();
   await page.locator("#practice-plate").click();
   assert.equal(await page.locator("#full-reading").evaluate((d) => d.open), true);

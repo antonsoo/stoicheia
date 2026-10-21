@@ -58,6 +58,12 @@ export function triangleFromSides(ab: number, ac: number, bc: number, side: 1 | 
     throw new RangeError(
       "Three positive lengths form a triangle only when each is less than the other two together.",
     );
+  // Percentage controls can round an exact equality (101 + 20.2 = 121.2)
+  // into a tiny positive triangle-inequality gap. Do not display a spurious
+  // apex when the separation from degeneracy is at floating-point noise scale.
+  const gap = Math.min(ab + ac - bc, ab + bc - ac, ac + bc - ab);
+  if (gap <= 32 * Number.EPSILON * Math.max(ab, ac, bc))
+    throw new RangeError("The triangle is too close to degeneracy at this numerical scale.");
   const b = { x: 0, y: 0 };
   const c = { x: bc, y: 0 };
   const x = (ab * ab - ac * ac + bc * bc) / (2 * bc);

@@ -1,0 +1,343 @@
+import type { Lesson, Reason } from "./lessons";
+
+export const bisectionReasons: Record<string, Reason> = {
+  i3ForAngle: {
+    title: "I.3 · obtain equal lengths on the two rays",
+    text: "Choose Δ on ΑΒ closer to Α than the available endpoint Γ. I.3 then cuts ΑΕ equal to ΑΔ from ΑΓ. The model actually calls that earlier construction; it does not choose Ε by visually reflecting Δ.",
+    kind: "construction",
+    lesson: 3,
+  },
+  i1ForAngle: {
+    title: "I.1 · construct an equilateral triangle on ΔΕ",
+    text: "The two circles of I.1 supply two possible vertices. Choose Ζ on the side of ΔΕ opposite Α, as in the printed figure. This keeps ΑΖ inside the given angle. The alternative crossing can work, collapse at Α, or put the ray outside the angle; inspect those cases with the plate controls.",
+    kind: "construction",
+    lesson: 1,
+  },
+  commonBisector: {
+    title: "The obtained equal lengths and one common side",
+    text: "I.3 supplied ΑΔ = ΑΕ. ΑΖ belongs to both triangles: comparing it with itself does not require another construction. These are two of the three side pairs needed for I.8.",
+    kind: "given",
+  },
+  equilateralBase: {
+    title: "The remaining equal sides come from I.1",
+    text: "ΔΖ and ΕΖ are sides of the equilateral triangle ΔΕΖ. Together with ΑΔ = ΑΕ and common ΑΖ, this supplies every side pair of triangles ΔΑΖ and ΕΑΖ.",
+    kind: "deduction",
+    lesson: 1,
+  },
+  i8: {
+    title: "I.8 · three side pairs give the equal angles",
+    text: "Compare ΔΑΖ with ΕΑΖ: ΔΑ = ΕΑ, ΑΖ is common, and ΔΖ = ΕΖ. I.8 gives ∠ΔΑΖ = ∠ΕΑΖ. The chosen position of Ζ places these adjacent angles inside the given angle, so their equality really bisects it.",
+    kind: "deduction",
+    lesson: 8,
+  },
+  i1ForMidpoint: {
+    title: "I.1 · equal sides above the given base",
+    text: "Construct the equilateral triangle ΑΒΓ. In particular, ΑΓ = ΒΓ. Its two original circles also provide the other intersection, which can be reused when applying I.9.",
+    kind: "construction",
+    lesson: 1,
+  },
+  i9: {
+    title: "I.9 · bisect the angle at Γ",
+    text: "Apply the angle-bisector construction at Γ. Here Α and Β are already available points at equal distances from Γ. The other intersection of I.1’s circles completes the equilateral triangle needed by I.9. Join Γ to that intersection; Δ is where the resulting line crosses ΑΒ.",
+    kind: "construction",
+    lesson: 9,
+  },
+  midpointPairs: {
+    title: "Equal equilateral sides and the common bisector",
+    text: "I.1 supplies ΑΓ = ΒΓ, while ΓΔ is a common side of ΑΓΔ and ΒΓΔ. The two side pairs have been identified without assuming anything about ΑΔ and ΒΔ.",
+    kind: "given",
+  },
+  bisectedAngle: {
+    title: "The angle equality is the result of I.9",
+    text: "I.9 gives ∠ΑΓΔ = ∠ΒΓΔ at Γ. It is the included angle between the two equal side pairs, exactly the angle needed to apply I.4.",
+    kind: "deduction",
+    lesson: 9,
+  },
+  sasMidpoint: {
+    title: "I.4 · equal bases of the two smaller triangles",
+    text: "ΑΓ = ΒΓ, ΓΔ is common, and ∠ΑΓΔ = ∠ΒΓΔ. I.4 therefore gives the equal bases ΑΔ and ΒΔ. The midpoint is a consequence of these constructions and equalities, not a coordinate assigned in advance.",
+    kind: "deduction",
+    lesson: 4,
+  },
+};
+
+export const bisectionLessons: Record<9 | 10, Lesson> = {
+  9: {
+    id: 9,
+    numeral: "I.9",
+    greekNumeral: "θʹ",
+    title: "Construct an angle’s equal halves",
+    shortTitle: "Bisect an angle",
+    introduction:
+      "Choose equal lengths on the two rays and construct an equilateral triangle between them. Three side pairs then prove the equality of the two angle parts. The choice of circle intersection matters.",
+    statement: {
+      grc: "Τὴν δοθεῖσαν γωνίαν εὐθύγραμμον δίχα τεμεῖν.",
+      lat: "Datum angulum rectilineum in duas partes aequales diuidere.",
+      en: "Divide a given rectilinear angle into two equal parts.",
+      greekPages: [28],
+      latinPages: [29],
+    },
+    steps: [
+      {
+        title: "Start with the angle to be divided",
+        phase: "Given",
+        reason: "given",
+        grc: "Ἔστω ἡ δοθεῖσα γωνία εὐθύγραμμος ἡ ὑπὸ ΒΑΓ. δεῖ δὴ αὐτὴν δίχα τεμεῖν.",
+        lat: "Sit datus angulus rectilineus ΒΑΓ: oportet igitur eum in duas partes aequales diuidere.",
+        en: "Let ΒΑΓ be the given rectilinear angle. It is to be divided into two equal parts.",
+        greekPages: [28],
+        latinPages: [29],
+        language:
+          "δίχα means ‘in two’; the construction requires equal halves, made explicit by Latin in duas partes aequales. τεμεῖν and diuidere are infinitives following the impersonal δεῖ and oportet: ‘it is necessary to divide’.",
+      },
+      {
+        title: "Obtain equal lengths on the two rays",
+        phase: "Construct",
+        reason: "i3ForAngle",
+        grc: "Εἰλήφθω ἐπὶ τῆς ΑΒ τυχὸν σημεῖον τὸ Δ, καὶ ἀφῃρήσθω ἀπὸ τῆς ΑΓ τῇ ΑΔ ἴση ἡ ΑΕ,",
+        lat: "sumatur in ΑΒ quoduis punctum Δ, et ab ΑΓ rectae ΑΔ aequalis abscindatur ΑΕ,",
+        en: "Choose a point Δ on ΑΒ, and cut ΑΕ from ΑΓ equal to ΑΔ.",
+        greekPages: [28],
+        latinPages: [29],
+        language:
+          "τυχὸν / quoduis allows a chosen point. The practical plate keeps it closer to Α than either displayed ray endpoint, so I.3 can cut the required part. ἀπὸ τῆς ΑΓ identifies the segment being cut; τῇ ΑΔ identifies the length to match.",
+      },
+      {
+        title: "Join the two obtained points",
+        phase: "Construct",
+        reason: "p1",
+        grc: "καὶ ἐπεζεύχθω ἡ ΔΕ,",
+        lat: "et ducatur ΔΕ,",
+        en: "Join Δ and Ε.",
+        greekPages: [28],
+        latinPages: [29],
+        language:
+          "The repeated καί / et joins consecutive operations. ΔΕ becomes the base on which the next operation invokes I.1.",
+      },
+      {
+        title: "Construct the equilateral triangle",
+        phase: "Construct",
+        reason: "i1ForAngle",
+        grc: "καὶ συνεστάτω ἐπὶ τῆς ΔΕ τρίγωνον ἰσόπλευρον τὸ ΔΕΖ,",
+        lat: "et in ΔΕ construatur triangulus aequilaterus ΔΕΖ,",
+        en: "Construct the equilateral triangle ΔΕΖ on ΔΕ.",
+        greekPages: [28],
+        latinPages: [29],
+        language:
+          "ἐπὶ τῆς ΔΕ / in ΔΕ means ‘on ΔΕ’ as a base. The words name the equilateral construction; the printed figure supplies the intended side for Ζ. The plate states that choice explicitly rather than silently treating the two crossings as interchangeable.",
+      },
+      {
+        title: "Join the vertex to Ζ and state the claim",
+        phase: "Construct",
+        reason: "p1",
+        grc: "καὶ ἐπεζεύχθω ἡ ΑΖ· λέγω, ὅτι ἡ ὑπὸ ΒΑΓ γωνία δίχα τέτμηται ὑπὸ τῆς ΑΖ εὐθείας.",
+        lat: "et ducatur ΑΖ. dico, angulum ΒΑΓ recta ΑΖ in duas partes aequales diuisum esse.",
+        en: "Join Α to Ζ. I claim that ΑΖ has divided angle ΒΑΓ into equal halves.",
+        greekPages: [28],
+        latinPages: [29],
+        language:
+          "τέτμηται and diuisum esse present the proposed completed result. Because they follow λέγω / dico, they announce what the following proof must establish; drawing the line has not yet proved the equality.",
+      },
+      {
+        title: "Identify two corresponding side pairs",
+        phase: "Prove",
+        reason: "commonBisector",
+        grc: "Ἐπεὶ γὰρ ἴση ἐστὶν ἡ ΑΔ τῇ ΑΕ, κοινὴ δὲ ἡ ΑΖ, δύο δὴ αἱ ΔΑ, ΑΖ δυσὶ ταῖς ΕΑ, ΑΖ ἴσαι εἰσὶν ἑκατέρα ἑκατέρᾳ.",
+        lat: "nam cum ΑΔ = ΑΕ, et ΑΖ communis sit, duae rectae ΔΑ, ΑΖ duabus ΕΑ, ΑΖ aequales sunt altera alteri;",
+        en: "ΑΔ equals ΑΕ and ΑΖ is common. Thus ΔΑ and ΑΖ equal ΕΑ and ΑΖ respectively.",
+        greekPages: [30],
+        latinPages: [31],
+        language:
+          "ΔΑ names the same segment as ΑΔ. The reversal follows the order of the compared triangles, ΔΑΖ and ΕΑΖ. κοινή / communis identifies a single side used in both triangles, not two separately constructed equal lines.",
+      },
+      {
+        title: "Supply the third side pair",
+        phase: "Prove",
+        reason: "equilateralBase",
+        grc: "καὶ βάσις ἡ ΔΖ βάσει τῇ ΕΖ ἴση ἐστίν·",
+        lat: "et basis ΔΖ basi ΕΖ aequalis est.",
+        en: "The base ΔΖ also equals the base ΕΖ.",
+        greekPages: [30],
+        latinPages: [31],
+        language:
+          "βάσις / basis now names the side opposite the angle being compared in each smaller triangle. ‘Base’ is a role in the argument, not necessarily the horizontal line in the picture.",
+      },
+      {
+        title: "Use I.8 to obtain the equal angle parts",
+        phase: "Prove",
+        reason: "i8",
+        grc: "γωνία ἄρα ἡ ὑπὸ ΔΑΖ γωνίᾳ τῇ ὑπὸ ΕΑΖ ἴση ἐστίν.",
+        lat: "itaque ∠ ΔΑΖ = ΕΑΖ.",
+        en: "Therefore angle ΔΑΖ equals angle ΕΑΖ.",
+        greekPages: [30],
+        latinPages: [31],
+        language:
+          "Both angle names have Α in the middle. The outer letters change from Δ to Ε while Ζ remains common, matching the two sides of the dividing ray. ἄρα / itaque signals the consequence of the three established side pairs.",
+      },
+      {
+        title: "The angle has been bisected",
+        phase: "Conclude",
+        reason: "finish",
+        grc: "Ἡ ἄρα δοθεῖσα γωνία εὐθύγραμμος ἡ ὑπὸ ΒΑΓ δίχα τέτμηται ὑπὸ τῆς ΑΖ εὐθείας· ὅπερ ἔδει ποιῆσαι.",
+        lat: "Ergo datus angulus rectilineus ΒΑΓ recta ΑΖ in duas partes aequales diuisus est; quod oportebat fieri.",
+        en: "The given rectilinear angle ΒΑΓ has therefore been divided into equal halves by ΑΖ. The requested construction is complete.",
+        greekPages: [30],
+        latinPages: [31],
+        language:
+          "The given object returns with δοθεῖσα / datus, and the completed division with τέτμηται / diuisus est. ποιῆσαι / fieri closes a construction problem; compare δεῖξαι / demonstrandum in the preceding theorems.",
+      },
+    ],
+    insight: {
+      title: "Equal angles still need the right position",
+      text: "I.1 gives two circle intersections. The one across ΔΕ from Α always gives an internal dividing ray. For the other crossing, an angle below 60° still gives an internal ray; at 60° the crossing is Α itself; above 60° it gives the opposite ray. In that last case the two measured angles are equal, but they are not the two parts of the original angle. The printed figure encodes a position choice that the short command does not spell out.",
+      link: "https://mathcs.clarku.edu/~djoyce/elements/bookI/propI9.html",
+    },
+    question: {
+      prompt: "At a 90° given angle, what goes wrong with the other circle crossing?",
+      options: [
+        "The ray goes outside the given angle, so equal angles alone do not show its bisection",
+        "ΔΖ and ΕΖ stop being equal",
+        "I.8 needs a measured 45° angle as a premise",
+      ],
+      correct: 0,
+      explanations: [
+        "Yes. That crossing produces the opposite ray: the two measured angles are 135°, not the two 45° parts inside the given angle.",
+        "Both circle crossings are equidistant from Δ and Ε. The failure is their position relative to the given angle.",
+        "I.8 uses three side equalities and proves the angle equality. No 45° premise or protractor is used.",
+      ],
+    },
+  },
+  10: {
+    id: 10,
+    numeral: "I.10",
+    greekNumeral: "ιʹ",
+    title: "Earn a segment’s midpoint",
+    shortTitle: "Bisect a segment",
+    introduction:
+      "An equilateral triangle and the angle bisector now divide a segment. The midpoint is found by intersecting constructed lines, then proved by comparing two triangles.",
+    statement: {
+      grc: "Τὴν δοθεῖσαν εὐθεῖαν πεπερασμένην δίχα τεμεῖν.",
+      lat: "Datam rectam terminatam in duas partes aequales diuidere.",
+      en: "Divide a given finite straight line into two equal parts.",
+      greekPages: [30],
+      latinPages: [31],
+    },
+    steps: [
+      {
+        title: "Take the finite segment to be divided",
+        phase: "Given",
+        reason: "given",
+        grc: "Ἔστω ἡ δοθεῖσα εὐθεῖα πεπερασμένη ἡ ΑΒ· δεῖ δὴ τὴν ΑΒ εὐθεῖαν πεπερασμένην δίχα τεμεῖν.",
+        lat: "Sit data recta terminata ΑΒ. oportet igitur rectam terminatam ΑΒ in duas partes aequales diuidere.",
+        en: "Let ΑΒ be the given finite straight line. It is to be divided into two equal parts.",
+        greekPages: [30],
+        latinPages: [31],
+        language:
+          "πεπερασμένη / terminata identifies a bounded segment. A midpoint belongs to that finite length; it is not the middle of an infinite supporting line. Compare postulate 2, which starts from a finite line and extends it.",
+      },
+      {
+        title: "Construct the equilateral triangle on it",
+        phase: "Construct",
+        reason: "i1ForMidpoint",
+        grc: "Συνεστάτω ἐπ’ αὐτῆς τρίγωνον ἰσόπλευρον τὸ ΑΒΓ,",
+        lat: "construatur in ea triangulus aequilaterus ΑΒΓ,",
+        en: "Construct the equilateral triangle ΑΒΓ on ΑΒ.",
+        greekPages: [30],
+        latinPages: [31],
+        language:
+          "αὐτῆς / ea refers back to the given segment. The new construction does not introduce another arbitrary base. I.1 has already established how to make this triangle.",
+      },
+      {
+        title: "Bisect the angle at Γ",
+        phase: "Construct",
+        reason: "i9",
+        grc: "καὶ τετμήσθω ἡ ὑπὸ ΑΓΒ γωνία δίχα τῇ ΓΔ εὐθείᾳ·",
+        lat: "et angulus ΑΓΒ recta ΓΔ in duas partes aequales diuidatur.",
+        en: "Bisect angle ΑΓΒ with the straight line ΓΔ.",
+        greekPages: [30],
+        latinPages: [31],
+        language:
+          "τετμήσθω is the requested division: ‘let it have been cut’. The dative τῇ ΓΔ εὐθείᾳ names the dividing line; Latin recta ΓΔ is ablative. Δ lies where that line meets the given base in the figure.",
+      },
+      {
+        title: "State the proposed midpoint",
+        phase: "Prove",
+        reason: "given",
+        grc: "λέγω, ὅτι ἡ ΑΒ εὐθεῖα δίχα τέτμηται κατὰ τὸ Δ σημεῖον.",
+        lat: "dico, rectam ΑΒ in puncto Δ in duas partes aequales diuisam esse.",
+        en: "I claim that Δ divides ΑΒ into two equal parts.",
+        greekPages: [30],
+        latinPages: [31],
+        language:
+          "κατὰ τὸ Δ σημεῖον / in puncto Δ locates the division at a point. The source distinguishes this claim from the construction of ΓΔ: the equality of ΑΔ and ΒΔ remains to be proved.",
+      },
+      {
+        title: "Identify the equal sides around Γ",
+        phase: "Prove",
+        reason: "midpointPairs",
+        grc: "Ἐπεὶ γὰρ ἴση ἐστὶν ἡ ΑΓ τῇ ΓΒ, κοινὴ δὲ ἡ ΓΔ, δύο δὴ αἱ ΑΓ, ΓΔ δύο ταῖς ΒΓ, ΓΔ ἴσαι εἰσὶν ἑκατέρα ἑκατέρᾳ·",
+        lat: "nam cum ΑΓ = ΓΒ, et ΓΔ communis sit, duae rectae ΑΓ, ΓΔ duabus ΒΓ, ΓΔ aequales sunt altera alteri;",
+        en: "ΑΓ equals ΓΒ, and ΓΔ is common. Thus ΑΓ and ΓΔ equal ΒΓ and ΓΔ respectively.",
+        greekPages: [30],
+        latinPages: [31],
+        language:
+          "ἑκατέρα ἑκατέρᾳ / altera alteri again means ‘each to each’, in the stated order. One pair comes from the equilateral triangle; the second is the same segment ΓΔ used twice.",
+      },
+      {
+        title: "Use the angle equality just constructed",
+        phase: "Prove",
+        reason: "bisectedAngle",
+        grc: "καὶ γωνία ἡ ὑπὸ ΑΓΔ γωνίᾳ τῇ ὑπὸ ΒΓΔ ἴση ἐστίν·",
+        lat: "et ∠ ΑΓΔ = ΒΓΔ.",
+        en: "And the angles ΑΓΔ and ΒΓΔ are equal.",
+        greekPages: [30],
+        latinPages: [31],
+        language:
+          "Γ is the middle letter of both angle names, identifying the common vertex. These are the two parts of the angle bisected by I.9, not the angles at the proposed midpoint Δ.",
+      },
+      {
+        title: "Conclude that the two base parts are equal",
+        phase: "Prove",
+        reason: "sasMidpoint",
+        grc: "βάσις ἄρα ἡ ΑΔ βάσει τῇ ΒΔ ἴση ἐστίν.",
+        lat: "quare ΑΔ = ΒΔ.",
+        en: "Therefore base ΑΔ equals base ΒΔ.",
+        greekPages: [30],
+        latinPages: [31],
+        language:
+          "ἄρα / quare draws the conclusion from I.4’s two sides and included angle. ΑΔ and ΒΔ are called bases of the smaller compared triangles; they together make the original given segment.",
+      },
+      {
+        title: "The finite line has been bisected",
+        phase: "Conclude",
+        reason: "finish",
+        grc: "Ἡ ἄρα δοθεῖσα εὐθεῖα πεπερασμένη ἡ ΑΒ δίχα τέτμηται κατὰ τὸ Δ· ὅπερ ἔδει ποιῆσαι.",
+        lat: "Ergo data recta terminata ΑΒ in puncto Δ in duas partes aequales diuisa est; quod oportebat fieri.",
+        en: "The given finite line ΑΒ has therefore been divided into equal halves at Δ. The requested construction is complete.",
+        greekPages: [30],
+        latinPages: [31],
+        language:
+          "δίχα τέτμηται / in duas partes aequales diuisa est repeats the task as a completed result. The same language concluded the division of an angle in I.9; the object divided is now a segment.",
+      },
+    ],
+    insight: {
+      title: "Two circles do more work than they first seem to",
+      text: "The two circles used for I.1 have a second intersection. When I.9 is applied at Γ, the already equal segments ΓΑ and ΓΒ let Α and Β serve as its two chosen points. The second crossing completes the needed equilateral triangle without drawing new circles. Joining the two crossings gives the line whose intersection with ΑΒ is Δ. The auxiliary label Ζ₉ identifies the point’s role in I.9; it is not a label added to the source text of I.10.",
+      link: "https://mathcs.clarku.edu/~djoyce/elements/bookI/propI10.html",
+    },
+    question: {
+      prompt: "Why is Δ the midpoint, beyond where it appears in the drawing?",
+      options: [
+        "Every line from an equilateral triangle’s vertex bisects its base",
+        "I.4 makes ΑΔ and ΒΔ equal from the constructed sides and included angles",
+        "The coordinate system defines Δ as the average of Α and Β",
+      ],
+      correct: 1,
+      explanations: [
+        "An arbitrary line from Γ need not meet the base at its midpoint. The angle bisection is essential.",
+        "Yes. The two equilateral sides, common ΓΔ and equal half-angles supply I.4’s hypotheses, which give the equal base parts.",
+        "The model intersects a constructed bisector with ΑΒ. Agreement with the arithmetic midpoint is an independent check, not how Δ is assigned.",
+      ],
+    },
+  },
+};

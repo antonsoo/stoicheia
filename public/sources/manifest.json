@@ -14,9 +14,9 @@
     "bytes": 20890632,
     "sha256": "da285c581c2dda86e2b25e20db3ce604bf6fb8765228fcd71cfc89d47a9d1c17"
   },
-  "rendering": "pdftoppm -f 18 -l 39 -scale-to 1550 -jpeg -jpegopt quality=88 INPUT.pdf page",
+  "rendering": "pdftoppm -f 18 -l 45 -scale-to 1550 -jpeg -jpegopt quality=88 INPUT.pdf page",
   "transcription": {
-    "scope": "Full proposition statements and proofs I.1–6; definitions 15, 16, 20; all five postulates; the five common notions in the usual modern list (Heiberg 1, 2, 3, 7, 8). Critical apparatus and other text are not transcribed.",
+    "scope": "Full proposition statements and proofs I.1–10; definitions 15, 16, 20; all five postulates; the five common notions in the usual modern list (Heiberg 1, 2, 3, 7, 8). Critical apparatus and other text are not transcribed.",
     "normalizations": [
       "Printed ϑ normalized to θ.",
       "Consistent Unicode Greek letters for all geometric labels, including letters that resemble Latin glyphs.",
@@ -24,8 +24,8 @@
       "Inline editorial reference marks in the Latin omitted; reasons are separately identified teaching annotations.",
       "Greek punctuation represented with modern Unicode punctuation.",
       "Latin lowercase sentence openings and u/v spelling retained.",
-      "Heiberg’s square brackets in I.1’s repeated conclusion and I.4’s [ταῖς] retained.",
-      "Printed Latin angle and triangle symbols represented by Unicode ∠ and △; equations use =.",
+      "Heiberg’s square brackets in I.1’s repeated conclusion and I.4/I.8’s [ταῖς] retained.",
+      "Printed Latin angle and triangle symbols represented by Unicode ∠ and △; equations and inequalities use = and >.",
       "Greek editorial brackets in definitions 15 and common notion 8 retained; facing Latin omissions preserved."
     ],
     "english": "New reading translation. Explicit intersection descriptions and other explanatory expansions are teaching aids.",
@@ -230,6 +230,60 @@
       "file": "heiberg-025.jpg",
       "bytes": 293436,
       "sha256": "dcc612163f25b70db7f0cd45536506bbe4fe8fad1c93a692f3d2700e0e8747ed"
+    },
+    {
+      "printed_page": 26,
+      "pdf_page": 40,
+      "archive_leaf": 40,
+      "language": "grc",
+      "file": "heiberg-026.jpg",
+      "bytes": 293850,
+      "sha256": "e8e28946e679e899e2269397536f70cadda8bd139e2903be9ba472ecc1d31051"
+    },
+    {
+      "printed_page": 27,
+      "pdf_page": 41,
+      "archive_leaf": 41,
+      "language": "la",
+      "file": "heiberg-027.jpg",
+      "bytes": 273902,
+      "sha256": "451b57f13004a6d271d1e06a74e05b4d38e9bb06f5ad89b8d02a628d2f669139"
+    },
+    {
+      "printed_page": 28,
+      "pdf_page": 42,
+      "archive_leaf": 42,
+      "language": "grc",
+      "file": "heiberg-028.jpg",
+      "bytes": 296351,
+      "sha256": "76f2906d1259b6dcffecee73d1519f133d58790e051c5759780526ad65fc827c"
+    },
+    {
+      "printed_page": 29,
+      "pdf_page": 43,
+      "archive_leaf": 43,
+      "language": "la",
+      "file": "heiberg-029.jpg",
+      "bytes": 292126,
+      "sha256": "ef2054064c3b605004d0046476eadfeecb35f30ccefa0ede16dbaec135dc88be"
+    },
+    {
+      "printed_page": 30,
+      "pdf_page": 44,
+      "archive_leaf": 44,
+      "language": "grc",
+      "file": "heiberg-030.jpg",
+      "bytes": 268412,
+      "sha256": "c28d31907a99fe1b0e0556cb3e284b30418aed66cfa991a8d235409f356cc0bd"
+    },
+    {
+      "printed_page": 31,
+      "pdf_page": 45,
+      "archive_leaf": 45,
+      "language": "la",
+      "file": "heiberg-031.jpg",
+      "bytes": 235508,
+      "sha256": "78c48ad097ea261328c143863dc9febeadc3070b60a1bfec288b2d6e55caf931"
     }
   ]
 }

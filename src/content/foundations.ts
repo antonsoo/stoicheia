@@ -99,7 +99,7 @@ export const foundations: Foundation[] = [
     greekPages: [8],
     latinPages: [9],
     note: "πάσας / omnes means ‘all’. Greek εἶναι and Latin esse are infinitives, continuing the opening request rather than issuing a new drawing command.",
-    use: "Included to show the complete set of five postulates. The first six propositions do not explicitly invoke this postulate.",
+    use: "Included to show the complete set of five postulates. The first ten propositions do not explicitly invoke this postulate.",
   },
   {
     id: "p5",
@@ -112,7 +112,7 @@ export const foundations: Foundation[] = [
     greekPages: [8],
     latinPages: [9],
     note: "ἐὰν … ποιῇ gives the condition (‘if … makes’); συμπίπτειν gives the requested consequence (‘to meet’). ‘Together’ in the English makes the angle-sum condition explicit. The Greek and Latin are retained as printed.",
-    use: "Included for the complete postulate list. It is not needed in I.1–6. The sum of the two angles, not each angle separately, is compared with two right angles.",
+    use: "Included for the complete postulate list. It is not needed in I.1–10. The sum of the two angles, not each angle separately, is compared with two right angles.",
   },
   {
     id: "cn1",
@@ -197,4 +197,9 @@ export const reasonFoundations: Record<string, string[]> = {
   subtractLengths: ["cn3"],
   subtractAngles: ["cn3"],
   wholePart: ["cn5"],
+  anglePart: ["cn5"],
+  angleOrder: ["cn5"],
+  sssCoincidence: ["cn4"],
+  equilateralBase: ["d20"],
+  midpointPairs: ["d20"],
 };

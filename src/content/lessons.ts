@@ -1,5 +1,7 @@
 import type { PropositionId } from "../core/state";
+import { bisectionLessons, bisectionReasons } from "./halves";
 import { triangleLessons, triangleReasons } from "./triangles";
+import { uniquenessLessons, uniquenessReasons } from "./uniqueness";
 
 export interface Reason {
   title: string;
@@ -10,6 +12,8 @@ export interface Reason {
 
 export const reasons: Record<string, Reason> = {
   ...triangleReasons,
+  ...uniquenessReasons,
+  ...bisectionReasons,
   given: {
     title: "The task and its given objects",
     text: "A given object is part of the problem. It has not been constructed by this proof. A finite straight line here means a line segment.",
@@ -114,6 +118,8 @@ export interface Lesson {
 
 export const lessons: Record<PropositionId, Lesson> = {
   ...triangleLessons,
+  ...uniquenessLessons,
+  ...bisectionLessons,
   1: {
     id: 1,
     numeral: "I.1",

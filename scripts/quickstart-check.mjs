@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { writeFile } from "node:fs/promises";
 import { chromium, firefox } from "playwright";
+import { openLesson } from "./navigation.mjs";
 
 const url = process.argv[2] ?? "http://127.0.0.1:4327/stoicheia/";
 const report = { scope: "Documented development quickstart", configurations: [] };
@@ -31,7 +32,7 @@ for (const [name, engine] of [
     assert.equal(rendered.ink, "rgb(25, 61, 96)");
     assert.equal(rendered.fontLoaded, true);
     assert.equal(rendered.mode, "Development preview");
-    await page.locator('.lesson-tab[data-lesson="2"]').click();
+    await openLesson(page, 2);
     await page.locator("#next").click();
     assert.equal(await page.locator("#step-position").textContent(), "Step 2 of 11");
     assert.deepEqual(errors, []);

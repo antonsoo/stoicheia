@@ -186,7 +186,7 @@ main {
 }
 .lesson-nav {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   border-block: 1px solid var(--rule);
 }
 .lesson-tab {
@@ -2054,5 +2054,60 @@ dialog::backdrop {
   }
   .practice-controls button {
     font-size: 0.78rem;
+  }
+}
+
+.lesson-picker {
+  display: none;
+}
+.lesson-tab {
+  gap: 10px;
+  padding: 16px 14px;
+  font-size: 0.8rem;
+}
+.lesson-tab:nth-child(5n) {
+  border-right: 0;
+}
+.lesson-tab:nth-child(n + 6) {
+  border-top: 1px solid var(--rule);
+}
+.lesson-picker select,
+.motion-control select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin-top: 8px;
+  padding: 10px;
+  color: var(--ink);
+  background: var(--folio);
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  font: inherit;
+}
+.motion-control label {
+  font-size: 0.82rem;
+}
+#probe-control {
+  margin-top: 16px;
+}
+@media (max-width: 1200px) {
+  .lesson-tab .tab-greek {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .lesson-nav {
+    display: none;
+  }
+  .lesson-picker {
+    display: block;
+    border-block: 1px solid var(--rule);
+    padding: 12px 0 15px;
+    font-size: 0.85rem;
+  }
+}
+@media print {
+  .lesson-picker {
+    display: none;
   }
 }

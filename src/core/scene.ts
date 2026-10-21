@@ -1,3 +1,4 @@
+import { bisectionScene } from "./bisection-scene";
 import type { Point } from "./geometry";
 import { add, cutOff, distance, equilateral, scale, subtract, transfer } from "./geometry";
 import type { ReaderState } from "./state";
@@ -63,6 +64,7 @@ const polar = (r: number, degrees: number): Point => ({
 });
 
 export function makeScene(state: ReaderState): Scene {
+  if (state.proposition >= 7) return bisectionScene(state);
   if (state.proposition >= 4) return triangleScene(state);
   const { proposition, step, size: s, ratio, side } = state;
   const r = s * ratio;
