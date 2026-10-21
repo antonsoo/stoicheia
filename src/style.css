@@ -741,51 +741,6 @@ input[type="range"] {
 #question-feedback.try-feedback {
   border-color: var(--accent);
 }
-.reading-trail {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-  padding: 28px 0;
-  border-top: 1px solid var(--rule);
-}
-.reading-trail .eyebrow {
-  margin: 0 0 3px;
-}
-.reading-trail p:not(.eyebrow) {
-  font-size: 0.76rem;
-  color: var(--muted);
-  margin: 0;
-}
-.trail-links {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.trail-links > span {
-  color: var(--muted);
-}
-.trail-links button {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-  text-align: left;
-  padding: 8px 0;
-}
-.trail-links button b {
-  font-family: "Noto Serif", Georgia, serif;
-  font-size: 1.15rem;
-  font-weight: 400;
-}
-.trail-links button span {
-  font-size: 0.72rem;
-}
-.trail-links button[aria-current="page"] b {
-  color: var(--accent);
-  text-decoration: underline;
-  text-underline-offset: 6px;
-}
 .full-reading,
 .wordbook {
   border-top: 1px solid var(--rule);
@@ -1197,15 +1152,6 @@ dialog::backdrop {
     flex-wrap: wrap;
     gap: 3px;
   }
-  .reading-trail {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .trail-links {
-    justify-content: space-between;
-    width: 100%;
-  }
   .footer {
     flex-wrap: wrap;
   }
@@ -1407,17 +1353,6 @@ dialog::backdrop {
     line-height: 1.6;
     padding: 12px 0;
   }
-  .reading-trail {
-    padding: 25px 3px;
-    gap: 20px;
-  }
-  .trail-links {
-    gap: 10px;
-  }
-  .trail-links button span {
-    font-size: 0.65rem;
-    max-width: 90px;
-  }
   .full-reading > summary,
   .wordbook > summary {
     font-size: 1.1rem;
@@ -1528,7 +1463,11 @@ dialog::backdrop {
   .lesson-heading,
   .construction,
   .understanding,
-  .reading-trail,
+  .reader-tools,
+  .course-map,
+  .reading-mode,
+  .reveal-translations,
+  .phone-reader-jump,
   .wordbook,
   .source-note,
   .footer,
@@ -1536,11 +1475,9 @@ dialog::backdrop {
   dialog,
   .full-reading > summary,
   .full-step-heading,
-  .source-button {
-    display: none !important;
-  }
+  .source-button,
   .workbench {
-    display: none;
+    display: none !important;
   }
   main {
     padding: 0;
@@ -1779,5 +1716,315 @@ dialog::backdrop {
   }
   .lesson-tab:nth-child(-n + 4) {
     border-bottom: 1px solid var(--rule);
+  }
+}
+.reader-tools {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 14px;
+}
+.reader-tools button,
+.foundation-link {
+  font-size: 0.82rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  min-height: 44px;
+  text-align: left;
+}
+.foundation-link {
+  display: block;
+  margin-top: 12px;
+}
+.foundation-dialog {
+  width: min(1080px, calc(100vw - 48px));
+  max-width: none;
+  max-height: calc(100dvh - 48px);
+  padding: 0;
+  background: #fbfcfe;
+  color: #193d60;
+  border: 1px solid #879db1;
+}
+.foundation-dialog > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 28px;
+  border-bottom: 1px solid #b7c8d6;
+}
+.foundation-dialog header h2 {
+  margin-bottom: 0;
+  font-family: "Noto Serif", Georgia, serif;
+}
+.foundation-dialog header .eyebrow {
+  margin-bottom: 6px;
+}
+.foundation-dialog .dialog-close {
+  position: static;
+  flex-shrink: 0;
+}
+.foundation-layout {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  max-height: calc(100dvh - 175px);
+}
+.foundation-nav {
+  overflow-y: auto;
+  border-right: 1px solid #b7c8d6;
+  padding: 20px 12px;
+}
+.foundation-nav h3 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 18px 10px 6px;
+}
+.foundation-nav h3:first-child {
+  margin-top: 0;
+}
+.foundation-nav button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 12px 10px;
+  font-size: 0.84rem;
+  line-height: 1.4;
+}
+.foundation-nav button[aria-current="true"] {
+  background: #193d60;
+  color: white;
+}
+.foundation-reading {
+  overflow-y: auto;
+  padding: 26px;
+}
+.foundation-reading .translation {
+  margin: 0 0 22px;
+}
+.foundation-explanation {
+  border-top: 1px solid #b7c8d6;
+  padding-top: 18px;
+  font-size: 0.87rem;
+}
+.foundation-explanation h3 {
+  font-size: 0.85rem;
+  font-weight: 650;
+  margin-bottom: 6px;
+}
+.foundation-picker {
+  display: none;
+}
+@media (max-width: 700px) {
+  .reader-tools {
+    justify-content: flex-start;
+  }
+  .reader-tools button {
+    font-size: 0.78rem;
+  }
+  .foundation-dialog {
+    width: calc(100vw - 16px);
+    max-height: calc(100dvh - 16px);
+  }
+  .foundation-dialog > header {
+    padding: 16px;
+  }
+  .foundation-dialog header h2 {
+    font-size: 1.2rem;
+  }
+  .foundation-layout {
+    display: block;
+    max-height: calc(100dvh - 132px);
+    overflow-y: auto;
+  }
+  .foundation-nav {
+    display: none;
+  }
+  .foundation-reading {
+    padding: 18px;
+    overflow: visible;
+  }
+  .foundation-picker {
+    display: grid;
+    gap: 8px;
+    font-size: 0.8rem;
+    margin-bottom: 22px;
+  }
+  .foundation-picker select {
+    max-width: 100%;
+    width: 100%;
+    min-height: 44px;
+    border: 1px solid #879db1;
+    padding: 8px;
+    color: #193d60;
+    background: white;
+    font: inherit;
+  }
+}
+.reader-tools {
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.reading-mode {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.78rem;
+  color: #52677b;
+  margin: 20px 0;
+}
+.reading-mode select {
+  min-height: 36px;
+  border: 1px solid #879db1;
+  background: #fbfcfe;
+  color: #193d60;
+  padding: 6px;
+  font: inherit;
+  max-width: 100%;
+}
+.reveal-translations {
+  padding: 12px 16px;
+  border: 1px solid #879db1;
+  text-align: left;
+  margin-bottom: 24px;
+  min-height: 44px;
+}
+.practice-dialog {
+  width: min(780px, calc(100vw - 48px));
+  max-width: none;
+  padding: 0;
+  max-height: calc(100dvh - 48px);
+  color: #193d60;
+  background: #fbfcfe;
+  border: 1px solid #879db1;
+}
+.practice-dialog > header {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 24px 28px;
+  border-bottom: 1px solid #b7c8d6;
+}
+.practice-dialog header h2 {
+  margin: 0;
+  font-family: "Noto Serif", Georgia, serif;
+  font-size: 1.3rem;
+}
+.practice-dialog .dialog-close {
+  position: static;
+  flex-shrink: 0;
+}
+.practice-body {
+  padding: 24px 28px;
+  max-height: calc(100dvh - 300px);
+  overflow-y: auto;
+}
+.practice-intro {
+  font-size: 0.83rem;
+  color: #52677b;
+}
+#practice-source {
+  border-block: 1px solid #b7c8d6;
+  padding: 18px 0;
+  margin: 20px 0;
+}
+#practice-source p {
+  font:
+    1.2rem / 1.8 "Noto Serif",
+    Georgia,
+    serif;
+  margin: 12px 0 0;
+}
+#practice-source mark {
+  background: #e4d8ef;
+  color: #193d60;
+  padding: 2px 0;
+}
+#practice-options {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+#practice-options label {
+  display: flex;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #b7c8d6;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+#practice-options input {
+  accent-color: #694780;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+#practice-feedback {
+  font-size: 0.9rem;
+  margin-top: 18px;
+}
+#practice-translation {
+  background: #e8eff4;
+  padding: 16px;
+  margin: 18px 0;
+  font-size: 0.9rem;
+}
+#practice-translation h3 {
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+#practice-plate {
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 0.85rem;
+}
+.practice-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid #b7c8d6;
+  padding: 16px 24px;
+}
+.practice-controls button {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #879db1;
+  font-size: 0.85rem;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+@media (max-width: 700px) {
+  .reader-tools {
+    gap: 0;
+  }
+  .reading-mode {
+    flex-wrap: wrap;
+  }
+  .practice-dialog {
+    width: calc(100vw - 16px);
+    max-height: calc(100dvh - 16px);
+  }
+  .practice-dialog > header,
+  .practice-body {
+    padding: 18px;
+  }
+  .practice-dialog header h2 {
+    font-size: 1.1rem;
+  }
+  .practice-body {
+    max-height: calc(100dvh - 280px);
+  }
+  .practice-controls {
+    padding: 12px;
+    gap: 8px;
+  }
+  .practice-controls button {
+    font-size: 0.78rem;
   }
 }

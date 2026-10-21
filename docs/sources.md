@@ -17,11 +17,14 @@ a new reading translation for this workbench.
 | I.1         | 10, 12              | 11, 13              |
 | I.2         | 12, 14              | 13, 15              |
 | I.3         | 14, 16              | 15, 17              |
+| I.4         | 16, 18              | 17, 19              |
+| I.5         | 20, 22              | 21, 23              |
+| I.6         | 22, 24              | 23, 25              |
 
-Bundled JPEGs are full-page renders of PDF pages 24–39 using Poppler's
+Bundled JPEGs are full-page renders of PDF pages 18–39 using Poppler's
 `pdftoppm`, maximum dimension 1550 px and JPEG quality 88. They include material
-outside I.1–6 (common notions, critical notes, and the start of I.7); that material
-is not transcribed in the reader. See [the manifest](../public/sources/manifest.json)
+outside I.1–6 and the selected foundations (other definitions, critical notes,
+and the start of I.7). The reader transcribes only its named selections. See [the manifest](../public/sources/manifest.json)
 for the download URL, source PDF hash, page mapping and JPEG hashes.
 
 Changes from print:
@@ -76,7 +79,7 @@ The continued course uses these facing pages from the same volume:
 | I.5         | 20, 22              | 21, 23              |
 | I.6         | 22, 24              | 23, 25              |
 
-All sixteen printed pages 10–25 are bundled (PDF pages 24–39). The additional
+The propositions use printed pages 10–25 (PDF pages 24–39). The additional
 pages were visually inspected, including their point labels and the different
 Greek/Latin page breaks. The start of I.7 remains visible on pp. 24–25 but is not
 part of the reader. The I.4 `[ταῖς]` brackets are retained both in the statement
@@ -116,3 +119,24 @@ Further mathematical commentary:
 [I.4](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI4.html),
 [I.5](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI5.html),
 [I.6](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI6.html).
+
+## Inspectable starting permissions
+
+The foundations reader includes definitions 15, 16 and 20, all five postulates,
+and the five usual common notions (Heiberg’s 1, 2, 3, 7 and 8), each with Greek,
+Heiberg Latin, a new English reading, and a contextual note. Printed pp. 4–9 are
+now bundled as well, giving twenty-two full pages in total (PDF pages 18–39).
+Definition 15’s bracketed Greek clauses and common notion 8’s `[ἐστιν]` are kept;
+the corresponding Latin omissions are preserved.
+
+The right edge of the Toronto scan’s p. 6 is cropped. Definition 20’s Greek was
+cross-checked against the quotation of the definition in T. L. Heath’s 1925
+commentary, pp. 187–188, as transcribed by David R. Wilkins at
+[Trinity College Dublin](https://www.maths.tcd.ie/~dwilkins/Euclid/Euclid_HeathCommentaries/EuclidElements_HeathCommentary_ElementsBk01Def19_DraftTranscription.pdf).
+The missing margin is not presented as visible evidence. That cross-check and
+the scan defect are disclosed in the foundation entry and source manifest.
+
+The Greek on p. 10 includes bracketed common notions 4–6 and 9 which the facing
+Latin does not translate. The foundations list does not invent Latin for those
+entries. I.4 retains its own main-text two-line enclosure argument, in which the
+printed Latin does give the corresponding argument.

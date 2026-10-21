@@ -22,3 +22,15 @@
 - Correct the I.3 shared-reference-endpoint case used by I.5.
 - Independently check triangle invariants, correspondences and contradiction
   sketches with cosine-law angles and shoelace areas.
+
+## Foundations and reading practice · 2026-10-21
+
+- Thirteen definitions, postulates and common notions in all three languages,
+  linked directly from the reasons that use them. Preserve Heiberg’s numbering,
+  editorial brackets and omissions; disclose the cropped source margin on p. 6.
+- Six additional source scans, making twenty-two pages available offline.
+- Greek-first and Latin-first reading with translations revealed on demand.
+- Twelve passage exercises with explanations of each interpretation and direct
+  return to the corresponding proof step.
+- Standalone study sheets now include each step’s reason and the relevant
+  foundation texts, so the argument can be followed away from the app.

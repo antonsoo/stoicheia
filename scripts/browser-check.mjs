@@ -8,6 +8,7 @@ import { join, relative } from "node:path";
 import { pathToFileURL } from "node:url";
 import AxeBuilder from "@axe-core/playwright";
 import { chromium, firefox } from "playwright";
+import { verifyLearning } from "./learning-workflows.mjs";
 
 const url = process.argv[2] ?? "http://127.0.0.1:4327/stoicheia/";
 // Cut access below the browser when checking offline behaviour. Request routing
@@ -202,7 +203,7 @@ try {
 
         // Verify original printed pages, including zoom/pan and keyboard dismissal.
         await page.locator("#open-edition").click();
-        for (let printedPage = 10; printedPage <= 25; printedPage++) {
+        for (let printedPage = 4; printedPage <= 25; printedPage++) {
           await page.waitForFunction(() => {
             const image = document.querySelector("#source-image");
             return image.complete && image.naturalWidth > 0;
@@ -231,6 +232,7 @@ try {
         await accessible(page, "source dialog", audits);
         await page.keyboard.press("Escape");
 
+        await verifyLearning(page, viewport, accessible, audits);
         await page.locator('.lesson-tab[data-lesson="3"]').click();
         await page.locator('#step-list [data-step="4"]').click();
         // Native keyboard range changes must update the picture and the shared state.
@@ -443,6 +445,9 @@ try {
         }
         await page.locator('.lesson-tab[data-lesson="5"]').click();
         await page.locator('#step-list [data-step="8"]').click();
+        await page.locator('#reason [data-foundation="cn3"]').click();
+        assert.match(await page.locator("#foundation-content").innerText(), /subtrahuntur/);
+        await page.keyboard.press("Escape");
         assert.match(
           await page.locator(".comparison-table caption").innerText(),
           /Subtract equal parts/,
@@ -479,13 +484,13 @@ try {
         console.log(`  ${name}: offline reader passed; reopening exports`);
         const saved = await context.newPage();
         await saved.goto(pathToFileURL(sheetPath).href);
-        assert.equal(await saved.locator(".passage").count(), 11);
+        assert.equal(await saved.locator(".lesson-passage").count(), 11);
         assert.equal(await saved.locator("script").count(), 0);
         assert.ok((await saved.locator("[lang=grc]").count()) >= 11);
         await noOverflow(saved);
         await accessible(saved, "standalone study sheet", audits);
         await saved.goto(pathToFileURL(contradictionPath).href);
-        assert.equal(await saved.locator(".passage").count(), 7);
+        assert.equal(await saved.locator(".lesson-passage").count(), 7);
         assert.match(
           await saved.locator("aside").innerText(),
           /no Euclidean triangle satisfies both/,

@@ -13,7 +13,8 @@ read the two source languages, and ask what established the equality.
 
 The opening course is **Book I, propositions 1–6**. It includes the complete
 statements and proofs, divided into 52 aligned reading steps, with 31 selected
-vocabulary entries. It is intended for an English-speaking reader who knows basic
+vocabulary entries, thirteen foundation statements and twelve passage-based
+reading exercises. It is intended for an English-speaking reader who knows basic
 geometry and is beginning Greek or Latin.
 
 This is a local, unpublished source checkout. The intended repository is
@@ -50,6 +51,12 @@ on the same port; stop the development server before starting the preview.
 - Select underlined Greek or Latin words for a lemma, equivalent, transliteration
   and explanation of the forms. The reading notes explain selected syntax in
   context, including the difference between commands and completed results.
+- Read Greek-first or Latin-first and reveal the other languages when ready.
+  Twelve exercises ask about the wording of actual passages, explain each
+  interpretation, and return you to the corresponding step.
+- Open a reason’s source to compare the definition, postulate or common notion
+  in all three languages. The reader distinguishes Heiberg’s numbering from the
+  usual five-item common-notion list.
 - Change the given lengths with keyboard-accessible sliders. Flip the triangle,
   or change the reference angle in I.2. In I.3, a reference of 100% or more fails
   the stated hypothesis and withholds the constructed cut.
@@ -58,11 +65,11 @@ on the same port; stop the development server before starting the preview.
   whole-angle / removed-part / remainder table. I.6 keeps its temporary
   supposition visibly separate from the original given, including in downloads.
 - Open the printed page for either language, zoom it and pan with the keyboard.
-  All sixteen source pages are bundled. The full aligned passage is available below
+  All twenty-two source pages are bundled. The full aligned passage is available below
   the plate, with links back to individual steps.
 - Share the current proposition, step and parameters in a URL fragment. Save the
   current diagram as SVG or the entire lesson as a standalone HTML study sheet.
-  The downloaded sheet contains the diagram, all three languages, notes and
+  The downloaded sheet contains the diagram, all three languages, reasons, relevant foundation statements, notes and
   attribution, and opens without scripts or network access.
 - The production edition precaches its text, diagrams, font and source pages.
   Wait for “Edition ready offline” before disconnecting. Offline reloads require
@@ -77,7 +84,7 @@ working example, alongside [I.6’s contradiction sheet](examples/stoicheia-I6-s
 ## The source is part of the lesson
 
 The Greek and Latin are transcribed from J. L. Heiberg’s _Euclidis opera omnia_,
-volume I (Leipzig: Teubner, 1883), printed pp. 10–25. Heiberg’s Latin is a
+volume I (Leipzig: Teubner, 1883), printed pp. 4–25. Heiberg’s Latin is a
 **nineteenth-century translation**, not an ancient Latin text. The English is a
 new reading translation; explanations sometimes make an implied intersection
 explicit. Point names remain Greek throughout.
@@ -86,14 +93,17 @@ The [University of Toronto scan](https://archive.org/details/euclidisoperaomn01e
 is public domain. The page images and download hashes are recorded in
 [`public/sources/manifest.json`](public/sources/manifest.json). The
 [editorial note](docs/sources.md) records normalized glyphs, omitted reference
-marks, the retained brackets in I.1 and how the source diagrams differ from the
+marks, the retained editorial brackets, the clipped margin on p. 6 and how the source diagrams differ from the
 working plates. Critical apparatus is visible on the scans but is not transcribed
 into the reader.
 
 Mathematical notes were cross-checked against David E. Joyce’s commentary at
 Clark University: [I.1](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI1.html),
 [I.2](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI2.html),
-[I.3](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI3.html).
+[I.3](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI3.html),
+[I.4](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI4.html),
+[I.5](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI5.html),
+[I.6](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI6.html).
 
 ## How the construction works
 
@@ -186,7 +196,7 @@ through an HTML stylesheet link so Vite development works with the same
 - Numerical constructions use floating-point coordinates in the real plane.
   Independent numerical agreement and sampled browser checks are not formal
   verification of Euclid’s postulates. The I.1 intersection gap and I.4 superposition assumption are explicitly
-  discussed; the app does not claim to repair it.
+  discussed; the app does not claim to derive those assumptions from the postulates.
 - I.2 reuses the completed I.1 subconstruction, and I.3 reuses I.2. Their internal
   working is shown in the corresponding earlier lesson rather than repeated in
   the later plate. Some unused source-circle labels are omitted from the plates.

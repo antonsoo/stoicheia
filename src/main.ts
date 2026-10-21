@@ -1,6 +1,8 @@
+import { foundationById, foundations, reasonFoundations } from "./content/foundations";
 import { glossary } from "./content/glossary";
 import type { Passage } from "./content/lessons";
 import { lessons, reasons } from "./content/lessons";
+import { exercisePassage, readingExercises } from "./content/practice";
 import { parameterControls } from "./controls";
 import { makeScene } from "./core/scene";
 import type { PropositionId } from "./core/state";
@@ -14,7 +16,10 @@ function element<T extends Element = HTMLElement>(selector: string): T {
 }
 
 let state = decodeState(location.hash);
-let sourcePage = 10;
+let sourcePage = 4;
+let practiceIndex = 0;
+let readingMode = "parallel";
+let translationsRevealed = false;
 const app = element("#app");
 
 app.innerHTML = `
@@ -30,6 +35,7 @@ app.innerHTML = `
     <nav class="lesson-nav" aria-label="Propositions">
       ${([1, 2, 3, 4, 5, 6] as const).map((id) => `<button type="button" data-lesson="${id}" class="lesson-tab"><span class="tab-numeral">${lessons[id].numeral}</span><span>${lessons[id].shortTitle}</span><span class="tab-greek" lang="grc">${lessons[id].greekNumeral}</span></button>`).join("")}
     </nav>
+    <div class="reader-tools"><button type="button" data-foundation="p1">Open definitions, postulates &amp; common notions <span aria-hidden="true">↗</span></button><button type="button" id="open-practice">Practice reading the argument <span aria-hidden="true">↗</span></button></div>
     <div class="lesson-heading"><div><p class="eyebrow" id="book-label"></p><h1 id="lesson-title"></h1></div><p id="lesson-introduction"></p></div>
     <section id="workbench" class="workbench" aria-label="Geometric plate and parallel reader" tabindex="-1">
       <div class="construction">
@@ -51,7 +57,7 @@ app.innerHTML = `
       <article class="reader" aria-labelledby="step-title">
         <div class="reader-top"><span class="eyebrow" id="reading-label">Read the command</span><span class="vocabulary-hint">Underlined words open vocabulary</span></div>
         <h2 id="step-title" tabindex="-1"></h2><button type="button" class="phone-reader-jump" id="back-to-plate">Back to the plate ↑</button>
-        <div id="current-passage"></div>
+        <label class="reading-mode" for="reading-mode">Reading mode<select id="reading-mode"><option value="parallel">Three languages together</option><option value="greek">Greek first</option><option value="latin">Latin first</option></select></label><div id="current-passage"></div><button type="button" id="reveal-translations" class="reveal-translations" hidden>Reveal the other languages</button>
         <details class="language-note" open><summary>Read the language</summary><p id="language-note"></p></details>
         <div class="reason" id="reason"></div>
       </article>
@@ -76,9 +82,26 @@ app.innerHTML = `
       .join("")}</tbody></table></details>
     <details class="full-reading" id="full-reading"><summary><span>Read the complete passage</span><span>Greek · Latin · English</span></summary><div id="full-passage"></div></details>
     <details class="wordbook"><summary><span>A small working vocabulary</span><span>Words you meet in these proofs</span></summary><div class="glossary-list">${glossary.map((entry) => `<button type="button" data-gloss="${entry.id}"><span lang="grc">${escapeHtml(entry.greek)}</span><span lang="la">${escapeHtml(entry.latin)}</span><small>${escapeHtml(entry.meaning)}</small></button>`).join("")}</div></details>
-    <section class="source-note" id="source-note"><div><p class="eyebrow">A printed source you can inspect</p><h2>One edition. Two languages.</h2><p>Greek text and Latin translation from J. L. Heiberg’s <cite>Euclidis opera omnia</cite>, volume I (1883), printed pages 10–25. The English and reading notes are new. Point labels stay Greek in all three languages.</p><button type="button" id="open-edition">Open the printed pages</button></div><div class="editorial-note"><h3>What changed in transcription</h3><p>Line breaks and inline reference marks are omitted. Greek ϑ is written θ; point labels use consistent Greek letters. Latin u/v spelling is retained. Square brackets in I.1 and I.4 reproduce Heiberg’s editorial brackets. Angle and triangle symbols are written ∠ and △. The step divisions, geometry orientation, reasons and annotations are teaching aids. The usual five-common-notion numbering is used in the notes; Heiberg’s expanded list is identified where it differs.</p><p>The English sometimes names intersections implied by the Greek. It is a reading translation, not a critical edition. The language notes cover selected forms, not every word.</p><a href="${import.meta.env.BASE_URL}sources/manifest.json">Source and image provenance</a></div></section>
+    <section class="source-note" id="source-note"><div><p class="eyebrow">A printed source you can inspect</p><h2>One edition. Two languages.</h2><p>Greek text and Latin translation from J. L. Heiberg’s <cite>Euclidis opera omnia</cite>, volume I (1883), printed pages 4–25. The English and reading notes are new. Point labels stay Greek in all three languages.</p><button type="button" id="open-edition">Open the printed pages</button></div><div class="editorial-note"><h3>What changed in transcription</h3><p>Line breaks and inline reference marks are omitted. Greek ϑ is written θ; point labels use consistent Greek letters. Latin u/v spelling is retained. Square brackets in the definitions, common notions, I.1 and I.4 reproduce Heiberg’s editorial brackets. Angle and triangle symbols are written ∠ and △. The step divisions, geometry orientation, reasons and annotations are teaching aids. The usual five-common-notion numbering is used in the notes; Heiberg’s expanded list is identified where it differs.</p><p>The English sometimes names intersections implied by the Greek. It is a reading translation, not a critical edition. The language notes cover selected forms, not every word.</p><a href="${import.meta.env.BASE_URL}sources/manifest.json">Source and image provenance</a></div></section>
   </main>
   <footer class="footer"><p>Stoicheia <span lang="grc">/ στοιχεῖα</span> · elements</p><p>Made for slow reading. No account. No tracking.</p><span id="offline-state" role="status">Preparing offline edition…</span></footer>
+  <dialog id="practice-dialog" class="practice-dialog" aria-labelledby="practice-title"><header><div><p class="eyebrow" id="practice-position"></p><h2 id="practice-title" tabindex="-1">Read the argument</h2></div><button type="button" class="dialog-close" data-close="practice-dialog" aria-label="Close reading practice">×</button></header><div class="practice-body"><p class="practice-intro">Read the highlighted wording in its original sentence. Try an interpretation, then compare the explanation.</p><div id="practice-source"></div><form id="practice-form"><fieldset id="practice-options"></fieldset><p id="practice-feedback" role="status" aria-live="polite"></p></form><div id="practice-translation" hidden></div><button type="button" id="practice-plate">Open this passage on the plate</button></div><footer class="practice-controls"><button type="button" id="practice-previous">← Previous reading</button><button type="button" id="practice-next">Next reading →</button></footer></dialog>
+  <dialog id="foundation-dialog" class="foundation-dialog" aria-labelledby="foundation-title"><header><div><p class="eyebrow">The starting permissions</p><h2 id="foundation-title" tabindex="-1">Definitions, postulates &amp; common notions</h2></div><button type="button" class="dialog-close" data-close="foundation-dialog" aria-label="Close foundations">×</button></header><div class="foundation-layout"><nav class="foundation-nav" aria-label="Foundation statements">${(
+    ["Definition", "Postulate", "Common notion"] as const
+  )
+    .map(
+      (category) =>
+        `<h3>${category}s</h3>${foundations
+          .filter((f) => f.category === category)
+          .map(
+            (f) =>
+              `<button type="button" data-foundation="${f.id}">${escapeHtml(f.title)}</button>`,
+          )
+          .join("")}`,
+    )
+    .join(
+      "",
+    )}</nav><div class="foundation-reading"><label class="foundation-picker" for="foundation-select">Choose a statement<select id="foundation-select">${foundations.map((f) => `<option value="${f.id}">${escapeHtml(f.category)} · ${escapeHtml(f.title)}</option>`).join("")}</select></label><div id="foundation-content"></div><button type="button" class="primary" data-close="foundation-dialog">Return to the proof</button></div></div></dialog>
   <dialog id="vocabulary-dialog" class="vocabulary-dialog" aria-labelledby="gloss-title"><button type="button" class="dialog-close" data-close="vocabulary-dialog" aria-label="Close vocabulary">×</button><p class="eyebrow">Working vocabulary</p><div id="gloss-content"></div><button type="button" class="primary" data-close="vocabulary-dialog">Return to the proof</button></dialog>
   <dialog id="source-dialog" class="source-dialog" aria-labelledby="source-title"><header><div><p class="eyebrow">Heiberg · Leipzig, 1883</p><h2 id="source-title"></h2></div><button type="button" id="source-zoom" aria-pressed="false">Zoom page</button><button type="button" class="dialog-close" data-close="source-dialog" aria-label="Close source page">×</button></header><div class="source-navigation"><button type="button" id="source-previous">← Previous page</button><span id="source-language"></span><button type="button" id="source-next">Next page →</button></div><div class="scan-scroll" tabindex="0" role="region" aria-label="Scrollable printed page"><img id="source-image" width="987" height="1550" alt="" /></div><p class="scan-credit">University of Toronto scan · public domain. <a href="https://archive.org/details/euclidisoperaomn01eucluoft" target="_blank" rel="noreferrer">Open the complete volume ↗</a></p></dialog>
   <dialog id="share-dialog" class="share-dialog" aria-labelledby="share-title"><button type="button" class="dialog-close" data-close="share-dialog" aria-label="Close share link">×</button><p class="eyebrow">Continue at the same place</p><h2 id="share-title">Share this step</h2><p>The link keeps the proposition, step and given lengths.</p><label for="share-url">Reader link</label><input id="share-url" type="url" readonly /><button type="button" class="primary" id="copy-link">Copy link</button><p id="copy-status" role="status"></p></dialog>
@@ -116,6 +139,18 @@ function renderDiagram(): void {
   element("#reason").innerHTML = scene.warning
     ? '<p class="eyebrow">Check the hypothesis <span>unmet</span></p><h3>This construction needs a shorter reference</h3><p>I.3 assumes Γ &lt; ΑΒ. Restore that inequality before applying these instructions. An equal or longer Γ does not meet the task as stated.</p>'
     : `<p class="eyebrow">Why this is allowed <span>${escapeHtml(reason?.kind ?? "deduction")}</span></p><h3>${escapeHtml(reason?.title ?? "")}</h3><p>${escapeHtml(reason?.text ?? "")}</p>${reason?.lesson ? `<button type="button" class="reason-link" data-lesson="${reason.lesson}" data-open-result="true">Open ${lessons[reason.lesson].numeral}’s result <span aria-hidden="true">→</span></button>` : ""}`;
+  if (!scene.warning) {
+    const sourceLinks = reasonFoundations[step.reason] ?? [];
+    element("#reason").insertAdjacentHTML(
+      "beforeend",
+      sourceLinks
+        .map(
+          (id) =>
+            `<button type="button" class="foundation-link" data-foundation="${id}">Read the source: ${escapeHtml(foundationById.get(id)?.title ?? "")} <span aria-hidden="true">↗</span></button>`,
+        )
+        .join(""),
+    );
+  }
   element("#diagram").innerHTML = drawScene(
     scene,
     `${lesson.numeral} · ${lesson.steps[state.step]?.title ?? ""}`,
@@ -155,6 +190,14 @@ function renderDiagram(): void {
     `<table><caption>Numerical check <span>measured sketch · relative units / degrees</span></caption><tbody><tr>${scene.measurements.map((measurement) => `<th scope="col">${escapeHtml(measurement.label)}</th>`).join("")}</tr><tr>${scene.measurements.map((measurement) => `<td>${measurement.value.toFixed(2)}</td>`).join("")}</tr></tbody></table>`;
 }
 
+function updateReadingMode(): void {
+  for (const language of ["greek", "latin", "english"])
+    element<HTMLElement>(`#current-passage .${language}`).hidden =
+      readingMode !== "parallel" && !translationsRevealed && readingMode !== language;
+  element("#reveal-translations").hidden = readingMode === "parallel" || translationsRevealed;
+  element<HTMLSelectElement>("#reading-mode").value = readingMode;
+}
+
 function renderStep(): void {
   const lesson = lessons[state.proposition];
   const step = lesson.steps[state.step];
@@ -163,6 +206,8 @@ function renderStep(): void {
   element("#reading-label").textContent =
     step.phase === "Prove" || step.phase === "Conclude" ? "Read the argument" : "Read the command";
   element("#current-passage").innerHTML = parallel(step);
+  translationsRevealed = false;
+  updateReadingMode();
   element("#language-note").textContent = step.language;
   element("#step-position").textContent = `Step ${state.step + 1} of ${lesson.steps.length}`;
   element<HTMLButtonElement>("#previous").disabled = state.step === 0;
@@ -188,11 +233,6 @@ function renderLesson(): void {
       "aria-current",
       Number(button.dataset.lesson) === state.proposition ? "page" : "false",
     );
-  for (const button of document.querySelectorAll<HTMLButtonElement>(".trail-links button"))
-    button.setAttribute(
-      "aria-current",
-      Number(button.dataset.lesson) === state.proposition ? "page" : "false",
-    );
   element("#step-list").innerHTML = lesson.steps
     .map(
       (step, index) =>
@@ -214,7 +254,7 @@ function renderLesson(): void {
   element("#question-feedback").textContent = "";
   element("#question-feedback").className = "";
   element("#full-passage").innerHTML =
-    `<article class="statement"><p class="eyebrow">The proposition</p>${parallel(lesson.statement)}</article>${lesson.steps.map((step, index) => `<article class="full-step"><button type="button" class="full-step-heading" data-step="${index}"><span>${index + 1}</span><span class="full-step-title">${escapeHtml(step.title)}</span><span class="full-open">Open on the plate ↑</span></button>${parallel(step)}</article>`).join("")}`;
+    `<article class="statement" tabindex="-1" aria-label="The proposition"><p class="eyebrow">The proposition</p>${parallel(lesson.statement)}</article>${lesson.steps.map((step, index) => `<article class="full-step"><button type="button" class="full-step-heading" data-step="${index}"><span>${index + 1}</span><span class="full-step-title">${escapeHtml(step.title)}</span><span class="full-open">Open on the plate ↑</span></button>${parallel(step)}</article>`).join("")}`;
   renderStep();
 }
 
@@ -225,18 +265,65 @@ function goTo(proposition: PropositionId, result = false): void {
 }
 
 function showSource(page: number): void {
-  sourcePage = Math.min(25, Math.max(10, page));
+  sourcePage = Math.min(25, Math.max(4, page));
   const greek = sourcePage % 2 === 0;
   element("#source-title").textContent = `Printed page ${sourcePage}`;
   element("#source-language").textContent = greek ? "Greek text" : "Latin translation";
   const img = element<HTMLImageElement>("#source-image");
   img.src = `${import.meta.env.BASE_URL}sources/heiberg-${String(sourcePage).padStart(3, "0")}.jpg`;
   img.alt = `${greek ? "Greek" : "Latin"} page ${sourcePage} of Euclidis opera omnia, volume I, 1883. The page includes printed text and critical notes.`;
-  element<HTMLButtonElement>("#source-previous").disabled = sourcePage === 10;
+  element<HTMLButtonElement>("#source-previous").disabled = sourcePage === 4;
   element<HTMLButtonElement>("#source-next").disabled = sourcePage === 25;
   element(".scan-scroll").scrollTop = 0;
   const dialog = element<HTMLDialogElement>("#source-dialog");
   if (!dialog.open) dialog.showModal();
+}
+
+function showPractice(index: number): void {
+  practiceIndex = Math.min(readingExercises.length - 1, Math.max(0, index));
+  const exercise = readingExercises[practiceIndex];
+  if (!exercise) return;
+  const passage = exercisePassage(exercise);
+  const text = passage[exercise.language];
+  const position = text.indexOf(exercise.focus);
+  const quote =
+    position < 0
+      ? escapeHtml(text)
+      : `${annotated(text.slice(0, position))}<mark>${annotated(exercise.focus)}</mark>${annotated(text.slice(position + exercise.focus.length))}`;
+  const language = exercise.language === "grc" ? "Greek" : "Latin";
+  element("#practice-position").textContent =
+    `Reading ${practiceIndex + 1} of ${readingExercises.length} · I.${exercise.proposition} · ${language}`;
+  element("#practice-title").textContent = exercise.prompt;
+  element("#practice-source").innerHTML =
+    `<div class="translation-label"><h3>${language}</h3>${sourceButtons(exercise.language === "grc" ? passage.greekPages : passage.latinPages, language)}</div><p lang="${exercise.language === "grc" ? "grc" : "la"}">${quote}</p>`;
+  element("#practice-options").innerHTML =
+    `<legend class="sr-only">Choose an interpretation</legend>${exercise.options.map((option, index) => `<label><input type="radio" name="reading-answer" value="${index}" /><span>${escapeHtml(option)}</span></label>`).join("")}`;
+  element("#practice-feedback").textContent = "";
+  element("#practice-feedback").className = "";
+  element("#practice-translation").hidden = true;
+  element("#practice-translation").innerHTML =
+    `<h3>Compare the English reading</h3><p>${escapeHtml(passage.en)}</p>`;
+  element<HTMLButtonElement>("#practice-previous").disabled = practiceIndex === 0;
+  element<HTMLButtonElement>("#practice-next").disabled =
+    practiceIndex === readingExercises.length - 1;
+  const dialog = element<HTMLDialogElement>("#practice-dialog");
+  if (!dialog.open) dialog.showModal();
+  element(".practice-body").scrollTop = 0;
+}
+
+function showFoundation(id: string): void {
+  const entry = foundationById.get(id);
+  if (!entry) return;
+  element("#foundation-title").textContent = entry.title;
+  element("#foundation-content").innerHTML =
+    `<p class="eyebrow">${escapeHtml(entry.editionLabel)}</p>${parallel(entry)}<section class="foundation-explanation"><h3>Read the wording</h3><p>${escapeHtml(entry.note)}</p><h3>Use it in the argument</h3><p>${escapeHtml(entry.use)}</p></section>`;
+  element<HTMLSelectElement>("#foundation-select").value = id;
+  for (const button of document.querySelectorAll<HTMLButtonElement>(".foundation-nav button"))
+    button.setAttribute("aria-current", String(button.dataset.foundation === id));
+  const dialog = element<HTMLDialogElement>("#foundation-dialog");
+  if (!dialog.open) dialog.showModal();
+  element(".foundation-reading").scrollTop = 0;
+  element(".foundation-layout").scrollTop = 0;
 }
 
 function showGloss(id: string, form: string | undefined): void {
@@ -264,6 +351,10 @@ function download(contents: string, type: string, filename: string): void {
 document.addEventListener("click", (event) => {
   const button = (event.target as Element).closest<HTMLButtonElement>("button");
   if (!button) return;
+  if (button.dataset.foundation) {
+    showFoundation(button.dataset.foundation);
+    return;
+  }
   if (button.dataset.trace) {
     element("#diagram").setAttribute("data-trace", button.dataset.trace);
     for (const control of document.querySelectorAll<HTMLButtonElement>("[data-trace]")) {
@@ -302,6 +393,38 @@ document.addEventListener("click", (event) => {
     return;
   }
   switch (button.id) {
+    case "open-practice":
+      showPractice(
+        readingExercises.findIndex((exercise) => exercise.proposition === state.proposition),
+      );
+      break;
+    case "practice-previous":
+    case "practice-next":
+      showPractice(practiceIndex + (button.id === "practice-next" ? 1 : -1));
+      element<HTMLElement>("#practice-title").focus({ preventScroll: true });
+      break;
+    case "practice-plate": {
+      const exercise = readingExercises[practiceIndex];
+      if (!exercise) return;
+      element<HTMLDialogElement>("#practice-dialog").close();
+      goTo(exercise.proposition);
+      if (exercise.step === "statement") {
+        element<HTMLDetailsElement>("#full-reading").open = true;
+        element(".statement").scrollIntoView({ behavior: "instant", block: "start" });
+        element(".statement").focus({ preventScroll: true });
+      } else {
+        state.step = exercise.step;
+        renderStep();
+        element("#workbench").scrollIntoView({ behavior: "instant", block: "start" });
+        element<HTMLElement>("#step-title").focus({ preventScroll: true });
+      }
+      break;
+    }
+    case "reveal-translations":
+      translationsRevealed = true;
+      updateReadingMode();
+      element<HTMLElement>("#step-title").focus({ preventScroll: true });
+      break;
     case "read-sentence":
       element("#step-title").scrollIntoView({ behavior: "instant", block: "start" });
       element<HTMLElement>("#step-title").focus({ preventScroll: true });
@@ -333,7 +456,7 @@ document.addEventListener("click", (event) => {
     }
     case "about-sources":
     case "open-edition":
-      showSource(10);
+      showSource(4);
       break;
     case "source-previous":
       showSource(sourcePage - 1);
@@ -416,6 +539,28 @@ document.addEventListener("input", (event) => {
   }
   renderDiagram();
   writeState();
+});
+
+element("#reading-mode").addEventListener("change", (event) => {
+  if (!(event.target instanceof HTMLSelectElement)) return;
+  readingMode = event.target.value;
+  translationsRevealed = false;
+  updateReadingMode();
+});
+element("#practice-form").addEventListener("submit", (event) => event.preventDefault());
+element("#practice-form").addEventListener("change", (event) => {
+  if (!(event.target instanceof HTMLInputElement)) return;
+  const exercise = readingExercises[practiceIndex];
+  if (!exercise) return;
+  const choice = Number(event.target.value);
+  element("#practice-feedback").textContent = exercise.explanations[choice] ?? "";
+  element("#practice-feedback").className =
+    choice === exercise.correct ? "correct-feedback" : "try-feedback";
+  element("#practice-translation").hidden = false;
+});
+
+element("#foundation-select").addEventListener("change", (event) => {
+  if (event.target instanceof HTMLSelectElement) showFoundation(event.target.value);
 });
 
 element("#question").addEventListener("submit", (event) => event.preventDefault());

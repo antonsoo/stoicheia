@@ -14,9 +14,9 @@
     "bytes": 20890632,
     "sha256": "da285c581c2dda86e2b25e20db3ce604bf6fb8765228fcd71cfc89d47a9d1c17"
   },
-  "rendering": "pdftoppm -f 24 -l 39 -scale-to 1550 -jpeg -jpegopt quality=88 INPUT.pdf page",
+  "rendering": "pdftoppm -f 18 -l 39 -scale-to 1550 -jpeg -jpegopt quality=88 INPUT.pdf page",
   "transcription": {
-    "scope": "Full proposition statements and proofs I.1–6. Critical apparatus and unrelated text on the same pages are not transcribed.",
+    "scope": "Full proposition statements and proofs I.1–6; definitions 15, 16, 20; all five postulates; the five common notions in the usual modern list (Heiberg 1, 2, 3, 7, 8). Critical apparatus and other text are not transcribed.",
     "normalizations": [
       "Printed ϑ normalized to θ.",
       "Consistent Unicode Greek letters for all geometric labels, including letters that resemble Latin glyphs.",
@@ -25,12 +25,68 @@
       "Greek punctuation represented with modern Unicode punctuation.",
       "Latin lowercase sentence openings and u/v spelling retained.",
       "Heiberg’s square brackets in I.1’s repeated conclusion and I.4’s [ταῖς] retained.",
-      "Printed Latin angle and triangle symbols represented by Unicode ∠ and △; equations use =."
+      "Printed Latin angle and triangle symbols represented by Unicode ∠ and △; equations use =.",
+      "Greek editorial brackets in definitions 15 and common notion 8 retained; facing Latin omissions preserved."
     ],
     "english": "New reading translation. Explicit intersection descriptions and other explanatory expansions are teaching aids.",
-    "comparison": "Hand transcription checked against each bundled scan. No unreviewed OCR output is presented as a source transcription."
+    "comparison": "Hand transcription checked against bundled scans. The cropped right edge of printed p. 6 was cross-checked against the Greek quoted in Heath, The Thirteen Books of Euclid’s Elements (1925), pp. 187–188, via David R. Wilkins’s Trinity College Dublin transcription. No unreviewed OCR output is presented as source text.",
+    "supplementary_check": "https://www.maths.tcd.ie/~dwilkins/Euclid/Euclid_HeathCommentaries/EuclidElements_HeathCommentary_ElementsBk01Def19_DraftTranscription.pdf"
   },
   "pages": [
+    {
+      "printed_page": 4,
+      "pdf_page": 18,
+      "archive_leaf": 18,
+      "language": "grc",
+      "file": "heiberg-004.jpg",
+      "bytes": 320270,
+      "sha256": "b874eac6b40c554206427557ce221770b7b2c1b50afa17087fa6131282db8bc4"
+    },
+    {
+      "printed_page": 5,
+      "pdf_page": 19,
+      "archive_leaf": 19,
+      "language": "la",
+      "file": "heiberg-005.jpg",
+      "bytes": 316399,
+      "sha256": "7f570bfd4809b2474674fbbfb62610f0b45869d4374cf277d5807deca361b772"
+    },
+    {
+      "printed_page": 6,
+      "pdf_page": 20,
+      "archive_leaf": 20,
+      "language": "grc",
+      "file": "heiberg-006.jpg",
+      "bytes": 320634,
+      "sha256": "b6b371b3e5eb13f4305dbf073e5f15ce178018a8ad8557df99431410ce6a69ae"
+    },
+    {
+      "printed_page": 7,
+      "pdf_page": 21,
+      "archive_leaf": 21,
+      "language": "la",
+      "file": "heiberg-007.jpg",
+      "bytes": 334398,
+      "sha256": "c9efe81728c69d36b95838b8d80060eae8a0d316fb682a722a3273eb8ce1f3ea"
+    },
+    {
+      "printed_page": 8,
+      "pdf_page": 22,
+      "archive_leaf": 22,
+      "language": "grc",
+      "file": "heiberg-008.jpg",
+      "bytes": 273136,
+      "sha256": "5e7987d0e9686891261411810a828bd6ace64c6a21ea92600fdedbb2c6078a17"
+    },
+    {
+      "printed_page": 9,
+      "pdf_page": 23,
+      "archive_leaf": 23,
+      "language": "la",
+      "file": "heiberg-009.jpg",
+      "bytes": 291149,
+      "sha256": "8844849fadfddacf9ddd2692a5917003f96a3b9a122825a891a1931d0580e75e"
+    },
     {
       "printed_page": 10,
       "pdf_page": 24,
