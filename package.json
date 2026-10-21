@@ -30,11 +30,15 @@
     "format": "biome check --write .",
     "typecheck": "tsc --noEmit",
     "test": "node --import tsx --test tests/*.test.ts",
-    "check": "npm run lint && npm run typecheck && npm test && npm run build"
+    "check": "npm run lint && npm run typecheck && npm test && npm run build",
+    "verify:oracle": "node --import tsx scripts/oracle-cases.ts | python3 scripts/circle-oracle.py",
+    "test:browser": "node scripts/browser-check.mjs"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
     "@biomejs/biome": "2.6.2",
     "@types/node": "24.19.2",
+    "playwright": "1.63.0",
     "tsx": "4.23.15",
     "typescript": "7.0.2",
     "vite": "8.3.5"

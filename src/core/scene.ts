@@ -98,8 +98,8 @@ export function makeScene(state: ReaderState): Scene {
   } else if (proposition === 2) {
     const c = add(b, polar(r, side * state.angle));
     const t = transfer(a, b, c, side);
-    const e = add(a, scale(subtract(a, t.d), (r * 1.3) / s));
-    const z = add(b, scale(subtract(b, t.d), (r * 1.3) / s));
+    const e = add(a, scale(subtract(a, t.d), (r + s * 0.3) / s));
+    const z = add(b, scale(subtract(b, t.d), (r + s * 0.3) / s));
     scene.bounds = [
       Math.min(e.x, b.x - r) - s * 0.18,
       side === 1 ? Math.min(e.y, -r) - s * 0.18 : Math.min(-s * 1.1, -r) - s * 0.18,
