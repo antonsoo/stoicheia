@@ -1,18 +1,18 @@
 {
   "scope": "Direct HTTPS deployment: exact build bytes and real hosted browser workflows",
-  "checkedAt": "2026-10-21T21:54:12.872Z",
+  "checkedAt": "2026-10-21T23:06:11.160Z",
   "url": "https://antonsoo.github.io/stoicheia/",
-  "sourceCommit": "ea1dc1d0170826d221d61ca6b486654b43771494",
+  "sourceCommit": "306bae294ba8de25dfa0cefdd88b0d89dc11d84b",
   "files": [
     {
-      "file": "assets/index-BG9Jbv_R.css",
-      "bytes": 28130,
-      "sha256": "7266a6b805b251acdb0afb3848dae209ff41687fb33ddd89faba6638e6ddb9bb"
+      "file": "assets/index-BalXma64.css",
+      "bytes": 28577,
+      "sha256": "a54dc32a048568df0ed00123994547fb44ccb966206f72d61191d3808c00caba"
     },
     {
-      "file": "assets/index-CpJz_uWN.js",
-      "bytes": 144293,
-      "sha256": "a954d2be6e1125364c6a7636f4a81080c0082f881bace6be72763455cacc34fe"
+      "file": "assets/index-CN-CTpJj.js",
+      "bytes": 207496,
+      "sha256": "48219a72ddd356503e57fdb712f8f753c156f957e66e4a9afaecf3d5ca3bf0c5"
     },
     {
       "file": "favicon.svg",
@@ -31,8 +31,8 @@
     },
     {
       "file": "index.html",
-      "bytes": 1292,
-      "sha256": "4e212d2cb023c587125719dbf80aa20aeee5568e079ba7c593dac8308b380cb6"
+      "bytes": 1293,
+      "sha256": "f39f9b5a7f84b1638aca3239253ddacb1769833f1bd6398a2876b55ed0cf7ec1"
     },
     {
       "file": "sources/heiberg-004.jpg",
@@ -145,14 +145,44 @@
       "sha256": "dcc612163f25b70db7f0cd45536506bbe4fe8fad1c93a692f3d2700e0e8747ed"
     },
     {
+      "file": "sources/heiberg-026.jpg",
+      "bytes": 293850,
+      "sha256": "e8e28946e679e899e2269397536f70cadda8bd139e2903be9ba472ecc1d31051"
+    },
+    {
+      "file": "sources/heiberg-027.jpg",
+      "bytes": 273902,
+      "sha256": "451b57f13004a6d271d1e06a74e05b4d38e9bb06f5ad89b8d02a628d2f669139"
+    },
+    {
+      "file": "sources/heiberg-028.jpg",
+      "bytes": 296351,
+      "sha256": "76f2906d1259b6dcffecee73d1519f133d58790e051c5759780526ad65fc827c"
+    },
+    {
+      "file": "sources/heiberg-029.jpg",
+      "bytes": 292126,
+      "sha256": "ef2054064c3b605004d0046476eadfeecb35f30ccefa0ede16dbaec135dc88be"
+    },
+    {
+      "file": "sources/heiberg-030.jpg",
+      "bytes": 268412,
+      "sha256": "c28d31907a99fe1b0e0556cb3e284b30418aed66cfa991a8d235409f356cc0bd"
+    },
+    {
+      "file": "sources/heiberg-031.jpg",
+      "bytes": 235508,
+      "sha256": "78c48ad097ea261328c143863dc9febeadc3070b60a1bfec288b2d6e55caf931"
+    },
+    {
       "file": "sources/manifest.json",
-      "bytes": 8048,
-      "sha256": "454cb5ae43060cbabe641125c334e3af1a13533b1782a7c2a93905d7ef02337f"
+      "bytes": 9579,
+      "sha256": "c56cdc7ff976f0ff488e5c17bc7a6b0d9edb44892880f5fe64f55864dc15e309"
     },
     {
       "file": "sw.js",
-      "bytes": 2155,
-      "sha256": "48b9623145dbff1ea1450443b2766c606d4eb7459b9cf64f929566941454e0b3"
+      "bytes": 3089,
+      "sha256": "c8ef8a6fe7ec0d709442e9cb1566df592de558a88b9c2ed510ecc3ab3f7705e4"
     }
   ],
   "configurations": [
@@ -163,7 +193,7 @@
         "width": 1440,
         "height": 1000
       },
-      "finalSteps": 6,
+      "finalSteps": 10,
       "workflows": [
         "rigid superposition",
         "I.5 angle subtraction",
@@ -171,7 +201,11 @@
         "I.6 hypothetical sketch",
         "Greek-first reveal",
         "passage exercise",
-        "shared URL reload"
+        "shared URL reload",
+        "I.7 reflected candidate",
+        "I.8 three-side superposition",
+        "I.9 collapsed and outward crossing, then internal bisector",
+        "I.10 midpoint and printed page 31"
       ],
       "offline": "Worker-served reload and source scan under browser offline emulation; public origin not disabled",
       "pageErrors": 0,
@@ -179,11 +213,11 @@
       "cspViolations": 0,
       "browserAssets": [
         {
-          "url": "https://antonsoo.github.io/stoicheia/assets/index-BG9Jbv_R.css",
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-BalXma64.css",
           "status": 200
         },
         {
-          "url": "https://antonsoo.github.io/stoicheia/assets/index-CpJz_uWN.js",
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-CN-CTpJj.js",
           "status": 200
         },
         {
@@ -199,7 +233,7 @@
         "width": 375,
         "height": 812
       },
-      "finalSteps": 6,
+      "finalSteps": 10,
       "workflows": [
         "rigid superposition",
         "I.5 angle subtraction",
@@ -207,7 +241,11 @@
         "I.6 hypothetical sketch",
         "Greek-first reveal",
         "passage exercise",
-        "shared URL reload"
+        "shared URL reload",
+        "I.7 reflected candidate",
+        "I.8 three-side superposition",
+        "I.9 collapsed and outward crossing, then internal bisector",
+        "I.10 midpoint and printed page 31"
       ],
       "offline": "Worker-served reload and source scan under browser offline emulation; public origin not disabled",
       "pageErrors": 0,
@@ -215,11 +253,11 @@
       "cspViolations": 0,
       "browserAssets": [
         {
-          "url": "https://antonsoo.github.io/stoicheia/assets/index-BG9Jbv_R.css",
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-BalXma64.css",
           "status": 200
         },
         {
-          "url": "https://antonsoo.github.io/stoicheia/assets/index-CpJz_uWN.js",
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-CN-CTpJj.js",
           "status": 200
         },
         {
@@ -235,7 +273,7 @@
         "width": 1440,
         "height": 1000
       },
-      "finalSteps": 6,
+      "finalSteps": 10,
       "workflows": [
         "rigid superposition",
         "I.5 angle subtraction",
@@ -243,7 +281,11 @@
         "I.6 hypothetical sketch",
         "Greek-first reveal",
         "passage exercise",
-        "shared URL reload"
+        "shared URL reload",
+        "I.7 reflected candidate",
+        "I.8 three-side superposition",
+        "I.9 collapsed and outward crossing, then internal bisector",
+        "I.10 midpoint and printed page 31"
       ],
       "offline": "Worker-served reload and source scan under browser offline emulation; public origin not disabled",
       "pageErrors": 0,
@@ -251,11 +293,11 @@
       "cspViolations": 0,
       "browserAssets": [
         {
-          "url": "https://antonsoo.github.io/stoicheia/assets/index-BG9Jbv_R.css",
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-BalXma64.css",
           "status": 200
         },
         {
-          "url": "https://antonsoo.github.io/stoicheia/assets/index-CpJz_uWN.js",
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-CN-CTpJj.js",
           "status": 200
         },
         {
@@ -271,7 +313,7 @@
         "width": 375,
         "height": 812
       },
-      "finalSteps": 6,
+      "finalSteps": 10,
       "workflows": [
         "rigid superposition",
         "I.5 angle subtraction",
@@ -279,7 +321,11 @@
         "I.6 hypothetical sketch",
         "Greek-first reveal",
         "passage exercise",
-        "shared URL reload"
+        "shared URL reload",
+        "I.7 reflected candidate",
+        "I.8 three-side superposition",
+        "I.9 collapsed and outward crossing, then internal bisector",
+        "I.10 midpoint and printed page 31"
       ],
       "offline": "Worker-served reload and source scan under browser offline emulation; public origin not disabled",
       "pageErrors": 0,
@@ -287,11 +333,11 @@
       "cspViolations": 0,
       "browserAssets": [
         {
-          "url": "https://antonsoo.github.io/stoicheia/assets/index-BG9Jbv_R.css",
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-CN-CTpJj.js",
           "status": 200
         },
         {
-          "url": "https://antonsoo.github.io/stoicheia/assets/index-CpJz_uWN.js",
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-BalXma64.css",
           "status": 200
         },
         {
@@ -300,18 +346,5 @@
         }
       ]
     }
-  ],
-  "pagesBranchCommit": "2adab91ac01f7386bf936b001cf65202c5e368cc",
-  "buildInputsSha256": "5c18a4e112ce43cbe5cf9d6c7b4c45f6a69e2f6034b282e661a971f4ec787fe7",
-  "publicCloneQuickstart": {
-    "sourceCommit": "2633b39",
-    "node": "v24.22.0",
-    "commands": [
-      "git clone https://github.com/antonsoo/stoicheia.git",
-      "cd stoicheia && npm ci",
-      "npm run dev",
-      "npm run test:dev"
-    ],
-    "result": "Styled development and navigation passed in Chromium and Firefox from a fresh public clone."
-  }
+  ]
 }

@@ -62,5 +62,12 @@
     "boundary": "Executed from the review checkout against the preceding source revision and a second Node 24 build with one trailing newline added to the source manifest. The later source change only consolidates lesson-navigation CSS. The second build is a controlled fixture, not a published release.",
     "source_commit": "5c91a8a26604b94635c7dd36d70a46bb871c9657"
   },
-  "publication_receipt": "Publication is recorded separately in docs/publication-verification.json."
+  "publication_receipt": "Publication is recorded separately in docs/publication-verification.json.",
+  "public_source_quickstart": {
+    "source_commit": "306bae294ba8de25dfa0cefdd88b0d89dc11d84b",
+    "transport": "Existing public HTTPS clone, fast-forwarded to the published source",
+    "node": "v24.22.0",
+    "commands": ["npm ci", "npm run dev", "npm run test:dev"],
+    "result": "Chromium and Firefox passed; same quickstart result as docs/quickstart-verification.json"
+  }
 }

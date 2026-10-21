@@ -157,6 +157,7 @@ for (const [name, engine] of [
       await openLesson(page, 10);
       await page.locator('#step-list [data-step="6"]').click();
       assert.match(await page.locator("#equations").innerText(), /ΑΔ = ΒΔ/);
+      await page.locator("#reveal-translations").click();
       await page.locator('#current-passage [data-source="31"]').click();
       await page.waitForFunction(() => {
         const i = document.querySelector("#source-image");

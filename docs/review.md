@@ -187,11 +187,16 @@ position across an explicit reload into a different cached edition.
 
 The [public course](https://antonsoo.github.io/stoicheia/) and
 [source repository](https://github.com/antonsoo/stoicheia) are published.
-The retained [direct HTTPS record](publication-verification.json) currently
-identifies the earlier six-proposition edition. The ten-proposition edition's
-clean-build and local-browser results above are separate from that record.
+[Direct HTTPS verification](publication-verification.json) matched all 36
+production files to the reviewed clean build and exercised Chromium and Firefox
+at desktop and phone widths. It covers all ten final steps, superposition,
+angle subtraction, foundations and nested source scans, the contradiction
+notice, Greek-first reading, passage practice, shared URLs, the new uniqueness
+and bisection controls, and worker-served offline-emulation reloads. The public
+origin was not disabled in this hosted check; the local suite supplies that
+stronger offline control.
 
-The earlier public repository was also cloned over HTTPS, installed with Node
-24.22.0, and run through the documented development quickstart in both browsers.
-GitHub Pages serves the reviewed `gh-pages` branch. These records make no remote
-CI or package registry release claim.
+The public HTTPS clone was updated to `306bae294ba8de25dfa0cefdd88b0d89dc11d84b`,
+installed again with Node 24.22.0, and run through the documented development
+quickstart in both browsers. GitHub Pages serves the reviewed `gh-pages` branch.
+These records make no remote CI or package registry release claim.
