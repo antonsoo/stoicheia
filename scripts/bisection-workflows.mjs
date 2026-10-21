@@ -93,6 +93,10 @@ export async function verifyBisections(page, viewport, browser, accessible, audi
   assert.equal(await page.locator("#hypothesis-warning").isHidden(), true);
   await download("html", "stoicheia-I8-study", /three side pairs/i);
 
+  await openLesson(page, 7);
+  await page.locator("#variant").selectOption("1");
+  await openLesson(page, 9);
+  assert.equal(await page.locator("#variant").inputValue(), "0");
   await reset(page, 9);
   await page.locator("#variant").selectOption("1");
   assert.equal(await page.locator("#step-position").innerText(), "Step 4 of 9");

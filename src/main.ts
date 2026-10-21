@@ -257,7 +257,15 @@ function renderLesson(): void {
 }
 
 function goTo(proposition: PropositionId, result = false): void {
-  state = { ...state, proposition, step: result ? stepCounts[proposition] - 1 : 0 };
+  const changedLesson = proposition !== state.proposition;
+  state = {
+    ...state,
+    proposition,
+    step: result ? stepCounts[proposition] - 1 : 0,
+    // An I.7 reflection is not a request for I.9's alternate circle crossing.
+    variant: changedLesson ? 0 : state.variant,
+    motion: changedLesson ? 0 : state.motion,
+  };
   writeState(true);
   renderLesson();
 }
