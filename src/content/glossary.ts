@@ -1,0 +1,228 @@
+export interface Gloss {
+  id: string;
+  greek: string;
+  latin: string;
+  transliteration: string;
+  meaning: string;
+  note: string;
+  forms: string[];
+}
+
+export const glossary: Gloss[] = [
+  {
+    id: "line",
+    greek: "εὐθεῖα",
+    latin: "recta",
+    transliteration: "eutheia",
+    meaning: "straight line; here, a line segment",
+    note: "A feminine adjective used as a noun, with γραμμή (‘line’) understood. Latin recta similarly leaves linea understood. The ending changes with its job in the sentence.",
+    forms: [
+      "εὐθεῖα",
+      "εὐθείας",
+      "εὐθείᾳ",
+      "εὐθεῖαν",
+      "εὐθεῖαι",
+      "εὐθειῶν",
+      "recta",
+      "rectae",
+      "rectam",
+      "rectis",
+    ],
+  },
+  {
+    id: "point",
+    greek: "σημεῖον",
+    latin: "punctum",
+    transliteration: "sēmeion",
+    meaning: "point",
+    note: "A neuter noun. In πρὸς τῷ … σημείῳ, the dative marks the point at which something is placed. Latin uses ad with the accusative punctum.",
+    forms: ["σημεῖον", "σημείου", "σημείῳ", "σημεῖα", "punctum", "puncto", "puncta"],
+  },
+  {
+    id: "given",
+    greek: "δοθείς",
+    latin: "datus",
+    transliteration: "dotheis",
+    meaning: "given",
+    note: "A passive participle of δίδωμι (‘give’). δοθεῖσα agrees with the feminine εὐθεῖα; δοθέν agrees with the neuter σημεῖον. ‘Given’ identifies the input to a problem.",
+    forms: [
+      "δοθείσης",
+      "δοθεῖσα",
+      "δοθέντι",
+      "δοθὲν",
+      "δοθείσῃ",
+      "δοθεισῶν",
+      "δοθεῖσαι",
+      "data",
+      "datum",
+      "datae",
+      "datis",
+    ],
+  },
+  {
+    id: "finite",
+    greek: "πεπερασμένη",
+    latin: "terminata",
+    transliteration: "peperasmenē",
+    meaning: "bounded; finite",
+    note: "A perfect passive participle: the line has been bounded. In this context a finite straight line is a segment with endpoints, rather than an infinitely extended line.",
+    forms: ["πεπερασμένη", "πεπερασμένης", "terminata"],
+  },
+  {
+    id: "triangle",
+    greek: "τρίγωνον",
+    latin: "triangulus",
+    transliteration: "trigōnon",
+    meaning: "triangle",
+    note: "Greek τρεῖς (‘three’) and γωνία (‘angle’) describe a three-angled figure. Greek uses a neuter form here; Heiberg’s Latin uses masculine triangulus.",
+    forms: ["τρίγωνον", "τριγώνων", "triangulum", "triangulus"],
+  },
+  {
+    id: "equilateral",
+    greek: "ἰσόπλευρος",
+    latin: "aequilaterus",
+    transliteration: "isopleuros",
+    meaning: "equal-sided; equilateral",
+    note: "ἴσος (‘equal’) + πλευρά (‘side’). Compare Latin aequus + latus. ἰσόπλευρον agrees with the neuter τρίγωνον; aequilaterus agrees with triangulus.",
+    forms: ["ἰσόπλευρον", "aequilaterum", "aequilaterus"],
+  },
+  {
+    id: "centre",
+    greek: "κέντρον",
+    latin: "centrum",
+    transliteration: "kentron",
+    meaning: "centre",
+    note: "κέντρῳ is a dative: ‘with [a specified] centre’. Heiberg’s Latin centro is an ablative performing a similar role. Find this word to locate the fixed point of a circle.",
+    forms: ["κέντρον", "κέντρῳ", "centrum", "centro"],
+  },
+  {
+    id: "radius",
+    greek: "διάστημα",
+    latin: "radius",
+    transliteration: "diastēma",
+    meaning: "distance; radius in these constructions",
+    note: "διαστήματι means ‘with a distance’. The two point names tell you which distance is used. The Greek word itself is more general than the English geometric term ‘radius’.",
+    forms: ["διαστήματι", "διάστημα", "radio"],
+  },
+  {
+    id: "circle",
+    greek: "κύκλος",
+    latin: "circulus",
+    transliteration: "kyklos",
+    meaning: "circle",
+    note: "A masculine noun. The circle is named by points on its circumference, not by its centre. ΓΗΘ, for example, is the circle centred at Β in I.2.",
+    forms: ["κύκλος", "κύκλου", "κύκλοι", "circulus", "circuli"],
+  },
+  {
+    id: "draw",
+    greek: "γεγράφθω",
+    latin: "describatur",
+    transliteration: "gegraphthō",
+    meaning: "let it have been drawn",
+    note: "Third-person singular perfect middle/passive imperative of γράφω. It asks for the completed drawing to be available. Latin describatur is a present passive subjunctive used as an instruction.",
+    forms: ["γεγράφθω", "describatur"],
+  },
+  {
+    id: "join",
+    greek: "ἐπεζεύχθω",
+    latin: "ducatur",
+    transliteration: "epezeuchthō",
+    meaning: "let it be joined",
+    note: "A perfect passive imperative. The plural ἐπεζεύχθωσαν commands the joining of two lines. Latin ducatur / ducantur means ‘let it / them be drawn’.",
+    forms: ["ἐπεζεύχθω", "ἐπεζεύχθωσαν", "ducatur", "ducantur"],
+  },
+  {
+    id: "construct",
+    greek: "συστήσασθαι",
+    latin: "construere",
+    transliteration: "systēsasthai",
+    meaning: "to construct; to put together",
+    note: "An aorist middle infinitive used to state the task. Later συνέσταται announces the completed result. Infinitives in the proposition headings describe what is to be accomplished.",
+    forms: ["συστήσασθαι", "συνέσταται", "συνεστάτω", "construere", "construatur", "constructus"],
+  },
+  {
+    id: "extend",
+    greek: "ἐκβεβλήσθωσαν",
+    latin: "producantur",
+    transliteration: "ekbeblēsthōsan",
+    meaning: "let them be extended",
+    note: "A plural perfect passive imperative from ἐκβάλλω. I.2 extends the two sides of the equilateral triangle beyond Α and Β, away from Δ.",
+    forms: ["ἐκβεβλήσθωσαν", "producantur"],
+  },
+  {
+    id: "equal",
+    greek: "ἴσος",
+    latin: "aequalis",
+    transliteration: "isos",
+    meaning: "equal",
+    note: "ἴση is feminine singular for a line; ἴσαι is feminine plural. ἴσα is neuter plural for ‘equal things’ in common notion 1. Equal length is a proved relation, not a visual impression.",
+    forms: [
+      "ἴση",
+      "ἴσην",
+      "ἴσαι",
+      "ἴσα",
+      "ἴσων",
+      "ἴσοις",
+      "aequalis",
+      "aequalem",
+      "aequales",
+      "aequalia",
+    ],
+  },
+  {
+    id: "remainder",
+    greek: "λοιπός",
+    latin: "reliquus",
+    transliteration: "loipos",
+    meaning: "remaining; remainder",
+    note: "λοιπὴ ἡ ΑΛ means ‘the remaining ΑΛ’. The adjective takes the place of a longer phrase about the line left after subtraction. Heiberg’s Latin renders I.2’s remainder sentence as an equation.",
+    forms: ["λοιπὴ", "λοιπῇ", "λοιπός", "reliqua"],
+  },
+  {
+    id: "greater",
+    greek: "μείζων",
+    latin: "maior",
+    transliteration: "meizōn",
+    meaning: "greater",
+    note: "A comparative. μείζονος is genitive after ἀπό (‘from’). In I.3 the greater line must truly be greater for the cut point to lie inside it.",
+    forms: ["μείζων", "μείζονος", "maior", "maiore"],
+  },
+  {
+    id: "lesser",
+    greek: "ἐλάσσων",
+    latin: "minor",
+    transliteration: "elassōn",
+    meaning: "lesser",
+    note: "The dative ἐλάσσονι follows ἴσην: ‘equal to the lesser’. Heiberg’s Latin uses the dative minori. The two languages let you track which length is copied.",
+    forms: ["ἐλάσσονι", "ἐλάσσων", "minor", "minori"],
+  },
+  {
+    id: "cut",
+    greek: "ἀφελεῖν",
+    latin: "abscindere",
+    transliteration: "aphelein",
+    meaning: "to take away; to cut off",
+    note: "An aorist active infinitive from ἀφαιρέω. At the end, ἀφῄρηται means ‘has been taken away’. Latin abscindere / abscisa est expresses the same task–completion pattern.",
+    forms: ["ἀφελεῖν", "ἀφῄρηται", "abscindere", "abscisa"],
+  },
+  {
+    id: "place",
+    greek: "θέσθαι",
+    latin: "constituere",
+    transliteration: "thesthai",
+    meaning: "to place",
+    note: "An aorist middle infinitive from τίθημι. I.2’s heading asks for a line ‘to be placed’. In the conclusion κεῖται (‘lies; is placed’) answers that task.",
+    forms: ["θέσθαι", "κεῖται", "κείσθω", "constituere", "constituta", "constituatur"],
+  },
+];
+
+export function normalizeWord(word: string): string {
+  return word.normalize("NFD").replace(/\p{M}/gu, "").toLocaleLowerCase("el").replace(/ς/g, "σ");
+}
+const byForm = new Map(
+  glossary.flatMap((entry) => entry.forms.map((form) => [normalizeWord(form), entry] as const)),
+);
+
+export function lookup(word: string): Gloss | undefined {
+  return byForm.get(normalizeWord(word));
+}

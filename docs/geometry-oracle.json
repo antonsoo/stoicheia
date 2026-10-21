@@ -1,0 +1,11 @@
+{
+  "method": "Independent general circle-circle and quadratic line-circle intersections",
+  "arithmetic": "Python standard-library Decimal, precision 60",
+  "cases": 720,
+  "point_comparisons": 4320,
+  "oracle_equality_checks": 5760,
+  "maximum_relative_coordinate_error": 1.1526305883259686e-15,
+  "relative_tolerance": 2e-12,
+  "coverage": "Translated and rotated inputs; both triangle orientations; varying base/reference ratios; I.3 uses the I.2 construction",
+  "boundary": "Numerical agreement with an independent real-plane calculation, not formal verification of Euclid's axioms"
+}

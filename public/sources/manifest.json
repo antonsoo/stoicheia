@@ -1,0 +1,106 @@
+{
+  "edition": {
+    "title": "Euclidis opera omnia",
+    "volume": "I: Elementa, libros I–IV continens",
+    "editor_and_latin_translator": "J. L. Heiberg",
+    "publisher": "B. G. Teubner, Leipzig",
+    "year": 1883,
+    "catalog_url": "https://archive.org/details/euclidisoperaomn01eucluoft",
+    "scan_contributor": "Gerstein Science Information Centre, University of Toronto",
+    "rights": "Public domain; the Internet Archive record reports NOT_IN_COPYRIGHT."
+  },
+  "download": {
+    "url": "https://archive.org/download/euclidisoperaomn01eucluoft/euclidisoperaomn01eucluoft.pdf",
+    "bytes": 20890632,
+    "sha256": "da285c581c2dda86e2b25e20db3ce604bf6fb8765228fcd71cfc89d47a9d1c17"
+  },
+  "rendering": "pdftoppm -f 24 -l 31 -scale-to 1550 -jpeg -jpegopt quality=88 INPUT.pdf page",
+  "transcription": {
+    "scope": "Full proposition statements and proofs I.1–3. Critical apparatus and unrelated text on the same pages are not transcribed.",
+    "normalizations": [
+      "Printed ϑ normalized to θ.",
+      "Consistent Unicode Greek letters for all geometric labels, including letters that resemble Latin glyphs.",
+      "Line breaks and end-of-line hyphenation removed.",
+      "Inline editorial reference marks in the Latin omitted; reasons are separately identified teaching annotations.",
+      "Greek punctuation represented with modern Unicode punctuation.",
+      "Latin lowercase sentence openings and u/v spelling retained.",
+      "Heiberg’s square brackets in the I.1 repeated conclusion retained; the Latin does not repeat that bracketed text."
+    ],
+    "english": "New reading translation. Explicit intersection descriptions and other explanatory expansions are teaching aids.",
+    "comparison": "Hand transcription checked against each bundled scan. No unreviewed OCR output is presented as a source transcription."
+  },
+  "pages": [
+    {
+      "printed_page": 10,
+      "pdf_page": 24,
+      "archive_leaf": 24,
+      "language": "grc",
+      "file": "heiberg-010.jpg",
+      "bytes": 276612,
+      "sha256": "8d1db0bc4b9a8b93b72633ac544f16cdd7e03aef8111d5e68f25d192febe1dbd"
+    },
+    {
+      "printed_page": 11,
+      "pdf_page": 25,
+      "archive_leaf": 25,
+      "language": "la",
+      "file": "heiberg-011.jpg",
+      "bytes": 279836,
+      "sha256": "f23df1af363dded2831f7e7f6fbea20827c1e9d650faeb03bb9995489ae93a72"
+    },
+    {
+      "printed_page": 12,
+      "pdf_page": 26,
+      "archive_leaf": 26,
+      "language": "grc",
+      "file": "heiberg-012.jpg",
+      "bytes": 289774,
+      "sha256": "e5cc7d6bf3a2ec8dc3bcbf88803b8ee9e3d0315ae29221ed7d2fe9768356c2fd"
+    },
+    {
+      "printed_page": 13,
+      "pdf_page": 27,
+      "archive_leaf": 27,
+      "language": "la",
+      "file": "heiberg-013.jpg",
+      "bytes": 291315,
+      "sha256": "49235a355d10656aba59db1464aaefe34f5836a32ca5f214955d7b064a39273d"
+    },
+    {
+      "printed_page": 14,
+      "pdf_page": 28,
+      "archive_leaf": 28,
+      "language": "grc",
+      "file": "heiberg-014.jpg",
+      "bytes": 299613,
+      "sha256": "dc97350f09d7adca95cf3cc233cef8237da757ff4bd077c1b75390c8de3fb385"
+    },
+    {
+      "printed_page": 15,
+      "pdf_page": 29,
+      "archive_leaf": 29,
+      "language": "la",
+      "file": "heiberg-015.jpg",
+      "bytes": 271550,
+      "sha256": "52e2aa1b336c6c88b3bf8a3ff1da916f37df2afe4de5d29d3659b13254e18a2c"
+    },
+    {
+      "printed_page": 16,
+      "pdf_page": 30,
+      "archive_leaf": 30,
+      "language": "grc",
+      "file": "heiberg-016.jpg",
+      "bytes": 295019,
+      "sha256": "52d0dd0e02d4088b80b547838d47621efd1b23784f33b62482216a71b0927afc"
+    },
+    {
+      "printed_page": 17,
+      "pdf_page": 31,
+      "archive_leaf": 31,
+      "language": "la",
+      "file": "heiberg-017.jpg",
+      "bytes": 283679,
+      "sha256": "ff29baed3f8686d2d55b10131a85953cfec56f2388be0053e513c6ad362cc773"
+    }
+  ]
+}
