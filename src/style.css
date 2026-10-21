@@ -186,7 +186,7 @@ main {
 }
 .lesson-nav {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   border-block: 1px solid var(--rule);
 }
 .lesson-tab {
@@ -1557,10 +1557,7 @@ dialog::backdrop {
   overscroll-behavior: contain;
 }
 
-/* The second half of the course compares figures, rather than only drawing lines. */
-.lesson-nav {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
+/* Triangle comparisons distinguish the two figures without hiding their edges. */
 .figure {
   stroke: none;
   fill-opacity: 0.16;
@@ -1690,9 +1687,6 @@ dialog::backdrop {
   min-height: 44px;
 }
 @media (max-width: 700px) {
-  .lesson-nav {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
   .motion-control,
   .comparison,
   .diagram-notice {
@@ -1718,12 +1712,6 @@ dialog::backdrop {
   text-align: center;
   max-width: 100%;
 }
-.lesson-tab:nth-child(-n + 3) {
-  border-bottom: 1px solid var(--rule);
-}
-.lesson-tab:nth-child(3n) {
-  border-right: 0;
-}
 .phone-reader-jump {
   display: none;
 }
@@ -1735,15 +1723,6 @@ dialog::backdrop {
     text-decoration: underline;
     text-underline-offset: 4px;
     font-size: 0.85rem;
-  }
-  .lesson-tab:nth-child(3n) {
-    border-right: 1px solid var(--rule);
-  }
-  .lesson-tab:nth-child(2n) {
-    border-right: 0;
-  }
-  .lesson-tab:nth-child(-n + 4) {
-    border-bottom: 1px solid var(--rule);
   }
 }
 .reader-tools {
@@ -2091,11 +2070,6 @@ dialog::backdrop {
   margin-top: 16px;
 }
 @media (max-width: 1200px) {
-  .lesson-tab .tab-greek {
-    display: none;
-  }
-}
-@media (max-width: 700px) {
   .lesson-nav {
     display: none;
   }
