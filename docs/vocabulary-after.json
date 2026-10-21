@@ -1,0 +1,148 @@
+{
+  "scope": "Actual positive and negative I.7 vocabulary popups; no full philological certification",
+  "url": "http://127.0.0.1:4328/stoicheia/",
+  "checkedAt": "2026-10-21T23:46:14.122Z",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "forms": [
+        {
+          "step": 0,
+          "form": "δυνατόν",
+          "heading": "δυνατός",
+          "meaning": "possible; able / can",
+          "accessibilityViolations": 0
+        },
+        {
+          "step": 0,
+          "form": "potest",
+          "heading": "δυνατός",
+          "meaning": "possible; able / can",
+          "accessibilityViolations": 0
+        },
+        {
+          "step": 6,
+          "form": "ἀδύνατον",
+          "heading": "ἀδύνατος",
+          "meaning": "impossible",
+          "accessibilityViolations": 0
+        },
+        {
+          "step": 6,
+          "form": "potest",
+          "heading": "δυνατός",
+          "meaning": "possible; able / can",
+          "accessibilityViolations": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "browser": "chromium",
+      "width": 375,
+      "forms": [
+        {
+          "step": 0,
+          "form": "δυνατόν",
+          "heading": "δυνατός",
+          "meaning": "possible; able / can",
+          "accessibilityViolations": 0
+        },
+        {
+          "step": 0,
+          "form": "potest",
+          "heading": "δυνατός",
+          "meaning": "possible; able / can",
+          "accessibilityViolations": 0
+        },
+        {
+          "step": 6,
+          "form": "ἀδύνατον",
+          "heading": "ἀδύνατος",
+          "meaning": "impossible",
+          "accessibilityViolations": 0
+        },
+        {
+          "step": 6,
+          "form": "potest",
+          "heading": "δυνατός",
+          "meaning": "possible; able / can",
+          "accessibilityViolations": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "browser": "firefox",
+      "width": 1440,
+      "forms": [
+        {
+          "step": 0,
+          "form": "δυνατόν",
+          "heading": "δυνατός",
+          "meaning": "possible; able / can",
+          "accessibilityViolations": 0
+        },
+        {
+          "step": 0,
+          "form": "potest",
+          "heading": "δυνατός",
+          "meaning": "possible; able / can",
+          "accessibilityViolations": 0
+        },
+        {
+          "step": 6,
+          "form": "ἀδύνατον",
+          "heading": "ἀδύνατος",
+          "meaning": "impossible",
+          "accessibilityViolations": 0
+        },
+        {
+          "step": 6,
+          "form": "potest",
+          "heading": "δυνατός",
+          "meaning": "possible; able / can",
+          "accessibilityViolations": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "browser": "firefox",
+      "width": 375,
+      "forms": [
+        {
+          "step": 0,
+          "form": "δυνατόν",
+          "heading": "δυνατός",
+          "meaning": "possible; able / can",
+          "accessibilityViolations": 0
+        },
+        {
+          "step": 0,
+          "form": "potest",
+          "heading": "δυνατός",
+          "meaning": "possible; able / can",
+          "accessibilityViolations": 0
+        },
+        {
+          "step": 6,
+          "form": "ἀδύνατον",
+          "heading": "ἀδύνατος",
+          "meaning": "impossible",
+          "accessibilityViolations": 0
+        },
+        {
+          "step": 6,
+          "form": "potest",
+          "heading": "δυνατός",
+          "meaning": "possible; able / can",
+          "accessibilityViolations": 0
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "sourceCommit": "f4396630a1463b5b4fa565ffff49e1056b9fa0d2"
+}

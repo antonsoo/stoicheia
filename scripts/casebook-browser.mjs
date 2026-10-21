@@ -247,8 +247,9 @@ try {
         await page.goBack();
         assert.equal(await page.locator("#casebook").evaluate((e) => e.open), true);
         assert.equal(await page.locator("#case-placement").innerText(), labels.inside);
-        await page.locator(".case-reading summary").click();
-        // A screenshot must not contain a transient save notification.
+        await page.goto(page.url());
+        await page.evaluate(() => document.fonts.ready);
+        // Capture a fresh reader, without a transient save or expanded share field.
         await page.waitForFunction(() => document.querySelector("#toast").hidden);
         await page
           .locator("#casebook-root")

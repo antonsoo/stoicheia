@@ -1,0 +1,232 @@
+{
+  "scope": "Production case-study workflows through a local origin gate; upstream http://127.0.0.1:4328/stoicheia/",
+  "checkedAt": "2026-10-21T23:45:18.389Z",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "width": 1440,
+      "accessibility": [
+        "outside",
+        "inside",
+        "boundary",
+        "reflection",
+        "coincident",
+        "source clause"
+      ],
+      "downloads": [
+        {
+          "placement": "outside",
+          "bytes": 11836,
+          "sha256": "8baeec35d6baffc09605044f5ef2970c2ccaada0be228abf08665c17ea505b95",
+          "nativePdfBytes": 89432
+        },
+        {
+          "placement": "inside",
+          "bytes": 12492,
+          "sha256": "c1cecda1a4c3f86770e884c7b482a41c3e76fc767d2a610bf7e87fe4a1be793a",
+          "nativePdfBytes": 102094
+        },
+        {
+          "placement": "boundary",
+          "bytes": 7227,
+          "sha256": "1ab41c51937ff5b95cc90f16d98ae4db8a07bcc28594617d244a6b9cdab54aa2",
+          "nativePdfBytes": 78848
+        },
+        {
+          "placement": "reflection",
+          "bytes": 7166,
+          "sha256": "e1f336553153bb34e2e6adc83bb57f100eb54ced285700538a660c652488ae68",
+          "nativePdfBytes": 79485
+        },
+        {
+          "placement": "coincident",
+          "bytes": 6881,
+          "sha256": "45bcad14fc6552c9526f5b3ce18caa17e5bfadc54ff028feedb6bc0616ed3a73",
+          "nativePdfBytes": 85165
+        }
+      ],
+      "errors": [],
+      "externalRequests": [],
+      "sharedLanding": {
+        "top": 102.546875,
+        "bottom": 137.640625,
+        "viewport": 1000,
+        "focus": "case-heading"
+      },
+      "offline": {
+        "originUnavailable": true,
+        "rejectedConnections": 3,
+        "sharedInteriorReload": true,
+        "boundaryInteraction": true,
+        "source21Decoded": true
+      }
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "accessibility": [
+        "outside",
+        "inside",
+        "boundary",
+        "reflection",
+        "coincident",
+        "source clause"
+      ],
+      "downloads": [
+        {
+          "placement": "outside",
+          "bytes": 11836,
+          "sha256": "8baeec35d6baffc09605044f5ef2970c2ccaada0be228abf08665c17ea505b95"
+        },
+        {
+          "placement": "inside",
+          "bytes": 12492,
+          "sha256": "c1cecda1a4c3f86770e884c7b482a41c3e76fc767d2a610bf7e87fe4a1be793a"
+        },
+        {
+          "placement": "boundary",
+          "bytes": 7227,
+          "sha256": "1ab41c51937ff5b95cc90f16d98ae4db8a07bcc28594617d244a6b9cdab54aa2"
+        },
+        {
+          "placement": "reflection",
+          "bytes": 7166,
+          "sha256": "e1f336553153bb34e2e6adc83bb57f100eb54ced285700538a660c652488ae68"
+        },
+        {
+          "placement": "coincident",
+          "bytes": 6881,
+          "sha256": "45bcad14fc6552c9526f5b3ce18caa17e5bfadc54ff028feedb6bc0616ed3a73"
+        }
+      ],
+      "errors": [],
+      "externalRequests": [],
+      "sharedLanding": {
+        "top": 144.34375,
+        "bottom": 198.9375,
+        "viewport": 1000,
+        "focus": "case-heading"
+      },
+      "offline": {
+        "originUnavailable": true,
+        "rejectedConnections": 6,
+        "sharedInteriorReload": true,
+        "boundaryInteraction": true,
+        "source21Decoded": true
+      }
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "width": 1440,
+      "accessibility": [
+        "outside",
+        "inside",
+        "boundary",
+        "reflection",
+        "coincident",
+        "source clause"
+      ],
+      "downloads": [
+        {
+          "placement": "outside",
+          "bytes": 11836,
+          "sha256": "8baeec35d6baffc09605044f5ef2970c2ccaada0be228abf08665c17ea505b95"
+        },
+        {
+          "placement": "inside",
+          "bytes": 12492,
+          "sha256": "c1cecda1a4c3f86770e884c7b482a41c3e76fc767d2a610bf7e87fe4a1be793a"
+        },
+        {
+          "placement": "boundary",
+          "bytes": 7227,
+          "sha256": "1ab41c51937ff5b95cc90f16d98ae4db8a07bcc28594617d244a6b9cdab54aa2"
+        },
+        {
+          "placement": "reflection",
+          "bytes": 7166,
+          "sha256": "e1f336553153bb34e2e6adc83bb57f100eb54ced285700538a660c652488ae68"
+        },
+        {
+          "placement": "coincident",
+          "bytes": 6881,
+          "sha256": "45bcad14fc6552c9526f5b3ce18caa17e5bfadc54ff028feedb6bc0616ed3a73"
+        }
+      ],
+      "errors": [],
+      "externalRequests": [],
+      "sharedLanding": {
+        "top": 102.75,
+        "bottom": 137.85000610351562,
+        "viewport": 1000,
+        "focus": "case-heading"
+      },
+      "offline": {
+        "originUnavailable": true,
+        "rejectedConnections": 11,
+        "sharedInteriorReload": true,
+        "boundaryInteraction": true,
+        "source21Decoded": true
+      }
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "width": 375,
+      "accessibility": [
+        "outside",
+        "inside",
+        "boundary",
+        "reflection",
+        "coincident",
+        "source clause"
+      ],
+      "downloads": [
+        {
+          "placement": "outside",
+          "bytes": 11836,
+          "sha256": "8baeec35d6baffc09605044f5ef2970c2ccaada0be228abf08665c17ea505b95"
+        },
+        {
+          "placement": "inside",
+          "bytes": 12492,
+          "sha256": "c1cecda1a4c3f86770e884c7b482a41c3e76fc767d2a610bf7e87fe4a1be793a"
+        },
+        {
+          "placement": "boundary",
+          "bytes": 7227,
+          "sha256": "1ab41c51937ff5b95cc90f16d98ae4db8a07bcc28594617d244a6b9cdab54aa2"
+        },
+        {
+          "placement": "reflection",
+          "bytes": 7166,
+          "sha256": "e1f336553153bb34e2e6adc83bb57f100eb54ced285700538a660c652488ae68"
+        },
+        {
+          "placement": "coincident",
+          "bytes": 6881,
+          "sha256": "45bcad14fc6552c9526f5b3ce18caa17e5bfadc54ff028feedb6bc0616ed3a73"
+        }
+      ],
+      "errors": [],
+      "externalRequests": [],
+      "sharedLanding": {
+        "top": 145.5,
+        "bottom": 200.10000610351562,
+        "viewport": 1000,
+        "focus": "case-heading"
+      },
+      "offline": {
+        "originUnavailable": true,
+        "rejectedConnections": 11,
+        "sharedInteriorReload": true,
+        "boundaryInteraction": true,
+        "source21Decoded": true
+      }
+    }
+  ],
+  "sourceCommit": "f4396630a1463b5b4fa565ffff49e1056b9fa0d2"
+}

@@ -90,3 +90,33 @@ viewports, and prints five actual Chromium PDFs. It checks the Greek and Latin
 source paragraphs in extracted PDF text, restores shared state in a new tab,
 opens both source scans, and disconnects a server-side origin gate before
 reloading the case. Firefox printing is not represented as native PDF evidence.
+
+## Retained results
+
+The [build receipt](case-study-build.json) identifies the fresh export, exact
+production inputs and all 36 output-file hashes. The [complete-course browser
+receipt](case-study-course-browser.json) covers all 85 steps in Chromium and
+Firefox at 1440px and 375px, with 120 accessibility audits and 36 served-file
+matches. Its build precedes the vocabulary-only correction; the receipt names
+that boundary explicitly.
+
+The [case-study browser receipt](case-study-browser.json) is from the final
+build: four browser/viewport combinations, 24 accessibility audits, twenty
+standalone downloads, five actual Chromium PDFs and four origin-disabled
+reloads. Shared-link headings landed inside the viewport with focus restored.
+The five PDFs retain the Greek and Latin source paragraphs under independent
+Poppler text extraction. [Desktop](assets/case-study-1440.png) and
+[phone](assets/case-study-375.png) screenshots show the real final reader.
+The [interior HTML study](../examples/I7-inside-case-study.html),
+[boundary HTML study](../examples/I7-boundary-case-study.html) and
+[interior PDF](../examples/I7-inside-case-study.pdf) are actual browser downloads.
+
+Further language review reproduced a separate published error: clicking
+`δυνατόν` or `potest` displayed the heading `ἀδύνατος` and meaning “impossible.”
+The [before record](vocabulary-before.json) preserves that public-browser result.
+The positive forms now have their own entry, with a note explaining the separate
+Latin negation. The [after record](vocabulary-after.json) checks sixteen actual
+word popups and all four vocabulary-list views, including the genuinely negative
+`ἀδύνατον`. The dictionary sources are listed in [the source notes](sources.md#possibility-vocabulary-correction).
+This focused correction does not claim an independent philological review of
+every note in the course.

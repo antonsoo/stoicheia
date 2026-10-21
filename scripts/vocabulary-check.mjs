@@ -19,7 +19,8 @@ for (const [name, engine] of [
   const browser = await engine.launch();
   try {
     for (const width of [1440, 375]) {
-      const page = await browser.newPage({ viewport: { width, height: 900 } });
+      const context = await browser.newContext({ viewport: { width, height: 900 } });
+      const page = await context.newPage();
       const receipt = { browser: name, width, forms: [], errors: [] };
       page.on("pageerror", (e) => receipt.errors.push(String(e)));
       for (const [step, form, heading, meaning] of [
@@ -68,7 +69,7 @@ for (const [name, engine] of [
       assert.ok(dimensions.width <= dimensions.viewport + 1);
       assert.deepEqual(receipt.errors, []);
       report.configurations.push(receipt);
-      await page.close();
+      await context.close();
     }
   } finally {
     await browser.close();
