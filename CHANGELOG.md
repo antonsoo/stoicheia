@@ -64,3 +64,11 @@
 - Offer an explicit reload when another edition replaces an already-open tab,
   preserving the shared proposition, step and geometric choices.
 - Reset proposition-specific exploration choices when opening another lesson.
+
+## Exact offline resources · 2026-10-21
+
+- Reproduce HTTP 200 responses that cache an older entry page or a different
+  printed scan while the reader incorrectly promises readiness.
+- Require the expected SHA-256 for each precached response before activation.
+- Recover from failed first installations by registering again when no active
+  worker remains; keep existing-edition update and explicit reload behaviour.

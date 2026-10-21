@@ -91,7 +91,9 @@ on the same port; stop the development server before starting the preview.
   HTTPS or localhost and a browser that permits service workers. Development mode
   deliberately does not install an offline worker. Readiness is checked against
   the edition currently open; an older active worker cannot certify a newer
-  course. An open tab offers a reload when a different edition takes control.
+  course. Each precached file must also match its build-time SHA-256 before
+  the worker activates. An open tab offers a reload when a different edition
+  takes control.
 
 ![The Greek and Latin passage on a 375px screen](docs/assets/phone-passage.png)
 
@@ -231,6 +233,12 @@ reloaded the older six-proposition course offline. The fix checks the controllin
 edition and its complete file inventory. Delayed and failed downloads, recovery,
 source-image bytes and updates to an already-open tab are exercised in real
 Chromium and Firefox sessions.
+
+A [mixed-response review](docs/mixed-edition.md) also reproduces successful HTTP
+responses containing an older entry page or the wrong source scan. The install
+now verifies each file’s bytes before activation and recovers after a failed
+first installation. The review retains the blank-reader and wrong-page failures,
+corrected offline reloads and the clean-build evidence.
 
 ## Accuracy and limitations
 

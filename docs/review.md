@@ -200,3 +200,9 @@ The public HTTPS clone was updated to `306bae294ba8de25dfa0cefdd88b0d89dc11d84b`
 installed again with Node 24.22.0, and run through the documented development
 quickstart in both browsers. GitHub Pages serves the reviewed `gh-pages` branch.
 These records make no remote CI or package registry release claim.
+
+The subsequent [file-integrity review](mixed-edition.md) records a further
+repair: precached responses must match their expected bytes before activation.
+It retains controlled blank-reader and wrong-source-page failures, first-install
+recovery and separate clean-build/browser evidence. The course text, geometric
+calculations and printing implementation are unchanged by that repair.

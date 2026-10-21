@@ -1,0 +1,23 @@
+{
+  "scope": "Fresh Git export and local browser validation of the offline file-integrity repair; public deployment recorded separately",
+  "sourceCommit": "40516a9cc4b667e873eef539fb20fcb6edf3239c",
+  "node": "v24.22.0",
+  "buildInputsSha256": "0841d640bf72616b369288b1e235776e491249df7fe8ffa23735e70333822e73",
+  "buildInputsMatchingReviewCheckout": 58,
+  "commands": {
+    "npm ci": "passed in a fresh Git export",
+    "npm run check": "lint, strict typecheck, 22 checks and production build passed",
+    "npm run test:browser": "85 steps in each of four browser/viewport configurations; 120 accessibility audits; 36 exact served-file matches",
+    "node scripts/mixed-edition-check.mjs PREVIOUS_DIST dist": "both HTTP 200 substitutions rejected; recovery and exact offline entry/source bytes passed in Chromium and Firefox",
+    "node scripts/offline-upgrade-check.mjs PREVIOUS_DIST dist": "held and failed source downloads from the six-proposition edition, recovery and origin-disabled reload passed in both browsers",
+    "node scripts/offline-tabs-check.mjs TEN_PROPOSITION_DIST dist docs/mixed-edition-tabs.json": "published ten-proposition build to repaired build; explicit reload and offline reading state passed in both browsers"
+  },
+  "productionInputChangesSinceCourseReview": ["src/offline.ts", "vite.config.ts"],
+  "unchangedEvidence": "Geometry, aligned text, styles and print implementation are unchanged from ab098e7e389e4ff0af8bfb4494d08764c87fea0e. The independent mathematical oracles and native print records remain in docs/build-verification.json.",
+  "browserReceipt": "docs/mixed-edition-browser.json",
+  "mixedResponseReceipt": "docs/mixed-edition-verification.json",
+  "olderEditionReceipt": "docs/mixed-edition-upgrade.json",
+  "twoTabReceipt": "docs/mixed-edition-tabs.json",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/"
+}

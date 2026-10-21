@@ -1,0 +1,69 @@
+{
+  "scope": "Controlled mixed HTTP 200 responses during installation, not an observed public-host incident",
+  "phase": "corrected after",
+  "workerSha256": "6f242bb864da732eb3d909066f7928b174f674b12ff437f889599074f8bf842e",
+  "substitutions": {
+    "index": {
+      "expectedSha256": "fe26bf134652a1aeffaed178eafe3e0f22539be90474c4b0a6e00af0001d0bbf",
+      "receivedSha256": "4e212d2cb023c587125719dbf80aa20aeee5568e079ba7c593dac8308b380cb6"
+    },
+    "source": {
+      "expectedSha256": "78c48ad097ea261328c143863dc9febeadc3070b60a1bfec288b2d6e55caf931",
+      "receivedSha256": "c28d31907a99fe1b0e0556cb3e284b30418aed66cfa991a8d235409f356cc0bd"
+    }
+  },
+  "configurations": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "substitution": "index",
+      "substitutions": 1,
+      "status": "This edition could not be saved offline. Keep this tab open to continue reading.",
+      "recoveredAfterCorrectResponses": true,
+      "offlineReloadFromWorker": true,
+      "offlineIndexSha256": "fe26bf134652a1aeffaed178eafe3e0f22539be90474c4b0a6e00af0001d0bbf",
+      "offlineSourceSha256": "78c48ad097ea261328c143863dc9febeadc3070b60a1bfec288b2d6e55caf931",
+      "sourcePageCorrect": true,
+      "pageErrors": []
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "substitution": "source",
+      "substitutions": 1,
+      "status": "This edition could not be saved offline. Keep this tab open to continue reading.",
+      "recoveredAfterCorrectResponses": true,
+      "offlineReloadFromWorker": true,
+      "offlineIndexSha256": "fe26bf134652a1aeffaed178eafe3e0f22539be90474c4b0a6e00af0001d0bbf",
+      "offlineSourceSha256": "78c48ad097ea261328c143863dc9febeadc3070b60a1bfec288b2d6e55caf931",
+      "sourcePageCorrect": true,
+      "pageErrors": []
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "substitution": "index",
+      "substitutions": 1,
+      "status": "This edition could not be saved offline. Keep this tab open to continue reading.",
+      "recoveredAfterCorrectResponses": true,
+      "offlineReloadFromWorker": true,
+      "offlineIndexSha256": "fe26bf134652a1aeffaed178eafe3e0f22539be90474c4b0a6e00af0001d0bbf",
+      "offlineSourceSha256": "78c48ad097ea261328c143863dc9febeadc3070b60a1bfec288b2d6e55caf931",
+      "sourcePageCorrect": true,
+      "pageErrors": []
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "substitution": "source",
+      "substitutions": 1,
+      "status": "This edition could not be saved offline. Keep this tab open to continue reading.",
+      "recoveredAfterCorrectResponses": true,
+      "offlineReloadFromWorker": true,
+      "offlineIndexSha256": "fe26bf134652a1aeffaed178eafe3e0f22539be90474c4b0a6e00af0001d0bbf",
+      "offlineSourceSha256": "78c48ad097ea261328c143863dc9febeadc3070b60a1bfec288b2d6e55caf931",
+      "sourcePageCorrect": true,
+      "pageErrors": []
+    }
+  ]
+}

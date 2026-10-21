@@ -73,3 +73,8 @@ node scripts/offline-tabs-check.mjs /path/to/current/dist /path/to/fixture/dist
 These checks cover the stated browser versions and controlled upgrade sequence.
 Browser storage can still be disabled or cleared. Source publication, hosted
 bytes and this offline behaviour are separate records.
+
+The subsequent [file-integrity review](mixed-edition.md) extends this boundary:
+every precached response must match its expected SHA-256 before activation. It
+reproduces successful HTTP responses containing an older entry page or a
+different source scan, and checks recovery from a failed first installation.
