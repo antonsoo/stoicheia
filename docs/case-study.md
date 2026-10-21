@@ -120,3 +120,19 @@ word popups and all four vocabulary-list views, including the genuinely negative
 `ἀδύνατον`. The dictionary sources are listed in [the source notes](sources.md#possibility-vocabulary-correction).
 This focused correction does not claim an independent philological review of
 every note in the course.
+
+## Published result
+
+The reviewed build was published from Pages commit
+`0b9abfd80754c5cbb18c5d2d95a92e2d146e459e`. The
+[public file and reader receipt](case-study-publication.json) matched all 36
+served files to the fresh build and exercised the hosted course in both engines
+at both widths. The separate [direct HTTPS case-study journeys](case-study-hosted.json)
+opened the interior link, verified its visible focused heading, switched all
+placements, opened both printed source pages and downloaded an HTML study whose
+bytes matched the locally reviewed example in all four configurations.
+
+The [public vocabulary receipt](vocabulary-publication.json) repeats all sixteen
+positive/negative word checks over HTTPS, with no reported page errors or
+accessibility violations. This establishes that the correction reached the live
+reader, rather than merely changing the local source.

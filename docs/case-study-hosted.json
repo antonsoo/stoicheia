@@ -1,0 +1,59 @@
+{
+  "scope": "Direct HTTPS case-study journeys; not a local proxy",
+  "url": "https://antonsoo.github.io/stoicheia/",
+  "checkedAt": "2026-10-21T23:49:33.489Z",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "errors": [],
+      "externalRequests": [],
+      "landing": {
+        "top": 102.546875,
+        "bottom": 137.640625,
+        "viewport": 900,
+        "focus": "case-heading"
+      },
+      "downloadSha256": "c1cecda1a4c3f86770e884c7b482a41c3e76fc767d2a610bf7e87fe4a1be793a"
+    },
+    {
+      "browser": "chromium",
+      "width": 375,
+      "errors": [],
+      "externalRequests": [],
+      "landing": {
+        "top": 144.9375,
+        "bottom": 199.53125,
+        "viewport": 900,
+        "focus": "case-heading"
+      },
+      "downloadSha256": "c1cecda1a4c3f86770e884c7b482a41c3e76fc767d2a610bf7e87fe4a1be793a"
+    },
+    {
+      "browser": "firefox",
+      "width": 1440,
+      "errors": [],
+      "externalRequests": [],
+      "landing": {
+        "top": 102.75,
+        "bottom": 137.85000610351562,
+        "viewport": 900,
+        "focus": "case-heading"
+      },
+      "downloadSha256": "c1cecda1a4c3f86770e884c7b482a41c3e76fc767d2a610bf7e87fe4a1be793a"
+    },
+    {
+      "browser": "firefox",
+      "width": 375,
+      "errors": [],
+      "externalRequests": [],
+      "landing": {
+        "top": 145.5,
+        "bottom": 200.10000610351562,
+        "viewport": 900,
+        "focus": "case-heading"
+      },
+      "downloadSha256": "c1cecda1a4c3f86770e884c7b482a41c3e76fc767d2a610bf7e87fe4a1be793a"
+    }
+  ]
+}
