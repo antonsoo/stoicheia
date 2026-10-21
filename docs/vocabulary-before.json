@@ -1,0 +1,34 @@
+{
+  "scope": "Observed on the public Stoicheia reader before the positive/negative vocabulary correction",
+  "checkedAt": "2026-10-21",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "sourceUrl": "https://antonsoo.github.io/stoicheia/#p=7&s=0&size=180&r=0.65&a=25&side=1&m=0&t=1.2&q=12&v=0&k=0.55",
+      "form": "δυνατόν",
+      "meaning": "impossible",
+      "heading": "ἀδύνατος"
+    },
+    {
+      "browser": "chromium",
+      "sourceUrl": "https://antonsoo.github.io/stoicheia/#p=7&s=0&size=180&r=0.65&a=25&side=1&m=0&t=1.2&q=12&v=0&k=0.55",
+      "form": "potest",
+      "meaning": "impossible",
+      "heading": "ἀδύνατος"
+    },
+    {
+      "browser": "firefox",
+      "sourceUrl": "https://antonsoo.github.io/stoicheia/#p=7&s=0&size=180&r=0.65&a=25&side=1&m=0&t=1.2&q=12&v=0&k=0.55",
+      "form": "δυνατόν",
+      "meaning": "impossible",
+      "heading": "ἀδύνατος"
+    },
+    {
+      "browser": "firefox",
+      "sourceUrl": "https://antonsoo.github.io/stoicheia/#p=7&s=0&size=180&r=0.65&a=25&side=1&m=0&t=1.2&q=12&v=0&k=0.55",
+      "form": "potest",
+      "meaning": "impossible",
+      "heading": "ἀδύνατος"
+    }
+  ]
+}

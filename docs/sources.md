@@ -212,3 +212,21 @@ boundary point is computed by a line-circle intersection and uses whole/part of
 a segment, without invoking I.5 on a degenerate triangle. Reflection and
 coincidence each remove a different hypothesis. The fixed numerical family and
 its limited scope are stated in the interface and saved studies.
+
+
+## Possibility vocabulary correction
+
+The positive forms `δυνατόν` and `potest` were incorrectly assigned to the
+“impossible” vocabulary entry. The popup now distinguishes positive `δυνατός`
+from negative `ἀδύνατος`. Latin `potest` is a form of `possum`, “can”; the separate
+`non` in `fieri non potest` supplies negation. The source text and its translation
+were already correct and are unchanged. This is a lexical correction, not a
+claim to parse the full sentence automatically.
+
+The distinction was checked against the LSJ entries for
+[δυνατός](https://atlas.perseus.tufts.edu/dictionaries/entry/urn%3Acite2%3Ascaife-viewer%3Adictionaries.v1%3Alsj-n28588/)
+and [ἀδύνατος](https://atlas.perseus.tufts.edu/dictionaries/entry/urn%3Acite2%3Ascaife-viewer%3Adictionaries.v1%3Alsj-n1522/),
+and Lewis and Short's
+[possum](https://atlas.perseus.tufts.edu/dictionaries/entry/urn%3Acite2%3Ascaife-viewer%3Adictionary-entries.atlas_v1%3Alat.ls.perseus-eng2-n37193/),
+as provided by the Perseus Digital Library. The definitions and notes in the
+reader are newly written, not copied dictionary entries.

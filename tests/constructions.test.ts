@@ -155,3 +155,10 @@ test("annotation escapes markup rather than turning external text into HTML", ()
   assert.match(text, /&lt;img/);
   assert.match(text, /&amp;/);
 });
+
+test("possibility and impossibility do not share a misleading vocabulary meaning", () => {
+  assert.equal(lookup("δυνατόν")?.id, "possible");
+  assert.equal(lookup("δυνατὸν")?.id, "possible");
+  assert.equal(lookup("potest")?.id, "possible");
+  assert.equal(lookup("ἀδύνατον")?.id, "impossible");
+});

@@ -2,7 +2,7 @@
 
 Stoicheia connects the complete Greek and Heiberg Latin texts of Euclid I.1–10
 with a new English reading, calculated diagrams and the justification for each
-step. The course has 85 aligned steps, 36 vocabulary entries, 13 foundation
+step. The course has 85 aligned steps, 37 vocabulary entries, 13 foundation
 statements and 20 passage exercises. Twenty-eight printed pages can be inspected
 inside the reader, including when the production edition is offline.
 

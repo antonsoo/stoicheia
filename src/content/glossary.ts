@@ -10,6 +10,15 @@ export interface Gloss {
 
 export const glossary: Gloss[] = [
   {
+    id: "possible",
+    greek: "δυνατός",
+    latin: "possum",
+    transliteration: "dynatos",
+    meaning: "possible; able / can",
+    note: "δυνατόν means ‘possible’ in εἰ … δυνατόν, ‘if possible’. Latin potest, from possum, means ‘can’: si fieri potest, ‘if it can be done’. In fieri non potest, ‘it cannot be done’, non supplies the negation; potest itself still means ‘can’. Greek ἀδύνατον instead includes the negative prefix ἀ-.",
+    forms: ["δυνατόν", "potest"],
+  },
+  {
     id: "bisect",
     greek: "δίχα τεμεῖν",
     latin: "in duas partes aequales diuidere",
@@ -43,7 +52,7 @@ export const glossary: Gloss[] = [
     transliteration: "adynatos",
     meaning: "impossible",
     note: "The prefix ἀ- negates δυνατός, possible. I.7 begins εἰ … δυνατόν, if possible, then ends the contradiction with ἀδύνατον. Latin uses potest with an infinitive and adds non to deny possibility.",
-    forms: ["ἀδύνατον", "δυνατόν", "potest"],
+    forms: ["ἀδύνατον"],
   },
   {
     id: "diverge",

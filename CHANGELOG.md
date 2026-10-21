@@ -83,3 +83,10 @@
 - Connect the repair to I.5's Greek and Latin statement, with original scans.
 - Save complete standalone case studies and share the actual placement and
   argument step, landing directly at the exploration.
+
+
+## Positive and negative vocabulary · 2026-10-21
+
+- Correct the published vocabulary popup that labelled δυνατόν and potest as
+  “impossible.” Give positive possibility its own entry, retain ἀδύνατον as
+  impossible, and explain the separate Latin negation non.

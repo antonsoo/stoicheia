@@ -13,7 +13,7 @@ it. Stoicheia connects both: change the givens, follow the command on the plate,
 read the two source languages, and ask what established the equality.
 
 The opening course is **Book I, propositions 1–10**. It includes the complete
-statements and proofs, divided into 85 aligned reading steps, with 36 selected
+statements and proofs, divided into 85 aligned reading steps, with 37 selected
 vocabulary entries, thirteen foundation statements and twenty passage-based
 reading exercises. It is intended for an English-speaking reader who knows basic
 geometry and is beginning Greek or Latin.
