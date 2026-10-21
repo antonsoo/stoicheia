@@ -154,6 +154,12 @@ audits and exact HTTP/build
 byte comparisons. These are local-build results; they establish no public
 deployment or remote CI result.
 
+The development quickstart is checked separately with `npm run test:dev` while
+`npm run dev` is running. Its [receipt](docs/quickstart-verification.json) checks
+the actual styled layout and navigation in Chromium and Firefox. CSS is loaded
+through an HTML stylesheet link so Vite development works with the same
+`style-src 'self'` policy as the production site.
+
 ## Accuracy and limitations
 
 - This is I.1–3, not the whole _Elements_. The construction tools, translations

@@ -20,9 +20,21 @@ jobs:
       - run: npm run check
       - run: npm run verify:oracle
       - run: npx playwright install --with-deps chromium firefox
+      - name: Verify the development quickstart
+        run: |
+          node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 4328 --strictPort > /tmp/stoicheia-dev.log 2>&1 &
+          dev_pid=$!
+          trap 'kill "$dev_pid"' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:4328/stoicheia/ > /dev/null; then
+              break
+            fi
+            sleep 1
+          done
+          npm run test:dev -- http://127.0.0.1:4328/stoicheia/
       - name: Verify the production reader in both browsers
         run: |
-          npm run preview > /tmp/stoicheia-preview.log 2>&1 &
+          node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4327 --strictPort > /tmp/stoicheia-preview.log 2>&1 &
           preview_pid=$!
           trap 'kill "$preview_pid"' EXIT
           for attempt in $(seq 1 30); do

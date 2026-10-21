@@ -1,4 +1,3 @@
-import "./style.css";
 import { glossary } from "./content/glossary";
 import type { Passage } from "./content/lessons";
 import { lessons, reasons } from "./content/lessons";
