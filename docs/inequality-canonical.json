@@ -1,0 +1,620 @@
+{
+  "schemaVersion": 1,
+  "node": "v26.7.0",
+  "requestTimeoutMs": 10000,
+  "retryWindowMs": 120000,
+  "pollIntervalMs": 5000,
+  "concurrency": 6,
+  "baseURL": "https://antonsoo.github.io/stoicheia/",
+  "state": "verified",
+  "attempts": 4,
+  "startedAtUtc": "2026-10-22T07:45:12.286Z",
+  "checkedAtUtc": "2026-10-22T07:45:31.749Z",
+  "buildManifestSha256": "d78e13a5f4c235966cfaf6812300b48fa5516e3cee4cb8516103c0bdef40e3b6",
+  "expectedFileCount": 58,
+  "checkedFileCount": 58,
+  "verifiedFileCount": 58,
+  "rootBefore": {
+    "path": "index.html",
+    "bytes": 1303,
+    "sha256": "939916ab0746be6a2ab9c64e0b801e4d7d3889f23f92749e314108bb6368bd72",
+    "url": "https://antonsoo.github.io/stoicheia/",
+    "httpStatus": 200,
+    "observedBytes": 1303,
+    "observedSha256": "939916ab0746be6a2ab9c64e0b801e4d7d3889f23f92749e314108bb6368bd72",
+    "state": "verified"
+  },
+  "rootAfter": {
+    "path": "index.html",
+    "bytes": 1303,
+    "sha256": "939916ab0746be6a2ab9c64e0b801e4d7d3889f23f92749e314108bb6368bd72",
+    "url": "https://antonsoo.github.io/stoicheia/",
+    "httpStatus": 200,
+    "observedBytes": 1303,
+    "observedSha256": "939916ab0746be6a2ab9c64e0b801e4d7d3889f23f92749e314108bb6368bd72",
+    "state": "verified"
+  },
+  "files": [
+    {
+      "path": "assets/index-DHpr94KM.css",
+      "bytes": 32245,
+      "sha256": "c70003cb00bb43e4512f3eddcebb5605ba1233ec8f34912bc9fc2e108cf756f6",
+      "url": "https://antonsoo.github.io/stoicheia/assets/index-DHpr94KM.css",
+      "httpStatus": 200,
+      "observedBytes": 32245,
+      "observedSha256": "c70003cb00bb43e4512f3eddcebb5605ba1233ec8f34912bc9fc2e108cf756f6",
+      "state": "verified"
+    },
+    {
+      "path": "assets/index-ddvbrr4P.js",
+      "bytes": 361920,
+      "sha256": "f2e7554fe2c2b748f81cf0f765e57f24af6afbf6ac7f000ec90f88da0d3174b1",
+      "url": "https://antonsoo.github.io/stoicheia/assets/index-ddvbrr4P.js",
+      "httpStatus": 200,
+      "observedBytes": 361920,
+      "observedSha256": "f2e7554fe2c2b748f81cf0f765e57f24af6afbf6ac7f000ec90f88da0d3174b1",
+      "state": "verified"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 272,
+      "sha256": "c8cc87e2546804a2300df9c859c6eea024bab87a031dc81c276a10882df4968a",
+      "url": "https://antonsoo.github.io/stoicheia/favicon.svg",
+      "httpStatus": 200,
+      "observedBytes": 272,
+      "observedSha256": "c8cc87e2546804a2300df9c859c6eea024bab87a031dc81c276a10882df4968a",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/NotoSerif-Regular.ttf",
+      "bytes": 444064,
+      "sha256": "5473d2e43bdd018ee124a4addba8091fd0a29894b121cbb741023af6549662b6",
+      "url": "https://antonsoo.github.io/stoicheia/fonts/NotoSerif-Regular.ttf",
+      "httpStatus": 200,
+      "observedBytes": 444064,
+      "observedSha256": "5473d2e43bdd018ee124a4addba8091fd0a29894b121cbb741023af6549662b6",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/OFL.txt",
+      "bytes": 4396,
+      "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+      "url": "https://antonsoo.github.io/stoicheia/fonts/OFL.txt",
+      "httpStatus": 200,
+      "observedBytes": 4396,
+      "observedSha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+      "state": "verified"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1303,
+      "sha256": "939916ab0746be6a2ab9c64e0b801e4d7d3889f23f92749e314108bb6368bd72",
+      "url": "https://antonsoo.github.io/stoicheia/index.html",
+      "httpStatus": 200,
+      "observedBytes": 1303,
+      "observedSha256": "939916ab0746be6a2ab9c64e0b801e4d7d3889f23f92749e314108bb6368bd72",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-002.jpg",
+      "bytes": 245340,
+      "sha256": "f79fd2aa7108f890f6942db094acd45136cf15e978df1097403c2b9ec11695a4",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-002.jpg",
+      "httpStatus": 200,
+      "observedBytes": 245340,
+      "observedSha256": "f79fd2aa7108f890f6942db094acd45136cf15e978df1097403c2b9ec11695a4",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-003.jpg",
+      "bytes": 234963,
+      "sha256": "5ee0f951721c79776510376fdc8bf28c93b66ca21ed41e60f780ef187c90e214",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-003.jpg",
+      "httpStatus": 200,
+      "observedBytes": 234963,
+      "observedSha256": "5ee0f951721c79776510376fdc8bf28c93b66ca21ed41e60f780ef187c90e214",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-004.jpg",
+      "bytes": 320270,
+      "sha256": "b874eac6b40c554206427557ce221770b7b2c1b50afa17087fa6131282db8bc4",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-004.jpg",
+      "httpStatus": 200,
+      "observedBytes": 320270,
+      "observedSha256": "b874eac6b40c554206427557ce221770b7b2c1b50afa17087fa6131282db8bc4",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-005.jpg",
+      "bytes": 316399,
+      "sha256": "7f570bfd4809b2474674fbbfb62610f0b45869d4374cf277d5807deca361b772",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-005.jpg",
+      "httpStatus": 200,
+      "observedBytes": 316399,
+      "observedSha256": "7f570bfd4809b2474674fbbfb62610f0b45869d4374cf277d5807deca361b772",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-006.jpg",
+      "bytes": 320634,
+      "sha256": "b6b371b3e5eb13f4305dbf073e5f15ce178018a8ad8557df99431410ce6a69ae",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-006.jpg",
+      "httpStatus": 200,
+      "observedBytes": 320634,
+      "observedSha256": "b6b371b3e5eb13f4305dbf073e5f15ce178018a8ad8557df99431410ce6a69ae",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-007.jpg",
+      "bytes": 334398,
+      "sha256": "c9efe81728c69d36b95838b8d80060eae8a0d316fb682a722a3273eb8ce1f3ea",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-007.jpg",
+      "httpStatus": 200,
+      "observedBytes": 334398,
+      "observedSha256": "c9efe81728c69d36b95838b8d80060eae8a0d316fb682a722a3273eb8ce1f3ea",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-008.jpg",
+      "bytes": 273136,
+      "sha256": "5e7987d0e9686891261411810a828bd6ace64c6a21ea92600fdedbb2c6078a17",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-008.jpg",
+      "httpStatus": 200,
+      "observedBytes": 273136,
+      "observedSha256": "5e7987d0e9686891261411810a828bd6ace64c6a21ea92600fdedbb2c6078a17",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-009.jpg",
+      "bytes": 291149,
+      "sha256": "8844849fadfddacf9ddd2692a5917003f96a3b9a122825a891a1931d0580e75e",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-009.jpg",
+      "httpStatus": 200,
+      "observedBytes": 291149,
+      "observedSha256": "8844849fadfddacf9ddd2692a5917003f96a3b9a122825a891a1931d0580e75e",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-010.jpg",
+      "bytes": 276612,
+      "sha256": "8d1db0bc4b9a8b93b72633ac544f16cdd7e03aef8111d5e68f25d192febe1dbd",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-010.jpg",
+      "httpStatus": 200,
+      "observedBytes": 276612,
+      "observedSha256": "8d1db0bc4b9a8b93b72633ac544f16cdd7e03aef8111d5e68f25d192febe1dbd",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-011.jpg",
+      "bytes": 279836,
+      "sha256": "f23df1af363dded2831f7e7f6fbea20827c1e9d650faeb03bb9995489ae93a72",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-011.jpg",
+      "httpStatus": 200,
+      "observedBytes": 279836,
+      "observedSha256": "f23df1af363dded2831f7e7f6fbea20827c1e9d650faeb03bb9995489ae93a72",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-012.jpg",
+      "bytes": 289774,
+      "sha256": "e5cc7d6bf3a2ec8dc3bcbf88803b8ee9e3d0315ae29221ed7d2fe9768356c2fd",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-012.jpg",
+      "httpStatus": 200,
+      "observedBytes": 289774,
+      "observedSha256": "e5cc7d6bf3a2ec8dc3bcbf88803b8ee9e3d0315ae29221ed7d2fe9768356c2fd",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-013.jpg",
+      "bytes": 291315,
+      "sha256": "49235a355d10656aba59db1464aaefe34f5836a32ca5f214955d7b064a39273d",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-013.jpg",
+      "httpStatus": 200,
+      "observedBytes": 291315,
+      "observedSha256": "49235a355d10656aba59db1464aaefe34f5836a32ca5f214955d7b064a39273d",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-014.jpg",
+      "bytes": 299613,
+      "sha256": "dc97350f09d7adca95cf3cc233cef8237da757ff4bd077c1b75390c8de3fb385",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-014.jpg",
+      "httpStatus": 200,
+      "observedBytes": 299613,
+      "observedSha256": "dc97350f09d7adca95cf3cc233cef8237da757ff4bd077c1b75390c8de3fb385",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-015.jpg",
+      "bytes": 271550,
+      "sha256": "52e2aa1b336c6c88b3bf8a3ff1da916f37df2afe4de5d29d3659b13254e18a2c",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-015.jpg",
+      "httpStatus": 200,
+      "observedBytes": 271550,
+      "observedSha256": "52e2aa1b336c6c88b3bf8a3ff1da916f37df2afe4de5d29d3659b13254e18a2c",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-016.jpg",
+      "bytes": 295019,
+      "sha256": "52d0dd0e02d4088b80b547838d47621efd1b23784f33b62482216a71b0927afc",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-016.jpg",
+      "httpStatus": 200,
+      "observedBytes": 295019,
+      "observedSha256": "52d0dd0e02d4088b80b547838d47621efd1b23784f33b62482216a71b0927afc",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-017.jpg",
+      "bytes": 283679,
+      "sha256": "ff29baed3f8686d2d55b10131a85953cfec56f2388be0053e513c6ad362cc773",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-017.jpg",
+      "httpStatus": 200,
+      "observedBytes": 283679,
+      "observedSha256": "ff29baed3f8686d2d55b10131a85953cfec56f2388be0053e513c6ad362cc773",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-018.jpg",
+      "bytes": 320531,
+      "sha256": "5db4489cfd168fb06c3593125ce62bd67b2d097b2146d9eaa655db878deaaa69",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-018.jpg",
+      "httpStatus": 200,
+      "observedBytes": 320531,
+      "observedSha256": "5db4489cfd168fb06c3593125ce62bd67b2d097b2146d9eaa655db878deaaa69",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-019.jpg",
+      "bytes": 255868,
+      "sha256": "6cf9dc8ffa51ab9cad0cd0c0b89d81d6bf11b20dfe605dc4e6a7c552efc3ecda",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-019.jpg",
+      "httpStatus": 200,
+      "observedBytes": 255868,
+      "observedSha256": "6cf9dc8ffa51ab9cad0cd0c0b89d81d6bf11b20dfe605dc4e6a7c552efc3ecda",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-020.jpg",
+      "bytes": 293742,
+      "sha256": "a8755a2c4cd74bb7de6d77da6c18bc4bbccb9742dd71feadb24ec2682a82eb3b",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-020.jpg",
+      "httpStatus": 200,
+      "observedBytes": 293742,
+      "observedSha256": "a8755a2c4cd74bb7de6d77da6c18bc4bbccb9742dd71feadb24ec2682a82eb3b",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-021.jpg",
+      "bytes": 291018,
+      "sha256": "3412b172ffa4825a145107528219d3e9816aa007569326c05afa76c7340b24b0",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-021.jpg",
+      "httpStatus": 200,
+      "observedBytes": 291018,
+      "observedSha256": "3412b172ffa4825a145107528219d3e9816aa007569326c05afa76c7340b24b0",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-022.jpg",
+      "bytes": 293560,
+      "sha256": "9f1e3d75f5d7b78fba0a4ae1c27ea786b1dab1652545215512203604eb158019",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-022.jpg",
+      "httpStatus": 200,
+      "observedBytes": 293560,
+      "observedSha256": "9f1e3d75f5d7b78fba0a4ae1c27ea786b1dab1652545215512203604eb158019",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-023.jpg",
+      "bytes": 278117,
+      "sha256": "90ac8cd3b7c27a32078961e3a3a6413133fece7989ce3d7841a28c1cfc948afe",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-023.jpg",
+      "httpStatus": 200,
+      "observedBytes": 278117,
+      "observedSha256": "90ac8cd3b7c27a32078961e3a3a6413133fece7989ce3d7841a28c1cfc948afe",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-024.jpg",
+      "bytes": 306364,
+      "sha256": "6a0b4031ea7536cf2c506e0164841ec388db0e69171d4851d771a5f96c3aa9b8",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-024.jpg",
+      "httpStatus": 200,
+      "observedBytes": 306364,
+      "observedSha256": "6a0b4031ea7536cf2c506e0164841ec388db0e69171d4851d771a5f96c3aa9b8",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-025.jpg",
+      "bytes": 293436,
+      "sha256": "dcc612163f25b70db7f0cd45536506bbe4fe8fad1c93a692f3d2700e0e8747ed",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-025.jpg",
+      "httpStatus": 200,
+      "observedBytes": 293436,
+      "observedSha256": "dcc612163f25b70db7f0cd45536506bbe4fe8fad1c93a692f3d2700e0e8747ed",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-026.jpg",
+      "bytes": 293850,
+      "sha256": "e8e28946e679e899e2269397536f70cadda8bd139e2903be9ba472ecc1d31051",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-026.jpg",
+      "httpStatus": 200,
+      "observedBytes": 293850,
+      "observedSha256": "e8e28946e679e899e2269397536f70cadda8bd139e2903be9ba472ecc1d31051",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-027.jpg",
+      "bytes": 273902,
+      "sha256": "451b57f13004a6d271d1e06a74e05b4d38e9bb06f5ad89b8d02a628d2f669139",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-027.jpg",
+      "httpStatus": 200,
+      "observedBytes": 273902,
+      "observedSha256": "451b57f13004a6d271d1e06a74e05b4d38e9bb06f5ad89b8d02a628d2f669139",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-028.jpg",
+      "bytes": 296351,
+      "sha256": "76f2906d1259b6dcffecee73d1519f133d58790e051c5759780526ad65fc827c",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-028.jpg",
+      "httpStatus": 200,
+      "observedBytes": 296351,
+      "observedSha256": "76f2906d1259b6dcffecee73d1519f133d58790e051c5759780526ad65fc827c",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-029.jpg",
+      "bytes": 292126,
+      "sha256": "ef2054064c3b605004d0046476eadfeecb35f30ccefa0ede16dbaec135dc88be",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-029.jpg",
+      "httpStatus": 200,
+      "observedBytes": 292126,
+      "observedSha256": "ef2054064c3b605004d0046476eadfeecb35f30ccefa0ede16dbaec135dc88be",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-030.jpg",
+      "bytes": 268412,
+      "sha256": "c28d31907a99fe1b0e0556cb3e284b30418aed66cfa991a8d235409f356cc0bd",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-030.jpg",
+      "httpStatus": 200,
+      "observedBytes": 268412,
+      "observedSha256": "c28d31907a99fe1b0e0556cb3e284b30418aed66cfa991a8d235409f356cc0bd",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-031.jpg",
+      "bytes": 235508,
+      "sha256": "78c48ad097ea261328c143863dc9febeadc3070b60a1bfec288b2d6e55caf931",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-031.jpg",
+      "httpStatus": 200,
+      "observedBytes": 235508,
+      "observedSha256": "78c48ad097ea261328c143863dc9febeadc3070b60a1bfec288b2d6e55caf931",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-032.jpg",
+      "bytes": 293027,
+      "sha256": "b2fd3e753c7f83c6569a5e8fe34b1ca05b202910f276e8c44af94ab1ea880f15",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-032.jpg",
+      "httpStatus": 200,
+      "observedBytes": 293027,
+      "observedSha256": "b2fd3e753c7f83c6569a5e8fe34b1ca05b202910f276e8c44af94ab1ea880f15",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-033.jpg",
+      "bytes": 240346,
+      "sha256": "919be729e8ccf36913738be4acb247f6f86e68e9e2e4c986562ea2439705d510",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-033.jpg",
+      "httpStatus": 200,
+      "observedBytes": 240346,
+      "observedSha256": "919be729e8ccf36913738be4acb247f6f86e68e9e2e4c986562ea2439705d510",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-034.jpg",
+      "bytes": 317039,
+      "sha256": "338c9e40d5890b26a2df046f9355083091ee685f0496e0f9320c93cb2a1dea6d",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-034.jpg",
+      "httpStatus": 200,
+      "observedBytes": 317039,
+      "observedSha256": "338c9e40d5890b26a2df046f9355083091ee685f0496e0f9320c93cb2a1dea6d",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-035.jpg",
+      "bytes": 311358,
+      "sha256": "6acd2d3370693574907efb7ef8eac732fd38629671edfee664fe7abebfe3f9f7",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-035.jpg",
+      "httpStatus": 200,
+      "observedBytes": 311358,
+      "observedSha256": "6acd2d3370693574907efb7ef8eac732fd38629671edfee664fe7abebfe3f9f7",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-036.jpg",
+      "bytes": 311392,
+      "sha256": "31bdf69d9a74b6ecd990f91ffd0d54c4b8030ba28ae773dac8baa8cd90994e3d",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-036.jpg",
+      "httpStatus": 200,
+      "observedBytes": 311392,
+      "observedSha256": "31bdf69d9a74b6ecd990f91ffd0d54c4b8030ba28ae773dac8baa8cd90994e3d",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-037.jpg",
+      "bytes": 299144,
+      "sha256": "5904bc4e6e25e7b8d338beed7a22f627fd54816b4479ce9738af5cd46e572360",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-037.jpg",
+      "httpStatus": 200,
+      "observedBytes": 299144,
+      "observedSha256": "5904bc4e6e25e7b8d338beed7a22f627fd54816b4479ce9738af5cd46e572360",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-038.jpg",
+      "bytes": 309829,
+      "sha256": "751dca1a10215e5ebd68f8d741d70b44b90876ee6c5379dcb2ac973246aa1f1e",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-038.jpg",
+      "httpStatus": 200,
+      "observedBytes": 309829,
+      "observedSha256": "751dca1a10215e5ebd68f8d741d70b44b90876ee6c5379dcb2ac973246aa1f1e",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-039.jpg",
+      "bytes": 289614,
+      "sha256": "9f529f8bdf0cf224109f048f7dfdf19ef7eb65b0672d5d99997fef21f5a6a053",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-039.jpg",
+      "httpStatus": 200,
+      "observedBytes": 289614,
+      "observedSha256": "9f529f8bdf0cf224109f048f7dfdf19ef7eb65b0672d5d99997fef21f5a6a053",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-040.jpg",
+      "bytes": 312489,
+      "sha256": "a8d8b9bfbeeec9642c118747e1085ed75e739014ec8dcb58e113a835d7c18f08",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-040.jpg",
+      "httpStatus": 200,
+      "observedBytes": 312489,
+      "observedSha256": "a8d8b9bfbeeec9642c118747e1085ed75e739014ec8dcb58e113a835d7c18f08",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-041.jpg",
+      "bytes": 269126,
+      "sha256": "436641c11669ae64578231c71c839f5059a22e65a46b7522d9839ab1a77e15fa",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-041.jpg",
+      "httpStatus": 200,
+      "observedBytes": 269126,
+      "observedSha256": "436641c11669ae64578231c71c839f5059a22e65a46b7522d9839ab1a77e15fa",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-042.jpg",
+      "bytes": 325998,
+      "sha256": "6cde0d83df61a583cab4bc17305d5bd551395c5406ee190ebc650f9d0e83c409",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-042.jpg",
+      "httpStatus": 200,
+      "observedBytes": 325998,
+      "observedSha256": "6cde0d83df61a583cab4bc17305d5bd551395c5406ee190ebc650f9d0e83c409",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-043.jpg",
+      "bytes": 327481,
+      "sha256": "8d27f77fe05da20bebbf5bb5cbcdb229932bcebb3f3855934531e9e7304d7176",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-043.jpg",
+      "httpStatus": 200,
+      "observedBytes": 327481,
+      "observedSha256": "8d27f77fe05da20bebbf5bb5cbcdb229932bcebb3f3855934531e9e7304d7176",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-044.jpg",
+      "bytes": 316627,
+      "sha256": "082d3f6b6b221c85229f8660763ee09eb9a5fcba3760dbd31777059ea7c79cde",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-044.jpg",
+      "httpStatus": 200,
+      "observedBytes": 316627,
+      "observedSha256": "082d3f6b6b221c85229f8660763ee09eb9a5fcba3760dbd31777059ea7c79cde",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-045.jpg",
+      "bytes": 276417,
+      "sha256": "384d66370d556bdd610c345d2cec896e3bd614fad598954953a3fa54a9f31670",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-045.jpg",
+      "httpStatus": 200,
+      "observedBytes": 276417,
+      "observedSha256": "384d66370d556bdd610c345d2cec896e3bd614fad598954953a3fa54a9f31670",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-046.jpg",
+      "bytes": 300358,
+      "sha256": "acc7d9126f11df03278e5772ca2ec12593805e0c44ec2d674719f3176a0958a2",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-046.jpg",
+      "httpStatus": 200,
+      "observedBytes": 300358,
+      "observedSha256": "acc7d9126f11df03278e5772ca2ec12593805e0c44ec2d674719f3176a0958a2",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-047.jpg",
+      "bytes": 254496,
+      "sha256": "02116c7d22af5d58821c990285056e515e1406d275d8c9949104b7f8fb5beb7d",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-047.jpg",
+      "httpStatus": 200,
+      "observedBytes": 254496,
+      "observedSha256": "02116c7d22af5d58821c990285056e515e1406d275d8c9949104b7f8fb5beb7d",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-048.jpg",
+      "bytes": 301825,
+      "sha256": "a0589d5b60a437a5878dbe3cf56f659dcd9f0c663d405da3da9681e04b83a007",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-048.jpg",
+      "httpStatus": 200,
+      "observedBytes": 301825,
+      "observedSha256": "a0589d5b60a437a5878dbe3cf56f659dcd9f0c663d405da3da9681e04b83a007",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-049.jpg",
+      "bytes": 292825,
+      "sha256": "f5f312234a79fad5474d893c9d303d8023464b26e3b7a0a49350820663c0a7cb",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-049.jpg",
+      "httpStatus": 200,
+      "observedBytes": 292825,
+      "observedSha256": "f5f312234a79fad5474d893c9d303d8023464b26e3b7a0a49350820663c0a7cb",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-050.jpg",
+      "bytes": 297170,
+      "sha256": "be62d9a2e3f842f90a11fdd5975bc1ae5c5133f006ad9e4ef15972818b01bb67",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-050.jpg",
+      "httpStatus": 200,
+      "observedBytes": 297170,
+      "observedSha256": "be62d9a2e3f842f90a11fdd5975bc1ae5c5133f006ad9e4ef15972818b01bb67",
+      "state": "verified"
+    },
+    {
+      "path": "sources/heiberg-051.jpg",
+      "bytes": 267796,
+      "sha256": "fc9eb173b34a39f41195251ebff09faf213a89b654fac45f15d765bd2500d697",
+      "url": "https://antonsoo.github.io/stoicheia/sources/heiberg-051.jpg",
+      "httpStatus": 200,
+      "observedBytes": 267796,
+      "observedSha256": "fc9eb173b34a39f41195251ebff09faf213a89b654fac45f15d765bd2500d697",
+      "state": "verified"
+    },
+    {
+      "path": "sources/manifest.json",
+      "bytes": 15317,
+      "sha256": "4fcb301e1d9b965d32d753136285a32ad87b9c809cedc92028aaab39c06f9f65",
+      "url": "https://antonsoo.github.io/stoicheia/sources/manifest.json",
+      "httpStatus": 200,
+      "observedBytes": 15317,
+      "observedSha256": "4fcb301e1d9b965d32d753136285a32ad87b9c809cedc92028aaab39c06f9f65",
+      "state": "verified"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 9347,
+      "sha256": "6658fab42817f460190faf33c37fea8d1b0db5b12ea2bae9940b68659b2daac5",
+      "url": "https://antonsoo.github.io/stoicheia/sw.js",
+      "httpStatus": 200,
+      "observedBytes": 9347,
+      "observedSha256": "6658fab42817f460190faf33c37fea8d1b0db5b12ea2bae9940b68659b2daac5",
+      "state": "verified"
+    }
+  ],
+  "scope": "Compares canonical responses with this captured build inventory during the recorded pass. Extra hosted files, browser behavior, public source, registry releases and deployment provenance are not established."
+}

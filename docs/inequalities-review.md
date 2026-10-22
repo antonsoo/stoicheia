@@ -122,3 +122,11 @@ correction. The earlier diagram-focused receipt remains applicable to its
 recorded runtime; the correction changes one Greek spelling and recognizes
 that form in the vocabulary. The published-browser pass checks the final
 spelling as well as the new geometric workflows.
+
+
+Published on 22 October 2026 UTC. [All 58 canonical files and both entry
+aliases](inequality-canonical.json) match the final clean build. The
+[hosted browser review](inequality-hosted.json) completed four configurations,
+including the corrected `ἐλάττονές` popup, and reproduced the local download
+and screenshot bytes exactly. The [publication summary](inequality-publication.json)
+keeps source, Pages commit, artifact and browser evidence separate.

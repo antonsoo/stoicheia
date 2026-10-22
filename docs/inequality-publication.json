@@ -1,0 +1,23 @@
+{
+  "scope": "Published Git source, exact canonical artifact responses, and hosted browser behavior are separately verified. No remote CI result is inferred.",
+  "checkedAt": "2026-10-22T07:50:24.309990+00:00",
+  "runtimeSource": "4dbd1f30bb2dd10faae0eaf38c6105ba35e17ab4",
+  "sourceAtPublication": "697217ae7d015956ef1bfaf77fb81f3e150ac31a",
+  "pagesCommit": "72d234156d3481b0825893fe47925c02e334fa17",
+  "url": "https://antonsoo.github.io/stoicheia/",
+  "canonicalFiles": 58,
+  "bytes": 15399693,
+  "hostedConfigurations": 4,
+  "downloadBytesMatch": true,
+  "screenshotBytesMatch": true,
+  "receipts": [
+    "inequality-build.json",
+    "inequality-course-browser.json",
+    "inequality-oracle.json",
+    "inequality-browser.json",
+    "inequality-print.json",
+    "inequality-upgrade.json",
+    "inequality-canonical.json",
+    "inequality-hosted.json"
+  ]
+}
