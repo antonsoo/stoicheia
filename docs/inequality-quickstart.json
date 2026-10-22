@@ -1,0 +1,23 @@
+{
+  "scope": "Documented development quickstart",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "display": "grid",
+      "ink": "rgb(25, 61, 96)",
+      "fontLoaded": true,
+      "mode": "Development preview",
+      "errors": []
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "display": "grid",
+      "ink": "rgb(25, 61, 96)",
+      "fontLoaded": true,
+      "mode": "Development preview",
+      "errors": []
+    }
+  ]
+}

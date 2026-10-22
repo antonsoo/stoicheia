@@ -35,6 +35,16 @@ for (const [name, engine] of [
     await openLesson(page, 2);
     await page.locator("#next").click();
     assert.equal(await page.locator("#step-position").textContent(), "Step 2 of 11");
+    await openLesson(page, 20);
+    await page.locator('#step-list [data-step="7"]').click();
+    await page.locator("#pair").selectOption("2");
+    assert.match(await page.locator("#equations").textContent(), /ΒΓ \+ ΓΑ/);
+    await openLesson(page, 19);
+    await page.locator('#step-list [data-step="2"]').click();
+    assert.match(
+      await page.locator("#diagram-notice").textContent(),
+      /given angle inequality no longer holds/,
+    );
     assert.deepEqual(errors, []);
     report.configurations.push({ browser: name, version: browser.version(), ...rendered, errors });
   } finally {
@@ -42,5 +52,8 @@ for (const [name, engine] of [
   }
 }
 
-await writeFile("docs/quickstart-verification.json", `${JSON.stringify(report, null, 2)}\n`);
+await writeFile(
+  process.argv[3] ?? "docs/quickstart-verification.json",
+  `${JSON.stringify(report, null, 2)}\n`,
+);
 console.log(JSON.stringify(report, null, 2));

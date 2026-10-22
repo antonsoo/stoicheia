@@ -130,3 +130,8 @@ aliases](inequality-canonical.json) match the final clean build. The
 including the corrected `ἐλάττονές` popup, and reproduced the local download
 and screenshot bytes exactly. The [publication summary](inequality-publication.json)
 keeps source, Pages commit, artifact and browser evidence separate.
+
+The [development quickstart](inequality-quickstart.json) also loads the styled
+reader in Chromium and Firefox, navigates I.20’s third pair and I.19’s
+temporary equality, and reports no page or console errors. This is separate
+from the production/offline checks.
