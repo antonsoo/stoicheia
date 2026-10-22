@@ -14,11 +14,34 @@ const digest = (bytes) => createHash("sha256").update(bytes).digest("hex");
 const oldWorker = await readFile(join(previous, "sw.js"));
 const newWorker = await readFile(join(current, "sw.js"));
 assert.notEqual(digest(oldWorker), digest(newWorker));
-const sourceFile = "sources/heiberg-031.jpg";
+const scenario = process.argv[4] ?? "bisections";
+const editions = {
+  bisections: {
+    previous: 6,
+    current: 10,
+    lesson: 10,
+    step: 6,
+    steps: 8,
+    source: 31,
+    receipt: "offline-upgrade-verification.json",
+  },
+  "right-angles": {
+    previous: 10,
+    current: 16,
+    lesson: 16,
+    step: 8,
+    steps: 10,
+    source: 45,
+    receipt: "right-angle-upgrade.json",
+  },
+};
+const editionCheck = editions[scenario];
+assert.ok(editionCheck, "Choose bisections or right-angles.");
+const sourceFile = `sources/heiberg-${String(editionCheck.source).padStart(3, "0")}.jpg`;
+const position = `Step ${editionCheck.step + 1} of ${editionCheck.steps}`;
 const expectedScanHash = digest(await readFile(join(current, sourceFile)));
 const report = {
-  scope:
-    "Upgrade from the previously published six-proposition build to the ten-proposition edition; held and failed source downloads, followed by an origin-disabled offline reload",
+  scope: `Upgrade from ${editionCheck.previous} to ${editionCheck.current} propositions; held and failed source downloads, followed by an origin-disabled offline reload`,
   previousWorkerSha256: digest(oldWorker),
   currentWorkerSha256: digest(newWorker),
   heldFile: sourceFile,
@@ -96,12 +119,15 @@ for (const [name, type] of [
             navigator.serviceWorker.controller &&
             document.querySelector("#offline-state").textContent.includes("ready offline"),
         );
-        assert.equal(await page.locator(".lesson-tab").count(), 6);
+        assert.equal(await page.locator(".lesson-tab").count(), editionCheck.previous);
         edition = current;
         await page.reload();
-        await page.waitForFunction(() => document.querySelectorAll(".lesson-tab").length === 10);
-        await page.locator('.lesson-tab[data-lesson="10"]').click();
-        await page.locator('#step-list [data-step="6"]').click();
+        await page.waitForFunction(
+          (count) => document.querySelectorAll(".lesson-tab").length === count,
+          editionCheck.current,
+        );
+        await page.locator(`.lesson-tab[data-lesson="${editionCheck.lesson}"]`).click();
+        await page.locator(`#step-list [data-step="${editionCheck.step}"]`).click();
         const deadline = Date.now() + 15000;
         while (!held && Date.now() < deadline) await new Promise((r) => setTimeout(r, 25));
         assert.ok(held, "the new scan must actually be blocked in the installer");
@@ -114,7 +140,7 @@ for (const [name, type] of [
         console.log(name, failOnce, "new edition installer held");
         const pendingStatus = await page.locator("#offline-state").innerText();
         assert.doesNotMatch(pendingStatus, /ready offline/);
-        assert.equal(await page.locator("#step-position").innerText(), "Step 7 of 8");
+        assert.equal(await page.locator("#step-position").innerText(), position);
         hold = false;
         if (failOnce) {
           unavailable = true;
@@ -151,9 +177,9 @@ for (const [name, type] of [
         const navigation = await page.reload();
         assert.equal(navigation.fromServiceWorker(), true);
         assert.equal(page.url(), before);
-        assert.equal(await page.locator(".lesson-tab").count(), 10);
-        assert.equal(await page.locator("#step-position").innerText(), "Step 7 of 8");
-        await page.locator('#current-passage [data-source="31"]').click();
+        assert.equal(await page.locator(".lesson-tab").count(), editionCheck.current);
+        assert.equal(await page.locator("#step-position").innerText(), position);
+        await page.locator(`#current-passage [data-source="${editionCheck.source}"]`).click();
         await page.waitForFunction(() => {
           const img = document.querySelector("#source-image");
           return img.complete && img.naturalWidth > 0;
@@ -177,8 +203,8 @@ for (const [name, type] of [
           oldReadyPromiseResolvedDuringUpdate: true,
           heldRequests: held,
           offlineReloadFromWorker: true,
-          offlineLesson: 10,
-          offlineStep: 7,
+          offlineLesson: editionCheck.lesson,
+          offlineStep: editionCheck.step + 1,
           offlineScanSha256: scanHash,
           pageErrors: errors.length,
         };
@@ -195,4 +221,4 @@ for (const [name, type] of [
     await browser.close();
   }
 }
-await writeFile("docs/offline-upgrade-verification.json", `${JSON.stringify(report, null, 2)}\n`);
+await writeFile(`docs/${editionCheck.receipt}`, `${JSON.stringify(report, null, 2)}\n`);

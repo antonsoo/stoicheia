@@ -8,7 +8,7 @@
         "width": 1440,
         "height": 1000
       },
-      "readingSteps": 85,
+      "readingSteps": 135,
       "accessibility": [
         "I.1 final step",
         "I.2 final step",
@@ -20,6 +20,12 @@
         "I.8 final step",
         "I.9 final step",
         "I.10 final step",
+        "I.11 final step",
+        "I.12 final step",
+        "I.13 final step",
+        "I.14 final step",
+        "I.15 final step",
+        "I.16 final step",
         "vocabulary dialog",
         "source dialog",
         "Latin-first reading",
@@ -33,6 +39,11 @@
         "standalone chromium-1440-stoicheia-I8-study.html",
         "standalone chromium-1440-stoicheia-I9-opposite-ray.html",
         "standalone chromium-1440-stoicheia-I10-study.html",
+        "I.12 zero-radius alternative",
+        "I.13 branches",
+        "I.15 Greek-only corollary",
+        "I.16 expanded second construction",
+        "I.16 standalone study sheet",
         "I.3 invalid greater-lesser hypothesis",
         "complete aligned passage",
         "I.4 exact superposition",
@@ -50,6 +61,11 @@
           "I.10 reused circles and computed midpoint"
         ],
         "downloadsReopenedOffline": 5
+      },
+      "rightAngles": {
+        "renderedGeometryChecks": 318,
+        "downloads": 8,
+        "constructions": "I.11 endpoints; I.12 miss/tangent/crossing/zero radius and offset; I.13 both branches; I.14 conditional sketch; I.15 edition omission; I.16 both constructions across 48 rendered cases"
       },
       "offline": "Offline emulation plus unavailable origin: worker-served reload, proposition changes, source scan and standalone exports passed",
       "pageErrors": 0,
@@ -63,7 +79,7 @@
         "width": 375,
         "height": 812
       },
-      "readingSteps": 85,
+      "readingSteps": 135,
       "accessibility": [
         "I.1 final step",
         "I.2 final step",
@@ -75,6 +91,12 @@
         "I.8 final step",
         "I.9 final step",
         "I.10 final step",
+        "I.11 final step",
+        "I.12 final step",
+        "I.13 final step",
+        "I.14 final step",
+        "I.15 final step",
+        "I.16 final step",
         "vocabulary dialog",
         "source dialog",
         "Latin-first reading",
@@ -88,6 +110,11 @@
         "standalone chromium-375-stoicheia-I8-study.html",
         "standalone chromium-375-stoicheia-I9-opposite-ray.html",
         "standalone chromium-375-stoicheia-I10-study.html",
+        "I.12 zero-radius alternative",
+        "I.13 branches",
+        "I.15 Greek-only corollary",
+        "I.16 expanded second construction",
+        "I.16 standalone study sheet",
         "I.3 invalid greater-lesser hypothesis",
         "complete aligned passage",
         "I.4 exact superposition",
@@ -105,6 +132,11 @@
           "I.10 reused circles and computed midpoint"
         ],
         "downloadsReopenedOffline": 5
+      },
+      "rightAngles": {
+        "renderedGeometryChecks": 318,
+        "downloads": 8,
+        "constructions": "I.11 endpoints; I.12 miss/tangent/crossing/zero radius and offset; I.13 both branches; I.14 conditional sketch; I.15 edition omission; I.16 both constructions across 48 rendered cases"
       },
       "offline": "Offline emulation plus unavailable origin: worker-served reload, proposition changes, source scan and standalone exports passed",
       "pageErrors": 0,
@@ -118,7 +150,7 @@
         "width": 1440,
         "height": 1000
       },
-      "readingSteps": 85,
+      "readingSteps": 135,
       "accessibility": [
         "I.1 final step",
         "I.2 final step",
@@ -130,6 +162,12 @@
         "I.8 final step",
         "I.9 final step",
         "I.10 final step",
+        "I.11 final step",
+        "I.12 final step",
+        "I.13 final step",
+        "I.14 final step",
+        "I.15 final step",
+        "I.16 final step",
         "vocabulary dialog",
         "source dialog",
         "Latin-first reading",
@@ -143,6 +181,11 @@
         "standalone firefox-1440-stoicheia-I8-study.html",
         "standalone firefox-1440-stoicheia-I9-opposite-ray.html",
         "standalone firefox-1440-stoicheia-I10-study.html",
+        "I.12 zero-radius alternative",
+        "I.13 branches",
+        "I.15 Greek-only corollary",
+        "I.16 expanded second construction",
+        "I.16 standalone study sheet",
         "I.3 invalid greater-lesser hypothesis",
         "complete aligned passage",
         "I.4 exact superposition",
@@ -160,6 +203,11 @@
           "I.10 reused circles and computed midpoint"
         ],
         "downloadsReopenedOffline": 5
+      },
+      "rightAngles": {
+        "renderedGeometryChecks": 318,
+        "downloads": 8,
+        "constructions": "I.11 endpoints; I.12 miss/tangent/crossing/zero radius and offset; I.13 both branches; I.14 conditional sketch; I.15 edition omission; I.16 both constructions across 48 rendered cases"
       },
       "offline": "Offline emulation plus unavailable origin: worker-served reload, proposition changes, source scan and standalone exports passed",
       "pageErrors": 0,
@@ -173,7 +221,7 @@
         "width": 375,
         "height": 812
       },
-      "readingSteps": 85,
+      "readingSteps": 135,
       "accessibility": [
         "I.1 final step",
         "I.2 final step",
@@ -185,6 +233,12 @@
         "I.8 final step",
         "I.9 final step",
         "I.10 final step",
+        "I.11 final step",
+        "I.12 final step",
+        "I.13 final step",
+        "I.14 final step",
+        "I.15 final step",
+        "I.16 final step",
         "vocabulary dialog",
         "source dialog",
         "Latin-first reading",
@@ -198,6 +252,11 @@
         "standalone firefox-375-stoicheia-I8-study.html",
         "standalone firefox-375-stoicheia-I9-opposite-ray.html",
         "standalone firefox-375-stoicheia-I10-study.html",
+        "I.12 zero-radius alternative",
+        "I.13 branches",
+        "I.15 Greek-only corollary",
+        "I.16 expanded second construction",
+        "I.16 standalone study sheet",
         "I.3 invalid greater-lesser hypothesis",
         "complete aligned passage",
         "I.4 exact superposition",
@@ -216,20 +275,27 @@
         ],
         "downloadsReopenedOffline": 5
       },
+      "rightAngles": {
+        "renderedGeometryChecks": 318,
+        "downloads": 8,
+        "constructions": "I.11 endpoints; I.12 miss/tangent/crossing/zero radius and offset; I.13 both branches; I.14 conditional sketch; I.15 edition omission; I.16 both constructions across 48 rendered cases"
+      },
       "offline": "Offline emulation plus unavailable origin: worker-served reload, proposition changes, source scan and standalone exports passed",
       "pageErrors": 0,
       "externalRequests": 0,
       "cspViolations": 0
     }
   ],
-  "buildInputsSha256": "c40b3c6b9aa8185be6359128b32fec2df7fe8e100daf6c98d0e2e61bc0e674bc",
+  "buildInputsSha256": "8cacca37ffb4f7785d2054f34a7c21fcf15eee85d381da490a52a72e14828a02",
   "servedByteMatches": [
-    "assets/index-BalXma64.css",
-    "assets/index-CN-CTpJj.js",
+    "assets/index-CdwApeYm.js",
+    "assets/index-DHpr94KM.css",
     "favicon.svg",
     "fonts/NotoSerif-Regular.ttf",
     "fonts/OFL.txt",
     "index.html",
+    "sources/heiberg-002.jpg",
+    "sources/heiberg-003.jpg",
     "sources/heiberg-004.jpg",
     "sources/heiberg-005.jpg",
     "sources/heiberg-006.jpg",
@@ -258,8 +324,22 @@
     "sources/heiberg-029.jpg",
     "sources/heiberg-030.jpg",
     "sources/heiberg-031.jpg",
+    "sources/heiberg-032.jpg",
+    "sources/heiberg-033.jpg",
+    "sources/heiberg-034.jpg",
+    "sources/heiberg-035.jpg",
+    "sources/heiberg-036.jpg",
+    "sources/heiberg-037.jpg",
+    "sources/heiberg-038.jpg",
+    "sources/heiberg-039.jpg",
+    "sources/heiberg-040.jpg",
+    "sources/heiberg-041.jpg",
+    "sources/heiberg-042.jpg",
+    "sources/heiberg-043.jpg",
+    "sources/heiberg-044.jpg",
+    "sources/heiberg-045.jpg",
     "sources/manifest.json",
     "sw.js"
   ],
-  "offlineOriginProbeRejections": 48
+  "offlineOriginProbeRejections": 46
 }

@@ -240,6 +240,12 @@ records exact file hashes served by GitHub Pages and direct hosted
 workflows in both browsers at both screen sizes. Neither receipt is a remote CI
 result.
 
+The [I.11–16 build record](docs/right-angle-build.json) identifies the clean
+source archive and its 52 output files. The [edition-upgrade receipt](docs/right-angle-upgrade.json)
+checks an existing ten-proposition reader upgrading to sixteen: a held or failed
+page-45 download never produces a false readiness promise, and the recovered
+edition reopens I.16 and the exact scan with the origin unavailable.
+
 The development quickstart is checked separately with `npm run test:dev` while
 `npm run dev` is running. Its [receipt](docs/quickstart-verification.json) checks
 the actual styled layout and navigation in Chromium and Firefox. CSS is loaded

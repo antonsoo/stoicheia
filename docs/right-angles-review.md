@@ -61,3 +61,11 @@ from 32 Chromium PDFs, including the Greek-only corollary and omission note.
 
 Build, local browser, print and public-host receipts are separate evidence. Their
 scope and checked source commit are recorded when publishing this revision.
+
+The [clean-build record](right-angle-build.json) pins the runtime source and
+all 52 output files. The [upgrade receipt](right-angle-upgrade.json) also covers
+existing readers: both browsers upgrade the previously published ten-lesson
+edition while page 45 is held, then repeat with a failed download and recovery.
+Neither scenario claims readiness early; the completed sixteen-lesson reader
+and the exact Latin scan reopen with the origin disabled. Reproduce with
+`node scripts/offline-upgrade-check.mjs OLD_BUILD NEW_BUILD right-angles`.
