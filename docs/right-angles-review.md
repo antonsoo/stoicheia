@@ -46,6 +46,10 @@ The added workflow measures the actual SVG vertices, tests native keyboard
 controls, reloads shared offsets, exercises all I.12 alternatives and both I.13
 branches, and opens the Greek-only edition note. Both I.16 constructions are
 checked across 48 rendered parameter cases per browser configuration.
+Visual review also covers thin triangles: the second drawing marks the exterior
+angle containing its copied angle, rather than marking both vertical exteriors
+and making a nearly complete circle. The original exterior angle remains in
+the measurements and the stated I.15 equality.
 
 Downloads retain the invalid or conditional status: an I.12 tangent has no
 midpoint, and I.14's hypothetical continuation cannot silently turn into a valid

@@ -347,7 +347,10 @@ export function rightAngleScene(state: ReaderState): Scene {
       scene.equalities.push("∠ΒΑΕ = ∠ΕΓΖ (I.4)");
     }
     if (step >= 7) {
-      mark("ACD", a, c, d, "working", 3);
+      // Mark the exterior angle containing this construction's copied angle.
+      // Marking both vertical exteriors in the second construction looks like
+      // a complete circle for thin triangles and obscures the containment.
+      if (!second) mark("ACD", a, c, d, "working", 3);
       scene.equalities.push("∠ΑΓΔ > ∠ΒΑΓ (whole > proper part)");
     }
     if (second) {

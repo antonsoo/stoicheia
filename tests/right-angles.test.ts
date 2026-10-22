@@ -79,6 +79,9 @@ test("The Greek-only corollary remains an edition note and I.16 names its modern
   assert.ok(first.vertices.some((p) => p.id === "Ζ"));
   assert.ok(!first.vertices.some((p) => p.id === "Κ"));
   assert.ok(second.vertices.some((p) => p.id === "Κ"));
+  assert.ok(first.angles?.some((a) => a.id === "ACD"));
+  assert.ok(second.angles?.some((a) => a.id === "BCH"));
+  assert.ok(!second.angles?.some((a) => a.id === "ACD"));
   assert.match(second.notice?.text ?? "", /modern labels/);
   assert.equal(decodeState("#p=16&s=999").step, 9);
   const share = decodeState("#p=12&s=8&v=1&r=.65&t=1.3&x=-1.25");
