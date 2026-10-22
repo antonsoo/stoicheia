@@ -459,6 +459,7 @@ export const glossary: Gloss[] = [
     meaning: "lesser",
     note: "The dative ἐλάσσονι follows ἴσην: ‘equal to the lesser’. Heiberg’s Latin uses the dative minori. The two languages let you track which length is copied. In I.19, however, si minus means ‘if not’; aut … aut then lists equal and less as the two alternatives.",
     forms: [
+      "ἐλάττονές",
       "ἐλάσσονές",
       "ἐλάσσονες",
       "minores",

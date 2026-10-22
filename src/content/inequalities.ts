@@ -117,7 +117,7 @@ export const inequalityLessons: Record<17 | 18 | 19 | 20, Lesson> = {
         title: "Choose any triangle",
         phase: "Given",
         reason: "given",
-        grc: "Ἔστω τρίγωνον τὸ ΑΒΓ· λέγω, ὅτι τοῦ ΑΒΓ τριγώνου αἱ δύο γωνίαι δύο ὀρθῶν ἐλάσσονές εἰσι πάντῃ μεταλαμβανόμεναι.",
+        grc: "Ἔστω τρίγωνον τὸ ΑΒΓ· λέγω, ὅτι τοῦ ΑΒΓ τριγώνου αἱ δύο γωνίαι δύο ὀρθῶν ἐλάττονές εἰσι πάντῃ μεταλαμβανόμεναι.",
         lat: "Sit triangulus ΑΒΓ. dico, angulos duos trianguli ΑΒΓ duobus rectis minores esse quoquo modo coniunctos.",
         en: "Let ΑΒΓ be a triangle. I say that any two of its angles, taken together, are less than two right angles.",
         greekPages: [44],

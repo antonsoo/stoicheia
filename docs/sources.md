@@ -267,6 +267,9 @@ pages 44–51. The six additional images, pages 46–51, use the same rendering
 command and source PDF as the previous edition. I.17 shares existing pages
 44/45; the end of I.20 occupies only the top of 50/51. The rest of those
 complete pages includes I.21, which is not transcribed in this course.
+- I.17’s opening given retains the printed `ἐλάττονές` on p. 44; its statement
+  and later clauses use `ἐλάσσονές`. These inflected variants map to the same
+  comparative lemma in the vocabulary.
 - I.17 adds a common angle to a strict inequality. The reason explicitly names
   this order rule rather than mislabeling it as one of the usual five common
   notions. Heiberg’s printed Latin cites his expanded common notion 4; the

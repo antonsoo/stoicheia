@@ -44,3 +44,8 @@ test("The saved pair is bounded and applies only from the source's similarly ste
   assert.equal(decodeState("#p=20&pair=999").pair, 2);
   assert.equal(decodeState("#p=20&pair=NaN").pair, 0);
 });
+
+test("I.17 preserves the printed comparative variant in its given", () => {
+  assert.match(lessons[17].statement.grc, /ἐλάσσονές/);
+  assert.match(lessons[17].steps[0]?.grc ?? "", /ἐλάττονές/);
+});
