@@ -1,0 +1,287 @@
+{
+  "base": "http://127.0.0.1:4385/stoicheia/",
+  "checkedAt": "2026-10-22T07:27:23.984Z",
+  "scope": "Native controls, rendered SVG coordinates, source bytes, standalone downloads and shared comparison state; numerical checks are not formal proofs",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "readingSteps": 29,
+      "renderedCases": 129,
+      "comparisons": 657,
+      "accessibility": [
+        "I.17 conclusion",
+        "I.18 conclusion",
+        "I.19 conclusion",
+        "I.20 conclusion",
+        "I.19 temporary premise",
+        "Last new source page",
+        "Standalone countercase",
+        "Standalone third pair"
+      ],
+      "downloads": [
+        {
+          "file": "/tmp/claude-1000/stoicheia-inequalities/final-browser/chromium-1440-I19-countercase.html",
+          "bytes": 13992,
+          "sha256": "ef2b8a65a74fefa90d09a260ee7e438945c1b627008caed342bb771c3dc6b73f"
+        },
+        {
+          "file": "/tmp/claude-1000/stoicheia-inequalities/final-browser/chromium-1440-I20-third-pair.svg",
+          "bytes": 4792,
+          "sha256": "2c74fc86db4d29a2d8989d89dac5a4fe5eff1da755751723708838cc03dde352"
+        },
+        {
+          "file": "/tmp/claude-1000/stoicheia-inequalities/final-browser/chromium-1440-I20-third-pair.html",
+          "bytes": 20795,
+          "sha256": "79047a6303c232615e9d8c1d5e362026e55d7b5b27d220683c4e4444762bb0dd"
+        }
+      ],
+      "sources": [
+        {
+          "page": 44,
+          "sha256": "082d3f6b6b221c85229f8660763ee09eb9a5fcba3760dbd31777059ea7c79cde"
+        },
+        {
+          "page": 45,
+          "sha256": "384d66370d556bdd610c345d2cec896e3bd614fad598954953a3fa54a9f31670"
+        },
+        {
+          "page": 46,
+          "sha256": "acc7d9126f11df03278e5772ca2ec12593805e0c44ec2d674719f3176a0958a2"
+        },
+        {
+          "page": 47,
+          "sha256": "02116c7d22af5d58821c990285056e515e1406d275d8c9949104b7f8fb5beb7d"
+        },
+        {
+          "page": 48,
+          "sha256": "a0589d5b60a437a5878dbe3cf56f659dcd9f0c663d405da3da9681e04b83a007"
+        },
+        {
+          "page": 49,
+          "sha256": "f5f312234a79fad5474d893c9d303d8023464b26e3b7a0a49350820663c0a7cb"
+        },
+        {
+          "page": 50,
+          "sha256": "be62d9a2e3f842f90a11fdd5975bc1ae5c5133f006ad9e4ef15972818b01bb67"
+        },
+        {
+          "page": 51,
+          "sha256": "fc9eb173b34a39f41195251ebff09faf213a89b654fac45f15d765bd2500d697"
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "width": 375,
+      "readingSteps": 29,
+      "renderedCases": 129,
+      "comparisons": 657,
+      "accessibility": [
+        "I.17 conclusion",
+        "I.18 conclusion",
+        "I.19 conclusion",
+        "I.20 conclusion",
+        "I.19 temporary premise",
+        "Last new source page",
+        "Standalone countercase",
+        "Standalone third pair"
+      ],
+      "downloads": [
+        {
+          "file": "/tmp/claude-1000/stoicheia-inequalities/final-browser/chromium-375-I19-countercase.html",
+          "bytes": 13992,
+          "sha256": "ef2b8a65a74fefa90d09a260ee7e438945c1b627008caed342bb771c3dc6b73f"
+        },
+        {
+          "file": "/tmp/claude-1000/stoicheia-inequalities/final-browser/chromium-375-I20-third-pair.svg",
+          "bytes": 4792,
+          "sha256": "2c74fc86db4d29a2d8989d89dac5a4fe5eff1da755751723708838cc03dde352"
+        },
+        {
+          "file": "/tmp/claude-1000/stoicheia-inequalities/final-browser/chromium-375-I20-third-pair.html",
+          "bytes": 20795,
+          "sha256": "79047a6303c232615e9d8c1d5e362026e55d7b5b27d220683c4e4444762bb0dd"
+        }
+      ],
+      "sources": [
+        {
+          "page": 44,
+          "sha256": "082d3f6b6b221c85229f8660763ee09eb9a5fcba3760dbd31777059ea7c79cde"
+        },
+        {
+          "page": 45,
+          "sha256": "384d66370d556bdd610c345d2cec896e3bd614fad598954953a3fa54a9f31670"
+        },
+        {
+          "page": 46,
+          "sha256": "acc7d9126f11df03278e5772ca2ec12593805e0c44ec2d674719f3176a0958a2"
+        },
+        {
+          "page": 47,
+          "sha256": "02116c7d22af5d58821c990285056e515e1406d275d8c9949104b7f8fb5beb7d"
+        },
+        {
+          "page": 48,
+          "sha256": "a0589d5b60a437a5878dbe3cf56f659dcd9f0c663d405da3da9681e04b83a007"
+        },
+        {
+          "page": 49,
+          "sha256": "f5f312234a79fad5474d893c9d303d8023464b26e3b7a0a49350820663c0a7cb"
+        },
+        {
+          "page": 50,
+          "sha256": "be62d9a2e3f842f90a11fdd5975bc1ae5c5133f006ad9e4ef15972818b01bb67"
+        },
+        {
+          "page": 51,
+          "sha256": "fc9eb173b34a39f41195251ebff09faf213a89b654fac45f15d765bd2500d697"
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "width": 1440,
+      "readingSteps": 29,
+      "renderedCases": 129,
+      "comparisons": 657,
+      "accessibility": [
+        "I.17 conclusion",
+        "I.18 conclusion",
+        "I.19 conclusion",
+        "I.20 conclusion",
+        "I.19 temporary premise",
+        "Last new source page",
+        "Standalone countercase",
+        "Standalone third pair"
+      ],
+      "downloads": [
+        {
+          "file": "/tmp/claude-1000/stoicheia-inequalities/final-browser/firefox-1440-I19-countercase.html",
+          "bytes": 13992,
+          "sha256": "ef2b8a65a74fefa90d09a260ee7e438945c1b627008caed342bb771c3dc6b73f"
+        },
+        {
+          "file": "/tmp/claude-1000/stoicheia-inequalities/final-browser/firefox-1440-I20-third-pair.svg",
+          "bytes": 4792,
+          "sha256": "2c74fc86db4d29a2d8989d89dac5a4fe5eff1da755751723708838cc03dde352"
+        },
+        {
+          "file": "/tmp/claude-1000/stoicheia-inequalities/final-browser/firefox-1440-I20-third-pair.html",
+          "bytes": 20795,
+          "sha256": "79047a6303c232615e9d8c1d5e362026e55d7b5b27d220683c4e4444762bb0dd"
+        }
+      ],
+      "sources": [
+        {
+          "page": 44,
+          "sha256": "082d3f6b6b221c85229f8660763ee09eb9a5fcba3760dbd31777059ea7c79cde"
+        },
+        {
+          "page": 45,
+          "sha256": "384d66370d556bdd610c345d2cec896e3bd614fad598954953a3fa54a9f31670"
+        },
+        {
+          "page": 46,
+          "sha256": "acc7d9126f11df03278e5772ca2ec12593805e0c44ec2d674719f3176a0958a2"
+        },
+        {
+          "page": 47,
+          "sha256": "02116c7d22af5d58821c990285056e515e1406d275d8c9949104b7f8fb5beb7d"
+        },
+        {
+          "page": 48,
+          "sha256": "a0589d5b60a437a5878dbe3cf56f659dcd9f0c663d405da3da9681e04b83a007"
+        },
+        {
+          "page": 49,
+          "sha256": "f5f312234a79fad5474d893c9d303d8023464b26e3b7a0a49350820663c0a7cb"
+        },
+        {
+          "page": 50,
+          "sha256": "be62d9a2e3f842f90a11fdd5975bc1ae5c5133f006ad9e4ef15972818b01bb67"
+        },
+        {
+          "page": 51,
+          "sha256": "fc9eb173b34a39f41195251ebff09faf213a89b654fac45f15d765bd2500d697"
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "width": 375,
+      "readingSteps": 29,
+      "renderedCases": 129,
+      "comparisons": 657,
+      "accessibility": [
+        "I.17 conclusion",
+        "I.18 conclusion",
+        "I.19 conclusion",
+        "I.20 conclusion",
+        "I.19 temporary premise",
+        "Last new source page",
+        "Standalone countercase",
+        "Standalone third pair"
+      ],
+      "downloads": [
+        {
+          "file": "/tmp/claude-1000/stoicheia-inequalities/final-browser/firefox-375-I19-countercase.html",
+          "bytes": 13992,
+          "sha256": "ef2b8a65a74fefa90d09a260ee7e438945c1b627008caed342bb771c3dc6b73f"
+        },
+        {
+          "file": "/tmp/claude-1000/stoicheia-inequalities/final-browser/firefox-375-I20-third-pair.svg",
+          "bytes": 4792,
+          "sha256": "2c74fc86db4d29a2d8989d89dac5a4fe5eff1da755751723708838cc03dde352"
+        },
+        {
+          "file": "/tmp/claude-1000/stoicheia-inequalities/final-browser/firefox-375-I20-third-pair.html",
+          "bytes": 20795,
+          "sha256": "79047a6303c232615e9d8c1d5e362026e55d7b5b27d220683c4e4444762bb0dd"
+        }
+      ],
+      "sources": [
+        {
+          "page": 44,
+          "sha256": "082d3f6b6b221c85229f8660763ee09eb9a5fcba3760dbd31777059ea7c79cde"
+        },
+        {
+          "page": 45,
+          "sha256": "384d66370d556bdd610c345d2cec896e3bd614fad598954953a3fa54a9f31670"
+        },
+        {
+          "page": 46,
+          "sha256": "acc7d9126f11df03278e5772ca2ec12593805e0c44ec2d674719f3176a0958a2"
+        },
+        {
+          "page": 47,
+          "sha256": "02116c7d22af5d58821c990285056e515e1406d275d8c9949104b7f8fb5beb7d"
+        },
+        {
+          "page": 48,
+          "sha256": "a0589d5b60a437a5878dbe3cf56f659dcd9f0c663d405da3da9681e04b83a007"
+        },
+        {
+          "page": 49,
+          "sha256": "f5f312234a79fad5474d893c9d303d8023464b26e3b7a0a49350820663c0a7cb"
+        },
+        {
+          "page": 50,
+          "sha256": "be62d9a2e3f842f90a11fdd5975bc1ae5c5133f006ad9e4ef15972818b01bb67"
+        },
+        {
+          "page": 51,
+          "sha256": "fc9eb173b34a39f41195251ebff09faf213a89b654fac45f15d765bd2500d697"
+        }
+      ]
+    }
+  ],
+  "runtimeSource": "aac28093960e68c1c287688c144140598a78d613",
+  "workflowSource": "7904948b5f5a2929a3a93ed9a2f9fbb8d969f8d1",
+  "retainedExamples": [
+    "examples/stoicheia-I19-countercase.html",
+    "examples/stoicheia-I20-study.html",
+    "examples/stoicheia-I20-third-pair.svg",
+    "examples/stoicheia-I20-study.pdf"
+  ]
+}

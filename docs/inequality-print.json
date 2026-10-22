@@ -1,0 +1,461 @@
+{
+  "scope": "Actual Chromium print PDFs, text extracted independently by Poppler pdftotext; Firefox print-layout lifecycle checked separately",
+  "pdfs": [
+    {
+      "proposition": 1,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 33,
+      "stepTitles": 10,
+      "pages": 5,
+      "extractedCharacters": 4189,
+      "bytes": 47392,
+      "sha256": "8ce381da50b78fdb0aeafd67ab15faa2aa0a8707fe74d104df34baeb83ef2fca",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 1,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 33,
+      "stepTitles": 10,
+      "pages": 5,
+      "extractedCharacters": 4189,
+      "bytes": 47392,
+      "sha256": "a10dbd07da3f520940ee5495788db5bb2bb6549a097633fee579ec20b0c99030",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 2,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 36,
+      "stepTitles": 11,
+      "pages": 5,
+      "extractedCharacters": 4480,
+      "bytes": 50454,
+      "sha256": "d6082f75ecea65a02be87c9694043df3335fbb3e01a4ab7292fabfc88e80c01c",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 2,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 36,
+      "stepTitles": 11,
+      "pages": 5,
+      "extractedCharacters": 4480,
+      "bytes": 50454,
+      "sha256": "d6082f75ecea65a02be87c9694043df3335fbb3e01a4ab7292fabfc88e80c01c",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 3,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 18,
+      "stepTitles": 5,
+      "pages": 3,
+      "extractedCharacters": 2883,
+      "bytes": 43961,
+      "sha256": "e41e362eaf391d0dca56d2163720894a6c9d4e6435806bb38fa4363a9c612d9e",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 3,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 18,
+      "stepTitles": 5,
+      "pages": 3,
+      "extractedCharacters": 2883,
+      "bytes": 43961,
+      "sha256": "e41e362eaf391d0dca56d2163720894a6c9d4e6435806bb38fa4363a9c612d9e",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 4,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 27,
+      "stepTitles": 8,
+      "pages": 5,
+      "extractedCharacters": 6524,
+      "bytes": 56110,
+      "sha256": "cb961113553c43a3b00420d0a6f212db0d61b3c0ea1de34e70c255fee55f2f10",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 4,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 27,
+      "stepTitles": 8,
+      "pages": 5,
+      "extractedCharacters": 6524,
+      "bytes": 56110,
+      "sha256": "cb961113553c43a3b00420d0a6f212db0d61b3c0ea1de34e70c255fee55f2f10",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 5,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 36,
+      "stepTitles": 11,
+      "pages": 6,
+      "extractedCharacters": 6497,
+      "bytes": 57820,
+      "sha256": "200387461e735db7a287e5a5b62538d034c07fb73eef70cea1e9220958b44b2f",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 5,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 36,
+      "stepTitles": 11,
+      "pages": 6,
+      "extractedCharacters": 6497,
+      "bytes": 57820,
+      "sha256": "200387461e735db7a287e5a5b62538d034c07fb73eef70cea1e9220958b44b2f",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 6,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 24,
+      "stepTitles": 7,
+      "pages": 3,
+      "extractedCharacters": 3753,
+      "bytes": 48820,
+      "sha256": "971d92386869c84b52d961f09e7538130fbc9e47e2d926c29be977b62db4edbc",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 6,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 24,
+      "stepTitles": 7,
+      "pages": 3,
+      "extractedCharacters": 3753,
+      "bytes": 48820,
+      "sha256": "971d92386869c84b52d961f09e7538130fbc9e47e2d926c29be977b62db4edbc",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 7,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 27,
+      "stepTitles": 8,
+      "pages": 5,
+      "extractedCharacters": 4408,
+      "bytes": 51888,
+      "sha256": "50eb1384f38418046894f864aa5329249a48813522dac3e6fd2d1fe1269fa406",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 7,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 27,
+      "stepTitles": 8,
+      "pages": 5,
+      "extractedCharacters": 4408,
+      "bytes": 51888,
+      "sha256": "50eb1384f38418046894f864aa5329249a48813522dac3e6fd2d1fe1269fa406",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 8,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 27,
+      "stepTitles": 8,
+      "pages": 5,
+      "extractedCharacters": 5196,
+      "bytes": 54163,
+      "sha256": "ceb134cdd82446d01cb0e3410caa326ae402c222605a8bcc63f3a647790f4dc8",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 8,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 27,
+      "stepTitles": 8,
+      "pages": 5,
+      "extractedCharacters": 5196,
+      "bytes": 54163,
+      "sha256": "ceb134cdd82446d01cb0e3410caa326ae402c222605a8bcc63f3a647790f4dc8",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 9,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 30,
+      "stepTitles": 9,
+      "pages": 4,
+      "extractedCharacters": 3448,
+      "bytes": 48685,
+      "sha256": "1ae23846b332f20115bd7c4f8f4db4e71dacf8bcaaf19e40f25174ef41fc9190",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 9,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 30,
+      "stepTitles": 9,
+      "pages": 4,
+      "extractedCharacters": 3448,
+      "bytes": 48685,
+      "sha256": "1ae23846b332f20115bd7c4f8f4db4e71dacf8bcaaf19e40f25174ef41fc9190",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 10,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 27,
+      "stepTitles": 8,
+      "pages": 4,
+      "extractedCharacters": 3114,
+      "bytes": 47304,
+      "sha256": "01fd0d700e85d4ed2e4c545774bc18b9dc293579e2bed59bd9234c09fb8901fa",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 10,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 27,
+      "stepTitles": 8,
+      "pages": 4,
+      "extractedCharacters": 3114,
+      "bytes": 47304,
+      "sha256": "01fd0d700e85d4ed2e4c545774bc18b9dc293579e2bed59bd9234c09fb8901fa",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 11,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 27,
+      "stepTitles": 8,
+      "pages": 4,
+      "extractedCharacters": 4140,
+      "bytes": 50691,
+      "sha256": "90736ba0aa5445b9a254781ae89636c1312793a515018482555719d2d9e2d44c",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 11,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 27,
+      "stepTitles": 8,
+      "pages": 4,
+      "extractedCharacters": 4140,
+      "bytes": 50691,
+      "sha256": "90736ba0aa5445b9a254781ae89636c1312793a515018482555719d2d9e2d44c",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 12,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 30,
+      "stepTitles": 9,
+      "pages": 4,
+      "extractedCharacters": 4783,
+      "bytes": 52851,
+      "sha256": "ab8ef631ba201675c6b7f538343c48df0601bdf00616b0de31232aa33c575a09",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 12,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 30,
+      "stepTitles": 9,
+      "pages": 4,
+      "extractedCharacters": 4783,
+      "bytes": 52851,
+      "sha256": "ab8ef631ba201675c6b7f538343c48df0601bdf00616b0de31232aa33c575a09",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 13,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 27,
+      "stepTitles": 8,
+      "pages": 4,
+      "extractedCharacters": 4651,
+      "bytes": 47280,
+      "sha256": "32b4cde9a0c205bb483e0f146cdf48fed9db3dae9709de6c80e38c0ab45e0f55",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 13,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 27,
+      "stepTitles": 8,
+      "pages": 4,
+      "extractedCharacters": 4651,
+      "bytes": 47280,
+      "sha256": "32b4cde9a0c205bb483e0f146cdf48fed9db3dae9709de6c80e38c0ab45e0f55",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 14,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 27,
+      "stepTitles": 8,
+      "pages": 4,
+      "extractedCharacters": 4794,
+      "bytes": 52174,
+      "sha256": "346e7caa08a35ac6c44cf3f4d2b4d761099cd16f3edab7f5759cb98b7f015690",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 14,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 27,
+      "stepTitles": 8,
+      "pages": 4,
+      "extractedCharacters": 4794,
+      "bytes": 52174,
+      "sha256": "346e7caa08a35ac6c44cf3f4d2b4d761099cd16f3edab7f5759cb98b7f015690",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 15,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 27,
+      "stepTitles": 7,
+      "pages": 4,
+      "extractedCharacters": 4371,
+      "bytes": 57442,
+      "sha256": "4443cdee60db09bee0e3845b180e9ae47511e6835ea50ecd99e27572be649ebf",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 15,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 27,
+      "stepTitles": 7,
+      "pages": 4,
+      "extractedCharacters": 4371,
+      "bytes": 57442,
+      "sha256": "4443cdee60db09bee0e3845b180e9ae47511e6835ea50ecd99e27572be649ebf",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 16,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 33,
+      "stepTitles": 10,
+      "pages": 5,
+      "extractedCharacters": 4883,
+      "bytes": 53039,
+      "sha256": "07f6f46f5f4432a69e9f08964ef78a984e124ef12a3adc71b2b8c83c715a85ac",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 16,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 33,
+      "stepTitles": 10,
+      "pages": 5,
+      "extractedCharacters": 4883,
+      "bytes": 53039,
+      "sha256": "07f6f46f5f4432a69e9f08964ef78a984e124ef12a3adc71b2b8c83c715a85ac",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 17,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 24,
+      "stepTitles": 7,
+      "pages": 4,
+      "extractedCharacters": 3392,
+      "bytes": 45126,
+      "sha256": "312156722b7e6442580c5ca2a4f85bdcb36231e85f6a429a5c94a715aa1a1802",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 17,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 24,
+      "stepTitles": 7,
+      "pages": 4,
+      "extractedCharacters": 3392,
+      "bytes": 45126,
+      "sha256": "312156722b7e6442580c5ca2a4f85bdcb36231e85f6a429a5c94a715aa1a1802",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 18,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 24,
+      "stepTitles": 7,
+      "pages": 3,
+      "extractedCharacters": 2995,
+      "bytes": 46582,
+      "sha256": "796eb0ec200306b64086c3442ea74ce2753a35d7224c9778743378c5ce535236",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 18,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 24,
+      "stepTitles": 7,
+      "pages": 3,
+      "extractedCharacters": 2995,
+      "bytes": 46582,
+      "sha256": "796eb0ec200306b64086c3442ea74ce2753a35d7224c9778743378c5ce535236",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 19,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 21,
+      "stepTitles": 6,
+      "pages": 3,
+      "extractedCharacters": 2935,
+      "bytes": 46378,
+      "sha256": "fde9d36814f4f1937e59e06a58568bdc6171d7548fd12ea32583ff8ed3556b3d",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 19,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 21,
+      "stepTitles": 6,
+      "pages": 3,
+      "extractedCharacters": 2935,
+      "bytes": 46378,
+      "sha256": "fde9d36814f4f1937e59e06a58568bdc6171d7548fd12ea32583ff8ed3556b3d",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 20,
+      "passageInitiallyOpen": false,
+      "languageParagraphs": 30,
+      "stepTitles": 9,
+      "pages": 4,
+      "extractedCharacters": 3881,
+      "bytes": 49793,
+      "sha256": "26a6d5f724de56125a360a8b0d39c87644d6048c6a45f04b0cb4afd0af4b5e17",
+      "readingStateRestored": true
+    },
+    {
+      "proposition": 20,
+      "passageInitiallyOpen": true,
+      "languageParagraphs": 30,
+      "stepTitles": 9,
+      "pages": 4,
+      "extractedCharacters": 3881,
+      "bytes": 49793,
+      "sha256": "0b6288e0dad2088940f148063e39bf06c7047316945e1cb272c06a4049f546c5",
+      "readingStateRestored": true
+    }
+  ],
+  "firefox": [
+    {
+      "passageInitiallyOpen": false,
+      "fullTextVisibleForPrint": true,
+      "stateRestored": true,
+      "boundary": "Emulated print media and dispatched lifecycle events, not a native Firefox PDF"
+    },
+    {
+      "passageInitiallyOpen": true,
+      "fullTextVisibleForPrint": true,
+      "stateRestored": true,
+      "boundary": "Emulated print media and dispatched lifecycle events, not a native Firefox PDF"
+    }
+  ],
+  "chromiumVersion": "153.0.8010.12",
+  "firefoxVersion": "155.0"
+}

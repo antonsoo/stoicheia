@@ -71,3 +71,44 @@ proposition offline reader. In both engines, a held or failed download of the
 new page 51 leaves the edition pending. After recovery, an origin-disabled
 reload opens I.20 and the exact new page bytes. An older ready service worker
 is not accepted as evidence that the new edition has been saved.
+
+[Four browser configurations](inequality-browser.json) each completed the 29
+new steps and 129 rendered cases, checking 657 comparisons of geometry and labeled premises. The
+checks include the final vocabulary explanation of `si minus` and native
+keyboard popup focus return. No accessibility violations were reported in
+the reviewed conclusion, temporary-case, source-dialog or standalone views.
+
+[Forty actual print PDFs](inequality-print.json) cover every proposition with
+the full passage initially open and closed. Independent Poppler text extraction
+found every source/English paragraph and step title. Firefox print-layout
+lifecycle checks are recorded separately from Chromium PDF generation.
+
+## Take the reading away
+
+- [I.20 illustrated study sheet](../examples/stoicheia-I20-study.html) and
+  [PDF](../examples/stoicheia-I20-study.pdf): the third pair, complete proof,
+  reasons, language notes and invoked foundation texts.
+- [I.20 reading PDF](../examples/stoicheia-I20-reading.pdf): the complete
+  trilingual passage in the reader's native print layout.
+- [I.19 temporary-case sheet](../examples/stoicheia-I19-countercase.html):
+  the changed triangle and the original premise remain explicitly separated.
+- [I.20 standalone SVG](../examples/stoicheia-I20-third-pair.svg): its accessible
+  description identifies the modern expanded construction.
+
+![I.20's third comparison beside its Greek, Latin and English](assets/inequality-I20-1440.png)
+
+![I.19's rejected equality on a narrow screen](assets/inequality-I19-375.png)
+
+
+## Build and publication boundary
+
+[The clean build](inequality-build.json) contains 58 files totaling 15,399,671
+bytes. A fresh archive of the runtime commit installed 29 packages under
+Node 24 and passed the normal checks. Every output byte matches the reviewed
+working build. The optional registry audit request stalled and was disabled
+for the completed installation; no vulnerability-audit result is claimed.
+
+The earlier sixteen-proposition receipts and examples remain records of that
+edition. The new browser, print and upgrade receipts above describe this
+addition. Source publication, canonical hosted bytes and hosted browser
+behavior are recorded separately after deployment.

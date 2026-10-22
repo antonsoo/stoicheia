@@ -1,0 +1,10 @@
+{
+  "scope": "Independent Decimal(60) normalized-vector cut/copy, segment addition, isosceles angles and strict determinant containment. Numerical evidence, not a formal axiomatic proof.",
+  "cases": {
+    "I.20": 1620,
+    "I.18": 270
+  },
+  "comparisons": 17280,
+  "maximum_relative_error": 3.555e-13,
+  "tolerance": 2e-10
+}

@@ -1,0 +1,64 @@
+{
+  "scope": "Upgrade from 16 to 20 propositions; held and failed source downloads, followed by an origin-disabled offline reload",
+  "previousWorkerSha256": "9a7a6e713940d9b8cec7f24c9cce4f6c527cd57a4aeb6d9c703c919f129cca71",
+  "currentWorkerSha256": "31df6181774ee63cbe0697b226e1787c4b210ccad32ed060875b602cea2bef76",
+  "heldFile": "sources/heiberg-051.jpg",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "failedDownloadThenRecovered": false,
+      "pendingStatus": "Saving this edition for offline reading…",
+      "readyStatus": "Edition ready offline, including source pages",
+      "oldReadyPromiseResolvedDuringUpdate": true,
+      "heldRequests": 1,
+      "offlineReloadFromWorker": true,
+      "offlineLesson": 20,
+      "offlineStep": 9,
+      "offlineScanSha256": "fc9eb173b34a39f41195251ebff09faf213a89b654fac45f15d765bd2500d697",
+      "pageErrors": 0
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "failedDownloadThenRecovered": true,
+      "pendingStatus": "Saving this edition for offline reading…",
+      "readyStatus": "Edition ready offline, including source pages",
+      "oldReadyPromiseResolvedDuringUpdate": true,
+      "heldRequests": 1,
+      "offlineReloadFromWorker": true,
+      "offlineLesson": 20,
+      "offlineStep": 9,
+      "offlineScanSha256": "fc9eb173b34a39f41195251ebff09faf213a89b654fac45f15d765bd2500d697",
+      "pageErrors": 0
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "failedDownloadThenRecovered": false,
+      "pendingStatus": "Saving this edition for offline reading…",
+      "readyStatus": "Edition ready offline, including source pages",
+      "oldReadyPromiseResolvedDuringUpdate": true,
+      "heldRequests": 1,
+      "offlineReloadFromWorker": true,
+      "offlineLesson": 20,
+      "offlineStep": 9,
+      "offlineScanSha256": "fc9eb173b34a39f41195251ebff09faf213a89b654fac45f15d765bd2500d697",
+      "pageErrors": 0
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "failedDownloadThenRecovered": true,
+      "pendingStatus": "Saving this edition for offline reading…",
+      "readyStatus": "Edition ready offline, including source pages",
+      "oldReadyPromiseResolvedDuringUpdate": true,
+      "heldRequests": 1,
+      "offlineReloadFromWorker": true,
+      "offlineLesson": 20,
+      "offlineStep": 9,
+      "offlineScanSha256": "fc9eb173b34a39f41195251ebff09faf213a89b654fac45f15d765bd2500d697",
+      "pageErrors": 0
+    }
+  ]
+}

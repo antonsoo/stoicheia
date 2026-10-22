@@ -240,6 +240,11 @@ run `npm run test:browser` in another terminal. Playwright needs matching Chromi
 and Firefox browsers already available. On a new development machine they can be
 installed with `npx playwright install --with-deps chromium firefox`.
 
+The current [I.17–20 review](docs/inequalities-review.md) links the new clean
+build, independent geometry, rendered-browser, print and offline-upgrade
+receipts, with downloadable I.19/I.20 study sheets. Earlier receipts below
+remain records of their own editions.
+
 The [browser receipt](docs/browser-verification.json) records the tested browser
 versions, desktop and 375px viewports, rendered side equalities, source-page
 navigation, vocabulary focus return, invalid-length handling, shared links,
