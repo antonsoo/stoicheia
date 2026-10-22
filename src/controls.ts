@@ -12,6 +12,13 @@ const range = (
   `<label class="range-label" for="${id}">${title}<output id="${id}-output" for="${id}">${value}${suffix}</output></label><input id="${id}" type="range" min="${min}" max="${max}" step="${step}" value="${value}" />`;
 
 export function explorationControls(state: ReaderState): string {
+  if (state.proposition === 17 || state.proposition === 20) {
+    const choices =
+      state.proposition === 17
+        ? ["Angles at Β and Γ · source", "Angles at Α and Γ", "Angles at Α and Β"]
+        : ["ΒΑ + ΑΓ > ΒΓ · source", "ΑΒ + ΒΓ > ΑΓ", "ΒΓ + ΓΑ > ΑΒ"];
+    return `<label for="pair">Expand “similarly”<select id="pair">${choices.map((label, i) => `<option value="${i}" ${state.pair === i ? "selected" : ""}>${label}</option>`).join("")}</select></label><p>Available at step ${state.proposition === 17 ? 6 : 8}. The extra drawings repeat the proof with different point roles; the printed passage stays unchanged.</p>`;
+  }
   if (state.proposition === 12)
     return `<label for="variant">Choose the side of Δ<select id="variant"><option value="0" ${!state.variant ? "selected" : ""}>Opposite side · Euclid’s choice</option><option value="1" ${state.variant ? "selected" : ""}>Same side · inspect the crossings</option></select></label><p>The source choice guarantees a chord. Try the altered choice to see why.</p><div class="parameter-buttons"><button type="button" data-circle-example="source">Source choice</button><button type="button" data-circle-example="miss">Miss the line</button><button type="button" data-circle-example="touch">Touch once</button><button type="button" data-circle-example="cross">Same-side crossing</button></div>`;
   if (state.proposition === 4 || state.proposition === 8)
@@ -25,6 +32,8 @@ export function explorationControls(state: ReaderState): string {
 
 export function parameterControls(state: ReaderState): string {
   const p = state.proposition;
+  if (p >= 17)
+    return `${range("size", "Given length ΑΒ", 100, 240, state.size)}${range("ratio", p === 19 ? "Original ΑΓ (% of ΑΒ)" : "Side ΑΓ (% of ΑΒ)", p === 19 ? 101 : 20, 140, Math.round(state.ratio * 100), "%")}${range("angle", "Included angle ΒΑΓ", 20, 150, state.angle * 2, "°", 2)}${p === 19 ? "<p>The original drawing realizes the given angle inequality. The two rejected alternatives have their own fixed side ratios, shown beside the original measurements.</p>" : p === 18 ? "<p>I.18 requires ΑΓ > ΑΒ. Move through 100% to inspect the limit of its construction.</p>" : ""}<div class="parameter-buttons"><button type="button" id="flip">Flip the plate</button><button type="button" id="reset">Reset givens</button></div><div id="measurements"></div>`;
   if (p >= 11)
     return `${range("size", p === 11 ? "Half the displayed base length" : p === 12 ? "Drawing scale" : p === 16 ? "Base length ΒΓ" : "Ray length", 100, 240, state.size)}
     ${p === 11 ? range("take", "Γ along ΑΒ", 10, 90, Math.round(state.take * 100), "%") : ""}

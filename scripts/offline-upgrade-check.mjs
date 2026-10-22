@@ -16,6 +16,15 @@ const newWorker = await readFile(join(current, "sw.js"));
 assert.notEqual(digest(oldWorker), digest(newWorker));
 const scenario = process.argv[4] ?? "bisections";
 const editions = {
+  inequalities: {
+    previous: 16,
+    current: 20,
+    lesson: 20,
+    step: 8,
+    steps: 9,
+    source: 51,
+    receipt: "inequality-upgrade.json",
+  },
   bisections: {
     previous: 6,
     current: 10,
@@ -36,7 +45,7 @@ const editions = {
   },
 };
 const editionCheck = editions[scenario];
-assert.ok(editionCheck, "Choose bisections or right-angles.");
+assert.ok(editionCheck, "Choose bisections, right-angles or inequalities.");
 const sourceFile = `sources/heiberg-${String(editionCheck.source).padStart(3, "0")}.jpg`;
 const position = `Step ${editionCheck.step + 1} of ${editionCheck.steps}`;
 const expectedScanHash = digest(await readFile(join(current, sourceFile)));

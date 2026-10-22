@@ -108,3 +108,17 @@
   geometry independently with quadratic, midpoint and containment calculations.
 - Preserve earlier hashed assets when publishing Pages, so a cached older entry
   page can still retrieve its own assets during an edition transition.
+
+
+## From exterior angles to the triangle inequality · 2026-10-22
+
+- Complete I.17–20 in Greek, Heiberg Latin and new English: twenty propositions,
+  164 aligned steps, 49 vocabulary entries and forty reading exercises.
+- Draw every pair behind “similarly” in I.17 and I.20, including the copied
+  side, equal base angles and containing angle. Preserve the selected pair in
+  shared links, SVGs and standalone study sheets.
+- Stop I.18’s cut when its greater-side premise fails. Draw I.19’s rejected
+  alternatives with the lost angle premise visible beside the original values.
+- Bundle six additional full source pages, making fifty available offline.
+- Add independent normalized-vector and containment checks, rendered-browser
+  comparisons and interrupted upgrades from the sixteen-proposition edition.

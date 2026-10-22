@@ -1,5 +1,6 @@
 import type { PropositionId } from "../core/state";
 import { angleExercises } from "./angle-practice";
+import { inequalityExercises } from "./inequality-practice";
 import { laterExercises } from "./later-practice";
 import { lessons, type Passage } from "./lessons";
 
@@ -229,6 +230,7 @@ export const readingExercises: ReadingExercise[] = [
   },
   ...laterExercises,
   ...angleExercises,
+  ...inequalityExercises,
 ];
 
 export function exercisePassage(exercise: ReadingExercise): Passage {

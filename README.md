@@ -12,15 +12,21 @@ A translation can make the argument readable while hiding the Greek that carries
 it. Stoicheia connects both: change the givens, follow the command on the plate,
 read the two source languages, and ask what established the equality.
 
-The opening course is **Book I, propositions 1–16**. It includes the complete
-statements and proofs, divided into 135 aligned reading steps, with 46 selected
-vocabulary entries, fourteen foundation statements and thirty-two passage-based
+The opening course is **Book I, propositions 1–20**. It includes the complete
+statements and proofs, divided into 164 aligned reading steps, with 49 selected
+vocabulary entries, fourteen foundation statements and forty passage-based
 reading exercises. It is intended for an English-speaking reader who knows basic
 geometry and is beginning Greek or Latin.
 
 **[Open the course](https://antonsoo.github.io/stoicheia/)** ·
 [Source repository](https://github.com/antonsoo/stoicheia). The app is a static
 site; no package registry installation is required.
+
+**New reading: [the triangle inequality](https://antonsoo.github.io/stoicheia/#p=20&s=7&pair=2).**
+Choose each side pair to draw the construction hidden by “similarly.” Start with
+[I.19’s rejected equality](https://antonsoo.github.io/stoicheia/#p=19&s=2) to see
+why a temporary supposition cannot retain the original angle premise. The
+[new review](docs/inequalities-review.md) records the sources and actual workflows.
 
 ## Run it
 
@@ -56,6 +62,10 @@ on the same port; stop the development server before starting the preview.
 | I.14        | A straight continuation from its angle condition              | A different supposed continuation forces unequal remainders to be equal                                 |
 | I.15        | Equal vertically opposite angles                              | Subtract one angle from two equal linear-pair totals; preserve the Greek-only corollary                 |
 | I.16        | An exterior angle greater than either opposite interior angle | Two midpoint constructions place copies of the interior angles inside the exterior                      |
+| I.17        | A bound for any two interior angles                           | I.16 and a straight pair give a strict bound without the later angle-sum theorem                        |
+| I.18        | A greater angle from a greater side                           | An interior cut supplies an isosceles triangle; equality or a shorter side stops the construction       |
+| I.19        | The converse: a greater side from a greater angle             | Equal-side and shorter-side alternatives visibly lose the given angle premise                           |
+| I.20        | Any two sides together exceed the third                       | Copy a side onto a continuation, use I.19, and expand all three comparisons                             |
 - Move through the commands and deductions at your own pace. Every step names its
   permission: postulate, definition, common notion, earlier proposition, or
   assumption. Earlier constructions can be opened from the reason that uses them.
@@ -122,7 +132,7 @@ open it directly in a browser to read without the app.
 ## The source is part of the lesson
 
 The Greek and Latin are transcribed from J. L. Heiberg’s _Euclidis opera omnia_,
-volume I (Leipzig: Teubner, 1883), printed pp. 2–45. Heiberg’s Latin is a
+volume I (Leipzig: Teubner, 1883), printed pp. 2–51. Heiberg’s Latin is a
 **nineteenth-century translation**, not an ancient Latin text. The English is a
 new reading translation; explanations sometimes make an implied intersection
 explicit. Point names remain Greek throughout.
@@ -284,7 +294,7 @@ it is also retained in the full reading's print output.
 
 ## Accuracy and limitations
 
-- This is I.1–16, not the whole _Elements_. The construction tools, translations
+- This is I.1–20, not the whole _Elements_. The construction tools, translations
   and selected vocabulary are complete for that scope. There is no general Greek
   parser, pronunciation model or claim that every word is annotated.
 - The Greek follows a modern printed critical edition, not a surviving autograph
@@ -301,6 +311,7 @@ it is also retained in the full reading's print output.
   with impossible equal-distance claims. I.9’s alternate choices explicitly
   distinguish equal angles from an internal bisection.
 - I.13's controls follow the printed unequal-angle arrangement and include its separate right-angle branch. I.14's temporary continuation cannot satisfy every premise simultaneously. I.16's Θ/Κ drawing is a modern expansion of the source's “similarly,” not an additional ancient diagram or text.
+- I.17 and I.20’s additional pair drawings expand “similarly” with modern diagrams. I.19’s temporary triangles deliberately fail the given angle inequality. The readouts check the numerical drawings; they are not proof premises.
 - I.2 reuses the completed I.1 subconstruction, and I.3 reuses I.2. Their internal
   working is shown in the corresponding earlier lesson rather than repeated in
   the later plate. Some unused source-circle labels are omitted from the plates.

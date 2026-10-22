@@ -1,6 +1,26 @@
 import { type CasebookState, casebookDefaults, decodeCasebook } from "./casebook";
 
-export type PropositionId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16;
+export type PropositionId =
+  | 1
+  | 2
+  | 3
+  | 4
+  | 5
+  | 6
+  | 7
+  | 8
+  | 9
+  | 10
+  | 11
+  | 12
+  | 13
+  | 14
+  | 15
+  | 16
+  | 17
+  | 18
+  | 19
+  | 20;
 
 export interface ReaderState {
   proposition: PropositionId;
@@ -15,6 +35,7 @@ export interface ReaderState {
   variant: 0 | 1;
   take: number;
   offset: number;
+  pair: 0 | 1 | 2;
   casebook: CasebookState;
 }
 
@@ -35,8 +56,14 @@ export const stepCounts: Record<PropositionId, number> = {
   14: 8,
   15: 7,
   16: 10,
+  17: 7,
+  18: 7,
+  19: 6,
+  20: 9,
 };
-export const propositionIds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] as const;
+export const propositionIds = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+] as const;
 export const defaults: ReaderState = {
   proposition: 1,
   step: 0,
@@ -50,6 +77,7 @@ export const defaults: ReaderState = {
   variant: 0,
   take: 0.55,
   offset: 0,
+  pair: 0,
   casebook: casebookDefaults,
 };
 
@@ -64,7 +92,7 @@ export function decodeState(hash: string): ReaderState {
   const params = new URLSearchParams(hash.replace(/^#/, ""));
   const p = params.get("p");
   const proposition: PropositionId =
-    p && /^(?:[1-9]|1[0-6])$/.test(p) ? (Number(p) as PropositionId) : 1;
+    p && /^(?:[1-9]|1[0-9]|20)$/.test(p) ? (Number(p) as PropositionId) : 1;
   const angle = Math.round(
     bounded(params.get("a"), defaults.angle, 10, proposition === 13 ? 90 : 75),
   );
@@ -72,7 +100,15 @@ export function decodeState(hash: string): ReaderState {
     proposition,
     step: Math.round(bounded(params.get("s"), defaults.step, 0, stepCounts[proposition] - 1)),
     size: Math.round(bounded(params.get("size"), defaults.size, 100, 240)),
-    ratio: Math.round(bounded(params.get("r"), defaults.ratio, 0.2, 1.4) * 100) / 100,
+    ratio:
+      Math.round(
+        bounded(
+          params.get("r"),
+          proposition === 18 || proposition === 19 ? 1.25 : defaults.ratio,
+          proposition === 19 ? 1.01 : 0.2,
+          1.4,
+        ) * 100,
+      ) / 100,
     angle,
     side: params.get("side") === "-1" ? -1 : 1,
     motion: Math.round(bounded(params.get("m"), defaults.motion, 0, 100)),
@@ -88,6 +124,7 @@ export function decodeState(hash: string): ReaderState {
     variant: params.get("v") === "1" ? 1 : 0,
     take: Math.round(bounded(params.get("k"), defaults.take, 0.1, 0.9) * 100) / 100,
     offset: Math.round(bounded(params.get("x"), defaults.offset, -2, 2) * 100) / 100,
+    pair: Math.round(bounded(params.get("pair"), 0, 0, 2)) as 0 | 1 | 2,
     casebook: decodeCasebook(params),
   };
 }
@@ -105,6 +142,7 @@ export function encodeState(state: ReaderState): string {
     q: String(state.probe),
     v: String(state.variant),
     k: String(state.take),
+    ...([17, 20].includes(state.proposition) ? { pair: String(state.pair) } : {}),
     ...(state.proposition === 12 ? { x: String(state.offset) } : {}),
     ...(state.proposition === 7 && state.casebook.open
       ? {

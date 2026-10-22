@@ -62,6 +62,10 @@ const counts = {
   14: 8,
   15: 7,
   16: 10,
+  17: 7,
+  18: 7,
+  19: 6,
+  20: 9,
 };
 const artifacts = await mkdtemp(join(tmpdir(), "stoicheia-export-"));
 
@@ -189,7 +193,9 @@ try {
         assert.match(await page.locator("#offline-state").innerText(), /ready offline/);
         assert.equal(await page.evaluate(() => document.fonts.check('20px "Noto Serif"')), true);
 
-        for (const proposition of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]) {
+        for (const proposition of [
+          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        ]) {
           await openLesson(page, proposition);
           for (let step = 0; step < counts[proposition]; step++) {
             assert.equal(
@@ -224,6 +230,10 @@ try {
             14: 0,
             15: 0,
             16: 0,
+            17: 0,
+            18: 0,
+            19: 1,
+            20: 2,
           }[proposition];
           await question.nth((correctAnswer + 1) % 3).check();
           assert.ok(await page.locator("#question-feedback").innerText());
@@ -247,7 +257,7 @@ try {
         await page.locator("#open-edition").click();
         await page.locator("#source-previous").click();
         await page.locator("#source-previous").click();
-        for (let printedPage = 2; printedPage <= 45; printedPage++) {
+        for (let printedPage = 2; printedPage <= 51; printedPage++) {
           await page.waitForFunction(() => {
             const image = document.querySelector("#source-image");
             return image.complete && image.naturalWidth > 0;
@@ -256,7 +266,7 @@ try {
             await page.locator("#source-title").innerText(),
             `Printed page ${printedPage}`,
           );
-          if (printedPage < 45) await page.locator("#source-next").click();
+          if (printedPage < 51) await page.locator("#source-next").click();
         }
         await page.locator("#source-zoom").click();
         assert.equal(await page.locator("#source-zoom").getAttribute("aria-pressed"), "true");

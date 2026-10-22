@@ -30,10 +30,14 @@ a new reading translation for this workbench.
 | I.14        | 38, 40                     | 39, 41                      |
 | I.15        | 40; bracketed corollary 42 | 41; no translated corollary |
 | I.16        | 42, 44                     | 43, 45                      |
+| I.17        | 44                         | 45                          |
+| I.18        | 46                         | 47                          |
+| I.19        | 46, 48                     | 47, 49                      |
+| I.20        | 48, 50                     | 49, 51                      |
 
-Bundled JPEGs are full-page renders of PDF pages 16–59 using Poppler's
+Bundled JPEGs are full-page renders of PDF pages 16–65 using Poppler's
 `pdftoppm`, maximum dimension 1550 px and JPEG quality 88. They include material
-outside I.1–16 and the selected foundations (other definitions and critical notes). The reader transcribes only its named selections. See [the manifest](../public/sources/manifest.json)
+outside I.1–20 and the selected foundations (other definitions and critical notes). The reader transcribes only its named selections. See [the manifest](../public/sources/manifest.json)
 for the download URL, source PDF hash, page mapping and JPEG hashes.
 
 Changes from print:
@@ -132,7 +136,7 @@ Further mathematical commentary:
 
 The foundations reader includes definitions 10, 15, 16 and 20, all five postulates,
 and the five usual common notions (Heiberg’s 1, 2, 3, 7 and 8), each with Greek,
-Heiberg Latin, a new English reading, and a contextual note. Printed pp. 2–45 are bundled, giving forty-four full pages in total (PDF pages 16–59). Definition 10 crosses Greek pp. 2/4 and Latin pp. 3/5.
+Heiberg Latin, a new English reading, and a contextual note. Printed pp. 2–51 are bundled, giving fifty full pages in total (PDF pages 16–65). Definition 10 crosses Greek pp. 2/4 and Latin pp. 3/5.
 Definition 15’s bracketed Greek clauses and common notion 8’s `[ἐστιν]` are kept;
 the corresponding Latin omissions are preserved.
 
@@ -254,3 +258,34 @@ Both midpoint constructions call the existing I.10 construction. Equal extension
 uses I.2 and a ray/circle intersection. The prior lessons can be opened from the
 reason panel. The numerical model checks the displayed figure; it does not prove
 incidence, continuity or motion assumptions from an axiomatic foundation.
+
+
+## Inequalities, I.17–20
+
+The complete Greek and facing Latin were checked visually against printed
+pages 44–51. The six additional images, pages 46–51, use the same rendering
+command and source PDF as the previous edition. I.17 shares existing pages
+44/45; the end of I.20 occupies only the top of 50/51. The rest of those
+complete pages includes I.21, which is not transcribed in this course.
+- I.17 adds a common angle to a strict inequality. The reason explicitly names
+  this order rule rather than mislabeling it as one of the usual five common
+  notions. Heiberg’s printed Latin cites his expanded common notion 4; the
+  existing foundations reader uses the usual five-item selection.
+- I.18 and I.19 reverse the direction of given and goal. Their statements
+  preserve that change in word order; the English and notes state the logical
+  direction explicitly. No sine rule or angle-sum theorem is used as a reason.
+- I.19’s Greek shorter-side sentence crosses 46/48, and the facing Latin
+  crosses 47/49. The source buttons include both pages. Its conditional
+  `ἂν ἦν` / `esset` is kept conditional in the reading and diagram notices.
+- I.20’s Latin footnote `Nam ΔΒ = ΔΑ + ΑΒ.` is not inserted into the source
+  passage. Segment addition is explained in the reason, with the footnote
+  identified as Heiberg’s explanation.
+- I.17 and I.20 say `ὁμοίως` / `similiter` for the remaining comparisons.
+  Additional constructions, with the same original point names in reassigned
+  roles, are identified as modern teaching expansions. Their selection never
+  replaces the printed text with an invented ancient passage.
+
+The English, syntax notes, exercises and coordinate diagrams are new. The
+Latin remains Heiberg’s nineteenth-century translation. No modern English
+translation is reproduced. The linked Joyce commentary supplies further
+reading; the bundled Heiberg pages are the transcription source.

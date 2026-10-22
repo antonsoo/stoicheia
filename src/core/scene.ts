@@ -1,6 +1,7 @@
 import { bisectionScene } from "./bisection-scene";
 import type { Point } from "./geometry";
 import { add, cutOff, distance, equilateral, scale, subtract, transfer } from "./geometry";
+import { inequalityScene } from "./inequality-scene";
 import { rightAngleScene } from "./right-angle-scene";
 import type { ReaderState } from "./state";
 import { triangleScene } from "./triangle-scene";
@@ -37,6 +38,7 @@ export interface AngleMark {
   rings: number;
 }
 export interface Comparison {
+  headers?: [string, string, string];
   title: string;
   first: string;
   second: string;
@@ -65,6 +67,7 @@ const polar = (r: number, degrees: number): Point => ({
 });
 
 export function makeScene(state: ReaderState): Scene {
+  if (state.proposition >= 17) return inequalityScene(state);
   if (state.proposition >= 11) return rightAngleScene(state);
   if (state.proposition >= 7) return bisectionScene(state);
   if (state.proposition >= 4) return triangleScene(state);

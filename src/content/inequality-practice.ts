@@ -1,0 +1,148 @@
+import type { ReadingExercise } from "./practice";
+
+export const inequalityExercises: ReadingExercise[] = [
+  {
+    proposition: 17,
+    step: "statement",
+    language: "grc",
+    focus: "πάντῃ μεταλαμβανόμεναι",
+    prompt: "What does this phrase require the proof to cover?",
+    options: [
+      "Only the two angles drawn at the base",
+      "Every choice of two angles",
+      "All three angles added together",
+    ],
+    correct: 1,
+    explanations: [
+      "The displayed pair is the first case; two more pairs must be covered.",
+      "Yes. The later ‘similarly’ supplies the other two choices.",
+      "αἱ δύο γωνίαι still says two angles. The phrase makes the choice general.",
+    ],
+  },
+  {
+    proposition: 17,
+    step: 3,
+    language: "lat",
+    focus: "communis adiciatur ΑΓΒ",
+    prompt: "What is added in common?",
+    options: [
+      "The same angle ΑΓΒ to each side of the inequality",
+      "Two unrelated angles",
+      "A new line through Α",
+    ],
+    correct: 0,
+    explanations: [
+      "Yes. Adding the same magnitude preserves the strict comparison.",
+      "communis identifies a shared addition, not two independently chosen angles.",
+      "ΑΓΒ names an angle here; the clause changes the comparison, not the construction.",
+    ],
+  },
+  {
+    proposition: 18,
+    step: "statement",
+    language: "grc",
+    focus: "ἡ μείζων πλευρὰ",
+    prompt: "What information comes first in I.18?",
+    options: [
+      "An already established greater angle",
+      "An equality of every side",
+      "The greater side, whose opposite angle is to be compared",
+    ],
+    correct: 2,
+    explanations: [
+      "That is the starting point of the converse, I.19.",
+      "μείζων is comparative: greater, not equal.",
+      "Yes. The subject is nominative, and the opening given specifies ΑΓ > ΑΒ.",
+    ],
+  },
+  {
+    proposition: 18,
+    step: 5,
+    language: "lat",
+    focus: "multo magis",
+    prompt: "What does multo magis contribute here?",
+    options: [
+      "A fixed numerical multiplier",
+      "An intensified comparison: the whole angle is greater still",
+      "An instruction to lengthen a side",
+    ],
+    correct: 1,
+    explanations: [
+      "The text supplies no numerical multiplier.",
+      "Yes. ΑΒΓ exceeds ΑΒΔ, which already exceeds ΑΓΒ.",
+      "This is a deduction about angles, not a construction command.",
+    ],
+  },
+  {
+    proposition: 19,
+    step: 2,
+    language: "grc",
+    focus: "ἂν ἦν",
+    prompt: "Does this equality describe the original given triangle?",
+    options: [
+      "Yes, it replaces the original greater-angle premise",
+      "No, it is what would follow if the sides were equal",
+      "No, it describes a circle",
+    ],
+    correct: 1,
+    explanations: [
+      "Replacing the premise would lose the contradiction. The original premise remains the standard against which the supposition is rejected.",
+      "Yes. The conditional consequence is incompatible with the original greater-angle premise.",
+      "The conditional clause concerns an angle equality in a triangle.",
+    ],
+  },
+  {
+    proposition: 19,
+    step: 1,
+    language: "lat",
+    focus: "si minus",
+    prompt: "How should si minus be read in this sentence?",
+    options: [
+      "If not [greater], followed by equal or less as alternatives",
+      "Only if ΑΓ is shorter",
+      "If both angles are equal",
+    ],
+    correct: 0,
+    explanations: [
+      "Yes. aut … aut then explicitly lists both remaining side orders.",
+      "That excludes the equal-side alternative, which the sentence explicitly includes.",
+      "The clause denies the desired side inequality, not the given angle inequality.",
+    ],
+  },
+  {
+    proposition: 20,
+    step: 6,
+    language: "grc",
+    focus: "αἱ ΒΑ, ΑΓ",
+    prompt: "What is understood when the two side names are listed together?",
+    options: [
+      "Each side individually exceeds ΒΓ",
+      "The sides have to be equal",
+      "Their combined length exceeds ΒΓ",
+    ],
+    correct: 2,
+    explanations: [
+      "The proposition compares their sum with the remaining side, not each separately.",
+      "Only the copied ΑΔ and ΑΓ were made equal.",
+      "Yes. The plural names the combined magnitude; the facing Latin writes ΒΑ + ΑΓ explicitly.",
+    ],
+  },
+  {
+    proposition: 20,
+    step: "statement",
+    language: "lat",
+    focus: "reliquo",
+    prompt: "Which omitted noun belongs with reliquo?",
+    options: [
+      "angulo: the remaining angle",
+      "latere: the remaining side",
+      "puncto: the remaining point",
+    ],
+    correct: 1,
+    explanations: [
+      "The statement compares lengths, not angles.",
+      "Yes. duo latera are compared with the remaining side; the noun need not be repeated.",
+      "A point has no length to serve as the comparison here.",
+    ],
+  },
+];

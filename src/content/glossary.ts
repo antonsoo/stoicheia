@@ -1,4 +1,5 @@
 import { angleGlossary } from "./angle-glossary";
+import { inequalityGlossary } from "./inequality-glossary";
 
 export interface Gloss {
   id: string;
@@ -12,6 +13,7 @@ export interface Gloss {
 
 export const glossary: Gloss[] = [
   ...angleGlossary,
+  ...inequalityGlossary,
   {
     id: "possible",
     greek: "δυνατός",
@@ -225,7 +227,7 @@ export const glossary: Gloss[] = [
     transliteration: "hypoteinō",
     meaning: "to stretch under; to lie opposite",
     note: "The side described as stretching under an angle is the opposite side, not either of the sides that enclose it. This terminology appears repeatedly in I.4–6.",
-    forms: ["ὑποτείνουσιν", "ὑποτείνουσαι", "subtendunt", "subtendentia"],
+    forms: ["ὑποτείνει", "subtendit", "ὑποτείνουσιν", "ὑποτείνουσαι", "subtendunt", "subtendentia"],
   },
   {
     id: "line",
@@ -425,7 +427,7 @@ export const glossary: Gloss[] = [
     transliteration: "loipos",
     meaning: "remaining; remainder",
     note: "λοιπὴ ἡ ΑΛ means ‘the remaining ΑΛ’. The adjective takes the place of a longer phrase about the line left after subtraction. Heiberg’s Latin renders I.2’s remainder sentence as an equation.",
-    forms: ["λοιπὴ", "λοιπῇ", "λοιπός", "reliqua"],
+    forms: ["λοιπῆς", "reliquo", "λοιπὴ", "λοιπῇ", "λοιπός", "reliqua"],
   },
   {
     id: "greater",
@@ -434,7 +436,20 @@ export const glossary: Gloss[] = [
     transliteration: "meizōn",
     meaning: "greater",
     note: "A comparative. μείζονος is genitive after ἀπό (‘from’). In I.3 the greater line must truly be greater for the cut point to lie inside it.",
-    forms: ["μείζων", "μείζονος", "μείζονι", "maior", "maiore", "maiori"],
+    forms: [
+      "μείζων",
+      "μείζονα",
+      "μείζονες",
+      "μείζονές",
+      "maius",
+      "maiora",
+      "maiorem",
+      "μείζονος",
+      "μείζονι",
+      "maior",
+      "maiore",
+      "maiori",
+    ],
   },
   {
     id: "lesser",
@@ -442,8 +457,20 @@ export const glossary: Gloss[] = [
     latin: "minor",
     transliteration: "elassōn",
     meaning: "lesser",
-    note: "The dative ἐλάσσονι follows ἴσην: ‘equal to the lesser’. Heiberg’s Latin uses the dative minori. The two languages let you track which length is copied.",
-    forms: ["ἐλάσσονι", "ἐλάττονι", "ἔλασσον", "ἐλάσσων", "minor", "minori", "minus"],
+    note: "The dative ἐλάσσονι follows ἴσην: ‘equal to the lesser’. Heiberg’s Latin uses the dative minori. The two languages let you track which length is copied. In I.19, however, si minus means ‘if not’; aut … aut then lists equal and less as the two alternatives.",
+    forms: [
+      "ἐλάσσονές",
+      "ἐλάσσονες",
+      "minores",
+      "ἐλάσσων",
+      "ἐλάσσονι",
+      "ἐλάττονι",
+      "ἔλασσον",
+      "ἐλάσσων",
+      "minor",
+      "minori",
+      "minus",
+    ],
   },
   {
     id: "cut",
