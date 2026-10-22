@@ -1,0 +1,17 @@
+{
+  "scope": "Independent Decimal(60) quadratic/projection, analytic midpoint/reflection and determinant containment checks; numerical evidence, not a formal axiomatic proof",
+  "cases": {
+    "I.11": 90,
+    "I.12": 1680,
+    "I.16": 360
+  },
+  "circle_classifications": {
+    "crossings": 1440,
+    "miss": 180,
+    "degenerate": 30,
+    "tangent": 30
+  },
+  "comparisons": 21030,
+  "maximum_relative_error": 3.302790677052444e-14,
+  "tolerance": 2e-10
+}

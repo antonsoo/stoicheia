@@ -1,0 +1,336 @@
+import type { Lesson, Reason } from "./lessons";
+
+export const perpendicularReasons: Record<string, Reason> = {
+  perpendicularCopy: {
+    title: "I.2 · place an equal distance at Γ",
+    text: "Choose Δ between Α and Γ. Obtain ΓΕ equal to ΓΔ on the other ray of ΑΒ. Heiberg's Latin margin cites I.2 here. The model obtains the copied distance through I.2, then intersects a circle at Γ with the given line to locate Ε. Equal-looking spacing is not the premise.",
+    kind: "construction",
+    lesson: 2,
+  },
+  perpendicularEquilateral: {
+    title: "I.1 · an equilateral triangle on ΔΕ",
+    text: "Construct ΖΔΕ with the two equal-radius circles of I.1. ΖΔ = ΖΕ will supply the third side pair for the two triangles beside ΓΖ.",
+    kind: "construction",
+    lesson: 1,
+  },
+  perpendicularSidePairs: {
+    title: "The copied lengths and one common side",
+    text: "ΔΓ = ΓΕ is the earlier construction's result. ΓΖ is a single side shared by both triangles. These give the first two corresponding side pairs without assuming any right angle.",
+    kind: "given",
+  },
+  perpendicularSSS: {
+    title: "I.8 · equality of adjacent angles",
+    text: "Compare ΔΓΖ with ΕΓΖ. The copied sides ΔΓ and ΕΓ are equal, ΓΖ is common, and ΔΖ = ΕΖ comes from the equilateral triangle. I.8 proves equality of the two angles at Γ. Their adjacency follows from Δ, Γ and Ε lying on the given line.",
+    kind: "deduction",
+    lesson: 8,
+  },
+  rightDefinition: {
+    title: "Definition 10 · equal adjacent angles are right",
+    text: "A line standing on a line makes equal adjacent angles. Definition 10 calls each right and the standing line perpendicular. The construction earns the angle equality first; the measured 90° readout is a check, not the reason.",
+    kind: "definition",
+  },
+  oppositeSide: {
+    title: "Choose the auxiliary point on the other side",
+    text: "Δ must lie across ΑΒ from Γ. Then the distance ΓΔ is greater than the perpendicular distance from Γ to the line, so the circle has two distinct crossings in the Euclidean plane. Euclid uses that crossing without separately proving a continuity axiom. A same-side choice loses the guarantee: the circle can miss, touch, or still cross the line.",
+    kind: "assumption",
+  },
+  chordMidpoint: {
+    title: "I.10 · bisect the chord ΕΗ",
+    text: "Ε and Η are the two intersections of the circle with the unbounded line. Apply I.10 to their segment: its equilateral and bisector constructions locate Θ. The model calls that construction rather than assigning the perpendicular foot by projection.",
+    kind: "construction",
+    lesson: 10,
+  },
+  chordPairs: {
+    title: "The constructed halves and their common side",
+    text: "I.10 supplied ΗΘ = ΘΕ. ΘΓ belongs to both triangles. No angle equality has been used to place Θ.",
+    kind: "given",
+    lesson: 10,
+  },
+  chordSSS: {
+    title: "I.8 · equal radii complete the side comparison",
+    text: "ΓΗ and ΓΕ are radii of the same circle. Together with ΗΘ = ΘΕ and common ΘΓ, I.8 gives equal angles ΓΘΗ and ΕΘΓ. Their other rays run in opposite directions on the given straight line.",
+    kind: "deduction",
+    lesson: 8,
+  },
+};
+
+export const perpendicularLessons: Record<11 | 12, Lesson> = {
+  11: {
+    id: 11,
+    numeral: "I.11",
+    greekNumeral: "ιαʹ",
+    title: "Raise a perpendicular from the line",
+    shortTitle: "Raise a perpendicular",
+    introduction:
+      "Two equal distances and an equilateral triangle give equal adjacent angles. Only then does the definition name those angles right.",
+    statement: {
+      grc: "Τῇ δοθείσῃ εὐθείᾳ ἀπὸ τοῦ πρὸς αὐτῇ δοθέντος σημείου πρὸς ὀρθὰς γωνίας εὐθεῖαν γραμμὴν ἀγαγεῖν.",
+      lat: "Ad datam rectam a dato puncto in ea sito rectam perpendicularem erigere.",
+      en: "Draw a straight line at right angles to a given straight line, from a given point on it.",
+      greekPages: [32],
+      latinPages: [33],
+    },
+    steps: [
+      {
+        title: "Take the line and a point on it",
+        phase: "Given",
+        reason: "given",
+        grc: "Ἔστω ἡ μὲν δοθεῖσα εὐθεῖα ἡ ΑΒ τὸ δὲ δοθὲν σημεῖον ἐπ᾽ αὐτῆς τὸ Γ· δεῖ δὴ ἀπὸ τοῦ Γ σημείου τῇ ΑΒ εὐθείᾳ πρὸς ὀρθὰς γωνίας εὐθεῖαν γραμμὴν ἀγαγεῖν.",
+        lat: "Sit data recta ΑΒ, punctum autem datum in ea situm Γ. oportet igitur a Γ puncto rectae ΑΒ perpendicularem rectam erigere.",
+        en: "Let ΑΒ be the given straight line and Γ the given point on it. From Γ we must draw a line at right angles to ΑΒ.",
+        greekPages: [32],
+        latinPages: [33],
+        language:
+          "ἐπ᾽ αὐτῆς / in ea situm places Γ on the given line. This condition distinguishes the task from I.12, where the given point is outside the line. πρὸς ὀρθὰς γωνίας means ‘at right angles’, not ‘toward the right-hand side’.",
+      },
+      {
+        title: "Choose Δ and obtain an equal distance",
+        phase: "Construct",
+        reason: "perpendicularCopy",
+        grc: "Εἰλήφθω ἐπὶ τῆς ΑΓ τυχὸν σημεῖον τὸ Δ, καὶ κείσθω τῇ ΓΔ ἴση ἡ ΓΕ,",
+        lat: "sumatur in ΑΓ quoduis punctum Δ, et ponatur ΓΕ = ΓΔ,",
+        en: "Choose any point Δ on ΑΓ, and place ΓΕ equal to ΓΔ.",
+        greekPages: [32],
+        latinPages: [33],
+        language:
+          "τυχὸν / quoduis permits a chosen point. κείσθω / ponatur commands an equal placement; it does not assert that Γ was given as the midpoint of ΑΒ. The printed figure places Ε on the other ray from Γ. Heiberg's margin cites I.2, not I.3.",
+      },
+      {
+        title: "Construct an equilateral triangle on ΔΕ",
+        phase: "Construct",
+        reason: "perpendicularEquilateral",
+        grc: "καὶ συνεστάτω ἐπὶ τῆς ΔΕ τρίγωνον ἰσόπλευρον τὸ ΖΔΕ,",
+        lat: "et in ΔΕ triangulus aequilaterus construatur ΖΔΕ,",
+        en: "On ΔΕ construct the equilateral triangle ΖΔΕ.",
+        greekPages: [32],
+        latinPages: [33],
+        language:
+          "The same construction command συνεστάτω / construatur now reuses I.1 on a different base. The new vertex Ζ is not chosen by looking for a right angle above Γ.",
+      },
+      {
+        title: "Join Ζ to Γ and announce the claim",
+        phase: "Construct",
+        reason: "p1",
+        grc: "καὶ ἐπεζεύχθω ἡ ΖΓ· λέγω, ὅτι τῇ δοθείσῃ εὐθείᾳ τῇ ΑΒ ἀπὸ τοῦ πρὸς αὐτῇ δοθέντος σημείου τοῦ Γ πρὸς ὀρθὰς γωνίας εὐθεῖα γραμμὴ ἧκται ἡ ΖΓ.",
+        lat: "et ducatur ΖΓ. dico, ad datam rectam ΑΒ a dato puncto in ea sito Γ perpendicularem erectam esse rectam lineam ΖΓ.",
+        en: "Join ΖΓ. I claim that ΖΓ has been drawn from Γ at right angles to the given line ΑΒ.",
+        greekPages: [32],
+        latinPages: [33],
+        language:
+          "ἧκται / erectam esse describes the claimed completed construction. After λέγω / dico it still needs the argument that follows. Joining the points has not itself established perpendicularity.",
+      },
+      {
+        title: "Identify two equal side pairs",
+        phase: "Prove",
+        reason: "perpendicularSidePairs",
+        grc: "Ἐπεὶ γὰρ ἴση ἐστὶν ἡ ΔΓ τῇ ΓΕ, κοινὴ δὲ ἡ ΓΖ, δύο δὴ αἱ ΔΓ, ΓΖ δυσὶ ταῖς ΕΓ, ΓΖ ἴσαι εἰσὶν ἑκατέρα ἑκατέρᾳ·",
+        lat: "nam quoniam ΔΓ = ΓΕ et communis ΓΖ, duae rectae ΔΓ, ΓΖ duabus ΕΓ, ΓΖ aequales sunt altera alteri;",
+        en: "ΔΓ equals ΓΕ, and ΓΖ is common. Thus ΔΓ and ΓΖ equal ΕΓ and ΓΖ respectively.",
+        greekPages: [32],
+        latinPages: [33],
+        language:
+          "ἑκατέρα ἑκατέρᾳ / altera alteri pairs the sides in order. ΕΓ and ΓΕ name the same segment with reversed endpoints; the reversal follows the triangle correspondence.",
+      },
+      {
+        title: "Use the third side pair to prove equal adjacent angles",
+        phase: "Prove",
+        reason: "perpendicularSSS",
+        grc: "καὶ βάσις ἡ ΔΖ βάσει τῇ ΖΕ ἴση ἐστίν· γωνία ἄρα ἡ ὑπὸ ΔΓΖ γωνίᾳ τῇ ὑπὸ ΕΓΖ ἴση ἐστίν· καί εἰσιν ἐφεξῆς.",
+        lat: "et basis ΔΖ basi ΖΕ aequalis est. itaque ∠ ΔΓΖ = ΕΓΖ; et deinceps sunt positi.",
+        en: "The base ΔΖ also equals ΖΕ. Therefore angle ΔΓΖ equals angle ΕΓΖ, and these angles are adjacent.",
+        greekPages: [32],
+        latinPages: [33],
+        language:
+          "ἐφεξῆς / deinceps says ‘adjacent’ or ‘in succession’. Equality alone would not make two arbitrary angles right: their position together on the straight line is essential.",
+      },
+      {
+        title: "Apply the definition of a right angle",
+        phase: "Prove",
+        reason: "rightDefinition",
+        grc: "ὅταν δὲ εὐθεῖα ἐπ᾽ εὐθεῖαν σταθεῖσα τὰς ἐφεξῆς γωνίας ἴσας ἀλλήλαις ποιῇ, ὀρθὴ ἑκατέρα τῶν ἴσων γωνιῶν ἐστιν· ὀρθὴ ἄρα ἐστὶν ἑκατέρα τῶν ὑπὸ ΔΓΖ, ΖΓΕ.",
+        lat: "ubi autem recta super rectam lineam erecta angulos deinceps positos inter se aequales efficit, rectus est uterque angulus aequalis. itaque ΔΓΖ, ΖΓΕ recti sunt.",
+        en: "When a line standing on a line makes the adjacent angles equal, each of those equal angles is right. Therefore each of ΔΓΖ and ΖΓΕ is right.",
+        greekPages: [32],
+        latinPages: [33],
+        language:
+          "ὅταν with ποιῇ gives a general ‘whenever’ condition. ἑκατέρα and Latin uterque distribute the conclusion to each of the two angles. The definition, not a degree measurement, supplies ‘right’.",
+      },
+      {
+        title: "The required perpendicular is constructed",
+        phase: "Conclude",
+        reason: "finish",
+        grc: "Τῇ ἄρα δοθείσῃ εὐθείᾳ τῇ ΑΒ ἀπὸ τοῦ πρὸς αὐτῇ δοθέντος σημείου τοῦ Γ πρὸς ὀρθὰς γωνίας εὐθεῖα γραμμὴ ἧκται ἡ ΓΖ· ὅπερ ἔδει ποιῆσαι.",
+        lat: "Ergo ad datam rectam ΑΒ a dato puncto in ea sito Γ perpendicularis recta linea ducta est ΓΖ; quod oportebat fieri.",
+        en: "Thus ΓΖ has been drawn at right angles to the given line ΑΒ from its given point Γ. The requested construction is complete.",
+        greekPages: [32],
+        latinPages: [33],
+        language:
+          "The conclusion returns to the given point and line. ποιῆσαι / fieri closes a construction problem. ΓΖ reverses the earlier ΖΓ without changing the line that was constructed.",
+      },
+    ],
+    insight: {
+      title: "The right angle is a conclusion",
+      text: "The diagram may look perpendicular as soon as ΖΓ is joined. The proof earns that description only after three side pairs establish equal adjacent angles. Move Γ along ΑΒ: Γ need not bisect the original given segment, because the construction makes its own equal distances ΔΓ and ΓΕ.",
+      link: "https://mathcs.clarku.edu/~djoyce/elements/bookI/propI11.html",
+    },
+    question: {
+      prompt: "What makes the equal angles at Γ right?",
+      options: [
+        "They are adjacent angles made by a line standing on a straight line",
+        "Every pair of equal angles is right",
+        "Γ is the midpoint of the originally given ΑΒ",
+      ],
+      correct: 0,
+      explanations: [
+        "Yes. I.8 establishes equality, and their adjacent position lets definition 10 apply.",
+        "Equal angles could both be acute or both obtuse. Their position on the straight line is required.",
+        "Γ is given anywhere on ΑΒ. The construction makes it the midpoint of ΔΕ, not necessarily of ΑΒ.",
+      ],
+    },
+  },
+  12: {
+    id: 12,
+    numeral: "I.12",
+    greekNumeral: "ιβʹ",
+    title: "Drop a perpendicular from outside the line",
+    shortTitle: "Drop a perpendicular",
+    introduction:
+      "A circle cuts the line twice, and the chord's constructed midpoint supplies the foot. The short instruction ‘on the other side’ makes those two crossings available.",
+    statement: {
+      grc: "Ἐπὶ τὴν δοθεῖσαν εὐθεῖαν ἄπειρον ἀπὸ τοῦ δοθέντος σημείου, ὃ μή ἐστιν ἐπ᾽ αὐτῆς, κάθετον εὐθεῖαν γραμμὴν ἀγαγεῖν.",
+      lat: "Ad datam rectam infinitam a dato puncto extra eam sito perpendicularem rectam lineam ducere.",
+      en: "Draw a perpendicular straight line to a given unbounded straight line from a given point not on it.",
+      greekPages: [34],
+      latinPages: [35],
+    },
+    steps: [
+      {
+        title: "Take the line and an exterior point",
+        phase: "Given",
+        reason: "given",
+        grc: "Ἔστω ἡ μὲν δοθεῖσα εὐθεῖα ἄπειρος ἡ ΑΒ τὸ δὲ δοθὲν σημεῖον, ὃ μή ἐστιν ἐπ᾽ αὐτῆς, τὸ Γ· δεῖ δὴ ἐπὶ τὴν δοθεῖσαν εὐθεῖαν ἄπειρον τὴν ΑΒ ἀπὸ τοῦ δοθέντος σημείου τοῦ Γ, ὃ μή ἐστιν ἐπ᾽ αὐτῆς, κάθετον εὐθεῖαν γραμμὴν ἀγαγεῖν.",
+        lat: "Sit data recta infinita ΑΒ punctum autem datum extra eam situm Γ. oportet igitur ad datam rectam infinitam ΑΒ a dato puncto extra eam sito Γ perpendicularem rectam ducere.",
+        en: "Let ΑΒ be the given unbounded line and Γ the given point outside it. We must draw a perpendicular from Γ to ΑΒ.",
+        greekPages: [34],
+        latinPages: [35],
+        language:
+          "ἄπειρον / infinitam means the line is not limited to the displayed endpoints. ὃ μή ἐστιν ἐπ᾽ αὐτῆς is a relative clause: ‘which is not on it’. Latin compresses that condition to extra eam situm.",
+      },
+      {
+        title: "Choose Δ on the other side",
+        phase: "Construct",
+        reason: "oppositeSide",
+        grc: "Εἰλήφθω γὰρ ἐπὶ τὰ ἕτερα μέρη τῆς ΑΒ εὐθείας τυχὸν σημεῖον τὸ Δ,",
+        lat: "sumatur enim in altera parte rectae ΑΒ quoduis punctum Δ,",
+        en: "Choose a point Δ on the other side of the straight line ΑΒ.",
+        greekPages: [34],
+        latinPages: [35],
+        language:
+          "τυχὸν / quoduis means ‘any’, but the following placement restriction still applies. ἐπὶ τὰ ἕτερα μέρη / in altera parte puts Δ across the line from Γ. It does not mean anywhere in the plane.",
+      },
+      {
+        title: "Draw the circle through Δ",
+        phase: "Construct",
+        reason: "p3",
+        grc: "καὶ κέντρῳ μὲν τῷ Γ διαστήματι δὲ τῷ ΓΔ κύκλος γεγράφθω ὁ ΕΖΗ,",
+        lat: "et centro Γ radio autem ΓΔ circulus describatur ΕΖΗ,",
+        en: "With center Γ and distance ΓΔ, draw the circle ΕΖΗ. Its crossings with ΑΒ are Ε and Η.",
+        greekPages: [34],
+        latinPages: [35],
+        language:
+          "κέντρῳ μὲν … διαστήματι δέ distinguishes center from distance. ΕΖΗ names the circle through points on it; Ζ is not another center. The English makes the two crossings explicit, as the source's next command and diagram require them.",
+      },
+      {
+        title: "Construct the chord's midpoint",
+        phase: "Construct",
+        reason: "chordMidpoint",
+        grc: "καὶ τετμήσθω ἡ ΕΗ εὐθεῖα δίχα κατὰ τὸ Θ,",
+        lat: "et recta ΕΗ in duas partes aequales secetur in Θ,",
+        en: "Bisect the straight line ΕΗ at Θ.",
+        greekPages: [34],
+        latinPages: [35],
+        language:
+          "τετμήσθω is a command to have the bisection completed. κατὰ τὸ Θ / in Θ names where it is made. I.10 supplies that construction; the foot is not selected by measuring a right angle.",
+      },
+      {
+        title: "Join the radii and the proposed perpendicular",
+        phase: "Construct",
+        reason: "p1",
+        grc: "καὶ ἐπεζεύχθωσαν αἱ ΓΗ, ΓΘ, ΓΕ εὐθεῖαι· λέγω, ὅτι ἐπὶ τὴν δοθεῖσαν εὐθεῖαν ἄπειρον τὴν ΑΒ ἀπὸ τοῦ δοθέντος σημείου τοῦ Γ, ὃ μή ἐστιν ἐπ᾽ αὐτῆς, κάθετος ἧκται ἡ ΓΘ.",
+        lat: "et ducantur rectae ΓΗ, ΓΘ, ΓΕ. dico, ad datam rectam infinitam ΑΒ a dato puncto Γ extra eam sito perpendicularem ductam esse ΓΘ.",
+        en: "Join ΓΗ, ΓΘ and ΓΕ. I claim that ΓΘ is perpendicular to the given line ΑΒ from its exterior point Γ.",
+        greekPages: [34],
+        latinPages: [35],
+        language:
+          "The plural command ἐπεζεύχθωσαν / ducantur joins three pairs of points. Two resulting lines are radii; ΓΘ is the line whose perpendicularity still needs proof.",
+      },
+      {
+        title: "Use the constructed halves and common side",
+        phase: "Prove",
+        reason: "chordPairs",
+        grc: "Ἐπεὶ γὰρ ἴση ἐστὶν ἡ ΗΘ τῇ ΘΕ, κοινὴ δὲ ἡ ΘΓ, δύο δὴ αἱ ΗΘ, ΘΓ δύο ταῖς ΕΘ, ΘΓ ἴσαι εἰσὶν ἑκατέρα ἑκατέρᾳ·",
+        lat: "nam cum ΗΘ = ΘΕ, et communis sit ΘΓ, duae rectae ΗΘ, ΘΓ duabus ΕΘ, ΘΓ aequales sunt altera alteri.",
+        en: "ΗΘ equals ΘΕ, and ΘΓ is common. Thus ΗΘ and ΘΓ equal ΕΘ and ΘΓ respectively.",
+        greekPages: [34],
+        latinPages: [35],
+        language:
+          "Heiberg prints δύο ταῖς here, with δυσί recorded in the apparatus for other witnesses; the main-text wording is retained. Latin duabus makes the comparison with the second pair explicit. The equality of the halves comes from I.10.",
+      },
+      {
+        title: "Complete the three-side comparison",
+        phase: "Prove",
+        reason: "chordSSS",
+        grc: "καὶ βάσις ἡ ΓΗ βάσει τῇ ΓΕ ἐστιν ἴση· γωνία ἄρα ἡ ὑπὸ ΓΘΗ γωνίᾳ τῇ ὑπὸ ΕΘΓ ἐστιν ἴση. καί εἰσιν ἐφεξῆς.",
+        lat: "et basis ΓΗ basi ΓΕ aequalis est. itaque ∠ ΓΘΗ = ΕΘΓ. et deinceps positi sunt.",
+        en: "The base ΓΗ equals ΓΕ. Therefore angle ΓΘΗ equals angle ΕΘΓ, and these angles are adjacent.",
+        greekPages: [34],
+        latinPages: [35],
+        language:
+          "The middle letter Θ identifies the common vertex of both angles. ΓΗ and ΓΕ are equal because they are radii, not because Θ was already assumed to be the perpendicular foot.",
+      },
+      {
+        title: "Name the right angles and perpendicular",
+        phase: "Prove",
+        reason: "rightDefinition",
+        grc: "ὅταν δὲ εὐθεῖα ἐπ᾽ εὐθεῖαν σταθεῖσα τὰς ἐφεξῆς γωνίας ἴσας ἀλλήλαις ποιῇ, ὀρθὴ ἑκατέρα τῶν ἴσων γωνιῶν ἐστιν, καὶ ἡ ἐφεστηκυῖα εὐθεῖα κάθετος καλεῖται ἐφ᾽ ἣν ἐφέστηκεν.",
+        lat: "ubi autem recta super rectam lineam erecta angulos deinceps positos inter se aequales efficit, rectus est uterque angulus aequalis, et recta linea erecta perpendicularis adpellatur ad eam, super quam erecta est.",
+        en: "When a line standing on a line makes adjacent angles equal, each is right, and the standing line is called perpendicular to the line on which it stands.",
+        greekPages: [34],
+        latinPages: [35],
+        language:
+          "καλεῖται / adpellatur means ‘is called’: the definition names a relationship now established. ἐφεστηκυῖα is the perfect participle ‘having stood upon’; Latin erecta plays the corresponding descriptive role.",
+      },
+      {
+        title: "The perpendicular has been obtained",
+        phase: "Conclude",
+        reason: "finish",
+        grc: "Ἐπὶ τὴν δοθεῖσαν ἄρα εὐθεῖαν ἄπειρον τὴν ΑΒ ἀπὸ τοῦ δοθέντος σημείου τοῦ Γ, ὃ μή ἐστιν ἐπ᾽ αὐτῆς, κάθετος ἧκται ἡ ΓΘ· ὅπερ ἔδει ποιῆσαι.",
+        lat: "Ergo ad datam rectam infinitam ΑΒ a dato puncto Γ extra eam sito perpendicularis ducta est ΓΘ. quod oportebat fieri.",
+        en: "Thus ΓΘ has been drawn perpendicular to the given unbounded line ΑΒ from the given point Γ outside it. The requested construction is complete.",
+        greekPages: [34],
+        latinPages: [35],
+        language:
+          "The conclusion repeats the exterior-point condition. Changing the auxiliary Δ changes the circle and chord; with the source's opposite-side choice, their constructed midpoint still yields the same perpendicular from Γ.",
+      },
+    ],
+    insight: {
+      title: "‘Any point’ still has a condition",
+      text: "Move Δ while keeping it on the other side of ΑΒ from Γ. The radius and two intersections change, but the foot stays fixed. Deliberately move Δ to the same side: a circle can miss the line, touch it once, or still cross twice. Only two distinct intersections supply a nonzero chord for I.10. The source's placement condition guarantees that case.",
+      link: "https://mathcs.clarku.edu/~djoyce/elements/bookI/propI12.html",
+    },
+    question: {
+      prompt: "Why does the instruction put Δ on the other side of ΑΒ?",
+      options: [
+        "It ensures the circle through Δ crosses the line at two distinct points",
+        "It says Δ must be directly beneath Γ",
+        "It makes every same-side choice impossible",
+      ],
+      correct: 0,
+      explanations: [
+        "Yes. The radius must reach beyond the line, providing the two points needed for the chord and its bisection.",
+        "Δ may move sideways anywhere on the other side. It need not lie on the desired perpendicular.",
+        "Some same-side choices also cross twice. The source's restriction guarantees crossings without needing another test.",
+      ],
+    },
+  },
+};

@@ -12,6 +12,8 @@ const range = (
   `<label class="range-label" for="${id}">${title}<output id="${id}-output" for="${id}">${value}${suffix}</output></label><input id="${id}" type="range" min="${min}" max="${max}" step="${step}" value="${value}" />`;
 
 export function explorationControls(state: ReaderState): string {
+  if (state.proposition === 12)
+    return `<label for="variant">Choose the side of Δ<select id="variant"><option value="0" ${!state.variant ? "selected" : ""}>Opposite side · Euclid’s choice</option><option value="1" ${state.variant ? "selected" : ""}>Same side · inspect the crossings</option></select></label><p>The source choice guarantees a chord. Try the altered choice to see why.</p><div class="parameter-buttons"><button type="button" data-circle-example="source">Source choice</button><button type="button" data-circle-example="miss">Miss the line</button><button type="button" data-circle-example="touch">Touch once</button><button type="button" data-circle-example="cross">Same-side crossing</button></div>`;
   if (state.proposition === 4 || state.proposition === 8)
     return `${range("motion", "Superpose the triangles", 0, 100, state.motion, "%")}<p>Slide and rotate ΑΒΓ onto ΔΕΖ. Every intermediate position preserves its shape.${state.proposition === 8 ? " The three sides determine the angle." : ""}</p>`;
   if (state.proposition === 7)
@@ -23,6 +25,15 @@ export function explorationControls(state: ReaderState): string {
 
 export function parameterControls(state: ReaderState): string {
   const p = state.proposition;
+  if (p >= 11)
+    return `${range("size", p === 11 ? "Half the displayed base length" : p === 12 ? "Drawing scale" : p === 16 ? "Base length ΒΓ" : "Ray length", 100, 240, state.size)}
+    ${p === 11 ? range("take", "Γ along ΑΒ", 10, 90, Math.round(state.take * 100), "%") : ""}
+    ${p === 12 ? range("ratio", "Γ distance from line (% of scale)", 20, 140, Math.round(state.ratio * 100), "%") + range("third", "Δ distance from line (% of scale)", 30, 180, Math.round(state.third * 100), "%") + range("offset", "Δ horizontal offset (% of scale)", -200, 200, Math.round(state.offset * 100), "%") : ""}
+    ${p === 13 ? range("angle", "Given angle ΓΒΑ", 10, 90, state.angle, "°") : ""}
+    ${p === 14 ? range("angle", "ΑΒ tilt from perpendicular", 10, 75, state.angle, "°") + range("probe", "Hypothetical ΒΕ tilt from ΒΔ", 5, Math.min(70, Math.floor(state.angle * 1.3)), state.probe, "°") : ""}
+    ${p === 15 || p === 16 ? range("angle", p === 15 ? "Crossing angle ΒΕΓ" : "Interior angle ΑΒΓ", 20, 150, state.angle * 2, "°", 2) : ""}
+    ${p === 16 ? range("ratio", "Side ΒΑ (% of ΒΓ)", 20, 140, Math.round(state.ratio * 100), "%") : ""}
+    <div class="parameter-buttons"><button type="button" id="flip">Flip the plate</button><button type="button" id="reset">Reset givens</button></div><div id="measurements"></div>`;
   const sizeTitle =
     p === 2
       ? "Separation ΑΒ"

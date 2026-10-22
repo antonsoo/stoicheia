@@ -12,9 +12,9 @@ A translation can make the argument readable while hiding the Greek that carries
 it. Stoicheia connects both: change the givens, follow the command on the plate,
 read the two source languages, and ask what established the equality.
 
-The opening course is **Book I, propositions 1–10**. It includes the complete
-statements and proofs, divided into 85 aligned reading steps, with 37 selected
-vocabulary entries, thirteen foundation statements and twenty passage-based
+The opening course is **Book I, propositions 1–16**. It includes the complete
+statements and proofs, divided into 135 aligned reading steps, with 46 selected
+vocabulary entries, fourteen foundation statements and thirty-two passage-based
 reading exercises. It is intended for an English-speaking reader who knows basic
 geometry and is beginning Greek or Latin.
 
@@ -38,18 +38,24 @@ on the same port; stop the development server before starting the preview.
 
 ## Read, construct, inspect
 
-| Proposition | What you make                                             | What the lesson exposes                                                                            |
-| ----------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| I.1         | Equilateral triangle on a given segment                   | The two radius equalities, common notion 1, and the unstated intersection assumption               |
-| I.2         | An equal length at a separate point                       | The equilateral triangle supplies equal parts to subtract from equal radii                         |
-| I.3         | A part of the longer segment equal to the shorter         | I.2 becomes an available construction, and the greater–lesser hypothesis matters                   |
-| I.4         | Triangle congruence from two sides and the included angle | Rigid superposition, corresponding vertices, and an unstated motion assumption                     |
-| I.5         | Equal interior and exterior base angles                   | Two overlapping triangle comparisons, then subtraction of equal angles                             |
-| I.6         | Equal sides from equal angles                             | A contradiction, with the impossible conjunction explicitly distinguished from the measured sketch |
-| I.7         | Uniqueness of a meeting point on one side of a base       | The same-side restriction, a conditional equality, and the printed proof’s placement assumptions   |
-| I.8         | Congruence from three side pairs                          | The angle is earned; impossible three-length inputs do not fabricate a triangle                    |
-| I.9         | An internal angle bisector                                | One circle crossing works throughout; the other can work, collapse, or point outward               |
-| I.10        | Equal halves of a segment                                 | Earlier constructions reuse two circles, and their intersection earns the midpoint                 |
+| Proposition | What you make                                                 | What the lesson exposes                                                                                 |
+| ----------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| I.1         | Equilateral triangle on a given segment                       | The two radius equalities, common notion 1, and the unstated intersection assumption                    |
+| I.2         | An equal length at a separate point                           | The equilateral triangle supplies equal parts to subtract from equal radii                              |
+| I.3         | A part of the longer segment equal to the shorter             | I.2 becomes an available construction, and the greater–lesser hypothesis matters                        |
+| I.4         | Triangle congruence from two sides and the included angle     | Rigid superposition, corresponding vertices, and an unstated motion assumption                          |
+| I.5         | Equal interior and exterior base angles                       | Two overlapping triangle comparisons, then subtraction of equal angles                                  |
+| I.6         | Equal sides from equal angles                                 | A contradiction, with the impossible conjunction explicitly distinguished from the measured sketch      |
+| I.7         | Uniqueness of a meeting point on one side of a base           | The same-side restriction, a conditional equality, and the printed proof’s placement assumptions        |
+| I.8         | Congruence from three side pairs                              | The angle is earned; impossible three-length inputs do not fabricate a triangle                         |
+| I.9         | An internal angle bisector                                    | One circle crossing works throughout; the other can work, collapse, or point outward                    |
+| I.10        | Equal halves of a segment                                     | Earlier constructions reuse two circles, and their intersection earns the midpoint                      |
+| I.11        | A perpendicular from a point on the line                      | Equal adjacent angles are proved with I.8, then named right by definition 10                            |
+| I.12        | A perpendicular from an exterior point                        | The other-side condition guarantees a chord; altered choices can miss, touch, cross or have zero radius |
+| I.13        | A linear pair equal to two right angles                       | Two groupings of the same three parts; a separate branch handles equal adjacent angles                  |
+| I.14        | A straight continuation from its angle condition              | A different supposed continuation forces unequal remainders to be equal                                 |
+| I.15        | Equal vertically opposite angles                              | Subtract one angle from two equal linear-pair totals; preserve the Greek-only corollary                 |
+| I.16        | An exterior angle greater than either opposite interior angle | Two midpoint constructions place copies of the interior angles inside the exterior                      |
 - Move through the commands and deductions at your own pace. Every step names its
   permission: postulate, definition, common notion, earlier proposition, or
   assumption. Earlier constructions can be opened from the reason that uses them.
@@ -57,7 +63,7 @@ on the same port; stop the development server before starting the preview.
   and explanation of the forms. The reading notes explain selected syntax in
   context, including the difference between commands and completed results.
 - Read Greek-first or Latin-first and reveal the other languages when ready.
-  Twenty exercises ask about the wording of actual passages, explain each
+  Thirty-two exercises ask about the wording of actual passages, explain each
   interpretation, and return you to the corresponding step.
 - Open a reason’s source to compare the definition, postulate or common notion
   in all three languages. The reader distinguishes Heiberg’s numbering from the
@@ -80,8 +86,11 @@ on the same port; stop the development server before starting the preview.
 - Explore both circle crossings in I.9 at 40°, 60° and 90°. The alternate ray
   can bisect, vanish or lie outside the given angle. I.10 then reuses the circles
   to construct a midpoint from I.1, I.9 and I.4.
+- In [I.12](https://antonsoo.github.io/stoicheia/#p=12&s=8), move the auxiliary point across the line. Compare a miss, tangency and two crossings, and see why the original other-side choice guarantees the chord. The midpoint comes from I.10, not a projection assigned as a construction permission.
+- In [I.14](https://antonsoo.github.io/stoicheia/#p=14&s=5), the sketch keeps the original angle premise and draws the supposed continuation off the line. Its measurements remain unequal; the contradiction's forced equality is explicitly conditional, including in downloads.
+- In [I.16's second construction](https://antonsoo.github.io/stoicheia/#p=16&s=8), make the work hidden by “similarly” visible. The modern labels Θ and Κ expand the source's abbreviated instruction. Neither inequality uses the later triangle-angle-sum theorem.
 - Open the printed page for either language, zoom it and pan with the keyboard.
-  All twenty-eight source pages are bundled. The full aligned passage is available below
+  All forty-four source pages are bundled. The full aligned passage is available below
   the plate, with links back to individual steps.
 - Share the current proposition, step and parameters in a URL fragment. Save the
   current diagram as SVG or the entire lesson as a standalone HTML study sheet.
@@ -105,13 +114,15 @@ on the same port; stop the development server before starting the preview.
 A [downloaded I.2 study sheet](examples/stoicheia-I2-study.html) is included as a
 working example, alongside [I.6’s contradiction sheet](examples/stoicheia-I6-study.html),
 [I.9’s outward-ray exploration](examples/stoicheia-I9-opposite-ray.html), and
-[I.10’s midpoint construction](examples/stoicheia-I10-study.html). Save a sheet and
+[I.10’s midpoint construction](examples/stoicheia-I10-study.html),
+[I.14’s hypothetical continuation](examples/stoicheia-I14-hypothetical.html), and
+[I.16’s complete study sheet](examples/stoicheia-I16-study.html) ([PDF](examples/stoicheia-I16-study.pdf)). Save a sheet and
 open it directly in a browser to read without the app.
 
 ## The source is part of the lesson
 
 The Greek and Latin are transcribed from J. L. Heiberg’s _Euclidis opera omnia_,
-volume I (Leipzig: Teubner, 1883), printed pp. 4–31. Heiberg’s Latin is a
+volume I (Leipzig: Teubner, 1883), printed pp. 2–45. Heiberg’s Latin is a
 **nineteenth-century translation**, not an ancient Latin text. The English is a
 new reading translation; explanations sometimes make an implied intersection
 explicit. Point names remain Greek throughout.
@@ -178,6 +189,7 @@ npm run check
 npm run verify:oracle
 npm run verify:triangles
 npm run verify:bisections
+npm run verify:right-angles
 ```
 
 The TypeScript checks cover constructions, invalid hypotheses, complete lesson
@@ -204,6 +216,15 @@ crossings and rotated I.10 constructions. Its 11,381 checks use cosine-law angle
 circle equations, ray directions and an arithmetic midpoint oracle. I.9’s I.3
 length-copy result is also checked; agreement is not inferred from rounded labels.
 
+The [right-angle oracle](docs/right-angle-oracle.json) checks **2,130 cases** with
+21,030 comparisons. It independently solves a general line/circle quadratic,
+checks I.10's result against analytic midpoints/projections, and verifies both
+I.16 angle copies by central reflection and strict determinant-based containment.
+The 1,680 circle cases include 180 misses, 30 tangencies and 30 zero-radius
+choices. Maximum relative coordinate error is `3.303e-14`. A translated tangency
+exposed cancellation error; the classifier now includes coordinate scale in its
+rounding tolerance and withholds a chord at an unresolved contact.
+
 For browser verification, serve the production build with `npm run preview`, then
 run `npm run test:browser` in another terminal. Playwright needs matching Chromium
 and Firefox browsers already available. On a new development machine they can be
@@ -225,7 +246,7 @@ the actual styled layout and navigation in Chromium and Firefox. CSS is loaded
 through an HTML stylesheet link so Vite development works with the same
 `style-src 'self'` policy as the production site.
 
-The [print receipt](docs/print-verification.json) checks twenty actual Chromium
+The [print receipt](docs/print-verification.json) checks thirty-two actual Chromium
 PDFs (each proposition with its passage initially open and closed). Poppler’s
 `pdftotext` recovered every source-language and English paragraph and every step
 title. Reproduce with `node scripts/print-check.mjs` against the preview server;
@@ -250,9 +271,14 @@ The [I.7 case-study review](docs/case-study.md) covers the added interior-case
 exploration, its separate numerical oracle (`npm run verify:cases`), downloaded
 studies, source-clause reading and shared-link landing behavior.
 
+The [I.11–16 review](docs/right-angles-review.md) records the source decisions,
+construction boundaries, rendered geometry, new downloads and print coverage.
+The I.15 Greek corollary stays bracketed and explicitly has no supplied Latin;
+it is also retained in the full reading's print output.
+
 ## Accuracy and limitations
 
-- This is I.1–10, not the whole _Elements_. The construction tools, translations
+- This is I.1–16, not the whole _Elements_. The construction tools, translations
   and selected vocabulary are complete for that scope. There is no general Greek
   parser, pronunciation model or claim that every word is annotated.
 - The Greek follows a modern printed critical edition, not a surviving autograph
@@ -268,6 +294,7 @@ studies, source-clause reading and shared-link landing behavior.
   is not an exhaustive case classification. I.8’s hypothetical displaced apex is not drawn
   with impossible equal-distance claims. I.9’s alternate choices explicitly
   distinguish equal angles from an internal bisection.
+- I.13's controls follow the printed unequal-angle arrangement and include its separate right-angle branch. I.14's temporary continuation cannot satisfy every premise simultaneously. I.16's Θ/Κ drawing is a modern expansion of the source's “similarly,” not an additional ancient diagram or text.
 - I.2 reuses the completed I.1 subconstruction, and I.3 reuses I.2. Their internal
   working is shown in the corresponding earlier lesson rather than repeated in
   the later plate. Some unused source-circle labels are omitted from the plates.

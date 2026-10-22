@@ -12,22 +12,28 @@ transcriptions were checked visually against the bundled pages. No new modern
 editorial text or translation from another website is vendored. The English is
 a new reading translation for this workbench.
 
-| Proposition | Greek printed pages | Latin printed pages |
-| ----------- | ------------------- | ------------------- |
-| I.1         | 10, 12              | 11, 13              |
-| I.2         | 12, 14              | 13, 15              |
-| I.3         | 14, 16              | 15, 17              |
-| I.4         | 16, 18              | 17, 19              |
-| I.5         | 20, 22              | 21, 23              |
-| I.6         | 22, 24              | 23, 25              |
-| I.7         | 24, 26              | 25, 27              |
-| I.8         | 26, 28              | 27, 29              |
-| I.9         | 28, 30              | 29, 31              |
-| I.10        | 30                  | 31                  |
+| Proposition | Greek printed pages        | Latin printed pages         |
+| ----------- | -------------------------- | --------------------------- |
+| I.1         | 10, 12                     | 11, 13                      |
+| I.2         | 12, 14                     | 13, 15                      |
+| I.3         | 14, 16                     | 15, 17                      |
+| I.4         | 16, 18                     | 17, 19                      |
+| I.5         | 20, 22                     | 21, 23                      |
+| I.6         | 22, 24                     | 23, 25                      |
+| I.7         | 24, 26                     | 25, 27                      |
+| I.8         | 26, 28                     | 27, 29                      |
+| I.9         | 28, 30                     | 29, 31                      |
+| I.10        | 30                         | 31                          |
+| I.11        | 32                         | 33                          |
+| I.12        | 34                         | 35                          |
+| I.13        | 36, 38                     | 37, 39                      |
+| I.14        | 38, 40                     | 39, 41                      |
+| I.15        | 40; bracketed corollary 42 | 41; no translated corollary |
+| I.16        | 42, 44                     | 43, 45                      |
 
-Bundled JPEGs are full-page renders of PDF pages 18–45 using Poppler's
+Bundled JPEGs are full-page renders of PDF pages 16–59 using Poppler's
 `pdftoppm`, maximum dimension 1550 px and JPEG quality 88. They include material
-outside I.1–10 and the selected foundations (other definitions and critical notes). The reader transcribes only its named selections. See [the manifest](../public/sources/manifest.json)
+outside I.1–16 and the selected foundations (other definitions and critical notes). The reader transcribes only its named selections. See [the manifest](../public/sources/manifest.json)
 for the download URL, source PDF hash, page mapping and JPEG hashes.
 
 Changes from print:
@@ -124,10 +130,9 @@ Further mathematical commentary:
 
 ## Inspectable starting permissions
 
-The foundations reader includes definitions 15, 16 and 20, all five postulates,
+The foundations reader includes definitions 10, 15, 16 and 20, all five postulates,
 and the five usual common notions (Heiberg’s 1, 2, 3, 7 and 8), each with Greek,
-Heiberg Latin, a new English reading, and a contextual note. Printed pp. 4–9 are
-now bundled as well, giving twenty-eight full pages in total (PDF pages 18–45).
+Heiberg Latin, a new English reading, and a contextual note. Printed pp. 2–45 are bundled, giving forty-four full pages in total (PDF pages 16–59). Definition 10 crosses Greek pp. 2/4 and Latin pp. 3/5.
 Definition 15’s bracketed Greek clauses and common notion 8’s `[ἐστιν]` are kept;
 the corresponding Latin omissions are preserved.
 
@@ -230,3 +235,22 @@ and Lewis and Short's
 [possum](https://atlas.perseus.tufts.edu/dictionaries/entry/urn%3Acite2%3Ascaife-viewer%3Adictionary-entries.atlas_v1%3Alat.ls.perseus-eng2-n37193/),
 as provided by the Perseus Digital Library. The definitions and notes in the
 reader are newly written, not copied dictionary entries.
+
+
+## Perpendiculars, linear pairs and exterior angles, I.11–16
+
+The fourteen new proposition pages (32–45) were transcribed against the full
+page scans, along with definition 10's opening on pp. 2/3. English, language
+notes and reading exercises are new. The source PDF's SHA-256 remains
+`da285c581c2dda86e2b25e20db3ce604bf6fb8765228fcd71cfc89d47a9d1c17`.
+- I.11's Latin margin cites I.2 for the equal placement, while some modern presentations cite I.3. The plate uses an actual I.2 copy, then a circle/ray intersection to lay the equal length off on the other side of Γ. Its equilateral vertex comes from I.1.
+- I.12 preserves Greek `δύο ταῖς` in the side comparison. The opposite-side choice is the source's condition. Same-side misses, tangencies, crossings and zero radius are explicitly modern experiments. The circle is intersected with the unbounded supporting line, not the displayed ΑΒ segment. A nonzero chord is bisected through I.10.
+- I.13 retains `[εὐθείᾳ]`. Its conclusion crosses both language page breaks. The 90-degree control setting follows the first, equal-adjacent-angle branch; no third nonzero angle is invented between coincident rays.
+- I.14's body uses `δύο ὀρθαῖς` where the statement uses `δυσίν`; the printed forms remain. The hypothetical sketch follows the printed relative placement: ΑΒΓ + ΑΒΔ retains its given total, but Ε lies off ΓΒΔ. The temporary claim that ΓΒΕ is straight is conditional. Its remainders are not rendered as numerically equal.
+- I.15's main proof is complete on pp. 40/41. The following Greek `[Πόρισμα …]` on p. 42 is bracketed in full. The facing Latin begins I.16 without translating it. The reader includes a separate edition note and English reading, without manufacturing Latin. The scan's apparatus remains available.
+- I.16 retains the printed triangle names ΑΒΕ and ΖΕΓ even though that order does not list corresponding vertices. The side pairs establish Α ↔ Γ, Β ↔ Ζ, Ε ↔ Ε; the comparison table makes that correspondence explicit. The second construction, introduced by `ὁμοίως` / `similiter`, bisects ΒΓ. Θ and Κ are modern labels for the expanded drawing and are identified as such in the app and downloads. This proof establishes two strict inequalities; it does not invoke I.32's later exterior-angle sum theorem.
+
+Both midpoint constructions call the existing I.10 construction. Equal extension
+uses I.2 and a ray/circle intersection. The prior lessons can be opened from the
+reason panel. The numerical model checks the displayed figure; it does not prove
+incidence, continuity or motion assumptions from an axiomatic foundation.

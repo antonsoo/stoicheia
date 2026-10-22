@@ -11,6 +11,19 @@ export interface Foundation extends Passage {
 
 export const foundations: Foundation[] = [
   {
+    id: "d10",
+    title: "Right angles and a perpendicular",
+    category: "Definition",
+    editionLabel: "Definition 10 · ιʹ / X",
+    grc: "Ὅταν δὲ εὐθεῖα ἐπ᾽ εὐθεῖαν σταθεῖσα τὰς ἐφεξῆς γωνίας ἴσας ἀλλήλαις ποιῇ, ὀρθὴ ἑκατέρα τῶν ἴσων γωνιῶν ἐστι, καὶ ἡ ἐφεστηκυῖα εὐθεῖα κάθετος καλεῖται, ἐφ᾽ ἣν ἐφέστηκεν.",
+    lat: "Ubi uero recta super rectam lineam erecta angulos deinceps positos inter se aequales efficit, rectus est uterque angulus aequalis, et recta linea erecta perpendicularis adpellatur ad eam, super quam erecta est.",
+    en: "When a straight line standing on a straight line makes the adjacent angles equal to one another, each equal angle is right, and the standing line is called perpendicular to the line on which it stands.",
+    greekPages: [2, 4],
+    latinPages: [3, 5],
+    note: "The definition crosses a page in both languages. ἐφεξῆς / deinceps positos specifies adjacency, and ἴσας ἀλλήλαις / inter se aequales supplies equality. No degree measure is used in this definition.",
+    use: "I.11 and I.12 prove adjacent angles equal by I.8 and then call them right by this definition. I.13 uses the same definition for its equal-angle branch.",
+  },
+  {
     id: "d15",
     title: "A circle and its equal radii",
     category: "Definition",
@@ -184,6 +197,18 @@ export const foundations: Foundation[] = [
 export const foundationById = new Map(foundations.map((entry) => [entry.id, entry]));
 
 export const reasonFoundations: Record<string, string[]> = {
+  rightDefinition: ["d10"],
+  rightPairCase: ["d10"],
+  chordSSS: ["d15"],
+  addFirstAngles: ["cn2"],
+  addSecondAngles: ["cn2"],
+  equalAngleSums: ["cn1", "p4"],
+  compareGivenPair: ["cn1", "p4"],
+  removeCommonAngle: ["cn3"],
+  impossibleAnglePart: ["cn5"],
+  compareLinearPairs: ["cn1", "p4"],
+  verticalRemainders: ["cn3"],
+  exteriorPart: ["cn5"],
   p1: ["p1"],
   p2: ["p2"],
   p3: ["p3"],

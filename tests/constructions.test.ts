@@ -4,7 +4,7 @@ import { lookup } from "../src/content/glossary";
 import { lessons, reasons } from "../src/content/lessons";
 import { cutOff, distance, equilateral, transfer } from "../src/core/geometry";
 import { makeScene } from "../src/core/scene";
-import { decodeState, defaults, encodeState, stepCounts } from "../src/core/state";
+import { decodeState, defaults, encodeState, propositionIds, stepCounts } from "../src/core/state";
 import { annotated, drawScene, studySheet } from "../src/render";
 
 function near(a: number, b: number) {
@@ -77,15 +77,15 @@ test("invalid hypotheses do not fabricate construction points", () => {
 });
 
 test("every lesson has source pages, a reason, and a renderable scene for every step", () => {
-  for (const id of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as const) {
+  for (const id of propositionIds) {
     const lesson = lessons[id];
     assert.equal(lesson.steps.length, stepCounts[id]);
     assert.equal(lesson.question.options.length, lesson.question.explanations.length);
     for (const [step, passage] of lesson.steps.entries()) {
       assert.ok(reasons[passage.reason]);
       assert.ok(passage.grc && passage.lat && passage.en && passage.language);
-      assert.ok(passage.greekPages.every((p) => p >= 10 && p <= 30 && p % 2 === 0));
-      assert.ok(passage.latinPages.every((p) => p >= 11 && p <= 31 && p % 2 === 1));
+      assert.ok(passage.greekPages.every((p) => p >= 10 && p <= 44 && p % 2 === 0));
+      assert.ok(passage.latinPages.every((p) => p >= 11 && p <= 45 && p % 2 === 1));
       for (const ratio of [0.2, 0.65, 0.99, 1, 1.4]) {
         for (const side of [-1, 1] as const) {
           const scene = makeScene({ ...defaults, proposition: id, step, ratio, side });

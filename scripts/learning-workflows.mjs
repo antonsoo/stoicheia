@@ -77,11 +77,13 @@ export async function verifyLearning(page, viewport, accessible, audits) {
   assert.equal(await page.locator("#step-position").innerText(), originalStep);
 
   await page.locator("#open-practice").click();
-  const answers = [0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 2, 1, 0, 1, 2, 0, 1];
-  for (let i = 0; i < 20; i++) {
+  const answers = [
+    0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 2, 1, 0, 1, 2, 0, 1, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2,
+  ];
+  for (let i = 0; i < 32; i++) {
     assert.match(
       await page.locator("#practice-position").innerText(),
-      new RegExp(`Reading ${i + 1} of 20`, "i"),
+      new RegExp(`Reading ${i + 1} of 32`, "i"),
     );
     assert.ok(await page.locator("#practice-source mark").innerText());
     assert.equal(await page.locator("#practice-translation").isHidden(), true);
@@ -101,12 +103,12 @@ export async function verifyLearning(page, viewport, accessible, audits) {
       await accessible(page, "reading practice with feedback", audits);
       await page.screenshot({ path: `docs/assets/reading-practice-${viewport.width}.png` });
     }
-    if (i < 19) await page.locator("#practice-next").click();
+    if (i < 31) await page.locator("#practice-next").click();
   }
   assert.equal(await page.locator("#practice-next").isDisabled(), true);
   await page.locator("#practice-plate").click();
-  assert.match(await page.locator("#book-label").innerText(), /Proposition 10/i);
-  assert.equal(await page.locator("#step-position").innerText(), "Step 5 of 8");
+  assert.match(await page.locator("#book-label").innerText(), /Proposition 16/i);
+  assert.equal(await page.locator("#step-position").innerText(), "Step 9 of 10");
   assert.equal(await page.locator("#practice-dialog").evaluate((d) => d.open), false);
 
   // The I.3 exercises refer to the proposition's statement rather than a step.

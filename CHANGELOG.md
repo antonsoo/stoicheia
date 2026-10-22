@@ -90,3 +90,21 @@
 - Correct the published vocabulary popup that labelled δυνατόν and potest as
   “impossible.” Give positive possibility its own entry, retain ἀδύνατον as
   impossible, and explain the separate Latin negation non.
+
+
+## Perpendiculars and exterior angles · 2026-10-21
+
+- Extend the complete Greek/Heiberg Latin/new English course through I.16:
+  135 aligned steps, 46 vocabulary entries, fourteen foundation statements,
+  thirty-two passage exercises and forty-four source scans.
+- Raise and drop perpendiculars with actual I.2/I.10 subconstructions. In I.12,
+  expose the purpose of the other-side condition with miss, tangent, crossing
+  and zero-radius alternatives; never invent a chord or midpoint.
+- Keep I.13's equal-angle branch separate and I.14's impossible continuation
+  explicitly hypothetical, including in downloaded diagrams and study sheets.
+- Preserve I.15's bracketed Greek corollary and the absence of facing Latin.
+- Draw both I.16 constructions, with the added Θ/Κ labels explicitly modern.
+- Correct near-tangent classification under translated coordinates, and verify
+  geometry independently with quadratic, midpoint and containment calculations.
+- Preserve earlier hashed assets when publishing Pages, so a cached older entry
+  page can still retrieve its own assets during an edition transition.

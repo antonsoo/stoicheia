@@ -186,7 +186,7 @@ main {
 }
 .lesson-nav {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   border-block: 1px solid var(--rule);
 }
 .lesson-tab {
@@ -2360,4 +2360,19 @@ dialog::backdrop {
     margin: 12px 0 20px;
     font-size: 0.8rem;
   }
+}
+
+.edition-extra {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  font-size: 0.9rem;
+}
+.edition-extra [lang="grc"] {
+  font-family: "Noto Serif", serif;
+  line-height: 1.9;
+}
+.measurements-rows td {
+  text-align: right;
+  white-space: nowrap;
 }

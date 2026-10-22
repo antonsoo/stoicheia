@@ -1,5 +1,8 @@
 import type { PropositionId } from "../core/state";
+import { exteriorLessons, exteriorReasons } from "./exterior";
 import { bisectionLessons, bisectionReasons } from "./halves";
+import { linearAngleLessons, linearAngleReasons } from "./linear-angles";
+import { perpendicularLessons, perpendicularReasons } from "./perpendiculars";
 import { triangleLessons, triangleReasons } from "./triangles";
 import { uniquenessLessons, uniquenessReasons } from "./uniqueness";
 
@@ -14,6 +17,9 @@ export const reasons: Record<string, Reason> = {
   ...triangleReasons,
   ...uniquenessReasons,
   ...bisectionReasons,
+  ...perpendicularReasons,
+  ...linearAngleReasons,
+  ...exteriorReasons,
   given: {
     title: "The task and its given objects",
     text: "A given object is part of the problem. It has not been constructed by this proof. A finite straight line here means a line segment.",
@@ -114,12 +120,16 @@ export interface Lesson {
   steps: Step[];
   insight: { title: string; text: string; link: string };
   question: Question;
+  editionNote?: { title: string; grc: string; en: string; greekPages: number[]; note: string };
 }
 
 export const lessons: Record<PropositionId, Lesson> = {
   ...triangleLessons,
   ...uniquenessLessons,
   ...bisectionLessons,
+  ...perpendicularLessons,
+  ...linearAngleLessons,
+  ...exteriorLessons,
   1: {
     id: 1,
     numeral: "I.1",

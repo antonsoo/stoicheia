@@ -92,6 +92,12 @@ for (const [name, engine] of [
         [8, 8],
         [9, 9],
         [10, 8],
+        [11, 8],
+        [12, 9],
+        [13, 8],
+        [14, 8],
+        [15, 7],
+        [16, 10],
       ]) {
         await openLesson(page, proposition);
         await page.locator(`#step-list [data-step="${count - 1}"]`).click();
@@ -130,7 +136,7 @@ for (const [name, engine] of [
       await page.locator("#reveal-translations").click();
       assert.equal(await page.locator("#current-passage .english").isVisible(), true);
       await page.locator("#open-practice").click();
-      assert.match(await page.locator("#practice-position").innerText(), /Reading 11 of 20/i);
+      assert.match(await page.locator("#practice-position").innerText(), /Reading 11 of 32/i);
       await page.locator("#practice-options input").nth(1).check();
       assert.equal(
         await page.locator("#practice-feedback").getAttribute("class"),
@@ -164,24 +170,52 @@ for (const [name, engine] of [
         return i.complete && i.naturalWidth > 0;
       });
       await page.keyboard.press("Escape");
-      await openLesson(page, 6);
-      await page.locator('#step-list [data-step="4"]').click();
+      await openLesson(page, 12);
+      await page.locator('[data-circle-example="touch"]').click();
+      assert.equal(await page.locator('#diagram [data-point="Θ"]').count(), 0);
+      assert.match(await page.locator("#hypothesis-warning").innerText(), /One contact/);
+      await page.locator('[data-circle-example="source"]').click();
+      await page.locator('#step-list [data-step="8"]').click();
+      assert.equal(await page.locator('#diagram [data-point="Θ"]').count(), 1);
+      await openLesson(page, 14);
+      await page.locator('#step-list [data-step="5"]').click();
+      assert.match(await page.locator("#equations").innerText(), /Under that supposition/);
+      await openLesson(page, 15);
+      assert.match(
+        await page.locator("#edition-extra").innerText(),
+        /no corresponding translation/,
+      );
+      await openLesson(page, 16);
+      await page.locator('#step-list [data-step="8"]').click();
+      assert.equal(await page.locator('#diagram [data-point="Κ"]').count(), 1);
+      assert.deepEqual(
+        await page.locator("#comparison tbody tr").first().locator("td").allTextContents(),
+        ["ΒΘ", "ΓΘ", "equal halves · I.10"],
+      );
       const shared = page.url();
       await page.reload();
       assert.equal(page.url(), shared);
-      assert.equal(await page.locator("#step-position").innerText(), "Step 5 of 7");
-      assert.match(await page.locator("#diagram-notice").innerText(), /Hypothetical sketch/);
+      assert.equal(await page.locator("#step-position").innerText(), "Step 9 of 10");
+      assert.match(await page.locator("#diagram-notice").innerText(), /second construction/);
       // This emulates loss of connectivity at the browser. The separate local
       // suite additionally kills its origin below the browser for a stronger control.
       await context.setOffline(true);
       const offline = await page.reload();
       assert.equal(offline.fromServiceWorker(), true);
-      assert.equal(await page.locator("#step-position").innerText(), "Step 5 of 7");
-      await page.locator('#current-passage [data-source="24"]').click();
+      assert.equal(await page.locator("#step-position").innerText(), "Step 9 of 10");
+      await page.locator('#current-passage [data-source="44"]').click();
       await page.waitForFunction(() => {
         const image = document.querySelector("#source-image");
         return image.complete && image.naturalWidth > 0;
       });
+      await page.keyboard.press("Escape");
+      const [study] = await Promise.all([
+        page.waitForEvent("download"),
+        page.locator("#save-sheet").click(),
+      ]);
+      const studyBytes = await readFile(await study.path(), "utf8");
+      assert.match(studyBytes, /Θ and Κ are modern labels/);
+      assert.match(studyBytes, /Ὁμοίως δὴ τῆς ΒΓ/);
       assert.deepEqual(errors, []);
       assert.deepEqual(external, []);
       assert.deepEqual(await page.evaluate(() => window.__policyViolations), []);
@@ -191,7 +225,7 @@ for (const [name, engine] of [
         browser: name,
         version: browser.version(),
         viewport,
-        finalSteps: 10,
+        finalSteps: 16,
         workflows: [
           "rigid superposition",
           "I.5 angle subtraction",
@@ -204,6 +238,11 @@ for (const [name, engine] of [
           "I.8 three-side superposition",
           "I.9 collapsed and outward crossing, then internal bisector",
           "I.10 midpoint and printed page 31",
+          "I.12 tangent with no midpoint, then valid opposite-side construction",
+          "I.14 conditional equality",
+          "I.15 Greek-only corollary",
+          "I.16 second construction and correct correspondence table",
+          "I.16 shared reload, offline page 44 and standalone study download",
         ],
         offline:
           "Worker-served reload and source scan under browser offline emulation; public origin not disabled",

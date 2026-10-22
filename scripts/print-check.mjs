@@ -18,7 +18,7 @@ const report = {
 const browser = await chromium.launch();
 try {
   const page = await browser.newPage();
-  for (let proposition = 1; proposition <= 10; proposition++) {
+  for (let proposition = 1; proposition <= 16; proposition++) {
     await page.goto(`${url}#p=${proposition}&s=0`);
     await page.evaluate(() => document.fonts.ready);
     await page.locator("#reading-mode").selectOption("greek");
@@ -54,6 +54,8 @@ try {
         sha256: createHash("sha256").update(bytes).digest("hex"),
         readingStateRestored: true,
       });
+      if (proposition === 16 && !open) await writeFile("examples/stoicheia-I16-reading.pdf", bytes);
+      if (proposition === 15) assert.match(text, /no corresponding translation/);
       if (proposition === 5 && !open) await writeFile("examples/stoicheia-I5-reading.pdf", bytes);
     }
   }

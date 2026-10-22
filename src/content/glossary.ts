@@ -1,3 +1,5 @@
+import { angleGlossary } from "./angle-glossary";
+
 export interface Gloss {
   id: string;
   greek: string;
@@ -9,6 +11,7 @@ export interface Gloss {
 }
 
 export const glossary: Gloss[] = [
+  ...angleGlossary,
   {
     id: "possible",
     greek: "δυνατός",
@@ -25,7 +28,18 @@ export const glossary: Gloss[] = [
     transliteration: "dikha temein",
     meaning: "to divide into two equal parts",
     note: "δίχα says ‘in two’; the mathematical task requires equal halves. Latin makes that equality explicit. τέτμηται and diuisa est announce completion, while τετμήσθω and diuidatur request the division.",
-    forms: ["δίχα", "τεμεῖν", "τέτμηται", "τετμήσθω", "diuidere", "diuisa", "diuidatur"],
+    forms: [
+      "δίχα",
+      "τεμεῖν",
+      "τέτμηται",
+      "τετμήσθω",
+      "τετμημένης",
+      "secetur",
+      "secta",
+      "diuidere",
+      "diuisa",
+      "diuidatur",
+    ],
   },
   {
     id: "same",
@@ -176,7 +190,15 @@ export const glossary: Gloss[] = [
     transliteration: "deiknymi",
     meaning: "to show; to prove",
     note: "δεῖξαι is the aorist infinitive to show; ἐδείχθη means was shown. The closing ὅπερ ἔδει δεῖξαι differs from the construction ending ὅπερ ἔδει ποιῆσαι.",
-    forms: ["δεῖξαι", "ἐδείχθη", "demonstrandum", "demonstratum"],
+    forms: [
+      "δεῖξαι",
+      "ἐδείχθη",
+      "δειχθήσεται",
+      "ἐδείχθησαν",
+      "demonstrabitur",
+      "demonstrandum",
+      "demonstratum",
+    ],
   },
   {
     id: "unequal",
@@ -356,7 +378,20 @@ export const glossary: Gloss[] = [
     transliteration: "ekbeblēsthōsan",
     meaning: "let them be extended",
     note: "A plural perfect passive imperative from ἐκβάλλω. I.2 extends the two sides of the equilateral triangle beyond Α and Β, away from Δ.",
-    forms: ["ἐκβεβλήσθωσαν", "προσεκβεβλήσθωσαν", "προσεκβληθεισῶν", "producantur", "productis"],
+    forms: [
+      "ἐκβεβλήσθω",
+      "προσεκβεβλήσθω",
+      "προσεκβληθείσης",
+      "διήχθω",
+      "producatur",
+      "producto",
+      "educatur",
+      "ἐκβεβλήσθωσαν",
+      "προσεκβεβλήσθωσαν",
+      "προσεκβληθεισῶν",
+      "producantur",
+      "productis",
+    ],
   },
   {
     id: "equal",

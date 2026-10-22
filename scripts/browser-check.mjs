@@ -11,6 +11,7 @@ import { chromium, firefox } from "playwright";
 import { verifyBisections } from "./bisection-workflows.mjs";
 import { verifyLearning } from "./learning-workflows.mjs";
 import { openLesson } from "./navigation.mjs";
+import { verifyRightAngles } from "./right-angle-workflows.mjs";
 
 const url = process.argv[2] ?? "http://127.0.0.1:4327/stoicheia/";
 // Cut access below the browser when checking offline behaviour. Request routing
@@ -44,7 +45,24 @@ const report = {
   configurations: [],
 };
 const sha256 = (bytes) => createHash("sha256").update(bytes).digest("hex");
-const counts = { 1: 10, 2: 11, 3: 5, 4: 8, 5: 11, 6: 7, 7: 8, 8: 8, 9: 9, 10: 8 };
+const counts = {
+  1: 10,
+  2: 11,
+  3: 5,
+  4: 8,
+  5: 11,
+  6: 7,
+  7: 8,
+  8: 8,
+  9: 9,
+  10: 8,
+  11: 8,
+  12: 9,
+  13: 8,
+  14: 8,
+  15: 7,
+  16: 10,
+};
 const artifacts = await mkdtemp(join(tmpdir(), "stoicheia-export-"));
 
 async function accessible(page, label, results) {
@@ -171,7 +189,7 @@ try {
         assert.match(await page.locator("#offline-state").innerText(), /ready offline/);
         assert.equal(await page.evaluate(() => document.fonts.check('20px "Noto Serif"')), true);
 
-        for (const proposition of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) {
+        for (const proposition of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]) {
           await openLesson(page, proposition);
           for (let step = 0; step < counts[proposition]; step++) {
             assert.equal(
@@ -189,9 +207,24 @@ try {
           assert.equal(await page.locator("#next").isDisabled(), true);
           await accessible(page, `I.${proposition} final step`, audits);
           const question = page.locator(".question input");
-          const correctAnswer = { 1: 0, 2: 1, 3: 0, 4: 0, 5: 0, 6: 0, 7: 1, 8: 2, 9: 0, 10: 1 }[
-            proposition
-          ];
+          const correctAnswer = {
+            1: 0,
+            2: 1,
+            3: 0,
+            4: 0,
+            5: 0,
+            6: 0,
+            7: 1,
+            8: 2,
+            9: 0,
+            10: 1,
+            11: 0,
+            12: 0,
+            13: 0,
+            14: 0,
+            15: 0,
+            16: 0,
+          }[proposition];
           await question.nth((correctAnswer + 1) % 3).check();
           assert.ok(await page.locator("#question-feedback").innerText());
           await question.nth(correctAnswer).check();
@@ -212,7 +245,9 @@ try {
 
         // Verify original printed pages, including zoom/pan and keyboard dismissal.
         await page.locator("#open-edition").click();
-        for (let printedPage = 4; printedPage <= 31; printedPage++) {
+        await page.locator("#source-previous").click();
+        await page.locator("#source-previous").click();
+        for (let printedPage = 2; printedPage <= 45; printedPage++) {
           await page.waitForFunction(() => {
             const image = document.querySelector("#source-image");
             return image.complete && image.naturalWidth > 0;
@@ -221,7 +256,7 @@ try {
             await page.locator("#source-title").innerText(),
             `Printed page ${printedPage}`,
           );
-          if (printedPage < 31) await page.locator("#source-next").click();
+          if (printedPage < 45) await page.locator("#source-next").click();
         }
         await page.locator("#source-zoom").click();
         assert.equal(await page.locator("#source-zoom").getAttribute("aria-pressed"), "true");
@@ -243,6 +278,14 @@ try {
 
         await verifyLearning(page, viewport, accessible, audits);
         result.bisections = await verifyBisections(
+          page,
+          viewport,
+          name,
+          accessible,
+          audits,
+          artifacts,
+        );
+        result.rightAngles = await verifyRightAngles(
           page,
           viewport,
           name,
@@ -442,6 +485,27 @@ try {
           return image.complete && image.naturalWidth > 0;
         });
         await page.keyboard.press("Escape");
+        await openLesson(page, 16);
+        await page.locator('#step-list [data-step="8"]').click();
+        await page.locator('#current-passage [data-source="45"]').click();
+        await page.waitForFunction(
+          () =>
+            document.querySelector("#source-image").complete &&
+            document.querySelector("#source-image").naturalWidth > 0,
+        );
+        assert.match(await page.locator("#source-image").getAttribute("src"), /heiberg-045/);
+        await page.keyboard.press("Escape");
+        const [offlineStudy] = await Promise.all([
+          page.waitForEvent("download"),
+          page.locator("#save-sheet").click(),
+        ]);
+        const offlineStudyPath = join(artifacts, `${name}-${viewport.width}-I16-offline.html`);
+        await offlineStudy.saveAs(offlineStudyPath);
+        assert.match(await readFile(offlineStudyPath, "utf8"), /Θ and Κ are modern labels/);
+        await openLesson(page, 12);
+        await page.locator('[data-circle-example="touch"]').click();
+        assert.equal(await page.locator('#diagram [data-point="Θ"]').count(), 0);
+        assert.match(await page.locator("#hypothesis-warning").innerText(), /One contact/);
         await openLesson(page, 1);
         await page.locator('#step-list [data-step="3"]').click();
         await renderedEqualities(page, 1, 3);
