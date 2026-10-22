@@ -1,20 +1,20 @@
 {
   "scope": "Fresh source archive and clean Node 24 install; all output bytes match the reviewed working build. Public source and hosted bytes are separate.",
-  "checkedAt": "2026-10-22T07:32:22.748755+00:00",
-  "runtimeSource": "aac28093960e68c1c287688c144140598a78d613",
+  "checkedAt": "2026-10-22T07:41:50.090653+00:00",
+  "runtimeSource": "4dbd1f30bb2dd10faae0eaf38c6105ba35e17ab4",
   "node": "v24.22.0",
   "install": "npm ci --no-audit --no-fund; 29 packages. The first npm ci was terminated after installation while the registry audit request remained pending; no audit result is claimed.",
-  "checks": "npm run check: lint, typecheck, 31 tests and production build passed",
+  "checks": "npm run check: lint, typecheck, 32 tests and production build passed",
   "files": [
-    {
-      "file": "assets/index-BWs4PaM6.js",
-      "bytes": 361898,
-      "sha256": "c22fb36ea7ac02a8c92a1afbbe458887df10101d78ea1beebbe3bded39fad69d"
-    },
     {
       "file": "assets/index-DHpr94KM.css",
       "bytes": 32245,
       "sha256": "c70003cb00bb43e4512f3eddcebb5605ba1233ec8f34912bc9fc2e108cf756f6"
+    },
+    {
+      "file": "assets/index-ddvbrr4P.js",
+      "bytes": 361920,
+      "sha256": "f2e7554fe2c2b748f81cf0f765e57f24af6afbf6ac7f000ec90f88da0d3174b1"
     },
     {
       "file": "favicon.svg",
@@ -34,7 +34,7 @@
     {
       "file": "index.html",
       "bytes": 1303,
-      "sha256": "1df63e6df8c7fbe3ec73885c2be68328956b9128519f73763c081d3e371ca146"
+      "sha256": "939916ab0746be6a2ab9c64e0b801e4d7d3889f23f92749e314108bb6368bd72"
     },
     {
       "file": "sources/heiberg-002.jpg",
@@ -294,10 +294,11 @@
     {
       "file": "sw.js",
       "bytes": 9347,
-      "sha256": "31df6181774ee63cbe0697b226e1787c4b210ccad32ed060875b602cea2bef76"
+      "sha256": "6658fab42817f460190faf33c37fea8d1b0db5b12ea2bae9940b68659b2daac5"
     }
   ],
   "fileCount": 58,
-  "bytes": 15399671,
-  "workingBuildMatches": true
+  "bytes": 15399693,
+  "workingBuildMatches": true,
+  "archiveSource": "88a0f76de5b6d450f6291ab9a38d558d58cb93bb"
 }

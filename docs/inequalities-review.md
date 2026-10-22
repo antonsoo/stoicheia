@@ -102,7 +102,7 @@ lifecycle checks are recorded separately from Chromium PDF generation.
 
 ## Build and publication boundary
 
-[The clean build](inequality-build.json) contains 58 files totaling 15,399,671
+[The clean build](inequality-build.json) contains 58 files totaling 15,399,693
 bytes. A fresh archive of the runtime commit installed 29 packages under
 Node 24 and passed the normal checks. Every output byte matches the reviewed
 working build. The optional registry audit request stalled and was disabled
@@ -112,3 +112,13 @@ The earlier sixteen-proposition receipts and examples remain records of that
 edition. The new browser, print and upgrade receipts above describe this
 addition. Source publication, canonical hosted bytes and hosted browser
 behavior are recorded separately after deployment.
+
+
+The final [full-course browser receipt](inequality-course-browser.json) records
+164 steps per configuration, all forty passage exercises, all fifty source
+pages and exact responses for the 58-file build. Chromium and Firefox ran
+in separate workspaces against the same build after the p. 44 spelling
+correction. The earlier diagram-focused receipt remains applicable to its
+recorded runtime; the correction changes one Greek spelling and recognizes
+that form in the vocabulary. The published-browser pass checks the final
+spelling as well as the new geometric workflows.

@@ -1,7 +1,7 @@
 {
   "scope": "Upgrade from 16 to 20 propositions; held and failed source downloads, followed by an origin-disabled offline reload",
   "previousWorkerSha256": "9a7a6e713940d9b8cec7f24c9cce4f6c527cd57a4aeb6d9c703c919f129cca71",
-  "currentWorkerSha256": "31df6181774ee63cbe0697b226e1787c4b210ccad32ed060875b602cea2bef76",
+  "currentWorkerSha256": "6658fab42817f460190faf33c37fea8d1b0db5b12ea2bae9940b68659b2daac5",
   "heldFile": "sources/heiberg-051.jpg",
   "configurations": [
     {

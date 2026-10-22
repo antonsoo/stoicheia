@@ -10,7 +10,7 @@ Read Euclid’s opening arguments in Greek, Latin and English, with a working di
 A diagram can make Euclid look obvious while hiding the reason a step is allowed.
 A translation can make the argument readable while hiding the Greek that carries
 it. Stoicheia connects both: change the givens, follow the command on the plate,
-read the two source languages, and ask what established the equality.
+read the two source languages, and ask what established the relation.
 
 The opening course is **Book I, propositions 1–20**. It includes the complete
 statements and proofs, divided into 164 aligned reading steps, with 49 selected
