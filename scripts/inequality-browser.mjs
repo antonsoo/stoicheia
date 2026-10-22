@@ -119,6 +119,22 @@ for (const [name, engine] of [
         }
         await audit(page, `I.${p} conclusion`, result);
       }
+      for (const [p, s, form, meaning] of [
+        [17, 6, "πάντῃ", "every choice"],
+        [18, 5, "multo", "all the more"],
+        [19, 1, "ἤτοι", "either"],
+        [19, 1, "minus", "si minus means"],
+        [20, 8, "reliquo", "remaining"],
+      ]) {
+        await openLesson(page, p);
+        await page.locator(`#step-list [data-step="${s}"]`).click();
+        const word = page.locator(`#current-passage .word[data-form="${form}"]`).first();
+        await word.focus();
+        await page.keyboard.press("Enter");
+        assert.match(await page.locator("#gloss-content").innerText(), new RegExp(meaning));
+        await page.keyboard.press("Escape");
+        assert.equal(await word.evaluate((e) => e === document.activeElement), true);
+      }
       for (const p of [17, 20]) {
         await reset(page, p, p === 17 ? 5 : 7);
         for (const ratio of [20, 65, 140])
