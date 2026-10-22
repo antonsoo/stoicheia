@@ -120,6 +120,7 @@ for (const [name, engine] of [
         await audit(page, `I.${p} conclusion`, result);
       }
       for (const [p, s, form, meaning] of [
+        [17, 0, "ἐλάττονές", "lesser"],
         [17, 6, "πάντῃ", "every choice"],
         [18, 5, "multo", "all the more"],
         [19, 1, "ἤτοι", "either"],

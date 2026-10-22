@@ -14,6 +14,12 @@ import { openLesson } from "./navigation.mjs";
 import { verifyRightAngles } from "./right-angle-workflows.mjs";
 
 const url = process.argv[2] ?? "http://127.0.0.1:4327/stoicheia/";
+const selectedEngine = process.argv[3];
+assert.ok(
+  !selectedEngine || ["chromium", "firefox"].includes(selectedEngine),
+  "Choose chromium or firefox.",
+);
+const output = process.argv[4] ?? "docs/browser-verification.json";
 // Cut access below the browser when checking offline behaviour. Request routing
 // interferes with Firefox service-worker reloads, and its worker fetches do not
 // consistently honour Playwright's offline flag. Both flags and a dead origin are
@@ -144,6 +150,7 @@ try {
     ["chromium", chromium],
     ["firefox", firefox],
   ]) {
+    if (selectedEngine && name !== selectedEngine) continue;
     const browser = await engine.launch();
     try {
       for (const viewport of [
@@ -647,7 +654,7 @@ try {
   report.buildInputsSha256 = inputHash.digest("hex");
   report.servedByteMatches = matches.sort();
   report.offlineOriginProbeRejections = rejectedConnections;
-  await writeFile("docs/browser-verification.json", `${JSON.stringify(report, null, 2)}\n`);
+  await writeFile(output, `${JSON.stringify(report, null, 2)}\n`);
   console.log(JSON.stringify(report, null, 2));
 } finally {
   gate.closeAllConnections();
