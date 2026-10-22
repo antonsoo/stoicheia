@@ -1,0 +1,19 @@
+{
+  "scope": "Published source and reviewed static artifact; exact canonical responses plus real public-browser workflows. Remote CI status is not inferred.",
+  "checkedAt": "2026-10-22T04:52:37.116146+00:00",
+  "runtimeSource": "e7154dbb475aa52dc1bdf2aa2d25b6fa22185f4d",
+  "publishedSource": "4bef996719fae1472518ea0c215307194ab149d2",
+  "pagesCommit": "9ac0c255f4cf92456b33100b1d2670bfcfdd228e",
+  "url": "https://antonsoo.github.io/stoicheia/",
+  "canonicalFiles": 52,
+  "canonicalDirectoryEntry": true,
+  "browserConfigurations": 4,
+  "receipts": [
+    "right-angle-build.json",
+    "browser-verification.json",
+    "right-angle-upgrade.json",
+    "print-verification.json",
+    "right-angle-canonical.json",
+    "publication-verification.json"
+  ]
+}

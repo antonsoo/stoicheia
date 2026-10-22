@@ -1,5 +1,12 @@
 # Perpendiculars and the exterior-angle argument
 
+Published runtime: `e7154dbb475aa52dc1bdf2aa2d25b6fa22185f4d`.
+All 52 canonical files and the directory entry matched the reviewed build.
+Four fresh public-browser configurations passed, including the second I.16
+construction, source scans, shared state and offline study downloads. See the
+[publication record](right-angle-publication.json) for separate source,
+Pages, build and hosted-browser receipts.
+
 The course now reaches I.16, with 135 aligned Greek/Latin/English reading steps,
 46 vocabulary entries, fourteen foundation statements, thirty-two reading
 exercises and forty-four inspectable source pages. The six new lessons make a

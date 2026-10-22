@@ -1,18 +1,18 @@
 {
   "scope": "Direct HTTPS deployment: exact build bytes and real hosted browser workflows",
-  "checkedAt": "2026-10-21T23:06:11.160Z",
+  "checkedAt": "2026-10-22T04:50:51.890Z",
   "url": "https://antonsoo.github.io/stoicheia/",
-  "sourceCommit": "306bae294ba8de25dfa0cefdd88b0d89dc11d84b",
+  "sourceCommit": "e7154dbb475aa52dc1bdf2aa2d25b6fa22185f4d",
   "files": [
     {
-      "file": "assets/index-BalXma64.css",
-      "bytes": 28577,
-      "sha256": "a54dc32a048568df0ed00123994547fb44ccb966206f72d61191d3808c00caba"
+      "file": "assets/index-CdwApeYm.js",
+      "bytes": 317058,
+      "sha256": "0f1b0fbeb60750c7f079e8e6934021a8f999602c38a01cff1d29e0759644a7c6"
     },
     {
-      "file": "assets/index-CN-CTpJj.js",
-      "bytes": 207496,
-      "sha256": "48219a72ddd356503e57fdb712f8f753c156f957e66e4a9afaecf3d5ca3bf0c5"
+      "file": "assets/index-DHpr94KM.css",
+      "bytes": 32245,
+      "sha256": "c70003cb00bb43e4512f3eddcebb5605ba1233ec8f34912bc9fc2e108cf756f6"
     },
     {
       "file": "favicon.svg",
@@ -32,7 +32,17 @@
     {
       "file": "index.html",
       "bytes": 1293,
-      "sha256": "f39f9b5a7f84b1638aca3239253ddacb1769833f1bd6398a2876b55ed0cf7ec1"
+      "sha256": "1b0017f20a442e2bccdb4dd85071fcb40821f3f263a0f3332acc0fd0e82dd473"
+    },
+    {
+      "file": "sources/heiberg-002.jpg",
+      "bytes": 245340,
+      "sha256": "f79fd2aa7108f890f6942db094acd45136cf15e978df1097403c2b9ec11695a4"
+    },
+    {
+      "file": "sources/heiberg-003.jpg",
+      "bytes": 234963,
+      "sha256": "5ee0f951721c79776510376fdc8bf28c93b66ca21ed41e60f780ef187c90e214"
     },
     {
       "file": "sources/heiberg-004.jpg",
@@ -175,14 +185,84 @@
       "sha256": "78c48ad097ea261328c143863dc9febeadc3070b60a1bfec288b2d6e55caf931"
     },
     {
+      "file": "sources/heiberg-032.jpg",
+      "bytes": 293027,
+      "sha256": "b2fd3e753c7f83c6569a5e8fe34b1ca05b202910f276e8c44af94ab1ea880f15"
+    },
+    {
+      "file": "sources/heiberg-033.jpg",
+      "bytes": 240346,
+      "sha256": "919be729e8ccf36913738be4acb247f6f86e68e9e2e4c986562ea2439705d510"
+    },
+    {
+      "file": "sources/heiberg-034.jpg",
+      "bytes": 317039,
+      "sha256": "338c9e40d5890b26a2df046f9355083091ee685f0496e0f9320c93cb2a1dea6d"
+    },
+    {
+      "file": "sources/heiberg-035.jpg",
+      "bytes": 311358,
+      "sha256": "6acd2d3370693574907efb7ef8eac732fd38629671edfee664fe7abebfe3f9f7"
+    },
+    {
+      "file": "sources/heiberg-036.jpg",
+      "bytes": 311392,
+      "sha256": "31bdf69d9a74b6ecd990f91ffd0d54c4b8030ba28ae773dac8baa8cd90994e3d"
+    },
+    {
+      "file": "sources/heiberg-037.jpg",
+      "bytes": 299144,
+      "sha256": "5904bc4e6e25e7b8d338beed7a22f627fd54816b4479ce9738af5cd46e572360"
+    },
+    {
+      "file": "sources/heiberg-038.jpg",
+      "bytes": 309829,
+      "sha256": "751dca1a10215e5ebd68f8d741d70b44b90876ee6c5379dcb2ac973246aa1f1e"
+    },
+    {
+      "file": "sources/heiberg-039.jpg",
+      "bytes": 289614,
+      "sha256": "9f529f8bdf0cf224109f048f7dfdf19ef7eb65b0672d5d99997fef21f5a6a053"
+    },
+    {
+      "file": "sources/heiberg-040.jpg",
+      "bytes": 312489,
+      "sha256": "a8d8b9bfbeeec9642c118747e1085ed75e739014ec8dcb58e113a835d7c18f08"
+    },
+    {
+      "file": "sources/heiberg-041.jpg",
+      "bytes": 269126,
+      "sha256": "436641c11669ae64578231c71c839f5059a22e65a46b7522d9839ab1a77e15fa"
+    },
+    {
+      "file": "sources/heiberg-042.jpg",
+      "bytes": 325998,
+      "sha256": "6cde0d83df61a583cab4bc17305d5bd551395c5406ee190ebc650f9d0e83c409"
+    },
+    {
+      "file": "sources/heiberg-043.jpg",
+      "bytes": 327481,
+      "sha256": "8d27f77fe05da20bebbf5bb5cbcdb229932bcebb3f3855934531e9e7304d7176"
+    },
+    {
+      "file": "sources/heiberg-044.jpg",
+      "bytes": 316627,
+      "sha256": "082d3f6b6b221c85229f8660763ee09eb9a5fcba3760dbd31777059ea7c79cde"
+    },
+    {
+      "file": "sources/heiberg-045.jpg",
+      "bytes": 276417,
+      "sha256": "384d66370d556bdd610c345d2cec896e3bd614fad598954953a3fa54a9f31670"
+    },
+    {
       "file": "sources/manifest.json",
-      "bytes": 9579,
-      "sha256": "c56cdc7ff976f0ff488e5c17bc7a6b0d9edb44892880f5fe64f55864dc15e309"
+      "bytes": 13808,
+      "sha256": "f58c096a0f992ed776148e3ad92e9e1969738c92ef4b862ef826f1500a8776ee"
     },
     {
       "file": "sw.js",
-      "bytes": 3089,
-      "sha256": "c8ef8a6fe7ec0d709442e9cb1566df592de558a88b9c2ed510ecc3ab3f7705e4"
+      "bytes": 8579,
+      "sha256": "985b73ddc40c7037e7ff63b76a59b09f065482ab56df8161d32402a0999eb0aa"
     }
   ],
   "configurations": [
@@ -193,7 +273,7 @@
         "width": 1440,
         "height": 1000
       },
-      "finalSteps": 10,
+      "finalSteps": 16,
       "workflows": [
         "rigid superposition",
         "I.5 angle subtraction",
@@ -205,7 +285,12 @@
         "I.7 reflected candidate",
         "I.8 three-side superposition",
         "I.9 collapsed and outward crossing, then internal bisector",
-        "I.10 midpoint and printed page 31"
+        "I.10 midpoint and printed page 31",
+        "I.12 tangent with no midpoint, then valid opposite-side construction",
+        "I.14 conditional equality",
+        "I.15 Greek-only corollary",
+        "I.16 second construction and correct correspondence table",
+        "I.16 shared reload, offline page 44 and standalone study download"
       ],
       "offline": "Worker-served reload and source scan under browser offline emulation; public origin not disabled",
       "pageErrors": 0,
@@ -213,11 +298,11 @@
       "cspViolations": 0,
       "browserAssets": [
         {
-          "url": "https://antonsoo.github.io/stoicheia/assets/index-BalXma64.css",
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-DHpr94KM.css",
           "status": 200
         },
         {
-          "url": "https://antonsoo.github.io/stoicheia/assets/index-CN-CTpJj.js",
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-CdwApeYm.js",
           "status": 200
         },
         {
@@ -233,7 +318,7 @@
         "width": 375,
         "height": 812
       },
-      "finalSteps": 10,
+      "finalSteps": 16,
       "workflows": [
         "rigid superposition",
         "I.5 angle subtraction",
@@ -245,7 +330,12 @@
         "I.7 reflected candidate",
         "I.8 three-side superposition",
         "I.9 collapsed and outward crossing, then internal bisector",
-        "I.10 midpoint and printed page 31"
+        "I.10 midpoint and printed page 31",
+        "I.12 tangent with no midpoint, then valid opposite-side construction",
+        "I.14 conditional equality",
+        "I.15 Greek-only corollary",
+        "I.16 second construction and correct correspondence table",
+        "I.16 shared reload, offline page 44 and standalone study download"
       ],
       "offline": "Worker-served reload and source scan under browser offline emulation; public origin not disabled",
       "pageErrors": 0,
@@ -253,11 +343,11 @@
       "cspViolations": 0,
       "browserAssets": [
         {
-          "url": "https://antonsoo.github.io/stoicheia/assets/index-BalXma64.css",
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-DHpr94KM.css",
           "status": 200
         },
         {
-          "url": "https://antonsoo.github.io/stoicheia/assets/index-CN-CTpJj.js",
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-CdwApeYm.js",
           "status": 200
         },
         {
@@ -273,7 +363,7 @@
         "width": 1440,
         "height": 1000
       },
-      "finalSteps": 10,
+      "finalSteps": 16,
       "workflows": [
         "rigid superposition",
         "I.5 angle subtraction",
@@ -285,7 +375,12 @@
         "I.7 reflected candidate",
         "I.8 three-side superposition",
         "I.9 collapsed and outward crossing, then internal bisector",
-        "I.10 midpoint and printed page 31"
+        "I.10 midpoint and printed page 31",
+        "I.12 tangent with no midpoint, then valid opposite-side construction",
+        "I.14 conditional equality",
+        "I.15 Greek-only corollary",
+        "I.16 second construction and correct correspondence table",
+        "I.16 shared reload, offline page 44 and standalone study download"
       ],
       "offline": "Worker-served reload and source scan under browser offline emulation; public origin not disabled",
       "pageErrors": 0,
@@ -293,11 +388,11 @@
       "cspViolations": 0,
       "browserAssets": [
         {
-          "url": "https://antonsoo.github.io/stoicheia/assets/index-BalXma64.css",
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-CdwApeYm.js",
           "status": 200
         },
         {
-          "url": "https://antonsoo.github.io/stoicheia/assets/index-CN-CTpJj.js",
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-DHpr94KM.css",
           "status": 200
         },
         {
@@ -313,7 +408,7 @@
         "width": 375,
         "height": 812
       },
-      "finalSteps": 10,
+      "finalSteps": 16,
       "workflows": [
         "rigid superposition",
         "I.5 angle subtraction",
@@ -325,7 +420,12 @@
         "I.7 reflected candidate",
         "I.8 three-side superposition",
         "I.9 collapsed and outward crossing, then internal bisector",
-        "I.10 midpoint and printed page 31"
+        "I.10 midpoint and printed page 31",
+        "I.12 tangent with no midpoint, then valid opposite-side construction",
+        "I.14 conditional equality",
+        "I.15 Greek-only corollary",
+        "I.16 second construction and correct correspondence table",
+        "I.16 shared reload, offline page 44 and standalone study download"
       ],
       "offline": "Worker-served reload and source scan under browser offline emulation; public origin not disabled",
       "pageErrors": 0,
@@ -333,11 +433,11 @@
       "cspViolations": 0,
       "browserAssets": [
         {
-          "url": "https://antonsoo.github.io/stoicheia/assets/index-CN-CTpJj.js",
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-CdwApeYm.js",
           "status": 200
         },
         {
-          "url": "https://antonsoo.github.io/stoicheia/assets/index-BalXma64.css",
+          "url": "https://antonsoo.github.io/stoicheia/assets/index-DHpr94KM.css",
           "status": 200
         },
         {
