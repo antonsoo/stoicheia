@@ -2,7 +2,7 @@
   "name": "@antonsoloviev/stoicheia",
   "version": "0.1.0",
   "private": true,
-  "description": "Read Euclid I.1–20 in Greek, Latin and English with interactive constructions and proofs.",
+  "description": "Read Euclid I.1–20 and investigate I.22 in Greek, Latin and English with interactive constructions.",
   "type": "module",
   "author": "Anton Soloviev <anton@praviel.com>",
   "license": "MIT",
@@ -39,7 +39,11 @@
     "verify:cases": "node --import tsx scripts/casebook-cases.ts | python3 scripts/casebook-oracle.py",
     "verify:right-angles": "node --import tsx scripts/right-angle-cases.ts | python3 scripts/right-angle-oracle.py",
     "verify:inequalities": "node --import tsx scripts/inequality-cases.ts | python3 scripts/inequality-oracle.py",
-    "test:inequalities": "node scripts/inequality-browser.mjs"
+    "test:inequalities": "node scripts/inequality-browser.mjs",
+    "verify:closure": "node --import tsx scripts/closure-cases.ts | python3 scripts/closure-oracle.py",
+    "test:closure": "node scripts/closure-browser.mjs",
+    "test:closure-upgrade": "node scripts/closure-upgrade.mjs",
+    "verify:closure-print": "node --import tsx scripts/closure-print.ts"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",
