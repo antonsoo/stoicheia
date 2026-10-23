@@ -155,10 +155,14 @@ workflows; they are not formal verification of Euclid's axioms.
 `/stoicheia/`. [Clean-install and build evidence](closure-build.json) records
 the reproducible output separately from the browser results.
 
-This addition is committed locally for review. It has not been pushed or
-deployed. The previous publication receipts in this repository describe
-earlier editions. The future workshop link inside saved readings is not a
-claim that this addition is already available on public hosting.
+Source `6c09528` was pushed to `main`, and the reviewed `cae12ed` runtime was
+published in `gh-pages` commit `b409917`. All 66 hosted files match the reviewed
+build by SHA-256. Direct HTTPS workflows in Chromium and Firefox at 1440 and
+375 pixels cover the five outcomes, keyboard hinge, actual HTML/SVG downloads,
+source page 55 and offline travel between both entry pages.
+[Publication receipt](closure-hosted.json). The direct browser command is
+`node scripts/closure-hosted.mjs OUTPUT_DIRECTORY`. Earlier receipts describe
+earlier editions and are retained separately.
 
 Suggested repository description: “Read Euclid in Greek, Latin and English;
 construct the arguments and investigate their hidden conditions.”

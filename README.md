@@ -30,8 +30,8 @@ why a temporary supposition cannot retain the original angle premise. The
 
 ## Three lengths: can they close?
 
-**New in this checkout:** a separate I.22 construction workshop at
-`http://127.0.0.1:4327/stoicheia/triangle.html` after starting the app.
+Open the [I.22 construction workshop](https://antonsoo.github.io/stoicheia/triangle.html).
+It is also available locally after starting the app.
 The sequential course remains I.1–20; this workshop does not add I.21.
 [Review, sources and publication boundary](docs/closure-review.md).
 
@@ -58,8 +58,8 @@ matter, including the one that this tempting single check misses.
 [Saved reading](examples/stoicheia-I22-reading.html) ·
 [Printable reading](examples/stoicheia-I22-reading.pdf) ·
 [Measurements](examples/stoicheia-I22-measurements.csv).
-These are actual browser exports. The linked future public workshop URL inside
-the saved reading becomes usable after deployment; this addition is local only.
+These are actual browser exports. [Hosted verification](docs/closure-hosted.json)
+records the exact build bytes, direct browser downloads and offline navigation.
 
 ## Run it
 

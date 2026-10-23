@@ -123,7 +123,7 @@
 - Add independent normalized-vector and containment checks, rendered-browser
   comparisons and interrupted upgrades from the sixteen-proposition edition.
 
-## Triangle construction workshop · 2026-10-23 (local)
+## Triangle construction workshop · 2026-10-23
 
 - Add a separate I.22 experiment with independent lengths, exact strict-condition
   classification, five circle outcomes and a draggable/keyboard trial hinge.
@@ -136,4 +136,5 @@
 - Keep the workshop's shared HTML helper independent of the full course content.
 - Escape minified CSS in standalone SVGs so the downloaded diagrams open as XML.
 - Verify geometry, browser workflows, print paragraphs, and delayed/failed edition
-  upgrades. No deployment or public-host verification is claimed for this addition.
+  upgrades. The published edition matches all 66 reviewed build files, with direct
+  Chromium/Firefox desktop and phone downloads and offline navigation verified.
