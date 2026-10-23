@@ -1,0 +1,174 @@
+{
+  "checkedAt": "2026-10-23T21:10:55.858Z",
+  "base": "http://127.0.0.1:4405/stoicheia/",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "width": 1440,
+      "steps": 10,
+      "renderedCases": 162,
+      "sourceHashes": [
+        {
+          "page": 50,
+          "sha256": "be62d9a2e3f842f90a11fdd5975bc1ae5c5133f006ad9e4ef15972818b01bb67"
+        },
+        {
+          "page": 51,
+          "sha256": "fc9eb173b34a39f41195251ebff09faf213a89b654fac45f15d765bd2500d697"
+        },
+        {
+          "page": 52,
+          "sha256": "c79b64c8e0350bae55efb372ea5d347f93ae9eed21720a98e1c63f2c79e31bdf"
+        },
+        {
+          "page": 53,
+          "sha256": "7ebd6f90f1d70e233c786f30cc2a973fa856e32c8e587f4318e5ed6922078093"
+        }
+      ],
+      "downloads": [
+        {
+          "file": "chromium-1440.html",
+          "bytes": 22898,
+          "sha256": "6a8c3d62be57bcf44dd259931631eea799d1c2f48b0d8fd6cd96502c455204e7"
+        },
+        {
+          "file": "chromium-1440.svg",
+          "bytes": 4757,
+          "sha256": "7aacf7cc4e7ce9365e471a94051765ae4a3203d792034c4bcae1d439c0ddffbe"
+        }
+      ],
+      "standaloneCompleteFields": 40,
+      "offlineReload": true,
+      "offlineSource": true,
+      "offlineControls": true,
+      "axeViolations": 0
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "steps": 10,
+      "renderedCases": 162,
+      "sourceHashes": [
+        {
+          "page": 50,
+          "sha256": "be62d9a2e3f842f90a11fdd5975bc1ae5c5133f006ad9e4ef15972818b01bb67"
+        },
+        {
+          "page": 51,
+          "sha256": "fc9eb173b34a39f41195251ebff09faf213a89b654fac45f15d765bd2500d697"
+        },
+        {
+          "page": 52,
+          "sha256": "c79b64c8e0350bae55efb372ea5d347f93ae9eed21720a98e1c63f2c79e31bdf"
+        },
+        {
+          "page": 53,
+          "sha256": "7ebd6f90f1d70e233c786f30cc2a973fa856e32c8e587f4318e5ed6922078093"
+        }
+      ],
+      "downloads": [
+        {
+          "file": "chromium-375.html",
+          "bytes": 22898,
+          "sha256": "6a8c3d62be57bcf44dd259931631eea799d1c2f48b0d8fd6cd96502c455204e7"
+        },
+        {
+          "file": "chromium-375.svg",
+          "bytes": 4757,
+          "sha256": "7aacf7cc4e7ce9365e471a94051765ae4a3203d792034c4bcae1d439c0ddffbe"
+        }
+      ],
+      "standaloneCompleteFields": 40,
+      "offlineReload": true,
+      "offlineSource": true,
+      "offlineControls": true,
+      "axeViolations": 0
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "width": 1440,
+      "steps": 10,
+      "renderedCases": 162,
+      "sourceHashes": [
+        {
+          "page": 50,
+          "sha256": "be62d9a2e3f842f90a11fdd5975bc1ae5c5133f006ad9e4ef15972818b01bb67"
+        },
+        {
+          "page": 51,
+          "sha256": "fc9eb173b34a39f41195251ebff09faf213a89b654fac45f15d765bd2500d697"
+        },
+        {
+          "page": 52,
+          "sha256": "c79b64c8e0350bae55efb372ea5d347f93ae9eed21720a98e1c63f2c79e31bdf"
+        },
+        {
+          "page": 53,
+          "sha256": "7ebd6f90f1d70e233c786f30cc2a973fa856e32c8e587f4318e5ed6922078093"
+        }
+      ],
+      "downloads": [
+        {
+          "file": "firefox-1440.html",
+          "bytes": 22898,
+          "sha256": "6a8c3d62be57bcf44dd259931631eea799d1c2f48b0d8fd6cd96502c455204e7"
+        },
+        {
+          "file": "firefox-1440.svg",
+          "bytes": 4757,
+          "sha256": "7aacf7cc4e7ce9365e471a94051765ae4a3203d792034c4bcae1d439c0ddffbe"
+        }
+      ],
+      "standaloneCompleteFields": 40,
+      "offlineReload": true,
+      "offlineSource": true,
+      "offlineControls": true,
+      "axeViolations": 0
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "width": 375,
+      "steps": 10,
+      "renderedCases": 162,
+      "sourceHashes": [
+        {
+          "page": 50,
+          "sha256": "be62d9a2e3f842f90a11fdd5975bc1ae5c5133f006ad9e4ef15972818b01bb67"
+        },
+        {
+          "page": 51,
+          "sha256": "fc9eb173b34a39f41195251ebff09faf213a89b654fac45f15d765bd2500d697"
+        },
+        {
+          "page": 52,
+          "sha256": "c79b64c8e0350bae55efb372ea5d347f93ae9eed21720a98e1c63f2c79e31bdf"
+        },
+        {
+          "page": 53,
+          "sha256": "7ebd6f90f1d70e233c786f30cc2a973fa856e32c8e587f4318e5ed6922078093"
+        }
+      ],
+      "downloads": [
+        {
+          "file": "firefox-375.html",
+          "bytes": 22898,
+          "sha256": "6a8c3d62be57bcf44dd259931631eea799d1c2f48b0d8fd6cd96502c455204e7"
+        },
+        {
+          "file": "firefox-375.svg",
+          "bytes": 4757,
+          "sha256": "7aacf7cc4e7ce9365e471a94051765ae4a3203d792034c4bcae1d439c0ddffbe"
+        }
+      ],
+      "standaloneCompleteFields": 40,
+      "offlineReload": true,
+      "offlineSource": true,
+      "offlineControls": true,
+      "axeViolations": 0
+    }
+  ]
+}

@@ -37,7 +37,7 @@ a new reading translation for this workbench.
 
 Bundled JPEGs are full-page renders of PDF pages 16–65 using Poppler's
 `pdftoppm`, maximum dimension 1550 px and JPEG quality 88. They include material
-outside I.1–20 and the selected foundations (other definitions and critical notes). The reader transcribes only its named selections. See [the manifest](../public/sources/manifest.json)
+outside I.1–21 and the selected foundations (other definitions and critical notes). The reader transcribes only its named selections. See [the manifest](../public/sources/manifest.json)
 for the download URL, source PDF hash, page mapping and JPEG hashes.
 
 Changes from print:
@@ -326,3 +326,23 @@ experiment, and P/Q label trial tips; none of those three Latin labels belongs
 to the I.22 source figure. Trial angles and arbitrary drawing units likewise
 belong to the teaching model. The complete scans include parts of I.21/I.23
 and apparatus outside this workshop's transcription scope.
+
+## Interior comparison: I.21
+
+The complete statement and proof use Greek pages 50 and 52 and Heiberg’s Latin
+pages 51 and 53. All four were read against the bundled full-page images.
+The Greek divides into ten teaching steps without omitting proof sentences.
+Latin inline references are omitted under the existing transcription policy;
+its equations, u/v spellings and lower-case sentence openings are retained.
+The new English supplies **[on ΑΓ]** after the extension to Ε to make the figure’s
+implicit intersection explicit. This bracket is an English teaching addition,
+not an editorial supplement to the Greek.
+
+The Latin reference after adding ΕΓ is to Heiberg’s expanded common notion 4,
+not the usual common notion 4 about coincidence. The note identifies that
+numbering difference and states the order rule being used. I.16 is invoked twice
+for the angle comparison; no triangle-angle-sum theorem is introduced.
+
+The movable coordinate drawing preserves the orders Α–Ε–Γ and Β–Δ–Ε.
+Its dimensions, percentage controls, colors and degree readings are modern.
+The source proves a comparison of sums, not two individual side comparisons.

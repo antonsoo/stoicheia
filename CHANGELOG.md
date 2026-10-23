@@ -138,3 +138,24 @@
 - Verify geometry, browser workflows, print paragraphs, and delayed/failed edition
   upgrades. The published edition matches all 66 reviewed build files, with direct
   Chromium/Firefox desktop and phone downloads and offline navigation verified.
+
+## Interior routes · 2026-10-23
+
+- Complete I.21 in ten Greek/Latin/English steps, making 174 steps through I.21.
+- Move the interior meeting point in two directions and follow the intermediate
+  route through two length inequalities and two exterior-angle comparisons.
+- Compare individual segments as well as their sum; one inner segment can grow
+  while the combined path shrinks. Keep the strict interior hypothesis visible.
+- Add two source-anchored reading exercises, two vocabulary families and source
+  navigation through page 53. Preserve the full proof in shared states and files.
+
+## Illustrated course studies · 2026-10-23
+
+- Include the relevant printed sources, cited foundation pages, Greek font and
+  redistribution notices in the standalone study for every course proposition.
+- Verify source images, font and font notice against the built edition before
+  saving; reject substituted HTTP-200 files and allow a successful retry.
+- Apply the same verification to I.22. Preserve the selected proof snapshot
+  while an asynchronous save runs, even if the reader changes lessons.
+- Identify the original crop on source page 6 in its saved caption. Keep the
+  facsimiles on printable pages with physical margins.

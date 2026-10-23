@@ -1,0 +1,256 @@
+{
+  "method": "Poppler content-stream text extraction (-raw), NFC and whitespace normalization, complete paragraph inclusion",
+  "pdfSha256": "e1edbaa9fa838ccd3b46eeb4d1a36e01b39d187d67cd95e56d0d70d3734eaef2",
+  "checks": [
+    {
+      "step": 1,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "step": 1,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "step": 1,
+      "field": "en",
+      "present": true
+    },
+    {
+      "step": 1,
+      "field": "language",
+      "present": true
+    },
+    {
+      "step": 1,
+      "field": "reason",
+      "present": true
+    },
+    {
+      "step": 2,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "step": 2,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "step": 2,
+      "field": "en",
+      "present": true
+    },
+    {
+      "step": 2,
+      "field": "language",
+      "present": true
+    },
+    {
+      "step": 2,
+      "field": "reason",
+      "present": true
+    },
+    {
+      "step": 3,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "step": 3,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "step": 3,
+      "field": "en",
+      "present": true
+    },
+    {
+      "step": 3,
+      "field": "language",
+      "present": true
+    },
+    {
+      "step": 3,
+      "field": "reason",
+      "present": true
+    },
+    {
+      "step": 4,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "step": 4,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "step": 4,
+      "field": "en",
+      "present": true
+    },
+    {
+      "step": 4,
+      "field": "language",
+      "present": true
+    },
+    {
+      "step": 4,
+      "field": "reason",
+      "present": true
+    },
+    {
+      "step": 5,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "step": 5,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "step": 5,
+      "field": "en",
+      "present": true
+    },
+    {
+      "step": 5,
+      "field": "language",
+      "present": true
+    },
+    {
+      "step": 5,
+      "field": "reason",
+      "present": true
+    },
+    {
+      "step": 6,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "step": 6,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "step": 6,
+      "field": "en",
+      "present": true
+    },
+    {
+      "step": 6,
+      "field": "language",
+      "present": true
+    },
+    {
+      "step": 6,
+      "field": "reason",
+      "present": true
+    },
+    {
+      "step": 7,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "step": 7,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "step": 7,
+      "field": "en",
+      "present": true
+    },
+    {
+      "step": 7,
+      "field": "language",
+      "present": true
+    },
+    {
+      "step": 7,
+      "field": "reason",
+      "present": true
+    },
+    {
+      "step": 8,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "step": 8,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "step": 8,
+      "field": "en",
+      "present": true
+    },
+    {
+      "step": 8,
+      "field": "language",
+      "present": true
+    },
+    {
+      "step": 8,
+      "field": "reason",
+      "present": true
+    },
+    {
+      "step": 9,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "step": 9,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "step": 9,
+      "field": "en",
+      "present": true
+    },
+    {
+      "step": 9,
+      "field": "language",
+      "present": true
+    },
+    {
+      "step": 9,
+      "field": "reason",
+      "present": true
+    },
+    {
+      "step": 10,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "step": 10,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "step": 10,
+      "field": "en",
+      "present": true
+    },
+    {
+      "step": 10,
+      "field": "language",
+      "present": true
+    },
+    {
+      "step": 10,
+      "field": "reason",
+      "present": true
+    }
+  ]
+}

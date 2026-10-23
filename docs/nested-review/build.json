@@ -1,0 +1,337 @@
+{
+  "runtimeCommit": "29c2904",
+  "cleanArchiveCommit": "cef3510",
+  "node": "24.21.0",
+  "files": [
+    {
+      "file": "assets/offline-1gZYId5w.js",
+      "bytes": 2814,
+      "sha256": "77a9d3441b4a94aee8d7ee9fb3d88a7e611221e03b77567780e6a52013151f47"
+    },
+    {
+      "file": "assets/offline-Bmyu3H3U.css",
+      "bytes": 32332,
+      "sha256": "a7ce53e46b506192ad4ac6865c4fbf924e4b59a7949fcf0c1969d1c82c45c966"
+    },
+    {
+      "file": "assets/reader-BoQ_8-j2.js",
+      "bytes": 379745,
+      "sha256": "d5fa9620756babbefbd22f21dfdb6bbf42a17b571da758c667f9f9c40e554aca"
+    },
+    {
+      "file": "assets/triangle-B3TrBmgy.js",
+      "bytes": 58026,
+      "sha256": "3035421458237620d6c4cad02d38a142924c6c7e63646a18237794086d176f0f"
+    },
+    {
+      "file": "assets/triangle-D7DRmLfq.css",
+      "bytes": 13195,
+      "sha256": "6cb88fda39261452f9525464dbac7a34349744d7beb7a95f26f673e47daf26a1"
+    },
+    {
+      "file": "favicon.svg",
+      "bytes": 272,
+      "sha256": "c8cc87e2546804a2300df9c859c6eea024bab87a031dc81c276a10882df4968a"
+    },
+    {
+      "file": "fonts/NotoSerif-Regular.ttf",
+      "bytes": 444064,
+      "sha256": "5473d2e43bdd018ee124a4addba8091fd0a29894b121cbb741023af6549662b6"
+    },
+    {
+      "file": "fonts/OFL.txt",
+      "bytes": 4396,
+      "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a"
+    },
+    {
+      "file": "index.html",
+      "bytes": 1394,
+      "sha256": "62b2f0b76d478f44b19b70b617231c8995dee6b47d271138780138d808f232f4"
+    },
+    {
+      "file": "sources/heiberg-002.jpg",
+      "bytes": 245340,
+      "sha256": "f79fd2aa7108f890f6942db094acd45136cf15e978df1097403c2b9ec11695a4"
+    },
+    {
+      "file": "sources/heiberg-003.jpg",
+      "bytes": 234963,
+      "sha256": "5ee0f951721c79776510376fdc8bf28c93b66ca21ed41e60f780ef187c90e214"
+    },
+    {
+      "file": "sources/heiberg-004.jpg",
+      "bytes": 320270,
+      "sha256": "b874eac6b40c554206427557ce221770b7b2c1b50afa17087fa6131282db8bc4"
+    },
+    {
+      "file": "sources/heiberg-005.jpg",
+      "bytes": 316399,
+      "sha256": "7f570bfd4809b2474674fbbfb62610f0b45869d4374cf277d5807deca361b772"
+    },
+    {
+      "file": "sources/heiberg-006.jpg",
+      "bytes": 320634,
+      "sha256": "b6b371b3e5eb13f4305dbf073e5f15ce178018a8ad8557df99431410ce6a69ae"
+    },
+    {
+      "file": "sources/heiberg-007.jpg",
+      "bytes": 334398,
+      "sha256": "c9efe81728c69d36b95838b8d80060eae8a0d316fb682a722a3273eb8ce1f3ea"
+    },
+    {
+      "file": "sources/heiberg-008.jpg",
+      "bytes": 273136,
+      "sha256": "5e7987d0e9686891261411810a828bd6ace64c6a21ea92600fdedbb2c6078a17"
+    },
+    {
+      "file": "sources/heiberg-009.jpg",
+      "bytes": 291149,
+      "sha256": "8844849fadfddacf9ddd2692a5917003f96a3b9a122825a891a1931d0580e75e"
+    },
+    {
+      "file": "sources/heiberg-010.jpg",
+      "bytes": 276612,
+      "sha256": "8d1db0bc4b9a8b93b72633ac544f16cdd7e03aef8111d5e68f25d192febe1dbd"
+    },
+    {
+      "file": "sources/heiberg-011.jpg",
+      "bytes": 279836,
+      "sha256": "f23df1af363dded2831f7e7f6fbea20827c1e9d650faeb03bb9995489ae93a72"
+    },
+    {
+      "file": "sources/heiberg-012.jpg",
+      "bytes": 289774,
+      "sha256": "e5cc7d6bf3a2ec8dc3bcbf88803b8ee9e3d0315ae29221ed7d2fe9768356c2fd"
+    },
+    {
+      "file": "sources/heiberg-013.jpg",
+      "bytes": 291315,
+      "sha256": "49235a355d10656aba59db1464aaefe34f5836a32ca5f214955d7b064a39273d"
+    },
+    {
+      "file": "sources/heiberg-014.jpg",
+      "bytes": 299613,
+      "sha256": "dc97350f09d7adca95cf3cc233cef8237da757ff4bd077c1b75390c8de3fb385"
+    },
+    {
+      "file": "sources/heiberg-015.jpg",
+      "bytes": 271550,
+      "sha256": "52e2aa1b336c6c88b3bf8a3ff1da916f37df2afe4de5d29d3659b13254e18a2c"
+    },
+    {
+      "file": "sources/heiberg-016.jpg",
+      "bytes": 295019,
+      "sha256": "52d0dd0e02d4088b80b547838d47621efd1b23784f33b62482216a71b0927afc"
+    },
+    {
+      "file": "sources/heiberg-017.jpg",
+      "bytes": 283679,
+      "sha256": "ff29baed3f8686d2d55b10131a85953cfec56f2388be0053e513c6ad362cc773"
+    },
+    {
+      "file": "sources/heiberg-018.jpg",
+      "bytes": 320531,
+      "sha256": "5db4489cfd168fb06c3593125ce62bd67b2d097b2146d9eaa655db878deaaa69"
+    },
+    {
+      "file": "sources/heiberg-019.jpg",
+      "bytes": 255868,
+      "sha256": "6cf9dc8ffa51ab9cad0cd0c0b89d81d6bf11b20dfe605dc4e6a7c552efc3ecda"
+    },
+    {
+      "file": "sources/heiberg-020.jpg",
+      "bytes": 293742,
+      "sha256": "a8755a2c4cd74bb7de6d77da6c18bc4bbccb9742dd71feadb24ec2682a82eb3b"
+    },
+    {
+      "file": "sources/heiberg-021.jpg",
+      "bytes": 291018,
+      "sha256": "3412b172ffa4825a145107528219d3e9816aa007569326c05afa76c7340b24b0"
+    },
+    {
+      "file": "sources/heiberg-022.jpg",
+      "bytes": 293560,
+      "sha256": "9f1e3d75f5d7b78fba0a4ae1c27ea786b1dab1652545215512203604eb158019"
+    },
+    {
+      "file": "sources/heiberg-023.jpg",
+      "bytes": 278117,
+      "sha256": "90ac8cd3b7c27a32078961e3a3a6413133fece7989ce3d7841a28c1cfc948afe"
+    },
+    {
+      "file": "sources/heiberg-024.jpg",
+      "bytes": 306364,
+      "sha256": "6a0b4031ea7536cf2c506e0164841ec388db0e69171d4851d771a5f96c3aa9b8"
+    },
+    {
+      "file": "sources/heiberg-025.jpg",
+      "bytes": 293436,
+      "sha256": "dcc612163f25b70db7f0cd45536506bbe4fe8fad1c93a692f3d2700e0e8747ed"
+    },
+    {
+      "file": "sources/heiberg-026.jpg",
+      "bytes": 293850,
+      "sha256": "e8e28946e679e899e2269397536f70cadda8bd139e2903be9ba472ecc1d31051"
+    },
+    {
+      "file": "sources/heiberg-027.jpg",
+      "bytes": 273902,
+      "sha256": "451b57f13004a6d271d1e06a74e05b4d38e9bb06f5ad89b8d02a628d2f669139"
+    },
+    {
+      "file": "sources/heiberg-028.jpg",
+      "bytes": 296351,
+      "sha256": "76f2906d1259b6dcffecee73d1519f133d58790e051c5759780526ad65fc827c"
+    },
+    {
+      "file": "sources/heiberg-029.jpg",
+      "bytes": 292126,
+      "sha256": "ef2054064c3b605004d0046476eadfeecb35f30ccefa0ede16dbaec135dc88be"
+    },
+    {
+      "file": "sources/heiberg-030.jpg",
+      "bytes": 268412,
+      "sha256": "c28d31907a99fe1b0e0556cb3e284b30418aed66cfa991a8d235409f356cc0bd"
+    },
+    {
+      "file": "sources/heiberg-031.jpg",
+      "bytes": 235508,
+      "sha256": "78c48ad097ea261328c143863dc9febeadc3070b60a1bfec288b2d6e55caf931"
+    },
+    {
+      "file": "sources/heiberg-032.jpg",
+      "bytes": 293027,
+      "sha256": "b2fd3e753c7f83c6569a5e8fe34b1ca05b202910f276e8c44af94ab1ea880f15"
+    },
+    {
+      "file": "sources/heiberg-033.jpg",
+      "bytes": 240346,
+      "sha256": "919be729e8ccf36913738be4acb247f6f86e68e9e2e4c986562ea2439705d510"
+    },
+    {
+      "file": "sources/heiberg-034.jpg",
+      "bytes": 317039,
+      "sha256": "338c9e40d5890b26a2df046f9355083091ee685f0496e0f9320c93cb2a1dea6d"
+    },
+    {
+      "file": "sources/heiberg-035.jpg",
+      "bytes": 311358,
+      "sha256": "6acd2d3370693574907efb7ef8eac732fd38629671edfee664fe7abebfe3f9f7"
+    },
+    {
+      "file": "sources/heiberg-036.jpg",
+      "bytes": 311392,
+      "sha256": "31bdf69d9a74b6ecd990f91ffd0d54c4b8030ba28ae773dac8baa8cd90994e3d"
+    },
+    {
+      "file": "sources/heiberg-037.jpg",
+      "bytes": 299144,
+      "sha256": "5904bc4e6e25e7b8d338beed7a22f627fd54816b4479ce9738af5cd46e572360"
+    },
+    {
+      "file": "sources/heiberg-038.jpg",
+      "bytes": 309829,
+      "sha256": "751dca1a10215e5ebd68f8d741d70b44b90876ee6c5379dcb2ac973246aa1f1e"
+    },
+    {
+      "file": "sources/heiberg-039.jpg",
+      "bytes": 289614,
+      "sha256": "9f529f8bdf0cf224109f048f7dfdf19ef7eb65b0672d5d99997fef21f5a6a053"
+    },
+    {
+      "file": "sources/heiberg-040.jpg",
+      "bytes": 312489,
+      "sha256": "a8d8b9bfbeeec9642c118747e1085ed75e739014ec8dcb58e113a835d7c18f08"
+    },
+    {
+      "file": "sources/heiberg-041.jpg",
+      "bytes": 269126,
+      "sha256": "436641c11669ae64578231c71c839f5059a22e65a46b7522d9839ab1a77e15fa"
+    },
+    {
+      "file": "sources/heiberg-042.jpg",
+      "bytes": 325998,
+      "sha256": "6cde0d83df61a583cab4bc17305d5bd551395c5406ee190ebc650f9d0e83c409"
+    },
+    {
+      "file": "sources/heiberg-043.jpg",
+      "bytes": 327481,
+      "sha256": "8d27f77fe05da20bebbf5bb5cbcdb229932bcebb3f3855934531e9e7304d7176"
+    },
+    {
+      "file": "sources/heiberg-044.jpg",
+      "bytes": 316627,
+      "sha256": "082d3f6b6b221c85229f8660763ee09eb9a5fcba3760dbd31777059ea7c79cde"
+    },
+    {
+      "file": "sources/heiberg-045.jpg",
+      "bytes": 276417,
+      "sha256": "384d66370d556bdd610c345d2cec896e3bd614fad598954953a3fa54a9f31670"
+    },
+    {
+      "file": "sources/heiberg-046.jpg",
+      "bytes": 300358,
+      "sha256": "acc7d9126f11df03278e5772ca2ec12593805e0c44ec2d674719f3176a0958a2"
+    },
+    {
+      "file": "sources/heiberg-047.jpg",
+      "bytes": 254496,
+      "sha256": "02116c7d22af5d58821c990285056e515e1406d275d8c9949104b7f8fb5beb7d"
+    },
+    {
+      "file": "sources/heiberg-048.jpg",
+      "bytes": 301825,
+      "sha256": "a0589d5b60a437a5878dbe3cf56f659dcd9f0c663d405da3da9681e04b83a007"
+    },
+    {
+      "file": "sources/heiberg-049.jpg",
+      "bytes": 292825,
+      "sha256": "f5f312234a79fad5474d893c9d303d8023464b26e3b7a0a49350820663c0a7cb"
+    },
+    {
+      "file": "sources/heiberg-050.jpg",
+      "bytes": 297170,
+      "sha256": "be62d9a2e3f842f90a11fdd5975bc1ae5c5133f006ad9e4ef15972818b01bb67"
+    },
+    {
+      "file": "sources/heiberg-051.jpg",
+      "bytes": 267796,
+      "sha256": "fc9eb173b34a39f41195251ebff09faf213a89b654fac45f15d765bd2500d697"
+    },
+    {
+      "file": "sources/heiberg-052.jpg",
+      "bytes": 301474,
+      "sha256": "c79b64c8e0350bae55efb372ea5d347f93ae9eed21720a98e1c63f2c79e31bdf"
+    },
+    {
+      "file": "sources/heiberg-053.jpg",
+      "bytes": 330017,
+      "sha256": "7ebd6f90f1d70e233c786f30cc2a973fa856e32c8e587f4318e5ed6922078093"
+    },
+    {
+      "file": "sources/heiberg-054.jpg",
+      "bytes": 314071,
+      "sha256": "468e6ce638a584b3d8f5d29c620673a89a597d53974df3d0b5ac8d9012e8a160"
+    },
+    {
+      "file": "sources/heiberg-055.jpg",
+      "bytes": 251488,
+      "sha256": "3134a0577c2f607bff31b7735bdc169c1efac08e6f42b75b6ead766dac579612"
+    },
+    {
+      "file": "sources/manifest.json",
+      "bytes": 16820,
+      "sha256": "77ed9805fb864db6eb4f8518c4abbec9da1eae9dbba75883d67695fbee06a0cb"
+    },
+    {
+      "file": "sw.js",
+      "bytes": 10477,
+      "sha256": "8a57a204a0da9ccb2a6e3d55b897ca950808b330f2701c8cb3cea269b50d98f2"
+    },
+    {
+      "file": "triangle.html",
+      "bytes": 1510,
+      "sha256": "b5e4139b1f936d2ef985e39a4cfb618bf90b0281ae6f35119ab586919b53a9d9"
+    }
+  ]
+}

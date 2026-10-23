@@ -1,0 +1,30 @@
+[
+  {
+    "browser": "chromium",
+    "width": 1440,
+    "sourceImages": 6,
+    "fontLoaded": true,
+    "noOverflow": true
+  },
+  {
+    "browser": "chromium",
+    "width": 375,
+    "sourceImages": 6,
+    "fontLoaded": true,
+    "noOverflow": true
+  },
+  {
+    "browser": "firefox",
+    "width": 1440,
+    "sourceImages": 6,
+    "fontLoaded": true,
+    "noOverflow": true
+  },
+  {
+    "browser": "firefox",
+    "width": 375,
+    "sourceImages": 6,
+    "fontLoaded": true,
+    "noOverflow": true
+  }
+]

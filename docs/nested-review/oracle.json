@@ -1,0 +1,8 @@
+{
+  "method": "Positive barycentric coordinates, independent distances and cosine-law angles",
+  "cases": 648,
+  "comparisons": 12960,
+  "maximumAbsoluteDiscrepancy": 6.87805368215777e-12,
+  "tolerance": 1e-8,
+  "allPassed": true
+}

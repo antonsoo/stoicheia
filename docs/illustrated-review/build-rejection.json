@@ -1,0 +1,7 @@
+{
+  "case": "Build with page 50 bytes substituted for page 52",
+  "exitCode": 1,
+  "rejectedBecause": "Source manifest does not match sources/heiberg-052.jpg",
+  "originalSourceRestored": true,
+  "originalSha256": "c79b64c8e0350bae55efb372ea5d347f93ae9eed21720a98e1c63f2c79e31bdf"
+}

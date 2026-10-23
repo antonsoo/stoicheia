@@ -12,9 +12,9 @@ A translation can make the argument readable while hiding the Greek that carries
 it. Stoicheia connects both: change the givens, follow the command on the plate,
 read the two source languages, and ask what established the relation.
 
-The opening course is **Book I, propositions 1–20**. It includes the complete
-statements and proofs, divided into 164 aligned reading steps, with 49 selected
-vocabulary entries, fourteen foundation statements and forty passage-based
+The opening course is **Book I, propositions 1–21**. It includes the complete
+statements and proofs, divided into 174 aligned reading steps, with 51 selected
+vocabulary entries, fourteen foundation statements and forty-two passage-based
 reading exercises. It is intended for an English-speaking reader who knows basic
 geometry and is beginning Greek or Latin.
 
@@ -22,17 +22,22 @@ geometry and is beginning Greek or Latin.
 [Source repository](https://github.com/antonsoo/stoicheia). The app is a static
 site; no package registry installation is required.
 
-**New reading: [the triangle inequality](https://antonsoo.github.io/stoicheia/#p=20&s=7&pair=2).**
-Choose each side pair to draw the construction hidden by “similarly.” Start with
-[I.19’s rejected equality](https://antonsoo.github.io/stoicheia/#p=19&s=2) to see
-why a temporary supposition cannot retain the original angle premise. The
-[new review](docs/inequalities-review.md) records the sources and actual workflows.
+**New reading: [shorter route, larger angle](https://antonsoo.github.io/stoicheia/#p=21&s=9&m=55).**
+Move an interior meeting point to compare the outer route with the two segments
+inside it. Follow the intermediate route Β–Ε–Γ through two applications of I.20
+and two of I.16. Each conclusion has its own proof. The individual-leg readouts
+also show why the sum can shrink even when one inner segment grows.
+
+Ten complete Greek/Latin/English steps, two position controls, two passage
+exercises and the original pages 50–53 complete the sequential course through I.21.
+[Model and review](docs/nested-review.md) · [Saved study](examples/stoicheia-I21-study.html) ·
+[Printed study](examples/stoicheia-I21-study.pdf).
 
 ## Three lengths: can they close?
 
 Open the [I.22 construction workshop](https://antonsoo.github.io/stoicheia/triangle.html).
 It is also available locally after starting the app.
-The sequential course remains I.1–20; this workshop does not add I.21.
+The sequential course now reaches I.21; this separate workshop completes I.22.
 [Review, sources and publication boundary](docs/closure-review.md).
 
 ![Turning a fixed-length arm, with the second arm falling short of its tip](docs/assets/closure-trial-1440.png)
@@ -99,6 +104,7 @@ on the same port; stop the development server before starting the preview.
 | I.18        | A greater angle from a greater side                           | An interior cut supplies an isosceles triangle; equality or a shorter side stops the construction       |
 | I.19        | The converse: a greater side from a greater angle             | Equal-side and shorter-side alternatives visibly lose the given angle premise                           |
 | I.20        | Any two sides together exceed the third                       | Copy a side onto a continuation, use I.19, and expand all three comparisons                             |
+| I.21        | An interior route is shorter but includes a greater angle     | Two triangle inequalities and two exterior-angle comparisons through the same intermediate point        |
 - Move through the commands and deductions at your own pace. Every step names its
   permission: postulate, definition, common notion, earlier proposition, or
   assumption. Earlier constructions can be opened from the reason that uses them.
@@ -133,10 +139,10 @@ on the same port; stop the development server before starting the preview.
 - In [I.14](https://antonsoo.github.io/stoicheia/#p=14&s=5), the sketch keeps the original angle premise and draws the supposed continuation off the line. Its measurements remain unequal; the contradiction's forced equality is explicitly conditional, including in downloads.
 - In [I.16's second construction](https://antonsoo.github.io/stoicheia/#p=16&s=8), make the work hidden by “similarly” visible. The modern labels Θ and Κ expand the source's abbreviated instruction. Neither inequality uses the later triangle-angle-sum theorem.
 - Open the printed page for either language, zoom it and pan with the keyboard.
-  All forty-four source pages are bundled. The full aligned passage is available below
+  All fifty-four source pages are bundled. The full aligned passage is available below
   the plate, with links back to individual steps.
 - Share the current proposition, step and parameters in a URL fragment. Save the
-  current diagram as SVG or the entire lesson as a standalone HTML study sheet.
+  current diagram as SVG or the entire lesson as an illustrated HTML study. The latter includes its verified source pages (including cited foundations), a Greek font and redistribution notices. It opens from disk without external requests.
   The downloaded sheet contains the diagram, all three languages, reasons, relevant foundation statements, notes and
   attribution, and opens without scripts or network access.
 - Browser printing produces the full parallel passage, even when it is collapsed
@@ -165,7 +171,7 @@ open it directly in a browser to read without the app.
 ## The source is part of the lesson
 
 The Greek and Latin are transcribed from J. L. Heiberg’s _Euclidis opera omnia_,
-volume I (Leipzig: Teubner, 1883), printed pp. 2–51. Heiberg’s Latin is a
+volume I (Leipzig: Teubner, 1883), printed pp. 2–53. Heiberg’s Latin is a
 **nineteenth-century translation**, not an ancient Latin text. The English is a
 new reading translation; explanations sometimes make an implied intersection
 explicit. Point names remain Greek throughout.
@@ -273,7 +279,12 @@ run `npm run test:browser` in another terminal. Playwright needs matching Chromi
 and Firefox browsers already available. On a new development machine they can be
 installed with `npx playwright install --with-deps chromium firefox`.
 
-The current [I.17–20 review](docs/inequalities-review.md) links the new clean
+The [I.21 review](docs/nested-review.md) records 648 independent geometry cases,
+its drawn comparisons, printed readings and actual browser workflows. Reproduce
+the geometry with `npm run verify:nested` and the browser journey with
+`npm run test:nested -- http://127.0.0.1:4327/stoicheia/`.
+
+The earlier [I.17–20 review](docs/inequalities-review.md) links the new clean
 build, independent geometry, rendered-browser, print and offline-upgrade
 receipts, with downloadable I.19/I.20 study sheets. Earlier receipts below
 remain records of their own editions.
@@ -330,9 +341,21 @@ construction boundaries, rendered geometry, new downloads and print coverage.
 The I.15 Greek corollary stays bracketed and explicitly has no supplied Latin;
 it is also retained in the full reading's print output.
 
+## Illustrated studies you can keep
+
+Every course lesson can now save its own source images and Noto Serif font in
+one HTML file. The proof, reasons, selected diagram, cited foundation passages
+and relevant facsimiles remain together offline. Images and font bytes must
+match the current edition before the download is offered. Failed reads can be
+retried; changing lessons during a save does not alter the saved snapshot.
+
+The same verification now protects the I.22 workshop. An earlier export accepted
+a substituted HTTP-200 image under the wrong page caption; that case now refuses
+the download. [Actual file workflows and limits](docs/illustrated-review.md).
+
 ## Accuracy and limitations
 
-- The sequential course covers I.1–20, with a separate complete I.22 workshop.
+- The sequential course covers I.1–21, with a separate complete I.22 workshop.
   This is not the whole _Elements_. The construction tools, translations
   and selected vocabulary are complete for that scope. There is no general Greek
   parser, pronunciation model or claim that every word is annotated.
@@ -351,6 +374,7 @@ it is also retained in the full reading's print output.
   distinguish equal angles from an internal bisection.
 - I.13's controls follow the printed unequal-angle arrangement and include its separate right-angle branch. I.14's temporary continuation cannot satisfy every premise simultaneously. I.16's Θ/Κ drawing is a modern expansion of the source's “similarly,” not an additional ancient diagram or text.
 - I.17 and I.20’s additional pair drawings expand “similarly” with modern diagrams. I.19’s temporary triangles deliberately fail the given angle inequality. The readouts check the numerical drawings; they are not proof premises.
+- I.21’s position controls keep Δ strictly inside the outer triangle, away from degeneracy. The numeric degree and length readings illustrate the two proofs; the ordering/intersection assumptions are explicit.
 - I.2 reuses the completed I.1 subconstruction, and I.3 reuses I.2. Their internal
   working is shown in the corresponding earlier lesson rather than repeated in
   the later plate. Some unused source-circle labels are omitted from the plates.

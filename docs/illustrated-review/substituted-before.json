@@ -1,0 +1,9 @@
+{
+  "responseStatus": 200,
+  "sourceRequested": 52,
+  "sourceSubstituted": 50,
+  "downloadAccepted": true,
+  "firstEmbeddedSha256": "be62d9a2e3f842f90a11fdd5975bc1ae5c5133f006ad9e4ef15972818b01bb67",
+  "wrongSourceSha256": "be62d9a2e3f842f90a11fdd5975bc1ae5c5133f006ad9e4ef15972818b01bb67",
+  "successMessage": "Saved the illustrated reading for Α 5.0, Β 6.0, Γ 4.0."
+}
