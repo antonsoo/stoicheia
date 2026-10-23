@@ -69,7 +69,14 @@ The [final build inventory](illustrated-review/build.json) records runtime commi
 clean Node 24.21.0 build and all public file hashes. Lint, strict typechecking,
 39 meaningful tests and production compilation passed from a fresh archive.
 The geometric and full-course evidence is recorded in the [I.21 review](nested-review.md).
-Public-byte and direct HTTPS browser evidence is recorded separately after deployment.
+The public site was checked directly after the normal fast-forward Pages push
+`eef56bf`. All 66 canonical HTTPS files match the reviewed runtime
+`09234be63751e5c145dae821feaea8e1c9991330`, totaling 16,703,929 bytes. In both
+browsers and both widths, native I.21 controls reproduced the individual-side
+counterexample; page 53 decoded; I.21 and I.22 files downloaded and opened from
+disk with their embedded font and images. Offline lesson navigation, source
+viewing and fresh export also passed. [Hosted receipt](illustrated-review/hosted.json).
+This establishes those served bytes and observed workflows, not a CI result.
 
 The font and relevant facsimiles make each study several megabytes. They are
 source packets, not minimal text-only exports. Their PDF versions are browser

@@ -75,3 +75,12 @@ to the same proof. The linked examples are the final illustrated downloads.
 
 These are numerical and browser checks of a teaching implementation, not formal
 verification of Euclid’s axioms or a philologically complete critical edition.
+
+## Publication
+
+The final illustrated-study runtime was published as Pages commit `eef56bf`.
+All 66 canonical public files match runtime `09234be`; Chromium and Firefox at
+1440 and 375 pixels followed the I.21 controls, viewed page 53, saved and opened
+the illustrated studies, and used the lesson offline. See the
+[hosted receipt](illustrated-review/hosted.json) and
+[illustrated-study review](illustrated-review.md) for the final export behavior.
