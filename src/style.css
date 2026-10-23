@@ -1731,12 +1731,17 @@ dialog::backdrop {
   padding-top: 14px;
 }
 .reader-tools button,
+.reader-tools a,
 .foundation-link {
   font-size: 0.82rem;
   text-decoration: underline;
   text-underline-offset: 4px;
   min-height: 44px;
   text-align: left;
+}
+.reader-tools a {
+  display: inline-flex;
+  align-items: center;
 }
 .foundation-link {
   display: block;
@@ -1825,7 +1830,8 @@ dialog::backdrop {
   .reader-tools {
     justify-content: flex-start;
   }
-  .reader-tools button {
+  .reader-tools button,
+  .reader-tools a {
     font-size: 0.78rem;
   }
   .foundation-dialog {
