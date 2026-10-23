@@ -14,9 +14,9 @@
     "bytes": 20890632,
     "sha256": "da285c581c2dda86e2b25e20db3ce604bf6fb8765228fcd71cfc89d47a9d1c17"
   },
-  "rendering": "pdftoppm -f 16 -l 65 -scale-to 1550 -jpeg -jpegopt quality=88 INPUT.pdf page",
+  "rendering": "pdftoppm -f 16 -l 65 -scale-to 1550 -jpeg -jpegopt quality=88 INPUT.pdf page; I.22 supplement: -f 66 -l 69, same image settings.",
   "transcription": {
-    "scope": "Full proposition statements and proofs I.1–20; the bracketed Greek-only corollary after I.15, with no supplied Latin; definitions 10, 15, 16, 20; all five postulates; the five common notions in the usual modern list (Heiberg 1, 2, 3, 7, 8). Critical apparatus and other text are not transcribed.",
+    "scope": "Full proposition statements and proofs I.1–20; the bracketed Greek-only corollary after I.15, with no supplied Latin; definitions 10, 15, 16, 20; all five postulates; the five common notions in the usual modern list (Heiberg 1, 2, 3, 7, 8). Critical apparatus and other text are not transcribed. Separate I.22 workshop: complete statement and proof, printed pp. 52–55; I.21 is not added to the course.",
     "normalizations": [
       "Printed ϑ normalized to θ.",
       "Consistent Unicode Greek letters for all geometric labels, including letters that resemble Latin glyphs.",
@@ -27,7 +27,8 @@
       "Heiberg’s square brackets in I.1’s repeated conclusion and I.4/I.8’s [ταῖς] retained.",
       "Printed Latin angle and triangle symbols represented by Unicode ∠ and △; equations and inequalities use =, > and <.",
       "Greek editorial brackets in definitions 15 and common notion 8 retained; facing Latin omissions preserved.",
-      "Editorial brackets in I.13 and the Greek-only I.15 corollary retained; the absence of facing Latin for the corollary is stated explicitly."
+      "Editorial brackets in I.13 and the Greek-only I.15 corollary retained; the absence of facing Latin for the corollary is stated explicitly.",
+      "I.22 retains the bracketed Greek explanation, the absence of its Latin translation, and the changing order of circle labels. The Latin inline reference to I.20 is explained in the note."
     ],
     "english": "New reading translation. Explicit intersection descriptions and other explanatory expansions are teaching aids.",
     "comparison": "Hand transcription checked against bundled scans. The cropped right edge of printed p. 6 was cross-checked against the Greek quoted in Heath, The Thirteen Books of Euclid’s Elements (1925), pp. 187–188, via David R. Wilkins’s Trinity College Dublin transcription. No unreviewed OCR output is presented as source text.",
@@ -483,6 +484,42 @@
       "file": "heiberg-051.jpg",
       "bytes": 267796,
       "sha256": "fc9eb173b34a39f41195251ebff09faf213a89b654fac45f15d765bd2500d697"
+    },
+    {
+      "printed_page": 52,
+      "pdf_page": 66,
+      "archive_leaf": 66,
+      "language": "grc",
+      "file": "heiberg-052.jpg",
+      "bytes": 301474,
+      "sha256": "c79b64c8e0350bae55efb372ea5d347f93ae9eed21720a98e1c63f2c79e31bdf"
+    },
+    {
+      "printed_page": 53,
+      "pdf_page": 67,
+      "archive_leaf": 67,
+      "language": "la",
+      "file": "heiberg-053.jpg",
+      "bytes": 330017,
+      "sha256": "7ebd6f90f1d70e233c786f30cc2a973fa856e32c8e587f4318e5ed6922078093"
+    },
+    {
+      "printed_page": 54,
+      "pdf_page": 68,
+      "archive_leaf": 68,
+      "language": "grc",
+      "file": "heiberg-054.jpg",
+      "bytes": 314071,
+      "sha256": "468e6ce638a584b3d8f5d29c620673a89a597d53974df3d0b5ac8d9012e8a160"
+    },
+    {
+      "printed_page": 55,
+      "pdf_page": 69,
+      "archive_leaf": 69,
+      "language": "la",
+      "file": "heiberg-055.jpg",
+      "bytes": 251488,
+      "sha256": "3134a0577c2f607bff31b7735bdc169c1efac08e6f42b75b6ead766dac579612"
     }
   ]
 }

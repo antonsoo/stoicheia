@@ -292,3 +292,37 @@ The English, syntax notes, exercises and coordinate diagrams are new. The
 Latin remains Heiberg’s nineteenth-century translation. No modern English
 translation is reproduced. The linked Joyce commentary supplies further
 reading; the bundled Heiberg pages are the transcription source.
+
+## Separate I.22 construction workshop
+
+The complete statement and proof are hand-transcribed from printed pages 52–55
+of the same 1883 volume. PDF pages 66–69 were rendered with the existing settings,
+visually checked, and added to the image manifest. This is a separate workshop;
+the sequential course still stops at I.20.
+
+| Reading                    | Greek printed pages | Latin printed pages |
+| -------------------------- | ------------------- | ------------------- |
+| Statement and givens       | 52                  | 53                  |
+| Ray and three copies       | 52, 54              | 53, 55              |
+| Circles and complete proof | 54                  | 55                  |
+
+The bracketed Greek `[εὐθείαις]` and the bracketed final explanation in the
+statement remain. The English follows the Greek, including those brackets.
+The Latin omits that explanation and instead has an inline reference to I.20;
+the reference is described in the language note rather than inserted into the
+translation. The main text names the second circle ΚΛΘ in the construction and
+ΛΚΘ in the proof: both readings are retained. Inline Latin references, the
+footnotes and apparatus are not transcribed.
+
+Heiberg's Latin footnote on p. 53 discusses an added intersection clause in
+another edition. This workshop does not insert it. The source proceeds directly
+from drawing the circles to joining ΚΖ and ΚΗ. The model's real-coordinate
+argument and five-case classification are explicitly modern explanations,
+not source text or a formal derivation from the stated postulates.
+
+Α, Β and Γ name given segments, while Ζ and Η are the centres. The ray ΔΕ is
+represented by a finite drawn part. T labels the single contact in a limiting
+experiment, and P/Q label trial tips; none of those three Latin labels belongs
+to the I.22 source figure. Trial angles and arbitrary drawing units likewise
+belong to the teaching model. The complete scans include parts of I.21/I.23
+and apparatus outside this workshop's transcription scope.

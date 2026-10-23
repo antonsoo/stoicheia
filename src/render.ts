@@ -6,14 +6,9 @@ import type { Point } from "./core/geometry";
 import { distance } from "./core/geometry";
 import type { Scene } from "./core/scene";
 
-export function escapeHtml(text: string): string {
-  return text.replace(
-    /[&<>"']/g,
-    (character) =>
-      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character] ??
-      character,
-  );
-}
+import { escapeHtml } from "./html";
+
+export { escapeHtml } from "./html";
 
 export function annotated(text: string): string {
   return text
