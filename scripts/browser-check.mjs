@@ -72,6 +72,7 @@ const counts = {
   18: 7,
   19: 6,
   20: 9,
+  21: 10,
 };
 const artifacts = await mkdtemp(join(tmpdir(), "stoicheia-export-"));
 
@@ -201,7 +202,7 @@ try {
         assert.equal(await page.evaluate(() => document.fonts.check('20px "Noto Serif"')), true);
 
         for (const proposition of [
-          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
         ]) {
           await openLesson(page, proposition);
           for (let step = 0; step < counts[proposition]; step++) {
@@ -241,6 +242,7 @@ try {
             18: 0,
             19: 1,
             20: 2,
+            21: 1,
           }[proposition];
           await question.nth((correctAnswer + 1) % 3).check();
           assert.ok(await page.locator("#question-feedback").innerText());
