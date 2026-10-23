@@ -122,3 +122,18 @@
 - Bundle six additional full source pages, making fifty available offline.
 - Add independent normalized-vector and containment checks, rendered-browser
   comparisons and interrupted upgrades from the sixteen-proposition edition.
+
+## Triangle construction workshop · 2026-10-23 (local)
+
+- Add a separate I.22 experiment with independent lengths, exact strict-condition
+  classification, five circle outcomes and a draggable/keyboard trial hinge.
+- Transcribe the complete Greek and Heiberg Latin from pp. 52–55, with new English,
+  nine reading units, explicit editorial decisions and three reading questions.
+- Add portrait diagrams, shared state, SVG/CSV and standalone illustrated readings
+  with the font and all four scans embedded.
+- Preserve both entry pages in the offline cache: an offline visit to triangle.html
+  now receives the workshop instead of falling back to the course's index page.
+- Keep the workshop's shared HTML helper independent of the full course content.
+- Escape minified CSS in standalone SVGs so the downloaded diagrams open as XML.
+- Verify geometry, browser workflows, print paragraphs, and delayed/failed edition
+  upgrades. No deployment or public-host verification is claimed for this addition.

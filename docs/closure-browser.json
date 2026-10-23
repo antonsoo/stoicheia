@@ -1,0 +1,509 @@
+{
+  "checkedAt": "2026-10-23T19:45:05.087Z",
+  "upstream": "http://127.0.0.1:4397/stoicheia/",
+  "scope": "Actual controls, rendered geometry, complete source reading, downloads, print and both offline entry pages",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "cases": [
+        {
+          "a": 5,
+          "b": 6,
+          "c": 4,
+          "kind": "crossing"
+        },
+        {
+          "a": 2,
+          "b": 6,
+          "c": 4,
+          "kind": "external-tangent"
+        },
+        {
+          "a": 1.9,
+          "b": 6,
+          "c": 4,
+          "kind": "separate"
+        },
+        {
+          "a": 10,
+          "b": 6,
+          "c": 4,
+          "kind": "internal-tangent"
+        },
+        {
+          "a": 10.1,
+          "b": 6,
+          "c": 4,
+          "kind": "contained"
+        },
+        {
+          "a": 4,
+          "b": 6,
+          "c": 10,
+          "kind": "internal-tangent"
+        },
+        {
+          "a": 4,
+          "b": 6,
+          "c": 10.1,
+          "kind": "contained"
+        },
+        {
+          "a": 1,
+          "b": 1,
+          "c": 1,
+          "kind": "crossing"
+        },
+        {
+          "a": 12,
+          "b": 12,
+          "c": 12,
+          "kind": "crossing"
+        },
+        {
+          "a": 1,
+          "b": 12,
+          "c": 11.1,
+          "kind": "crossing"
+        },
+        {
+          "a": 12,
+          "b": 1,
+          "c": 11.1,
+          "kind": "crossing"
+        }
+      ],
+      "steps": 5,
+      "passages": 9,
+      "sources": [
+        {
+          "page": 52,
+          "sha256": "c79b64c8e0350bae55efb372ea5d347f93ae9eed21720a98e1c63f2c79e31bdf"
+        },
+        {
+          "page": 53,
+          "sha256": "7ebd6f90f1d70e233c786f30cc2a973fa856e32c8e587f4318e5ed6922078093"
+        },
+        {
+          "page": 54,
+          "sha256": "468e6ce638a584b3d8f5d29c620673a89a597d53974df3d0b5ac8d9012e8a160"
+        },
+        {
+          "page": 55,
+          "sha256": "3134a0577c2f607bff31b7735bdc169c1efac08e6f42b75b6ead766dac579612"
+        }
+      ],
+      "downloads": [
+        {
+          "file": "chromium-1440-reading.html",
+          "sha256": "af93d50386012e5a1326ebf5ca8fbf9426e2fa65c447c7a1ff3a9fbee1f1babb"
+        },
+        {
+          "file": "chromium-1440-reading.svg",
+          "sha256": "d55e8ca30441612f600fc01e5cba562a902c62308077d0de89be41d0a58602bd"
+        },
+        {
+          "file": "chromium-1440-reading.csv",
+          "sha256": "e79b6dbeee6a08e3ddc67c9b5ee464c0744e717fa54004ed2453e39298da6b9f"
+        }
+      ],
+      "accessibility": [
+        "initial workshop",
+        "impossible nested circles",
+        "trial hinge",
+        "reading and language notes"
+      ],
+      "offline": [
+        "workshop reload with dead HTTP origin",
+        "existing I.20 reader navigation",
+        "reader to workshop and new source image",
+        "illustrated reading generated offline",
+        "downloaded SVG opens as XML with rendered geometry",
+        "standalone HTML with embedded scans and font; zero external requests"
+      ],
+      "screenshots": [
+        "chromium-1440-contained.png",
+        "chromium-1440-trial.png",
+        "chromium-1440-source.png"
+      ]
+    },
+    {
+      "browser": "chromium",
+      "width": 375,
+      "cases": [
+        {
+          "a": 5,
+          "b": 6,
+          "c": 4,
+          "kind": "crossing"
+        },
+        {
+          "a": 2,
+          "b": 6,
+          "c": 4,
+          "kind": "external-tangent"
+        },
+        {
+          "a": 1.9,
+          "b": 6,
+          "c": 4,
+          "kind": "separate"
+        },
+        {
+          "a": 10,
+          "b": 6,
+          "c": 4,
+          "kind": "internal-tangent"
+        },
+        {
+          "a": 10.1,
+          "b": 6,
+          "c": 4,
+          "kind": "contained"
+        },
+        {
+          "a": 4,
+          "b": 6,
+          "c": 10,
+          "kind": "internal-tangent"
+        },
+        {
+          "a": 4,
+          "b": 6,
+          "c": 10.1,
+          "kind": "contained"
+        },
+        {
+          "a": 1,
+          "b": 1,
+          "c": 1,
+          "kind": "crossing"
+        },
+        {
+          "a": 12,
+          "b": 12,
+          "c": 12,
+          "kind": "crossing"
+        },
+        {
+          "a": 1,
+          "b": 12,
+          "c": 11.1,
+          "kind": "crossing"
+        },
+        {
+          "a": 12,
+          "b": 1,
+          "c": 11.1,
+          "kind": "crossing"
+        }
+      ],
+      "steps": 5,
+      "passages": 9,
+      "sources": [
+        {
+          "page": 52,
+          "sha256": "c79b64c8e0350bae55efb372ea5d347f93ae9eed21720a98e1c63f2c79e31bdf"
+        },
+        {
+          "page": 53,
+          "sha256": "7ebd6f90f1d70e233c786f30cc2a973fa856e32c8e587f4318e5ed6922078093"
+        },
+        {
+          "page": 54,
+          "sha256": "468e6ce638a584b3d8f5d29c620673a89a597d53974df3d0b5ac8d9012e8a160"
+        },
+        {
+          "page": 55,
+          "sha256": "3134a0577c2f607bff31b7735bdc169c1efac08e6f42b75b6ead766dac579612"
+        }
+      ],
+      "downloads": [
+        {
+          "file": "chromium-375-reading.html",
+          "sha256": "af93d50386012e5a1326ebf5ca8fbf9426e2fa65c447c7a1ff3a9fbee1f1babb"
+        },
+        {
+          "file": "chromium-375-reading.svg",
+          "sha256": "3f0cd5ea05233568a122dcfe19bd6d1136f5d6d3857d1f284f10bda8d4ba3d00"
+        },
+        {
+          "file": "chromium-375-reading.csv",
+          "sha256": "e79b6dbeee6a08e3ddc67c9b5ee464c0744e717fa54004ed2453e39298da6b9f"
+        }
+      ],
+      "accessibility": [
+        "initial workshop",
+        "impossible nested circles",
+        "trial hinge",
+        "reading and language notes"
+      ],
+      "offline": [
+        "workshop reload with dead HTTP origin",
+        "existing I.20 reader navigation",
+        "reader to workshop and new source image",
+        "illustrated reading generated offline",
+        "downloaded SVG opens as XML with rendered geometry",
+        "standalone HTML with embedded scans and font; zero external requests"
+      ],
+      "screenshots": [
+        "chromium-375-contained.png",
+        "chromium-375-trial.png",
+        "chromium-375-source.png"
+      ]
+    },
+    {
+      "browser": "firefox",
+      "width": 1440,
+      "cases": [
+        {
+          "a": 5,
+          "b": 6,
+          "c": 4,
+          "kind": "crossing"
+        },
+        {
+          "a": 2,
+          "b": 6,
+          "c": 4,
+          "kind": "external-tangent"
+        },
+        {
+          "a": 1.9,
+          "b": 6,
+          "c": 4,
+          "kind": "separate"
+        },
+        {
+          "a": 10,
+          "b": 6,
+          "c": 4,
+          "kind": "internal-tangent"
+        },
+        {
+          "a": 10.1,
+          "b": 6,
+          "c": 4,
+          "kind": "contained"
+        },
+        {
+          "a": 4,
+          "b": 6,
+          "c": 10,
+          "kind": "internal-tangent"
+        },
+        {
+          "a": 4,
+          "b": 6,
+          "c": 10.1,
+          "kind": "contained"
+        },
+        {
+          "a": 1,
+          "b": 1,
+          "c": 1,
+          "kind": "crossing"
+        },
+        {
+          "a": 12,
+          "b": 12,
+          "c": 12,
+          "kind": "crossing"
+        },
+        {
+          "a": 1,
+          "b": 12,
+          "c": 11.1,
+          "kind": "crossing"
+        },
+        {
+          "a": 12,
+          "b": 1,
+          "c": 11.1,
+          "kind": "crossing"
+        }
+      ],
+      "steps": 5,
+      "passages": 9,
+      "sources": [
+        {
+          "page": 52,
+          "sha256": "c79b64c8e0350bae55efb372ea5d347f93ae9eed21720a98e1c63f2c79e31bdf"
+        },
+        {
+          "page": 53,
+          "sha256": "7ebd6f90f1d70e233c786f30cc2a973fa856e32c8e587f4318e5ed6922078093"
+        },
+        {
+          "page": 54,
+          "sha256": "468e6ce638a584b3d8f5d29c620673a89a597d53974df3d0b5ac8d9012e8a160"
+        },
+        {
+          "page": 55,
+          "sha256": "3134a0577c2f607bff31b7735bdc169c1efac08e6f42b75b6ead766dac579612"
+        }
+      ],
+      "downloads": [
+        {
+          "file": "firefox-1440-reading.html",
+          "sha256": "af93d50386012e5a1326ebf5ca8fbf9426e2fa65c447c7a1ff3a9fbee1f1babb"
+        },
+        {
+          "file": "firefox-1440-reading.svg",
+          "sha256": "d55e8ca30441612f600fc01e5cba562a902c62308077d0de89be41d0a58602bd"
+        },
+        {
+          "file": "firefox-1440-reading.csv",
+          "sha256": "e79b6dbeee6a08e3ddc67c9b5ee464c0744e717fa54004ed2453e39298da6b9f"
+        }
+      ],
+      "accessibility": [
+        "initial workshop",
+        "impossible nested circles",
+        "trial hinge",
+        "reading and language notes"
+      ],
+      "offline": [
+        "workshop reload with dead HTTP origin",
+        "existing I.20 reader navigation",
+        "reader to workshop and new source image",
+        "illustrated reading generated offline",
+        "downloaded SVG opens as XML with rendered geometry",
+        "standalone HTML with embedded scans and font; zero external requests"
+      ],
+      "screenshots": [
+        "firefox-1440-contained.png",
+        "firefox-1440-trial.png",
+        "firefox-1440-source.png"
+      ]
+    },
+    {
+      "browser": "firefox",
+      "width": 375,
+      "cases": [
+        {
+          "a": 5,
+          "b": 6,
+          "c": 4,
+          "kind": "crossing"
+        },
+        {
+          "a": 2,
+          "b": 6,
+          "c": 4,
+          "kind": "external-tangent"
+        },
+        {
+          "a": 1.9,
+          "b": 6,
+          "c": 4,
+          "kind": "separate"
+        },
+        {
+          "a": 10,
+          "b": 6,
+          "c": 4,
+          "kind": "internal-tangent"
+        },
+        {
+          "a": 10.1,
+          "b": 6,
+          "c": 4,
+          "kind": "contained"
+        },
+        {
+          "a": 4,
+          "b": 6,
+          "c": 10,
+          "kind": "internal-tangent"
+        },
+        {
+          "a": 4,
+          "b": 6,
+          "c": 10.1,
+          "kind": "contained"
+        },
+        {
+          "a": 1,
+          "b": 1,
+          "c": 1,
+          "kind": "crossing"
+        },
+        {
+          "a": 12,
+          "b": 12,
+          "c": 12,
+          "kind": "crossing"
+        },
+        {
+          "a": 1,
+          "b": 12,
+          "c": 11.1,
+          "kind": "crossing"
+        },
+        {
+          "a": 12,
+          "b": 1,
+          "c": 11.1,
+          "kind": "crossing"
+        }
+      ],
+      "steps": 5,
+      "passages": 9,
+      "sources": [
+        {
+          "page": 52,
+          "sha256": "c79b64c8e0350bae55efb372ea5d347f93ae9eed21720a98e1c63f2c79e31bdf"
+        },
+        {
+          "page": 53,
+          "sha256": "7ebd6f90f1d70e233c786f30cc2a973fa856e32c8e587f4318e5ed6922078093"
+        },
+        {
+          "page": 54,
+          "sha256": "468e6ce638a584b3d8f5d29c620673a89a597d53974df3d0b5ac8d9012e8a160"
+        },
+        {
+          "page": 55,
+          "sha256": "3134a0577c2f607bff31b7735bdc169c1efac08e6f42b75b6ead766dac579612"
+        }
+      ],
+      "downloads": [
+        {
+          "file": "firefox-375-reading.html",
+          "sha256": "af93d50386012e5a1326ebf5ca8fbf9426e2fa65c447c7a1ff3a9fbee1f1babb"
+        },
+        {
+          "file": "firefox-375-reading.svg",
+          "sha256": "3f0cd5ea05233568a122dcfe19bd6d1136f5d6d3857d1f284f10bda8d4ba3d00"
+        },
+        {
+          "file": "firefox-375-reading.csv",
+          "sha256": "e79b6dbeee6a08e3ddc67c9b5ee464c0744e717fa54004ed2453e39298da6b9f"
+        }
+      ],
+      "accessibility": [
+        "initial workshop",
+        "impossible nested circles",
+        "trial hinge",
+        "reading and language notes"
+      ],
+      "offline": [
+        "workshop reload with dead HTTP origin",
+        "existing I.20 reader navigation",
+        "reader to workshop and new source image",
+        "illustrated reading generated offline",
+        "downloaded SVG opens as XML with rendered geometry",
+        "standalone HTML with embedded scans and font; zero external requests"
+      ],
+      "screenshots": [
+        "firefox-375-contained.png",
+        "firefox-375-trial.png",
+        "firefox-375-source.png"
+      ]
+    }
+  ],
+  "runtimeCommit": "cae12ed3fbc62d8ec9454332b6a2994e1af19f3e",
+  "buildManifest": "closure-build.json"
+}

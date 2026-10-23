@@ -28,6 +28,39 @@ Choose each side pair to draw the construction hidden by “similarly.” Start 
 why a temporary supposition cannot retain the original angle premise. The
 [new review](docs/inequalities-review.md) records the sources and actual workflows.
 
+## Three lengths: can they close?
+
+**New in this checkout:** a separate I.22 construction workshop at
+`http://127.0.0.1:4327/stoicheia/triangle.html` after starting the app.
+The sequential course remains I.1–20; this workshop does not add I.21.
+[Review, sources and publication boundary](docs/closure-review.md).
+
+![Turning a fixed-length arm, with the second arm falling short of its tip](docs/assets/closure-trial-1440.png)
+
+Try Α = 10, Β = 6, Γ = 4. The two radii exceed the base, but the circles
+only touch internally: there is no triangle. Increase Α to 10.1 and one
+circumference lies entirely inside the other. All three strict comparisons
+matter, including the one that this tempting single check misses.
+- Change all three lengths independently, in exact tenths from 1.0 to 12.0.
+  Inspect two crossings, both tangencies and both ways the circles can miss.
+- Turn a trial hinge with the keyboard or drag its tip. The second arm keeps
+  its length; the visible gap and signed mismatch explain why it has not closed.
+- Follow the source's five construction stages, choose the reflected vertex,
+  and connect the result to the same-side condition in I.7 and the inequality
+  in I.20.
+- Read the complete I.22 in nine Greek/Latin/English units, with language notes,
+  three reading questions and the four original printed pages. Heiberg's brackets
+  and the absent Latin translation of one bracketed explanation stay explicit.
+- Save the measured SVG, CSV, or an illustrated HTML reading containing its own
+  font and scans. The portrait plate makes the labels readable on phones.
+  Both the course and workshop work offline once the edition is ready.
+
+[Saved reading](examples/stoicheia-I22-reading.html) ·
+[Printable reading](examples/stoicheia-I22-reading.pdf) ·
+[Measurements](examples/stoicheia-I22-measurements.csv).
+These are actual browser exports. The linked future public workshop URL inside
+the saved reading becomes usable after deployment; this addition is local only.
+
 ## Run it
 
 Node.js 24 or later:
@@ -299,7 +332,8 @@ it is also retained in the full reading's print output.
 
 ## Accuracy and limitations
 
-- This is I.1–20, not the whole _Elements_. The construction tools, translations
+- The sequential course covers I.1–20, with a separate complete I.22 workshop.
+  This is not the whole _Elements_. The construction tools, translations
   and selected vocabulary are complete for that scope. There is no general Greek
   parser, pronunciation model or claim that every word is annotated.
 - The Greek follows a modern printed critical edition, not a surviving autograph

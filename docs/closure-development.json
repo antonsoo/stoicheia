@@ -1,0 +1,22 @@
+[
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "courseToWorkshop": true,
+    "styled": true,
+    "fontLoaded": true,
+    "impossibleGivens": true,
+    "printLifecycle": true,
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "courseToWorkshop": true,
+    "styled": true,
+    "fontLoaded": true,
+    "impossibleGivens": true,
+    "printLifecycle": true,
+    "errors": []
+  }
+]

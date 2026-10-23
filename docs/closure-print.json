@@ -1,0 +1,231 @@
+{
+  "method": "Poppler text extraction; NFC and whitespace normalization; complete paragraph inclusion",
+  "pdfSha256": "13a451f056717463def039c85e82b69ac69c68fd1be8e979720cc41953c95175",
+  "checks": [
+    {
+      "passage": 1,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "passage": 1,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "passage": 1,
+      "field": "en",
+      "present": true
+    },
+    {
+      "passage": 1,
+      "field": "note",
+      "present": true
+    },
+    {
+      "passage": 1,
+      "field": "reason",
+      "present": true
+    },
+    {
+      "passage": 2,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "passage": 2,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "passage": 2,
+      "field": "en",
+      "present": true
+    },
+    {
+      "passage": 2,
+      "field": "note",
+      "present": true
+    },
+    {
+      "passage": 2,
+      "field": "reason",
+      "present": true
+    },
+    {
+      "passage": 3,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "passage": 3,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "passage": 3,
+      "field": "en",
+      "present": true
+    },
+    {
+      "passage": 3,
+      "field": "note",
+      "present": true
+    },
+    {
+      "passage": 3,
+      "field": "reason",
+      "present": true
+    },
+    {
+      "passage": 4,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "passage": 4,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "passage": 4,
+      "field": "en",
+      "present": true
+    },
+    {
+      "passage": 4,
+      "field": "note",
+      "present": true
+    },
+    {
+      "passage": 4,
+      "field": "reason",
+      "present": true
+    },
+    {
+      "passage": 5,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "passage": 5,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "passage": 5,
+      "field": "en",
+      "present": true
+    },
+    {
+      "passage": 5,
+      "field": "note",
+      "present": true
+    },
+    {
+      "passage": 5,
+      "field": "reason",
+      "present": true
+    },
+    {
+      "passage": 6,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "passage": 6,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "passage": 6,
+      "field": "en",
+      "present": true
+    },
+    {
+      "passage": 6,
+      "field": "note",
+      "present": true
+    },
+    {
+      "passage": 6,
+      "field": "reason",
+      "present": true
+    },
+    {
+      "passage": 7,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "passage": 7,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "passage": 7,
+      "field": "en",
+      "present": true
+    },
+    {
+      "passage": 7,
+      "field": "note",
+      "present": true
+    },
+    {
+      "passage": 7,
+      "field": "reason",
+      "present": true
+    },
+    {
+      "passage": 8,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "passage": 8,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "passage": 8,
+      "field": "en",
+      "present": true
+    },
+    {
+      "passage": 8,
+      "field": "note",
+      "present": true
+    },
+    {
+      "passage": 8,
+      "field": "reason",
+      "present": true
+    },
+    {
+      "passage": 9,
+      "field": "grc",
+      "present": true
+    },
+    {
+      "passage": 9,
+      "field": "lat",
+      "present": true
+    },
+    {
+      "passage": 9,
+      "field": "en",
+      "present": true
+    },
+    {
+      "passage": 9,
+      "field": "note",
+      "present": true
+    },
+    {
+      "passage": 9,
+      "field": "reason",
+      "present": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "method": "70-digit Heron area, sorted side criterion and circle distance residuals",
+  "cases": 13490,
+  "outcomes": {
+    "crossing": 7547,
+    "internal-tangent": 462,
+    "contained": 3500,
+    "external-tangent": 231,
+    "separate": 1750
+  },
+  "maximum_absolute_error": "1.202732488887303338991262499386808372543768796162354783E-14",
+  "tolerance": "1e-12",
+  "limitation": "Numerical model verification, not formal axiomatic proof"
+}

@@ -1,0 +1,49 @@
+{
+  "previousWorker": "6658fab42817f460190faf33c37fea8d1b0db5b12ea2bae9940b68659b2daac5",
+  "currentWorker": "49045d1dd85cfcfa52a7c0284af0c65c65ba4468a34d4cf9ad0c20c14723f83d",
+  "scope": "Old course to two-page edition with new source held or failed; origin-disabled navigation after recovery",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "failedAndRecovered": false,
+      "heldRequests": 1,
+      "pendingStatus": "Saving this edition for offline reading…",
+      "offlineWorkshop": true,
+      "offlineReader": true,
+      "offlineScanSha256": "3134a0577c2f607bff31b7735bdc169c1efac08e6f42b75b6ead766dac579612"
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "failedAndRecovered": true,
+      "heldRequests": 1,
+      "pendingStatus": "Saving this edition for offline reading…",
+      "offlineWorkshop": true,
+      "offlineReader": true,
+      "offlineScanSha256": "3134a0577c2f607bff31b7735bdc169c1efac08e6f42b75b6ead766dac579612"
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "failedAndRecovered": false,
+      "heldRequests": 1,
+      "pendingStatus": "Saving this edition for offline reading…",
+      "offlineWorkshop": true,
+      "offlineReader": true,
+      "offlineScanSha256": "3134a0577c2f607bff31b7735bdc169c1efac08e6f42b75b6ead766dac579612"
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "failedAndRecovered": true,
+      "heldRequests": 1,
+      "pendingStatus": "Saving this edition for offline reading…",
+      "offlineWorkshop": true,
+      "offlineReader": true,
+      "offlineScanSha256": "3134a0577c2f607bff31b7735bdc169c1efac08e6f42b75b6ead766dac579612"
+    }
+  ],
+  "runtimeCommit": "cae12ed3fbc62d8ec9454332b6a2994e1af19f3e",
+  "buildManifest": "closure-build.json"
+}
