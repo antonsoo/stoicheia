@@ -23,6 +23,7 @@ export default defineConfig(async ({ command }) => {
     ...(await filesIn("public")),
     "index.html",
     "triangle.html",
+    "LICENSE",
     "vite.config.ts",
     "tsconfig.json",
     "package.json",

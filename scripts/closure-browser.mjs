@@ -291,6 +291,8 @@ try {
           });
         }
         const html = await readFile(files.html, "utf8");
+        assert.match(html, /SIL OPEN FONT LICENSE/);
+        assert.match(html, /Copyright \(c\) 2026 Anton Soloviev/);
         assert.equal((html.match(/data:image\/jpeg;base64,/g) || []).length, 4);
         const embeddedScans = [...html.matchAll(/data:image\/jpeg;base64,([A-Za-z0-9+/=]+)/g)];
         for (let i = 0; i < 4; i++)

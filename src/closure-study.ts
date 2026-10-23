@@ -1,3 +1,4 @@
+import codeLicense from "../LICENSE?raw";
 import css from "./closure.css?inline";
 import { closureConditions, closureDrawing, closureSummary } from "./closure-drawing";
 import { closurePassages } from "./content/closure";
@@ -98,13 +99,21 @@ const embedded = async (url: string, type: string) => {
 };
 
 export function closureSvg(state: ClosureState, narrow = false): string {
-  return closureDrawing(state, narrow).replace(/<title /, `<style>${css}</style><title `);
+  return closureDrawing(state, narrow).replace(
+    /<title /,
+    `<metadata>${escapeHtml(codeLicense)}</metadata><style>${css}</style><title `,
+  );
 }
 
 export async function closureStudy(state: ClosureState): Promise<string> {
   const sourcePages = [52, 53, 54, 55];
-  const [font, ...scans] = await Promise.all([
+  const [font, fontLicense, ...scans] = await Promise.all([
     embedded(`${import.meta.env.BASE_URL}fonts/NotoSerif-Regular.ttf`, "font/ttf"),
+    fetch(`${import.meta.env.BASE_URL}fonts/OFL.txt`).then((response) => {
+      if (!response.ok)
+        throw new Error("The bundled font notice could not be read. Please try again.");
+      return response.text();
+    }),
     ...sourcePages.map((page) =>
       embedded(
         `${import.meta.env.BASE_URL}sources/heiberg-${String(page).padStart(3, "0")}.jpg`,
@@ -113,7 +122,7 @@ export async function closureStudy(state: ClosureState): Promise<string> {
     ),
   ]);
   const trial = trialPoint(state);
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src data:; base-uri 'none'; form-action 'none'"><title>Euclid I.22 · Saved construction</title><style>@font-face{font-family:"Noto Serif";src:url(${font})}body{font-family:"Noto Serif",Georgia,serif;color:#193d60;background:#fbfcfe;margin:0;line-height:1.65}*{box-sizing:border-box}a{color:inherit}h1,h2,h3{font-weight:500}button,input{font:inherit}${css}</style></head><body class="closure-page cl-saved"><main>
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src data:; base-uri 'none'; form-action 'none'"><title>Euclid I.22 · Saved construction</title><style>@font-face{font-family:"Noto Serif";src:url(${font})}body{font-family:"Noto Serif",Georgia,serif;color:#193d60;background:#fbfcfe;margin:0;line-height:1.65}*{box-sizing:border-box}a{color:inherit}h1,h2,h3{font-weight:500}button,input{font:inherit}${css}.cl-licenses pre{white-space:pre-wrap;overflow-wrap:anywhere;font:0.8rem/1.6 ui-sans-serif,sans-serif}@media print{.cl-licenses{display:none}}</style></head><body class="closure-page cl-saved"><main>
   <header><p class="cl-kicker">STOICHEIA / SAVED EXPERIMENT / EUCLID I.22</p><h1>Three lengths. Can they close?</h1><p>Α = ${unitText(state.a)}, Β = ${unitText(state.b)}, Γ = ${unitText(state.c)}. Arbitrary drawing units. ${state.trial ? `Trial angle ${state.turn}°; ΗP = ${trial.needed.toFixed(4)}, signed mismatch ΗP − Γ = ${trial.residual.toFixed(4)}. Trial points P and Q are modern additions.` : `Construction step ${state.step + 1} of 5. Vertex chosen ${state.side > 0 ? "above" : "below"} the base.`}</p></header>
   <figure><div class="cl-wide-version">${closureDrawing(state)}</div><div class="cl-narrow-version">${closureDrawing(state, true)}</div><figcaption>The diagram retains the saved view. Its numbers describe a modern coordinate model, not measurements of an ancient instrument.</figcaption></figure>
   ${closureSummary(state)}${closureConditions(state)}
@@ -121,5 +130,5 @@ export async function closureStudy(state: ClosureState): Promise<string> {
   ${closurePassages.map((p, i) => `<article class="cl-saved-passage"><h3>${i + 1}. ${p.title}</h3><p lang="grc">${escapeHtml(p.grc)}</p><p lang="la">${escapeHtml(p.lat)}</p><p>${escapeHtml(p.en)}</p><p><strong>Language.</strong> ${escapeHtml(p.note)}</p><p><strong>Reason.</strong> ${escapeHtml(p.reason)}</p></article>`).join("")}
   <h2>Reading this edition</h2><p>Line breaks, critical apparatus and inline Latin references are omitted. Greek ϑ is normalized to θ; Greek point labels and Heiberg's square brackets are retained. The English translates the Greek, including its bracketed explanation. ΔΕ is a ray; the drawing shows a finite part. T, P and Q are modern labels. The coordinate method establishes intersection in the real plane; it is not a derivation from Euclid's five postulates.</p>
   <h2>The printed evidence</h2>${sourcePages.map((page, i) => `<figure class="cl-saved-scan"><figcaption>Heiberg 1883, printed page ${page} · ${page % 2 ? "Latin" : "Greek"}</figcaption><img src="${scans[i]}" alt="Complete printed page ${page}, including the I.22 passage and editorial notes"></figure>`).join("")}
-  <footer><p><a href="https://antonsoo.github.io/stoicheia/triangle.html${encodeClosure(state)}">Reopen these givens in the workshop</a> · <a href="https://archive.org/details/euclidisoperaomn01eucluoft/page/n66/mode/2up">Full source volume</a> · <a href="https://github.com/antonsoo/stoicheia">Code and limitations</a></p><p>This file contains its font, diagram, complete reading and four scans. Opening it makes no external requests. Print with your browser's print command.</p></footer></main></body></html>`;
+  <footer><p><a href="https://antonsoo.github.io/stoicheia/triangle.html${encodeClosure(state)}">Reopen these givens in the workshop</a> · <a href="https://archive.org/details/euclidisoperaomn01eucluoft/page/n66/mode/2up">Full source volume</a> · <a href="https://github.com/antonsoo/stoicheia">Code and limitations</a></p><p>This file contains its font, diagram, complete reading and four scans. Opening it makes no external requests. Print with your browser's print command.</p><details class="cl-licenses"><summary>Copyright and redistribution notices</summary><h3>Code, English and teaching notes</h3><pre>${escapeHtml(codeLicense)}</pre><h3>Bundled Noto Serif font</h3><pre>${escapeHtml(fontLicense)}</pre><p>The Greek, Latin and source page images are public domain. The MIT license imposes no new restrictions on them.</p></details></footer></main></body></html>`;
 }
