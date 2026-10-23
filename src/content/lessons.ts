@@ -3,6 +3,7 @@ import { exteriorLessons, exteriorReasons } from "./exterior";
 import { bisectionLessons, bisectionReasons } from "./halves";
 import { inequalityLessons, inequalityReasons } from "./inequalities";
 import { linearAngleLessons, linearAngleReasons } from "./linear-angles";
+import { nestedLessons, nestedReasons } from "./nested";
 import { perpendicularLessons, perpendicularReasons } from "./perpendiculars";
 import { triangleLessons, triangleReasons } from "./triangles";
 import { uniquenessLessons, uniquenessReasons } from "./uniqueness";
@@ -22,6 +23,7 @@ export const reasons: Record<string, Reason> = {
   ...linearAngleReasons,
   ...exteriorReasons,
   ...inequalityReasons,
+  ...nestedReasons,
   given: {
     title: "The task and its given objects",
     text: "A given object is part of the problem. It has not been constructed by this proof. A finite straight line here means a line segment.",
@@ -133,6 +135,7 @@ export const lessons: Record<PropositionId, Lesson> = {
   ...linearAngleLessons,
   ...exteriorLessons,
   ...inequalityLessons,
+  ...nestedLessons,
   1: {
     id: 1,
     numeral: "I.1",

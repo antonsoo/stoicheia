@@ -3,6 +3,7 @@ import { angleExercises } from "./angle-practice";
 import { inequalityExercises } from "./inequality-practice";
 import { laterExercises } from "./later-practice";
 import { lessons, type Passage } from "./lessons";
+import { nestedExercises } from "./nested-practice";
 
 export interface ReadingExercise {
   proposition: PropositionId;
@@ -231,6 +232,7 @@ export const readingExercises: ReadingExercise[] = [
   ...laterExercises,
   ...angleExercises,
   ...inequalityExercises,
+  ...nestedExercises,
 ];
 
 export function exercisePassage(exercise: ReadingExercise): Passage {

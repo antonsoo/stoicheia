@@ -209,6 +209,7 @@ export const reasonFoundations: Record<string, string[]> = {
   compareLinearPairs: ["cn1", "p4"],
   verticalRemainders: ["cn3"],
   exteriorPart: ["cn5"],
+  nestedExtend: ["p2"],
   inequalityExtend: ["p2"],
   inequalityCut: ["p1"],
   inequalityCopy: ["p1", "p3"],

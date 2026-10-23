@@ -16,7 +16,7 @@
   },
   "rendering": "pdftoppm -f 16 -l 65 -scale-to 1550 -jpeg -jpegopt quality=88 INPUT.pdf page; I.22 supplement: -f 66 -l 69, same image settings.",
   "transcription": {
-    "scope": "Full proposition statements and proofs I.1–20; the bracketed Greek-only corollary after I.15, with no supplied Latin; definitions 10, 15, 16, 20; all five postulates; the five common notions in the usual modern list (Heiberg 1, 2, 3, 7, 8). Critical apparatus and other text are not transcribed. Separate I.22 workshop: complete statement and proof, printed pp. 52–55; I.21 is not added to the course.",
+    "scope": "Full proposition statements and proofs I.1–21; the bracketed Greek-only corollary after I.15, with no supplied Latin; definitions 10, 15, 16, 20; all five postulates; the five common notions in the usual modern list (Heiberg 1, 2, 3, 7, 8). Critical apparatus and other text are not transcribed. Separate I.22 workshop: complete statement and proof, printed pp. 52–55.",
     "normalizations": [
       "Printed ϑ normalized to θ.",
       "Consistent Unicode Greek letters for all geometric labels, including letters that resemble Latin glyphs.",
@@ -28,7 +28,8 @@
       "Printed Latin angle and triangle symbols represented by Unicode ∠ and △; equations and inequalities use =, > and <.",
       "Greek editorial brackets in definitions 15 and common notion 8 retained; facing Latin omissions preserved.",
       "Editorial brackets in I.13 and the Greek-only I.15 corollary retained; the absence of facing Latin for the corollary is stated explicitly.",
-      "I.22 retains the bracketed Greek explanation, the absence of its Latin translation, and the changing order of circle labels. The Latin inline reference to I.20 is explained in the note."
+      "I.22 retains the bracketed Greek explanation, the absence of its Latin translation, and the changing order of circle labels. The Latin inline reference to I.20 is explained in the note.",
+      "I.21 is divided into ten teaching steps. The English bracket [on ΑΓ] identifies the intersection implied by the printed figure; Greek and Latin do not add these words."
     ],
     "english": "New reading translation. Explicit intersection descriptions and other explanatory expansions are teaching aids.",
     "comparison": "Hand transcription checked against bundled scans. The cropped right edge of printed p. 6 was cross-checked against the Greek quoted in Heath, The Thirteen Books of Euclid’s Elements (1925), pp. 187–188, via David R. Wilkins’s Trinity College Dublin transcription. No unreviewed OCR output is presented as source text.",

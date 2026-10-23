@@ -30,7 +30,7 @@ app.innerHTML = `
       <svg viewBox="0 0 72 56" aria-hidden="true"><circle cx="26" cy="30" r="22"/><circle cx="48" cy="30" r="22"/><path d="M26 30 37 10.947 48 30Z"/></svg>
       <span>Stoicheia<span class="brand-greek" lang="grc">ΣΤΟΙΧΕΙΑ</span></span>
     </a>
-    <div class="masthead-note">Geometry, in its own words.<span>Euclid I.1–20 · Greek / Latin / English</span></div>
+    <div class="masthead-note">Geometry, in its own words.<span>Euclid I.1–21 · Greek / Latin / English</span></div>
     <button type="button" class="quiet" id="about-sources">About the texts <span aria-hidden="true">↗</span></button>
   </header>
   <main>
@@ -82,9 +82,9 @@ app.innerHTML = `
         return `<tr><th scope="row"><button type="button" data-lesson="${id}">${lessons[id].numeral}</button></th><td>${dependencies.length ? dependencies.map((d) => `<button type="button" data-lesson="${d}">${lessons[d].numeral}</button>`).join(" ") : "Definitions, postulates and assumptions"}</td><td>${lessons[id].shortTitle}</td></tr>`;
       })
       .join("")}</tbody></table></details>
-    <details class="full-reading" id="full-reading"><summary><span>Read the complete passage</span><span>Greek · Latin · English</span></summary><div id="full-passage"></div><p class="print-credit">Stoicheia · Euclid, Elements I.1–20. Greek and Latin: J. L. Heiberg, Euclidis opera omnia, vol. I (Leipzig, 1883), pp. 2–51; public domain. Latin is Heiberg’s nineteenth-century translation. English reading and notes: Stoicheia, 2026, MIT. Source and edition notes: antonsoo.github.io/stoicheia/</p></details>
+    <details class="full-reading" id="full-reading"><summary><span>Read the complete passage</span><span>Greek · Latin · English</span></summary><div id="full-passage"></div><p class="print-credit">Stoicheia · Euclid, Elements I.1–21. Greek and Latin: J. L. Heiberg, Euclidis opera omnia, vol. I (Leipzig, 1883), pp. 2–53; public domain. Latin is Heiberg’s nineteenth-century translation. English reading and notes: Stoicheia, 2026, MIT. Source and edition notes: antonsoo.github.io/stoicheia/</p></details>
     <details class="wordbook"><summary><span>A small working vocabulary</span><span>Words you meet in these proofs</span></summary><div class="glossary-list">${glossary.map((entry) => `<button type="button" data-gloss="${entry.id}"><span lang="grc">${escapeHtml(entry.greek)}</span><span lang="la">${escapeHtml(entry.latin)}</span><small>${escapeHtml(entry.meaning)}</small></button>`).join("")}</div></details>
-    <section class="source-note" id="source-note"><div><p class="eyebrow">A printed source you can inspect</p><h2>One edition. Two languages.</h2><p>Greek text and Latin translation from J. L. Heiberg’s <cite>Euclidis opera omnia</cite>, volume I (1883), printed pages 2–51. The English and reading notes are new. Point labels stay Greek in all three languages.</p><button type="button" id="open-edition">Open the printed pages</button></div><div class="editorial-note"><h3>What changed in transcription</h3><p>Line breaks and inline reference marks are omitted. Greek ϑ is written θ; point labels use consistent Greek letters. Latin u/v spelling is retained. Square brackets in the definitions, common notions, I.1, I.4, I.8, I.13 and I.15 reproduce Heiberg’s editorial brackets. Angle and triangle symbols are written ∠ and △. The step divisions, geometry orientation, reasons and annotations are teaching aids. The usual five-common-notion numbering is used in the notes; Heiberg’s expanded list is identified where it differs.</p><p>The English sometimes names intersections implied by the Greek. It is a reading translation, not a critical edition. The language notes cover selected forms, not every word.</p><a href="${import.meta.env.BASE_URL}sources/manifest.json">Source and image provenance</a></div></section>
+    <section class="source-note" id="source-note"><div><p class="eyebrow">A printed source you can inspect</p><h2>One edition. Two languages.</h2><p>Greek text and Latin translation from J. L. Heiberg’s <cite>Euclidis opera omnia</cite>, volume I (1883), printed pages 2–53. The English and reading notes are new. Point labels stay Greek in all three languages.</p><button type="button" id="open-edition">Open the printed pages</button></div><div class="editorial-note"><h3>What changed in transcription</h3><p>Line breaks and inline reference marks are omitted. Greek ϑ is written θ; point labels use consistent Greek letters. Latin u/v spelling is retained. Square brackets in the definitions, common notions, I.1, I.4, I.8, I.13 and I.15 reproduce Heiberg’s editorial brackets. Angle and triangle symbols are written ∠ and △. The step divisions, geometry orientation, reasons and annotations are teaching aids. The usual five-common-notion numbering is used in the notes; Heiberg’s expanded list is identified where it differs.</p><p>The English sometimes names intersections implied by the Greek. It is a reading translation, not a critical edition. The language notes cover selected forms, not every word.</p><a href="${import.meta.env.BASE_URL}sources/manifest.json">Source and image provenance</a></div></section>
   </main>
   <footer class="footer"><p>Stoicheia <span lang="grc">/ στοιχεῖα</span> · elements</p><p>Made for slow reading. No account. No tracking.</p><span class="offline-status"><span id="offline-state" role="status">Preparing offline edition…</span><button type="button" id="reload-edition" hidden>Reload saved edition</button></span></footer>
   <dialog id="practice-dialog" class="practice-dialog" aria-labelledby="practice-title"><header><div><p class="eyebrow" id="practice-position"></p><h2 id="practice-title" tabindex="-1">Read the argument</h2></div><button type="button" class="dialog-close" data-close="practice-dialog" aria-label="Close reading practice">×</button></header><div class="practice-body"><p class="practice-intro">Read the highlighted wording in its original sentence. Try an interpretation, then compare the explanation.</p><div id="practice-source"></div><form id="practice-form"><fieldset id="practice-options"></fieldset><p id="practice-feedback" role="status" aria-live="polite"></p></form><div id="practice-translation" hidden></div><button type="button" id="practice-plate">Open this passage on the plate</button></div><footer class="practice-controls"><button type="button" id="practice-previous">← Previous reading</button><button type="button" id="practice-next">Next reading →</button></footer></dialog>
@@ -302,7 +302,7 @@ function goTo(proposition: PropositionId, result = false): void {
     step: result ? stepCounts[proposition] - 1 : 0,
     // An I.7 reflection is not a request for I.9's alternate circle crossing.
     variant: changedLesson ? 0 : state.variant,
-    motion: changedLesson ? 0 : state.motion,
+    motion: changedLesson ? (proposition === 21 ? 55 : 0) : state.motion,
     pair: changedLesson ? 0 : state.pair,
     ratio: changedLesson && (proposition === 18 || proposition === 19) ? 1.25 : state.ratio,
     casebook: changedLesson ? { ...state.casebook, open: false } : state.casebook,
@@ -312,7 +312,7 @@ function goTo(proposition: PropositionId, result = false): void {
 }
 
 function showSource(page: number): void {
-  sourcePage = Math.min(51, Math.max(2, page));
+  sourcePage = Math.min(53, Math.max(2, page));
   const greek = sourcePage % 2 === 0;
   element("#source-title").textContent = `Printed page ${sourcePage}`;
   element("#source-language").textContent = greek ? "Greek text" : "Latin translation";
@@ -320,7 +320,7 @@ function showSource(page: number): void {
   img.src = `${import.meta.env.BASE_URL}sources/heiberg-${String(sourcePage).padStart(3, "0")}.jpg`;
   img.alt = `${greek ? "Greek" : "Latin"} page ${sourcePage} of Euclidis opera omnia, volume I, 1883. The page includes printed text and critical notes.`;
   element<HTMLButtonElement>("#source-previous").disabled = sourcePage === 2;
-  element<HTMLButtonElement>("#source-next").disabled = sourcePage === 51;
+  element<HTMLButtonElement>("#source-next").disabled = sourcePage === 53;
   element(".scan-scroll").scrollTop = 0;
   const dialog = element<HTMLDialogElement>("#source-dialog");
   if (!dialog.open) dialog.showModal();
@@ -516,6 +516,7 @@ document.addEventListener("click", (event) => {
         ...defaults,
         proposition: state.proposition,
         step: state.step,
+        motion: state.proposition === 21 ? 55 : defaults.motion,
         ratio: state.proposition === 18 || state.proposition === 19 ? 1.25 : defaults.ratio,
       };
       renderLesson();
@@ -710,7 +711,7 @@ if (import.meta.env.PROD && "serviceWorker" in navigator) {
     : "Keep this tab open to read offline";
 }
 
-// Native select navigation keeps twenty propositions within reach on narrow screens.
+// Native select navigation keeps the propositions within reach on narrow screens.
 element<HTMLSelectElement>("#lesson-select").addEventListener("change", (event) => {
   const select = event.target as HTMLSelectElement;
   goTo(Number(select.value) as PropositionId);

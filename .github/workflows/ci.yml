@@ -21,6 +21,7 @@ jobs:
       - run: npm run verify:oracle
       - run: npm run verify:triangles
       - run: npm run verify:right-angles
+      - run: npm run verify:nested
       - run: npx playwright install --with-deps chromium firefox
       - name: Verify the development quickstart
         run: |
@@ -46,3 +47,4 @@ jobs:
             sleep 1
           done
           npm run test:browser
+          npm run test:nested -- http://127.0.0.1:4327/stoicheia/

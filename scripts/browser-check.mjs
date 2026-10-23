@@ -264,7 +264,7 @@ try {
         await page.locator("#open-edition").click();
         await page.locator("#source-previous").click();
         await page.locator("#source-previous").click();
-        for (let printedPage = 2; printedPage <= 51; printedPage++) {
+        for (let printedPage = 2; printedPage <= 53; printedPage++) {
           await page.waitForFunction(() => {
             const image = document.querySelector("#source-image");
             return image.complete && image.naturalWidth > 0;
@@ -273,7 +273,7 @@ try {
             await page.locator("#source-title").innerText(),
             `Printed page ${printedPage}`,
           );
-          if (printedPage < 51) await page.locator("#source-next").click();
+          if (printedPage < 53) await page.locator("#source-next").click();
         }
         await page.locator("#source-zoom").click();
         assert.equal(await page.locator("#source-zoom").getAttribute("aria-pressed"), "true");

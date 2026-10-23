@@ -82,8 +82,8 @@ export const angleGlossary: Gloss[] = [
     latin: "interior",
     transliteration: "entos",
     meaning: "inside; interior",
-    note: "τῶν ἐντὸς καὶ ἀπεναντίον γωνιῶν means ‘of the interior and opposite angles’. The two descriptions belong together: an interior angle adjacent to the exterior one is not among the two being compared.",
-    forms: ["ἐντὸς", "ἐντός", "interiore"],
+    note: "τῶν ἐντὸς καὶ ἀπεναντίον γωνιῶν means ‘of the interior and opposite angles’. The two descriptions belong together: an interior angle adjacent to the exterior one is not among the two being compared. In I.21, ἐντός / intus also places the meeting point strictly inside the original triangle.",
+    forms: ["ἐντὸς", "ἐντός", "interiore", "intus"],
   },
   {
     id: "opposite-position",

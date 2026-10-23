@@ -276,6 +276,9 @@ for (const [name, engine] of [
       await page.locator("#next").click();
       await page.locator('#current-passage [data-source="51"]').click();
       await page.waitForFunction(() => document.querySelector("#source-image").naturalWidth > 0);
+      assert.equal(await page.locator("#source-next").isDisabled(), false);
+      await page.locator("#source-next").click();
+      await page.locator("#source-next").click();
       assert.equal(await page.locator("#source-next").isDisabled(), true);
       await audit(page, "Last new source page", result);
       await page.keyboard.press("Escape");

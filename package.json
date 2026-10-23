@@ -2,7 +2,7 @@
   "name": "@antonsoloviev/stoicheia",
   "version": "0.1.0",
   "private": true,
-  "description": "Read Euclid I.1–20 and investigate I.22 in Greek, Latin and English with interactive constructions.",
+  "description": "Read Euclid I.1\u201321 and investigate I.22 in Greek, Latin and English with interactive constructions.",
   "type": "module",
   "author": "Anton Soloviev <anton@praviel.com>",
   "license": "MIT",
@@ -43,7 +43,9 @@
     "verify:closure": "node --import tsx scripts/closure-cases.ts | python3 scripts/closure-oracle.py",
     "test:closure": "node scripts/closure-browser.mjs",
     "test:closure-upgrade": "node scripts/closure-upgrade.mjs",
-    "verify:closure-print": "node --import tsx scripts/closure-print.ts"
+    "verify:closure-print": "node --import tsx scripts/closure-print.ts",
+    "verify:nested": "node --import tsx scripts/nested-cases.ts | python3 scripts/nested-oracle.py",
+    "test:nested": "node scripts/nested-browser.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

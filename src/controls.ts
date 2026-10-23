@@ -12,6 +12,8 @@ const range = (
   `<label class="range-label" for="${id}">${title}<output id="${id}-output" for="${id}">${value}${suffix}</output></label><input id="${id}" type="range" min="${min}" max="${max}" step="${step}" value="${value}" />`;
 
 export function explorationControls(state: ReaderState): string {
+  if (state.proposition === 21)
+    return `${range("take", "Ε along ΑΓ", 10, 90, Math.round(state.take * 100), "%")}${range("motion", "Δ along ΒΕ", 10, 90, state.motion, "%")}<p>First choose Ε on the outer side, then move Δ along the interior line from Β. Both points stay away from endpoints, so the two auxiliary triangles remain genuine triangles.</p>`;
   if (state.proposition === 17 || state.proposition === 20) {
     const choices =
       state.proposition === 17
