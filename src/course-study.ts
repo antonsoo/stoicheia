@@ -19,7 +19,7 @@ export async function illustratedCourseStudy(
       studyDataUrl(`sources/heiberg-${String(p).padStart(3, "0")}.jpg`, "image/jpeg"),
     ),
   ]);
-  const style = `<style>@font-face{font-family:"Noto Serif";src:url(${font})}body{font-family:"Noto Serif",Georgia,serif}.note,small,footer{font-family:system-ui,"Noto Serif",serif}.source-appendix{margin-top:3rem}.source-page{margin:2rem 0;break-inside:avoid}.source-page img{display:block;width:100%;height:auto;max-height:1100px;object-fit:contain}.source-page figcaption{font:14px/1.5 system-ui,sans-serif;margin-bottom:1rem}.source-identity{overflow-wrap:anywhere;font-size:11px}.study-notices pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.6 monospace}@page{margin:12mm}@media print{body{padding:0}.source-page{break-before:page;margin:0}.source-page img{max-height:230mm}.study-notices{display:none}h2{break-after:avoid}}</style>`;
+  const style = `<style>@font-face{font-family:"Noto Serif";src:url(${font})}body{font-family:"Noto Serif",Georgia,serif}.note,small,footer{font-family:system-ui,"Noto Serif",serif}.source-appendix{margin-top:3rem}.source-page{margin:2rem 0;break-inside:avoid}.source-page img{display:block;width:100%;height:auto;max-height:1100px;object-fit:contain}.source-page figcaption{font:14px/1.5 system-ui,sans-serif;margin-bottom:1rem}.source-identity{overflow-wrap:anywhere;font-size:11px}.study-notices pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.6 monospace}@page{margin:12mm}@media print{body{padding:0}.study-statement{break-inside:avoid}.source-page{break-before:page;margin:0}.source-page img{max-height:230mm}.study-notices{display:none}h2{break-after:avoid}}</style>`;
   const sources = `<section class="source-appendix"><h2>The printed evidence</h2><p>Source pages from Heiberg’s 1883 edition, including the passages and foundations used in this saved reading. Every image and the bundled font were checked against this edition before saving. The apparatus is available for inspection; it is not fully transcribed. Where the original scan is cropped, the page caption identifies that limit.</p>${pages
     .map((p, i) => {
       const file = `sources/heiberg-${String(p).padStart(3, "0")}.jpg`,
@@ -34,5 +34,6 @@ export async function illustratedCourseStudy(
       "style-src 'unsafe-inline'; img-src data:; font-src data:;",
     )
     .replace("</head>", `${style}</head>`)
+    .replace("<section><h2>The proposition", '<section class="study-statement"><h2>The proposition')
     .replace("</footer>", `${notices}</footer>${sources}`);
 }
