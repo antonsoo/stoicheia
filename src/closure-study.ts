@@ -101,7 +101,7 @@ const embedded = async (url: string, type: string) => {
 export function closureSvg(state: ClosureState, narrow = false): string {
   return closureDrawing(state, narrow).replace(
     /<title /,
-    `<metadata>${escapeHtml(codeLicense)}</metadata><style>${css}</style><title `,
+    `<metadata>${escapeHtml(codeLicense)}</metadata><style>${escapeHtml(css)}</style><title `,
   );
 }
 

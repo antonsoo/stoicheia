@@ -333,6 +333,13 @@ try {
         standalone.on("request", (r) => {
           if (/^https?:/.test(r.url())) requests.push(r.url());
         });
+        await standalone.goto(pathToFileURL(files.svg).href);
+        assert.equal(await standalone.locator("parsererror").count(), 0);
+        assert.equal(await standalone.locator("svg").getAttribute("data-kind"), "crossing");
+        assert.ok((await standalone.locator("svg").boundingBox()).height > 100);
+        assert.ok((await standalone.locator("circle").count()) >= 2);
+        assert.match(await standalone.locator("metadata").textContent(), /MIT License/);
+        result.offline.push("downloaded SVG opens as XML with rendered geometry");
         await standalone.goto(pathToFileURL(files.html).href);
         await standalone.evaluate(() => document.fonts.ready);
         assert.equal(await standalone.locator(".cl-saved-passage").count(), 9);
