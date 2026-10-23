@@ -20,7 +20,8 @@ export type PropositionId =
   | 17
   | 18
   | 19
-  | 20;
+  | 20
+  | 21;
 
 export interface ReaderState {
   proposition: PropositionId;
@@ -60,9 +61,10 @@ export const stepCounts: Record<PropositionId, number> = {
   18: 7,
   19: 6,
   20: 9,
+  21: 10,
 };
 export const propositionIds = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
 ] as const;
 export const defaults: ReaderState = {
   proposition: 1,
@@ -92,7 +94,7 @@ export function decodeState(hash: string): ReaderState {
   const params = new URLSearchParams(hash.replace(/^#/, ""));
   const p = params.get("p");
   const proposition: PropositionId =
-    p && /^(?:[1-9]|1[0-9]|20)$/.test(p) ? (Number(p) as PropositionId) : 1;
+    p && /^(?:[1-9]|1[0-9]|2[01])$/.test(p) ? (Number(p) as PropositionId) : 1;
   const angle = Math.round(
     bounded(params.get("a"), defaults.angle, 10, proposition === 13 ? 90 : 75),
   );
@@ -111,7 +113,14 @@ export function decodeState(hash: string): ReaderState {
       ) / 100,
     angle,
     side: params.get("side") === "-1" ? -1 : 1,
-    motion: Math.round(bounded(params.get("m"), defaults.motion, 0, 100)),
+    motion: Math.round(
+      bounded(
+        params.get("m"),
+        proposition === 21 ? 55 : defaults.motion,
+        proposition === 21 ? 10 : 0,
+        proposition === 21 ? 90 : 100,
+      ),
+    ),
     third: Math.round(bounded(params.get("t"), defaults.third, 0.3, 1.8) * 100) / 100,
     probe: Math.round(
       bounded(
