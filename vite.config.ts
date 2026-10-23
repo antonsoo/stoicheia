@@ -35,10 +35,34 @@ export default defineConfig(async ({ command }) => {
     inputHash.update(await readFile(file));
   }
   const edition = command === "build" ? inputHash.digest("hex") : "development";
+  const sourceManifest = JSON.parse(await readFile("public/sources/manifest.json", "utf8")) as {
+    pages: { file: string; bytes: number; sha256: string }[];
+  };
+  const studyFiles: Record<string, { bytes: number; sha256: string }> = {};
+  for (const page of sourceManifest.pages) {
+    const file = `sources/${page.file}`;
+    const bytes = await readFile(`public/${file}`);
+    const sha256 = createHash("sha256").update(bytes).digest("hex");
+    if (bytes.length !== page.bytes || sha256 !== page.sha256)
+      throw new Error(
+        `Source manifest does not match ${file}. Review the source identity before building.`,
+      );
+    studyFiles[file] = { bytes: bytes.length, sha256 };
+  }
+  for (const file of ["fonts/NotoSerif-Regular.ttf", "fonts/OFL.txt"]) {
+    const bytes = await readFile(`public/${file}`);
+    studyFiles[file] = {
+      bytes: bytes.length,
+      sha256: createHash("sha256").update(bytes).digest("hex"),
+    };
+  }
   return {
     base,
     build: { rollupOptions: { input: { reader: "index.html", triangle: "triangle.html" } } },
-    define: { __STOICHEIA_EDITION__: JSON.stringify(edition) },
+    define: {
+      __STOICHEIA_EDITION__: JSON.stringify(edition),
+      __STOICHEIA_STUDY_FILES__: JSON.stringify(studyFiles),
+    },
     plugins: [
       {
         name: "offline-book",

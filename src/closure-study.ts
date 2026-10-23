@@ -10,6 +10,7 @@ import {
   unitText,
 } from "./core/triangle-closure";
 import { escapeHtml } from "./html";
+import { studyAssetIdentity, studyDataUrl, studyText } from "./study-assets";
 
 export function closureCsv(state: ClosureState): string {
   const m = closureModel(state),
@@ -85,19 +86,6 @@ export function closureCsv(state: ClosureState): string {
   return `${rows.map((row) => row.map((s) => `"${s.replaceAll('"', '""')}"`).join(",")).join("\r\n")}\r\n`;
 }
 
-const embedded = async (url: string, type: string) => {
-  const response = await fetch(url);
-  if (!response.ok)
-    throw new Error(
-      "A bundled source could not be read. Try again once the edition is saved offline.",
-    );
-  const bytes = new Uint8Array(await response.arrayBuffer());
-  let raw = "";
-  for (let i = 0; i < bytes.length; i += 8192)
-    raw += String.fromCharCode(...bytes.subarray(i, i + 8192));
-  return `data:${type};base64,${btoa(raw)}`;
-};
-
 export function closureSvg(state: ClosureState, narrow = false): string {
   return closureDrawing(state, narrow).replace(
     /<title /,
@@ -108,17 +96,10 @@ export function closureSvg(state: ClosureState, narrow = false): string {
 export async function closureStudy(state: ClosureState): Promise<string> {
   const sourcePages = [52, 53, 54, 55];
   const [font, fontLicense, ...scans] = await Promise.all([
-    embedded(`${import.meta.env.BASE_URL}fonts/NotoSerif-Regular.ttf`, "font/ttf"),
-    fetch(`${import.meta.env.BASE_URL}fonts/OFL.txt`).then((response) => {
-      if (!response.ok)
-        throw new Error("The bundled font notice could not be read. Please try again.");
-      return response.text();
-    }),
+    studyDataUrl("fonts/NotoSerif-Regular.ttf", "font/ttf"),
+    studyText("fonts/OFL.txt"),
     ...sourcePages.map((page) =>
-      embedded(
-        `${import.meta.env.BASE_URL}sources/heiberg-${String(page).padStart(3, "0")}.jpg`,
-        "image/jpeg",
-      ),
+      studyDataUrl(`sources/heiberg-${String(page).padStart(3, "0")}.jpg`, "image/jpeg"),
     ),
   ]);
   const trial = trialPoint(state);
@@ -129,6 +110,6 @@ export async function closureStudy(state: ClosureState): Promise<string> {
   <h2>The whole passage</h2><p>Greek and Latin: J. L. Heiberg, <cite>Euclidis opera omnia</cite>, vol. I (1883), pp. 52–55, public domain. Latin is Heiberg's nineteenth-century translation. English and teaching notes: Stoicheia, 2026, MIT. The original proof assumes all three strict inequalities; failed experimental givens do not alter the printed text.</p>
   ${closurePassages.map((p, i) => `<article class="cl-saved-passage"><h3>${i + 1}. ${p.title}</h3><p lang="grc">${escapeHtml(p.grc)}</p><p lang="la">${escapeHtml(p.lat)}</p><p>${escapeHtml(p.en)}</p><p><strong>Language.</strong> ${escapeHtml(p.note)}</p><p><strong>Reason.</strong> ${escapeHtml(p.reason)}</p></article>`).join("")}
   <h2>Reading this edition</h2><p>Line breaks, critical apparatus and inline Latin references are omitted. Greek ϑ is normalized to θ; Greek point labels and Heiberg's square brackets are retained. The English translates the Greek, including its bracketed explanation. ΔΕ is a ray; the drawing shows a finite part. T, P and Q are modern labels. The coordinate method establishes intersection in the real plane; it is not a derivation from Euclid's five postulates.</p>
-  <h2>The printed evidence</h2>${sourcePages.map((page, i) => `<figure class="cl-saved-scan"><figcaption>Heiberg 1883, printed page ${page} · ${page % 2 ? "Latin" : "Greek"}</figcaption><img src="${scans[i]}" alt="Complete printed page ${page}, including the I.22 passage and editorial notes"></figure>`).join("")}
+  <h2>The printed evidence</h2>${sourcePages.map((page, i) => `<figure class="cl-saved-scan"><figcaption>Heiberg 1883, printed page ${page} · ${page % 2 ? "Latin" : "Greek"}</figcaption><img data-source-page="${page}" data-source-sha256="${studyAssetIdentity(`sources/heiberg-${String(page).padStart(3, "0")}.jpg`).sha256}" src="${scans[i]}" alt="Complete printed page ${page}, including the I.22 passage and editorial notes"></figure>`).join("")}
   <footer><p><a href="https://antonsoo.github.io/stoicheia/triangle.html${encodeClosure(state)}">Reopen these givens in the workshop</a> · <a href="https://archive.org/details/euclidisoperaomn01eucluoft/page/n66/mode/2up">Full source volume</a> · <a href="https://github.com/antonsoo/stoicheia">Code and limitations</a></p><p>This file contains its font, diagram, complete reading and four scans. Opening it makes no external requests. Print with your browser's print command.</p><details class="cl-licenses"><summary>Copyright and redistribution notices</summary><h3>Code, English and teaching notes</h3><pre>${escapeHtml(codeLicense)}</pre><h3>Bundled Noto Serif font</h3><pre>${escapeHtml(fontLicense)}</pre><p>The Greek, Latin and source page images are public domain. The MIT license imposes no new restrictions on them.</p></details></footer></main></body></html>`;
 }

@@ -45,7 +45,8 @@
     "test:closure-upgrade": "node scripts/closure-upgrade.mjs",
     "verify:closure-print": "node --import tsx scripts/closure-print.ts",
     "verify:nested": "node --import tsx scripts/nested-cases.ts | python3 scripts/nested-oracle.py",
-    "test:nested": "node scripts/nested-browser.mjs"
+    "test:nested": "node scripts/nested-browser.mjs",
+    "test:illustrated": "node scripts/illustrated-browser.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

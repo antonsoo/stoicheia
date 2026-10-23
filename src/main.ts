@@ -8,8 +8,9 @@ import { explorationControls, parameterControls } from "./controls";
 import { makeScene } from "./core/scene";
 import type { PropositionId } from "./core/state";
 import { decodeState, defaults, encodeState, propositionIds, stepCounts } from "./core/state";
+import { illustratedCourseStudy } from "./course-study";
 import { prepareOffline } from "./offline";
-import { annotated, comparisonTable, drawScene, escapeHtml, studySheet } from "./render";
+import { annotated, comparisonTable, drawScene, escapeHtml } from "./render";
 
 function element<T extends Element = HTMLElement>(selector: string): T {
   const node = document.querySelector<T>(selector);
@@ -55,7 +56,7 @@ app.innerHTML = `
         <p id="hypothesis-warning" class="warning" role="status" hidden></p>
         <div class="plate-legend"><span><i class="legend-given"></i>given / established</span><span><i class="legend-active"></i>current operation</span></div>
         <details class="parameters" id="parameters"><summary>Change the givens <span>the argument should survive</span></summary><div id="parameter-controls"></div></details>
-        <div class="plate-actions"><button type="button" id="save-diagram">Save diagram</button><button type="button" id="save-sheet">Save study sheet</button><button type="button" id="share">Share this step</button></div>
+        <div class="plate-actions"><button type="button" id="save-diagram">Save diagram</button><button type="button" id="save-sheet">Save illustrated study</button><button type="button" id="share">Share this step</button></div><p id="save-feedback" class="export-note" role="status">The saved study includes the full reading, its printed source pages and a font for Greek.</p>
       </div>
       <article class="reader" aria-labelledby="step-title">
         <div class="reader-top"><span class="eyebrow" id="reading-label">Read the command</span><span class="vocabulary-hint">Underlined words open vocabulary</span></div>
@@ -395,6 +396,28 @@ function download(contents: string, type: string, filename: string): void {
   }, 4000);
 }
 
+async function saveIllustratedStudy(): Promise<void> {
+  const button = element<HTMLButtonElement>("#save-sheet");
+  if (button.disabled) return;
+  const lesson = lessons[state.proposition],
+    scene = makeScene(state),
+    step = state.step;
+  button.disabled = true;
+  element("#save-feedback").textContent =
+    `Preparing ${lesson.numeral}: checking the font and printed pages…`;
+  try {
+    const contents = await illustratedCourseStudy(lesson, scene, step);
+    download(contents, "text/html;charset=utf-8", `stoicheia-I${lesson.id}-study.html`);
+    element("#save-feedback").textContent =
+      `Saved ${lesson.numeral} with its full reading, verified source images, font and notices.`;
+  } catch (error) {
+    element("#save-feedback").textContent =
+      error instanceof Error ? error.message : "The study could not be saved. Please try again.";
+  } finally {
+    button.disabled = false;
+  }
+}
+
 document.addEventListener("click", (event) => {
   const button = (event.target as Element).closest<HTMLButtonElement>("button");
   if (!button) return;
@@ -552,11 +575,7 @@ document.addEventListener("click", (event) => {
       );
       break;
     case "save-sheet":
-      download(
-        studySheet(lessons[state.proposition], makeScene(state), state.step),
-        "text/html;charset=utf-8",
-        `stoicheia-I${state.proposition}-study.html`,
-      );
+      void saveIllustratedStudy();
       break;
     case "share": {
       writeState();

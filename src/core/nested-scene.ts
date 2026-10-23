@@ -95,7 +95,7 @@ export function nestedScene(state: ReaderState): Scene {
     );
   scene.notice = {
     title: "Δ stays strictly inside ΑΒΓ",
-    text: `Ε is ${Math.round(state.take * 100)}% along ΑΓ and Δ is ${Math.max(10, Math.min(90, state.motion))}% along ΒΕ. These two position controls cover interior points while retaining the proof's hypotheses. The intermediate route Β–Ε–Γ explains both inequalities. Drawing units and degree readings are modern illustrations, not premises of the proof.`,
+    text: `Ε is ${Math.round(state.take * 100)}% along ΑΓ and Δ is ${Math.max(10, Math.min(90, state.motion))}% along ΒΕ. These two position controls sample interior points while retaining the proof's hypotheses. The intermediate route Β–Ε–Γ explains both inequalities. Drawing units and degree readings are modern illustrations, not premises of the proof.`,
   };
   return scene;
 }
