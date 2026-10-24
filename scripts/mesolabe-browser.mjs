@@ -8,10 +8,16 @@ import AxeBuilder from "@axe-core/playwright";
 import { chromium, firefox } from "playwright";
 
 const out = path.resolve(process.argv[2] ?? "/tmp/stoicheia-mesolabe");
+const hostedBase = process.argv[3];
+if (hostedBase)
+  assert.match(hostedBase, /^https:\/\/.+\/$/, "Hosted base must be HTTPS with a trailing slash");
 await mkdir(out, { recursive: true });
 const report = {
-  scope:
-    "Local production build; source, browser and native-file evidence. No public deployment or physical assembly claim.",
+  checkedAt: new Date().toISOString(),
+  scope: hostedBase
+    ? "Public production site; browser and native-file evidence. Hosted offline checks disable browser networking. No physical assembly claim."
+    : "Local production build; source, browser and native-file evidence. No public deployment or physical assembly claim.",
+  base: hostedBase ?? null,
   configurations: [],
 };
 const hash = (b) => createHash("sha256").update(b).digest("hex");
@@ -102,6 +108,7 @@ for (const [browserName, browserType] of [
       const folder = path.join(out, `${browserName}-${width}`);
       await mkdir(folder, { recursive: true });
       const server = await serve();
+      const base = hostedBase ?? server.base;
       const context = await browser.newContext({
         viewport: { width, height: 1000 },
         acceptDownloads: true,
@@ -118,11 +125,10 @@ for (const [browserName, browserType] of [
         }),
       );
       page.on("request", (req) => {
-        if (/^https?:/.test(req.url()) && !req.url().startsWith(server.base))
-          external.push(req.url());
+        if (/^https?:/.test(req.url()) && !req.url().startsWith(base)) external.push(req.url());
       });
       try {
-        await page.goto(`${server.base}index.html`);
+        await page.goto(`${base}index.html`);
         await page.getByRole("link", { name: /Twice the stone/ }).click();
         await page.locator("#ml-machine svg").waitFor();
         await page
@@ -286,12 +292,13 @@ for (const [browserName, browserType] of [
         );
         csp.push(...(await page.evaluate(() => globalThis.__csp ?? [])));
 
-        // The server destroys all origin sockets; the browser's online flag stays true.
-        // This demonstrates actual cache navigation without network fallback.
-        server.offline();
+        // Local review removes the origin itself. Public hosting is checked with
+        // browser networking disabled; the report keeps those claims distinct.
+        if (hostedBase) await context.setOffline(true);
+        else server.offline();
         await page.reload();
         await page.locator("#ml-machine svg").waitFor();
-        assert.equal(await page.evaluate(() => navigator.onLine), true);
+        assert.equal(await page.evaluate(() => navigator.onLine), !hostedBase);
         await page
           .locator("#ml-offline")
           .filter({ hasText: /Edition ready offline/ })
@@ -310,7 +317,7 @@ for (const [browserName, browserType] of [
           "gnomon.html",
           "mesolabe.html",
         ]) {
-          await page.goto(server.base + room);
+          await page.goto(base + room);
           await page.locator("main").waitFor();
           rooms.push(room);
         }
@@ -372,7 +379,7 @@ for (const [browserName, browserType] of [
         assert.deepEqual(requests, []);
         assert.deepEqual(fileErrors, []);
         await native.close();
-        await page.goto(`${server.base}mesolabe.html#r=NaN&q=0.4&m=unknown&p=7`);
+        await page.goto(`${base}mesolabe.html#r=NaN&q=0.4&m=unknown&p=7`);
         assert.match(await page.locator("#ml-notice").textContent(), /reset/);
         assert.equal(await page.locator("#ml-passage").inputValue(), "7");
         const item = {
@@ -398,7 +405,9 @@ for (const [browserName, browserType] of [
           },
           nativeFile: { images: 12, externalRequests: 0, csvMatches: true, paperMatches: true },
           offlineRooms: rooms,
-          offlineMethod: "Origin server destroys all sockets; navigator.onLine remains true",
+          offlineMethod: hostedBase
+            ? "Browser networking disabled; navigator.onLine is false"
+            : "Origin server destroys all sockets; navigator.onLine remains true",
           pageErrors: errors,
           cspViolations: csp,
           externalRequests: external,

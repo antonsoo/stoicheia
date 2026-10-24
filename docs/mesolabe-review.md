@@ -4,11 +4,7 @@ Reviewed 2026-10-24. This work extends the existing Stoicheia course with
 **Twice the stone**, an operating three-plate mesolabe and a reading of the
 construction transmitted under Eratosthenes' name by Eutocius.
 
-**Publication boundary:** this is a locally built and reviewed fifth room.
-The changes have not been pushed, deployed or released. Existing hosted
-four-room reviews describe their own earlier editions. The new planned URL
-is `/stoicheia/mesolabe.html`; the complete build command is `npm run build`
-and the output directory is `dist/`.
+**Publication boundary:** the fifth room is now [publicly hosted](https://antonsoo.github.io/stoicheia/mesolabe.html). Source commit `23f66fe` was pushed and the reviewed build was published in Pages commit `ed58a0c`, retaining earlier hashed assets. All **105 public files** match the local review byte-for-byte, including `sw.js`; [file identities](mesolabe-hosted-files.json). Existing four-room reviews describe their earlier editions. No package registry release was made.
 
 ## What a learner can do
 
@@ -201,3 +197,13 @@ browser and mathematical checks.
 
 Suggested repository description: Read Euclid and ancient geometric devices in Greek, Latin and English with working proofs.
 Topics: `euclid`, `geometry`, `ancient-greek`, `latin`, `history-of-mathematics`, `education`, `interactive-learning`.
+
+## Public browser review
+
+[Hosted receipt](mesolabe-hosted-browser.json): Chromium and Firefox at 1440 and 375 pixels ran the same pointer, keyboard, five-stage proof, twelve-page source, eight-passage reading, questions, shared-state and native-download workflows as the local production review. The saved HTML opened from disk with all source pages and its font; embedded CSV and paper files matched. All five rooms reloaded and navigated with browser networking disabled. This hosted check is separate from the local review that actually destroys origin sockets while the browser still reports itself online. No page errors, CSP violations, external subresource requests or automated accessibility violations were observed.
+
+Repeat against the deployed site:
+
+```sh
+node scripts/mesolabe-browser.mjs /tmp/stoicheia-mesolabe-hosted https://antonsoo.github.io/stoicheia/
+```
