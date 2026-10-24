@@ -168,3 +168,39 @@ test("hints are next-step suggestions and finish every layout without inserting 
     assert.equal(deskHint(replayDesk(session)).action, null);
   }
 });
+
+test("hints continue the learner's C-anchor route before the initial join exists", () => {
+  for (const given of deskGivens) {
+    const session = freshDesk(given.id);
+    session.actions.push({ kind: "circle", center: "A", through: "C" });
+    const first = deskHint(replayDesk(session));
+    assert.deepEqual(first.action, { kind: "line", a: "A", b: "C" });
+    for (let step = 0; step < 12; step++) {
+      const hint = deskHint(replayDesk(session));
+      if (!hint.action) break;
+      assert.notDeepEqual(hint.action, { kind: "circle", center: "A", through: "B" });
+      session.actions.push(hint.action);
+    }
+    assert.equal(deskProof(replayDesk(session))?.anchor, "C");
+  }
+});
+
+test("hints follow progress on the second equilateral vertex when both were kept", () => {
+  const session: DeskSession = {
+    ...freshDesk(),
+    actions: [
+      { kind: "circle", center: "A", through: "B" },
+      { kind: "circle", center: "B", through: "A" },
+      { kind: "meet", first: "c1", second: "c2", branch: 0 },
+      { kind: "meet", first: "c1", second: "c2", branch: 1 },
+      { kind: "line", a: "P2", b: "B" },
+    ],
+  };
+  for (let step = 0; step < 12; step++) {
+    const hint = deskHint(replayDesk(session));
+    if (!hint.action) break;
+    assert.notDeepEqual(hint.action, { kind: "line", a: "P1", b: "B" });
+    session.actions.push(hint.action);
+  }
+  assert.equal(deskProof(replayDesk(session))?.d, "P2");
+});

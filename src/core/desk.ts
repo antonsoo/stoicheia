@@ -269,74 +269,140 @@ export interface DeskHint {
   text: string;
   action: DeskAction | null;
 }
+interface TransferRoute {
+  anchor: string;
+  other: string;
+  ca: DeskCurve | undefined;
+  cb: DeskCurve | undefined;
+  base: DeskCurve | undefined;
+  d: DeskPoint | undefined;
+  db: DeskCurve | undefined;
+  reference: DeskCurve | undefined;
+  g: DeskPoint | undefined;
+  da: DeskCurve | undefined;
+  whole: DeskCurve | undefined;
+  l: DeskPoint | undefined;
+  result: DeskCurve | undefined;
+  score: number;
+}
+
+/** Follow the most developed valid route, including the learner's choice of vertex. */
+function hintRoute(scene: DeskScene): TransferRoute {
+  const routes: TransferRoute[] = [];
+  for (const [anchor, other] of [
+    ["B", "C"],
+    ["C", "B"],
+  ] as const) {
+    const ca = circleWith(scene, "A", anchor),
+      cb = circleWith(scene, anchor, "A");
+    const base = lineWith(scene, "A", anchor),
+      reference = circleWith(scene, anchor, other);
+    const vertices: (DeskPoint | undefined)[] =
+      ca && cb ? scene.points.filter((p) => onCurve(p, ca.id) && onCurve(p, cb.id)) : [];
+    if (!vertices.length) vertices.push(undefined);
+    for (const d of vertices) {
+      const db = d && lineWith(scene, d.id, anchor),
+        da = d && lineWith(scene, d.id, "A");
+      const g =
+        d &&
+        db &&
+        reference &&
+        scene.points.find(
+          (p) => onCurve(p, db.id) && onCurve(p, reference.id) && beyond(scene, d.id, anchor, p),
+        );
+      const whole = d && g && circleWith(scene, d.id, g.id);
+      const l =
+        d &&
+        da &&
+        whole &&
+        scene.points.find(
+          (p) => onCurve(p, da.id) && onCurve(p, whole.id) && beyond(scene, d.id, "A", p),
+        );
+      const result = l && lineWith(scene, "A", l.id);
+      const score = [base, ca, cb, d, db, reference, g, da, whole, l, result].filter(
+        Boolean,
+      ).length;
+      routes.push({
+        anchor,
+        other,
+        ca,
+        cb,
+        base,
+        reference,
+        d,
+        db,
+        da,
+        g,
+        whole,
+        l,
+        result,
+        score,
+      });
+    }
+  }
+  // Stable ties retain B, then the earliest kept vertex. No hidden operations
+  // are inserted merely because another route is shorter or resembles a figure.
+  routes.sort((a, b) => b.score - a.score);
+  const best = routes[0];
+  if (!best) throw new Error("No transfer route is available.");
+  return best;
+}
 export function deskHint(scene: DeskScene): DeskHint {
   if (deskProof(scene))
     return {
       text: "Your equal-remainder chain is complete. Inspect the proof below, then try the reflected triangle or a different layout.",
       action: null,
     };
-  if (!lineWith(scene, "A", "B"))
+  const { anchor, other, ca, cb, base, d, db, reference, g, da, whole, l } = hintRoute(scene);
+  if (!base)
     return {
-      text: "Join A to B and continue the straight line. The given BC alone does not reach A.",
-      action: { kind: "line", a: "A", b: "B" },
+      text: `Join A to ${anchor} and continue the straight line. The given BC alone does not reach A.`,
+      action: { kind: "line", a: "A", b: anchor },
     };
-  const ca = circleWith(scene, "A", "B");
   if (!ca)
     return {
-      text: "Start I.1 on AB: draw a circle centred at A through B.",
-      action: { kind: "circle", center: "A", through: "B" },
+      text: `Start I.1 on A–${anchor}: draw a circle centred at A through ${anchor}.`,
+      action: { kind: "circle", center: "A", through: anchor },
     };
-  const cb = circleWith(scene, "B", "A");
   if (!cb)
     return {
-      text: "Draw the companion circle centred at B through A. Their radii are the same AB.",
-      action: { kind: "circle", center: "B", through: "A" },
+      text: `Draw the companion circle centred at ${anchor} through A. Their radii are the same A–${anchor}.`,
+      action: { kind: "circle", center: anchor, through: "A" },
     };
-  const d = scene.points.find((p) => onCurve(p, ca.id) && onCurve(p, cb.id));
   if (!d)
     return {
       text: `Keep either crossing of ${ca.id} and ${cb.id}. It supplies the third vertex of the equilateral triangle.`,
       action: { kind: "meet", first: ca.id, second: cb.id, branch: 0 },
     };
-  const db = lineWith(scene, d.id, "B");
   if (!db)
     return {
-      text: `Draw the straight line through ${d.id} and B. You will need the part beyond B, away from ${d.id}.`,
-      action: { kind: "line", a: d.id, b: "B" },
+      text: `Draw the straight line through ${d.id} and ${anchor}. You will need the part beyond ${anchor}, away from ${d.id}.`,
+      action: { kind: "line", a: d.id, b: anchor },
     };
-  const reference = circleWith(scene, "B", "C");
   if (!reference)
     return {
-      text: "Draw a circle centred at B through C. This uses the given length at its own endpoint, where it is already available.",
-      action: { kind: "circle", center: "B", through: "C" },
+      text: `Draw a circle centred at ${anchor} through ${other}. This uses the given length at its own endpoint, where it is already available.`,
+      action: { kind: "circle", center: anchor, through: other },
     };
-  const g = scene.points.find(
-    (p) => onCurve(p, db.id) && onCurve(p, reference.id) && beyond(scene, d.id, "B", p),
-  );
   if (!g) {
     const branch = deskCrossings(scene, db.id, reference.id).points.findIndex((p) =>
-      beyond(scene, d.id, "B", p),
+      beyond(scene, d.id, anchor, p),
     );
     return {
-      text: `Keep the crossing of ${db.id} and ${reference.id} BEYOND B, away from ${d.id}. The other crossing will not supply this equal-remainder proof.`,
+      text: `Keep the crossing of ${db.id} and ${reference.id} BEYOND ${anchor}, away from ${d.id}. The other crossing will not supply this equal-remainder proof.`,
       action: { kind: "meet", first: db.id, second: reference.id, branch },
     };
   }
-  const da = lineWith(scene, d.id, "A");
   if (!da)
     return {
       text: `Draw the straight line through ${d.id} and A; continue beyond A.`,
       action: { kind: "line", a: d.id, b: "A" },
     };
-  const whole = circleWith(scene, d.id, g.id);
   if (!whole)
     return {
       text: `Draw a circle centred at ${d.id} through ${g.id}. Its radius contains one equal side plus the reference length.`,
       action: { kind: "circle", center: d.id, through: g.id },
     };
-  const l = scene.points.find(
-    (p) => onCurve(p, da.id) && onCurve(p, whole.id) && beyond(scene, d.id, "A", p),
-  );
   if (l)
     return {
       text: `Join A to ${l.id}. You have found the endpoint; now draw the requested straight line.`,

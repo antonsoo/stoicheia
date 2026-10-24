@@ -2,6 +2,8 @@
 
 ## 2026-10-24
 
+- Follow the learner's most developed I.2 route in hints, including the C anchor, a circle-first start and either retained equilateral vertex. Hint setup still leaves each operation to the learner.
+
 - Added an I.2 construction desk: learner-chosen restricted-compass operations,
   kept crossings, branching history, source-linked equal-remainder recognition,
   and editable/illustrated offline files. Rounded length agreement alone does

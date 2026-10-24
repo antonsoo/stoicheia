@@ -16,8 +16,9 @@ At A, construct a segment equal to detached BC. There is no radius field,
 free-point placement or automatic length-transfer tool. A new point must be
 kept from the intersections of two curves already drawn. The learner can
 rewind, branch, keep both intersections, and choose operations in another order.
-Hints prepare a command; they do not execute it. Their suggested route follows
-the source from B; the recognizer also accepts the route anchored at C.
+Hints prepare a command; they do not execute it. They follow the most developed
+recognized route through either reference anchor and either equilateral vertex,
+including a circle-first start before the joining line has been drawn.
 
 Three layouts are supplied. Each retains its own history in the current tab.
 The share URL and saved JSON preserve the current prefix, rather than the
@@ -167,8 +168,8 @@ files plus the worker itself.
 
 | Evidence                                                                           | Result and scope                                                                                                                                                                                                                                                                                              |
 | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm run check`                                                                    | Lint, strict typecheck, all 61 tests and build pass under Node 24.22.0 and 26.7.0.                                                                                                                                                                                                                            |
-| Eight new model tests                                                              | Twelve complete paths across three layouts, both reflections and both reference anchors agree with an independently calculated closed form. Wrong branches, missing dependencies, invalid imports, degeneracies and hints are checked.                                                                        |
+| `npm run check`                                                                    | Lint, strict typecheck, all 63 tests and build pass under Node 24.22.0 and 26.7.0.                                                                                                                                                                                                                            |
+| Ten new model tests                                                                | Twelve complete paths across three layouts, both reflections and both reference anchors agree with an independently calculated closed form. Wrong branches, missing dependencies, invalid imports, degeneracies and adaptive hints through either anchor or kept vertex are checked.                          |
 | [Desk browser receipt](desk-browser.json)                                          | Chromium 153 and Firefox 155, each at 1440px and 375px. Real operations, two wrong crossings, Undo/Redo, transcript jumps, native keyboard/SVG controls, preserved focus, sharing, layouts and JSON import/export. Zero axe violations in these checked states.                                               |
 | Native HTML/SVG/JSON                                                               | Real downloads reopened with networking disabled. Four embedded image hashes match the source manifest; the HTML's embedded JSON matches the standalone JSON; SVG colors resolve independently of application CSS. No remote subresource requests.                                                            |
 | Offline workflow                                                                   | Server destroys sockets and browser networking is disabled. Restore the completed drawing, export a reading, make a reflected construction anchored at C in the long-reference layout, and navigate all six rooms.                                                                                            |

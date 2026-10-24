@@ -1,15 +1,15 @@
 {
-  "scope": "Working Node 26.7.0 versus isolated npm ci Node 24.22.0; all 61 tests and complete checks passed; final print-margin builds have identical static output",
+  "scope": "Adaptive-hint source: working Node 26.7.0 versus isolated npm ci Node 24.22.0; all 63 tests and complete checks passed; identical static output",
   "files": [
-    {
-      "file": "assets/desk-C65nyvcg.js",
-      "bytes": 45624,
-      "sha256": "75f1fcc319bb098744ef0b7bacf22b3fdf8cc5242f922c54982ca75bc4a48713"
-    },
     {
       "file": "assets/desk-CSBNE5QJ.css",
       "bytes": 9157,
       "sha256": "a7b3c3f53d54dd6dae0ddf9bdbe3210940865f4ea987223e0952d89e01de7161"
+    },
+    {
+      "file": "assets/desk-D9kl2T-U.js",
+      "bytes": 46113,
+      "sha256": "5d86a668428f310bdf896bf8ea70899750da4c1bc16752acee1c349236873ba5"
     },
     {
       "file": "assets/geometry-wvVagWQp.js",
@@ -22,9 +22,9 @@
       "sha256": "2661adc6e90a0f1ea4d4068451f06f259d75c3924810ecdb9e64fcd0e46d4725"
     },
     {
-      "file": "assets/gnomon-DyZCth5R.js",
+      "file": "assets/gnomon-CjYTWZnd.js",
       "bytes": 56270,
-      "sha256": "43e6b6470ea503c7e6171a0fde203392f13d0fb2dc85e25546a4abe5df8089ed"
+      "sha256": "0a38f80ce1db94bdcc0e23853b76ea0df91d913ac71d9ec01a0d7a8a1adfc8fe"
     },
     {
       "file": "assets/mesolabe-7AwiFx9G.css",
@@ -32,9 +32,14 @@
       "sha256": "df3da746f41b1559ecb66efc02278cded702b5a387b6ad8468ba671d6420498e"
     },
     {
-      "file": "assets/mesolabe-CIQJGX3f.js",
+      "file": "assets/mesolabe-BXekPqDt.js",
       "bytes": 61276,
-      "sha256": "de53697560d34ab9d03485e24dc97f2cf0d076084fadad1843f827f2b283cf66"
+      "sha256": "421ea3d375a29d892b2cc8fbf7fba9fa09e98bacde4ee9fcc923afb4a6073488"
+    },
+    {
+      "file": "assets/offline-CrJWr4TT.js",
+      "bytes": 15174,
+      "sha256": "addea8bdf6c9644d5b7f1d88fff760de3d8d456686c4670aab311051784d251b"
     },
     {
       "file": "assets/offline-D6km1F0i.css",
@@ -42,14 +47,9 @@
       "sha256": "e99bb00edaa3e3a083caed8b66bd079fccf020ff786838754be7cd986f72edbf"
     },
     {
-      "file": "assets/offline-DAXlKZMu.js",
-      "bytes": 15174,
-      "sha256": "5f7333315809386105aa9b08647d0b459f97bbce099a2f850f37ed8961b9ce73"
-    },
-    {
-      "file": "assets/quadrature-C9AJLVmX.js",
+      "file": "assets/quadrature-B6vm17fE.js",
       "bytes": 58342,
-      "sha256": "ca77d0b863f14ca24f71b93dc68a7fe0827168e3a2d88ad16e2a0b38f4c07662"
+      "sha256": "12ee25f08593dc373a9045ec7ea4fee28bbae1c69917b002c15fa35c49235209"
     },
     {
       "file": "assets/quadrature-XiT_7MPW.css",
@@ -62,9 +62,14 @@
       "sha256": "c062a55696e49b0fb52dc7b7b50a4f78a4858c8103ffd8d46838212266fc0e1c"
     },
     {
-      "file": "assets/reader-BpRW-47W.js",
+      "file": "assets/reader-D4UP-ubz.js",
       "bytes": 179567,
-      "sha256": "422590d730f0bf81ebabd7c1e57968bab7de8397910f71e212023af6406675ca"
+      "sha256": "27688603e582ac15c42b7630895940adff7992385499119492304e0ddf859021"
+    },
+    {
+      "file": "assets/triangle-C9g9LNjp.js",
+      "bytes": 56689,
+      "sha256": "3b0cc703faff6cd00a4dbf4f3091773d5b37998d3ebaf88a553512f69150114f"
     },
     {
       "file": "assets/triangle-D7DRmLfq.css",
@@ -72,14 +77,9 @@
       "sha256": "6cb88fda39261452f9525464dbac7a34349744d7beb7a95f26f673e47daf26a1"
     },
     {
-      "file": "assets/triangle-_pNzMdhy.js",
-      "bytes": 56689,
-      "sha256": "0f08cb084bd03557aae9131f9cd7cb00e774b97421b3edc9ca3e11459149e03e"
-    },
-    {
       "file": "desk.html",
       "bytes": 1504,
-      "sha256": "18541eb38bc8378a97c0df62f6eb9ca7621937b2da88c5a502d367d7394f22c7"
+      "sha256": "b9d05218ec5e5d1a064486b734e50a5854e2f8ade4b95837d798b5f52d6ca644"
     },
     {
       "file": "favicon.svg",
@@ -99,22 +99,22 @@
     {
       "file": "gnomon.html",
       "bytes": 1639,
-      "sha256": "4414a1af8b5b160f85688c022c394973ac4da91d4c426903631529e2f465b05e"
+      "sha256": "c039bc195aaf0d220fd89efbf499bf576f0ea726bc53874e2768b9a42f793363"
     },
     {
       "file": "index.html",
       "bytes": 1483,
-      "sha256": "28ef12aee38e7285fac77e4e4c32950ed0ef68040607305e248ff3dadb7ef090"
+      "sha256": "f3bf4e7cb254c99a48f3facb03ac117489b1de3a622c56ab1a58075a106f431c"
     },
     {
       "file": "mesolabe.html",
       "bytes": 1477,
-      "sha256": "1c865b8f89a78847e4bf3d8cfb446eadc7daca869fece9ca9f0f023665a2eca9"
+      "sha256": "18236b6cabc23dd63267e13e568a2d6e42e57c9f8d262d4d4e173098bb064c8d"
     },
     {
       "file": "quadrature.html",
       "bytes": 1553,
-      "sha256": "06acde5f03d1547df5bcf45414b20fb0f4b03bd8c43da8741e17e1e86aa650ed"
+      "sha256": "63f4b532e173d15a876cac5f25a606d1c353ca4d20bcb50b8e63c5e46c64970d"
     },
     {
       "file": "sources/heiberg-002.jpg",
@@ -539,12 +539,12 @@
     {
       "file": "sw.js",
       "bytes": 16372,
-      "sha256": "d536a71c91d533d420c258cd6d5b63acc9892db804e667b17582e1d0283c1fd2"
+      "sha256": "61733b3ac0760f36cb81399a4516ab34397edacb37764761ff9413817b810d86"
     },
     {
       "file": "triangle.html",
       "bytes": 1510,
-      "sha256": "1b468cb402ea5ead98ee8f3d8d8ed8b21ee723cd0bb0a4671fe85eab2008595e"
+      "sha256": "accf7842ab1f407954f76cb12fa921770b4d1d1d547f1aff4f1d6dd308f0a167"
     }
   ]
 }

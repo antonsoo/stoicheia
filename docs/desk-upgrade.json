@@ -1,7 +1,7 @@
 {
   "scope": "Pre-desk five-room edition to six rooms; held or failed source install; existing-tab controller transition; disabled-origin construction after recovery.",
   "previousWorker": "299ca0002bf9d0e6e05f1ec0243cc01f7b4fb05cd3085b32741193265859d94b",
-  "currentWorker": "d536a71c91d533d420c258cd6d5b63acc9892db804e667b17582e1d0283c1fd2",
+  "currentWorker": "61733b3ac0760f36cb81399a4516ab34397edacb37764761ff9413817b810d86",
   "configurations": [
     {
       "browser": "chromium",

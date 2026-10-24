@@ -8,7 +8,7 @@ import { chromium, firefox } from "playwright";
 if (!process.argv[2]) throw new Error("Pass the pre-desk production dist directory.");
 const previous = path.resolve(process.argv[2]),
   current = path.resolve(process.argv[3] ?? "dist");
-const output = process.argv[4] ?? "/tmp/claude-1000/desk-upgrade.json";
+const output = process.argv[4] ?? "/tmp/desk-upgrade.json";
 const digest = (bytes) => createHash("sha256").update(bytes).digest("hex");
 const report = {
   scope:

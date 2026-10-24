@@ -7,12 +7,21 @@ import { pathToFileURL } from "node:url";
 import AxeBuilder from "@axe-core/playwright";
 import { chromium, firefox } from "playwright";
 
-const out = path.resolve(process.argv[2] ?? "/tmp/claude-1000/stoicheia-desk-review");
+const out = path.resolve(process.argv[2] ?? "/tmp/stoicheia-desk-review");
+const hostedBase = process.argv[3];
+if (hostedBase)
+  assert.match(
+    hostedBase,
+    /^https:\/\/.+\/$/,
+    "Supply a canonical HTTPS base with a trailing slash.",
+  );
 await mkdir(out, { recursive: true });
 const report = {
   checkedAt: new Date().toISOString(),
-  scope:
-    "Local production build, browser operations, real native downloads and origin-disabled offline use. No deployment claim.",
+  scope: hostedBase
+    ? "Public production site, browser operations and native downloads. Hosted offline checks disable browser networking; the public origin remains available."
+    : "Local production build, browser operations, real native downloads and origin-disabled offline use. No deployment claim.",
+  base: hostedBase ?? null,
   configurations: [],
 };
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
@@ -90,6 +99,7 @@ for (const [name, type] of [
       const folder = path.join(out, `${name}-${width}`);
       await mkdir(folder, { recursive: true });
       const server = await serve();
+      const base = hostedBase ?? server.base;
       const context = await browser.newContext({
         viewport: { width, height: 1000 },
         acceptDownloads: true,
@@ -99,10 +109,10 @@ for (const [name, type] of [
         external = [];
       page.on("pageerror", (error) => errors.push(String(error)));
       page.on("request", (r) => {
-        if (/^https?:/.test(r.url()) && !r.url().startsWith(server.base)) external.push(r.url());
+        if (/^https?:/.test(r.url()) && !r.url().startsWith(base)) external.push(r.url());
       });
       try {
-        await page.goto(server.base);
+        await page.goto(base);
         await page.getByRole("link", { name: /Make I.2 yourself/ }).click();
         await page
           .locator("#dk-offline")
@@ -309,7 +319,7 @@ for (const [name, type] of [
           .waitFor();
         assert.match(await page.locator("#dk-proof-state").textContent(), /chain is present/);
         await save(page, "#dk-study", path.join(folder, "offline-reading.html"));
-        await page.goto(`${server.base}index.html#p=2&s=8`);
+        await page.goto(`${base}index.html#p=2&s=8`);
         await page
           .locator("#offline-state")
           .filter({ hasText: /Edition ready offline/ })
@@ -321,10 +331,19 @@ for (const [name, type] of [
           .waitFor();
         await page.locator("#dk-layout").selectOption("long");
         await operation(page, "circle", "A", "C");
+        await page.locator("#dk-hint-toggle").click();
+        assert.match(await page.locator("#dk-hint-text").textContent(), /Join A to C/);
+        await page.locator("#dk-load-hint").click();
+        assert.equal(await page.locator("#dk-first").inputValue(), "A");
+        assert.equal(await page.locator("#dk-second").inputValue(), "C");
+        assert.match(await page.locator("#dk-position").textContent(), /Operation 1 of 1/);
+        await page.locator("#dk-draw").click();
         await operation(page, "circle", "C", "A");
-        await operation(page, "meet", "c1", "c2", 1);
-        await operation(page, "line", "A", "C");
-        await operation(page, "line", "P1", "C");
+        await operation(page, "meet", "c1", "c3", 1);
+        assert.match(await page.locator("#dk-hint-text").textContent(), /P1 and C/);
+        await page.locator("#dk-load-hint").click();
+        assert.match(await page.locator("#dk-position").textContent(), /Operation 4 of 4/);
+        await page.locator("#dk-draw").click();
         await operation(page, "circle", "C", "B");
         await operation(page, "meet", "l4", "c5", 1);
         await operation(page, "line", "P1", "A");
@@ -333,7 +352,6 @@ for (const [name, type] of [
         await operation(page, "line", "A", "P3");
         assert.match(await page.locator("#dk-proof-state").textContent(), /chain is present/);
         assert.match(await page.locator(".dk-correspondence caption").textContent(), /exchanged/);
-        await page.locator("#dk-hint-toggle").click();
         assert(await page.locator("#dk-load-hint").isHidden());
         const offlineRooms = [];
         for (const room of [
@@ -344,7 +362,7 @@ for (const [name, type] of [
           "mesolabe.html",
           "desk.html",
         ]) {
-          await page.goto(server.base + room);
+          await page.goto(base + room);
           await page.locator("main").waitFor();
           offlineRooms.push(room);
         }
@@ -364,7 +382,8 @@ for (const [name, type] of [
           pageErrors: errors,
           externalRequests: external,
           portableRemoteRequests: remote,
-          offlineOriginDisabled: true,
+          offlineOriginDisabled: !hostedBase,
+          adaptiveHintsFollowC: true,
           offlineRooms,
           offlineAlternateConstruction: {
             layout: "long",
