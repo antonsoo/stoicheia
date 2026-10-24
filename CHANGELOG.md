@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-24
+
+- Recover tabs that finish navigating around service-worker activation, verifying the matching controller and complete edition before showing offline readiness.
+
+- Added the source-grounded mesolabe workshop: independently movable plates, one-contact and full alignment, ratio proof, eight parallel readings, twelve full source pages and portable paper/HTML/SVG/CSV artifacts.
+
 ## Equal complements and the gnomon · 2026-10-23
 
 - Explore I.43 with an oblique parallelogram and a movable meeting point.

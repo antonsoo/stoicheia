@@ -16,9 +16,9 @@ clockwise with upright labels and equal coordinate scales.
 
 ## Source identity and reading scope
 
-Eutocius, commentary on Archimedes' *On the Sphere and Cylinder* II, section
-headed **Ὡς Ἐρατοσθένης**, in J. L. Heiberg, *Archimedis opera omnia cum
-commentariis Eutocii*, III (Leipzig: Teubner, **1881**), pp.102–113.
+Eutocius, commentary on Archimedes' _On the Sphere and Cylinder_ II, section
+headed **Ὡς Ἐρατοσθένης**, in J. L. Heiberg, _Archimedis opera omnia cum
+commentariis Eutocii_, III (Leipzig: Teubner, **1881**), pp.102–113.
 
 [Original complete PDF](https://www.wilbourhall.org/pdfs/Archimedes_VOL_III.pdf).
 Its title page, source PDF page 5, reads **MDCCCLXXXI**. It is not the 1915
@@ -26,14 +26,14 @@ second edition, whose pagination is different. The
 [source manifest](../public/sources/mesolabe/manifest.json) records the
 original PDF identity, each page identity, and exact Poppler rendering recipe.
 
-| Printed pages | Contents used |
-| --- | --- |
-| 102–103 | The heading and opening of the transmitted letter; context in scans |
-| 104–105 | The mistake of doubling edges and the distinction between plane and solid |
-| 106–107 | Context, applications and the two unequal given lines |
-| 108–109 | Moving the plates, the full proportionality proof and first figure |
-| 110–111 | Manufacture, fit and precision; Heiberg's critical footnotes |
-| 112–113 | Second figure, shorter proof and extension to more means |
+| Printed pages | Contents used                                                             |
+| ------------- | ------------------------------------------------------------------------- |
+| 102–103       | The heading and opening of the transmitted letter; context in scans       |
+| 104–105       | The mistake of doubling edges and the distinction between plane and solid |
+| 106–107       | Context, applications and the two unequal given lines                     |
+| 108–109       | Moving the plates, the full proportionality proof and first figure        |
+| 110–111       | Manufacture, fit and precision; Heiberg's critical footnotes              |
+| 112–113       | Second figure, shorter proof and extension to more means                  |
 
 The eight excerpts are selected parts, not a complete letter translation.
 The intermediate comparisons on p.108 are explained in the proof rather
@@ -59,16 +59,16 @@ kept distinct: p is the left panel's rightward slide; q is the right panel's
 leftward slide. Both range from 0 to 0.9. R, the requested volume factor,
 ranges from 2 to 8. The end height is d=1/R.
 
-| Point | x | y | Geometric role |
-| --- | ---: | ---: | --- |
-| Α | p | 1 | Left panel's upper-left corner |
-| Ε | p | 0 | Foot of given ΑΕ |
-| Ζ | 1+p | 0 | Left panel's lower-right corner |
-| Β | 1+p | 1−p | Left panel's right edge meets middle diagonal |
-| Η | 2 | 0 | Middle panel's lower-right corner |
-| Γ | 2 | 1−q | Middle panel's right edge meets right diagonal |
-| Θ | 3−q | 0 | Right panel's lower-right corner |
-| Δ | 3−q | 1/R | Marked given endpoint on right edge |
+| Point |   x |   y | Geometric role                                 |
+| ----- | --: | --: | ---------------------------------------------- |
+| Α     |   p |   1 | Left panel's upper-left corner                 |
+| Ε     |   p |   0 | Foot of given ΑΕ                               |
+| Ζ     | 1+p |   0 | Left panel's lower-right corner                |
+| Β     | 1+p | 1−p | Left panel's right edge meets middle diagonal  |
+| Η     |   2 |   0 | Middle panel's lower-right corner              |
+| Γ     |   2 | 1−q | Middle panel's right edge meets right diagonal |
+| Θ     | 3−q |   0 | Right panel's lower-right corner               |
+| Δ     | 3−q | 1/R | Marked given endpoint on right edge            |
 
 The exposed vertical heights are 1, 1−p, 1−q, 1/R. Multiplying by R gives
 lengths a=R, b=R(1−p), c=R(1−q), d=1, in units of the original cube edge.

@@ -1,0 +1,9 @@
+{
+  "method": "Independent square-edge/diagonal intersections; nested bisection for two-contact alignment",
+  "cases": 6771,
+  "numeric_comparisons": 108519,
+  "independently_solved_volume_factors": 61,
+  "max_absolute_difference": 1.7053025658242404e-13,
+  "tolerance": 2e-10,
+  "historical_or_physical_accuracy_established": false
+}

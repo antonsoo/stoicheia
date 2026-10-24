@@ -8,10 +8,7 @@
       "version": "153.0.8010.12",
       "width": 1440,
       "passages": 18,
-      "offDiagonalAreas": [
-        7.35,
-        25.35
-      ],
+      "offDiagonalAreas": [7.35, 25.35],
       "smallPairsRemainEqual": true,
       "shearPreservesAreas": true,
       "historyRestored": true,
@@ -69,21 +66,10 @@
       "standaloneSvgsOpened": true,
       "embeddedCsvMatches": true,
       "renderedPolygonAreaRatios": {
-        "brokenAreas": [
-          0.12250001793358994,
-          0.42250008553725676
-        ],
-        "gnomonAreas": [
-          0.8520710285559172,
-          0.14792897144408285
-        ]
+        "brokenAreas": [0.12250001793358994, 0.42250008553725676],
+        "gnomonAreas": [0.8520710285559172, 0.14792897144408285]
       },
-      "offlineRooms": [
-        "index.html",
-        "triangle.html",
-        "quadrature.html",
-        "gnomon.html"
-      ],
+      "offlineRooms": ["index.html", "triangle.html", "quadrature.html", "gnomon.html"],
       "offlineMethod": "Browser context offline mode; public origin not controlled",
       "axeViolations": 0,
       "pageErrors": [],
@@ -95,10 +81,7 @@
       "version": "153.0.8010.12",
       "width": 375,
       "passages": 18,
-      "offDiagonalAreas": [
-        7.35,
-        25.35
-      ],
+      "offDiagonalAreas": [7.35, 25.35],
       "smallPairsRemainEqual": true,
       "shearPreservesAreas": true,
       "historyRestored": true,
@@ -156,21 +139,10 @@
       "standaloneSvgsOpened": true,
       "embeddedCsvMatches": true,
       "renderedPolygonAreaRatios": {
-        "brokenAreas": [
-          0.12250001354493993,
-          0.4224999856257784
-        ],
-        "gnomonAreas": [
-          0.8520712072803627,
-          0.14792879271963733
-        ]
+        "brokenAreas": [0.12250001354493993, 0.4224999856257784],
+        "gnomonAreas": [0.8520712072803627, 0.14792879271963733]
       },
-      "offlineRooms": [
-        "index.html",
-        "triangle.html",
-        "quadrature.html",
-        "gnomon.html"
-      ],
+      "offlineRooms": ["index.html", "triangle.html", "quadrature.html", "gnomon.html"],
       "offlineMethod": "Browser context offline mode; public origin not controlled",
       "axeViolations": 0,
       "pageErrors": [],
@@ -182,10 +154,7 @@
       "version": "155.0",
       "width": 1440,
       "passages": 18,
-      "offDiagonalAreas": [
-        7.35,
-        25.35
-      ],
+      "offDiagonalAreas": [7.35, 25.35],
       "smallPairsRemainEqual": true,
       "shearPreservesAreas": true,
       "historyRestored": true,
@@ -243,21 +212,10 @@
       "standaloneSvgsOpened": true,
       "embeddedCsvMatches": true,
       "renderedPolygonAreaRatios": {
-        "brokenAreas": [
-          0.12250001793358994,
-          0.42250008553725676
-        ],
-        "gnomonAreas": [
-          0.8520710285559172,
-          0.14792897144408285
-        ]
+        "brokenAreas": [0.12250001793358994, 0.42250008553725676],
+        "gnomonAreas": [0.8520710285559172, 0.14792897144408285]
       },
-      "offlineRooms": [
-        "index.html",
-        "triangle.html",
-        "quadrature.html",
-        "gnomon.html"
-      ],
+      "offlineRooms": ["index.html", "triangle.html", "quadrature.html", "gnomon.html"],
       "offlineMethod": "Browser context offline mode; public origin not controlled",
       "axeViolations": 0,
       "pageErrors": [],
@@ -269,10 +227,7 @@
       "version": "155.0",
       "width": 375,
       "passages": 18,
-      "offDiagonalAreas": [
-        7.35,
-        25.35
-      ],
+      "offDiagonalAreas": [7.35, 25.35],
       "smallPairsRemainEqual": true,
       "shearPreservesAreas": true,
       "historyRestored": true,
@@ -330,21 +285,10 @@
       "standaloneSvgsOpened": true,
       "embeddedCsvMatches": true,
       "renderedPolygonAreaRatios": {
-        "brokenAreas": [
-          0.12250001354493993,
-          0.4224999856257784
-        ],
-        "gnomonAreas": [
-          0.8520712072803627,
-          0.14792879271963733
-        ]
+        "brokenAreas": [0.12250001354493993, 0.4224999856257784],
+        "gnomonAreas": [0.8520712072803627, 0.14792879271963733]
       },
-      "offlineRooms": [
-        "index.html",
-        "triangle.html",
-        "quadrature.html",
-        "gnomon.html"
-      ],
+      "offlineRooms": ["index.html", "triangle.html", "quadrature.html", "gnomon.html"],
       "offlineMethod": "Browser context offline mode; public origin not controlled",
       "axeViolations": 0,
       "pageErrors": [],

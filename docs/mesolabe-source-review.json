@@ -1,0 +1,80 @@
+{
+  "source_pdf_sha256": "4a0849767d817f3d501369cdf6b20b03d2be8de4e15e8e15403ea5abdd89a4d3",
+  "source_pdf_bytes": 15134124,
+  "edition": "Heiberg 1881 III; title inspected visually at source PDF page 5",
+  "pages": [
+    {
+      "printed_page": 102,
+      "pdf_page": 202,
+      "sha256": "36ad55389fedbfad28139fad3f3934ab50241ebc214ed12f00cffeea11c6544e",
+      "exact_render_match": true
+    },
+    {
+      "printed_page": 103,
+      "pdf_page": 203,
+      "sha256": "6a2e59d197e9120476bec676015e1de654579e3ba11115592eb883f0ed989dc2",
+      "exact_render_match": true
+    },
+    {
+      "printed_page": 104,
+      "pdf_page": 204,
+      "sha256": "44f6617710a5512353b5e3e81e31227c82ec72d4caeefccbadac3f76dcbe4bd1",
+      "exact_render_match": true
+    },
+    {
+      "printed_page": 105,
+      "pdf_page": 205,
+      "sha256": "4efa12300b31f6a0db5f69a154c6075359091181cf32bc7b84f6f954844ddc81",
+      "exact_render_match": true
+    },
+    {
+      "printed_page": 106,
+      "pdf_page": 206,
+      "sha256": "805b16128fa3149c40ff928f9eed9992325c9c4b3646db6d5b8b8a9e6be3bd20",
+      "exact_render_match": true
+    },
+    {
+      "printed_page": 107,
+      "pdf_page": 207,
+      "sha256": "044376088d5931f7e2341f4b753b7d91a42e506d9ee4baac13073292321cc35b",
+      "exact_render_match": true
+    },
+    {
+      "printed_page": 108,
+      "pdf_page": 208,
+      "sha256": "70ae01465f6b2027b4d54723ec5efd81419e3bf61634807cea16387ad1ce75e0",
+      "exact_render_match": true
+    },
+    {
+      "printed_page": 109,
+      "pdf_page": 209,
+      "sha256": "ee0f8ca7f992a63f6b3582c581aaca376f23bf9bce7c631e4d0f371df14ea75f",
+      "exact_render_match": true
+    },
+    {
+      "printed_page": 110,
+      "pdf_page": 210,
+      "sha256": "23ae18be85ffc64ac4d6ae292d6496ad026bb7fa5e30a763a7641d11aa78918e",
+      "exact_render_match": true
+    },
+    {
+      "printed_page": 111,
+      "pdf_page": 211,
+      "sha256": "c40469e514de62aba26d0b273bfae5c788fed8a8bc04fb7b6afee1e60fa6c48c",
+      "exact_render_match": true
+    },
+    {
+      "printed_page": 112,
+      "pdf_page": 212,
+      "sha256": "4f7c0bbd230ff1ecb5731137196c6d732299266bc2a5fdca71721241ef1da830",
+      "exact_render_match": true
+    },
+    {
+      "printed_page": 113,
+      "pdf_page": 213,
+      "sha256": "4082eee7fd6f2816d58bec366b85cddd2d3e562cf392461eccaabc4bfdf9f91d",
+      "exact_render_match": true
+    }
+  ],
+  "scope": "Source file and rendering identity; transcription and historical interpretation require visual review."
+}

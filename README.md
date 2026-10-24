@@ -33,6 +33,40 @@ exercises and the original pages 50–53 complete the sequential course through 
 [Model and review](docs/nested-review.md) · [Saved study](examples/stoicheia-I21-study.html) ·
 [Printed study](examples/stoicheia-I21-study.pdf).
 
+## Twice the stone, with sliding plates
+
+The **[mesolabe workshop](https://antonsoo.github.io/stoicheia/mesolabe.html)**
+follows the construction transmitted by Eutocius under Eratosthenes' name.
+Doubling every cube edge gives eight times the volume. Sliding three plates
+until four points align instead finds the two mean proportionals that give
+a cube root.
+
+![The aligned plates, contact detail and independent controls](docs/assets/mesolabe-aligned.png)
+- Drag either plate or move it with a keyboard. Align only Β and watch Γ
+  remain wrong; compare both contacts against the same straightedge.
+- Read all four lengths, their three successive ratios and the volume of
+  the cube implied by your selected ΓΗ. Try a chosen 0.5 mm displacement
+  and see how the volume changes.
+- Follow the similar-triangle argument through both families of parallel
+  lines. Read eight Greek/Latin/English excerpts with contextual word notes
+  and inspect twelve complete pages of Heiberg's **1881** edition.
+- Save your pose as an illustrated HTML reading with every source image
+  and its Greek font embedded, or export SVG and CSV. A landscape A4
+  paper exploration sheet provides loose plates and a calibration bar.
+  The app and all five rooms work offline after the complete edition is saved.
+
+The model assumes exact parallel rails and zero-thickness square plates.
+It is a mechanical operation beyond the course's straightedge-and-compass
+constructions. The letter's attribution is preserved without resolving its
+authenticity. Physical printing, cutting, assembly and achievable precision
+remain unverified.
+
+[Source and geometry](docs/mesolabe-model.md) · [Review](docs/mesolabe-review.md) ·
+[Saved reading](examples/stoicheia-mesolabe-reading.html) ·
+[Printable reading](examples/stoicheia-mesolabe-reading.pdf) ·
+[Paper exploration sheet](examples/stoicheia-mesolabe-paper.svg) ·
+[Measurements](examples/stoicheia-mesolabe-measurements.csv).
+
 ## A square, with nothing added
 
 The **[II.14 workshop](https://antonsoo.github.io/stoicheia/quadrature.html)** turns

@@ -1,0 +1,101 @@
+{
+  "scope": "Unmodified final production build; immediate course-to-mesolabe navigation in fresh contexts",
+  "cases": [
+    {
+      "browser": "chromium",
+      "run": 1,
+      "controller": "activated",
+      "status": "Edition ready offline, including source pages"
+    },
+    {
+      "browser": "chromium",
+      "run": 2,
+      "controller": "activated",
+      "status": "Edition ready offline, including source pages"
+    },
+    {
+      "browser": "chromium",
+      "run": 3,
+      "controller": "activated",
+      "status": "Edition ready offline, including source pages"
+    },
+    {
+      "browser": "chromium",
+      "run": 4,
+      "controller": "activated",
+      "status": "Edition ready offline, including source pages"
+    },
+    {
+      "browser": "chromium",
+      "run": 5,
+      "controller": "activated",
+      "status": "Edition ready offline, including source pages"
+    },
+    {
+      "browser": "chromium",
+      "run": 6,
+      "controller": "activated",
+      "status": "Edition ready offline, including source pages"
+    },
+    {
+      "browser": "chromium",
+      "run": 7,
+      "controller": "activated",
+      "status": "Edition ready offline, including source pages"
+    },
+    {
+      "browser": "chromium",
+      "run": 8,
+      "controller": "activated",
+      "status": "Edition ready offline, including source pages"
+    },
+    {
+      "browser": "firefox",
+      "run": 1,
+      "controller": "activated",
+      "status": "Edition ready offline, including source pages"
+    },
+    {
+      "browser": "firefox",
+      "run": 2,
+      "controller": "activated",
+      "status": "Edition ready offline, including source pages"
+    },
+    {
+      "browser": "firefox",
+      "run": 3,
+      "controller": "activated",
+      "status": "Edition ready offline, including source pages"
+    },
+    {
+      "browser": "firefox",
+      "run": 4,
+      "controller": "activated",
+      "status": "Edition ready offline, including source pages"
+    },
+    {
+      "browser": "firefox",
+      "run": 5,
+      "controller": "activated",
+      "status": "Edition ready offline, including source pages"
+    },
+    {
+      "browser": "firefox",
+      "run": 6,
+      "controller": "activated",
+      "status": "Edition ready offline, including source pages"
+    },
+    {
+      "browser": "firefox",
+      "run": 7,
+      "controller": "activated",
+      "status": "Edition ready offline, including source pages"
+    },
+    {
+      "browser": "firefox",
+      "run": 8,
+      "controller": "activated",
+      "status": "Edition ready offline, including source pages"
+    }
+  ]
+}

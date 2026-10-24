@@ -1,0 +1,89 @@
+{
+  "pdf_engine": "PyMuPDF 1.28.2",
+  "reading_pages": 27,
+  "source_images": [
+    {
+      "pdf_page": 13,
+      "source_printed_page": 102,
+      "original_jpeg_preserved": true,
+      "caption_on_same_sheet": true
+    },
+    {
+      "pdf_page": 14,
+      "source_printed_page": 103,
+      "original_jpeg_preserved": true,
+      "caption_on_same_sheet": true
+    },
+    {
+      "pdf_page": 15,
+      "source_printed_page": 104,
+      "original_jpeg_preserved": true,
+      "caption_on_same_sheet": true
+    },
+    {
+      "pdf_page": 16,
+      "source_printed_page": 105,
+      "original_jpeg_preserved": true,
+      "caption_on_same_sheet": true
+    },
+    {
+      "pdf_page": 17,
+      "source_printed_page": 106,
+      "original_jpeg_preserved": true,
+      "caption_on_same_sheet": true
+    },
+    {
+      "pdf_page": 18,
+      "source_printed_page": 107,
+      "original_jpeg_preserved": true,
+      "caption_on_same_sheet": true
+    },
+    {
+      "pdf_page": 19,
+      "source_printed_page": 108,
+      "original_jpeg_preserved": true,
+      "caption_on_same_sheet": true
+    },
+    {
+      "pdf_page": 20,
+      "source_printed_page": 109,
+      "original_jpeg_preserved": true,
+      "caption_on_same_sheet": true
+    },
+    {
+      "pdf_page": 21,
+      "source_printed_page": 110,
+      "original_jpeg_preserved": true,
+      "caption_on_same_sheet": true
+    },
+    {
+      "pdf_page": 22,
+      "source_printed_page": 111,
+      "original_jpeg_preserved": true,
+      "caption_on_same_sheet": true
+    },
+    {
+      "pdf_page": 23,
+      "source_printed_page": 112,
+      "original_jpeg_preserved": true,
+      "caption_on_same_sheet": true
+    },
+    {
+      "pdf_page": 24,
+      "source_printed_page": 113,
+      "original_jpeg_preserved": true,
+      "caption_on_same_sheet": true
+    }
+  ],
+  "paper_pages": 1,
+  "paper_page_points": [0.0, 0.0, 841.9199829101562, 595.9199829101562],
+  "calibration_bar_mm_in_chromium_pdf": 25.01035970052083,
+  "calibration_bar_mm_in_svg": 25,
+  "physical_printing_and_assembly": "Unverified. Browser PDF rounding is separate from exact SVG units.",
+  "sha256": {
+    "reading.html": "3ca31950230a09e12dd6ad75597ec09569f65a938f0a06991e16da71bdf2a54a",
+    "reading.pdf": "6106ee8e3cdaf90ec79ac7108c009ebfabe3db3c90e34264f49e964e511edf05",
+    "paper.svg": "5f23d3f24b31a44f645e7115e3656d04f78f5f603c16cfe15019715468997667",
+    "paper.pdf": "99fd9695bc468ad2f748ab4ffba9461a8ff1f392f5abc7667a03b3f4cef2b3bd"
+  }
+}

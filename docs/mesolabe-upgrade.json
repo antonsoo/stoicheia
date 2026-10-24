@@ -1,0 +1,83 @@
+{
+  "oldEdition": "f0e096ed1f5055a9cdfaba14c15c910b4bc78239643c41eb3d783d645e4b7351",
+  "newEdition": "b08bd16e272efe51de15fed3f29837de7ea7100632aa05fca7a1b66294b9a1f8",
+  "scope": "Existing four-room tab, new five-room tab, held new image, failed-and-retried install, origin-disabled navigation",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "failedAndRecovered": false,
+      "heldImage": "sources/mesolabe/eutocius-102.jpg",
+      "heldRequests": 1,
+      "pendingStatus": "Saving this edition for offline reading…",
+      "oldActiveEditionWhileHeld": "f0e096ed1f5055a9cdfaba14c15c910b4bc78239643c41eb3d783d645e4b7351",
+      "existingTabReloadOffer": true,
+      "oldTabReloadsNewCourseOffline": true,
+      "newRoomPreservesFactorOffline": 3,
+      "sourceSha256": "36ad55389fedbfad28139fad3f3934ab50241ebc214ed12f00cffeea11c6544e",
+      "caches": [
+        {
+          "name": "stoicheia-b08bd16e272efe51de15fed3f29837de7ea7100632aa05fca7a1b66294b9a1f8",
+          "count": 104
+        }
+      ],
+      "errors": []
+    },
+    {
+      "browser": "chromium",
+      "failedAndRecovered": true,
+      "heldImage": "sources/mesolabe/eutocius-102.jpg",
+      "heldRequests": 1,
+      "pendingStatus": "Saving this edition for offline reading…",
+      "oldActiveEditionWhileHeld": "f0e096ed1f5055a9cdfaba14c15c910b4bc78239643c41eb3d783d645e4b7351",
+      "existingTabReloadOffer": true,
+      "oldTabReloadsNewCourseOffline": true,
+      "newRoomPreservesFactorOffline": 3,
+      "sourceSha256": "36ad55389fedbfad28139fad3f3934ab50241ebc214ed12f00cffeea11c6544e",
+      "caches": [
+        {
+          "name": "stoicheia-b08bd16e272efe51de15fed3f29837de7ea7100632aa05fca7a1b66294b9a1f8",
+          "count": 104
+        }
+      ],
+      "errors": []
+    },
+    {
+      "browser": "firefox",
+      "failedAndRecovered": false,
+      "heldImage": "sources/mesolabe/eutocius-102.jpg",
+      "heldRequests": 1,
+      "pendingStatus": "Saving this edition for offline reading…",
+      "oldActiveEditionWhileHeld": "f0e096ed1f5055a9cdfaba14c15c910b4bc78239643c41eb3d783d645e4b7351",
+      "existingTabReloadOffer": true,
+      "oldTabReloadsNewCourseOffline": true,
+      "newRoomPreservesFactorOffline": 3,
+      "sourceSha256": "36ad55389fedbfad28139fad3f3934ab50241ebc214ed12f00cffeea11c6544e",
+      "caches": [
+        {
+          "name": "stoicheia-b08bd16e272efe51de15fed3f29837de7ea7100632aa05fca7a1b66294b9a1f8",
+          "count": 104
+        }
+      ],
+      "errors": []
+    },
+    {
+      "browser": "firefox",
+      "failedAndRecovered": true,
+      "heldImage": "sources/mesolabe/eutocius-102.jpg",
+      "heldRequests": 1,
+      "pendingStatus": "Saving this edition for offline reading…",
+      "oldActiveEditionWhileHeld": "f0e096ed1f5055a9cdfaba14c15c910b4bc78239643c41eb3d783d645e4b7351",
+      "existingTabReloadOffer": true,
+      "oldTabReloadsNewCourseOffline": true,
+      "newRoomPreservesFactorOffline": 3,
+      "sourceSha256": "36ad55389fedbfad28139fad3f3934ab50241ebc214ed12f00cffeea11c6544e",
+      "caches": [
+        {
+          "name": "stoicheia-b08bd16e272efe51de15fed3f29837de7ea7100632aa05fca7a1b66294b9a1f8",
+          "count": 104
+        }
+      ],
+      "errors": []
+    }
+  ]
+}
