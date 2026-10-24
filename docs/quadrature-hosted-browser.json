@@ -1,0 +1,240 @@
+{
+  "checkedAt": "2026-10-24T03:14:05.941Z",
+  "mode": "hosted",
+  "base": "https://antonsoo.github.io/stoicheia/",
+  "workerSha256": "48f36b88b043654400fd9b0b85971cf69373f6eb3c09e9a4ae383fc4b2e9fe44",
+  "configurations": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 1440,
+      "lockedPerimeter": true,
+      "invalidComplementRejected": true,
+      "squareBranch": true,
+      "swappedInputs": true,
+      "rigidMoveKeyboard": true,
+      "commonSquareSubtracted": true,
+      "historyRestored": true,
+      "sectionNavigationPreservesState": true,
+      "sourceZoom": true,
+      "passageQuestions": true,
+      "readingBytes": 4572026,
+      "sourceImages": [
+        {
+          "width": 1146,
+          "hash": "7dd25435355891b93f441f840eba93484c68024f2ecce8fa06a5e6d06ff1928d"
+        },
+        {
+          "width": 1146,
+          "hash": "9bfdd993c503aa3e4ab8795675b8c4fa88004158f2f29d07a25782aaf6e4d019"
+        },
+        {
+          "width": 1146,
+          "hash": "eba385c54a559688de59a4523fcfb6c945d7065ba263d64e93d771ca1ff74f55"
+        },
+        {
+          "width": 1146,
+          "hash": "e35e91ff595c6cdaf04e44d03de874bb5e64bb8b98cdf79f8e25e252b9c4c57e"
+        },
+        {
+          "width": 1146,
+          "hash": "fd00434ac94864f3e696b64185fe85f83a687b2f808337129af5525e094fd586"
+        },
+        {
+          "width": 1146,
+          "hash": "607c943e21f41ed47cc602952162399a364fa43550e3fd96772b312585b33f56"
+        },
+        {
+          "width": 1146,
+          "hash": "9426a102cdf09c64202edfe56007f1a0b31f226ffa4ed4ec1ca7b7bab6cdfeb0"
+        },
+        {
+          "width": 1146,
+          "hash": "adb96e10b64b96025d8a9cb98bd92a4a5f5df64cfb0ca52f487ca5e1db84e454"
+        }
+      ],
+      "embeddedCsvMatches": true,
+      "offlineRooms": ["index.html", "triangle.html", "quadrature.html"],
+      "offlineMethod": "Browser context offline mode; public origin not controlled",
+      "standaloneSvgOpened": true,
+      "axeViolations": 0,
+      "pageErrors": [],
+      "externalRequests": [],
+      "csp": []
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "lockedPerimeter": true,
+      "invalidComplementRejected": true,
+      "squareBranch": true,
+      "swappedInputs": true,
+      "rigidMoveKeyboard": true,
+      "commonSquareSubtracted": true,
+      "historyRestored": true,
+      "sectionNavigationPreservesState": true,
+      "sourceZoom": true,
+      "passageQuestions": true,
+      "readingBytes": 4572026,
+      "sourceImages": [
+        {
+          "width": 1146,
+          "hash": "7dd25435355891b93f441f840eba93484c68024f2ecce8fa06a5e6d06ff1928d"
+        },
+        {
+          "width": 1146,
+          "hash": "9bfdd993c503aa3e4ab8795675b8c4fa88004158f2f29d07a25782aaf6e4d019"
+        },
+        {
+          "width": 1146,
+          "hash": "eba385c54a559688de59a4523fcfb6c945d7065ba263d64e93d771ca1ff74f55"
+        },
+        {
+          "width": 1146,
+          "hash": "e35e91ff595c6cdaf04e44d03de874bb5e64bb8b98cdf79f8e25e252b9c4c57e"
+        },
+        {
+          "width": 1146,
+          "hash": "fd00434ac94864f3e696b64185fe85f83a687b2f808337129af5525e094fd586"
+        },
+        {
+          "width": 1146,
+          "hash": "607c943e21f41ed47cc602952162399a364fa43550e3fd96772b312585b33f56"
+        },
+        {
+          "width": 1146,
+          "hash": "9426a102cdf09c64202edfe56007f1a0b31f226ffa4ed4ec1ca7b7bab6cdfeb0"
+        },
+        {
+          "width": 1146,
+          "hash": "adb96e10b64b96025d8a9cb98bd92a4a5f5df64cfb0ca52f487ca5e1db84e454"
+        }
+      ],
+      "embeddedCsvMatches": true,
+      "offlineRooms": ["index.html", "triangle.html", "quadrature.html"],
+      "offlineMethod": "Browser context offline mode; public origin not controlled",
+      "standaloneSvgOpened": true,
+      "axeViolations": 0,
+      "pageErrors": [],
+      "externalRequests": [],
+      "csp": []
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 1440,
+      "lockedPerimeter": true,
+      "invalidComplementRejected": true,
+      "squareBranch": true,
+      "swappedInputs": true,
+      "rigidMoveKeyboard": true,
+      "commonSquareSubtracted": true,
+      "historyRestored": true,
+      "sectionNavigationPreservesState": true,
+      "sourceZoom": true,
+      "passageQuestions": true,
+      "readingBytes": 4572026,
+      "sourceImages": [
+        {
+          "width": 1146,
+          "hash": "7dd25435355891b93f441f840eba93484c68024f2ecce8fa06a5e6d06ff1928d"
+        },
+        {
+          "width": 1146,
+          "hash": "9bfdd993c503aa3e4ab8795675b8c4fa88004158f2f29d07a25782aaf6e4d019"
+        },
+        {
+          "width": 1146,
+          "hash": "eba385c54a559688de59a4523fcfb6c945d7065ba263d64e93d771ca1ff74f55"
+        },
+        {
+          "width": 1146,
+          "hash": "e35e91ff595c6cdaf04e44d03de874bb5e64bb8b98cdf79f8e25e252b9c4c57e"
+        },
+        {
+          "width": 1146,
+          "hash": "fd00434ac94864f3e696b64185fe85f83a687b2f808337129af5525e094fd586"
+        },
+        {
+          "width": 1146,
+          "hash": "607c943e21f41ed47cc602952162399a364fa43550e3fd96772b312585b33f56"
+        },
+        {
+          "width": 1146,
+          "hash": "9426a102cdf09c64202edfe56007f1a0b31f226ffa4ed4ec1ca7b7bab6cdfeb0"
+        },
+        {
+          "width": 1146,
+          "hash": "adb96e10b64b96025d8a9cb98bd92a4a5f5df64cfb0ca52f487ca5e1db84e454"
+        }
+      ],
+      "embeddedCsvMatches": true,
+      "offlineRooms": ["index.html", "triangle.html", "quadrature.html"],
+      "offlineMethod": "Browser context offline mode; public origin not controlled",
+      "standaloneSvgOpened": true,
+      "axeViolations": 0,
+      "pageErrors": [],
+      "externalRequests": [],
+      "csp": []
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 375,
+      "lockedPerimeter": true,
+      "invalidComplementRejected": true,
+      "squareBranch": true,
+      "swappedInputs": true,
+      "rigidMoveKeyboard": true,
+      "commonSquareSubtracted": true,
+      "historyRestored": true,
+      "sectionNavigationPreservesState": true,
+      "sourceZoom": true,
+      "passageQuestions": true,
+      "readingBytes": 4572026,
+      "sourceImages": [
+        {
+          "width": 1146,
+          "hash": "7dd25435355891b93f441f840eba93484c68024f2ecce8fa06a5e6d06ff1928d"
+        },
+        {
+          "width": 1146,
+          "hash": "9bfdd993c503aa3e4ab8795675b8c4fa88004158f2f29d07a25782aaf6e4d019"
+        },
+        {
+          "width": 1146,
+          "hash": "eba385c54a559688de59a4523fcfb6c945d7065ba263d64e93d771ca1ff74f55"
+        },
+        {
+          "width": 1146,
+          "hash": "e35e91ff595c6cdaf04e44d03de874bb5e64bb8b98cdf79f8e25e252b9c4c57e"
+        },
+        {
+          "width": 1146,
+          "hash": "fd00434ac94864f3e696b64185fe85f83a687b2f808337129af5525e094fd586"
+        },
+        {
+          "width": 1146,
+          "hash": "607c943e21f41ed47cc602952162399a364fa43550e3fd96772b312585b33f56"
+        },
+        {
+          "width": 1146,
+          "hash": "9426a102cdf09c64202edfe56007f1a0b31f226ffa4ed4ec1ca7b7bab6cdfeb0"
+        },
+        {
+          "width": 1146,
+          "hash": "adb96e10b64b96025d8a9cb98bd92a4a5f5df64cfb0ca52f487ca5e1db84e454"
+        }
+      ],
+      "embeddedCsvMatches": true,
+      "offlineRooms": ["index.html", "triangle.html", "quadrature.html"],
+      "offlineMethod": "Browser context offline mode; public origin not controlled",
+      "standaloneSvgOpened": true,
+      "axeViolations": 0,
+      "pageErrors": [],
+      "externalRequests": [],
+      "csp": []
+    }
+  ]
+}

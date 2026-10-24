@@ -35,8 +35,8 @@ exercises and the original pages 50–53 complete the sequential course through 
 
 ## A square, with nothing added
 
-The new **II.14 workshop** turns a rectangle into a square of equal area. It is
-available in this checkout at `quadrature.html`; publication is under review.
+The **[II.14 workshop](https://antonsoo.github.io/stoicheia/quadrature.html)** turns
+a rectangle into a square of equal area.
 
 A 9 by 4 rectangle has area 36. Averaging its sides gives 6.5, whose square
 has area 42.25. Euclid's semicircle instead gives side 6. Move the rectangle's

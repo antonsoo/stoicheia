@@ -109,5 +109,20 @@ browser offline mode and do not claim control of GitHub's origin.
 
 ## Publication
 
-Local source and build are reviewed. Public byte and workflow verification will
-be recorded after the reviewed edition is pushed.
+The [public workshop](https://antonsoo.github.io/stoicheia/quadrature.html) was
+published from source `2ae6d9c`, runtime `af8df7d`, by Pages commit `24967cc`.
+The source and Pages updates are ordinary descendants of their previous
+commits; earlier hashed assets remain available for cached readers.
+
+A [fresh Node 24 installation](quadrature-clean-build.json) reproduced all
+77 production files byte for byte. The [public file comparison](quadrature-hosted-files.json)
+then matched every SHA-256 to that build. The separate
+[public browser workflow](quadrature-hosted-browser.json) passed in Chromium and
+Firefox at both widths, including actual downloads, local opening of the saved
+files and traversal of all three rooms in browser offline mode. The stronger
+origin-unavailable check is the local one described above.
+
+Reproduce the public comparison and workflow with
+`node scripts/quadrature-hosted.mjs OUTPUT`. The production command is
+`npm run build`, output `dist/`, base `/stoicheia/`. A matching HTTP status alone
+is not treated as evidence of the intended edition.
