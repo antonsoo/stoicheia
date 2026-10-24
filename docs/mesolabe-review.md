@@ -161,6 +161,22 @@ only the initial claim; all after-repair cases reload with origin sockets
 disabled. [Sixteen unmodified cold navigation runs](mesolabe-cold-navigation.json)
 also reached verified readiness, eight in each engine.
 
+## Clean Node 24 checkout and development quickstart
+
+A fresh local Git clone of `36a4ebc` was installed with **Node 24.21.0**.
+`npm ci`, `npm run check` and `npm run verify:mesolabe` passed. The clone
+remained clean. All **105 production files**, including `sw.js`, match the
+browser-reviewed bytes above. The precache contains 104 files because the
+worker does not cache itself. [Clean-build receipt](mesolabe-clean-build.json).
+
+The documented `npm run dev` was served from that fresh clone. Both browser
+engines exercised the existing course quickstart and the new workshop,
+including keyboard movement, original page 111, and an actual saved trial
+reading containing all twelve source images. Development registered no
+service worker, as intended. [Development receipt](mesolabe-development.json).
+This was a local clone of unpublished commits, not a claim about the public
+GitHub checkout or hosted bytes.
+
 ## Visual review and practical limits
 
 Actual screenshots were inspected in both engines and both widths. The

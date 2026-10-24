@@ -1,0 +1,44 @@
+{
+  "course": {
+    "scope": "Documented development quickstart",
+    "configurations": [
+      {
+        "browser": "chromium",
+        "version": "153.0.8010.12",
+        "display": "grid",
+        "ink": "rgb(25, 61, 96)",
+        "fontLoaded": true,
+        "mode": "Development preview",
+        "errors": []
+      },
+      {
+        "browser": "firefox",
+        "version": "155.0",
+        "display": "grid",
+        "ink": "rgb(25, 61, 96)",
+        "fontLoaded": true,
+        "mode": "Development preview",
+        "errors": []
+      }
+    ]
+  },
+  "workshop": {
+    "scope": "Fresh Node 24 development quickstart; mesolabe controls, source reader and actual trial HTML export",
+    "configurations": [
+      {
+        "browser": "chromium",
+        "developmentMode": true,
+        "workerRegistrations": 0,
+        "trialExportSourceImages": 12,
+        "errors": []
+      },
+      {
+        "browser": "firefox",
+        "developmentMode": true,
+        "workerRegistrations": 0,
+        "trialExportSourceImages": 12,
+        "errors": []
+      }
+    ]
+  }
+}
