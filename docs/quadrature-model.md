@@ -6,15 +6,15 @@ construction, a rearrangement and the complete Greek/Latin argument.
 
 ## Source, scope and transcription
 
-J. L. Heiberg, *Euclidis opera omnia*, vol. I, Leipzig: Teubner, 1883. The full
+J. L. Heiberg, _Euclidis opera omnia_, vol. I, Leipzig: Teubner, 1883. The full
 PDF is the [University of Toronto scan](https://archive.org/details/euclidisoperaomn01eucluoft),
 SHA-256 `da285c581c2dda86e2b25e20db3ce604bf6fb8765228fcd71cfc89d47a9d1c17`.
 
-| Passage | Printed pages | PDF pages, one-based | Archive leaves |
-| --- | --- | --- | --- |
-| II.14, complete | 160–163 | 174–177 | 174–177 |
-| II.5, statement | 128–129 | 142–143 | 142–143 |
-| I.47, statement | 110–111 | 124–125 | 124–125 |
+| Passage         | Printed pages | PDF pages, one-based | Archive leaves |
+| --------------- | ------------- | -------------------- | -------------- |
+| II.14, complete | 160–163       | 174–177              | 174–177        |
+| II.5, statement | 128–129       | 142–143              | 142–143        |
+| I.47, statement | 110–111       | 124–125              | 124–125        |
 
 The Archive's `scandata.zip` / `scandata.xml` confirms the leaf mappings. All
 eight images were inspected at their original rendered size. They are full-page
@@ -60,8 +60,9 @@ h = sqrt(r*r - d*d)
 
 The implementation obtains h from that circle intersection, separately from
 the product ab used to compare the areas. The drawing uses equal scales on both
-axes. Near-equal sides can make Η and Ε almost coincide; their labels lie on
-opposite sides of the baseline. Exact equality is detected from the integer
+axes. Near-equal sides can make Η and Ε almost coincide; their labels use
+opposite horizontal offsets to keep the names distinct. Very thin rectangles
+put the lengths below the figure rather than crowding the narrow side. Exact equality is detected from the integer
 inputs: the source finishes at the given square and skips the semicircle.
 
 II.5 gives `ab + d*d = r*r`. The equal radii ΗΖ and ΗΘ identify the latter square
@@ -69,11 +70,11 @@ with the hypotenuse-square of ΗΕΘ. I.47 gives `h*h + d*d = r*r`. Subtraction 
 `ab = h*h`. The arithmetic mean r preserves perimeter but adds `d*d` of area.
 The geometric mean h preserves area but generally changes perimeter.
 
-| Chosen rectangle | Area | Perimeter | Constructed side | Half-sum square area |
-| --- | ---: | ---: | ---: | ---: |
-| 9 by 4 | 36 | 26 | 6 | 42.25 |
-| 11 by 2 | 22 | 26 | sqrt(22) | 42.25 |
-| 6.5 by 6.5 | 42.25 | 26 | 6.5 | 42.25 |
+| Chosen rectangle |  Area | Perimeter | Constructed side | Half-sum square area |
+| ---------------- | ----: | --------: | ---------------: | -------------------: |
+| 9 by 4           |    36 |        26 |                6 |                42.25 |
+| 11 by 2          |    22 |        26 |         sqrt(22) |                42.25 |
+| 6.5 by 6.5       | 42.25 |        26 |              6.5 |                42.25 |
 
 Lengths and areas use arbitrary drawing units. Six-place readouts are
 approximations where the square root is irrational. The CSV distinguishes the

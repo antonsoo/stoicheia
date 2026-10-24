@@ -1,6 +1,6 @@
 # Stoicheia
 
-Read Euclid’s opening arguments in Greek, Latin and English, with a working diagram beside every step.
+Read Euclid in Greek, Latin and English, with working diagrams, construction workshops and the original printed pages.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-193d60)](LICENSE)
 [![Read the course](https://img.shields.io/badge/read-the_course-193d60)](https://antonsoo.github.io/stoicheia/)
@@ -22,7 +22,7 @@ geometry and is beginning Greek or Latin.
 [Source repository](https://github.com/antonsoo/stoicheia). The app is a static
 site; no package registry installation is required.
 
-**New reading: [shorter route, larger angle](https://antonsoo.github.io/stoicheia/#p=21&s=9&m=55).**
+**[Shorter route, larger angle](https://antonsoo.github.io/stoicheia/#p=21&s=9&m=55).**
 Move an interior meeting point to compare the outer route with the two segments
 inside it. Follow the intermediate route Β–Ε–Γ through two applications of I.20
 and two of I.16. Each conclusion has its own proof. The individual-leg readouts
@@ -32,6 +32,36 @@ Ten complete Greek/Latin/English steps, two position controls, two passage
 exercises and the original pages 50–53 complete the sequential course through I.21.
 [Model and review](docs/nested-review.md) · [Saved study](examples/stoicheia-I21-study.html) ·
 [Printed study](examples/stoicheia-I21-study.pdf).
+
+## A square, with nothing added
+
+The new **II.14 workshop** turns a rectangle into a square of equal area. It is
+available in this checkout at `quadrature.html`; publication is under review.
+
+A 9 by 4 rectangle has area 36. Averaging its sides gives 6.5, whose square
+has area 42.25. Euclid's semicircle instead gives side 6. Move the rectangle's
+two pieces to see the missing 6.25-unit corner, then follow two accounts of
+the same area and subtract the square they share.
+
+![The equal-area construction, with a square on the semicircle's height](docs/assets/quadrature-desktop.png)
+- Change both sides or hold the perimeter fixed; inspect the already-square
+  branch and the difference between equal area and equal perimeter.
+- Read the complete II.14 in Greek, Heiberg's Latin and new English, with eleven
+  reading notes and four source-based questions. Compare the Greek prose with
+  the equations used by the nineteenth-century Latin translator.
+- Inspect eight full printed pages. Save the construction, complete reading,
+  font and all scans as one portable HTML file, or export SVG and CSV.
+- Follow the linked course and I.22 construction offline with the new room.
+
+The workshop implements the rectangle case, with I.45's earlier conversion of
+an arbitrary rectilinear figure stated as a prerequisite. The moving pieces
+are a modern illustration of the II.5 relation.
+
+[Source and model](docs/quadrature-model.md) · [Review](docs/quadrature-review.md) ·
+[Saved reading](examples/stoicheia-II14-reading.html) ·
+[Printable reading](examples/stoicheia-II14-reading.pdf) ·
+[Construction SVG](examples/stoicheia-II14-construction.svg) ·
+[Measurements](examples/stoicheia-II14-measurements.csv).
 
 ## Three lengths: can they close?
 

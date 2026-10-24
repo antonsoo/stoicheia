@@ -1,0 +1,9 @@
+{
+  "counts": {
+    "construction": 22801,
+    "piece": 505
+  },
+  "maxHeightError": 3.552713678800501e-15,
+  "maxRigidPieceAreaError": 6.583622536027178e-14,
+  "method": "Exact integer difference of squares; independent Decimal circle intersection; shoelace area and all rigid side lengths."
+}

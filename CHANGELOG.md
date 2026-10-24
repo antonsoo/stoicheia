@@ -159,3 +159,17 @@
   while an asynchronous save runs, even if the reader changes lessons.
 - Identify the original crop on source page 6 in its saved caption. Keep the
   facsimiles on printable pages with physical margins.
+
+## Equal-area square · 2026-10-23
+
+- Construct the rectangle case of II.14 with a semicircle, preserving the source's
+  early exit when the input is already square.
+- Compare equal area and equal perimeter; move a rigid two-piece rearrangement
+  to reveal the extra square introduced by using the arithmetic average.
+- Follow II.5 and I.47 as two accounts of the same area, then remove the common
+  square. Keep a fixed perimeter while changing the rectangle's proportions.
+- Read the complete Greek and Heiberg Latin with new English, eleven language
+  notes, four passage questions and eight complete source pages.
+- Save an illustrated reading with verified scans and fonts, an embedded CSV,
+  and separately downloadable SVG and measurements. Include the third room
+  in the complete offline edition and navigation from the earlier pages.
