@@ -23,7 +23,7 @@ let busy = false;
 let invalidLength = false;
 
 el("#app").innerHTML = `
-  <header class="cl-header"><a class="cl-brand" href="./">Stoicheia <span lang="grc">ΣΤΟΙΧΕΙΑ</span></a><nav aria-label="Workshop navigation"><a href="./#p=20&s=8">I.20 · Why two sides exceed one</a><a href="#reading">Read I.22</a><a href="#evidence">Printed evidence</a></nav></header>
+  <header class="cl-header"><a class="cl-brand" href="./">Stoicheia <span lang="grc">ΣΤΟΙΧΕΙΑ</span></a><nav aria-label="Workshop navigation"><a href="./quadrature.html">II.14 · An equal-area square</a><a href="./#p=20&s=8">I.20 · Why two sides exceed one</a><a href="#reading">Read I.22</a><a href="#evidence">Printed evidence</a></nav></header>
   <main>
     <section class="cl-intro"><div><p class="cl-kicker">BOOK I / PROPOSITION 22 / A CONSTRUCTION LAB</p><h1>Three lengths.<br/>Can they close?</h1></div><div><p>Two circles can miss by being too far apart.<br/>They can also miss by being <em>too close.</em></p><p>Keep three lengths independent. Try the hinges, find the crossings, then read the condition Euclid puts before his construction.</p></div></section>
     <section id="workshop" class="cl-workshop" aria-label="Triangle construction" tabindex="-1">

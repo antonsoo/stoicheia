@@ -23,6 +23,7 @@ export default defineConfig(async ({ command }) => {
     ...(await filesIn("public")),
     "index.html",
     "triangle.html",
+    "quadrature.html",
     "LICENSE",
     "vite.config.ts",
     "tsconfig.json",
@@ -58,7 +59,11 @@ export default defineConfig(async ({ command }) => {
   }
   return {
     base,
-    build: { rollupOptions: { input: { reader: "index.html", triangle: "triangle.html" } } },
+    build: {
+      rollupOptions: {
+        input: { reader: "index.html", triangle: "triangle.html", quadrature: "quadrature.html" },
+      },
+    },
     define: {
       __STOICHEIA_EDITION__: JSON.stringify(edition),
       __STOICHEIA_STUDY_FILES__: JSON.stringify(studyFiles),
