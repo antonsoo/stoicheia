@@ -40,6 +40,18 @@ function inspectWorker(worker: ServiceWorker): Promise<EditionReply | null> {
 }
 
 export function prepareOffline(status: HTMLElement, reload: HTMLButtonElement): void {
+  if (import.meta.env.DEV) {
+    status.textContent =
+      "Development preview · offline saving is available in the production build.";
+    reload.hidden = true;
+    return;
+  }
+  if (!("serviceWorker" in navigator)) {
+    status.textContent =
+      "Offline saving is unavailable in this browser. You can save an illustrated reading.";
+    reload.hidden = true;
+    return;
+  }
   const container = navigator.serviceWorker;
   let registration: ServiceWorkerRegistration | undefined;
   let revision = 0;

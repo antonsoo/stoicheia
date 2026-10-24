@@ -24,6 +24,7 @@ export default defineConfig(async ({ command }) => {
     "index.html",
     "triangle.html",
     "quadrature.html",
+    "gnomon.html",
     "LICENSE",
     "vite.config.ts",
     "tsconfig.json",
@@ -61,7 +62,12 @@ export default defineConfig(async ({ command }) => {
     base,
     build: {
       rollupOptions: {
-        input: { reader: "index.html", triangle: "triangle.html", quadrature: "quadrature.html" },
+        input: {
+          reader: "index.html",
+          triangle: "triangle.html",
+          quadrature: "quadrature.html",
+          gnomon: "gnomon.html",
+        },
       },
     },
     define: {

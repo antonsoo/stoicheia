@@ -1,0 +1,381 @@
+.gn-workbench {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  border: 1px solid #b7c8d6;
+  background: #f9fbfd;
+}
+.gn-plate {
+  padding: 24px;
+  min-width: 0;
+}
+.gn-plate svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.gn-controls {
+  border-left: 1px solid #b7c8d6;
+  padding: 24px;
+}
+.gn-controls label {
+  display: block;
+  margin: 12px 0;
+}
+.gn-controls input[type="range"] {
+  width: 100%;
+  accent-color: #193d60;
+  min-height: 40px;
+}
+.gn-controls input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #8aa4bd;
+  background: #fff;
+  color: #193d60;
+  font: inherit;
+}
+.gn-controls input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.gn-controls output {
+  font-variant-numeric: tabular-nums;
+}
+.gn-status {
+  grid-column: 1 / -1;
+  border-top: 1px solid #b7c8d6;
+  padding: 18px 24px;
+  background: #deebe4;
+  margin: 0;
+}
+.gn-status[data-valid="false"] {
+  background: #f6e6d2;
+  color: #633b1d;
+}
+.gn-status strong {
+  display: block;
+  font:
+    1.2rem "Noto Serif",
+    Georgia,
+    serif;
+  margin-bottom: 6px;
+}
+.gn-stages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 16px 0;
+}
+.gn-stages button {
+  flex: 1 1 130px;
+  text-align: left;
+  min-height: 48px;
+}
+.gn-stages button[aria-pressed="true"] {
+  background: #193d60;
+  color: white;
+}
+.gn-stages button:disabled {
+  opacity: 0.48;
+}
+.gn-step-note {
+  min-height: 4em;
+  line-height: 1.7;
+}
+.gn-table {
+  overflow: auto;
+  margin: 24px 0;
+}
+.gn-table table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.gn-table caption {
+  text-align: left;
+  font-weight: 650;
+  padding: 12px 0;
+}
+.gn-table th,
+.gn-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #b7c8d6;
+  min-width: 90px;
+}
+.gn-table thead {
+  background: #dce7ef;
+}
+.gn-table tbody th {
+  font-weight: 500;
+}
+.gn-line,
+.gn-diagonal,
+.gn-outline,
+.gn-final {
+  stroke: #516c83;
+  stroke-width: 1.5;
+  fill: none;
+  vector-effect: non-scaling-stroke;
+}
+.gn-diagonal {
+  stroke: #875029;
+  stroke-dasharray: 6 4;
+}
+.gn-outline {
+  fill: #f9fbfd;
+}
+.gn-final {
+  stroke: #32654d;
+  stroke-width: 3;
+}
+.gn-complement-a {
+  fill: #abc2d6;
+  fill-opacity: 0.7;
+  stroke: #355e80;
+  stroke-width: 1.5;
+}
+.gn-complement-b {
+  fill: #a7c8b3;
+  fill-opacity: 0.75;
+  stroke: #32654d;
+  stroke-width: 1.5;
+}
+.gn-half-a {
+  fill: #dbe8f2;
+}
+.gn-half-b {
+  fill: #d5e5dc;
+}
+.gn-pair-1 {
+  fill: #d8b9a4;
+  stroke: #875029;
+  stroke-width: 1;
+}
+.gn-pair-2 {
+  fill: #c7bed9;
+  stroke: #68528b;
+  stroke-width: 1;
+}
+.gn-removed {
+  fill-opacity: 0.09;
+  stroke-dasharray: 3 3;
+  stroke-opacity: 0.35;
+}
+.gn-common {
+  fill: #dbc6a7;
+  fill-opacity: 0.65;
+  stroke: #875029;
+  stroke-width: 1;
+}
+.gn-rectangle {
+  fill: #abc2d6;
+  fill-opacity: 0.4;
+  stroke: #355e80;
+  stroke-width: 2;
+  stroke-dasharray: 7 3;
+}
+.gn-missing {
+  fill: #e0b784;
+  stroke: #875029;
+  stroke-width: 2;
+}
+.gn-label {
+  font:
+    20px "Noto Serif",
+    Georgia,
+    serif;
+  fill: #193d60;
+}
+.gn-caption {
+  font:
+    11px system-ui,
+    sans-serif;
+  fill: #46627b;
+}
+.gn-point {
+  fill: #875029;
+}
+.gn-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  font-size: 0.88rem;
+}
+.gn-legend span {
+  border-left: 5px solid #355e80;
+  padding-left: 8px;
+}
+.gn-legend span + span {
+  border-color: #32654d;
+}
+.gn-reading-book {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.gn-reading-book button[aria-pressed="true"] {
+  background: #193d60;
+  color: white;
+}
+.gn-evidence {
+  padding: 22px;
+  border-left: 3px solid #875029;
+  background: #f9fbfd;
+}
+.gn-evidence h3 {
+  margin-top: 0;
+}
+.gn-full-passage {
+  padding: 18px 0;
+  border-bottom: 1px solid #b7c8d6;
+}
+.gn-full-passage p[lang] {
+  font:
+    1.05rem / 1.9 "Noto Serif",
+    Georgia,
+    serif;
+}
+.gn-license {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 0.75rem;
+}
+.gn-source-sheet {
+  margin: 32px 0;
+  break-inside: avoid;
+}
+.gn-source-sheet img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: contain;
+}
+.gn-source-sheet figcaption {
+  overflow-wrap: anywhere;
+  font-size: 0.8rem;
+  margin: 10px 0;
+}
+.gn-saved {
+  max-width: 980px;
+  margin: auto;
+  padding: 32px;
+}
+.gn-saved h1 {
+  font-size: 2.5rem;
+}
+.gn-saved svg {
+  max-width: 100%;
+  height: auto;
+}
+.gn-saved section {
+  margin: 35px 0;
+}
+.gn-saved h2,
+.gn-saved h3 {
+  break-after: avoid;
+}
+.gn-saved figure {
+  margin: 20px 0;
+}
+.gn-saved p[lang] {
+  font-family: "Noto Serif", Georgia, serif;
+}
+@media (max-width: 800px) {
+  .gn-workbench {
+    grid-template-columns: 1fr;
+  }
+  .gn-controls {
+    border-left: 0;
+    border-top: 1px solid #b7c8d6;
+  }
+  .gn-plate {
+    padding: 12px;
+  }
+  .gn-step-note {
+    min-height: 0;
+  }
+  .gn-table table {
+    font-size: 0.82rem;
+  }
+  .gn-label {
+    font-size: 18px;
+  }
+  .gn-saved {
+    padding: 20px;
+  }
+  .gn-saved h1 {
+    font-size: 2rem;
+  }
+}
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm 12mm;
+  }
+  .gn-saved {
+    max-width: none;
+    padding: 0;
+    background: white;
+    color: #193d60;
+    font-size: 10pt;
+  }
+  .gn-saved h1 {
+    font-size: 26pt;
+  }
+  .gn-saved section {
+    margin: 20px 0;
+  }
+  .gn-saved svg {
+    max-height: 100mm;
+  }
+  .gn-source-sheet {
+    break-before: page;
+  }
+  .gn-source-sheet img {
+    max-height: 232mm;
+    width: auto;
+    max-width: 100%;
+    margin: auto;
+  }
+  .gn-source-sheet figcaption {
+    font-size: 8pt;
+  }
+  .gn-full-passage {
+    break-inside: avoid;
+  }
+  .gn-license {
+    font-size: 7pt;
+  }
+  .gn-table {
+    overflow: visible;
+  }
+  .gn-table table {
+    font-size: 9pt;
+  }
+}
+
+.gn-rectangle-outline {
+  fill: none;
+  stroke: #355e80;
+  stroke-width: 2;
+  stroke-dasharray: 7 3;
+  vector-effect: non-scaling-stroke;
+}
+.gn-saved h1 {
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  margin: 0.6em 0;
+}
+@media print {
+  .gn-saved svg {
+    max-height: 75mm;
+  }
+  .gn-saved .gn-table {
+    break-inside: avoid;
+  }
+}
