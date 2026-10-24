@@ -210,6 +210,16 @@ for (const [name, engine] of [
           assert.match(await page.locator("#gn-feedback").innerText(), /^Yes/);
           await page.locator("#gn-question-next").click();
         }
+        // Read the first facsimile before replacing it. Firefox reports an
+        // interrupted lazy JPEG as "corrupt or truncated" when rapid navigation
+        // cancels its request; waiting also verifies that this actual page decodes.
+        await page.locator("#gn-source-image").scrollIntoViewIfNeeded();
+        await page.waitForFunction(() => {
+          const image = document.querySelector("#gn-source-image");
+          return image.complete && image.naturalWidth > 0 && image.currentSrc === image.src;
+        });
+        await page.locator("#gn-source-image").evaluate((image) => image.decode());
+        assert.equal(await page.locator("#gn-source-image").evaluate((i) => i.naturalWidth), 987);
         await page.locator('[data-gn-page="131"]').first().click();
         await page.waitForFunction(() => {
           const i = document.querySelector("#gn-source-image");
@@ -331,6 +341,7 @@ for (const [name, engine] of [
           invalidLengthRejected: true,
           equalCutLimit: true,
           allStages: true,
+          initialSourceDecoded: true,
           sourceZoom: true,
           sectionHashPreserved: true,
           shared,

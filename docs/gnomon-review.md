@@ -120,5 +120,24 @@ includes formatting, strict TypeScript, 47 checks and the production build.
 
 ## Publication
 
-The local edition is reviewed. Public file and browser verification will be
-recorded after publication of this four-room build.
+The [four-room edition is public](https://antonsoo.github.io/stoicheia/gnomon.html).
+Source publication: `43b695f`; runtime reviewed from `39768c8`; Pages: `c7ffcbe`.
+A fresh Node 24 install reproduces all **89 files / 21,753,292 bytes** exactly
+([build receipt](gnomon-build.json)). All 89 public files match those SHA-256
+values ([hosted files](gnomon-hosted-files.json)).
+
+The [public browser journeys](gnomon-hosted-browser.json) pass in Chromium and
+Firefox at 1440 and 375 pixels: both arguments, all eighteen readings, keyboard,
+source enlargement, native SVG/CSV/HTML files and reopening the complete saved
+reading. The hosted offline observation uses browser context offline mode;
+it does not disable GitHub's origin. The stronger local origin-disabled and
+upgrade evidence is described above.
+
+An initial hosted Firefox run reported “Image corrupt or truncated” for page
+100 when switching to another source while that lazy JPEG was still loading.
+The diagnostic request failure was `NS_BINDING_ABORTED`; the hosted bytes
+matched and the selected replacement decoded. The final journey scrolls to
+and fully decodes the first facsimile before selecting the next, verifying both
+pages instead of canceling the first inspection. All final journeys record
+empty page/console error lists. This is a review-sequence change, not a claim
+that canceling an in-flight Firefox image cannot produce that diagnostic.

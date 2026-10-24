@@ -65,8 +65,8 @@ are a modern illustration of the II.5 relation.
 
 ## Equal leftovers, unequal shapes
 
-The new `gnomon.html` room follows the complete **I.43 and II.5** behind the
-extra-square relation. Publication is under review.
+The [equal-complements workshop](https://antonsoo.github.io/stoicheia/gnomon.html)
+follows the complete **I.43 and II.5** behind the extra-square relation.
 
 ![Equal complements in an oblique parallelogram, with the point constrained to its diagonal](docs/assets/gnomon-complements.png)
 

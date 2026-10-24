@@ -1,0 +1,355 @@
+{
+  "checkedAt": "2026-10-24T03:58:37.620Z",
+  "mode": "hosted",
+  "workerSha256": "34088c24886363b207106a7742c0fee8eeb6c0ab4349489cdecea7f2952534b4",
+  "configurations": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 1440,
+      "passages": 18,
+      "offDiagonalAreas": [
+        7.35,
+        25.35
+      ],
+      "smallPairsRemainEqual": true,
+      "shearPreservesAreas": true,
+      "historyRestored": true,
+      "invalidLengthRejected": true,
+      "equalCutLimit": true,
+      "allStages": true,
+      "initialSourceDecoded": true,
+      "sourceZoom": true,
+      "sectionHashPreserved": true,
+      "shared": "https://antonsoo.github.io/stoicheia/gnomon.html#u=35&v=35&h=40&d=1&s=3&a=90&b=40&g=5&book=II5&r=10",
+      "brokenUrl": "https://antonsoo.github.io/stoicheia/gnomon.html#u=35&v=65&h=20&d=0&s=0&a=90&b=40&g=0&book=I43&r=0",
+      "sourceImages": [
+        {
+          "width": 987,
+          "sha256": "b9d18a8d174fd2c11c69f01d87de2bfc73d37b0351c3399a482d59a3283c49e5"
+        },
+        {
+          "width": 987,
+          "sha256": "949d6904be83b4c8f6466234a838258f6b134219b11083a549cf2a5b92041c40"
+        },
+        {
+          "width": 987,
+          "sha256": "e5acc7493a0c0e17a4d263f9ba1c61060540481dbc5c3779d81c0b843e8d6a45"
+        },
+        {
+          "width": 987,
+          "sha256": "1749d48116a734dbf321d58181bb45b25d402ccf6a0aafb0e3622ddf39e583e0"
+        },
+        {
+          "width": 1146,
+          "sha256": "fd00434ac94864f3e696b64185fe85f83a687b2f808337129af5525e094fd586"
+        },
+        {
+          "width": 1146,
+          "sha256": "607c943e21f41ed47cc602952162399a364fa43550e3fd96772b312585b33f56"
+        },
+        {
+          "width": 987,
+          "sha256": "42c325f6ee342c8fe66664c72c8894fb7081154e30ebcc22d065070211dbeea6"
+        },
+        {
+          "width": 987,
+          "sha256": "5c64ca88b8f4a3683b42f35582d6212a9a4d19b79bf01e34275d07c0f28a4350"
+        },
+        {
+          "width": 987,
+          "sha256": "e988bb756dc52bbecf663355c23ce23e3a4508551d3a8b16b5272dd47ede705d"
+        },
+        {
+          "width": 987,
+          "sha256": "476dab15a5767e7b8692cf2aecaab20cf77ef43844efc54c11defcd22a466325"
+        }
+      ],
+      "readingBytes": 4229212,
+      "standaloneSvgsOpened": true,
+      "embeddedCsvMatches": true,
+      "renderedPolygonAreaRatios": {
+        "brokenAreas": [
+          0.12250001793358994,
+          0.42250008553725676
+        ],
+        "gnomonAreas": [
+          0.8520710285559172,
+          0.14792897144408285
+        ]
+      },
+      "offlineRooms": [
+        "index.html",
+        "triangle.html",
+        "quadrature.html",
+        "gnomon.html"
+      ],
+      "offlineMethod": "Browser context offline mode; public origin not controlled",
+      "axeViolations": 0,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "passages": 18,
+      "offDiagonalAreas": [
+        7.35,
+        25.35
+      ],
+      "smallPairsRemainEqual": true,
+      "shearPreservesAreas": true,
+      "historyRestored": true,
+      "invalidLengthRejected": true,
+      "equalCutLimit": true,
+      "allStages": true,
+      "initialSourceDecoded": true,
+      "sourceZoom": true,
+      "sectionHashPreserved": true,
+      "shared": "https://antonsoo.github.io/stoicheia/gnomon.html#u=35&v=35&h=40&d=1&s=3&a=90&b=40&g=5&book=II5&r=10",
+      "brokenUrl": "https://antonsoo.github.io/stoicheia/gnomon.html#u=35&v=65&h=20&d=0&s=0&a=90&b=40&g=0&book=I43&r=0",
+      "sourceImages": [
+        {
+          "width": 987,
+          "sha256": "b9d18a8d174fd2c11c69f01d87de2bfc73d37b0351c3399a482d59a3283c49e5"
+        },
+        {
+          "width": 987,
+          "sha256": "949d6904be83b4c8f6466234a838258f6b134219b11083a549cf2a5b92041c40"
+        },
+        {
+          "width": 987,
+          "sha256": "e5acc7493a0c0e17a4d263f9ba1c61060540481dbc5c3779d81c0b843e8d6a45"
+        },
+        {
+          "width": 987,
+          "sha256": "1749d48116a734dbf321d58181bb45b25d402ccf6a0aafb0e3622ddf39e583e0"
+        },
+        {
+          "width": 1146,
+          "sha256": "fd00434ac94864f3e696b64185fe85f83a687b2f808337129af5525e094fd586"
+        },
+        {
+          "width": 1146,
+          "sha256": "607c943e21f41ed47cc602952162399a364fa43550e3fd96772b312585b33f56"
+        },
+        {
+          "width": 987,
+          "sha256": "42c325f6ee342c8fe66664c72c8894fb7081154e30ebcc22d065070211dbeea6"
+        },
+        {
+          "width": 987,
+          "sha256": "5c64ca88b8f4a3683b42f35582d6212a9a4d19b79bf01e34275d07c0f28a4350"
+        },
+        {
+          "width": 987,
+          "sha256": "e988bb756dc52bbecf663355c23ce23e3a4508551d3a8b16b5272dd47ede705d"
+        },
+        {
+          "width": 987,
+          "sha256": "476dab15a5767e7b8692cf2aecaab20cf77ef43844efc54c11defcd22a466325"
+        }
+      ],
+      "readingBytes": 4229212,
+      "standaloneSvgsOpened": true,
+      "embeddedCsvMatches": true,
+      "renderedPolygonAreaRatios": {
+        "brokenAreas": [
+          0.12250001354493993,
+          0.4224999856257784
+        ],
+        "gnomonAreas": [
+          0.8520712072803627,
+          0.14792879271963733
+        ]
+      },
+      "offlineRooms": [
+        "index.html",
+        "triangle.html",
+        "quadrature.html",
+        "gnomon.html"
+      ],
+      "offlineMethod": "Browser context offline mode; public origin not controlled",
+      "axeViolations": 0,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 1440,
+      "passages": 18,
+      "offDiagonalAreas": [
+        7.35,
+        25.35
+      ],
+      "smallPairsRemainEqual": true,
+      "shearPreservesAreas": true,
+      "historyRestored": true,
+      "invalidLengthRejected": true,
+      "equalCutLimit": true,
+      "allStages": true,
+      "initialSourceDecoded": true,
+      "sourceZoom": true,
+      "sectionHashPreserved": true,
+      "shared": "https://antonsoo.github.io/stoicheia/gnomon.html#u=35&v=35&h=40&d=1&s=3&a=90&b=40&g=5&book=II5&r=10",
+      "brokenUrl": "https://antonsoo.github.io/stoicheia/gnomon.html#u=35&v=65&h=20&d=0&s=0&a=90&b=40&g=0&book=I43&r=0",
+      "sourceImages": [
+        {
+          "width": 987,
+          "sha256": "b9d18a8d174fd2c11c69f01d87de2bfc73d37b0351c3399a482d59a3283c49e5"
+        },
+        {
+          "width": 987,
+          "sha256": "949d6904be83b4c8f6466234a838258f6b134219b11083a549cf2a5b92041c40"
+        },
+        {
+          "width": 987,
+          "sha256": "e5acc7493a0c0e17a4d263f9ba1c61060540481dbc5c3779d81c0b843e8d6a45"
+        },
+        {
+          "width": 987,
+          "sha256": "1749d48116a734dbf321d58181bb45b25d402ccf6a0aafb0e3622ddf39e583e0"
+        },
+        {
+          "width": 1146,
+          "sha256": "fd00434ac94864f3e696b64185fe85f83a687b2f808337129af5525e094fd586"
+        },
+        {
+          "width": 1146,
+          "sha256": "607c943e21f41ed47cc602952162399a364fa43550e3fd96772b312585b33f56"
+        },
+        {
+          "width": 987,
+          "sha256": "42c325f6ee342c8fe66664c72c8894fb7081154e30ebcc22d065070211dbeea6"
+        },
+        {
+          "width": 987,
+          "sha256": "5c64ca88b8f4a3683b42f35582d6212a9a4d19b79bf01e34275d07c0f28a4350"
+        },
+        {
+          "width": 987,
+          "sha256": "e988bb756dc52bbecf663355c23ce23e3a4508551d3a8b16b5272dd47ede705d"
+        },
+        {
+          "width": 987,
+          "sha256": "476dab15a5767e7b8692cf2aecaab20cf77ef43844efc54c11defcd22a466325"
+        }
+      ],
+      "readingBytes": 4229212,
+      "standaloneSvgsOpened": true,
+      "embeddedCsvMatches": true,
+      "renderedPolygonAreaRatios": {
+        "brokenAreas": [
+          0.12250001793358994,
+          0.42250008553725676
+        ],
+        "gnomonAreas": [
+          0.8520710285559172,
+          0.14792897144408285
+        ]
+      },
+      "offlineRooms": [
+        "index.html",
+        "triangle.html",
+        "quadrature.html",
+        "gnomon.html"
+      ],
+      "offlineMethod": "Browser context offline mode; public origin not controlled",
+      "axeViolations": 0,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 375,
+      "passages": 18,
+      "offDiagonalAreas": [
+        7.35,
+        25.35
+      ],
+      "smallPairsRemainEqual": true,
+      "shearPreservesAreas": true,
+      "historyRestored": true,
+      "invalidLengthRejected": true,
+      "equalCutLimit": true,
+      "allStages": true,
+      "initialSourceDecoded": true,
+      "sourceZoom": true,
+      "sectionHashPreserved": true,
+      "shared": "https://antonsoo.github.io/stoicheia/gnomon.html#u=35&v=35&h=40&d=1&s=3&a=90&b=40&g=5&book=II5&r=10",
+      "brokenUrl": "https://antonsoo.github.io/stoicheia/gnomon.html#u=35&v=65&h=20&d=0&s=0&a=90&b=40&g=0&book=I43&r=0",
+      "sourceImages": [
+        {
+          "width": 987,
+          "sha256": "b9d18a8d174fd2c11c69f01d87de2bfc73d37b0351c3399a482d59a3283c49e5"
+        },
+        {
+          "width": 987,
+          "sha256": "949d6904be83b4c8f6466234a838258f6b134219b11083a549cf2a5b92041c40"
+        },
+        {
+          "width": 987,
+          "sha256": "e5acc7493a0c0e17a4d263f9ba1c61060540481dbc5c3779d81c0b843e8d6a45"
+        },
+        {
+          "width": 987,
+          "sha256": "1749d48116a734dbf321d58181bb45b25d402ccf6a0aafb0e3622ddf39e583e0"
+        },
+        {
+          "width": 1146,
+          "sha256": "fd00434ac94864f3e696b64185fe85f83a687b2f808337129af5525e094fd586"
+        },
+        {
+          "width": 1146,
+          "sha256": "607c943e21f41ed47cc602952162399a364fa43550e3fd96772b312585b33f56"
+        },
+        {
+          "width": 987,
+          "sha256": "42c325f6ee342c8fe66664c72c8894fb7081154e30ebcc22d065070211dbeea6"
+        },
+        {
+          "width": 987,
+          "sha256": "5c64ca88b8f4a3683b42f35582d6212a9a4d19b79bf01e34275d07c0f28a4350"
+        },
+        {
+          "width": 987,
+          "sha256": "e988bb756dc52bbecf663355c23ce23e3a4508551d3a8b16b5272dd47ede705d"
+        },
+        {
+          "width": 987,
+          "sha256": "476dab15a5767e7b8692cf2aecaab20cf77ef43844efc54c11defcd22a466325"
+        }
+      ],
+      "readingBytes": 4229212,
+      "standaloneSvgsOpened": true,
+      "embeddedCsvMatches": true,
+      "renderedPolygonAreaRatios": {
+        "brokenAreas": [
+          0.12250001354493993,
+          0.4224999856257784
+        ],
+        "gnomonAreas": [
+          0.8520712072803627,
+          0.14792879271963733
+        ]
+      },
+      "offlineRooms": [
+        "index.html",
+        "triangle.html",
+        "quadrature.html",
+        "gnomon.html"
+      ],
+      "offlineMethod": "Browser context offline mode; public origin not controlled",
+      "axeViolations": 0,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "externalRequests": []
+    }
+  ]
+}
