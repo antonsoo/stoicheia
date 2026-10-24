@@ -1,0 +1,115 @@
+{
+  "edition": {
+    "title": "Archimedis opera omnia cum commentariis Eutocii",
+    "volume": "III",
+    "editor_and_latin_translator": "J. L. Heiberg",
+    "publisher": "B. G. Teubner, Leipzig",
+    "year": 1881,
+    "work": "Eutocius, commentary on Archimedes, On the Sphere and Cylinder II; section headed As Eratosthenes",
+    "rights": "Public domain. The title page reads MDCCCLXXXI. This is the first edition, not the 1915 second edition."
+  },
+  "download": {
+    "url": "https://www.wilbourhall.org/pdfs/Archimedes_VOL_III.pdf",
+    "bytes": 15134124,
+    "sha256": "4a0849767d817f3d501369cdf6b20b03d2be8de4e15e8e15403ea5abdd89a4d3"
+  },
+  "rendering": "pdftoppm -f 202 -l 213 -scale-to 1600 -jpeg -jpegopt quality=88 INPUT.pdf page; whole pages, no crop",
+  "transcription": {
+    "scope": "Selected excerpts, not a complete letter: the doubling error (104-105), given means (106-107), plate movement and proof (108-109), manufacture (110-111), extension (112-113).",
+    "normalizations": [
+      "Line wrapping and end-of-line hyphenation removed.",
+      "Greek geometric labels use consistent Greek Unicode letters, including those resembling Latin.",
+      "Printed ϑ normalized to θ.",
+      "Greek and Latin text transcribed against this 1881 print; new English and reading divisions.",
+      "The repeated intermediate proportionalities on p.108 are summarized in the explanation rather than transcribed in full.",
+      "Editorial reference superscripts in Latin omitted; brackets retained when part of selected text."
+    ],
+    "attribution": "The letter is transmitted under Eratosthenes name by Eutocius; this app does not resolve authenticity, date of composition, or identify a surviving ancient device."
+  },
+  "pages": [
+    {
+      "printed_page": 102,
+      "pdf_page": 202,
+      "file": "mesolabe/eutocius-102.jpg",
+      "bytes": 331372,
+      "sha256": "36ad55389fedbfad28139fad3f3934ab50241ebc214ed12f00cffeea11c6544e"
+    },
+    {
+      "printed_page": 103,
+      "pdf_page": 203,
+      "file": "mesolabe/eutocius-103.jpg",
+      "bytes": 350176,
+      "sha256": "6a2e59d197e9120476bec676015e1de654579e3ba11115592eb883f0ed989dc2"
+    },
+    {
+      "printed_page": 104,
+      "pdf_page": 204,
+      "file": "mesolabe/eutocius-104.jpg",
+      "bytes": 401216,
+      "sha256": "44f6617710a5512353b5e3e81e31227c82ec72d4caeefccbadac3f76dcbe4bd1"
+    },
+    {
+      "printed_page": 105,
+      "pdf_page": 205,
+      "file": "mesolabe/eutocius-105.jpg",
+      "bytes": 402445,
+      "sha256": "4efa12300b31f6a0db5f69a154c6075359091181cf32bc7b84f6f954844ddc81"
+    },
+    {
+      "printed_page": 106,
+      "pdf_page": 206,
+      "file": "mesolabe/eutocius-106.jpg",
+      "bytes": 392011,
+      "sha256": "805b16128fa3149c40ff928f9eed9992325c9c4b3646db6d5b8b8a9e6be3bd20"
+    },
+    {
+      "printed_page": 107,
+      "pdf_page": 207,
+      "file": "mesolabe/eutocius-107.jpg",
+      "bytes": 383542,
+      "sha256": "044376088d5931f7e2341f4b753b7d91a42e506d9ee4baac13073292321cc35b"
+    },
+    {
+      "printed_page": 108,
+      "pdf_page": 208,
+      "file": "mesolabe/eutocius-108.jpg",
+      "bytes": 329467,
+      "sha256": "70ae01465f6b2027b4d54723ec5efd81419e3bf61634807cea16387ad1ce75e0"
+    },
+    {
+      "printed_page": 109,
+      "pdf_page": 209,
+      "file": "mesolabe/eutocius-109.jpg",
+      "bytes": 271142,
+      "sha256": "ee0f8ca7f992a63f6b3582c581aaca376f23bf9bce7c631e4d0f371df14ea75f"
+    },
+    {
+      "printed_page": 110,
+      "pdf_page": 210,
+      "file": "mesolabe/eutocius-110.jpg",
+      "bytes": 368127,
+      "sha256": "23ae18be85ffc64ac4d6ae292d6496ad026bb7fa5e30a763a7641d11aa78918e"
+    },
+    {
+      "printed_page": 111,
+      "pdf_page": 211,
+      "file": "mesolabe/eutocius-111.jpg",
+      "bytes": 362130,
+      "sha256": "c40469e514de62aba26d0b273bfae5c788fed8a8bc04fb7b6afee1e60fa6c48c"
+    },
+    {
+      "printed_page": 112,
+      "pdf_page": 212,
+      "file": "mesolabe/eutocius-112.jpg",
+      "bytes": 319823,
+      "sha256": "4f7c0bbd230ff1ecb5731137196c6d732299266bc2a5fdca71721241ef1da830"
+    },
+    {
+      "printed_page": 113,
+      "pdf_page": 213,
+      "file": "mesolabe/eutocius-113.jpg",
+      "bytes": 384270,
+      "sha256": "4082eee7fd6f2816d58bec366b85cddd2d3e562cf392461eccaabc4bfdf9f91d"
+    }
+  ]
+}
