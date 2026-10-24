@@ -106,8 +106,10 @@ export function prepareOffline(status: HTMLElement, reload: HTMLButtonElement): 
   const observe = (worker: ServiceWorker | null) => {
     if (!worker || observedWorkers.has(worker)) return;
     observedWorkers.add(worker);
+    let activated = worker.state === "activated";
     const changed = () => {
-      if (worker.state === "redundant") installFailed = true;
+      if (worker.state === "activated") activated = true;
+      if (worker.state === "redundant" && !activated) installFailed = true;
       void refresh();
     };
     worker.addEventListener("statechange", changed);
@@ -131,6 +133,10 @@ export function prepareOffline(status: HTMLElement, reload: HTMLButtonElement): 
           });
         registration = result;
         observe(result.installing);
+        observe(result.waiting);
+        // During a navigation the worker may already be activating, with no
+        // installing worker left to observe and no controller assigned yet.
+        observe(result.active);
         void refresh();
       })
       .catch(() => {

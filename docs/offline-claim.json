@@ -1,0 +1,209 @@
+{
+  "method": "Missed activation claim: suppress the initial claim only. For the activating gap, start navigation during installation, hold its HTML, finish caching, then release the HTML during a deliberately prolonged activation. Observe actual browser registration/controller states.",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "phase": "before",
+      "gap": "activated",
+      "stateOnArrival": null,
+      "initialClaimSuppressed": true,
+      "controller": null,
+      "active": "activated",
+      "status": "This edition is not saved offline. Keep this tab open to continue reading.",
+      "caches": [
+        {
+          "name": "stoicheia-adf684a9c57baf02ea535e9f7ae6babed88fb5fef8c3f5d1e78cb2ecc2556a34",
+          "count": 104
+        }
+      ],
+      "originDisabledReload": false
+    },
+    {
+      "browser": "chromium",
+      "phase": "before",
+      "gap": "activating",
+      "stateOnArrival": "activating",
+      "initialClaimSuppressed": true,
+      "controller": null,
+      "active": "activated",
+      "status": "This edition is not saved offline. Keep this tab open to continue reading.",
+      "caches": [
+        {
+          "name": "stoicheia-adf684a9c57baf02ea535e9f7ae6babed88fb5fef8c3f5d1e78cb2ecc2556a34",
+          "count": 104
+        }
+      ],
+      "originDisabledReload": false
+    },
+    {
+      "browser": "chromium",
+      "phase": "intermediate",
+      "gap": "activated",
+      "stateOnArrival": null,
+      "initialClaimSuppressed": true,
+      "controller": "activated",
+      "active": "activated",
+      "status": "Edition ready offline, including source pages",
+      "caches": [
+        {
+          "name": "stoicheia-03d336c94cf994c397121df9d75aa1197630f64f3d129d856a28b748f4f68fc0",
+          "count": 104
+        }
+      ],
+      "originDisabledReload": true
+    },
+    {
+      "browser": "chromium",
+      "phase": "intermediate",
+      "gap": "activating",
+      "stateOnArrival": "activating",
+      "initialClaimSuppressed": true,
+      "controller": null,
+      "active": "activated",
+      "status": "This edition is not saved offline. Keep this tab open to continue reading.",
+      "caches": [
+        {
+          "name": "stoicheia-03d336c94cf994c397121df9d75aa1197630f64f3d129d856a28b748f4f68fc0",
+          "count": 104
+        }
+      ],
+      "originDisabledReload": false
+    },
+    {
+      "browser": "chromium",
+      "phase": "after",
+      "gap": "activated",
+      "stateOnArrival": null,
+      "initialClaimSuppressed": true,
+      "controller": "activated",
+      "active": "activated",
+      "status": "Edition ready offline, including source pages",
+      "caches": [
+        {
+          "name": "stoicheia-b08bd16e272efe51de15fed3f29837de7ea7100632aa05fca7a1b66294b9a1f8",
+          "count": 104
+        }
+      ],
+      "originDisabledReload": true
+    },
+    {
+      "browser": "chromium",
+      "phase": "after",
+      "gap": "activating",
+      "stateOnArrival": "activating",
+      "initialClaimSuppressed": true,
+      "controller": "activated",
+      "active": "activated",
+      "status": "Edition ready offline, including source pages",
+      "caches": [
+        {
+          "name": "stoicheia-b08bd16e272efe51de15fed3f29837de7ea7100632aa05fca7a1b66294b9a1f8",
+          "count": 104
+        }
+      ],
+      "originDisabledReload": true
+    },
+    {
+      "browser": "firefox",
+      "phase": "before",
+      "gap": "activated",
+      "stateOnArrival": null,
+      "initialClaimSuppressed": true,
+      "controller": null,
+      "active": "activated",
+      "status": "This edition is not saved offline. Keep this tab open to continue reading.",
+      "caches": [
+        {
+          "name": "stoicheia-adf684a9c57baf02ea535e9f7ae6babed88fb5fef8c3f5d1e78cb2ecc2556a34",
+          "count": 104
+        }
+      ],
+      "originDisabledReload": false
+    },
+    {
+      "browser": "firefox",
+      "phase": "before",
+      "gap": "activating",
+      "stateOnArrival": "activating",
+      "initialClaimSuppressed": true,
+      "controller": null,
+      "active": "activated",
+      "status": "This edition is not saved offline. Keep this tab open to continue reading.",
+      "caches": [
+        {
+          "name": "stoicheia-adf684a9c57baf02ea535e9f7ae6babed88fb5fef8c3f5d1e78cb2ecc2556a34",
+          "count": 104
+        }
+      ],
+      "originDisabledReload": false
+    },
+    {
+      "browser": "firefox",
+      "phase": "intermediate",
+      "gap": "activated",
+      "stateOnArrival": null,
+      "initialClaimSuppressed": true,
+      "controller": "activated",
+      "active": "activated",
+      "status": "Edition ready offline, including source pages",
+      "caches": [
+        {
+          "name": "stoicheia-03d336c94cf994c397121df9d75aa1197630f64f3d129d856a28b748f4f68fc0",
+          "count": 104
+        }
+      ],
+      "originDisabledReload": true
+    },
+    {
+      "browser": "firefox",
+      "phase": "intermediate",
+      "gap": "activating",
+      "stateOnArrival": "activating",
+      "initialClaimSuppressed": true,
+      "controller": null,
+      "active": "activated",
+      "status": "This edition is not saved offline. Keep this tab open to continue reading.",
+      "caches": [
+        {
+          "name": "stoicheia-03d336c94cf994c397121df9d75aa1197630f64f3d129d856a28b748f4f68fc0",
+          "count": 104
+        }
+      ],
+      "originDisabledReload": false
+    },
+    {
+      "browser": "firefox",
+      "phase": "after",
+      "gap": "activated",
+      "stateOnArrival": null,
+      "initialClaimSuppressed": true,
+      "controller": "activated",
+      "active": "activated",
+      "status": "Edition ready offline, including source pages",
+      "caches": [
+        {
+          "name": "stoicheia-b08bd16e272efe51de15fed3f29837de7ea7100632aa05fca7a1b66294b9a1f8",
+          "count": 104
+        }
+      ],
+      "originDisabledReload": true
+    },
+    {
+      "browser": "firefox",
+      "phase": "after",
+      "gap": "activating",
+      "stateOnArrival": "activating",
+      "initialClaimSuppressed": true,
+      "controller": "activated",
+      "active": "activated",
+      "status": "Edition ready offline, including source pages",
+      "caches": [
+        {
+          "name": "stoicheia-b08bd16e272efe51de15fed3f29837de7ea7100632aa05fca7a1b66294b9a1f8",
+          "count": 104
+        }
+      ],
+      "originDisabledReload": true
+    }
+  ]
+}
