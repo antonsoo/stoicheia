@@ -1,0 +1,4147 @@
+{
+  "checkedAt": "2026-10-24T03:41:12.791Z",
+  "base": "http://127.0.0.1:4413/stoicheia/",
+  "cases": [
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=15&v=15&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=15&v=15&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=15&v=15&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=15&v=65&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=15&v=65&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=15&v=65&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=15&v=85&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=15&v=85&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=15&v=85&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=35&v=15&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=35&v=15&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=35&v=15&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=35&v=65&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=35&v=65&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=35&v=65&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=35&v=85&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=35&v=85&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=35&v=85&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=85&v=15&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=85&v=15&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=85&v=15&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=85&v=65&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=85&v=65&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=85&v=65&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=85&v=85&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=85&v=85&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=85&v=85&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=15&v=15&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=15&v=15&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=15&v=15&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=15&v=65&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=15&v=65&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=15&v=65&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=15&v=85&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=15&v=85&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=15&v=85&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=35&v=15&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=35&v=15&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=35&v=15&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=35&v=65&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=35&v=65&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=35&v=65&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=35&v=85&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=35&v=85&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=35&v=85&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=85&v=15&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=85&v=15&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=85&v=15&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=85&v=65&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=85&v=65&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=85&v=65&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=85&v=85&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=85&v=85&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=85&v=85&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=15&v=15&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=15&v=15&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=15&v=15&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=15&v=65&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=15&v=65&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=15&v=65&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=15&v=85&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=15&v=85&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=15&v=85&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=35&v=15&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=35&v=15&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=35&v=15&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=35&v=65&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=35&v=65&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=35&v=65&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=35&v=85&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=35&v=85&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=35&v=85&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=85&v=15&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=85&v=15&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=85&v=15&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=85&v=65&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=85&v=65&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=85&v=65&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=85&v=85&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=85&v=85&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=85&v=85&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=15&v=15&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=15&v=15&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=15&v=15&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=15&v=65&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=15&v=65&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=15&v=65&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=15&v=85&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=15&v=85&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=15&v=85&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=35&v=15&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=35&v=15&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=35&v=15&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=35&v=65&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=35&v=65&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=35&v=65&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=35&v=85&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=35&v=85&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=35&v=85&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=85&v=15&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=85&v=15&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=85&v=15&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=85&v=65&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=85&v=65&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=85&v=65&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=85&v=85&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=85&v=85&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "complements",
+      "hash": "u=85&v=85&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 375
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=15&v=15&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=15&v=15&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=15&v=15&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=15&v=65&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=15&v=65&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=15&v=65&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=15&v=85&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=15&v=85&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=15&v=85&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=35&v=15&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=35&v=15&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=35&v=15&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=35&v=65&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=35&v=65&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=35&v=65&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=35&v=85&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=35&v=85&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=35&v=85&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=85&v=15&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=85&v=15&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=85&v=15&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=85&v=65&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=85&v=65&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=85&v=65&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=85&v=85&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=85&v=85&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "complements",
+      "hash": "u=85&v=85&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 900,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 900
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=15&v=15&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=15&v=15&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=15&v=15&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=15&v=65&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=15&v=65&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=15&v=65&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=15&v=85&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=15&v=85&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=15&v=85&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=35&v=15&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=35&v=15&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=35&v=15&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=35&v=65&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=35&v=65&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=35&v=65&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=35&v=85&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=35&v=85&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=35&v=85&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=85&v=15&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=85&v=15&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=85&v=15&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=85&v=65&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=85&v=65&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=85&v=65&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=85&v=85&h=-40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=85&v=85&h=0&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "complements",
+      "hash": "u=85&v=85&h=40&d=0&s=0",
+      "container": "#gn-complement-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=90&b=40&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=10&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=160&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=159&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=159&b=160&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=10&b=10&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=0",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=1",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=2",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=3",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=4",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "kind": "gnomon",
+      "hash": "a=160&b=160&g=5",
+      "container": "#gn-gnomon-drawing",
+      "overlaps": [],
+      "clipped": [],
+      "scroll": 1440
+    }
+  ],
+  "problems": []
+}

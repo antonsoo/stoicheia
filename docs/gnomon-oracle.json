@@ -1,0 +1,8 @@
+{
+  "counts": {
+    "complement": 25205,
+    "gnomon": 22801
+  },
+  "maximumAbsoluteError": 8.526512829121202e-14,
+  "method": "Exact rational parameter areas, coordinate shoelace areas and an independent diagonal-line intersection. Includes every cut pair, five shears and every input-length pair."
+}

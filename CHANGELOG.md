@@ -1,5 +1,21 @@
 # Changelog
 
+## Equal complements and the gnomon · 2026-10-23
+
+- Explore I.43 with an oblique parallelogram and a movable meeting point.
+  Move the point off the diagonal to distinguish equal small triangles from
+  the valid subtraction that proves the complements equal.
+- Follow II.5's original named regions through three equal additions; retain
+  equal cuts as an explicitly labelled limit, with complete point coordinates.
+- Read both complete proofs in eighteen Greek/Latin/English units, with ten
+  full source pages and the edition's duplicated-M ambiguity explained.
+- Save both experiments, proofs, scans, font and measurements in one HTML
+  reading; export both SVG diagrams and CSV separately. Add the fourth room
+  to the complete offline edition and link it from the course and II.14.
+- Reserve source-image space so loading a lazy facsimile cannot move the Save
+  button during a click. Guard the shared offline helper in development mode
+  and in browsers without service-worker support.
+
 ## 0.1.0 — 2026-10-21
 
 - Full Greek, Heiberg Latin and English reading passages for Euclid I.1–3, with

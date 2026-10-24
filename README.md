@@ -63,6 +63,27 @@ are a modern illustration of the II.5 relation.
 [Construction SVG](examples/stoicheia-II14-construction.svg) ·
 [Measurements](examples/stoicheia-II14-measurements.csv).
 
+## Equal leftovers, unequal shapes
+
+The new `gnomon.html` room follows the complete **I.43 and II.5** behind the
+extra-square relation. Publication is under review.
+
+![Equal complements in an oblique parallelogram, with the point constrained to its diagonal](docs/assets/gnomon-complements.png)
+
+Move the meeting point along a parallelogram's diagonal: the two leftover
+regions keep equal areas despite their different shapes. Move it off the
+diagonal and the areas become 7.35 and 25.35. Each small triangle pair still
+has equal area; what fails is the subtraction from the two large halves.
+
+Then follow Euclid's original gnomon through three equal additions. Read all
+eighteen Greek/Latin/English units with ten complete printed pages, including
+Heiberg's note about the diagram's duplicated Μ. A saved reading keeps both
+experiments, source images, font and measurements together.
+
+[Source and model](docs/gnomon-model.md) · [Review](docs/gnomon-review.md) ·
+[Saved reading](examples/stoicheia-gnomon-reading.html) ·
+[Printable reading](examples/stoicheia-gnomon-reading.pdf).
+
 ## Three lengths: can they close?
 
 Open the [I.22 construction workshop](https://antonsoo.github.io/stoicheia/triangle.html).

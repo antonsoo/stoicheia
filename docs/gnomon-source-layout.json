@@ -1,0 +1,69 @@
+{
+  "method": "Hold source image; compare Save button document position before and after image decoding, with dimensions removed or retained.",
+  "cases": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "reserve": false,
+      "buttonDocumentTopBefore": 5431.640625,
+      "buttonDocumentTopAfter": 5816.828125,
+      "shift": 385.1875
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "reserve": true,
+      "buttonDocumentTopBefore": 5816.828125,
+      "buttonDocumentTopAfter": 5816.828125,
+      "shift": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "reserve": false,
+      "buttonDocumentTopBefore": 8459.03125,
+      "buttonDocumentTopAfter": 8981.96875,
+      "shift": 522.9375
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "reserve": true,
+      "buttonDocumentTopBefore": 8981.96875,
+      "buttonDocumentTopAfter": 8981.96875,
+      "shift": 0
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "reserve": false,
+      "buttonDocumentTopBefore": 5449.5166015625,
+      "buttonDocumentTopAfter": 5835.716796875,
+      "shift": 386.2001953125
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "reserve": true,
+      "buttonDocumentTopBefore": 5835.716796875,
+      "buttonDocumentTopAfter": 5835.716796875,
+      "shift": 0
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "reserve": false,
+      "buttonDocumentTopBefore": 8490.150390625,
+      "buttonDocumentTopAfter": 9013.099609375,
+      "shift": 522.94921875
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "reserve": true,
+      "buttonDocumentTopBefore": 9013.099609375,
+      "buttonDocumentTopAfter": 9013.099609375,
+      "shift": 0
+    }
+  ]
+}

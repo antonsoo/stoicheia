@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-24T03:42:01.754Z",
+  "base": "http://127.0.0.1:4412/stoicheia/",
+  "workerSha256": "34088c24886363b207106a7742c0fee8eeb6c0ab4349489cdecea7f2952534b4",
+  "configurations": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "snapshotRectangle": [9, 4],
+      "changedRectangle": [11, 4],
+      "substitutedPage": 131,
+      "substituteBytesFromPage": 130,
+      "substitutedHttpStatus": 200,
+      "wrongEditionDownloaded": false,
+      "retryDownloaded": true,
+      "workerIsolation": "Service-worker capability removed before page startup; direct verified fetches"
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "snapshotRectangle": [9, 4],
+      "changedRectangle": [11, 4],
+      "substitutedPage": 131,
+      "substituteBytesFromPage": 130,
+      "substitutedHttpStatus": 200,
+      "wrongEditionDownloaded": false,
+      "retryDownloaded": true,
+      "workerIsolation": "Service-worker capability removed before page startup; direct verified fetches"
+    }
+  ]
+}
