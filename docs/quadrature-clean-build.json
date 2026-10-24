@@ -1,0 +1,9 @@
+{
+  "sourceCommit": "3ed33f20a2da13805105f60b88afb0c46d6f4044",
+  "node": "24.22.0",
+  "installation": "npm ci in a fresh git archive",
+  "checks": "npm run check: lint, typecheck, 43 passing checks, production build",
+  "matchingFiles": 77,
+  "totalBytes": 19732856,
+  "workerSha256": "48f36b88b043654400fd9b0b85971cf69373f6eb3c09e9a4ae383fc4b2e9fe44"
+}
