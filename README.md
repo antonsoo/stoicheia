@@ -33,6 +33,38 @@ exercises and the original pages 50–53 complete the sequential course through 
 [Model and review](docs/nested-review.md) · [Saved study](examples/stoicheia-I21-study.html) ·
 [Printed study](examples/stoicheia-I21-study.pdf).
 
+## Make I.2 yourself
+
+The new [construction desk](desk.html) turns I.2 into a task you perform.
+Choose existing points, draw a centre-and-point circle or a straight line,
+and keep the crossing you need. There is no radius field or automatic length
+transfer. Undo, branch from an earlier operation, and replay your own transcript.
+
+![A learner-made I.2 construction with the copied length in green](docs/assets/desk-desktop.png)
+
+A matching rounded measurement does not complete the task. The desk recognizes
+the actual I.2 dependencies: equal triangle sides, equal circle radii, and the
+two crossings beyond A and the reference anchor. Aligned bars show the equal
+parts removed from the equal wholes. Either equilateral vertex and either
+endpoint of BC work; other valid constructions may have no recognized chain.
+- Three layouts, native keyboard controls and optional next-command hints.
+  Setting up a hint leaves execution to the reader.
+- The complete I.2 Greek, Latin and English reading, connected to your point
+  names and four full printed pages.
+- Save/reopen drawing JSON, share the current operation, export SVG, or save
+  a script-free HTML reading with every intermediate diagram, text, font and
+  verified source images. The app's complete six-room edition works offline.
+
+This addition is a **local source edition**; the linked public course above
+has a separate publication record. Run the checkout as described below and
+open `/stoicheia/desk.html`. `npm run build` writes the complete site to `dist/`.
+
+[Editable example](examples/stoicheia-construction.json) ·
+[Drawing](examples/stoicheia-construction.svg) ·
+[Complete saved reading](examples/stoicheia-construction-reading.html) ·
+[Printable PDF](examples/stoicheia-construction-reading.pdf) ·
+[Model, limits and direct review](docs/desk-review.md).
+
 ## Twice the stone, with sliding plates
 
 The **[mesolabe workshop](https://antonsoo.github.io/stoicheia/mesolabe.html)**

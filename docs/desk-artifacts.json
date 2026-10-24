@@ -1,0 +1,22 @@
+[
+  {
+    "file": "examples/stoicheia-construction-reading.html",
+    "bytes": 2199877,
+    "sha256": "cd77700cab0c527930ae10f3dd1a998efdfd5460f947d366a4fcf37d730a0d32"
+  },
+  {
+    "file": "examples/stoicheia-construction-reading.pdf",
+    "bytes": 1695658,
+    "sha256": "3b46585795ba3e1a0fee0f249f5b27c9033826efd757138ae05fea77efd73ce3"
+  },
+  {
+    "file": "examples/stoicheia-construction.json",
+    "bytes": 950,
+    "sha256": "c76966b68927365c62bdaf246a6edfe032c064e016cd5a3e6ce8eef7e61aa92f"
+  },
+  {
+    "file": "examples/stoicheia-construction.svg",
+    "bytes": 14556,
+    "sha256": "9d6960b74c62e3338e8716618efe96370ebed622ddb32a5884b35df7ba307d02"
+  }
+]

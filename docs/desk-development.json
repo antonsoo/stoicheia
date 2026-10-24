@@ -1,0 +1,17 @@
+{
+  "scope": "Fresh npm ci under Node 24.22.0; documented development commands; both browsers",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "state": "Operation 1 of 1",
+      "offline": "Development preview · offline saving is available in the production build.",
+      "errors": []
+    },
+    {
+      "browser": "firefox",
+      "state": "Operation 1 of 1",
+      "offline": "Development preview · offline saving is available in the production build.",
+      "errors": []
+    }
+  ]
+}

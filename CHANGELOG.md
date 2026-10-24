@@ -2,6 +2,16 @@
 
 ## 2026-10-24
 
+- Added an I.2 construction desk: learner-chosen restricted-compass operations,
+  kept crossings, branching history, source-linked equal-remainder recognition,
+  and editable/illustrated offline files. Rounded length agreement alone does
+  not complete the recognized construction.
+- Clip straight-line continuations to the visible drawing before exporting;
+  printing the eleven-operation reading no longer emits thousands of hidden
+  dashes. Keep keyboard focus when a point or curve is selected on the drawing.
+- Distinguish embedded image/font bytes from non-finite markup in the existing
+  course browser review; base64 data can contain the letters `NaN`.
+
 - Recover tabs that finish navigating around service-worker activation, verifying the matching controller and complete edition before showing offline readiness.
 
 - Added the source-grounded mesolabe workshop: independently movable plates, one-contact and full alignment, ratio proof, eight parallel readings, twelve full source pages and portable paper/HTML/SVG/CSV artifacts.
