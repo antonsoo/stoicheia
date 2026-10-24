@@ -1,9 +1,9 @@
 # Make I.2 yourself
 
-The new `desk.html` is a local source edition. It has not been pushed or
-deployed. The existing public course has its own earlier publication record.
-This review concerns the local build, actual browser operations, native files
-and offline upgrades.
+The [construction desk](https://antonsoo.github.io/stoicheia/desk.html) is published.
+This review concerns the model, local browser operations, native files and
+offline upgrades. The [publication record](desk-publication.md) identifies the
+reviewed source, deployed files and separate public browser verification.
 
 ## The learning gap
 
@@ -65,8 +65,7 @@ The [retained JSON](../examples/stoicheia-construction.json),
 [PDF](../examples/stoicheia-construction-reading.pdf) contain this completed
 eleven-operation example. The HTML includes the editable JSON as a downloadable
 data link and a continuation link to the intended public application route.
-That route is outside this local publication evidence; reopen the JSON in the
-locally served desk to resume before publication.
+That route is now verified separately in the [public browser review](desk-hosted.json).
 
 ## How the equality is established
 

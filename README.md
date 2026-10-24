@@ -35,7 +35,7 @@ exercises and the original pages 50–53 complete the sequential course through 
 
 ## Make I.2 yourself
 
-The new [construction desk](desk.html) turns I.2 into a task you perform.
+The [construction desk](https://antonsoo.github.io/stoicheia/desk.html) turns I.2 into a task you perform.
 Choose existing points, draw a centre-and-point circle or a straight line,
 and keep the crossing you need. There is no radius field or automatic length
 transfer. Undo, branch from an earlier operation, and replay your own transcript.
@@ -55,9 +55,9 @@ endpoint of BC work; other valid constructions may have no recognized chain.
   a script-free HTML reading with every intermediate diagram, text, font and
   verified source images. The app's complete six-room edition works offline.
 
-This addition is a **local source edition**; the linked public course above
-has a separate publication record. Run the checkout as described below and
-open `/stoicheia/desk.html`. `npm run build` writes the complete site to `dist/`.
+The desk is published with the complete course. [Publication evidence](docs/desk-publication.md)
+separates the reviewed source, Pages commit, public file identities and actual
+browser workflows. `npm run build` writes the complete site to `dist/`.
 
 [Editable example](examples/stoicheia-construction.json) ·
 [Drawing](examples/stoicheia-construction.svg) ·
