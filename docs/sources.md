@@ -346,3 +346,19 @@ for the angle comparison; no triangle-angle-sum theorem is introduced.
 The movable coordinate drawing preserves the orders Α–Ε–Γ and Β–Δ–Ε.
 Its dimensions, percentage controls, colors and degree readings are modern.
 The source proves a comparison of sums, not two individual side comparisons.
+
+## Equal-area square: II.14
+
+The separate quadrature workshop transcribes the complete II.14 in eleven
+Greek/Latin/English reading units from printed pp. 160–163. Full pages 128–129
+and 110–111 also preserve the statements of II.5 and I.47. The complete proofs
+of those prerequisites are not transcribed. Eight new full-page scans use the
+same original PDF, rendered at maximum dimension 1800 pixels and JPEG quality 88.
+The Archive's scan metadata independently confirms the printed-page/leaf mapping.
+
+The Greek describes areas in words while Heiberg's Latin uses multiplication
+and squared notation. That editorial distinction is taught directly. The Latin's
+printed `aequale` after `figura` on p. 163 is retained. Greek point labels remain
+Greek, including centre Η and circle point Θ. The app implements the rectangle
+case; the opening I.45 conversion of a general rectilinear figure is explicitly
+identified as a prerequisite. [Full model and source decisions](quadrature-model.md).

@@ -14,9 +14,9 @@
     "bytes": 20890632,
     "sha256": "da285c581c2dda86e2b25e20db3ce604bf6fb8765228fcd71cfc89d47a9d1c17"
   },
-  "rendering": "pdftoppm -f 16 -l 65 -scale-to 1550 -jpeg -jpegopt quality=88 INPUT.pdf page; I.22 supplement: -f 66 -l 69, same image settings.",
+  "rendering": "pdftoppm -f 16 -l 65 -scale-to 1550 -jpeg -jpegopt quality=88 INPUT.pdf page; I.22 supplement: -f 66 -l 69, same image settings. Quadrature workshop: PDF pages 124-125, 142-143 and 174-177; scale-to 1800, JPEG quality 88.",
   "transcription": {
-    "scope": "Full proposition statements and proofs I.1–21; the bracketed Greek-only corollary after I.15, with no supplied Latin; definitions 10, 15, 16, 20; all five postulates; the five common notions in the usual modern list (Heiberg 1, 2, 3, 7, 8). Critical apparatus and other text are not transcribed. Separate I.22 workshop: complete statement and proof, printed pp. 52–55.",
+    "scope": "Full proposition statements and proofs I.1–21; the bracketed Greek-only corollary after I.15, with no supplied Latin; definitions 10, 15, 16, 20; all five postulates; the five common notions in the usual modern list (Heiberg 1, 2, 3, 7, 8). Critical apparatus and other text are not transcribed. Separate I.22 workshop: complete statement and proof, printed pp. 52–55. II.14 workshop: complete statement and proof on printed pp. 160-163. Full pages 110-111 and 128-129 preserve the I.47 and II.5 statements for inspection; their complete proofs are not transcribed.",
     "normalizations": [
       "Printed ϑ normalized to θ.",
       "Consistent Unicode Greek letters for all geometric labels, including letters that resemble Latin glyphs.",
@@ -29,7 +29,8 @@
       "Greek editorial brackets in definitions 15 and common notion 8 retained; facing Latin omissions preserved.",
       "Editorial brackets in I.13 and the Greek-only I.15 corollary retained; the absence of facing Latin for the corollary is stated explicitly.",
       "I.22 retains the bracketed Greek explanation, the absence of its Latin translation, and the changing order of circle labels. The Latin inline reference to I.20 is explained in the note.",
-      "I.21 is divided into ten teaching steps. The English bracket [on ΑΓ] identifies the intersection implied by the printed figure; Greek and Latin do not add these words."
+      "I.21 is divided into ten teaching steps. The English bracket [on ΑΓ] identifies the intersection implied by the printed figure; Greek and Latin do not add these words.",
+      "II.14 retains Heiberg's Greek point labels in both languages. His Latin multiplication and squared notation is rendered with × and superscript ². Eleven reading divisions and English grammar notes are modern teaching aids."
     ],
     "english": "New reading translation. Explicit intersection descriptions and other explanatory expansions are teaching aids.",
     "comparison": "Hand transcription checked against bundled scans. The cropped right edge of printed p. 6 was cross-checked against the Greek quoted in Heath, The Thirteen Books of Euclid’s Elements (1925), pp. 187–188, via David R. Wilkins’s Trinity College Dublin transcription. No unreviewed OCR output is presented as source text.",
@@ -521,6 +522,78 @@
       "file": "heiberg-055.jpg",
       "bytes": 251488,
       "sha256": "3134a0577c2f607bff31b7735bdc169c1efac08e6f42b75b6ead766dac579612"
+    },
+    {
+      "printed_page": 110,
+      "pdf_page": 124,
+      "archive_leaf": 124,
+      "language": "grc",
+      "file": "heiberg-110.jpg",
+      "bytes": 369383,
+      "sha256": "9426a102cdf09c64202edfe56007f1a0b31f226ffa4ed4ec1ca7b7bab6cdfeb0"
+    },
+    {
+      "printed_page": 111,
+      "pdf_page": 125,
+      "archive_leaf": 125,
+      "language": "la",
+      "file": "heiberg-111.jpg",
+      "bytes": 397034,
+      "sha256": "adb96e10b64b96025d8a9cb98bd92a4a5f5df64cfb0ca52f487ca5e1db84e454"
+    },
+    {
+      "printed_page": 128,
+      "pdf_page": 142,
+      "archive_leaf": 142,
+      "language": "grc",
+      "file": "heiberg-128.jpg",
+      "bytes": 360828,
+      "sha256": "fd00434ac94864f3e696b64185fe85f83a687b2f808337129af5525e094fd586"
+    },
+    {
+      "printed_page": 129,
+      "pdf_page": 143,
+      "archive_leaf": 143,
+      "language": "la",
+      "file": "heiberg-129.jpg",
+      "bytes": 382899,
+      "sha256": "607c943e21f41ed47cc602952162399a364fa43550e3fd96772b312585b33f56"
+    },
+    {
+      "printed_page": 160,
+      "pdf_page": 174,
+      "archive_leaf": 174,
+      "language": "grc",
+      "file": "heiberg-160.jpg",
+      "bytes": 400674,
+      "sha256": "7dd25435355891b93f441f840eba93484c68024f2ecce8fa06a5e6d06ff1928d"
+    },
+    {
+      "printed_page": 161,
+      "pdf_page": 175,
+      "archive_leaf": 175,
+      "language": "la",
+      "file": "heiberg-161.jpg",
+      "bytes": 366595,
+      "sha256": "9bfdd993c503aa3e4ab8795675b8c4fa88004158f2f29d07a25782aaf6e4d019"
+    },
+    {
+      "printed_page": 162,
+      "pdf_page": 176,
+      "archive_leaf": 176,
+      "language": "grc",
+      "file": "heiberg-162.jpg",
+      "bytes": 433361,
+      "sha256": "eba385c54a559688de59a4523fcfb6c945d7065ba263d64e93d771ca1ff74f55"
+    },
+    {
+      "printed_page": 163,
+      "pdf_page": 177,
+      "archive_leaf": 177,
+      "language": "la",
+      "file": "heiberg-163.jpg",
+      "bytes": 242086,
+      "sha256": "e35e91ff595c6cdaf04e44d03de874bb5e64bb8b98cdf79f8e25e252b9c4c57e"
     }
   ]
 }
