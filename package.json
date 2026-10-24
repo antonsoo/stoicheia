@@ -50,7 +50,9 @@
     "verify:quadrature": "node --import tsx scripts/quadrature-cases.ts | python3 scripts/quadrature-oracle.py",
     "test:quadrature": "node scripts/quadrature-browser.mjs",
     "verify:gnomon": "node --import tsx scripts/gnomon-cases.ts | python3 scripts/gnomon-oracle.py",
-    "test:gnomon": "node scripts/gnomon-browser.mjs"
+    "test:gnomon": "node scripts/gnomon-browser.mjs",
+    "verify:mesolabe": "node --import tsx scripts/mesolabe-cases.ts | python3 scripts/mesolabe-oracle.py",
+    "test:mesolabe": "node scripts/mesolabe-browser.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

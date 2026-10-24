@@ -25,6 +25,7 @@ export default defineConfig(async ({ command }) => {
     "triangle.html",
     "quadrature.html",
     "gnomon.html",
+    "mesolabe.html",
     "LICENSE",
     "vite.config.ts",
     "tsconfig.json",
@@ -37,19 +38,24 @@ export default defineConfig(async ({ command }) => {
     inputHash.update(await readFile(file));
   }
   const edition = command === "build" ? inputHash.digest("hex") : "development";
-  const sourceManifest = JSON.parse(await readFile("public/sources/manifest.json", "utf8")) as {
-    pages: { file: string; bytes: number; sha256: string }[];
-  };
   const studyFiles: Record<string, { bytes: number; sha256: string }> = {};
-  for (const page of sourceManifest.pages) {
-    const file = `sources/${page.file}`;
-    const bytes = await readFile(`public/${file}`);
-    const sha256 = createHash("sha256").update(bytes).digest("hex");
-    if (bytes.length !== page.bytes || sha256 !== page.sha256)
-      throw new Error(
-        `Source manifest does not match ${file}. Review the source identity before building.`,
-      );
-    studyFiles[file] = { bytes: bytes.length, sha256 };
+  for (const manifest of [
+    "public/sources/manifest.json",
+    "public/sources/mesolabe/manifest.json",
+  ]) {
+    const sourceManifest = JSON.parse(await readFile(manifest, "utf8")) as {
+      pages: { file: string; bytes: number; sha256: string }[];
+    };
+    for (const page of sourceManifest.pages) {
+      const file = `sources/${page.file}`;
+      const bytes = await readFile(`public/${file}`);
+      const sha256 = createHash("sha256").update(bytes).digest("hex");
+      if (bytes.length !== page.bytes || sha256 !== page.sha256)
+        throw new Error(
+          `Source manifest does not match ${file}. Review the source identity before building.`,
+        );
+      studyFiles[file] = { bytes: bytes.length, sha256 };
+    }
   }
   for (const file of ["fonts/NotoSerif-Regular.ttf", "fonts/OFL.txt"]) {
     const bytes = await readFile(`public/${file}`);
@@ -67,6 +73,7 @@ export default defineConfig(async ({ command }) => {
           triangle: "triangle.html",
           quadrature: "quadrature.html",
           gnomon: "gnomon.html",
+          mesolabe: "mesolabe.html",
         },
       },
     },
