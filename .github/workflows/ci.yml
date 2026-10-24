@@ -49,3 +49,4 @@ jobs:
           npm run test:browser
           npm run test:nested -- http://127.0.0.1:4327/stoicheia/
           npm run test:illustrated -- /tmp/stoicheia-illustrated
+          npm run test:desk -- /tmp/stoicheia-desk

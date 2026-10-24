@@ -48,7 +48,10 @@ export async function verifyRightAngles(page, viewport, browser, accessible, aud
     await file.saveAs(path);
     const text = await readFile(path, "utf8");
     assert.match(text, expected);
-    assert.doesNotMatch(text, /NaN|Infinity|<script/);
+    // Encoded font/image bytes can contain the letters NaN without any
+    // invalid geometry. Keep the script check on the complete document.
+    assert.doesNotMatch(text, /<script\b/i);
+    assert.doesNotMatch(text.replace(/data:[^\s"')]+/g, "data:embedded"), /NaN|Infinity/);
     downloads.push(path);
     if (browser === "chromium" && viewport.width === 1440)
       await writeFile(`examples/${label}.${kind}`, text);

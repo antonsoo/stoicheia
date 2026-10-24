@@ -248,12 +248,14 @@ function choose(target: Element): void {
     );
     return;
   }
+  const keepFocus = document.activeElement === target.closest("[data-choose]");
   if (pointTurn === "first") first = id;
   else second = id;
   pointTurn = pointTurn === "first" ? "second" : "first";
   el<HTMLSelectElement>("#dk-first").value = first;
   el<HTMLSelectElement>("#dk-second").value = second;
   renderDrawing();
+  if (keepFocus) el<SVGElement>(`[data-choose="${id}"]`).focus({ preventScroll: true });
   status(
     `${id} selected. ${pointTurn === "second" ? "Choose the second operand." : "Both choices set; use Draw or Keep."}`,
   );

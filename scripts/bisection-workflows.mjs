@@ -42,7 +42,10 @@ export async function verifyBisections(page, viewport, browser, accessible, audi
     await file.saveAs(path);
     const content = await readFile(path, "utf8");
     assert.match(content, expected);
-    assert.doesNotMatch(content, /NaN|Infinity|<script/);
+    // Encoded font/image bytes can contain the letters NaN without any
+    // invalid geometry. Keep the script check on the complete document.
+    assert.doesNotMatch(content, /<script\b/i);
+    assert.doesNotMatch(content.replace(/data:[^\s"')]+/g, "data:embedded"), /NaN|Infinity/);
     downloads.push(path);
     if (browser === "chromium" && viewport.width === 1440)
       await writeFile(`examples/${label}.${kind}`, content);
