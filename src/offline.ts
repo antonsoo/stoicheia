@@ -75,6 +75,15 @@ export function prepareOffline(status: HTMLElement, reload: HTMLButtonElement): 
     const worker = container.controller;
     if (!worker) {
       pending();
+      // A navigation can start during installation and finish after the
+      // activation claim has already enumerated its clients. That tab then
+      // has an activated registration but no controller or later statechange.
+      // Ask the matching edition to claim again now that this document exists.
+      if (registration?.active?.state === "activated")
+        registration.active.postMessage({
+          type: "STOICHEIA_CLAIM_EDITION",
+          edition: __STOICHEIA_EDITION__,
+        });
       return;
     }
     const reply = await inspectWorker(worker);

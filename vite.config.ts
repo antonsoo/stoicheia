@@ -118,6 +118,10 @@ self.addEventListener("activate", event => {
   event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith("stoicheia-") && key !== CACHE).map(key => caches.delete(key)))).then(() => self.clients.claim()));
 });
 self.addEventListener("message", event => {
+  if (event.data?.type === "STOICHEIA_CLAIM_EDITION" && event.data.edition === EDITION) {
+    event.waitUntil(self.clients.claim());
+    return;
+  }
   if (event.data?.type !== "STOICHEIA_INSPECT_EDITION" || !event.ports[0]) return;
   event.waitUntil(caches.open(CACHE).then(cache => cache.keys()).then(keys => {
     const saved = new Set(keys.map(request => new URL(request.url).pathname));
