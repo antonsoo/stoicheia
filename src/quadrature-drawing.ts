@@ -36,12 +36,12 @@ export function areaConstruction(state: QuadratureState, narrow = false): string
       : "";
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="qa-construction-title qa-construction-desc"><title id="qa-construction-title">Euclid II.14: ${f(m.long)} by ${f(m.short)} rectangle</title><desc id="qa-construction-desc">${m.equal ? "The given rectangle is already a square. No semicircle is needed." : `Extend the long side by ${f(m.short)}. The midpoint gives radius ${f(m.radius)}. The perpendicular meets the semicircle at height ${f(m.height)}. Horizontal and vertical distances use the same scale.`}</desc>
   <rect x="${x(0)}" y="${y(0)}" width="${n(m.long * scale)}" height="${n(m.short * scale)}" class="qa-given"/>
-  ${finalSquare ? `<rect x="${x(m.long)}" y="${y(m.height)}" width="${n(m.height * scale)}" height="${n(m.height * scale)}" class="qa-result-square qa-constructed-square"/><text x="${x(m.long + m.height / 2)}" y="${y(m.height / 2) + 5}" class="qa-area-label" text-anchor="middle">${f(m.area)} u²</text>` : ""}
+  ${finalSquare ? `<rect x="${x(m.long)}" y="${y(m.height)}" width="${n(m.height * scale)}" height="${n(m.height * scale)}" class="qa-result-square qa-constructed-square"/>${m.height * scale >= 75 ? `<text x="${x(m.long + m.height / 2)}" y="${y(m.height / 2) + 5}" class="qa-area-label" text-anchor="middle">${f(m.area)} u²</text>` : ""}` : ""}
   ${circle}${full ? line(p.E, p.Z, "qa-copy-line") : ""}
-  ${state.stage >= 2 && !m.equal ? `${line(p.B, p.Z, "qa-baseline")}<circle cx="${x(m.radius)}" cy="${y(0)}" r="4" class="qa-centre"/>${label(p.H, "Η", -6, 28)}` : ""}
-  ${join}<text x="${x(m.long) + 16}" y="${y(-m.short / 2) + 5}" class="qa-dimension">${f(m.short)} u</text>${label(p.B, "Β", -17, -10)}${label(p.E, "Ε", 8, -10)}${label(p.Gamma, "Γ", -14, 25)}${label(p.Delta, "Δ", 8, 25)}${full ? label(p.Z, "Ζ", 5, 25) : ""}
-  <text x="${x(m.long / 2)}" y="${y(-m.short / 2) + 5}" class="qa-area-label" text-anchor="middle">${f(m.area)} u²</text>
-  <text x="${x(m.long / 2)}" y="${y(-m.short) + 47}" text-anchor="middle" class="qa-dimension">ΒΕ = ${f(m.long)} u</text>
+  ${state.stage >= 2 && !m.equal ? `${line(p.B, p.Z, "qa-baseline")}<circle cx="${x(m.radius)}" cy="${y(0)}" r="4" class="qa-centre"/>${label(p.H, "Η", -16, -10)}` : ""}
+  ${join}${label(p.B, "Β", -17, -10)}${label(p.E, "Ε", 8, -10)}${label(p.Gamma, "Γ", -14, 25)}${label(p.Delta, "Δ", 8, 25)}${full ? label(p.Z, "Ζ", 17, 25) : ""}
+  ${m.short * scale >= 34 ? `<text x="${x(m.long / 2)}" y="${y(-m.short / 2) + 5}" class="qa-area-label" text-anchor="middle">${f(m.area)} u²</text>` : ""}
+  <text x="${x(m.long / 2)}" y="${y(-m.short) + 47}" text-anchor="middle" class="qa-dimension">ΒΕ = ${f(m.long)} u · ΕΔ = ${f(m.short)} u</text>
   <text x="${w / 2}" y="${h - 8}" text-anchor="middle" class="qa-caption">${m.equal ? "Equal sides: the source finishes here." : "u = an arbitrary drawing unit · equal scales"}</text></svg>`;
 }
 export function areaRearrangement(state: QuadratureState, narrow = false): string {
@@ -61,8 +61,8 @@ export function areaRearrangement(state: QuadratureState, narrow = false): strin
   <polygon points="${piece.map(([px, py]) => `${x(px)},${y(py)}`).join(" ")}" class="qa-piece-two"/>
   <text x="${x(m.radius / 2)}" y="${y(m.short / 2) + 5}" class="qa-piece-label" text-anchor="middle">${f(m.radius * m.short)} u²</text>
   ${m.offset * scale > 42 && (state.move === 0 || state.move === 100) ? `<text x="${x(state.move === 0 ? m.radius + m.offset / 2 : m.short / 2)}" y="${y(state.move === 0 ? m.short / 2 : m.short + m.offset / 2) + 5}" class="qa-piece-label" text-anchor="middle">${f(m.offset * m.short)}</text>` : ""}
-  <text x="${w / 2}" y="22" class="qa-caption" text-anchor="middle">${m.equal ? "No second piece and no missing square" : `Dashed square: side ${f(m.radius)} u · hatched corner: ${f(m.offsetArea)} u²`}</text>
-  <text x="${w / 2}" y="${h - 10}" class="qa-caption" text-anchor="middle">${state.move === 100 ? "Same two pieces, rearranged. The corner remains empty." : state.move === 0 ? "Cut at the half-sum. Move the smaller piece above the larger." : "Piece lifted and turned; temporary overlap is only a projection."}</text></svg>`;
+  <text x="${w / 2}" y="22" class="qa-caption" text-anchor="middle">${m.equal ? "No second piece and no missing square" : narrow ? `Dashed: ${f(m.radius)} u · corner: ${f(m.offsetArea)} u²` : `Dashed square: side ${f(m.radius)} u · hatched corner: ${f(m.offsetArea)} u²`}</text>
+  <text x="${w / 2}" y="${h - 10}" class="qa-caption" text-anchor="middle">${narrow ? (state.move === 100 ? "Same pieces. The corner remains empty." : state.move === 0 ? "Cut at the half-sum; turn the smaller piece." : "Lifted piece; overlap is a projection.") : state.move === 100 ? "Same two pieces, rearranged. The corner remains empty." : state.move === 0 ? "Cut at the half-sum. Move the smaller piece above the larger." : "Piece lifted and turned; temporary overlap is only a projection."}</text></svg>`;
 }
 export function areaLedger(state: QuadratureState, narrow = false): string {
   const m = quadratureModel(state),

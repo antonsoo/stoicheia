@@ -4,6 +4,7 @@ import {
   changedLength,
   decodeQuadrature,
   encodeQuadrature,
+  formatMeasure,
   quadratureDefault,
   quadratureModel,
 } from "../src/core/quadrature";
@@ -50,4 +51,10 @@ test("sharing preserves the experiment and rejects ambiguous or nonfinite length
     assert.equal(decodeQuadrature(bad).adjusted, true);
     assert.equal(decodeQuadrature(bad).a, 90);
   }
+});
+
+test("the smallest unequal-cut square keeps all four decimal places", () => {
+  const model = quadratureModel({ a: 160, b: 159 });
+  assert.equal(formatMeasure(model.offsetArea), "0.0025");
+  assert.equal(model.equal, false);
 });

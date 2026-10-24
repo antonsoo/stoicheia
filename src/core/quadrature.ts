@@ -50,7 +50,7 @@ export function quadratureModel(state: Pick<QuadratureState, "a" | "b">) {
     } as const,
   };
 }
-export function formatMeasure(value: number, places = 3): string {
+export function formatMeasure(value: number, places = 4): string {
   return Number(value.toFixed(places)).toLocaleString("en-US", { maximumFractionDigits: places });
 }
 export function decodeQuadrature(hash: string): QuadratureState & { adjusted: boolean } {

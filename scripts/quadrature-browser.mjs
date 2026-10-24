@@ -204,6 +204,11 @@ for (const [name, engine] of [
         assert.match(share, /#a=90&b=40&s=5&m=100&c=1&k=0&r=8/);
         const csv = await download(page, "#qa-save-csv", path.join(folder, "measurements.csv"));
         await download(page, "#qa-save-svg", path.join(folder, "construction.svg"));
+        const vector = await context.newPage();
+        await vector.goto(pathToFileURL(path.join(folder, "construction.svg")).href);
+        assert.equal(await vector.locator("parsererror").count(), 0);
+        assert.equal(await vector.locator("svg .qa-constructed-square").count(), 1);
+        await vector.close();
         const reading = await download(page, "#qa-save-study", path.join(folder, "reading.html"));
         assert(reading.length < 5000000, "Study exceeds repository's per-file size budget");
         const saved = await context.newPage(),
@@ -293,6 +298,12 @@ for (const [name, engine] of [
           sourceImages: images,
           embeddedCsvMatches: true,
           offlineRooms,
+          offlineMethod: production
+            ? external
+              ? "Browser context offline mode; public origin not controlled"
+              : "Local origin physically disabled plus browser context offline mode"
+            : "Not tested in development",
+          standaloneSvgOpened: true,
           axeViolations: axe.violations.length,
           pageErrors: errors,
           externalRequests: requests,
