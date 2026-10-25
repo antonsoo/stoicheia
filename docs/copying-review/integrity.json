@@ -1,0 +1,77 @@
+{
+  "checkedAt": "2026-10-25T21:52:48.152Z",
+  "results": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "mode": "hold-new",
+      "targetPrintedPage": 57,
+      "substitutePrintedPage": null,
+      "validWrongJpegResponses": 0,
+      "heldMilliseconds": 8500,
+      "incompleteNeverReady": true,
+      "wrongViewerAndExportRefused": false,
+      "correctedPageAndWorkerRecovered": true
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "mode": "wrong-new",
+      "targetPrintedPage": 57,
+      "substitutePrintedPage": 56,
+      "validWrongJpegResponses": 3,
+      "heldMilliseconds": 0,
+      "incompleteNeverReady": true,
+      "wrongViewerAndExportRefused": true,
+      "correctedPageAndWorkerRecovered": true
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "mode": "wrong-existing",
+      "targetPrintedPage": 53,
+      "substitutePrintedPage": 52,
+      "validWrongJpegResponses": 3,
+      "heldMilliseconds": 0,
+      "incompleteNeverReady": true,
+      "wrongViewerAndExportRefused": true,
+      "correctedPageAndWorkerRecovered": true
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "mode": "hold-new",
+      "targetPrintedPage": 57,
+      "substitutePrintedPage": null,
+      "validWrongJpegResponses": 0,
+      "heldMilliseconds": 8500,
+      "incompleteNeverReady": true,
+      "wrongViewerAndExportRefused": false,
+      "correctedPageAndWorkerRecovered": true
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "mode": "wrong-new",
+      "targetPrintedPage": 57,
+      "substitutePrintedPage": 56,
+      "validWrongJpegResponses": 3,
+      "heldMilliseconds": 0,
+      "incompleteNeverReady": true,
+      "wrongViewerAndExportRefused": true,
+      "correctedPageAndWorkerRecovered": true
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "mode": "wrong-existing",
+      "targetPrintedPage": 53,
+      "substitutePrintedPage": 52,
+      "validWrongJpegResponses": 3,
+      "heldMilliseconds": 0,
+      "incompleteNeverReady": true,
+      "wrongViewerAndExportRefused": true,
+      "correctedPageAndWorkerRecovered": true
+    }
+  ]
+}

@@ -2,6 +2,21 @@
 
 ## 2026-10-25
 
+- Extend the sequential Greek/Latin/English course through I.22 and I.23:
+  triangle construction, all three strict inequalities and the side-based
+  construction of an equal angle on a freely tilted baseline. Retain arbitrary
+  point choices and both reflected copies. Add fifteen complete reading units,
+  four contextual word notes, four exercises and original pages 56–57.
+- Bring the chosen lesson forward on phones with a native companion-workshop
+  disclosure. Preserve the earlier dedicated I.22 workshop and its trial hinge.
+- Verify course facsimiles before displaying them; a valid but substituted Greek
+  page is no longer shown beneath a Latin-page caption. Preserve zoom during
+  page changes and recover the verified page after browser history restoration.
+- Inspect offline completeness without creating a deleted edition cache.
+  Exercise held/substituted source recovery and actual upgrades from the prior
+  seven-room I.1–21 edition, including existing tabs and native readings with
+  the origin stopped.
+
 - Added the Book X common-measure room: learner-operated subtraction and turns,
   exact rational/surd lengths, a stable magnifier beside the original scale,
   terminal common-unit checks and the eight-count diagonal/fraction comparison.

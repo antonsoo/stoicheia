@@ -1,0 +1,5 @@
+
+> @antonsoloviev/stoicheia@0.1.0 verify:copying
+> node --import tsx scripts/copying-cases.ts | python3 scripts/copying-oracle.py
+
+712 complete independent constructions / 18324 side, area, angle, branch and bounds checks passed.

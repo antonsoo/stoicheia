@@ -242,7 +242,12 @@ for (const [name, engine] of [
           const file = join(output, `${name}-${width}.${ext}`);
           await download.saveAs(file);
           const bytes = await readFile(file);
-          assert.doesNotMatch(bytes.toString(), /NaN|Infinity|<script/);
+          // Embedded JPEG/font base64 can contain the letters NaN. Inspect
+          // numeric markup after removing data payloads, while checking the
+          // complete document independently for executable script tags.
+          const text = bytes.toString();
+          assert.doesNotMatch(text, /<script\b/i);
+          assert.doesNotMatch(text.replace(/data:[^\s"')<>]+/g, "data:embedded"), /NaN|Infinity/);
           downloads.push({
             file: file.split("/").at(-1),
             bytes: bytes.length,

@@ -34,10 +34,15 @@ a new reading translation for this workbench.
 | I.18        | 46                         | 47                          |
 | I.19        | 46, 48                     | 47, 49                      |
 | I.20        | 48, 50                     | 49, 51                      |
+| I.21        | 50, 52                     | 51, 53                      |
+| I.22        | 52, 54                     | 53, 55                      |
+| I.23        | 54, 56                     | 55, 57                      |
 
-Bundled JPEGs are full-page renders of PDF pages 16–65 using Poppler's
-`pdftoppm`, maximum dimension 1550 px and JPEG quality 88. They include material
-outside I.1–21 and the selected foundations (other definitions and critical notes). The reader transcribes only its named selections. See [the manifest](../public/sources/manifest.json)
+The course JPEGs are full-page renders of PDF pages 16–71 using Poppler's
+`pdftoppm`, maximum dimension 1550 px and JPEG quality 88. The manifest also
+identifies later pages used by companion workshops. Full pages include material
+outside I.1–23 and the selected foundations (other propositions, definitions and
+critical notes). The reader transcribes only its named selections. See [the manifest](../public/sources/manifest.json)
 for the download URL, source PDF hash, page mapping and JPEG hashes.
 
 Changes from print:
@@ -346,6 +351,38 @@ for the angle comparison; no triangle-angle-sum theorem is introduced.
 The movable coordinate drawing preserves the orders Α–Ε–Γ and Β–Δ–Ε.
 Its dimensions, percentage controls, colors and degree readings are modern.
 The source proves a comparison of sums, not two individual side comparisons.
+
+## Three lengths and an angle: I.22–23
+
+The sequential I.22 lesson reuses the complete statement and eight proof units
+from `src/content/closure.ts`, already used by the separate triangle workshop.
+It does not maintain a second transcription. Greek uses printed pages 52 and
+54; Heiberg Latin uses 53 and 55.
+
+I.23 uses the statement on Greek p. 54 / Latin p. 55 and the complete proof on
+56 / 57, divided into seven teaching units. The two added scans are PDF pages
+70 and 71 and Internet Archive leaves 70 and 71. Their original PDF and exact
+rendered JPEG identities are retained in the manifest. The full images include
+the beginning of I.24, which this course does not transcribe.
+
+The normalizations listed above also apply here. In particular, the Latin
+inline references `[I, 22]` and `[I, 8]` are omitted from the transcription and
+explained in the reason and language notes. Equation notation is retained,
+including `erit ∠ ΔΓΕ = ΖΑΗ`. The new English separates the long triangle
+construction and its side correspondences into two connected units; the
+ellipsis marks that continuation. No Greek or Latin sentence is dropped.
+
+`Εἰλήφθω` is a singular perfect passive imperative, although its subject
+`σημεῖα` is neuter plural. Latin instead has plural `sumantur`. `τυχόντα` /
+`quaelibet` leaves both point choices free; the distances need not be equal.
+The two controls test that freedom. `ἑκατέρας` / `utraque` requires one point
+on each side, rather than two points on the same side.
+
+The printed figure places ΑΗ on ΑΒ. The modern model makes that incidence
+explicit and offers either reflected triangle. The angle magnitude, arbitrary
+length controls, baseline tilt, measurements, colors and coordinates are modern
+teaching devices. I.22 supplies the copied triangle, and I.8 establishes the
+included-angle equality. I.4 would require that equality as a hypothesis.
 
 ## Equal-area square: II.14
 

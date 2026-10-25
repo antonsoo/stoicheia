@@ -12,15 +12,43 @@ A translation can make the argument readable while hiding the Greek that carries
 it. Stoicheia connects both: change the givens, follow the command on the plate,
 read the two source languages, and ask what established the relation.
 
-The opening course is **Book I, propositions 1–21**. It includes the complete
-statements and proofs, divided into 174 aligned reading steps, with 51 selected
-vocabulary entries, fourteen foundation statements and forty-two passage-based
+The opening course is **Book I, propositions 1–23**. It includes the complete
+statements and proofs, divided into 189 aligned reading steps, with 55 selected
+vocabulary entries, fourteen foundation statements and forty-six passage-based
 reading exercises. It is intended for an English-speaking reader who knows basic
 geometry and is beginning Greek or Latin.
 
 **[Open the course](https://antonsoo.github.io/stoicheia/)** ·
 [Source repository](https://github.com/antonsoo/stoicheia). The app is a static
 site; no package registry installation is required.
+
+## Copy the opening, through three lengths
+
+The sequential course connects **[I.22](https://antonsoo.github.io/stoicheia/#p=22&s=7) to [I.23](https://antonsoo.github.io/stoicheia/#p=23&s=5&a=32&r=1.15&x=0.25)**. Construct a triangle from
+three suitable lengths, then use that result to copy a given rectilinear angle
+at a new point on a new line. I.8 supplies the final angle equality.
+- Change the two arbitrary point distances: the auxiliary triangle changes,
+  while the given and copied openings agree. Tilt the new baseline or choose
+  the reflected copy; angular magnitude and orientation remain distinct.
+- In I.22, inspect all three strict inequalities, including internal and external
+  tangency. Keep failed givens visible instead of silently replacing them.
+- Read both complete Greek/Latin/English proofs in fifteen aligned units, with
+  four new contextual word notes and four passage-based reading exercises.
+  The I.22 text reuses the existing authoritative workshop transcription.
+- Inspect the original pages 52–57, save a complete illustrated study with its
+  source images and font, and follow the earlier I.8 and I.22 results offline.
+
+On phones, companion workshops open from a native disclosure, so the chosen
+lesson and its plate arrive before a long list of secondary links. Definitions
+and reading practice remain directly available.
+
+[Source, geometry and review](docs/copying-review.md) ·
+[Saved I.23 study, gzip](examples/stoicheia-I23-course.html.gz) ·
+[Printed I.23 study](examples/stoicheia-I23-course.pdf).
+
+![Copy an angle through three side correspondences](docs/assets/copying-desktop.png)
+
+## Shorter route, larger angle
 
 **[Shorter route, larger angle](https://antonsoo.github.io/stoicheia/#p=21&s=9&m=55).**
 Move an interior meeting point to compare the outer route with the two segments
@@ -349,7 +377,7 @@ open it directly in a browser to read without the app.
 ## The source is part of the lesson
 
 The Greek and Latin are transcribed from J. L. Heiberg’s _Euclidis opera omnia_,
-volume I (Leipzig: Teubner, 1883), printed pp. 2–53. Heiberg’s Latin is a
+volume I (Leipzig: Teubner, 1883), printed pp. 2–57. Heiberg’s Latin is a
 **nineteenth-century translation**, not an ancient Latin text. The English is a
 new reading translation; explanations sometimes make an implied intersection
 explicit. Point names remain Greek throughout.
@@ -533,7 +561,7 @@ the download. [Actual file workflows and limits](docs/illustrated-review.md).
 
 ## Accuracy and limitations
 
-- The sequential course covers I.1–21, with a separate complete I.22 workshop.
+- The sequential course covers I.1–23; the separate I.22 workshop adds a trial hinge and finer length controls.
   This is not the whole _Elements_. The construction tools, translations
   and selected vocabulary are complete for that scope. There is no general Greek
   parser, pronunciation model or claim that every word is annotated.

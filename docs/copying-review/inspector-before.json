@@ -1,0 +1,9 @@
+{
+  "before": [],
+  "reply": {
+    "type": "STOICHEIA_EDITION",
+    "edition": "c845d29a3845f9dbf31a44e785adf61778d5b6323d503dfcbfe87479eb34d6c2",
+    "complete": false
+  },
+  "after": ["stoicheia-c845d29a3845f9dbf31a44e785adf61778d5b6323d503dfcbfe87479eb34d6c2"]
+}

@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-25T21:56:50.390Z",
+  "base": "http://127.0.0.1:4431/stoicheia/",
+  "scope": "Real production viewer with service workers blocked; deliberately reordered source responses",
+  "rows": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "heldPage": 53,
+      "navigatedThrough": [54, 55],
+      "latePageDoesNotReplaceVisiblePage": true,
+      "actualDisplayedBytesVerified": [55, 53],
+      "zoomPreserved": true,
+      "pageErrors": []
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "width": 375,
+      "heldPage": 53,
+      "navigatedThrough": [54, 55],
+      "latePageDoesNotReplaceVisiblePage": true,
+      "actualDisplayedBytesVerified": [55, 53],
+      "zoomPreserved": true,
+      "pageErrors": []
+    }
+  ]
+}

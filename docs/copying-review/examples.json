@@ -1,0 +1,35 @@
+{
+  "source": "Actual Chromium 1440px downloads from the final reviewed production build; PDFs printed from those native HTML files",
+  "files": [
+    {
+      "file": "examples/stoicheia-I22-course.html.gz",
+      "bytes": 3273016,
+      "sha256": "a309bd179a1330cd339da5bd229007f17d3d1affc7c0e7e0af0f66f8ea8303a2"
+    },
+    {
+      "file": "examples/stoicheia-I22-course.pdf",
+      "bytes": 3211198,
+      "sha256": "92d66070b2909cb0220dc62c8e0a48a582827aac556df35d4c82ff6e75a827c4"
+    },
+    {
+      "file": "examples/stoicheia-I22-course.svg",
+      "bytes": 5851,
+      "sha256": "4eb1562cbe690d533c2ee5497b124e8af3fe1f459057e107d20cf07e1c63c130"
+    },
+    {
+      "file": "examples/stoicheia-I23-course.html.gz",
+      "bytes": 2005431,
+      "sha256": "217f86a4e6351f434788b3522f8aa0a44b21edb9dc9195c501d8ce979c3a2ad6"
+    },
+    {
+      "file": "examples/stoicheia-I23-course.pdf",
+      "bytes": 1883736,
+      "sha256": "e1babdc7cf320891cbad8a31ff4121c410b274acea653e39dd86a9f7c00fe776"
+    },
+    {
+      "file": "examples/stoicheia-I23-course.svg",
+      "bytes": 5458,
+      "sha256": "2d239afe722e07d2bb4fe29705259130730004938f6a589ada3c0a2cc23e252f"
+    }
+  ]
+}
