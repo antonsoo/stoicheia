@@ -27,6 +27,7 @@ export default defineConfig(async ({ command }) => {
     "gnomon.html",
     "mesolabe.html",
     "desk.html",
+    "measure.html",
     "LICENSE",
     "vite.config.ts",
     "tsconfig.json",
@@ -43,6 +44,7 @@ export default defineConfig(async ({ command }) => {
   for (const manifest of [
     "public/sources/manifest.json",
     "public/sources/mesolabe/manifest.json",
+    "public/sources/measure/manifest.json",
   ]) {
     const sourceManifest = JSON.parse(await readFile(manifest, "utf8")) as {
       pages: { file: string; bytes: number; sha256: string }[];
@@ -76,6 +78,7 @@ export default defineConfig(async ({ command }) => {
           gnomon: "gnomon.html",
           mesolabe: "mesolabe.html",
           desk: "desk.html",
+          measure: "measure.html",
         },
       },
     },

@@ -60,3 +60,8 @@ export async function studyDataUrl(file: string, type: string): Promise<string> 
 export async function studyText(file: string): Promise<string> {
   return new TextDecoder().decode(await verifiedBytes(file));
 }
+
+/** Caller owns and revokes the URL. Source viewing uses the same verified bytes as export. */
+export async function studyBlobUrl(file: string, type: string): Promise<string> {
+  return URL.createObjectURL(new Blob([await verifiedBytes(file)], { type }));
+}
