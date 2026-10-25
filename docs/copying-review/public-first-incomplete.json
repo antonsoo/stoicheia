@@ -1,0 +1,2898 @@
+{
+  "checkedAt": "2026-10-25T22:00:39.228Z",
+  "scope": "Actual public source, downloads, browser offline; public origin remains running",
+  "base": "https://antonsoo.github.io/stoicheia/",
+  "edition": "f1d017db40f4c6ac6eaf4d6fefd90f45d2534c1b51b66b61a07946a45eb27938",
+  "workerSha256": "c6389ef5d115ecb1cdc9de0d05a948aa4423614a9a81839c442287e73cbe5bc0",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "width": 1440,
+      "readingUnits": 15,
+      "downloads": [
+        {
+          "lesson": 22,
+          "html": {
+            "file": "I22-study.html",
+            "bytes": 4567403,
+            "sha256": "8d92a6e9057d7d1f43dc3ca2e43da47ddd80027eefea69fe46263b7a243ca76a"
+          },
+          "svg": {
+            "file": "I22.svg",
+            "bytes": 5851,
+            "sha256": "4eb1562cbe690d533c2ee5497b124e8af3fe1f459057e107d20cf07e1c63c130"
+          },
+          "sourcePages": [4, 5, 8, 9, 10, 11, 52, 53, 54, 55]
+        },
+        {
+          "lesson": 23,
+          "html": {
+            "file": "I23-study.html",
+            "bytes": 2887732,
+            "sha256": "48eb6137fa9aca38a3ed3d0974da19be28c6b6feae93fc99f6335a05ec1315db"
+          },
+          "svg": {
+            "file": "I23.svg",
+            "bytes": 5458,
+            "sha256": "2d239afe722e07d2bb4fe29705259130730004938f6a589ada3c0a2cc23e252f"
+          },
+          "sourcePages": [8, 9, 54, 55, 56, 57]
+        }
+      ],
+      "views": [
+        {
+          "description": {
+            "proposition": 22,
+            "a": 40,
+            "c": 60,
+            "case": "external tangent"
+          },
+          "points": {
+            "given-Α": {
+              "x": 204.604,
+              "y": 175.971
+            },
+            "given-Β": {
+              "x": 204.604,
+              "y": 133.237
+            },
+            "given-Γ": {
+              "x": 204.604,
+              "y": 90.504
+            },
+            "Δ": {
+              "x": 159.928,
+              "y": 405.18
+            },
+            "Ζ": {
+              "x": 237.626,
+              "y": 405.18
+            },
+            "Η": {
+              "x": 431.871,
+              "y": 405.18
+            },
+            "Θ": {
+              "x": 548.417,
+              "y": 405.18
+            },
+            "Ε": {
+              "x": 591.151,
+              "y": 405.18
+            },
+            "Κ": {
+              "x": 315.324,
+              "y": 405.18
+            }
+          },
+          "segments": [
+            {
+              "id": "given-Α",
+              "x1": 237.626,
+              "y1": 175.971,
+              "x2": 315.324,
+              "y2": 175.971
+            },
+            {
+              "id": "given-Β",
+              "x1": 237.626,
+              "y1": 133.237,
+              "x2": 431.871,
+              "y2": 133.237
+            },
+            {
+              "id": "given-Γ",
+              "x1": 237.626,
+              "y1": 90.504,
+              "x2": 354.173,
+              "y2": 90.504
+            },
+            {
+              "id": "ray",
+              "x1": 159.928,
+              "y1": 405.18,
+              "x2": 591.151,
+              "y2": 405.18
+            },
+            {
+              "id": "DZ",
+              "x1": 159.928,
+              "y1": 405.18,
+              "x2": 237.626,
+              "y2": 405.18
+            },
+            {
+              "id": "ZH",
+              "x1": 237.626,
+              "y1": 405.18,
+              "x2": 431.871,
+              "y2": 405.18
+            },
+            {
+              "id": "HT",
+              "x1": 431.871,
+              "y1": 405.18,
+              "x2": 548.417,
+              "y2": 405.18
+            }
+          ],
+          "hash": "p=22&s=7&size=180&r=0.4&a=32&side=1&m=0&t=0.6&q=12&v=0&k=0.55"
+        },
+        {
+          "description": {
+            "proposition": 22,
+            "a": 140,
+            "c": 40,
+            "case": "internal tangent"
+          },
+          "points": {
+            "given-Α": {
+              "x": 335.342,
+              "y": 126.301
+            },
+            "given-Β": {
+              "x": 335.342,
+              "y": 99.178
+            },
+            "given-Γ": {
+              "x": 335.342,
+              "y": 72.055
+            },
+            "Δ": {
+              "x": 183.699,
+              "y": 370.411
+            },
+            "Ζ": {
+              "x": 356.301,
+              "y": 370.411
+            },
+            "Η": {
+              "x": 479.589,
+              "y": 370.411
+            },
+            "Θ": {
+              "x": 528.904,
+              "y": 370.411
+            },
+            "Ε": {
+              "x": 556.027,
+              "y": 370.411
+            },
+            "Κ": {
+              "x": 528.904,
+              "y": 370.411
+            }
+          },
+          "segments": [
+            {
+              "id": "given-Α",
+              "x1": 356.301,
+              "y1": 126.301,
+              "x2": 528.904,
+              "y2": 126.301
+            },
+            {
+              "id": "given-Β",
+              "x1": 356.301,
+              "y1": 99.178,
+              "x2": 479.589,
+              "y2": 99.178
+            },
+            {
+              "id": "given-Γ",
+              "x1": 356.301,
+              "y1": 72.055,
+              "x2": 405.616,
+              "y2": 72.055
+            },
+            {
+              "id": "ray",
+              "x1": 183.699,
+              "y1": 370.411,
+              "x2": 556.027,
+              "y2": 370.411
+            },
+            {
+              "id": "DZ",
+              "x1": 183.699,
+              "y1": 370.411,
+              "x2": 356.301,
+              "y2": 370.411
+            },
+            {
+              "id": "ZH",
+              "x1": 356.301,
+              "y1": 370.411,
+              "x2": 479.589,
+              "y2": 370.411
+            },
+            {
+              "id": "HT",
+              "x1": 479.589,
+              "y1": 370.411,
+              "x2": 528.904,
+              "y2": 370.411
+            }
+          ],
+          "hash": "p=22&s=7&size=180&r=1.4&a=32&side=1&m=0&t=0.4&q=12&v=0&k=0.55"
+        },
+        {
+          "description": {
+            "proposition": 22,
+            "a": 30,
+            "c": 30,
+            "case": "separate"
+          },
+          "points": {
+            "given-Α": {
+              "x": 186.606,
+              "y": 213.394
+            },
+            "given-Β": {
+              "x": 186.606,
+              "y": 158.899
+            },
+            "given-Γ": {
+              "x": 186.606,
+              "y": 104.404
+            },
+            "Δ": {
+              "x": 154.404,
+              "y": 431.376
+            },
+            "Ζ": {
+              "x": 228.716,
+              "y": 431.376
+            },
+            "Η": {
+              "x": 476.422,
+              "y": 431.376
+            },
+            "Θ": {
+              "x": 550.734,
+              "y": 431.376
+            },
+            "Ε": {
+              "x": 605.229,
+              "y": 431.376
+            }
+          },
+          "segments": [
+            {
+              "id": "given-Α",
+              "x1": 228.716,
+              "y1": 213.394,
+              "x2": 303.028,
+              "y2": 213.394
+            },
+            {
+              "id": "given-Β",
+              "x1": 228.716,
+              "y1": 158.899,
+              "x2": 476.422,
+              "y2": 158.899
+            },
+            {
+              "id": "given-Γ",
+              "x1": 228.716,
+              "y1": 104.404,
+              "x2": 303.028,
+              "y2": 104.404
+            },
+            {
+              "id": "ray",
+              "x1": 154.404,
+              "y1": 431.376,
+              "x2": 605.229,
+              "y2": 431.376
+            },
+            {
+              "id": "DZ",
+              "x1": 154.404,
+              "y1": 431.376,
+              "x2": 228.716,
+              "y2": 431.376
+            },
+            {
+              "id": "ZH",
+              "x1": 228.716,
+              "y1": 431.376,
+              "x2": 476.422,
+              "y2": 431.376
+            },
+            {
+              "id": "HT",
+              "x1": 476.422,
+              "y1": 431.376,
+              "x2": 550.734,
+              "y2": 431.376
+            }
+          ],
+          "hash": "p=22&s=7&size=180&r=0.3&a=32&side=1&m=0&t=0.3&q=12&v=0&k=0.55"
+        },
+        {
+          "description": {
+            "proposition": 22,
+            "a": 140,
+            "c": 30,
+            "case": "contained"
+          },
+          "points": {
+            "given-Α": {
+              "x": 335.342,
+              "y": 126.301
+            },
+            "given-Β": {
+              "x": 335.342,
+              "y": 99.178
+            },
+            "given-Γ": {
+              "x": 335.342,
+              "y": 72.055
+            },
+            "Δ": {
+              "x": 183.699,
+              "y": 370.411
+            },
+            "Ζ": {
+              "x": 356.301,
+              "y": 370.411
+            },
+            "Η": {
+              "x": 479.589,
+              "y": 370.411
+            },
+            "Θ": {
+              "x": 516.575,
+              "y": 370.411
+            },
+            "Ε": {
+              "x": 543.699,
+              "y": 370.411
+            }
+          },
+          "segments": [
+            {
+              "id": "given-Α",
+              "x1": 356.301,
+              "y1": 126.301,
+              "x2": 528.904,
+              "y2": 126.301
+            },
+            {
+              "id": "given-Β",
+              "x1": 356.301,
+              "y1": 99.178,
+              "x2": 479.589,
+              "y2": 99.178
+            },
+            {
+              "id": "given-Γ",
+              "x1": 356.301,
+              "y1": 72.055,
+              "x2": 393.288,
+              "y2": 72.055
+            },
+            {
+              "id": "ray",
+              "x1": 183.699,
+              "y1": 370.411,
+              "x2": 543.699,
+              "y2": 370.411
+            },
+            {
+              "id": "DZ",
+              "x1": 183.699,
+              "y1": 370.411,
+              "x2": 356.301,
+              "y2": 370.411
+            },
+            {
+              "id": "ZH",
+              "x1": 356.301,
+              "y1": 370.411,
+              "x2": 479.589,
+              "y2": 370.411
+            },
+            {
+              "id": "HT",
+              "x1": 479.589,
+              "y1": 370.411,
+              "x2": 516.575,
+              "y2": 370.411
+            }
+          ],
+          "hash": "p=22&s=7&size=180&r=1.4&a=32&side=1&m=0&t=0.3&q=12&v=0&k=0.55"
+        },
+        {
+          "description": {
+            "proposition": 22,
+            "a": 65,
+            "c": 120,
+            "case": "crossing"
+          },
+          "points": {
+            "given-Α": {
+              "x": 227.714,
+              "y": 134.975
+            },
+            "given-Β": {
+              "x": 227.714,
+              "y": 105.126
+            },
+            "given-Γ": {
+              "x": 227.714,
+              "y": 75.276
+            },
+            "Δ": {
+              "x": 162.588,
+              "y": 376.482
+            },
+            "Ζ": {
+              "x": 250.779,
+              "y": 376.482
+            },
+            "Η": {
+              "x": 386.457,
+              "y": 376.482
+            },
+            "Θ": {
+              "x": 549.271,
+              "y": 376.482
+            },
+            "Ε": {
+              "x": 579.121,
+              "y": 376.482
+            },
+            "Κ": {
+              "x": 249.592,
+              "y": 288.299
+            },
+            "Λ": {
+              "x": 249.592,
+              "y": 464.665
+            }
+          },
+          "segments": [
+            {
+              "id": "given-Α",
+              "x1": 250.779,
+              "y1": 134.975,
+              "x2": 338.97,
+              "y2": 134.975
+            },
+            {
+              "id": "given-Β",
+              "x1": 250.779,
+              "y1": 105.126,
+              "x2": 386.457,
+              "y2": 105.126
+            },
+            {
+              "id": "given-Γ",
+              "x1": 250.779,
+              "y1": 75.276,
+              "x2": 413.593,
+              "y2": 75.276
+            },
+            {
+              "id": "ray",
+              "x1": 162.588,
+              "y1": 376.482,
+              "x2": 579.121,
+              "y2": 376.482
+            },
+            {
+              "id": "DZ",
+              "x1": 162.588,
+              "y1": 376.482,
+              "x2": 250.779,
+              "y2": 376.482
+            },
+            {
+              "id": "ZH",
+              "x1": 250.779,
+              "y1": 376.482,
+              "x2": 386.457,
+              "y2": 376.482
+            },
+            {
+              "id": "HT",
+              "x1": 386.457,
+              "y1": 376.482,
+              "x2": 549.271,
+              "y2": 376.482
+            },
+            {
+              "id": "KZ",
+              "x1": 249.592,
+              "y1": 288.299,
+              "x2": 250.779,
+              "y2": 376.482
+            },
+            {
+              "id": "KH",
+              "x1": 249.592,
+              "y1": 288.299,
+              "x2": 386.457,
+              "y2": 376.482
+            }
+          ],
+          "hash": "p=22&s=7&size=180&r=0.65&a=32&side=1&m=0&t=1.2&q=12&v=0&k=0.55"
+        },
+        {
+          "description": {
+            "proposition": 23,
+            "opening": 20,
+            "ratio": 1.4,
+            "tilt": 45,
+            "variant": 0
+          },
+          "points": {
+            "Γ": {
+              "x": 229.152,
+              "y": 164.896
+            },
+            "Α": {
+              "x": 229.152,
+              "y": 525.856
+            },
+            "Β": {
+              "x": 446.104,
+              "y": 308.904
+            },
+            "Δ": {
+              "x": 398.748,
+              "y": 103.168
+            },
+            "Ε": {
+              "x": 481.824,
+              "y": 164.896
+            },
+            "Η": {
+              "x": 407.818,
+              "y": 347.19
+            },
+            "Ζ": {
+              "x": 305.426,
+              "y": 362.285
+            }
+          },
+          "segments": [
+            {
+              "id": "given-ray-D",
+              "x1": 229.152,
+              "y1": 164.896,
+              "x2": 441.147,
+              "y2": 87.736
+            },
+            {
+              "id": "given-ray-E",
+              "x1": 229.152,
+              "y1": 164.896,
+              "x2": 512.145,
+              "y2": 164.896
+            },
+            {
+              "id": "AB",
+              "x1": 229.152,
+              "y1": 525.856,
+              "x2": 446.104,
+              "y2": 308.904
+            },
+            {
+              "id": "DE",
+              "x1": 398.748,
+              "y1": 103.168,
+              "x2": 481.824,
+              "y2": 164.896
+            },
+            {
+              "id": "AH",
+              "x1": 229.152,
+              "y1": 525.856,
+              "x2": 407.818,
+              "y2": 347.19
+            },
+            {
+              "id": "AZ",
+              "x1": 229.152,
+              "y1": 525.856,
+              "x2": 305.426,
+              "y2": 362.285
+            },
+            {
+              "id": "ZH",
+              "x1": 305.426,
+              "y1": 362.285,
+              "x2": 407.818,
+              "y2": 347.19
+            }
+          ],
+          "hash": "p=23&s=5&size=180&r=1.4&a=10&side=1&m=0&t=1.2&q=12&v=0&k=0.55&x=0.45"
+        },
+        {
+          "description": {
+            "proposition": 23,
+            "opening": 20,
+            "ratio": 1.4,
+            "tilt": 45,
+            "variant": 1
+          },
+          "points": {
+            "Γ": {
+              "x": 229.152,
+              "y": 164.896
+            },
+            "Α": {
+              "x": 229.152,
+              "y": 525.856
+            },
+            "Β": {
+              "x": 446.104,
+              "y": 308.904
+            },
+            "Δ": {
+              "x": 398.748,
+              "y": 103.168
+            },
+            "Ε": {
+              "x": 481.824,
+              "y": 164.896
+            },
+            "Η": {
+              "x": 407.818,
+              "y": 347.19
+            },
+            "Ζ": {
+              "x": 392.722,
+              "y": 449.582
+            }
+          },
+          "segments": [
+            {
+              "id": "given-ray-D",
+              "x1": 229.152,
+              "y1": 164.896,
+              "x2": 441.147,
+              "y2": 87.736
+            },
+            {
+              "id": "given-ray-E",
+              "x1": 229.152,
+              "y1": 164.896,
+              "x2": 512.145,
+              "y2": 164.896
+            },
+            {
+              "id": "AB",
+              "x1": 229.152,
+              "y1": 525.856,
+              "x2": 446.104,
+              "y2": 308.904
+            },
+            {
+              "id": "DE",
+              "x1": 398.748,
+              "y1": 103.168,
+              "x2": 481.824,
+              "y2": 164.896
+            },
+            {
+              "id": "AH",
+              "x1": 229.152,
+              "y1": 525.856,
+              "x2": 407.818,
+              "y2": 347.19
+            },
+            {
+              "id": "AZ",
+              "x1": 229.152,
+              "y1": 525.856,
+              "x2": 392.722,
+              "y2": 449.582
+            },
+            {
+              "id": "ZH",
+              "x1": 392.722,
+              "y1": 449.582,
+              "x2": 407.818,
+              "y2": 347.19
+            }
+          ],
+          "hash": "p=23&s=5&size=180&r=1.4&a=10&side=1&m=0&t=1.2&q=12&v=1&k=0.55&x=0.45"
+        },
+        {
+          "description": {
+            "proposition": 23,
+            "opening": 150,
+            "ratio": 0.2,
+            "tilt": 45,
+            "variant": 1
+          },
+          "points": {
+            "Γ": {
+              "x": 334.675,
+              "y": 151.518
+            },
+            "Α": {
+              "x": 334.675,
+              "y": 413.913
+            },
+            "Β": {
+              "x": 492.385,
+              "y": 256.203
+            },
+            "Δ": {
+              "x": 221.055,
+              "y": 85.919
+            },
+            "Ε": {
+              "x": 360.915,
+              "y": 151.518
+            },
+            "Η": {
+              "x": 353.229,
+              "y": 395.359
+            },
+            "Ζ": {
+              "x": 300.719,
+              "y": 540.641
+            }
+          },
+          "segments": [
+            {
+              "id": "given-ray-D",
+              "x1": 334.675,
+              "y1": 151.518,
+              "x2": 192.649,
+              "y2": 69.519
+            },
+            {
+              "id": "given-ray-E",
+              "x1": 334.675,
+              "y1": 151.518,
+              "x2": 364.063,
+              "y2": 151.518
+            },
+            {
+              "id": "AB",
+              "x1": 334.675,
+              "y1": 413.913,
+              "x2": 492.385,
+              "y2": 256.203
+            },
+            {
+              "id": "DE",
+              "x1": 221.055,
+              "y1": 85.919,
+              "x2": 360.915,
+              "y2": 151.518
+            },
+            {
+              "id": "AH",
+              "x1": 334.675,
+              "y1": 413.913,
+              "x2": 353.229,
+              "y2": 395.359
+            },
+            {
+              "id": "AZ",
+              "x1": 334.675,
+              "y1": 413.913,
+              "x2": 300.719,
+              "y2": 540.641
+            },
+            {
+              "id": "ZH",
+              "x1": 300.719,
+              "y1": 540.641,
+              "x2": 353.229,
+              "y2": 395.359
+            }
+          ],
+          "hash": "p=23&s=5&size=180&r=0.2&a=75&side=1&m=0&t=1.2&q=12&v=1&k=0.55&x=0.45"
+        }
+      ],
+      "exercises": [
+        "Reading 43 of 46 · I.22 · Greek",
+        "Reading 44 of 46 · I.22 · Latin",
+        "Reading 45 of 46 · I.23 · Greek",
+        "Reading 46 of 46 · I.23 · Latin"
+      ],
+      "axeViolations": 0,
+      "inventory": [
+        {
+          "key": "stoicheia-f1d017db40f4c6ac6eaf4d6fefd90f45d2534c1b51b66b61a07946a45eb27938",
+          "files": [
+            "/stoicheia/assets/closure-C78fP2go.js",
+            "/stoicheia/assets/desk-BRXWpSPJ.js",
+            "/stoicheia/assets/desk-CSBNE5QJ.css",
+            "/stoicheia/assets/geometry-4f0nyLSJ.js",
+            "/stoicheia/assets/gnomon-Ba77ooJT.css",
+            "/stoicheia/assets/gnomon-DZlvc_fa.js",
+            "/stoicheia/assets/measure-CUIrZU7t.css",
+            "/stoicheia/assets/measure-DOxwmBow.js",
+            "/stoicheia/assets/mesolabe-7AwiFx9G.css",
+            "/stoicheia/assets/mesolabe-CFm_R4IC.js",
+            "/stoicheia/assets/offline-D5UGvC8q.css",
+            "/stoicheia/assets/offline-qQjCASZt.js",
+            "/stoicheia/assets/quadrature-XiT_7MPW.css",
+            "/stoicheia/assets/quadrature-elVjAlCY.js",
+            "/stoicheia/assets/quadrature-tfrCYwjA.js",
+            "/stoicheia/assets/reader-CRr5ibZO.js",
+            "/stoicheia/assets/triangle-Baq3u__T.js",
+            "/stoicheia/assets/triangle-D7DRmLfq.css",
+            "/stoicheia/desk.html",
+            "/stoicheia/favicon.svg",
+            "/stoicheia/fonts/NotoSerif-Regular.ttf",
+            "/stoicheia/fonts/OFL.txt",
+            "/stoicheia/gnomon.html",
+            "/stoicheia/index.html",
+            "/stoicheia/measure.html",
+            "/stoicheia/mesolabe.html",
+            "/stoicheia/quadrature.html",
+            "/stoicheia/sources/heiberg-002.jpg",
+            "/stoicheia/sources/heiberg-003.jpg",
+            "/stoicheia/sources/heiberg-004.jpg",
+            "/stoicheia/sources/heiberg-005.jpg",
+            "/stoicheia/sources/heiberg-006.jpg",
+            "/stoicheia/sources/heiberg-007.jpg",
+            "/stoicheia/sources/heiberg-008.jpg",
+            "/stoicheia/sources/heiberg-009.jpg",
+            "/stoicheia/sources/heiberg-010.jpg",
+            "/stoicheia/sources/heiberg-011.jpg",
+            "/stoicheia/sources/heiberg-012.jpg",
+            "/stoicheia/sources/heiberg-013.jpg",
+            "/stoicheia/sources/heiberg-014.jpg",
+            "/stoicheia/sources/heiberg-015.jpg",
+            "/stoicheia/sources/heiberg-016.jpg",
+            "/stoicheia/sources/heiberg-017.jpg",
+            "/stoicheia/sources/heiberg-018.jpg",
+            "/stoicheia/sources/heiberg-019.jpg",
+            "/stoicheia/sources/heiberg-020.jpg",
+            "/stoicheia/sources/heiberg-021.jpg",
+            "/stoicheia/sources/heiberg-022.jpg",
+            "/stoicheia/sources/heiberg-023.jpg",
+            "/stoicheia/sources/heiberg-024.jpg",
+            "/stoicheia/sources/heiberg-025.jpg",
+            "/stoicheia/sources/heiberg-026.jpg",
+            "/stoicheia/sources/heiberg-027.jpg",
+            "/stoicheia/sources/heiberg-028.jpg",
+            "/stoicheia/sources/heiberg-029.jpg",
+            "/stoicheia/sources/heiberg-030.jpg",
+            "/stoicheia/sources/heiberg-031.jpg",
+            "/stoicheia/sources/heiberg-032.jpg",
+            "/stoicheia/sources/heiberg-033.jpg",
+            "/stoicheia/sources/heiberg-034.jpg",
+            "/stoicheia/sources/heiberg-035.jpg",
+            "/stoicheia/sources/heiberg-036.jpg",
+            "/stoicheia/sources/heiberg-037.jpg",
+            "/stoicheia/sources/heiberg-038.jpg",
+            "/stoicheia/sources/heiberg-039.jpg",
+            "/stoicheia/sources/heiberg-040.jpg",
+            "/stoicheia/sources/heiberg-041.jpg",
+            "/stoicheia/sources/heiberg-042.jpg",
+            "/stoicheia/sources/heiberg-043.jpg",
+            "/stoicheia/sources/heiberg-044.jpg",
+            "/stoicheia/sources/heiberg-045.jpg",
+            "/stoicheia/sources/heiberg-046.jpg",
+            "/stoicheia/sources/heiberg-047.jpg",
+            "/stoicheia/sources/heiberg-048.jpg",
+            "/stoicheia/sources/heiberg-049.jpg",
+            "/stoicheia/sources/heiberg-050.jpg",
+            "/stoicheia/sources/heiberg-051.jpg",
+            "/stoicheia/sources/heiberg-052.jpg",
+            "/stoicheia/sources/heiberg-053.jpg",
+            "/stoicheia/sources/heiberg-054.jpg",
+            "/stoicheia/sources/heiberg-055.jpg",
+            "/stoicheia/sources/heiberg-056.jpg",
+            "/stoicheia/sources/heiberg-057.jpg",
+            "/stoicheia/sources/heiberg-100.jpg",
+            "/stoicheia/sources/heiberg-101.jpg",
+            "/stoicheia/sources/heiberg-102.jpg",
+            "/stoicheia/sources/heiberg-103.jpg",
+            "/stoicheia/sources/heiberg-110.jpg",
+            "/stoicheia/sources/heiberg-111.jpg",
+            "/stoicheia/sources/heiberg-128.jpg",
+            "/stoicheia/sources/heiberg-129.jpg",
+            "/stoicheia/sources/heiberg-130.jpg",
+            "/stoicheia/sources/heiberg-131.jpg",
+            "/stoicheia/sources/heiberg-132.jpg",
+            "/stoicheia/sources/heiberg-133.jpg",
+            "/stoicheia/sources/heiberg-160.jpg",
+            "/stoicheia/sources/heiberg-161.jpg",
+            "/stoicheia/sources/heiberg-162.jpg",
+            "/stoicheia/sources/heiberg-163.jpg",
+            "/stoicheia/sources/manifest.json",
+            "/stoicheia/sources/measure/heiberg-002.jpg",
+            "/stoicheia/sources/measure/heiberg-003.jpg",
+            "/stoicheia/sources/measure/heiberg-004.jpg",
+            "/stoicheia/sources/measure/heiberg-005.jpg",
+            "/stoicheia/sources/measure/heiberg-006.jpg",
+            "/stoicheia/sources/measure/heiberg-007.jpg",
+            "/stoicheia/sources/measure/heiberg-008.jpg",
+            "/stoicheia/sources/measure/heiberg-009.jpg",
+            "/stoicheia/sources/measure/heiberg-010.jpg",
+            "/stoicheia/sources/measure/heiberg-011.jpg",
+            "/stoicheia/sources/measure/heiberg-012.jpg",
+            "/stoicheia/sources/measure/heiberg-013.jpg",
+            "/stoicheia/sources/measure/manifest.json",
+            "/stoicheia/sources/mesolabe/eutocius-102.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-103.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-104.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-105.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-106.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-107.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-108.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-109.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-110.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-111.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-112.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-113.jpg",
+            "/stoicheia/sources/mesolabe/manifest.json",
+            "/stoicheia/triangle.html"
+          ]
+        }
+      ],
+      "offlineRooms": [
+        "triangle.html",
+        "quadrature.html",
+        "gnomon.html",
+        "mesolabe.html",
+        "desk.html",
+        "measure.html",
+        "index.html"
+      ],
+      "offlineSourceAndReading": true,
+      "pageErrors": []
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "readingUnits": 15,
+      "downloads": [
+        {
+          "lesson": 22,
+          "html": {
+            "file": "I22-study.html",
+            "bytes": 4567403,
+            "sha256": "8d92a6e9057d7d1f43dc3ca2e43da47ddd80027eefea69fe46263b7a243ca76a"
+          },
+          "svg": {
+            "file": "I22.svg",
+            "bytes": 5851,
+            "sha256": "4eb1562cbe690d533c2ee5497b124e8af3fe1f459057e107d20cf07e1c63c130"
+          },
+          "sourcePages": [4, 5, 8, 9, 10, 11, 52, 53, 54, 55]
+        },
+        {
+          "lesson": 23,
+          "html": {
+            "file": "I23-study.html",
+            "bytes": 2887732,
+            "sha256": "48eb6137fa9aca38a3ed3d0974da19be28c6b6feae93fc99f6335a05ec1315db"
+          },
+          "svg": {
+            "file": "I23.svg",
+            "bytes": 5458,
+            "sha256": "2d239afe722e07d2bb4fe29705259130730004938f6a589ada3c0a2cc23e252f"
+          },
+          "sourcePages": [8, 9, 54, 55, 56, 57]
+        }
+      ],
+      "views": [
+        {
+          "description": {
+            "proposition": 22,
+            "a": 40,
+            "c": 60,
+            "case": "external tangent"
+          },
+          "points": {
+            "given-Α": {
+              "x": 204.604,
+              "y": 175.971
+            },
+            "given-Β": {
+              "x": 204.604,
+              "y": 133.237
+            },
+            "given-Γ": {
+              "x": 204.604,
+              "y": 90.504
+            },
+            "Δ": {
+              "x": 159.928,
+              "y": 405.18
+            },
+            "Ζ": {
+              "x": 237.626,
+              "y": 405.18
+            },
+            "Η": {
+              "x": 431.871,
+              "y": 405.18
+            },
+            "Θ": {
+              "x": 548.417,
+              "y": 405.18
+            },
+            "Ε": {
+              "x": 591.151,
+              "y": 405.18
+            },
+            "Κ": {
+              "x": 315.324,
+              "y": 405.18
+            }
+          },
+          "segments": [
+            {
+              "id": "given-Α",
+              "x1": 237.626,
+              "y1": 175.971,
+              "x2": 315.324,
+              "y2": 175.971
+            },
+            {
+              "id": "given-Β",
+              "x1": 237.626,
+              "y1": 133.237,
+              "x2": 431.871,
+              "y2": 133.237
+            },
+            {
+              "id": "given-Γ",
+              "x1": 237.626,
+              "y1": 90.504,
+              "x2": 354.173,
+              "y2": 90.504
+            },
+            {
+              "id": "ray",
+              "x1": 159.928,
+              "y1": 405.18,
+              "x2": 591.151,
+              "y2": 405.18
+            },
+            {
+              "id": "DZ",
+              "x1": 159.928,
+              "y1": 405.18,
+              "x2": 237.626,
+              "y2": 405.18
+            },
+            {
+              "id": "ZH",
+              "x1": 237.626,
+              "y1": 405.18,
+              "x2": 431.871,
+              "y2": 405.18
+            },
+            {
+              "id": "HT",
+              "x1": 431.871,
+              "y1": 405.18,
+              "x2": 548.417,
+              "y2": 405.18
+            }
+          ],
+          "hash": "p=22&s=7&size=180&r=0.4&a=32&side=1&m=0&t=0.6&q=12&v=0&k=0.55"
+        },
+        {
+          "description": {
+            "proposition": 22,
+            "a": 140,
+            "c": 40,
+            "case": "internal tangent"
+          },
+          "points": {
+            "given-Α": {
+              "x": 335.342,
+              "y": 126.301
+            },
+            "given-Β": {
+              "x": 335.342,
+              "y": 99.178
+            },
+            "given-Γ": {
+              "x": 335.342,
+              "y": 72.055
+            },
+            "Δ": {
+              "x": 183.699,
+              "y": 370.411
+            },
+            "Ζ": {
+              "x": 356.301,
+              "y": 370.411
+            },
+            "Η": {
+              "x": 479.589,
+              "y": 370.411
+            },
+            "Θ": {
+              "x": 528.904,
+              "y": 370.411
+            },
+            "Ε": {
+              "x": 556.027,
+              "y": 370.411
+            },
+            "Κ": {
+              "x": 528.904,
+              "y": 370.411
+            }
+          },
+          "segments": [
+            {
+              "id": "given-Α",
+              "x1": 356.301,
+              "y1": 126.301,
+              "x2": 528.904,
+              "y2": 126.301
+            },
+            {
+              "id": "given-Β",
+              "x1": 356.301,
+              "y1": 99.178,
+              "x2": 479.589,
+              "y2": 99.178
+            },
+            {
+              "id": "given-Γ",
+              "x1": 356.301,
+              "y1": 72.055,
+              "x2": 405.616,
+              "y2": 72.055
+            },
+            {
+              "id": "ray",
+              "x1": 183.699,
+              "y1": 370.411,
+              "x2": 556.027,
+              "y2": 370.411
+            },
+            {
+              "id": "DZ",
+              "x1": 183.699,
+              "y1": 370.411,
+              "x2": 356.301,
+              "y2": 370.411
+            },
+            {
+              "id": "ZH",
+              "x1": 356.301,
+              "y1": 370.411,
+              "x2": 479.589,
+              "y2": 370.411
+            },
+            {
+              "id": "HT",
+              "x1": 479.589,
+              "y1": 370.411,
+              "x2": 528.904,
+              "y2": 370.411
+            }
+          ],
+          "hash": "p=22&s=7&size=180&r=1.4&a=32&side=1&m=0&t=0.4&q=12&v=0&k=0.55"
+        },
+        {
+          "description": {
+            "proposition": 22,
+            "a": 30,
+            "c": 30,
+            "case": "separate"
+          },
+          "points": {
+            "given-Α": {
+              "x": 186.606,
+              "y": 213.394
+            },
+            "given-Β": {
+              "x": 186.606,
+              "y": 158.899
+            },
+            "given-Γ": {
+              "x": 186.606,
+              "y": 104.404
+            },
+            "Δ": {
+              "x": 154.404,
+              "y": 431.376
+            },
+            "Ζ": {
+              "x": 228.716,
+              "y": 431.376
+            },
+            "Η": {
+              "x": 476.422,
+              "y": 431.376
+            },
+            "Θ": {
+              "x": 550.734,
+              "y": 431.376
+            },
+            "Ε": {
+              "x": 605.229,
+              "y": 431.376
+            }
+          },
+          "segments": [
+            {
+              "id": "given-Α",
+              "x1": 228.716,
+              "y1": 213.394,
+              "x2": 303.028,
+              "y2": 213.394
+            },
+            {
+              "id": "given-Β",
+              "x1": 228.716,
+              "y1": 158.899,
+              "x2": 476.422,
+              "y2": 158.899
+            },
+            {
+              "id": "given-Γ",
+              "x1": 228.716,
+              "y1": 104.404,
+              "x2": 303.028,
+              "y2": 104.404
+            },
+            {
+              "id": "ray",
+              "x1": 154.404,
+              "y1": 431.376,
+              "x2": 605.229,
+              "y2": 431.376
+            },
+            {
+              "id": "DZ",
+              "x1": 154.404,
+              "y1": 431.376,
+              "x2": 228.716,
+              "y2": 431.376
+            },
+            {
+              "id": "ZH",
+              "x1": 228.716,
+              "y1": 431.376,
+              "x2": 476.422,
+              "y2": 431.376
+            },
+            {
+              "id": "HT",
+              "x1": 476.422,
+              "y1": 431.376,
+              "x2": 550.734,
+              "y2": 431.376
+            }
+          ],
+          "hash": "p=22&s=7&size=180&r=0.3&a=32&side=1&m=0&t=0.3&q=12&v=0&k=0.55"
+        },
+        {
+          "description": {
+            "proposition": 22,
+            "a": 140,
+            "c": 30,
+            "case": "contained"
+          },
+          "points": {
+            "given-Α": {
+              "x": 335.342,
+              "y": 126.301
+            },
+            "given-Β": {
+              "x": 335.342,
+              "y": 99.178
+            },
+            "given-Γ": {
+              "x": 335.342,
+              "y": 72.055
+            },
+            "Δ": {
+              "x": 183.699,
+              "y": 370.411
+            },
+            "Ζ": {
+              "x": 356.301,
+              "y": 370.411
+            },
+            "Η": {
+              "x": 479.589,
+              "y": 370.411
+            },
+            "Θ": {
+              "x": 516.575,
+              "y": 370.411
+            },
+            "Ε": {
+              "x": 543.699,
+              "y": 370.411
+            }
+          },
+          "segments": [
+            {
+              "id": "given-Α",
+              "x1": 356.301,
+              "y1": 126.301,
+              "x2": 528.904,
+              "y2": 126.301
+            },
+            {
+              "id": "given-Β",
+              "x1": 356.301,
+              "y1": 99.178,
+              "x2": 479.589,
+              "y2": 99.178
+            },
+            {
+              "id": "given-Γ",
+              "x1": 356.301,
+              "y1": 72.055,
+              "x2": 393.288,
+              "y2": 72.055
+            },
+            {
+              "id": "ray",
+              "x1": 183.699,
+              "y1": 370.411,
+              "x2": 543.699,
+              "y2": 370.411
+            },
+            {
+              "id": "DZ",
+              "x1": 183.699,
+              "y1": 370.411,
+              "x2": 356.301,
+              "y2": 370.411
+            },
+            {
+              "id": "ZH",
+              "x1": 356.301,
+              "y1": 370.411,
+              "x2": 479.589,
+              "y2": 370.411
+            },
+            {
+              "id": "HT",
+              "x1": 479.589,
+              "y1": 370.411,
+              "x2": 516.575,
+              "y2": 370.411
+            }
+          ],
+          "hash": "p=22&s=7&size=180&r=1.4&a=32&side=1&m=0&t=0.3&q=12&v=0&k=0.55"
+        },
+        {
+          "description": {
+            "proposition": 22,
+            "a": 65,
+            "c": 120,
+            "case": "crossing"
+          },
+          "points": {
+            "given-Α": {
+              "x": 227.714,
+              "y": 134.975
+            },
+            "given-Β": {
+              "x": 227.714,
+              "y": 105.126
+            },
+            "given-Γ": {
+              "x": 227.714,
+              "y": 75.276
+            },
+            "Δ": {
+              "x": 162.588,
+              "y": 376.482
+            },
+            "Ζ": {
+              "x": 250.779,
+              "y": 376.482
+            },
+            "Η": {
+              "x": 386.457,
+              "y": 376.482
+            },
+            "Θ": {
+              "x": 549.271,
+              "y": 376.482
+            },
+            "Ε": {
+              "x": 579.121,
+              "y": 376.482
+            },
+            "Κ": {
+              "x": 249.592,
+              "y": 288.299
+            },
+            "Λ": {
+              "x": 249.592,
+              "y": 464.665
+            }
+          },
+          "segments": [
+            {
+              "id": "given-Α",
+              "x1": 250.779,
+              "y1": 134.975,
+              "x2": 338.97,
+              "y2": 134.975
+            },
+            {
+              "id": "given-Β",
+              "x1": 250.779,
+              "y1": 105.126,
+              "x2": 386.457,
+              "y2": 105.126
+            },
+            {
+              "id": "given-Γ",
+              "x1": 250.779,
+              "y1": 75.276,
+              "x2": 413.593,
+              "y2": 75.276
+            },
+            {
+              "id": "ray",
+              "x1": 162.588,
+              "y1": 376.482,
+              "x2": 579.121,
+              "y2": 376.482
+            },
+            {
+              "id": "DZ",
+              "x1": 162.588,
+              "y1": 376.482,
+              "x2": 250.779,
+              "y2": 376.482
+            },
+            {
+              "id": "ZH",
+              "x1": 250.779,
+              "y1": 376.482,
+              "x2": 386.457,
+              "y2": 376.482
+            },
+            {
+              "id": "HT",
+              "x1": 386.457,
+              "y1": 376.482,
+              "x2": 549.271,
+              "y2": 376.482
+            },
+            {
+              "id": "KZ",
+              "x1": 249.592,
+              "y1": 288.299,
+              "x2": 250.779,
+              "y2": 376.482
+            },
+            {
+              "id": "KH",
+              "x1": 249.592,
+              "y1": 288.299,
+              "x2": 386.457,
+              "y2": 376.482
+            }
+          ],
+          "hash": "p=22&s=7&size=180&r=0.65&a=32&side=1&m=0&t=1.2&q=12&v=0&k=0.55"
+        },
+        {
+          "description": {
+            "proposition": 23,
+            "opening": 20,
+            "ratio": 1.4,
+            "tilt": 45,
+            "variant": 0
+          },
+          "points": {
+            "Γ": {
+              "x": 229.152,
+              "y": 164.896
+            },
+            "Α": {
+              "x": 229.152,
+              "y": 525.856
+            },
+            "Β": {
+              "x": 446.104,
+              "y": 308.904
+            },
+            "Δ": {
+              "x": 398.748,
+              "y": 103.168
+            },
+            "Ε": {
+              "x": 481.824,
+              "y": 164.896
+            },
+            "Η": {
+              "x": 407.818,
+              "y": 347.19
+            },
+            "Ζ": {
+              "x": 305.426,
+              "y": 362.285
+            }
+          },
+          "segments": [
+            {
+              "id": "given-ray-D",
+              "x1": 229.152,
+              "y1": 164.896,
+              "x2": 441.147,
+              "y2": 87.736
+            },
+            {
+              "id": "given-ray-E",
+              "x1": 229.152,
+              "y1": 164.896,
+              "x2": 512.145,
+              "y2": 164.896
+            },
+            {
+              "id": "AB",
+              "x1": 229.152,
+              "y1": 525.856,
+              "x2": 446.104,
+              "y2": 308.904
+            },
+            {
+              "id": "DE",
+              "x1": 398.748,
+              "y1": 103.168,
+              "x2": 481.824,
+              "y2": 164.896
+            },
+            {
+              "id": "AH",
+              "x1": 229.152,
+              "y1": 525.856,
+              "x2": 407.818,
+              "y2": 347.19
+            },
+            {
+              "id": "AZ",
+              "x1": 229.152,
+              "y1": 525.856,
+              "x2": 305.426,
+              "y2": 362.285
+            },
+            {
+              "id": "ZH",
+              "x1": 305.426,
+              "y1": 362.285,
+              "x2": 407.818,
+              "y2": 347.19
+            }
+          ],
+          "hash": "p=23&s=5&size=180&r=1.4&a=10&side=1&m=0&t=1.2&q=12&v=0&k=0.55&x=0.45"
+        },
+        {
+          "description": {
+            "proposition": 23,
+            "opening": 20,
+            "ratio": 1.4,
+            "tilt": 45,
+            "variant": 1
+          },
+          "points": {
+            "Γ": {
+              "x": 229.152,
+              "y": 164.896
+            },
+            "Α": {
+              "x": 229.152,
+              "y": 525.856
+            },
+            "Β": {
+              "x": 446.104,
+              "y": 308.904
+            },
+            "Δ": {
+              "x": 398.748,
+              "y": 103.168
+            },
+            "Ε": {
+              "x": 481.824,
+              "y": 164.896
+            },
+            "Η": {
+              "x": 407.818,
+              "y": 347.19
+            },
+            "Ζ": {
+              "x": 392.722,
+              "y": 449.582
+            }
+          },
+          "segments": [
+            {
+              "id": "given-ray-D",
+              "x1": 229.152,
+              "y1": 164.896,
+              "x2": 441.147,
+              "y2": 87.736
+            },
+            {
+              "id": "given-ray-E",
+              "x1": 229.152,
+              "y1": 164.896,
+              "x2": 512.145,
+              "y2": 164.896
+            },
+            {
+              "id": "AB",
+              "x1": 229.152,
+              "y1": 525.856,
+              "x2": 446.104,
+              "y2": 308.904
+            },
+            {
+              "id": "DE",
+              "x1": 398.748,
+              "y1": 103.168,
+              "x2": 481.824,
+              "y2": 164.896
+            },
+            {
+              "id": "AH",
+              "x1": 229.152,
+              "y1": 525.856,
+              "x2": 407.818,
+              "y2": 347.19
+            },
+            {
+              "id": "AZ",
+              "x1": 229.152,
+              "y1": 525.856,
+              "x2": 392.722,
+              "y2": 449.582
+            },
+            {
+              "id": "ZH",
+              "x1": 392.722,
+              "y1": 449.582,
+              "x2": 407.818,
+              "y2": 347.19
+            }
+          ],
+          "hash": "p=23&s=5&size=180&r=1.4&a=10&side=1&m=0&t=1.2&q=12&v=1&k=0.55&x=0.45"
+        },
+        {
+          "description": {
+            "proposition": 23,
+            "opening": 150,
+            "ratio": 0.2,
+            "tilt": 45,
+            "variant": 1
+          },
+          "points": {
+            "Γ": {
+              "x": 334.675,
+              "y": 151.518
+            },
+            "Α": {
+              "x": 334.675,
+              "y": 413.913
+            },
+            "Β": {
+              "x": 492.385,
+              "y": 256.203
+            },
+            "Δ": {
+              "x": 221.055,
+              "y": 85.919
+            },
+            "Ε": {
+              "x": 360.915,
+              "y": 151.518
+            },
+            "Η": {
+              "x": 353.229,
+              "y": 395.359
+            },
+            "Ζ": {
+              "x": 300.719,
+              "y": 540.641
+            }
+          },
+          "segments": [
+            {
+              "id": "given-ray-D",
+              "x1": 334.675,
+              "y1": 151.518,
+              "x2": 192.649,
+              "y2": 69.519
+            },
+            {
+              "id": "given-ray-E",
+              "x1": 334.675,
+              "y1": 151.518,
+              "x2": 364.063,
+              "y2": 151.518
+            },
+            {
+              "id": "AB",
+              "x1": 334.675,
+              "y1": 413.913,
+              "x2": 492.385,
+              "y2": 256.203
+            },
+            {
+              "id": "DE",
+              "x1": 221.055,
+              "y1": 85.919,
+              "x2": 360.915,
+              "y2": 151.518
+            },
+            {
+              "id": "AH",
+              "x1": 334.675,
+              "y1": 413.913,
+              "x2": 353.229,
+              "y2": 395.359
+            },
+            {
+              "id": "AZ",
+              "x1": 334.675,
+              "y1": 413.913,
+              "x2": 300.719,
+              "y2": 540.641
+            },
+            {
+              "id": "ZH",
+              "x1": 300.719,
+              "y1": 540.641,
+              "x2": 353.229,
+              "y2": 395.359
+            }
+          ],
+          "hash": "p=23&s=5&size=180&r=0.2&a=75&side=1&m=0&t=1.2&q=12&v=1&k=0.55&x=0.45"
+        }
+      ],
+      "exercises": [
+        "Reading 43 of 46 · I.22 · Greek",
+        "Reading 44 of 46 · I.22 · Latin",
+        "Reading 45 of 46 · I.23 · Greek",
+        "Reading 46 of 46 · I.23 · Latin"
+      ],
+      "axeViolations": 0,
+      "inventory": [
+        {
+          "key": "stoicheia-f1d017db40f4c6ac6eaf4d6fefd90f45d2534c1b51b66b61a07946a45eb27938",
+          "files": [
+            "/stoicheia/assets/closure-C78fP2go.js",
+            "/stoicheia/assets/desk-BRXWpSPJ.js",
+            "/stoicheia/assets/desk-CSBNE5QJ.css",
+            "/stoicheia/assets/geometry-4f0nyLSJ.js",
+            "/stoicheia/assets/gnomon-Ba77ooJT.css",
+            "/stoicheia/assets/gnomon-DZlvc_fa.js",
+            "/stoicheia/assets/measure-CUIrZU7t.css",
+            "/stoicheia/assets/measure-DOxwmBow.js",
+            "/stoicheia/assets/mesolabe-7AwiFx9G.css",
+            "/stoicheia/assets/mesolabe-CFm_R4IC.js",
+            "/stoicheia/assets/offline-D5UGvC8q.css",
+            "/stoicheia/assets/offline-qQjCASZt.js",
+            "/stoicheia/assets/quadrature-XiT_7MPW.css",
+            "/stoicheia/assets/quadrature-elVjAlCY.js",
+            "/stoicheia/assets/quadrature-tfrCYwjA.js",
+            "/stoicheia/assets/reader-CRr5ibZO.js",
+            "/stoicheia/assets/triangle-Baq3u__T.js",
+            "/stoicheia/assets/triangle-D7DRmLfq.css",
+            "/stoicheia/desk.html",
+            "/stoicheia/favicon.svg",
+            "/stoicheia/fonts/NotoSerif-Regular.ttf",
+            "/stoicheia/fonts/OFL.txt",
+            "/stoicheia/gnomon.html",
+            "/stoicheia/index.html",
+            "/stoicheia/measure.html",
+            "/stoicheia/mesolabe.html",
+            "/stoicheia/quadrature.html",
+            "/stoicheia/sources/heiberg-002.jpg",
+            "/stoicheia/sources/heiberg-003.jpg",
+            "/stoicheia/sources/heiberg-004.jpg",
+            "/stoicheia/sources/heiberg-005.jpg",
+            "/stoicheia/sources/heiberg-006.jpg",
+            "/stoicheia/sources/heiberg-007.jpg",
+            "/stoicheia/sources/heiberg-008.jpg",
+            "/stoicheia/sources/heiberg-009.jpg",
+            "/stoicheia/sources/heiberg-010.jpg",
+            "/stoicheia/sources/heiberg-011.jpg",
+            "/stoicheia/sources/heiberg-012.jpg",
+            "/stoicheia/sources/heiberg-013.jpg",
+            "/stoicheia/sources/heiberg-014.jpg",
+            "/stoicheia/sources/heiberg-015.jpg",
+            "/stoicheia/sources/heiberg-016.jpg",
+            "/stoicheia/sources/heiberg-017.jpg",
+            "/stoicheia/sources/heiberg-018.jpg",
+            "/stoicheia/sources/heiberg-019.jpg",
+            "/stoicheia/sources/heiberg-020.jpg",
+            "/stoicheia/sources/heiberg-021.jpg",
+            "/stoicheia/sources/heiberg-022.jpg",
+            "/stoicheia/sources/heiberg-023.jpg",
+            "/stoicheia/sources/heiberg-024.jpg",
+            "/stoicheia/sources/heiberg-025.jpg",
+            "/stoicheia/sources/heiberg-026.jpg",
+            "/stoicheia/sources/heiberg-027.jpg",
+            "/stoicheia/sources/heiberg-028.jpg",
+            "/stoicheia/sources/heiberg-029.jpg",
+            "/stoicheia/sources/heiberg-030.jpg",
+            "/stoicheia/sources/heiberg-031.jpg",
+            "/stoicheia/sources/heiberg-032.jpg",
+            "/stoicheia/sources/heiberg-033.jpg",
+            "/stoicheia/sources/heiberg-034.jpg",
+            "/stoicheia/sources/heiberg-035.jpg",
+            "/stoicheia/sources/heiberg-036.jpg",
+            "/stoicheia/sources/heiberg-037.jpg",
+            "/stoicheia/sources/heiberg-038.jpg",
+            "/stoicheia/sources/heiberg-039.jpg",
+            "/stoicheia/sources/heiberg-040.jpg",
+            "/stoicheia/sources/heiberg-041.jpg",
+            "/stoicheia/sources/heiberg-042.jpg",
+            "/stoicheia/sources/heiberg-043.jpg",
+            "/stoicheia/sources/heiberg-044.jpg",
+            "/stoicheia/sources/heiberg-045.jpg",
+            "/stoicheia/sources/heiberg-046.jpg",
+            "/stoicheia/sources/heiberg-047.jpg",
+            "/stoicheia/sources/heiberg-048.jpg",
+            "/stoicheia/sources/heiberg-049.jpg",
+            "/stoicheia/sources/heiberg-050.jpg",
+            "/stoicheia/sources/heiberg-051.jpg",
+            "/stoicheia/sources/heiberg-052.jpg",
+            "/stoicheia/sources/heiberg-053.jpg",
+            "/stoicheia/sources/heiberg-054.jpg",
+            "/stoicheia/sources/heiberg-055.jpg",
+            "/stoicheia/sources/heiberg-056.jpg",
+            "/stoicheia/sources/heiberg-057.jpg",
+            "/stoicheia/sources/heiberg-100.jpg",
+            "/stoicheia/sources/heiberg-101.jpg",
+            "/stoicheia/sources/heiberg-102.jpg",
+            "/stoicheia/sources/heiberg-103.jpg",
+            "/stoicheia/sources/heiberg-110.jpg",
+            "/stoicheia/sources/heiberg-111.jpg",
+            "/stoicheia/sources/heiberg-128.jpg",
+            "/stoicheia/sources/heiberg-129.jpg",
+            "/stoicheia/sources/heiberg-130.jpg",
+            "/stoicheia/sources/heiberg-131.jpg",
+            "/stoicheia/sources/heiberg-132.jpg",
+            "/stoicheia/sources/heiberg-133.jpg",
+            "/stoicheia/sources/heiberg-160.jpg",
+            "/stoicheia/sources/heiberg-161.jpg",
+            "/stoicheia/sources/heiberg-162.jpg",
+            "/stoicheia/sources/heiberg-163.jpg",
+            "/stoicheia/sources/manifest.json",
+            "/stoicheia/sources/measure/heiberg-002.jpg",
+            "/stoicheia/sources/measure/heiberg-003.jpg",
+            "/stoicheia/sources/measure/heiberg-004.jpg",
+            "/stoicheia/sources/measure/heiberg-005.jpg",
+            "/stoicheia/sources/measure/heiberg-006.jpg",
+            "/stoicheia/sources/measure/heiberg-007.jpg",
+            "/stoicheia/sources/measure/heiberg-008.jpg",
+            "/stoicheia/sources/measure/heiberg-009.jpg",
+            "/stoicheia/sources/measure/heiberg-010.jpg",
+            "/stoicheia/sources/measure/heiberg-011.jpg",
+            "/stoicheia/sources/measure/heiberg-012.jpg",
+            "/stoicheia/sources/measure/heiberg-013.jpg",
+            "/stoicheia/sources/measure/manifest.json",
+            "/stoicheia/sources/mesolabe/eutocius-102.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-103.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-104.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-105.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-106.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-107.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-108.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-109.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-110.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-111.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-112.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-113.jpg",
+            "/stoicheia/sources/mesolabe/manifest.json",
+            "/stoicheia/triangle.html"
+          ]
+        }
+      ],
+      "offlineRooms": [
+        "triangle.html",
+        "quadrature.html",
+        "gnomon.html",
+        "mesolabe.html",
+        "desk.html",
+        "measure.html",
+        "index.html"
+      ],
+      "offlineSourceAndReading": true,
+      "pageErrors": []
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "width": 1440,
+      "readingUnits": 15,
+      "downloads": [
+        {
+          "lesson": 22,
+          "html": {
+            "file": "I22-study.html",
+            "bytes": 4567403,
+            "sha256": "8d92a6e9057d7d1f43dc3ca2e43da47ddd80027eefea69fe46263b7a243ca76a"
+          },
+          "svg": {
+            "file": "I22.svg",
+            "bytes": 5851,
+            "sha256": "4eb1562cbe690d533c2ee5497b124e8af3fe1f459057e107d20cf07e1c63c130"
+          },
+          "sourcePages": [4, 5, 8, 9, 10, 11, 52, 53, 54, 55]
+        },
+        {
+          "lesson": 23,
+          "html": {
+            "file": "I23-study.html",
+            "bytes": 2887732,
+            "sha256": "48eb6137fa9aca38a3ed3d0974da19be28c6b6feae93fc99f6335a05ec1315db"
+          },
+          "svg": {
+            "file": "I23.svg",
+            "bytes": 5458,
+            "sha256": "2d239afe722e07d2bb4fe29705259130730004938f6a589ada3c0a2cc23e252f"
+          },
+          "sourcePages": [8, 9, 54, 55, 56, 57]
+        }
+      ],
+      "views": [
+        {
+          "description": {
+            "proposition": 22,
+            "a": 40,
+            "c": 60,
+            "case": "external tangent"
+          },
+          "points": {
+            "given-Α": {
+              "x": 204.604,
+              "y": 175.971
+            },
+            "given-Β": {
+              "x": 204.604,
+              "y": 133.237
+            },
+            "given-Γ": {
+              "x": 204.604,
+              "y": 90.504
+            },
+            "Δ": {
+              "x": 159.928,
+              "y": 405.18
+            },
+            "Ζ": {
+              "x": 237.626,
+              "y": 405.18
+            },
+            "Η": {
+              "x": 431.871,
+              "y": 405.18
+            },
+            "Θ": {
+              "x": 548.417,
+              "y": 405.18
+            },
+            "Ε": {
+              "x": 591.151,
+              "y": 405.18
+            },
+            "Κ": {
+              "x": 315.324,
+              "y": 405.18
+            }
+          },
+          "segments": [
+            {
+              "id": "given-Α",
+              "x1": 237.626,
+              "y1": 175.971,
+              "x2": 315.324,
+              "y2": 175.971
+            },
+            {
+              "id": "given-Β",
+              "x1": 237.626,
+              "y1": 133.237,
+              "x2": 431.871,
+              "y2": 133.237
+            },
+            {
+              "id": "given-Γ",
+              "x1": 237.626,
+              "y1": 90.504,
+              "x2": 354.173,
+              "y2": 90.504
+            },
+            {
+              "id": "ray",
+              "x1": 159.928,
+              "y1": 405.18,
+              "x2": 591.151,
+              "y2": 405.18
+            },
+            {
+              "id": "DZ",
+              "x1": 159.928,
+              "y1": 405.18,
+              "x2": 237.626,
+              "y2": 405.18
+            },
+            {
+              "id": "ZH",
+              "x1": 237.626,
+              "y1": 405.18,
+              "x2": 431.871,
+              "y2": 405.18
+            },
+            {
+              "id": "HT",
+              "x1": 431.871,
+              "y1": 405.18,
+              "x2": 548.417,
+              "y2": 405.18
+            }
+          ],
+          "hash": "p=22&s=7&size=180&r=0.4&a=32&side=1&m=0&t=0.6&q=12&v=0&k=0.55"
+        },
+        {
+          "description": {
+            "proposition": 22,
+            "a": 140,
+            "c": 40,
+            "case": "internal tangent"
+          },
+          "points": {
+            "given-Α": {
+              "x": 335.342,
+              "y": 126.301
+            },
+            "given-Β": {
+              "x": 335.342,
+              "y": 99.178
+            },
+            "given-Γ": {
+              "x": 335.342,
+              "y": 72.055
+            },
+            "Δ": {
+              "x": 183.699,
+              "y": 370.411
+            },
+            "Ζ": {
+              "x": 356.301,
+              "y": 370.411
+            },
+            "Η": {
+              "x": 479.589,
+              "y": 370.411
+            },
+            "Θ": {
+              "x": 528.904,
+              "y": 370.411
+            },
+            "Ε": {
+              "x": 556.027,
+              "y": 370.411
+            },
+            "Κ": {
+              "x": 528.904,
+              "y": 370.411
+            }
+          },
+          "segments": [
+            {
+              "id": "given-Α",
+              "x1": 356.301,
+              "y1": 126.301,
+              "x2": 528.904,
+              "y2": 126.301
+            },
+            {
+              "id": "given-Β",
+              "x1": 356.301,
+              "y1": 99.178,
+              "x2": 479.589,
+              "y2": 99.178
+            },
+            {
+              "id": "given-Γ",
+              "x1": 356.301,
+              "y1": 72.055,
+              "x2": 405.616,
+              "y2": 72.055
+            },
+            {
+              "id": "ray",
+              "x1": 183.699,
+              "y1": 370.411,
+              "x2": 556.027,
+              "y2": 370.411
+            },
+            {
+              "id": "DZ",
+              "x1": 183.699,
+              "y1": 370.411,
+              "x2": 356.301,
+              "y2": 370.411
+            },
+            {
+              "id": "ZH",
+              "x1": 356.301,
+              "y1": 370.411,
+              "x2": 479.589,
+              "y2": 370.411
+            },
+            {
+              "id": "HT",
+              "x1": 479.589,
+              "y1": 370.411,
+              "x2": 528.904,
+              "y2": 370.411
+            }
+          ],
+          "hash": "p=22&s=7&size=180&r=1.4&a=32&side=1&m=0&t=0.4&q=12&v=0&k=0.55"
+        },
+        {
+          "description": {
+            "proposition": 22,
+            "a": 30,
+            "c": 30,
+            "case": "separate"
+          },
+          "points": {
+            "given-Α": {
+              "x": 186.606,
+              "y": 213.394
+            },
+            "given-Β": {
+              "x": 186.606,
+              "y": 158.899
+            },
+            "given-Γ": {
+              "x": 186.606,
+              "y": 104.404
+            },
+            "Δ": {
+              "x": 154.404,
+              "y": 431.376
+            },
+            "Ζ": {
+              "x": 228.716,
+              "y": 431.376
+            },
+            "Η": {
+              "x": 476.422,
+              "y": 431.376
+            },
+            "Θ": {
+              "x": 550.734,
+              "y": 431.376
+            },
+            "Ε": {
+              "x": 605.229,
+              "y": 431.376
+            }
+          },
+          "segments": [
+            {
+              "id": "given-Α",
+              "x1": 228.716,
+              "y1": 213.394,
+              "x2": 303.028,
+              "y2": 213.394
+            },
+            {
+              "id": "given-Β",
+              "x1": 228.716,
+              "y1": 158.899,
+              "x2": 476.422,
+              "y2": 158.899
+            },
+            {
+              "id": "given-Γ",
+              "x1": 228.716,
+              "y1": 104.404,
+              "x2": 303.028,
+              "y2": 104.404
+            },
+            {
+              "id": "ray",
+              "x1": 154.404,
+              "y1": 431.376,
+              "x2": 605.229,
+              "y2": 431.376
+            },
+            {
+              "id": "DZ",
+              "x1": 154.404,
+              "y1": 431.376,
+              "x2": 228.716,
+              "y2": 431.376
+            },
+            {
+              "id": "ZH",
+              "x1": 228.716,
+              "y1": 431.376,
+              "x2": 476.422,
+              "y2": 431.376
+            },
+            {
+              "id": "HT",
+              "x1": 476.422,
+              "y1": 431.376,
+              "x2": 550.734,
+              "y2": 431.376
+            }
+          ],
+          "hash": "p=22&s=7&size=180&r=0.3&a=32&side=1&m=0&t=0.3&q=12&v=0&k=0.55"
+        },
+        {
+          "description": {
+            "proposition": 22,
+            "a": 140,
+            "c": 30,
+            "case": "contained"
+          },
+          "points": {
+            "given-Α": {
+              "x": 335.342,
+              "y": 126.301
+            },
+            "given-Β": {
+              "x": 335.342,
+              "y": 99.178
+            },
+            "given-Γ": {
+              "x": 335.342,
+              "y": 72.055
+            },
+            "Δ": {
+              "x": 183.699,
+              "y": 370.411
+            },
+            "Ζ": {
+              "x": 356.301,
+              "y": 370.411
+            },
+            "Η": {
+              "x": 479.589,
+              "y": 370.411
+            },
+            "Θ": {
+              "x": 516.575,
+              "y": 370.411
+            },
+            "Ε": {
+              "x": 543.699,
+              "y": 370.411
+            }
+          },
+          "segments": [
+            {
+              "id": "given-Α",
+              "x1": 356.301,
+              "y1": 126.301,
+              "x2": 528.904,
+              "y2": 126.301
+            },
+            {
+              "id": "given-Β",
+              "x1": 356.301,
+              "y1": 99.178,
+              "x2": 479.589,
+              "y2": 99.178
+            },
+            {
+              "id": "given-Γ",
+              "x1": 356.301,
+              "y1": 72.055,
+              "x2": 393.288,
+              "y2": 72.055
+            },
+            {
+              "id": "ray",
+              "x1": 183.699,
+              "y1": 370.411,
+              "x2": 543.699,
+              "y2": 370.411
+            },
+            {
+              "id": "DZ",
+              "x1": 183.699,
+              "y1": 370.411,
+              "x2": 356.301,
+              "y2": 370.411
+            },
+            {
+              "id": "ZH",
+              "x1": 356.301,
+              "y1": 370.411,
+              "x2": 479.589,
+              "y2": 370.411
+            },
+            {
+              "id": "HT",
+              "x1": 479.589,
+              "y1": 370.411,
+              "x2": 516.575,
+              "y2": 370.411
+            }
+          ],
+          "hash": "p=22&s=7&size=180&r=1.4&a=32&side=1&m=0&t=0.3&q=12&v=0&k=0.55"
+        },
+        {
+          "description": {
+            "proposition": 22,
+            "a": 65,
+            "c": 120,
+            "case": "crossing"
+          },
+          "points": {
+            "given-Α": {
+              "x": 227.714,
+              "y": 134.975
+            },
+            "given-Β": {
+              "x": 227.714,
+              "y": 105.126
+            },
+            "given-Γ": {
+              "x": 227.714,
+              "y": 75.276
+            },
+            "Δ": {
+              "x": 162.588,
+              "y": 376.482
+            },
+            "Ζ": {
+              "x": 250.779,
+              "y": 376.482
+            },
+            "Η": {
+              "x": 386.457,
+              "y": 376.482
+            },
+            "Θ": {
+              "x": 549.271,
+              "y": 376.482
+            },
+            "Ε": {
+              "x": 579.121,
+              "y": 376.482
+            },
+            "Κ": {
+              "x": 249.592,
+              "y": 288.299
+            },
+            "Λ": {
+              "x": 249.592,
+              "y": 464.665
+            }
+          },
+          "segments": [
+            {
+              "id": "given-Α",
+              "x1": 250.779,
+              "y1": 134.975,
+              "x2": 338.97,
+              "y2": 134.975
+            },
+            {
+              "id": "given-Β",
+              "x1": 250.779,
+              "y1": 105.126,
+              "x2": 386.457,
+              "y2": 105.126
+            },
+            {
+              "id": "given-Γ",
+              "x1": 250.779,
+              "y1": 75.276,
+              "x2": 413.593,
+              "y2": 75.276
+            },
+            {
+              "id": "ray",
+              "x1": 162.588,
+              "y1": 376.482,
+              "x2": 579.121,
+              "y2": 376.482
+            },
+            {
+              "id": "DZ",
+              "x1": 162.588,
+              "y1": 376.482,
+              "x2": 250.779,
+              "y2": 376.482
+            },
+            {
+              "id": "ZH",
+              "x1": 250.779,
+              "y1": 376.482,
+              "x2": 386.457,
+              "y2": 376.482
+            },
+            {
+              "id": "HT",
+              "x1": 386.457,
+              "y1": 376.482,
+              "x2": 549.271,
+              "y2": 376.482
+            },
+            {
+              "id": "KZ",
+              "x1": 249.592,
+              "y1": 288.299,
+              "x2": 250.779,
+              "y2": 376.482
+            },
+            {
+              "id": "KH",
+              "x1": 249.592,
+              "y1": 288.299,
+              "x2": 386.457,
+              "y2": 376.482
+            }
+          ],
+          "hash": "p=22&s=7&size=180&r=0.65&a=32&side=1&m=0&t=1.2&q=12&v=0&k=0.55"
+        },
+        {
+          "description": {
+            "proposition": 23,
+            "opening": 20,
+            "ratio": 1.4,
+            "tilt": 45,
+            "variant": 0
+          },
+          "points": {
+            "Γ": {
+              "x": 229.152,
+              "y": 164.896
+            },
+            "Α": {
+              "x": 229.152,
+              "y": 525.856
+            },
+            "Β": {
+              "x": 446.104,
+              "y": 308.904
+            },
+            "Δ": {
+              "x": 398.748,
+              "y": 103.168
+            },
+            "Ε": {
+              "x": 481.824,
+              "y": 164.896
+            },
+            "Η": {
+              "x": 407.818,
+              "y": 347.19
+            },
+            "Ζ": {
+              "x": 305.426,
+              "y": 362.285
+            }
+          },
+          "segments": [
+            {
+              "id": "given-ray-D",
+              "x1": 229.152,
+              "y1": 164.896,
+              "x2": 441.147,
+              "y2": 87.736
+            },
+            {
+              "id": "given-ray-E",
+              "x1": 229.152,
+              "y1": 164.896,
+              "x2": 512.145,
+              "y2": 164.896
+            },
+            {
+              "id": "AB",
+              "x1": 229.152,
+              "y1": 525.856,
+              "x2": 446.104,
+              "y2": 308.904
+            },
+            {
+              "id": "DE",
+              "x1": 398.748,
+              "y1": 103.168,
+              "x2": 481.824,
+              "y2": 164.896
+            },
+            {
+              "id": "AH",
+              "x1": 229.152,
+              "y1": 525.856,
+              "x2": 407.818,
+              "y2": 347.19
+            },
+            {
+              "id": "AZ",
+              "x1": 229.152,
+              "y1": 525.856,
+              "x2": 305.426,
+              "y2": 362.285
+            },
+            {
+              "id": "ZH",
+              "x1": 305.426,
+              "y1": 362.285,
+              "x2": 407.818,
+              "y2": 347.19
+            }
+          ],
+          "hash": "p=23&s=5&size=180&r=1.4&a=10&side=1&m=0&t=1.2&q=12&v=0&k=0.55&x=0.45"
+        },
+        {
+          "description": {
+            "proposition": 23,
+            "opening": 20,
+            "ratio": 1.4,
+            "tilt": 45,
+            "variant": 1
+          },
+          "points": {
+            "Γ": {
+              "x": 229.152,
+              "y": 164.896
+            },
+            "Α": {
+              "x": 229.152,
+              "y": 525.856
+            },
+            "Β": {
+              "x": 446.104,
+              "y": 308.904
+            },
+            "Δ": {
+              "x": 398.748,
+              "y": 103.168
+            },
+            "Ε": {
+              "x": 481.824,
+              "y": 164.896
+            },
+            "Η": {
+              "x": 407.818,
+              "y": 347.19
+            },
+            "Ζ": {
+              "x": 392.722,
+              "y": 449.582
+            }
+          },
+          "segments": [
+            {
+              "id": "given-ray-D",
+              "x1": 229.152,
+              "y1": 164.896,
+              "x2": 441.147,
+              "y2": 87.736
+            },
+            {
+              "id": "given-ray-E",
+              "x1": 229.152,
+              "y1": 164.896,
+              "x2": 512.145,
+              "y2": 164.896
+            },
+            {
+              "id": "AB",
+              "x1": 229.152,
+              "y1": 525.856,
+              "x2": 446.104,
+              "y2": 308.904
+            },
+            {
+              "id": "DE",
+              "x1": 398.748,
+              "y1": 103.168,
+              "x2": 481.824,
+              "y2": 164.896
+            },
+            {
+              "id": "AH",
+              "x1": 229.152,
+              "y1": 525.856,
+              "x2": 407.818,
+              "y2": 347.19
+            },
+            {
+              "id": "AZ",
+              "x1": 229.152,
+              "y1": 525.856,
+              "x2": 392.722,
+              "y2": 449.582
+            },
+            {
+              "id": "ZH",
+              "x1": 392.722,
+              "y1": 449.582,
+              "x2": 407.818,
+              "y2": 347.19
+            }
+          ],
+          "hash": "p=23&s=5&size=180&r=1.4&a=10&side=1&m=0&t=1.2&q=12&v=1&k=0.55&x=0.45"
+        },
+        {
+          "description": {
+            "proposition": 23,
+            "opening": 150,
+            "ratio": 0.2,
+            "tilt": 45,
+            "variant": 1
+          },
+          "points": {
+            "Γ": {
+              "x": 334.675,
+              "y": 151.518
+            },
+            "Α": {
+              "x": 334.675,
+              "y": 413.913
+            },
+            "Β": {
+              "x": 492.385,
+              "y": 256.203
+            },
+            "Δ": {
+              "x": 221.055,
+              "y": 85.919
+            },
+            "Ε": {
+              "x": 360.915,
+              "y": 151.518
+            },
+            "Η": {
+              "x": 353.229,
+              "y": 395.359
+            },
+            "Ζ": {
+              "x": 300.719,
+              "y": 540.641
+            }
+          },
+          "segments": [
+            {
+              "id": "given-ray-D",
+              "x1": 334.675,
+              "y1": 151.518,
+              "x2": 192.649,
+              "y2": 69.519
+            },
+            {
+              "id": "given-ray-E",
+              "x1": 334.675,
+              "y1": 151.518,
+              "x2": 364.063,
+              "y2": 151.518
+            },
+            {
+              "id": "AB",
+              "x1": 334.675,
+              "y1": 413.913,
+              "x2": 492.385,
+              "y2": 256.203
+            },
+            {
+              "id": "DE",
+              "x1": 221.055,
+              "y1": 85.919,
+              "x2": 360.915,
+              "y2": 151.518
+            },
+            {
+              "id": "AH",
+              "x1": 334.675,
+              "y1": 413.913,
+              "x2": 353.229,
+              "y2": 395.359
+            },
+            {
+              "id": "AZ",
+              "x1": 334.675,
+              "y1": 413.913,
+              "x2": 300.719,
+              "y2": 540.641
+            },
+            {
+              "id": "ZH",
+              "x1": 300.719,
+              "y1": 540.641,
+              "x2": 353.229,
+              "y2": 395.359
+            }
+          ],
+          "hash": "p=23&s=5&size=180&r=0.2&a=75&side=1&m=0&t=1.2&q=12&v=1&k=0.55&x=0.45"
+        }
+      ],
+      "exercises": [
+        "Reading 43 of 46 · I.22 · Greek",
+        "Reading 44 of 46 · I.22 · Latin",
+        "Reading 45 of 46 · I.23 · Greek",
+        "Reading 46 of 46 · I.23 · Latin"
+      ],
+      "axeViolations": 0,
+      "inventory": [
+        {
+          "key": "stoicheia-f1d017db40f4c6ac6eaf4d6fefd90f45d2534c1b51b66b61a07946a45eb27938",
+          "files": [
+            "/stoicheia/assets/closure-C78fP2go.js",
+            "/stoicheia/assets/desk-BRXWpSPJ.js",
+            "/stoicheia/assets/desk-CSBNE5QJ.css",
+            "/stoicheia/assets/geometry-4f0nyLSJ.js",
+            "/stoicheia/assets/gnomon-Ba77ooJT.css",
+            "/stoicheia/assets/gnomon-DZlvc_fa.js",
+            "/stoicheia/assets/measure-CUIrZU7t.css",
+            "/stoicheia/assets/measure-DOxwmBow.js",
+            "/stoicheia/assets/mesolabe-7AwiFx9G.css",
+            "/stoicheia/assets/mesolabe-CFm_R4IC.js",
+            "/stoicheia/assets/offline-D5UGvC8q.css",
+            "/stoicheia/assets/offline-qQjCASZt.js",
+            "/stoicheia/assets/quadrature-XiT_7MPW.css",
+            "/stoicheia/assets/quadrature-elVjAlCY.js",
+            "/stoicheia/assets/quadrature-tfrCYwjA.js",
+            "/stoicheia/assets/reader-CRr5ibZO.js",
+            "/stoicheia/assets/triangle-Baq3u__T.js",
+            "/stoicheia/assets/triangle-D7DRmLfq.css",
+            "/stoicheia/desk.html",
+            "/stoicheia/favicon.svg",
+            "/stoicheia/fonts/NotoSerif-Regular.ttf",
+            "/stoicheia/fonts/OFL.txt",
+            "/stoicheia/gnomon.html",
+            "/stoicheia/index.html",
+            "/stoicheia/measure.html",
+            "/stoicheia/mesolabe.html",
+            "/stoicheia/quadrature.html",
+            "/stoicheia/sources/heiberg-002.jpg",
+            "/stoicheia/sources/heiberg-003.jpg",
+            "/stoicheia/sources/heiberg-004.jpg",
+            "/stoicheia/sources/heiberg-005.jpg",
+            "/stoicheia/sources/heiberg-006.jpg",
+            "/stoicheia/sources/heiberg-007.jpg",
+            "/stoicheia/sources/heiberg-008.jpg",
+            "/stoicheia/sources/heiberg-009.jpg",
+            "/stoicheia/sources/heiberg-010.jpg",
+            "/stoicheia/sources/heiberg-011.jpg",
+            "/stoicheia/sources/heiberg-012.jpg",
+            "/stoicheia/sources/heiberg-013.jpg",
+            "/stoicheia/sources/heiberg-014.jpg",
+            "/stoicheia/sources/heiberg-015.jpg",
+            "/stoicheia/sources/heiberg-016.jpg",
+            "/stoicheia/sources/heiberg-017.jpg",
+            "/stoicheia/sources/heiberg-018.jpg",
+            "/stoicheia/sources/heiberg-019.jpg",
+            "/stoicheia/sources/heiberg-020.jpg",
+            "/stoicheia/sources/heiberg-021.jpg",
+            "/stoicheia/sources/heiberg-022.jpg",
+            "/stoicheia/sources/heiberg-023.jpg",
+            "/stoicheia/sources/heiberg-024.jpg",
+            "/stoicheia/sources/heiberg-025.jpg",
+            "/stoicheia/sources/heiberg-026.jpg",
+            "/stoicheia/sources/heiberg-027.jpg",
+            "/stoicheia/sources/heiberg-028.jpg",
+            "/stoicheia/sources/heiberg-029.jpg",
+            "/stoicheia/sources/heiberg-030.jpg",
+            "/stoicheia/sources/heiberg-031.jpg",
+            "/stoicheia/sources/heiberg-032.jpg",
+            "/stoicheia/sources/heiberg-033.jpg",
+            "/stoicheia/sources/heiberg-034.jpg",
+            "/stoicheia/sources/heiberg-035.jpg",
+            "/stoicheia/sources/heiberg-036.jpg",
+            "/stoicheia/sources/heiberg-037.jpg",
+            "/stoicheia/sources/heiberg-038.jpg",
+            "/stoicheia/sources/heiberg-039.jpg",
+            "/stoicheia/sources/heiberg-040.jpg",
+            "/stoicheia/sources/heiberg-041.jpg",
+            "/stoicheia/sources/heiberg-042.jpg",
+            "/stoicheia/sources/heiberg-043.jpg",
+            "/stoicheia/sources/heiberg-044.jpg",
+            "/stoicheia/sources/heiberg-045.jpg",
+            "/stoicheia/sources/heiberg-046.jpg",
+            "/stoicheia/sources/heiberg-047.jpg",
+            "/stoicheia/sources/heiberg-048.jpg",
+            "/stoicheia/sources/heiberg-049.jpg",
+            "/stoicheia/sources/heiberg-050.jpg",
+            "/stoicheia/sources/heiberg-051.jpg",
+            "/stoicheia/sources/heiberg-052.jpg",
+            "/stoicheia/sources/heiberg-053.jpg",
+            "/stoicheia/sources/heiberg-054.jpg",
+            "/stoicheia/sources/heiberg-055.jpg",
+            "/stoicheia/sources/heiberg-056.jpg",
+            "/stoicheia/sources/heiberg-057.jpg",
+            "/stoicheia/sources/heiberg-100.jpg",
+            "/stoicheia/sources/heiberg-101.jpg",
+            "/stoicheia/sources/heiberg-102.jpg",
+            "/stoicheia/sources/heiberg-103.jpg",
+            "/stoicheia/sources/heiberg-110.jpg",
+            "/stoicheia/sources/heiberg-111.jpg",
+            "/stoicheia/sources/heiberg-128.jpg",
+            "/stoicheia/sources/heiberg-129.jpg",
+            "/stoicheia/sources/heiberg-130.jpg",
+            "/stoicheia/sources/heiberg-131.jpg",
+            "/stoicheia/sources/heiberg-132.jpg",
+            "/stoicheia/sources/heiberg-133.jpg",
+            "/stoicheia/sources/heiberg-160.jpg",
+            "/stoicheia/sources/heiberg-161.jpg",
+            "/stoicheia/sources/heiberg-162.jpg",
+            "/stoicheia/sources/heiberg-163.jpg",
+            "/stoicheia/sources/manifest.json",
+            "/stoicheia/sources/measure/heiberg-002.jpg",
+            "/stoicheia/sources/measure/heiberg-003.jpg",
+            "/stoicheia/sources/measure/heiberg-004.jpg",
+            "/stoicheia/sources/measure/heiberg-005.jpg",
+            "/stoicheia/sources/measure/heiberg-006.jpg",
+            "/stoicheia/sources/measure/heiberg-007.jpg",
+            "/stoicheia/sources/measure/heiberg-008.jpg",
+            "/stoicheia/sources/measure/heiberg-009.jpg",
+            "/stoicheia/sources/measure/heiberg-010.jpg",
+            "/stoicheia/sources/measure/heiberg-011.jpg",
+            "/stoicheia/sources/measure/heiberg-012.jpg",
+            "/stoicheia/sources/measure/heiberg-013.jpg",
+            "/stoicheia/sources/measure/manifest.json",
+            "/stoicheia/sources/mesolabe/eutocius-102.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-103.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-104.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-105.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-106.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-107.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-108.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-109.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-110.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-111.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-112.jpg",
+            "/stoicheia/sources/mesolabe/eutocius-113.jpg",
+            "/stoicheia/sources/mesolabe/manifest.json",
+            "/stoicheia/triangle.html"
+          ]
+        }
+      ],
+      "offlineRooms": [
+        "triangle.html",
+        "quadrature.html",
+        "gnomon.html",
+        "mesolabe.html",
+        "desk.html",
+        "measure.html",
+        "index.html"
+      ],
+      "offlineSourceAndReading": true,
+      "pageErrors": []
+    }
+  ]
+}

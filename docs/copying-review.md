@@ -151,5 +151,6 @@ node scripts/copying-upgrade.mjs /path/to/prior-I1-21/dist /tmp/stoicheia-copyin
 python3 scripts/copying-print.py /tmp/stoicheia-copying/chromium-1440/I23-study.pdf --lesson 23
 ```
 
-The full-course replay and public-file/browser receipts are recorded in the
-[publication review](copying-publication.md) when that boundary is verified.
+The complete course replay and separately verified hosted file, public browser,
+printed-file and automation-status receipts are in the
+[publication review](copying-publication.md).

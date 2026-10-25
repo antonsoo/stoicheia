@@ -1,0 +1,14 @@
+{
+  "ready": true,
+  "state": {
+    "status": "Edition ready offline, including source pages",
+    "controller": "https://antonsoo.github.io/stoicheia/sw.js",
+    "regs": [
+      {
+        "active": "activated"
+      }
+    ],
+    "keys": ["stoicheia-f1d017db40f4c6ac6eaf4d6fefd90f45d2534c1b51b66b61a07946a45eb27938"]
+  },
+  "logs": []
+}
