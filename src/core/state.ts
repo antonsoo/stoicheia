@@ -21,7 +21,9 @@ export type PropositionId =
   | 18
   | 19
   | 20
-  | 21;
+  | 21
+  | 22
+  | 23;
 
 export interface ReaderState {
   proposition: PropositionId;
@@ -62,9 +64,11 @@ export const stepCounts: Record<PropositionId, number> = {
   19: 6,
   20: 9,
   21: 10,
+  22: 8,
+  23: 7,
 };
 export const propositionIds = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
 ] as const;
 export const defaults: ReaderState = {
   proposition: 1,
@@ -94,7 +98,7 @@ export function decodeState(hash: string): ReaderState {
   const params = new URLSearchParams(hash.replace(/^#/, ""));
   const p = params.get("p");
   const proposition: PropositionId =
-    p && /^(?:[1-9]|1[0-9]|2[01])$/.test(p) ? (Number(p) as PropositionId) : 1;
+    p && /^(?:[1-9]|1[0-9]|2[0-3])$/.test(p) ? (Number(p) as PropositionId) : 1;
   const angle = Math.round(
     bounded(params.get("a"), defaults.angle, 10, proposition === 13 ? 90 : 75),
   );
@@ -132,7 +136,15 @@ export function decodeState(hash: string): ReaderState {
     ),
     variant: params.get("v") === "1" ? 1 : 0,
     take: Math.round(bounded(params.get("k"), defaults.take, 0.1, 0.9) * 100) / 100,
-    offset: Math.round(bounded(params.get("x"), defaults.offset, -2, 2) * 100) / 100,
+    offset:
+      Math.round(
+        bounded(
+          params.get("x"),
+          defaults.offset,
+          proposition === 23 ? -0.45 : -2,
+          proposition === 23 ? 0.45 : 2,
+        ) * 100,
+      ) / 100,
     pair: Math.round(bounded(params.get("pair"), 0, 0, 2)) as 0 | 1 | 2,
     casebook: decodeCasebook(params),
   };
@@ -152,7 +164,7 @@ export function encodeState(state: ReaderState): string {
     v: String(state.variant),
     k: String(state.take),
     ...([17, 20].includes(state.proposition) ? { pair: String(state.pair) } : {}),
-    ...(state.proposition === 12 ? { x: String(state.offset) } : {}),
+    ...([12, 23].includes(state.proposition) ? { x: String(state.offset) } : {}),
     ...(state.proposition === 7 && state.casebook.open
       ? {
           case: "1",

@@ -1,4 +1,5 @@
 import type { PropositionId } from "../core/state";
+import { copyingLessons, copyingReasons } from "./copying";
 import { exteriorLessons, exteriorReasons } from "./exterior";
 import { bisectionLessons, bisectionReasons } from "./halves";
 import { inequalityLessons, inequalityReasons } from "./inequalities";
@@ -24,6 +25,7 @@ export const reasons: Record<string, Reason> = {
   ...exteriorReasons,
   ...inequalityReasons,
   ...nestedReasons,
+  ...copyingReasons,
   given: {
     title: "The task and its given objects",
     text: "A given object is part of the problem. It has not been constructed by this proof. A finite straight line here means a line segment.",
@@ -136,6 +138,7 @@ export const lessons: Record<PropositionId, Lesson> = {
   ...exteriorLessons,
   ...inequalityLessons,
   ...nestedLessons,
+  ...copyingLessons,
   1: {
     id: 1,
     numeral: "I.1",

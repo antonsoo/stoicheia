@@ -14,9 +14,9 @@
     "bytes": 20890632,
     "sha256": "da285c581c2dda86e2b25e20db3ce604bf6fb8765228fcd71cfc89d47a9d1c17"
   },
-  "rendering": "pdftoppm -f 16 -l 65 -scale-to 1550 -jpeg -jpegopt quality=88 INPUT.pdf page; I.22 supplement: -f 66 -l 69, same image settings. Quadrature workshop: PDF pages 124-125, 142-143 and 174-177; scale-to 1800, JPEG quality 88. Gnomon workshop: PDF pages 114-117 and 144-147; scale-to 1550, JPEG quality 82.",
+  "rendering": "pdftoppm -f 16 -l 65 -scale-to 1550 -jpeg -jpegopt quality=88 INPUT.pdf page; I.22 supplement: -f 66 -l 69, same image settings. Quadrature workshop: PDF pages 124-125, 142-143 and 174-177; scale-to 1800, JPEG quality 88. Gnomon workshop: PDF pages 114-117 and 144-147; scale-to 1550, JPEG quality 82. I.23 course supplement: PDF pages 70-71, scale-to 1550, JPEG quality 88.",
   "transcription": {
-    "scope": "Full proposition statements and proofs I.1–21; the bracketed Greek-only corollary after I.15, with no supplied Latin; definitions 10, 15, 16, 20; all five postulates; the five common notions in the usual modern list (Heiberg 1, 2, 3, 7, 8). Critical apparatus and other text are not transcribed. Separate I.22 workshop: complete statement and proof, printed pp. 52–55. II.14 workshop: complete statement and proof on printed pp. 160-163. Full pages 110-111 and 128-129 preserve the I.47 and II.5 statements for inspection; their complete proofs are not transcribed. Separate gnomon workshop: complete I.43 and II.5, printed pp. 100-103 and 128-133, including their repeated conclusions. The page-131 duplicated-M editorial note is explained separately, not silently corrected.",
+    "scope": "Full proposition statements and proofs I.1–23; the bracketed Greek-only corollary after I.15, with no supplied Latin; definitions 10, 15, 16, 20; all five postulates; the five common notions in the usual modern list (Heiberg 1, 2, 3, 7, 8). Critical apparatus and other text are not transcribed. Separate I.22 workshop: complete statement and proof, printed pp. 52–55. II.14 workshop: complete statement and proof on printed pp. 160-163. Full pages 110-111 and 128-129 preserve the I.47 and II.5 statements for inspection; their complete proofs are not transcribed. Separate gnomon workshop: complete I.43 and II.5, printed pp. 100-103 and 128-133, including their repeated conclusions. The page-131 duplicated-M editorial note is explained separately, not silently corrected.",
     "normalizations": [
       "Printed ϑ normalized to θ.",
       "Consistent Unicode Greek letters for all geometric labels, including letters that resemble Latin glyphs.",
@@ -30,7 +30,8 @@
       "Editorial brackets in I.13 and the Greek-only I.15 corollary retained; the absence of facing Latin for the corollary is stated explicitly.",
       "I.22 retains the bracketed Greek explanation, the absence of its Latin translation, and the changing order of circle labels. The Latin inline reference to I.20 is explained in the note.",
       "I.21 is divided into ten teaching steps. The English bracket [on ΑΓ] identifies the intersection implied by the printed figure; Greek and Latin do not add these words.",
-      "II.14 retains Heiberg's Greek point labels in both languages. His Latin multiplication and squared notation is rendered with × and superscript ². Eleven reading divisions and English grammar notes are modern teaching aids."
+      "II.14 retains Heiberg's Greek point labels in both languages. His Latin multiplication and squared notation is rendered with × and superscript ². Eleven reading divisions and English grammar notes are modern teaching aids.",
+      "I.22 reuses the same complete transcription as the separate triangle workshop. I.23 is divided into seven aligned reading units, with Greek and Heiberg Latin on printed pp.54-57. Its arbitrary point choices and neuter-plural agreement are explained without adding a line of compass operations to the source."
     ],
     "english": "New reading translation. Explicit intersection descriptions and other explanatory expansions are teaching aids.",
     "comparison": "Hand transcription checked against bundled scans. The cropped right edge of printed p. 6 was cross-checked against the Greek quoted in Heath, The Thirteen Books of Euclid’s Elements (1925), pp. 187–188, via David R. Wilkins’s Trinity College Dublin transcription. No unreviewed OCR output is presented as source text.",
@@ -522,6 +523,24 @@
       "file": "heiberg-055.jpg",
       "bytes": 251488,
       "sha256": "3134a0577c2f607bff31b7735bdc169c1efac08e6f42b75b6ead766dac579612"
+    },
+    {
+      "printed_page": 56,
+      "pdf_page": 70,
+      "archive_leaf": 70,
+      "language": "grc",
+      "file": "heiberg-056.jpg",
+      "bytes": 280490,
+      "sha256": "fd74d41bda21ecce2f0da703c12548597ff8727f72dd0afd4a4018fdd3b5a0fc"
+    },
+    {
+      "printed_page": 57,
+      "pdf_page": 71,
+      "archive_leaf": 71,
+      "language": "la",
+      "file": "heiberg-057.jpg",
+      "bytes": 289054,
+      "sha256": "56e7b1a7cdaf39aa240207c7ef3dfe4414f390da202be0802110135f042c02fe"
     },
     {
       "printed_page": 110,

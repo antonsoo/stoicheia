@@ -197,6 +197,11 @@ export const foundations: Foundation[] = [
 export const foundationById = new Map(foundations.map((entry) => [entry.id, entry]));
 
 export const reasonFoundations: Record<string, string[]> = {
+  closureCourse2: ["p3"],
+  closureCourse3: ["p3", "p1"],
+  closureCourse4: ["d15", "cn1"],
+  closureCourse5: ["d15", "cn1"],
+  angleChoose: ["p1"],
   rightDefinition: ["d10"],
   rightPairCase: ["d10"],
   chordSSS: ["d15"],

@@ -12,6 +12,10 @@ const range = (
   `<label class="range-label" for="${id}">${title}<output id="${id}-output" for="${id}">${value}${suffix}</output></label><input id="${id}" type="range" min="${min}" max="${max}" step="${step}" value="${value}" />`;
 
 export function explorationControls(state: ReaderState): string {
+  if (state.proposition === 22)
+    return `<p>All three pairings must be strict. Flip the plate to choose the other common point.</p><a href="./triangle.html">Open the separate trial-hinge workshop →</a>`;
+  if (state.proposition === 23)
+    return `<label for="variant">Choose a copy<select id="variant"><option value="0" ${!state.variant ? "selected" : ""}>First orientation</option><option value="1" ${state.variant ? "selected" : ""}>Reflected triangle</option></select></label>${range("offset", "Turn the new baseline", -45, 45, Math.round(state.offset * 100), "°")}<p>Only the relative opening is copied. The baseline may turn and the triangle may be reflected.</p>`;
   if (state.proposition === 21)
     return `${range("take", "Ε along ΑΓ", 10, 90, Math.round(state.take * 100), "%")}${range("motion", "Δ along ΒΕ", 10, 90, state.motion, "%")}<p>First choose Ε on the outer side, then move Δ along the interior line from Β. Both points stay away from endpoints, so the two auxiliary triangles remain genuine triangles.</p>`;
   if (state.proposition === 17 || state.proposition === 20) {
@@ -34,6 +38,10 @@ export function explorationControls(state: ReaderState): string {
 
 export function parameterControls(state: ReaderState): string {
   const p = state.proposition;
+  if (p === 22)
+    return `${range("size", "Given Β / base ΖΗ", 100, 240, state.size)}${range("ratio", "Given Α (% of Β)", 20, 140, Math.round(state.ratio * 100), "%")}${range("third", "Given Γ (% of Β)", 30, 180, Math.round(state.third * 100), "%")}<div class="parameter-buttons"><button type="button" id="flip">Choose the reflected vertex</button><button type="button" id="reset">Reset givens</button></div><div id="measurements"></div>`;
+  if (p === 23)
+    return `${range("size", "Choose ΓΔ", 100, 240, state.size)}${range("ratio", "Choose ΓΕ (% of ΓΔ)", 20, 140, Math.round(state.ratio * 100), "%")}${range("angle", "Given opening ΔΓΕ", 20, 150, state.angle * 2, "°", 2)}<p>Two arbitrary distances can change; keep the angle and inspect its copy.</p><div class="parameter-buttons"><button type="button" id="flip">Flip the arrangement</button><button type="button" id="reset">Reset givens</button></div><div id="measurements"></div>`;
   if (p >= 17)
     return `${range("size", "Given length ΑΒ", 100, 240, state.size)}${range("ratio", p === 19 ? "Original ΑΓ (% of ΑΒ)" : "Side ΑΓ (% of ΑΒ)", p === 19 ? 101 : 20, 140, Math.round(state.ratio * 100), "%")}${range("angle", "Included angle ΒΑΓ", 20, 150, state.angle * 2, "°", 2)}${p === 19 ? "<p>The original drawing realizes the given angle inequality. The two rejected alternatives have their own fixed side ratios, shown beside the original measurements.</p>" : p === 18 ? "<p>I.18 requires ΑΓ > ΑΒ. Move through 100% to inspect the limit of its construction.</p>" : ""}<div class="parameter-buttons"><button type="button" id="flip">Flip the plate</button><button type="button" id="reset">Reset givens</button></div><div id="measurements"></div>`;
   if (p >= 11)

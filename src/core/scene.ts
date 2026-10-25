@@ -1,4 +1,5 @@
 import { bisectionScene } from "./bisection-scene";
+import { angleCopyScene, triangleCourseScene } from "./copy-scene";
 import type { Point } from "./geometry";
 import { add, cutOff, distance, equilateral, scale, subtract, transfer } from "./geometry";
 import { inequalityScene } from "./inequality-scene";
@@ -68,6 +69,8 @@ const polar = (r: number, degrees: number): Point => ({
 });
 
 export function makeScene(state: ReaderState): Scene {
+  if (state.proposition === 22) return triangleCourseScene(state);
+  if (state.proposition === 23) return angleCopyScene(state);
   if (state.proposition === 21) return nestedScene(state);
   if (state.proposition >= 17) return inequalityScene(state);
   if (state.proposition >= 11) return rightAngleScene(state);

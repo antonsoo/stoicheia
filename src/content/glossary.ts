@@ -1,4 +1,5 @@
 import { angleGlossary } from "./angle-glossary";
+import { copyingGlossary } from "./copying-glossary";
 import { inequalityGlossary } from "./inequality-glossary";
 
 export interface Gloss {
@@ -13,6 +14,7 @@ export interface Gloss {
 
 export const glossary: Gloss[] = [
   ...angleGlossary,
+  ...copyingGlossary,
   ...inequalityGlossary,
   {
     id: "possible",

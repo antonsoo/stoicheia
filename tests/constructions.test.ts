@@ -84,8 +84,8 @@ test("every lesson has source pages, a reason, and a renderable scene for every 
     for (const [step, passage] of lesson.steps.entries()) {
       assert.ok(reasons[passage.reason]);
       assert.ok(passage.grc && passage.lat && passage.en && passage.language);
-      assert.ok(passage.greekPages.every((p) => p >= 10 && p <= 52 && p % 2 === 0));
-      assert.ok(passage.latinPages.every((p) => p >= 11 && p <= 53 && p % 2 === 1));
+      assert.ok(passage.greekPages.every((p) => p >= 10 && p <= 56 && p % 2 === 0));
+      assert.ok(passage.latinPages.every((p) => p >= 11 && p <= 57 && p % 2 === 1));
       for (const ratio of [0.2, 0.65, 0.99, 1, 1.4]) {
         for (const side of [-1, 1] as const) {
           const scene = makeScene({ ...defaults, proposition: id, step, ratio, side });
