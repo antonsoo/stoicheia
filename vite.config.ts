@@ -128,9 +128,9 @@ self.addEventListener("message", event => {
     return;
   }
   if (event.data?.type !== "STOICHEIA_INSPECT_EDITION" || !event.ports[0]) return;
-  event.waitUntil(caches.open(CACHE).then(cache => cache.keys()).then(keys => {
-    const saved = new Set(keys.map(request => new URL(request.url).pathname));
-    event.ports[0].postMessage({ type: "STOICHEIA_EDITION", edition: EDITION, complete: FILES.every(file => saved.has(file)) });
+  // Inspection must not recreate a deleted or retired edition cache.
+  event.waitUntil(Promise.all(FILES.map(file => caches.match(file, { cacheName: CACHE }))).then(saved => {
+    event.ports[0].postMessage({ type: "STOICHEIA_EDITION", edition: EDITION, complete: saved.every(Boolean) });
   }).catch(() => event.ports[0].postMessage({ type: "STOICHEIA_EDITION", edition: EDITION, complete: false })));
 });
 self.addEventListener("fetch", event => {
