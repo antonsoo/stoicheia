@@ -651,6 +651,17 @@
   .ci-section {
     padding: 22px 0;
   }
+  .ci-section h2,
+  .ci-section h3 {
+    break-after: avoid;
+  }
+  .ci-scroll {
+    overflow: visible;
+    break-inside: avoid;
+  }
+  .ci-table tr {
+    break-inside: avoid;
+  }
   .ci-table {
     min-width: 0;
     font-size: 8pt;
