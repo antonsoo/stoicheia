@@ -12,8 +12,8 @@
   source-byte verification, share/history state, exact CSV, SVG and a portable
   illustrated reading. Extend the complete offline edition to seven rooms.
 - Exercise real browser, saved-file, print and existing-tab upgrade workflows,
-  including held and substituted sources. This room is reviewed locally and
-  has not been pushed or published.
+  including held and substituted sources. Published the verified edition with
+  canonical hosted-file identities and public browser/download evidence.
 
 ## 2026-10-24
 

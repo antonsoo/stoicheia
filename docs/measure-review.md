@@ -1,7 +1,9 @@
 # Book X common-measure workshop: local review
 
-Reviewed 2026-10-25. The addition is implemented in this checkout and local
-commits. No push, tag, registry release or public deployment was performed.
+This records the local implementation review on 2026-10-25, before publication.
+No push, tag, registry release or deployment was performed at that checkpoint.
+The subsequent owner-authorized publication is recorded separately in
+[the publication review](measure-publication.md).
 Existing publication receipts elsewhere in this repository concern earlier
 rooms and do not establish publication of `measure.html`.
 

@@ -8,13 +8,18 @@ import AxeBuilder from "@axe-core/playwright";
 import { chromium, firefox } from "playwright";
 
 const out = path.resolve(process.argv[2] ?? "/tmp/stoicheia-measure");
+const hostedBase = process.argv[3];
+if (hostedBase)
+  assert.match(hostedBase, /^https:\/\/.+\/$/, "Hosted base must be HTTPS with a trailing slash");
 await mkdir(out, { recursive: true });
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
 const manifest = JSON.parse(await readFile("public/sources/measure/manifest.json", "utf8"));
 const report = {
   checkedAt: new Date().toISOString(),
-  scope:
-    "Local production build and native downloaded files; no hosted publication or physical printing claim",
+  scope: hostedBase
+    ? "Public production site and native downloads. Hosted offline checks disable browser networking; they do not stop the public origin. No physical printing claim."
+    : "Local production build and native downloaded files; no hosted publication or physical printing claim",
+  base: hostedBase ?? null,
   configurations: [],
 };
 async function files(root) {
@@ -105,7 +110,9 @@ async function capture(page) {
 }
 for (const engine of [chromium, firefox])
   for (const width of [1440, 375]) {
-    const server = await serve(),
+    const server = hostedBase
+        ? { base: hostedBase, offline() {}, async close() {} }
+        : await serve(),
       browser = await engine.launch({ headless: true });
     const dir = path.join(out, `${engine.name()}-${width}`);
     await mkdir(dir, { recursive: true });

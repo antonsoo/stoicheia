@@ -35,11 +35,10 @@ exercises and the original pages 50–53 complete the sequential course through 
 
 ## A measure in common
 
-The new **`measure.html`** room reads **Euclid X.2–3**. It is implemented and
-reviewed locally; it has not been pushed or added to the public workshop yet.
-From this checkout, run `npm ci` and `npm run dev`, then open
-`http://127.0.0.1:4327/stoicheia/measure.html`. The public-clone quickstart below
-will gain this room after publication.
+The [common-measure workshop](https://antonsoo.github.io/stoicheia/measure.html)
+reads **Euclid X.2–3**. Lay off lengths, keep the remainder, and distinguish
+finding no common measure yet from proving that none can exist.
+[Public source, hosted files and browser verification](docs/measure-publication.md).
 
 ![The common-measure ruler, exact lengths and turn controls](docs/assets/measure-desktop.png)
 
