@@ -23,7 +23,7 @@ let question = 0,
   rangeGesture = false;
 const small = matchMedia("(max-width: 650px)");
 el("#app").innerHTML = `
-<header class="qa-header"><a class="qa-brand" href="./">Stoicheia <span lang="grc">ΣΤΟΙΧΕΙΑ</span></a><nav aria-label="Workshop navigation"><a href="./">I.1–21 · Read the course</a><a href="./triangle.html">I.22 · Three lengths</a><a href="./mesolabe.html">Two means · A doubled cube</a><a href="./gnomon.html">I.43 → II.5 · Why the extra square?</a><a href="#qa-reading">Read II.14</a><a href="#qa-sources">Printed evidence</a></nav></header>
+<header class="qa-header"><a class="qa-brand" href="./">Stoicheia <span lang="grc">ΣΤΟΙΧΕΙΑ</span></a><nav aria-label="Workshop navigation"><a href="./">I.1–23 · Read the course</a><a href="./triangle.html">I.22 · Three lengths</a><a href="./mesolabe.html">Two means · A doubled cube</a><a href="./gnomon.html">I.43 → II.5 · Why the extra square?</a><a href="#qa-reading">Read II.14</a><a href="#qa-sources">Printed evidence</a></nav></header>
 <main>
 <section class="qa-intro"><div><p class="qa-kicker">BOOK II / PROPOSITION 14 / EQUAL AREA</p><h1>A square,<br>with nothing added.</h1></div><div><p>A 9 by 4 rectangle holds 36 square units.<br>Averaging its sides gives a square that holds too much.</p><p>Find the side that keeps the area. Let a semicircle do the construction, then follow the two comparisons that explain it.</p></div></section>
 <section id="qa-workshop" class="qa-workshop" aria-label="Equal-area construction" tabindex="-1">

@@ -11,6 +11,7 @@ import { decodeState, defaults, encodeState, propositionIds, stepCounts } from "
 import { illustratedCourseStudy } from "./course-study";
 import { prepareOffline } from "./offline";
 import { annotated, comparisonTable, drawScene, escapeHtml } from "./render";
+import { studyAssetIdentity, studyBlobUrl } from "./study-assets";
 
 function element<T extends Element = HTMLElement>(selector: string): T {
   const node = document.querySelector<T>(selector);
@@ -20,6 +21,8 @@ function element<T extends Element = HTMLElement>(selector: string): T {
 
 let state = decodeState(location.hash);
 let sourcePage = 4;
+let sourceRevision = 0;
+let sourceBlob = "";
 let practiceIndex = 0;
 let readingMode = "parallel";
 let translationsRevealed = false;
@@ -31,7 +34,7 @@ app.innerHTML = `
       <svg viewBox="0 0 72 56" aria-hidden="true"><circle cx="26" cy="30" r="22"/><circle cx="48" cy="30" r="22"/><path d="M26 30 37 10.947 48 30Z"/></svg>
       <span>Stoicheia<span class="brand-greek" lang="grc">ΣΤΟΙΧΕΙΑ</span></span>
     </a>
-    <div class="masthead-note">Geometry, in its own words.<span>Euclid I.1–21 · Greek / Latin / English</span></div>
+    <div class="masthead-note">Geometry, in its own words.<span>Euclid I.1–23 · Greek / Latin / English</span></div>
     <button type="button" class="quiet" id="about-sources">About the texts <span aria-hidden="true">↗</span></button>
   </header>
   <main>
@@ -39,7 +42,7 @@ app.innerHTML = `
       ${propositionIds.map((id) => `<button type="button" data-lesson="${id}" class="lesson-tab"><span class="tab-numeral">${lessons[id].numeral}</span><span>${lessons[id].shortTitle}</span><span class="tab-greek" lang="grc">${lessons[id].greekNumeral}</span></button>`).join("")}
     </nav>
     <label class="lesson-picker" for="lesson-select">Choose a proposition<select id="lesson-select">${propositionIds.map((id) => `<option value="${id}">${lessons[id].numeral} · ${lessons[id].shortTitle}</option>`).join("")}</select></label>
-    <div class="reader-tools"><a href="./measure.html">A measure in common · X.2–3 ↗</a><a href="./desk.html">Make I.2 yourself · Construction desk ↗</a><a href="./mesolabe.html">Twice the stone · Eratosthenes' sliding plates ↗</a><a href="./gnomon.html">Equal leftovers, unequal shapes · I.43 and II.5 ↗</a><a href="./quadrature.html">A square, with nothing added · II.14 workshop ↗</a><a href="./triangle.html">Can three lengths close? · I.22 workshop ↗</a><button type="button" data-foundation="p1">Open definitions, postulates &amp; common notions <span aria-hidden="true">↗</span></button><button type="button" id="open-practice">Practice reading the argument <span aria-hidden="true">↗</span></button></div>
+    <details class="companion-workshops" id="companion-workshops" ${matchMedia("(min-width: 701px)").matches ? "open" : ""}><summary>Explore companion workshops</summary><div class="reader-tools"><a href="./measure.html">A measure in common · X.2–3 ↗</a><a href="./desk.html">Make I.2 yourself · Construction desk ↗</a><a href="./mesolabe.html">Twice the stone · Eratosthenes' sliding plates ↗</a><a href="./gnomon.html">Equal leftovers, unequal shapes · I.43 and II.5 ↗</a><a href="./quadrature.html">A square, with nothing added · II.14 workshop ↗</a><a href="./triangle.html">Can three lengths close? · I.22 workshop ↗</a></div></details><div class="reader-tools course-tools"><button type="button" data-foundation="p1">Open definitions, postulates &amp; common notions <span aria-hidden="true">↗</span></button><button type="button" id="open-practice">Practice reading the argument <span aria-hidden="true">↗</span></button></div>
     <div class="lesson-heading"><div><p class="eyebrow" id="book-label"></p><h1 id="lesson-title"></h1></div><p id="lesson-introduction"></p></div>
     <section id="workbench" class="workbench" aria-label="Geometric plate and parallel reader" tabindex="-1">
       <div class="construction">
@@ -83,9 +86,9 @@ app.innerHTML = `
         return `<tr><th scope="row"><button type="button" data-lesson="${id}">${lessons[id].numeral}</button></th><td>${dependencies.length ? dependencies.map((d) => `<button type="button" data-lesson="${d}">${lessons[d].numeral}</button>`).join(" ") : "Definitions, postulates and assumptions"}</td><td>${lessons[id].shortTitle}</td></tr>`;
       })
       .join("")}</tbody></table></details>
-    <details class="full-reading" id="full-reading"><summary><span>Read the complete passage</span><span>Greek · Latin · English</span></summary><div id="full-passage"></div><p class="print-credit">Stoicheia · Euclid, Elements I.1–21. Greek and Latin: J. L. Heiberg, Euclidis opera omnia, vol. I (Leipzig, 1883), pp. 2–53; public domain. Latin is Heiberg’s nineteenth-century translation. English reading and notes: Stoicheia, 2026, MIT. Source and edition notes: antonsoo.github.io/stoicheia/</p></details>
+    <details class="full-reading" id="full-reading"><summary><span>Read the complete passage</span><span>Greek · Latin · English</span></summary><div id="full-passage"></div><p class="print-credit">Stoicheia · Euclid, Elements I.1–23. Greek and Latin: J. L. Heiberg, Euclidis opera omnia, vol. I (Leipzig, 1883), pp. 2–57; public domain. Latin is Heiberg’s nineteenth-century translation. English reading and notes: Stoicheia, 2026, MIT. Source and edition notes: antonsoo.github.io/stoicheia/</p></details>
     <details class="wordbook"><summary><span>A small working vocabulary</span><span>Words you meet in these proofs</span></summary><div class="glossary-list">${glossary.map((entry) => `<button type="button" data-gloss="${entry.id}"><span lang="grc">${escapeHtml(entry.greek)}</span><span lang="la">${escapeHtml(entry.latin)}</span><small>${escapeHtml(entry.meaning)}</small></button>`).join("")}</div></details>
-    <section class="source-note" id="source-note"><div><p class="eyebrow">A printed source you can inspect</p><h2>One edition. Two languages.</h2><p>Greek text and Latin translation from J. L. Heiberg’s <cite>Euclidis opera omnia</cite>, volume I (1883), printed pages 2–53. The English and reading notes are new. Point labels stay Greek in all three languages.</p><button type="button" id="open-edition">Open the printed pages</button></div><div class="editorial-note"><h3>What changed in transcription</h3><p>Line breaks and inline reference marks are omitted. Greek ϑ is written θ; point labels use consistent Greek letters. Latin u/v spelling is retained. Square brackets in the definitions, common notions, I.1, I.4, I.8, I.13 and I.15 reproduce Heiberg’s editorial brackets. Angle and triangle symbols are written ∠ and △. The step divisions, geometry orientation, reasons and annotations are teaching aids. The usual five-common-notion numbering is used in the notes; Heiberg’s expanded list is identified where it differs.</p><p>The English sometimes names intersections implied by the Greek. It is a reading translation, not a critical edition. The language notes cover selected forms, not every word.</p><a href="${import.meta.env.BASE_URL}sources/manifest.json">Source and image provenance</a></div></section>
+    <section class="source-note" id="source-note"><div><p class="eyebrow">A printed source you can inspect</p><h2>One edition. Two languages.</h2><p>Greek text and Latin translation from J. L. Heiberg’s <cite>Euclidis opera omnia</cite>, volume I (1883), printed pages 2–57. The English and reading notes are new. Point labels stay Greek in all three languages.</p><button type="button" id="open-edition">Open the printed pages</button></div><div class="editorial-note"><h3>What changed in transcription</h3><p>Line breaks and inline reference marks are omitted. Greek ϑ is written θ; point labels use consistent Greek letters. Latin u/v spelling is retained. Square brackets in the definitions, common notions, I.1, I.4, I.8, I.13 and I.15 reproduce Heiberg’s editorial brackets. Angle and triangle symbols are written ∠ and △. The step divisions, geometry orientation, reasons and annotations are teaching aids. The usual five-common-notion numbering is used in the notes; Heiberg’s expanded list is identified where it differs.</p><p>The English sometimes names intersections implied by the Greek. It is a reading translation, not a critical edition. The language notes cover selected forms, not every word.</p><a href="${import.meta.env.BASE_URL}sources/manifest.json">Source and image provenance</a></div></section>
   </main>
   <footer class="footer"><p>Stoicheia <span lang="grc">/ στοιχεῖα</span> · elements</p><p>Made for slow reading. No account. No tracking.</p><span class="offline-status"><span id="offline-state" role="status">Preparing offline edition…</span><button type="button" id="reload-edition" hidden>Reload saved edition</button></span></footer>
   <dialog id="practice-dialog" class="practice-dialog" aria-labelledby="practice-title"><header><div><p class="eyebrow" id="practice-position"></p><h2 id="practice-title" tabindex="-1">Read the argument</h2></div><button type="button" class="dialog-close" data-close="practice-dialog" aria-label="Close reading practice">×</button></header><div class="practice-body"><p class="practice-intro">Read the highlighted wording in its original sentence. Try an interpretation, then compare the explanation.</p><div id="practice-source"></div><form id="practice-form"><fieldset id="practice-options"></fieldset><p id="practice-feedback" role="status" aria-live="polite"></p></form><div id="practice-translation" hidden></div><button type="button" id="practice-plate">Open this passage on the plate</button></div><footer class="practice-controls"><button type="button" id="practice-previous">← Previous reading</button><button type="button" id="practice-next">Next reading →</button></footer></dialog>
@@ -106,7 +109,7 @@ app.innerHTML = `
       "",
     )}</nav><div class="foundation-reading"><label class="foundation-picker" for="foundation-select">Choose a statement<select id="foundation-select">${foundations.map((f) => `<option value="${f.id}">${escapeHtml(f.category)} · ${escapeHtml(f.title)}</option>`).join("")}</select></label><div id="foundation-content"></div><button type="button" class="primary" data-close="foundation-dialog">Return to the proof</button></div></div></dialog>
   <dialog id="vocabulary-dialog" class="vocabulary-dialog" aria-labelledby="gloss-title"><button type="button" class="dialog-close" data-close="vocabulary-dialog" aria-label="Close vocabulary">×</button><p class="eyebrow">Working vocabulary</p><div id="gloss-content"></div><button type="button" class="primary" data-close="vocabulary-dialog">Return to the proof</button></dialog>
-  <dialog id="source-dialog" class="source-dialog" aria-labelledby="source-title"><header><div><p class="eyebrow">Heiberg · Leipzig, 1883</p><h2 id="source-title"></h2></div><button type="button" id="source-zoom" aria-pressed="false">Zoom page</button><button type="button" class="dialog-close" data-close="source-dialog" aria-label="Close source page">×</button></header><div class="source-navigation"><button type="button" id="source-previous">← Previous page</button><span id="source-language"></span><button type="button" id="source-next">Next page →</button></div><div class="scan-scroll" tabindex="0" role="region" aria-label="Scrollable printed page"><img id="source-image" width="987" height="1550" alt="" /></div><p class="scan-credit">University of Toronto scan · public domain. <a href="https://archive.org/details/euclidisoperaomn01eucluoft" target="_blank" rel="noreferrer">Open the complete volume ↗</a></p></dialog>
+  <dialog id="source-dialog" class="source-dialog" aria-labelledby="source-title"><header><div><p class="eyebrow">Heiberg · Leipzig, 1883</p><h2 id="source-title"></h2></div><button type="button" id="source-zoom" aria-pressed="false">Zoom page</button><button type="button" class="dialog-close" data-close="source-dialog" aria-label="Close source page">×</button></header><div class="source-navigation"><button type="button" id="source-previous">← Previous page</button><span id="source-language"></span><button type="button" id="source-next">Next page →</button></div><p id="course-source-status" class="scan-status" role="status"></p><div class="scan-scroll" tabindex="0" role="region" aria-label="Scrollable printed page"><img id="source-image" width="987" height="1550" alt="" /></div><p class="scan-credit">University of Toronto scan · public domain. <a href="https://archive.org/details/euclidisoperaomn01eucluoft" target="_blank" rel="noreferrer">Open the complete volume ↗</a></p></dialog>
   <dialog id="share-dialog" class="share-dialog" aria-labelledby="share-title"><button type="button" class="dialog-close" data-close="share-dialog" aria-label="Close share link">×</button><p class="eyebrow">Continue at the same place</p><h2 id="share-title">Share this step</h2><p>The link keeps the proposition, step and given lengths.</p><label for="share-url">Reader link</label><input id="share-url" type="url" readonly /><button type="button" class="primary" id="copy-link">Copy link</button><p id="copy-status" role="status"></p></dialog>
   <div class="toast" id="toast" role="status" hidden></div>
 `;
@@ -303,6 +306,7 @@ function goTo(proposition: PropositionId, result = false): void {
     step: result ? stepCounts[proposition] - 1 : 0,
     // An I.7 reflection is not a request for I.9's alternate circle crossing.
     variant: changedLesson ? 0 : state.variant,
+    offset: proposition === 23 ? Math.max(-0.45, Math.min(0.45, state.offset)) : state.offset,
     motion: changedLesson ? (proposition === 21 ? 55 : 0) : state.motion,
     pair: changedLesson ? 0 : state.pair,
     ratio: changedLesson && (proposition === 18 || proposition === 19) ? 1.25 : state.ratio,
@@ -312,19 +316,61 @@ function goTo(proposition: PropositionId, result = false): void {
   renderLesson();
 }
 
-function showSource(page: number): void {
-  sourcePage = Math.min(53, Math.max(2, page));
-  const greek = sourcePage % 2 === 0;
-  element("#source-title").textContent = `Printed page ${sourcePage}`;
+async function showSource(page: number): Promise<void> {
+  const requested = Math.min(57, Math.max(2, page)),
+    revision = ++sourceRevision;
+  sourcePage = requested;
+  const greek = requested % 2 === 0;
+  element("#source-title").textContent = `Printed page ${requested}`;
   element("#source-language").textContent = greek ? "Greek text" : "Latin translation";
-  const img = element<HTMLImageElement>("#source-image");
-  img.src = `${import.meta.env.BASE_URL}sources/heiberg-${String(sourcePage).padStart(3, "0")}.jpg`;
-  img.alt = `${greek ? "Greek" : "Latin"} page ${sourcePage} of Euclidis opera omnia, volume I, 1883. The page includes printed text and critical notes.`;
-  element<HTMLButtonElement>("#source-previous").disabled = sourcePage === 2;
-  element<HTMLButtonElement>("#source-next").disabled = sourcePage === 53;
+  element("#course-source-status").textContent = "Verifying the complete printed page…";
+  element<HTMLImageElement>("#source-image").hidden = true;
+  element<HTMLButtonElement>("#source-previous").disabled = requested === 2;
+  element<HTMLButtonElement>("#source-next").disabled = requested === 57;
   element(".scan-scroll").scrollTop = 0;
   const dialog = element<HTMLDialogElement>("#source-dialog");
   if (!dialog.open) dialog.showModal();
+  let pending = "";
+  try {
+    pending = await studyBlobUrl(
+      `sources/heiberg-${String(requested).padStart(3, "0")}.jpg`,
+      "image/jpeg",
+    );
+    if (revision !== sourceRevision) {
+      URL.revokeObjectURL(pending);
+      return;
+    }
+    // Each request decodes its own image; a later page must not abort an older
+    // live-image decode and accidentally publish the wrong page under its caption.
+    const next = new Image();
+    next.id = "source-image";
+    next.dataset.sourcePage = String(requested);
+    next.dataset.sourceSha256 = studyAssetIdentity(
+      `sources/heiberg-${String(requested).padStart(3, "0")}.jpg`,
+    ).sha256;
+    next.width = 987;
+    next.height = 1550;
+    next.alt = `${greek ? "Greek" : "Latin"} page ${requested} of Euclidis opera omnia, volume I, 1883. Complete printed text and critical notes.`;
+    next.src = pending;
+    await next.decode();
+    if (revision !== sourceRevision) {
+      URL.revokeObjectURL(pending);
+      return;
+    }
+    const previous = sourceBlob;
+    sourceBlob = pending;
+    next.className = element("#source-image").className;
+    element("#source-image").replaceWith(next);
+    if (previous) URL.revokeObjectURL(previous);
+    element("#course-source-status").textContent =
+      "Complete printed page verified against this edition’s SHA-256.";
+  } catch (error) {
+    if (pending) URL.revokeObjectURL(pending);
+    if (revision !== sourceRevision) return;
+    element<HTMLImageElement>("#source-image").hidden = true;
+    element("#course-source-status").textContent =
+      `Source unavailable: ${error instanceof Error ? error.message : "verification failed"}`;
+  }
 }
 
 function showPractice(index: number): void {
@@ -615,7 +661,8 @@ document.addEventListener("input", (event) => {
     if (input.id === "third") state.third = Number(input.value) / 100;
     else if (input.id === "offset") state.offset = Number(input.value) / 100;
     else state.take = Number(input.value) / 100;
-    element(`#${input.id}-output`).textContent = `${input.value}%`;
+    element(`#${input.id}-output`).textContent =
+      `${input.value}${input.id === "offset" && state.proposition === 23 ? "°" : "%"}`;
   }
   if (input.id === "probe") {
     state.probe = Number(input.value);
@@ -749,4 +796,14 @@ document.addEventListener("change", (event) => {
   if (state.proposition === 9 && state.step < 3) state.step = 3;
   if (state.proposition === 12 && state.step < 2) state.step = 2;
   renderStep();
+});
+
+window.addEventListener("pagehide", () => {
+  sourceRevision++;
+  if (sourceBlob) URL.revokeObjectURL(sourceBlob);
+  sourceBlob = "";
+});
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted && element<HTMLDialogElement>("#source-dialog").open)
+    void showSource(sourcePage);
 });

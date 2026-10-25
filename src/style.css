@@ -2390,3 +2390,53 @@ dialog::backdrop {
   line-height: 1.6;
   color: #52677b;
 }
+
+.companion-workshops {
+  margin: 20px 0 0;
+  border-bottom: 1px solid #b7cad8;
+}
+.companion-workshops > summary {
+  cursor: pointer;
+  color: #193d60;
+  font-size: 13px;
+  padding: 12px 0;
+}
+.companion-workshops .reader-tools {
+  margin: 0;
+  padding: 0 0 12px;
+}
+.course-tools {
+  margin-top: 0 !important;
+}
+@media (max-width: 700px) {
+  .companion-workshops {
+    margin-top: 12px;
+  }
+  .companion-workshops > summary {
+    padding: 13px 0;
+  }
+  .companion-workshops .reader-tools {
+    padding-bottom: 15px;
+  }
+  .course-tools {
+    gap: 6px !important;
+    padding: 12px 0 !important;
+  }
+  .course-tools button {
+    margin: 0;
+    padding: 9px 0 !important;
+    text-align: left;
+  }
+}
+
+.scan-status {
+  font:
+    13px / 1.5 system-ui,
+    sans-serif;
+  color: #193d60;
+  min-height: 24px;
+  margin: 10px 0;
+}
+#source-image[hidden] {
+  display: none;
+}
