@@ -224,7 +224,7 @@ for (const engine of [chromium, firefox])
       assert.match(await page.locator("#mr-reading-text").textContent(), /μηδέποτε/);
       await page.locator('input[name="mr-answer"][value="no"]').check();
       await page.locator('#mr-question button[type="submit"]').click();
-      assert.match(await page.locator("#mr-feedback").textContent(), /^Yes/);
+      assert.match(await page.locator("#mr-feedback").textContent(), /^Correct\./);
       const beforeInvalid = page.url();
       await page.locator("#mr-n").fill("1");
       await page.locator("#mr-d").fill("2");

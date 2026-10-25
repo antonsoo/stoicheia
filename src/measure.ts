@@ -267,7 +267,7 @@ el("#mr-question").addEventListener("submit", (event) => {
   event.preventDefault();
   const answer = document.querySelector<HTMLInputElement>('input[name="mr-answer"]:checked');
   el("#mr-feedback").textContent =
-    `${answer?.value === "no" ? "Yes." : "Revisit the hypothesis."} μηδέποτε requires every later turn. The identity (k, k²) = k × (1, k), with 0 < k < 1, supplies that reason for the diagonal. The finite run alone does not.`;
+    `${answer?.value === "no" ? "Correct." : "Revisit the hypothesis."} μηδέποτε requires every later turn. The identity (k, k²) = k × (1, k), with 0 < k < 1, supplies that reason for the diagonal. The finite run alone does not.`;
 });
 function download(name: string, content: string, type: string): void {
   const url = URL.createObjectURL(new Blob([content], { type })),
