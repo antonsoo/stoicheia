@@ -17,3 +17,15 @@ Copyright 2022 The Noto Project Authors (https://github.com/notofonts/latin-gree
 Distributed under the SIL Open Font License, version 1.1. The complete notice is
 included in `public/fonts/OFL.txt`. Downloaded from Google Fonts' Noto Serif
 distribution. The font is bundled locally and is not fetched at runtime.
+
+Book X workshop (`measure.html`):
+
+Euclid, _Euclidis opera omnia_, vol. III, _Elementa, liber X_, edited and
+translated into Latin by J. L. Heiberg, Leipzig: B. G. Teubner, 1886, pp.2–13.
+Public domain. Google digitization of the University of Michigan copy,
+distributed at https://www.wilbourhall.org/pdfs/HeibergEuclidVolume_3.pdf.
+Full pages retain scanned handwriting, the critical apparatus and the Google
+watermark. No textual image has been cropped or retouched. PDF and page
+identities, rendering command and transcription conventions are recorded in
+`public/sources/measure/manifest.json`. New English, grammar notes, diagrams
+and the diagonal specialization are original teaching work under MIT.
