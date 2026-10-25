@@ -1,0 +1,2 @@
+# Preserve the actual CSV download, including its CRLF record endings.
+examples/common-measure.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-10-25
+
+- Added the Book X common-measure room: learner-operated subtraction and turns,
+  exact rational/surd lengths, a stable magnifier beside the original scale,
+  terminal common-unit checks and the eight-count diagonal/fraction comparison.
+- Keep a finite unfinished run separate from the exact recurrence proof needed
+  by X.2. Explain commensurability in square and Book X's different use of
+  rational-number vocabulary with Greek and Heiberg Latin reading notes.
+- Supply twelve complete 1886 pages and ten selected reading units, with
+  source-byte verification, share/history state, exact CSV, SVG and a portable
+  illustrated reading. Extend the complete offline edition to seven rooms.
+- Exercise real browser, saved-file, print and existing-tab upgrade workflows,
+  including held and substituted sources. This room is reviewed locally and
+  has not been pushed or published.
+
 ## 2026-10-24
 
 - Follow the learner's most developed I.2 route in hints, including the C anchor, a circle-first start and either retained equilateral vertex. Hint setup still leaves each operation to the learner.

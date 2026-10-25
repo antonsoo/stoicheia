@@ -1,0 +1,7 @@
+{
+  "cases": 5556,
+  "division_turns": 25730,
+  "length_readings": 77190,
+  "oracle": "Python Fraction and 110-digit Decimal; no application imports",
+  "status": "all exact signs, quotients, remainders, terminal units and decimal conversions agree"
+}

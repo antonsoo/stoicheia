@@ -1,0 +1,11 @@
+{
+  "scope": "Fresh local Git clone, clean install and complete check. No public publication claim.",
+  "source_commit": "8914ab8a94cc82246cc3797226aa7ff0f649b30e",
+  "node": "v24.21.0",
+  "checks": ["npm ci", "npm run check: formatter, typecheck, all unit tests, production build"],
+  "tests_passed": 68,
+  "tests_failed": 0,
+  "clean_tree_after_check": true,
+  "production_files_byte_identical_to_browser_review": 125,
+  "comparison": "All paths and SHA-256 values compared with the browser-reviewed Node 26.7.0 build."
+}

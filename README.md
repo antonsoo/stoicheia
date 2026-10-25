@@ -33,6 +33,68 @@ exercises and the original pages 50–53 complete the sequential course through 
 [Model and review](docs/nested-review.md) · [Saved study](examples/stoicheia-I21-study.html) ·
 [Printed study](examples/stoicheia-I21-study.pdf).
 
+## A measure in common
+
+The new **`measure.html`** room reads **Euclid X.2–3**. It is implemented and
+reviewed locally; it has not been pushed or added to the public workshop yet.
+From this checkout, run `npm ci` and `npm run dev`, then open
+`http://127.0.0.1:4327/stoicheia/measure.html`. The public-clone quickstart below
+will gain this room after publication.
+
+![The common-measure ruler, exact lengths and turn controls](docs/assets/measure-desktop.png)
+
+Lay the shorter length along the longer, then turn to the remainder. Try
+**3/2**: the final half-side measures the original lengths three and two times.
+Then compare **577/408** with the square's diagonal:
+
+| Turn 8                   | Exact fraction 577/408           | Square diagonal                                    |
+| ------------------------ | -------------------------------- | -------------------------------------------------- |
+| Copies that fit          | 2                                | 2                                                  |
+| Remainder                | Exactly zero                     | 577 − 408√2, strictly positive                     |
+| What the run establishes | A greatest common measure, 1/408 | No conclusion of “never” from the finite run alone |
+
+The inputs agree to four decimal places and share eight successive copy
+counts. Their outcomes still differ. An exact self-similarity argument supplies
+the infinite condition the diagonal needs; twenty-four unfinished turns do not.
+The original ruler keeps the shrinking lengths at one scale while the active
+view magnifies them. Positive subpixel lengths are marked without pretending
+the marker's width is the length.
+
+Ten Greek/Latin/English reading units explain a shared measure, the changing
+roles of greater and smaller, and **μηδέποτε / nunquam**, “never”. Twelve complete
+pages from Heiberg's **1886 volume III** retain the first definitions, X.1–3,
+apparatus and scanned annotations. The squares on the side and diagonal share
+an area measure even though the lengths do not. A language note also explains
+why Book X's `rationalis` is not modern rational-number terminology.
+
+Keep a link to a partial turn, an exact-coefficient CSV, a ruler SVG, or one
+script-free illustrated HTML reading containing the proof, all readings, scans,
+font and licenses. The production edition saves the new room and its sources
+offline; the source viewer and export refuse a substituted image.
+
+[Source and model](docs/measure-model.md) · [Review and evidence](docs/measure-review.md) ·
+[Actual saved reading, gzip-compressed](examples/common-measure.html.gz) ·
+[30-page PDF](examples/common-measure.pdf) · [Exact record](examples/common-measure.csv).
+Extract the HTML before opening it. These artifacts preserve a diagonal run at
+turn eight, alongside the distinct terminating fraction comparison.
+
+```sh
+npm run verify:measure
+npm run verify:measure-sources -- --pdf /path/to/HeibergEuclidVolume_3.pdf
+npm run test:measure -- /tmp/stoicheia-measure
+python3 scripts/measure-oracle.py --browser /tmp/stoicheia-measure/review.json
+python3 scripts/measure-print.py /tmp/stoicheia-measure/chromium-1440/reading.pdf
+```
+
+The arithmetic review uses Python's `Fraction` and 110-digit `Decimal` without
+importing the app. It checks 5,556 examples, including 25,730 complete turns and
+77,190 exact length readings. Source reproduction requires Poppler; omit `--pdf`
+to download the identified original. Browser review needs the existing Playwright
+Chromium and Firefox installations. It starts its own production servers and
+checks desktop/phone controls, keyboard focus, native downloads, saved files,
+source/history navigation and origin-disabled offline use. Build `dist/` first
+and keep it unchanged during that review.
+
 ## Make I.2 yourself
 
 The [construction desk](https://antonsoo.github.io/stoicheia/desk.html) turns I.2 into a task you perform.
