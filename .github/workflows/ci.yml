@@ -22,6 +22,7 @@ jobs:
       - run: npm run verify:triangles
       - run: npm run verify:right-angles
       - run: npm run verify:nested
+      - run: npm run verify:measure
       - run: npx playwright install --with-deps chromium firefox
       - name: Verify the development quickstart
         run: |
@@ -50,3 +51,4 @@ jobs:
           npm run test:nested -- http://127.0.0.1:4327/stoicheia/
           npm run test:illustrated -- /tmp/stoicheia-illustrated
           npm run test:desk -- /tmp/stoicheia-desk
+          npm run test:measure -- /tmp/stoicheia-measure

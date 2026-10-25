@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { chromium, firefox } from "playwright";
 import { openLesson } from "./navigation.mjs";
 
@@ -45,8 +45,41 @@ for (const [name, engine] of [
       await page.locator("#diagram-notice").textContent(),
       /given angle inequality no longer holds/,
     );
+    const measurement = [];
+    for (const width of [1440, 375]) {
+      await page.setViewportSize({ width, height: 1000 });
+      await page.goto(new URL("measure.html", url).href);
+      await page.locator("#mr-source-status").filter({ hasText: "Verified p.2" }).waitFor();
+      await page.locator("#mr-fit").click();
+      assert.match(await page.locator("#mr-status").textContent(), /positive remainder/);
+      await page.locator("#mr-turn").click();
+      assert.match(await page.locator("#mr-turn-title").textContent(), /Turn 2/);
+      const appearance = await page.evaluate(() => ({
+        layout: getComputedStyle(document.querySelector(".mr-bench")).display,
+        stroke: getComputedStyle(document.querySelector(".mr-remainder")).stroke,
+        mode: document.querySelector("#mr-offline").textContent,
+        overflow: document.documentElement.scrollWidth > innerWidth + 1,
+      }));
+      assert.equal(appearance.layout, "grid");
+      assert.equal(appearance.stroke, "rgb(40, 101, 84)");
+      assert.match(appearance.mode, /Development preview/);
+      assert.equal(appearance.overflow, false);
+      const event = page.waitForEvent("download");
+      await page.locator("#mr-save").click();
+      const saved = await event,
+        html = await readFile(await saved.path(), "utf8");
+      assert.equal((html.match(/<img src="data:image\/jpeg;base64,/g) ?? []).length, 12);
+      assert.equal(context.serviceWorkers().length, 0);
+      measurement.push({ width, ...appearance, savedReadingBytes: Buffer.byteLength(html) });
+    }
     assert.deepEqual(errors, []);
-    report.configurations.push({ browser: name, version: browser.version(), ...rendered, errors });
+    report.configurations.push({
+      browser: name,
+      version: browser.version(),
+      ...rendered,
+      measurement,
+      errors,
+    });
   } finally {
     await browser.close();
   }

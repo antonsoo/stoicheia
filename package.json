@@ -54,7 +54,11 @@
     "verify:mesolabe": "node --import tsx scripts/mesolabe-cases.ts | python3 scripts/mesolabe-oracle.py",
     "test:mesolabe": "node scripts/mesolabe-browser.mjs",
     "test:desk": "node scripts/desk-browser.mjs",
-    "test:desk-upgrade": "node scripts/desk-upgrade.mjs"
+    "test:desk-upgrade": "node scripts/desk-upgrade.mjs",
+    "verify:measure": "node --import tsx scripts/measure-cases.ts | python3 scripts/measure-oracle.py",
+    "verify:measure-sources": "python3 scripts/measure-sources.py",
+    "test:measure": "node scripts/measure-browser.mjs",
+    "test:measure-upgrade": "node scripts/measure-upgrade.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",
