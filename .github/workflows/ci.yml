@@ -21,6 +21,7 @@ jobs:
       - run: npm run verify:oracle
       - run: npm run verify:triangles
       - run: npm run verify:right-angles
+      - run: npm run verify:copying
       - run: npm run verify:nested
       - run: npm run verify:measure
       - run: npx playwright install --with-deps chromium firefox
@@ -52,3 +53,5 @@ jobs:
           npm run test:illustrated -- /tmp/stoicheia-illustrated
           npm run test:desk -- /tmp/stoicheia-desk
           npm run test:measure -- /tmp/stoicheia-measure
+          npm run test:copying -- /tmp/stoicheia-copying
+          node scripts/copying-integrity.mjs /tmp/stoicheia-copying-integrity.json

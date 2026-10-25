@@ -73,6 +73,8 @@ const counts = {
   19: 6,
   20: 9,
   21: 10,
+  22: 8,
+  23: 7,
 };
 const artifacts = await mkdtemp(join(tmpdir(), "stoicheia-export-"));
 
@@ -202,7 +204,7 @@ try {
         assert.equal(await page.evaluate(() => document.fonts.check('20px "Noto Serif"')), true);
 
         for (const proposition of [
-          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
         ]) {
           await openLesson(page, proposition);
           for (let step = 0; step < counts[proposition]; step++) {
@@ -243,6 +245,8 @@ try {
             19: 1,
             20: 2,
             21: 1,
+            22: 0,
+            23: 0,
           }[proposition];
           await question.nth((correctAnswer + 1) % 3).check();
           assert.ok(await page.locator("#question-feedback").innerText());
@@ -266,16 +270,16 @@ try {
         await page.locator("#open-edition").click();
         await page.locator("#source-previous").click();
         await page.locator("#source-previous").click();
-        for (let printedPage = 2; printedPage <= 53; printedPage++) {
+        for (let printedPage = 2; printedPage <= 57; printedPage++) {
           await page.waitForFunction(() => {
             const image = document.querySelector("#source-image");
-            return image.complete && image.naturalWidth > 0;
+            return !image.hidden && image.complete && image.naturalWidth > 0;
           });
           assert.equal(
             await page.locator("#source-title").innerText(),
             `Printed page ${printedPage}`,
           );
-          if (printedPage < 53) await page.locator("#source-next").click();
+          if (printedPage < 57) await page.locator("#source-next").click();
         }
         await page.locator("#source-zoom").click();
         assert.equal(await page.locator("#source-zoom").getAttribute("aria-pressed"), "true");
@@ -501,7 +505,7 @@ try {
         await page.locator("#current-passage [data-source]").first().click();
         await page.waitForFunction(() => {
           const image = document.querySelector("#source-image");
-          return image.complete && image.naturalWidth > 0;
+          return !image.hidden && image.complete && image.naturalWidth > 0;
         });
         await page.keyboard.press("Escape");
         await openLesson(page, 16);
@@ -509,10 +513,11 @@ try {
         await page.locator('#current-passage [data-source="45"]').click();
         await page.waitForFunction(
           () =>
+            !document.querySelector("#source-image").hidden &&
             document.querySelector("#source-image").complete &&
             document.querySelector("#source-image").naturalWidth > 0,
         );
-        assert.match(await page.locator("#source-image").getAttribute("src"), /heiberg-045/);
+        assert.equal(await page.locator("#source-image").getAttribute("data-source-page"), "45");
         await page.keyboard.press("Escape");
         const [offlineStudy] = await Promise.all([
           page.waitForEvent("download"),
@@ -559,7 +564,7 @@ try {
         await page.locator('#current-passage [data-source="22"]').click();
         await page.waitForFunction(() => {
           const img = document.querySelector("#source-image");
-          return img.complete && img.naturalWidth > 0;
+          return !img.hidden && img.complete && img.naturalWidth > 0;
         });
         await page.keyboard.press("Escape");
         if (name === "chromium") {

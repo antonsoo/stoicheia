@@ -58,7 +58,9 @@
     "verify:measure": "node --import tsx scripts/measure-cases.ts | python3 scripts/measure-oracle.py",
     "verify:measure-sources": "python3 scripts/measure-sources.py",
     "test:measure": "node scripts/measure-browser.mjs",
-    "test:measure-upgrade": "node scripts/measure-upgrade.mjs"
+    "test:measure-upgrade": "node scripts/measure-upgrade.mjs",
+    "verify:copying": "node --import tsx scripts/copying-cases.ts | python3 scripts/copying-oracle.py",
+    "test:copying": "node scripts/copying-browser.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

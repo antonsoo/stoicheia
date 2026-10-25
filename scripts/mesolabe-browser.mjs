@@ -129,6 +129,8 @@ for (const [browserName, browserType] of [
       });
       try {
         await page.goto(`${base}index.html`);
+        if ((await page.locator("#companion-workshops").getAttribute("open")) === null)
+          await page.locator("#companion-workshops summary").click();
         await page.getByRole("link", { name: /Twice the stone/ }).click();
         await page.locator("#ml-machine svg").waitFor();
         await page

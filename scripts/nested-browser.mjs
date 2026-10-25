@@ -97,6 +97,20 @@ for (const [name, engine] of [
         acceptDownloads: true,
         reducedMotion: "reduce",
       });
+      await context.addInitScript(() => {
+        window.nestedBlobs = new Map();
+        const make = URL.createObjectURL,
+          revoke = URL.revokeObjectURL;
+        URL.createObjectURL = (blob) => {
+          const url = make.call(URL, blob);
+          window.nestedBlobs.set(url, blob);
+          return url;
+        };
+        URL.revokeObjectURL = (url) => {
+          window.nestedBlobs.delete(url);
+          return revoke.call(URL, url);
+        };
+      });
       context.setDefaultTimeout(20000);
       try {
         const page = await context.newPage(),
@@ -194,15 +208,20 @@ for (const [name, engine] of [
           await page.locator(`#current-passage [data-source="${n}"]`).click();
           await page.waitForFunction(() => {
             const im = document.querySelector("#source-image");
-            return im.complete && im.naturalWidth > 0 && im.currentSrc === im.src;
+            return !im.hidden && im.complete && im.naturalWidth > 0 && im.currentSrc === im.src;
           });
           assert.equal(await page.locator("#source-title").innerText(), `Printed page ${n}`);
-          const url = await page.locator("#source-image").getAttribute("src"),
-            bytes = await (await page.request.get(new URL(url, base).href)).body();
+          const bytes = Buffer.from(
+            await page
+              .locator("#source-image")
+              .evaluate(async (image) => [
+                ...new Uint8Array(await window.nestedBlobs.get(image.src).arrayBuffer()),
+              ]),
+          );
           const file = `sources/heiberg-${String(n).padStart(3, "0")}.jpg`;
           assert.equal(hash(bytes), hash(await readFile(`public/${file}`)));
           sourceHashes.push({ page: n, sha256: hash(bytes) });
-          if (n === 53) assert.equal(await page.locator("#source-next").isDisabled(), true);
+          if (n === 53) assert.equal(await page.locator("#source-next").isDisabled(), false);
           await page.keyboard.press("Escape");
         }
         await audit(page);
