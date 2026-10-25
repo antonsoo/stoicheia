@@ -37,3 +37,5 @@ node scripts/measure-browser.mjs /tmp/measure-public https://antonsoo.github.io/
 
 The browser script's optional second argument selects the public base. Its
 local default still stops the local server for its stronger offline check.
+
+The later [quiz feedback correction](measure-feedback-review.md) records its separate source, static branch and 125-file public review.
