@@ -1,0 +1,79 @@
+{
+  "edition": "Archimedis opera omnia cum commentariis Eutocii, vol. I, J. L. Heiberg, Leipzig: Teubner, 1880",
+  "url": "https://www.wilbourhall.org/pdfs/Archimedes_VOL_I.pdf",
+  "pdfBytes": 18682803,
+  "pdfSha256": "f9fee2511fea467953a3489afcfdbc2213b732b810c9932f0a522035c64d92a5",
+  "transformation": "pdftoppm -scale-to 1800 -jpeg -jpegopt quality=85 -singlefile; complete page, no cropping or retouching",
+  "pages": [
+    {
+      "page": 262,
+      "pdfPage": 281,
+      "file": "circle/heiberg-262.jpg",
+      "bytes": 334577,
+      "sha256": "bd5ae5c4e98a7d1d20386645b75a3bc4b6e076c702127c0404294b8e464019e2"
+    },
+    {
+      "page": 263,
+      "pdfPage": 282,
+      "file": "circle/heiberg-263.jpg",
+      "bytes": 347373,
+      "sha256": "b191e95add43c564c929de71f18d55e3474613733219111d7e0981170050436c"
+    },
+    {
+      "page": 264,
+      "pdfPage": 283,
+      "file": "circle/heiberg-264.jpg",
+      "bytes": 320537,
+      "sha256": "b34fd52b53c986e2bfc59f58ec180e76f0096cddab93eff0ea9a071dfcf1f7d3"
+    },
+    {
+      "page": 265,
+      "pdfPage": 284,
+      "file": "circle/heiberg-265.jpg",
+      "bytes": 371666,
+      "sha256": "7f2b5ea2d259d791890d8e27e5338e6d3e9042eaa28ca911bdf346ecb2b6ded2"
+    },
+    {
+      "page": 266,
+      "pdfPage": 285,
+      "file": "circle/heiberg-266.jpg",
+      "bytes": 433309,
+      "sha256": "bf8449c836b88aad5f0dd6638b8a0b903cfe900ed3015364e1ee2c9caf65a210"
+    },
+    {
+      "page": 267,
+      "pdfPage": 286,
+      "file": "circle/heiberg-267.jpg",
+      "bytes": 415102,
+      "sha256": "34ae521fd660260fc960dd913fa749aa64c0aa6344307bfcd1344af3b388eb79"
+    },
+    {
+      "page": 268,
+      "pdfPage": 287,
+      "file": "circle/heiberg-268.jpg",
+      "bytes": 359255,
+      "sha256": "fc2e314d22c0dfefaa93e8094b4c1a836e31481d0aba9cb89edcab3bac9f5318"
+    },
+    {
+      "page": 269,
+      "pdfPage": 288,
+      "file": "circle/heiberg-269.jpg",
+      "bytes": 456248,
+      "sha256": "76918a12a4b34ceda4f986d91b7f0f78f9d49e290d376bfc4eb5b8c8b3a6de0f"
+    },
+    {
+      "page": 270,
+      "pdfPage": 289,
+      "file": "circle/heiberg-270.jpg",
+      "bytes": 395769,
+      "sha256": "b149f2f35b8f830eb0b2f92aef7ca9e9d1b7d565cc50cbc77ab047fe0464d347"
+    },
+    {
+      "page": 271,
+      "pdfPage": 290,
+      "file": "circle/heiberg-271.jpg",
+      "bytes": 330209,
+      "sha256": "b5842e3b855a0598379edf37c3f2d844387d97b7d2b6b96e3fe5324f1cf42ace"
+    }
+  ]
+}
