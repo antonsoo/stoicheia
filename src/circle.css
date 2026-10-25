@@ -1,0 +1,688 @@
+.circle-page {
+  --ci-inner: #146d72;
+  --ci-outer: #694780;
+}
+.circle-page main {
+  width: min(1240px, calc(100% - 80px));
+  margin: auto;
+  padding: 0;
+}
+.ci-header,
+.ci-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 22px 40px;
+  border-bottom: 1px solid var(--rule, #b7c8d6);
+}
+.ci-header nav,
+.ci-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+.ci-brand {
+  font-weight: 650;
+  text-decoration: none;
+}
+.ci-brand span {
+  margin-left: 14px;
+  font-size: 0.72rem;
+  letter-spacing: 0.13em;
+}
+.ci-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 50px;
+  padding: 56px 0 40px;
+}
+.circle-page h1 {
+  font:
+    400 clamp(3rem, 5.8vw, 5.4rem) / 1.08 "Noto Serif",
+    Georgia,
+    serif;
+  letter-spacing: -0.055em;
+}
+.circle-page h2 {
+  font:
+    400 clamp(1.7rem, 3vw, 2.7rem) / 1.25 "Noto Serif",
+    Georgia,
+    serif;
+  letter-spacing: -0.025em;
+}
+.circle-page h3 {
+  font-size: 1.2rem;
+}
+.ci-kicker {
+  font:
+    650 0.73rem / 1.5 system-ui,
+    sans-serif;
+  letter-spacing: 0.12em;
+  margin-bottom: 16px;
+}
+.ci-intro > div > p:not(.ci-kicker) {
+  max-width: 610px;
+}
+.ci-fine {
+  font-size: 0.86rem;
+  color: #52677b;
+}
+.ci-bench {
+  border: 1px solid #b7c8d6;
+  background: #fbfcfe;
+}
+.ci-bench-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 26px;
+  border-bottom: 1px solid #b7c8d6;
+}
+.ci-bench-head h2 {
+  font:
+    500 1.15rem / 1.4 system-ui,
+    sans-serif;
+  margin: 0;
+  letter-spacing: 0;
+}
+.ci-side-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.circle-page button,
+.ci-file-label {
+  border: 1px solid #b7c8d6;
+  padding: 10px 14px;
+  background: #fbfcfe;
+  line-height: 1.4;
+}
+.circle-page button:hover:not(:disabled),
+.ci-file-label:hover {
+  border-color: #694780;
+}
+.circle-page button[aria-pressed="true"],
+.circle-page button.ci-primary {
+  background: #193d60;
+  color: #fbfcfe;
+  border-color: #193d60;
+}
+.ci-bench-body {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+}
+.ci-plate {
+  min-width: 0;
+  border-right: 1px solid #b7c8d6;
+  padding: 18px 20px 0;
+}
+.ci-plate svg,
+.ci-interval svg,
+.ci-proof-grid svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.ci-legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: 0.85rem;
+  margin: 0 0 12px;
+}
+.ci-legend span::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 3px;
+  margin-right: 6px;
+  vertical-align: middle;
+  background: currentColor;
+}
+.ci-inner {
+  color: #146d72;
+}
+.ci-outer {
+  color: #694780;
+}
+.ci-control-panel {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ci-control-panel h3 {
+  font:
+    400 1.8rem / 1.3 "Noto Serif",
+    Georgia,
+    serif;
+}
+.circle-page fieldset {
+  border: 0;
+  padding: 0;
+  margin: 18px 0;
+  min-width: 0;
+}
+.circle-page legend,
+.ci-control-title {
+  font-weight: 650;
+  margin-bottom: 10px;
+}
+.circle-page fieldset label {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 10px 0;
+}
+.circle-page input,
+.circle-page select {
+  font: inherit;
+  color: #193d60;
+  max-width: 100%;
+}
+.circle-page select,
+.circle-page input[type="text"],
+.circle-page input[type="url"] {
+  width: 100%;
+  border: 1px solid #b7c8d6;
+  border-radius: 0;
+  background: #fbfcfe;
+  padding: 11px;
+}
+.circle-page label {
+  line-height: 1.5;
+}
+.circle-page select:focus-visible,
+.circle-page input:focus-visible {
+  outline: 3px solid #694780;
+  outline-offset: 3px;
+}
+.ci-bounds {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  padding: 24px;
+  border-top: 1px solid #b7c8d6;
+}
+.ci-bounds > div:not(.ci-relation) {
+  min-width: 0;
+  display: grid;
+  gap: 6px;
+  text-align: center;
+}
+.ci-bounds span,
+.ci-bounds small {
+  font-size: 0.8rem;
+}
+.ci-bounds strong {
+  font:
+    500 clamp(1rem, 2.1vw, 1.65rem) / 1.4 ui-monospace,
+    monospace;
+  overflow-wrap: anywhere;
+}
+.ci-relation {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  white-space: nowrap;
+}
+.ci-relation b {
+  font:
+    400 1.6rem "Noto Serif",
+    serif;
+}
+.ci-relation span {
+  font-size: 1.8rem;
+}
+.ci-status {
+  margin: 0;
+  padding: 18px 26px;
+  border-top: 1px solid #b7c8d6;
+  background: #e8eff4;
+  line-height: 1.6;
+}
+.ci-section {
+  padding: 48px 0;
+  border-bottom: 1px solid #b7c8d6;
+}
+.ci-section-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.ci-section-heading > p {
+  margin-top: 10px;
+}
+.ci-scroll {
+  overflow-x: auto;
+  margin: 24px 0;
+  border: 1px solid #b7c8d6;
+}
+.ci-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+.ci-table caption {
+  text-align: left;
+  padding: 14px;
+  background: #fbfcfe;
+  line-height: 1.6;
+}
+.ci-table th,
+.ci-table td {
+  padding: 13px 12px;
+  text-align: left;
+  border-bottom: 1px solid #b7c8d6;
+  overflow-wrap: anywhere;
+}
+.ci-table td {
+  font-variant-numeric: tabular-nums;
+}
+.ci-table th:first-child {
+  white-space: nowrap;
+}
+.ci-table td small {
+  display: block;
+  color: #52677b;
+  font:
+    0.75rem / 1.6 system-ui,
+    sans-serif;
+}
+.ci-table tr[aria-current="step"] {
+  background: #fbfcfe;
+  box-shadow: inset 4px 0 #193d60;
+}
+.ci-table .ci-altered {
+  background: #ede6f2;
+}
+.ci-audit-tools {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+.ci-edit-form {
+  background: #fbfcfe;
+  border: 1px solid #b7c8d6;
+  padding: 24px;
+  align-self: start;
+}
+.ci-edit-form label {
+  display: block;
+  margin-bottom: 15px;
+}
+.ci-edit-form input,
+.ci-edit-form select {
+  margin-top: 7px;
+}
+.ci-edit-form p[role="status"] {
+  margin-bottom: 0;
+}
+.ci-equation {
+  font:
+    500 1.15rem / 1.7 ui-monospace,
+    monospace;
+  overflow-wrap: anywhere;
+}
+.ci-verdict {
+  padding: 20px 0;
+}
+.ci-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 18px 0;
+}
+.ci-section p,
+.ci-reason-list {
+  max-width: 950px;
+}
+.ci-proof-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+.ci-proof-grid > div:first-child p {
+  font-size: 0.85rem;
+  color: #52677b;
+}
+.ci-reason-list {
+  padding-left: 24px;
+}
+.ci-reason-list li {
+  padding: 8px 0 8px 10px;
+  line-height: 1.75;
+}
+.ci-reading {
+  margin-top: 26px;
+}
+.ci-reading-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.ci-reading-columns > div {
+  padding: 24px;
+  border-left: 3px solid #b7c8d6;
+  background: #fbfcfe;
+}
+.ci-reading [lang="grc"],
+.ci-reading [lang="la"],
+.ci-full-passage > p[lang] {
+  font:
+    400 1.2rem / 1.9 "Noto Serif",
+    Georgia,
+    serif;
+}
+.ci-reading-columns .ci-kicker {
+  font:
+    650 0.7rem / 1.5 system-ui,
+    sans-serif;
+}
+.ci-reading > p {
+  margin-top: 24px;
+}
+.ci-words {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin: 26px 0;
+}
+.ci-words div {
+  border-top: 1px solid #b7c8d6;
+  padding-top: 14px;
+}
+.ci-words dt {
+  font-family: "Noto Serif", Georgia, serif;
+}
+.ci-words dd {
+  margin: 8px 0 0;
+  line-height: 1.65;
+}
+.ci-source-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 36px;
+}
+.ci-source-grid figure {
+  margin: 0;
+  min-width: 0;
+}
+.ci-source-scroll {
+  overflow: auto;
+  height: 620px;
+  background: #d9e3eb;
+  border: 1px solid #b7c8d6;
+}
+.ci-source-scroll img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+.ci-source-scroll.ci-enlarged img {
+  width: 1400px;
+}
+.ci-source-grid figcaption {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+.ci-source-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin: 16px 0;
+}
+.ci-notice:empty {
+  display: none;
+}
+.ci-notice {
+  padding: 16px;
+  border: 1px solid #694780;
+}
+.ci-files {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.ci-file-label {
+  display: inline-block;
+  cursor: pointer;
+}
+.ci-file-label input {
+  display: block;
+  margin-top: 8px;
+  max-width: 100%;
+  font-size: 0.8rem;
+}
+.ci-actions {
+  align-items: center;
+  gap: 10px;
+}
+.ci-share-label {
+  display: block;
+  margin-top: 18px;
+}
+.ci-footer {
+  flex-wrap: wrap;
+  border-bottom: 0;
+  margin-top: 20px;
+  font-size: 0.85rem;
+}
+.ci-full-passage {
+  padding: 24px 0;
+  border-bottom: 1px solid #b7c8d6;
+  break-inside: avoid;
+}
+.ci-full-passage dd {
+  margin: 6px 0 14px;
+}
+.ci-source-sheet {
+  margin: 36px 0;
+  break-before: page;
+}
+.ci-source-sheet img {
+  width: 100%;
+  height: auto;
+}
+.ci-source-sheet figcaption {
+  font-size: 0.78rem;
+  overflow-wrap: anywhere;
+}
+.ci-saved pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 0.8rem;
+}
+.ci-saved-plate {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.ci-saved-plate svg {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 700px) {
+  .circle-page main {
+    width: calc(100% - 32px);
+  }
+  .ci-header,
+  .ci-footer {
+    padding: 18px 16px;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .ci-header nav {
+    gap: 16px;
+    font-size: 0.85rem;
+  }
+  .ci-brand span {
+    margin-left: 8px;
+  }
+  .ci-intro {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 38px 0 26px;
+  }
+  .circle-page h1 {
+    font-size: 3.7rem;
+  }
+  .ci-bench-head {
+    display: block;
+    padding: 16px;
+  }
+  .ci-bench-head h2 {
+    margin-bottom: 14px;
+  }
+  .ci-side-steps {
+    gap: 5px;
+  }
+  .ci-side-steps button {
+    min-width: 46px;
+    padding: 9px;
+  }
+  .ci-bench-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .ci-control-panel {
+    padding: 20px;
+    border-bottom: 0;
+  }
+  .ci-control-panel h3 {
+    font-size: 1.55rem;
+  }
+  .ci-control-panel fieldset {
+    margin-bottom: 0;
+  }
+  .ci-control-panel > p {
+    margin-bottom: 6px;
+  }
+  .ci-plate {
+    border-right: 0;
+    border-bottom: 1px solid #b7c8d6;
+    padding: 8px 8px 0;
+  }
+  .ci-bounds {
+    gap: 12px;
+    padding: 22px 12px;
+    align-items: center;
+  }
+  .ci-bounds span,
+  .ci-bounds small {
+    font-size: 0.7rem;
+  }
+  .ci-bounds strong {
+    font-size: 1rem;
+  }
+  .ci-relation {
+    flex-direction: column;
+    gap: 0;
+  }
+  .ci-relation b {
+    font-size: 1.1rem;
+  }
+  .ci-relation span {
+    font-size: 1.3rem;
+  }
+  .ci-status {
+    padding: 16px;
+    font-size: 0.9rem;
+  }
+  .ci-section {
+    padding: 34px 0;
+  }
+  .ci-section-heading,
+  .ci-audit-tools,
+  .ci-proof-grid,
+  .ci-reading-columns,
+  .ci-source-grid,
+  .ci-files,
+  .ci-saved-plate {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .ci-table {
+    min-width: 720px;
+  }
+  .ci-words {
+    grid-template-columns: 1fr;
+  }
+  .ci-reading-columns > div {
+    padding: 18px;
+  }
+  .ci-edit-form {
+    padding: 20px;
+  }
+  .ci-source-scroll {
+    height: 470px;
+  }
+}
+@media print {
+  @page {
+    size: A4;
+    margin: 15mm;
+  }
+  .circle-page {
+    background: white;
+    color: #193d60;
+  }
+  .circle-page main {
+    width: 100%;
+  }
+  .ci-intro {
+    padding: 8px 0 20px;
+  }
+  .circle-page h1 {
+    font-size: 36pt;
+  }
+  .circle-page h2 {
+    font-size: 22pt;
+  }
+  .ci-section {
+    padding: 22px 0;
+  }
+  .ci-table {
+    min-width: 0;
+    font-size: 8pt;
+    table-layout: fixed;
+  }
+  .ci-table th,
+  .ci-table td {
+    padding: 7px 4px;
+  }
+  .ci-bounds {
+    break-inside: avoid;
+  }
+  .ci-source-sheet {
+    break-before: page;
+    margin: 0;
+  }
+  .ci-source-sheet img {
+    height: 235mm;
+    width: 100%;
+    object-fit: contain;
+  }
+  .ci-source-sheet figcaption {
+    font-size: 7pt;
+    line-height: 1.4;
+  }
+  .ci-full-passage {
+    break-inside: auto;
+  }
+  .ci-saved-plate {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ci-saved pre {
+    font-size: 8pt;
+  }
+}

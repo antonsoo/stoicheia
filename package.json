@@ -60,7 +60,11 @@
     "test:measure": "node scripts/measure-browser.mjs",
     "test:measure-upgrade": "node scripts/measure-upgrade.mjs",
     "verify:copying": "node --import tsx scripts/copying-cases.ts | python3 scripts/copying-oracle.py",
-    "test:copying": "node scripts/copying-browser.mjs"
+    "test:copying": "node scripts/copying-browser.mjs",
+    "verify:circle-bounds": "node --import tsx scripts/circle-cases.ts | python3 scripts/circle-bounds-oracle.py",
+    "verify:circle-sources": "python3 scripts/circle-sources.py",
+    "test:circle": "node scripts/circle-browser.mjs",
+    "verify:circle-print": "python3 scripts/circle-print.py"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

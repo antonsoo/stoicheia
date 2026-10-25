@@ -29,3 +29,20 @@ watermark. No textual image has been cropped or retouched. PDF and page
 identities, rendering command and transcription conventions are recorded in
 `public/sources/measure/manifest.json`. New English, grammar notes, diagrams
 and the diagonal specialization are original teaching work under MIT.
+
+Archimedes circle workshop (`circle.html`):
+
+Archimedes, _Archimedis opera omnia cum commentariis Eutocii_, vol. I,
+ed. and Latin translation J. L. Heiberg, Leipzig: B. G. Teubner, **1880**,
+pp.262–271. Ancient Greek, Heiberg's translation and printed page images:
+public domain. Digitized volume distributed at
+https://www.wilbourhall.org/pdfs/Archimedes_VOL_I.pdf.
+
+Ten whole-page JPEG reductions retain diagrams, apparatus and editorial notes;
+no image is cropped or retouched. `public/sources/circle/manifest.json`
+identifies the original PDF, one-based page mapping and every retained image.
+The new English, word notes, proof exposition, exact inequality audit, code and
+drawings are original teaching work under MIT. Printed numerical values are
+not silently converted into exact equalities; transcription choices and the
+retained Latin/Greek discrepancy are explained in `docs/circle-model.md`.
+The existing locally bundled Noto Serif and complete OFL notice are reused.

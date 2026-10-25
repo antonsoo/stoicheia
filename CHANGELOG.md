@@ -2,6 +2,16 @@
 
 ## 2026-10-25
 
+- Add the local Archimedes circle workshop: six to ninety-six sides, exact
+  directed rounding, one editable approximation and a ledger that distinguishes
+  local checks, accumulated length estimates and current perimeter bounds.
+- Read eight Greek/Latin/English selections with sixteen word notes and ten
+  complete 1880 pages. Retain the printed Latin/Greek discrepancy and explain
+  approximation equalities instead of silently rewriting the source.
+- Save both trial paths, the original comparison, proof and complete reading
+  offline, with native CSV/JSON/SVG and a standalone illustrated HTML. Add
+  the eighth local room to the complete edition and the course navigation.
+
 - Extend the sequential Greek/Latin/English course through I.22 and I.23:
   triangle construction, all three strict inequalities and the side-based
   construction of an equal angle on a freely tilted baseline. Retain arbitrary
