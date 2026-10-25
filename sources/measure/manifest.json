@@ -1,0 +1,112 @@
+{
+  "edition": {
+    "title": "Euclidis opera omnia",
+    "volume": "III: Elementa, liber X",
+    "editor_and_latin_translator": "J. L. Heiberg",
+    "publisher": "B. G. Teubner, Leipzig",
+    "year": 1886,
+    "rights": "Public domain. Google scan of the University of Michigan copy; markings and watermark retained."
+  },
+  "download": {
+    "url": "https://www.wilbourhall.org/pdfs/HeibergEuclidVolume_3.pdf",
+    "bytes": 19309261,
+    "sha256": "03b6b42845be9804415a4bb2152c87611d09a9e244e4495e47485b6cc0345be8"
+  },
+  "rendering": "pdftoppm -f 15 -l 26 -scale-to 1700 -jpeg -jpegopt quality=88 INPUT.pdf full; complete pages, no crop or retouch",
+  "transcription": {
+    "scope": "Definition I.1; selected clauses of definition I.2 and X.2; statement of X.3. Ten reading units, not a complete transcription of all supplied pages.",
+    "normalizations": [
+      "Line wrapping and end-of-line hyphenation removed.",
+      "Greek geometric labels use consistent Greek Unicode, including those resembling Latin.",
+      "Editorial brackets around [ἐκκειμένων] retained.",
+      "Heiberg Latin u/v spelling retained; apparatus and inline reference markers omitted from reading units, retained in scans."
+    ],
+    "boundaries": "The square-diagonal specialization, 577/408 comparison, symbolic arithmetic and self-similarity proof are modern teaching examples, not examples printed in X.2. English and language notes are new."
+  },
+  "pages": [
+    {
+      "printed_page": 2,
+      "pdf_page": 15,
+      "file": "measure/heiberg-002.jpg",
+      "bytes": 325261,
+      "sha256": "8f82773e7065d2487ba8817850d3b154d41a2948e71b1c0a42b270e529e6a748"
+    },
+    {
+      "printed_page": 3,
+      "pdf_page": 16,
+      "file": "measure/heiberg-003.jpg",
+      "bytes": 326755,
+      "sha256": "e247ede61d8b197b4fc4e056ec0985779363172dc287cebc11de334b948017ea"
+    },
+    {
+      "printed_page": 4,
+      "pdf_page": 17,
+      "file": "measure/heiberg-004.jpg",
+      "bytes": 359959,
+      "sha256": "282c9de2c1c827757ae222ae696ba81dc9db955c91cdc91fb459320c46b39ef5"
+    },
+    {
+      "printed_page": 5,
+      "pdf_page": 18,
+      "file": "measure/heiberg-005.jpg",
+      "bytes": 354361,
+      "sha256": "f3aa7ac2b3a0f879ef6b087628aa4018b9057ad9719e957daad748656288a476"
+    },
+    {
+      "printed_page": 6,
+      "pdf_page": 19,
+      "file": "measure/heiberg-006.jpg",
+      "bytes": 361536,
+      "sha256": "406adb0ce2852b27710a08259c27edfd04ae10a857bc95bcd7ae8a03118a29e7"
+    },
+    {
+      "printed_page": 7,
+      "pdf_page": 20,
+      "file": "measure/heiberg-007.jpg",
+      "bytes": 327468,
+      "sha256": "c58925fd043dafd255385457669fb5c1c454e3bccf0fa099e815ede48ca4b2ac"
+    },
+    {
+      "printed_page": 8,
+      "pdf_page": 21,
+      "file": "measure/heiberg-008.jpg",
+      "bytes": 351738,
+      "sha256": "ec084792ca6512a19c6cffc2258d0d6f58a94bfa14ca87bc8cd156b783a1a8de"
+    },
+    {
+      "printed_page": 9,
+      "pdf_page": 22,
+      "file": "measure/heiberg-009.jpg",
+      "bytes": 328890,
+      "sha256": "22ba6751d61521c01d55de15769f275b75cdde836e57c70d2df98bae40309b68"
+    },
+    {
+      "printed_page": 10,
+      "pdf_page": 23,
+      "file": "measure/heiberg-010.jpg",
+      "bytes": 387745,
+      "sha256": "bca1144225bd3a0f65b7dd56b6c658ef5168a1c91d320d2820aaed3df0395338"
+    },
+    {
+      "printed_page": 11,
+      "pdf_page": 24,
+      "file": "measure/heiberg-011.jpg",
+      "bytes": 353468,
+      "sha256": "57ff0b0093a4e0191d5d1001ede64ec73e2ee48606834e937d24d963459b4fe4"
+    },
+    {
+      "printed_page": 12,
+      "pdf_page": 25,
+      "file": "measure/heiberg-012.jpg",
+      "bytes": 352885,
+      "sha256": "a90aa3b165c012f4f2b24a21f5e203bceb4d6f29dfbe229813e7e7386b4bbdb5"
+    },
+    {
+      "printed_page": 13,
+      "pdf_page": 26,
+      "file": "measure/heiberg-013.jpg",
+      "bytes": 326833,
+      "sha256": "3f11c8e68af357cb630da5788b93776ba050cc0f89785531087c5e455db770e9"
+    }
+  ]
+}
