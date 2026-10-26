@@ -282,6 +282,14 @@ for (const [engine, type] of [
           .evaluate((svg) => ({ x: svg.getScreenCTM().a, y: svg.getScreenCTM().d }));
         assert(Math.abs(scales.x - scales.y) < 1e-12);
         config.axisScales = scales;
+        await page.locator("#qx-time").focus();
+        await page.keyboard.press("Home");
+        assert.equal(await page.locator("#qx-time").inputValue(), "0");
+        await page.keyboard.press("ArrowRight");
+        assert.equal(await page.locator("#qx-time").inputValue(), "1");
+        await page.keyboard.press("End");
+        assert.equal(await page.locator("#qx-time").inputValue(), "1000000");
+        assert.match(await page.locator("#qx-verdict").textContent(), /lines coincide/);
         await page.locator('[data-qx-time="999999"]').focus();
         await page.keyboard.press("Enter");
         assert.equal(await page.locator(".qx-z").count(), 1);
@@ -386,28 +394,6 @@ for (const [engine, type] of [
         await page.locator('input[name="qx-answer"][value="limit"]').check();
         await page.locator("#qx-question button").click();
         assert.match(await page.locator("#qx-feedback").textContent(), /^Correct/);
-        const svgFile = path.join(folder, "plate.svg");
-        const svg = await save(page, "#qx-svg", svgFile);
-        assert(svg.toString().includes("MIT License"));
-        const svgContext = await browser.newContext({ javaScriptEnabled: false });
-        try {
-          const svgPage = await svgContext.newPage();
-          await svgPage.goto(pathToFileURL(svgFile).href);
-          await svgPage.bringToFront();
-          assert.equal(await svgPage.locator("parsererror").count(), 0);
-          assert.equal(await svgPage.locator("svg").count(), 1);
-          await svgPage.waitForFunction(
-            () =>
-              [...document.fonts].some(
-                (f) => f.family.includes("Noto Serif") && f.status === "loaded",
-              ),
-            undefined,
-            { polling: 100 },
-          );
-          await svgPage.screenshot({ path: path.join(folder, "saved-svg.png") });
-        } finally {
-          await svgContext.close();
-        }
         const axe = await new AxeBuilder({ page })
           .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
           .analyze();
@@ -444,6 +430,31 @@ for (const [engine, type] of [
         await ready(page);
         await source(page, 259);
         await csv("end");
+        const svgFile = path.join(folder, "plate.svg");
+        const svg = await save(page, "#qx-svg", svgFile);
+        assert(svg.toString().includes("MIT License"));
+        const svgContext = await browser.newContext({ javaScriptEnabled: false });
+        try {
+          const svgPage = await svgContext.newPage();
+          await svgPage.goto(pathToFileURL(svgFile).href);
+          await svgPage.bringToFront();
+          assert.equal(await svgPage.locator("parsererror").count(), 0);
+          assert.equal(await svgPage.locator("svg").count(), 1);
+          const metadata = await svgPage.locator("metadata").textContent();
+          assert(metadata.includes(await readFile("LICENSE", "utf8")));
+          assert(metadata.includes(await readFile("public/fonts/OFL.txt", "utf8")));
+          await svgPage.waitForFunction(
+            () =>
+              [...document.fonts].some(
+                (f) => f.family.includes("Noto Serif") && f.status === "loaded",
+              ),
+            undefined,
+            { polling: 100 },
+          );
+          await svgPage.screenshot({ path: path.join(folder, "saved-svg.png") });
+        } finally {
+          await svgContext.close();
+        }
         const html = path.join(folder, "reading.html");
         await save(page, "#qx-save", html);
         config.reading = await savedReading(browser, html, folder, engine, width);

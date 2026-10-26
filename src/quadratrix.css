@@ -454,6 +454,13 @@
     0.8rem / 1.5 system-ui,
     sans-serif;
 }
+.qx-retained .qx-intro {
+  display: block;
+  max-width: 1000px;
+}
+.qx-retained .qx-intro h1 {
+  margin-bottom: 24px;
+}
 .qx-source-sheet {
   margin: 35px 0;
 }
