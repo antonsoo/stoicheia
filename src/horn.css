@@ -15,6 +15,7 @@
 .horn-page main {
   width: min(1240px, calc(100% - 80px));
   margin: auto;
+  padding: 0;
 }
 .hn-header,
 .hn-footer {
@@ -450,7 +451,10 @@
     gap: 10px;
   }
   .hn-form label {
-    width: 91px;
+    width: 85px;
+  }
+  .horn-page button {
+    padding: 10px 12px;
   }
   .hn-form button {
     padding: 10px 11px;
