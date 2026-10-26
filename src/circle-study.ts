@@ -91,7 +91,7 @@ export async function circleSvg(s: CircleState): Promise<string> {
   const source = polygonDrawing(s.stage);
   return source.replace(
     '<g fill="none"',
-    `<metadata>${esc(`Stoicheia; ${circleJson(s)}; geometry uses floating point only for drawing; exact proof status is retained in the HTML/CSV export. Original drawing MIT (c) 2026 Anton Soloviev. Noto Serif font SIL OFL 1.1; full license: ${await studyText("fonts/OFL.txt")}`)}</metadata><defs><style>@font-face{font-family:CircleStudy;src:url('${font}')}text{font-family:CircleStudy,serif}</style></defs><g fill="none"`,
+    `<metadata>${esc(`Stoicheia; ${circleJson(s)}; geometry uses floating point only for drawing; exact proof status is retained in the HTML/CSV export. Original drawing MIT (c) 2026 Anton Soloviev. Full MIT notice: ${license} Noto Serif font SIL OFL 1.1; full license: ${await studyText("fonts/OFL.txt")}`)}</metadata><defs><style>@font-face{font-family:CircleStudy;src:url('${font}')}text{font-family:CircleStudy,serif}</style></defs><g fill="none"`,
   );
 }
 function scrollTable(table: string, label: string): string {
