@@ -1,6 +1,6 @@
 # Stoicheia
 
-Read Euclid and Archimedes in Greek, Latin and English, with working diagrams, construction workshops and the original printed pages.
+Read Euclid, Archimedes and Pappus in Greek, Latin and English, with working diagrams, construction workshops and the original printed pages.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-193d60)](LICENSE)
 [![Read the course](https://img.shields.io/badge/read-the_course-193d60)](https://antonsoo.github.io/stoicheia/)
@@ -21,6 +21,42 @@ geometry and is beginning Greek or Latin.
 **[Open the course](https://antonsoo.github.io/stoicheia/)** ·
 [Source repository](https://github.com/antonsoo/stoicheia). The app is a static
 site; no package registry installation is required.
+
+## The point the motion cannot draw
+
+The new **quadratrix workshop** reads Pappus, _Collection_ IV.30–32. One line
+turns while another slides; their crossing draws a curve used to square the
+circle. At the exact finish the lines coincide, so their crossing no longer
+selects a single point. Add the limiting point separately and inspect the
+argument that justifies it.
+- Stop just before the finish, reach it exactly, or let one motion finish
+  early. Keep an outside-square crossing, parallel lines and coincident lines
+  distinct. Play, pause and operate the time ruler with a keyboard.
+- Read eight selected Greek/Latin/English passages, sixteen word notes and ten
+  complete 1876 pages. Preserve Sporus’s reported objections, Hultsch’s
+  disagreement with their force, and Pappus’s subsequent geometric theorem.
+- Keep editable JSON, motion CSV, a font-embedded SVG or one script-free HTML
+  reading containing the arguments, all readings, scans, fonts and licenses.
+  The illustrated study opens from disk; the production edition includes the
+  new room and sources for offline use.
+
+The coordinate model supplies π when programming the motion. It does not
+independently construct π, demonstrate an exact physical mechanism or square
+the circle with straightedge and compass. Positive-time crossings have a limit;
+that limit is not a unique crossing of the final coincident lines.
+
+This room is committed locally and has not been published. Run the existing
+quickstart below, choose **Explore companion workshops → The point the motion
+cannot draw**, or open `/stoicheia/quadratrix.html` in the local preview.
+
+[Source and model](docs/quadratrix-model.md) · [Direct review](docs/quadratrix-review.md) ·
+[Saved reading, gzip](examples/quadratrix-reading.html.gz) ·
+[Printed study](examples/quadratrix-reading.pdf) ·
+[Editable record](examples/quadratrix-settings.json) ·
+[Motion CSV](examples/quadratrix.csv) · [Standalone plate](examples/quadratrix-plate.svg).
+Extract the HTML before opening it.
+
+![The quadratrix’s moving crossing beside its time and timing controls](docs/assets/quadratrix-desktop.png)
 
 ## Copy the opening, through three lengths
 
@@ -78,7 +114,7 @@ does not: the perpendicular foot remains strictly inside the circle.
   companion is explicitly Heiberg's editorial note, not an invented translation.
 - Save editable JSON, exact CSV, a font-embedded SVG or a script-free illustrated
   reading with every reading, source page and native data link. The print layout
-  keeps copied Greek and Latin passages in sequence. All nine rooms are included
+  keeps copied Greek and Latin passages in sequence. All ten rooms are included
   in the complete production offline edition.
 
 The coordinate experiment is modern; the source supplies its geometric

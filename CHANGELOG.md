@@ -2,6 +2,19 @@
 
 ## 2026-10-26
 
+- Add Pappus’s quadratrix workshop: uniform rotation and translation, exact
+  final-instant line relations, two altered timing experiments and a separately
+  justified limiting intercept. Do not substitute the limit for a non-unique
+  crossing. Clamp an animation’s first frame against a negative elapsed time.
+- Retain eight Greek/Latin/English selections, sixteen word notes and ten whole
+  Hultsch 1876 pages, including the objections, later theorem and apparatus.
+  Save editable JSON, explicitly approximate motion CSV, a standalone SVG and
+  a script-free illustrated reading with all scans, fonts and licenses.
+- Include the tenth room in the course navigation and complete offline edition.
+  Verify actual previous-edition upgrades, source substitution refusal,
+  browser downloads, reopening, printed text and independent line geometry.
+  This addition remains local source work pending publication review.
+
 - Add Euclid III.16: try a ray in the circle–tangent gap, inspect an exact
   perpendicular-foot or second-crossing witness, and magnify a tiny interior
   distance with equal horizontal and vertical units. Keep zero and outward

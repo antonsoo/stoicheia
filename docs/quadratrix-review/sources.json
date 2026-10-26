@@ -1,0 +1,6 @@
+{
+  "pages": 10,
+  "source_sha256": "5e665adaedc86e15393dfafd8fbef1c67f8fc1b1bf671bb40e190e4a036414f2",
+  "renderer": "pdftoppm version 24.02.0",
+  "status": "passed"
+}

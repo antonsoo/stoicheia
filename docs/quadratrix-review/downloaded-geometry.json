@@ -1,0 +1,12 @@
+{
+  "cases": 196,
+  "actual_svg_diagrams": 28,
+  "relations": {
+    "point": 156,
+    "parallel": 4,
+    "coincident": 36
+  },
+  "precision": 90,
+  "method": "Machin pi; sine/cosine Taylor series; independent determinant intersection",
+  "status": "passed"
+}

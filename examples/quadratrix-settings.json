@@ -1,0 +1,11 @@
+{
+  "format": "stoicheia-quadratrix",
+  "version": 1,
+  "state": {
+    "tick": 1000000,
+    "timing": "together",
+    "limit": true,
+    "passage": 7,
+    "page": 259
+  }
+}

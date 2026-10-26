@@ -1,0 +1,42 @@
+{
+  "uncompressedHtml": {
+    "bytes": 4362582,
+    "sha256": "7e8d0a4bef507db6ad5447b5aad657b49ac843aa9f853857cdf15a7af50e2761"
+  },
+  "files": {
+    "quadratrix-plate.svg": {
+      "bytes": 617299,
+      "sha256": "5db43c37402acfddf6bef3bdc1c59c247e223aabf5724c3dbdceeaa56a2f4dfe"
+    },
+    "quadratrix-reading.html.gz": {
+      "bytes": 2950055,
+      "sha256": "0ba749fee09e3521957633a624ffa42aed2f77fc095b0efb0c80e8b053e53972"
+    },
+    "quadratrix-reading.pdf": {
+      "bytes": 2930622,
+      "sha256": "389a87b0da0879d862c2a8450dfc5d727bdd97c2c6bf0bdf09f0b8a07b82f9c6"
+    },
+    "quadratrix-settings.json": {
+      "bytes": 173,
+      "sha256": "7c81eb55dc90e37664ca9d120dd312a68bfbf84151024793a90c1aca527ed1e6"
+    },
+    "quadratrix.csv": {
+      "bytes": 1832,
+      "sha256": "3193b7d751af727a18caf6410ba3f1c08e8733f5dd0dbfe15b4b021d2d30cbd8"
+    }
+  },
+  "nativeState": {
+    "format": "stoicheia-quadratrix",
+    "version": 1,
+    "state": {
+      "tick": 1000000,
+      "timing": "together",
+      "limit": true,
+      "passage": 7,
+      "page": 259
+    }
+  },
+  "sameHtmlInFourBrowsers": true,
+  "svgMetadataMatchesJson": true,
+  "csvFinalCrossing": "coincident; coordinates empty"
+}

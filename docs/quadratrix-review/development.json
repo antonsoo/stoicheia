@@ -1,0 +1,23 @@
+{
+  "scope": "Fresh-source development quickstart",
+  "configurations": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "courseLink": true,
+      "sourcePage": 252,
+      "exactFinish": true,
+      "offlineStatus": "Development preview",
+      "pageErrors": []
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "courseLink": true,
+      "sourcePage": 252,
+      "exactFinish": true,
+      "offlineStatus": "Development preview",
+      "pageErrors": []
+    }
+  ]
+}
