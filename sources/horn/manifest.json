@@ -1,0 +1,63 @@
+{
+  "edition": {
+    "title": "Euclidis opera omnia",
+    "volume": "I: Elementa, libros I–IV continens",
+    "editor_and_latin_translator": "J. L. Heiberg",
+    "publisher": "B. G. Teubner, Leipzig",
+    "year": 1883,
+    "catalog_url": "https://archive.org/details/euclidisoperaomn01eucluoft",
+    "scan_contributor": "Gerstein Science Information Centre, University of Toronto",
+    "rights": "Public domain; the Internet Archive record reports NOT_IN_COPYRIGHT."
+  },
+  "download": {
+    "url": "https://archive.org/download/euclidisoperaomn01eucluoft/euclidisoperaomn01eucluoft.pdf",
+    "bytes": 20890632,
+    "sha256": "da285c581c2dda86e2b25e20db3ce604bf6fb8765228fcd71cfc89d47a9d1c17"
+  },
+  "rendering": "Poppler 24.02.0 pdftoppm; PDF pages 222–227, printed pp.208–213; scale-to 1800, JPEG quality 88; complete uncropped pages.",
+  "transcription": "Eight selected readings from III.16; not a complete transcription. Printed theta normalized to θ, geometric labels to Greek Unicode, Latin angle signs to ∠. Line wraps and word hyphens removed; inline Latin reference marks omitted but discussed. The bracketed Greek corollary addition is retained separately from Heiberg’s Latin editorial note, which is not its translation.",
+  "pages": [
+    {
+      "page": 208,
+      "pdfPage": 222,
+      "file": "horn/heiberg-208.jpg",
+      "bytes": 366150,
+      "sha256": "eb78b04fee7b2a0f809785f41c5d305f91371d9193d83209181a3c4a82f95962"
+    },
+    {
+      "page": 209,
+      "pdfPage": 223,
+      "file": "horn/heiberg-209.jpg",
+      "bytes": 359613,
+      "sha256": "ea9752a7a65d7524abf979d43e14fc68ba85139b899f73884e294a555f8c8b03"
+    },
+    {
+      "page": 210,
+      "pdfPage": 224,
+      "file": "horn/heiberg-210.jpg",
+      "bytes": 404435,
+      "sha256": "f00bb2c8524eb0897226258dd4eea7d941c97cf5dc4d807cbc2dbb2760d592f3"
+    },
+    {
+      "page": 211,
+      "pdfPage": 225,
+      "file": "horn/heiberg-211.jpg",
+      "bytes": 430954,
+      "sha256": "79fc82efc0750e379f0e4aa2e75b8fefdd98f10dec28bd6698dfb7ee3b25ada1"
+    },
+    {
+      "page": 212,
+      "pdfPage": 226,
+      "file": "horn/heiberg-212.jpg",
+      "bytes": 348009,
+      "sha256": "7997d8c15f8183c551a3cdaf07ad71e51cf9a11cf4ee8ac1dcbd8930b73ff068"
+    },
+    {
+      "page": 213,
+      "pdfPage": 227,
+      "file": "horn/heiberg-213.jpg",
+      "bytes": 379667,
+      "sha256": "03932af05224f0df23b5c126aaec12ec94a03cf4cd3bd13ed01d33eca2955494"
+    }
+  ]
+}
