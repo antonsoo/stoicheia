@@ -173,10 +173,13 @@ async function artifact(browser, file, folder, width, engine) {
     return route.abort();
   });
   await page.goto(pathToFileURL(file).href);
+  await page.bringToFront();
   await page.waitForFunction(
     () =>
       document.fonts.status === "loaded" &&
       [...document.fonts].some((f) => f.family.includes("Noto Serif") && f.status === "loaded"),
+    undefined,
+    { polling: 100 },
   );
   await fits(page);
   assert(
@@ -406,10 +409,16 @@ for (const [engine, type] of [
         const svgContext = await browser.newContext({ javaScriptEnabled: false }),
           svgPage = await svgContext.newPage();
         await svgPage.goto(pathToFileURL(path.join(folder, "plates.svg")).href);
+        await svgPage.bringToFront();
         // Firefox can leave FontFaceSet.ready pending in a standalone SVG
         // after the face has loaded. Observe the actual embedded face instead.
-        await svgPage.waitForFunction(() =>
-          [...document.fonts].some((f) => f.family.includes("Noto Serif") && f.status === "loaded"),
+        await svgPage.waitForFunction(
+          () =>
+            [...document.fonts].some(
+              (f) => f.family.includes("Noto Serif") && f.status === "loaded",
+            ),
+          undefined,
+          { polling: 100 },
         );
         assert(await svgPage.evaluate(() => document.fonts.check('18px "Noto Serif"')));
         await svgPage.screenshot({ path: path.join(folder, "plates-opened.png") });

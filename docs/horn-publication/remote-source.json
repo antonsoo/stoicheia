@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-10-26T01:46:29.917628+00:00",
+  "sourceMain": "712136f156a23d973e2e328ef5a7d0eac523d3cd",
+  "runtimeImplementationCommit": "9d9430e53665e04079071201ec853a36df677b47",
+  "node": "v24.22.1",
+  "checks": "Fresh remote shallow clone; npm ci; lint, strict typecheck, 86 tests and build. Every output checked against the external retained build receipt.",
+  "reproducedFiles": 153,
+  "edition": "488d74ef9a34ba20b4a186581a5bf2454306960def0c134a56c86709abf67e4a"
+}

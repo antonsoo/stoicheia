@@ -1,0 +1,10 @@
+{
+  "scope": "Actual Chromium PDF; physical printing and tagged-PDF accessibility unverified",
+  "pages": 15,
+  "words_within_page_bounds": 2818,
+  "byte_identical_source_images": 6,
+  "embedded_fonts": 7,
+  "complete_reading_fields_and_mit_notice": 97,
+  "bytes": 2403583,
+  "sha256": "548fcd6e4163c35f47662cd3d587e5728e5822945d6c6e661531c11e5b79a81d"
+}

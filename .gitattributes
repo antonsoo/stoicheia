@@ -8,3 +8,4 @@ docs/circle-publication/*/*.csv -text whitespace=blank-at-eol,blank-at-eof,space
 examples/horn.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 examples/horn-settings.json -text
 docs/horn-review/*/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/horn-publication/*/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

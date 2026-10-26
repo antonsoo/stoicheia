@@ -63,7 +63,7 @@ exercises and the original pages 50–53 complete the sequential course through 
 
 ## A line that will not fit
 
-The new `horn.html` room reads **Euclid III.16**. Try to put a straight ray
+The **[A line that will not fit workshop](https://antonsoo.github.io/stoicheia/horn.html)** reads **Euclid III.16**. Try to put a straight ray
 between a circle and its tangent, then make it a million times shallower than
 a unit rise. The crossing disappears in the overview. Its exact certificate
 does not: the perpendicular foot remains strictly inside the circle.
@@ -88,6 +88,7 @@ whole-number rises/runs from −45 to 45 degrees; those are interface limits.
 
 [Source, model and limits](docs/horn-model.md) ·
 [Direct review](docs/horn-review.md) ·
+[Public edition](docs/horn-publication.md) ·
 [Actual saved reading, gzip](examples/horn-reading.html.gz) ·
 [Printed reading](examples/horn-reading.pdf) ·
 [Editable experiment](examples/horn-settings.json) ·
@@ -137,7 +138,7 @@ proof does not by itself establish that its final number is false.
   values and rejected steps. One script-free illustrated reading embeds both
   paths, the original comparison, proof, readings, source pages, font and licenses.
   Save the equal-scale polygon SVG too, or print the saved reading to A4.
-- The complete eight-room production edition includes the new page and
+- The complete production edition includes the new page and
   sources offline. Source display and export reject a substituted image.
 
 In this checkout, run `npm ci` and `npm run dev`, then open

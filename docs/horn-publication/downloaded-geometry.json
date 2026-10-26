@@ -1,0 +1,6 @@
+{
+  "native_csvs": 24,
+  "actual_svg_vertices": 1448,
+  "oracle": "Fraction and 80-digit Decimal; no application import",
+  "status": "passed"
+}

@@ -2,7 +2,8 @@
 
 Local implementation and direct review, 2026-10-26 UTC. The implementation is
 `cfdfd92`, `64c8214` and `9d9430e`; this record keeps source, build, browser use and portable
-files separate. Public hosting is not established by the local checks below.
+files separate. The [publication review](horn-publication.md) separately records the current public
+edition. Public hosting is not established by the local checks below.
 
 ## What the learner can do
 
