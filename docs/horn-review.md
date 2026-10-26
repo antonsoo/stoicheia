@@ -1,7 +1,7 @@
 # Horn-angle workshop review
 
 Local implementation and direct review, 2026-10-26 UTC. The implementation is
-`cfdfd92` and `64c8214`; this record keeps source, build, browser use and portable
+`cfdfd92`, `64c8214` and `9d9430e`; this record keeps source, build, browser use and portable
 files separate. Public hosting is not established by the local checks below.
 
 ## What the learner can do

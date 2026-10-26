@@ -1,15 +1,10 @@
 {
-  "checkedAt": "2026-10-26T01:22:45.367191+00:00",
+  "checkedAt": "2026-10-26T01:31:41.826969+00:00",
   "scope": "Local clean npm ci, Node 24 lint, strict typecheck, 86 tests, production build and four actual browser configurations; no hosted claim",
   "node": "v24.22.1",
-  "sourceImplementationCommit": "64c821473ad0e66d3519413beb0ba876aeece0cc",
-  "edition": "32a8b69d8d68cf94cc277a73782248fcf7388d01511f4ad2292e2cb48f1e5c57",
+  "sourceImplementationCommit": "9d9430e53665e04079071201ec853a36df677b47",
+  "edition": "488d74ef9a34ba20b4a186581a5bf2454306960def0c134a56c86709abf67e4a",
   "files": [
-    {
-      "file": "assets/circle-BDtcIXiH.js",
-      "bytes": 53761,
-      "sha256": "e0d4e8c2031cc5262a373832ae58f4742dc255ed90ea4c0f0c6a96dc034b6772"
-    },
     {
       "file": "assets/circle-DEbToBEZ.css",
       "bytes": 9235,
@@ -21,14 +16,19 @@
       "sha256": "3a32e8aa8326b2024ce3013ffecef7c9b8341b1a97ba25e48a4b440cc0fdd22f"
     },
     {
+      "file": "assets/circle-cv5ezFPX.js",
+      "bytes": 53761,
+      "sha256": "14c31b567d82d1939deccd0c7936de940cab3d53ec8639d86dc245aa7c397920"
+    },
+    {
       "file": "assets/closure-C78fP2go.js",
       "bytes": 12305,
       "sha256": "2a195b2666ae9ee085e2bc4359324022a8e9b01a620d3dc514e2af1033bd4b08"
     },
     {
-      "file": "assets/desk-B2FsudZK.js",
+      "file": "assets/desk-BPXXGXvt.js",
       "bytes": 46113,
-      "sha256": "cca82c60942ded51d349c45466301ba39a22f874bf487bc0f6a5ac6d4e4b4a57"
+      "sha256": "3203868c25367c187833a56851b9e36c3368761af50eed2a90cbb94854bbe81b"
     },
     {
       "file": "assets/desk-CSBNE5QJ.css",
@@ -46,24 +46,19 @@
       "sha256": "2661adc6e90a0f1ea4d4068451f06f259d75c3924810ecdb9e64fcd0e46d4725"
     },
     {
-      "file": "assets/gnomon-DQpCWzAB.js",
+      "file": "assets/gnomon-NiLHjExF.js",
       "bytes": 56270,
-      "sha256": "5c5ff2ab2feef5663d2bbb45c1aeb2ff582f8b364c77dd25e40f9b46ee9e625e"
+      "sha256": "da3bae3be364d71f821abefbe0e8b27e27687e8343c24fb0f720e672c1e0b5a9"
     },
     {
-      "file": "assets/horn-9NiV4nYK.css",
-      "bytes": 7375,
-      "sha256": "2f93cf419d911e8f9a118c88713a13675c06b609726f7ddc3ebb2c772e8c7d6d"
+      "file": "assets/horn-BeHZRNW8.css",
+      "bytes": 7421,
+      "sha256": "51994d4aec1fc303fe34430c505f5c77cdfc9c8aab4eaddc592890a8c8de3c1d"
     },
     {
-      "file": "assets/horn-BGnSNgXv.js",
-      "bytes": 52246,
-      "sha256": "3340bc005d311fd3886f851a6efcbfd5fcc29e8242e832e45d32ddd2b65158c9"
-    },
-    {
-      "file": "assets/measure-BdxgGWkH.js",
-      "bytes": 60066,
-      "sha256": "d1955eebd2c574ac766bc61108428e22b1e8eb6466aeb41602c49bd7c682f83e"
+      "file": "assets/horn-DfnHqA85.js",
+      "bytes": 52292,
+      "sha256": "d7c3db0fc8e20160f810d93d9988be56a9ba295a20bd52f297612c387d152f7c"
     },
     {
       "file": "assets/measure-CUIrZU7t.css",
@@ -71,19 +66,24 @@
       "sha256": "061f891d146a05b132fc7d70ac7cc0065e5c54d0c11b59c4ce5e80a61065247f"
     },
     {
+      "file": "assets/measure-Cp67R4MV.js",
+      "bytes": 60066,
+      "sha256": "4d147f50a1fc862b859f510c2683950d5f17574910ca02bf97ddef900fdf4bc2"
+    },
+    {
       "file": "assets/mesolabe-7AwiFx9G.css",
       "bytes": 11457,
       "sha256": "df3da746f41b1559ecb66efc02278cded702b5a387b6ad8468ba671d6420498e"
     },
     {
-      "file": "assets/mesolabe-DDOXt2qQ.js",
+      "file": "assets/mesolabe-DeqZhvos.js",
       "bytes": 61276,
-      "sha256": "2aafccefe252e718e05fce4b7a3f2ddc09683576c7114d1affe4782c417e8bba"
+      "sha256": "fb3231b49c9668bec0249bf8b193a3980941611baf9a80676e929d08b6405429"
     },
     {
-      "file": "assets/offline-BtK6KwNY.js",
+      "file": "assets/offline-BhjA-Dvw.js",
       "bytes": 18909,
-      "sha256": "879522dde8fc1aa38d2cad13f8386873de6a69440582e39b872b211d8ae78030"
+      "sha256": "3c04ded5e3537503380b5404150de5619a1371f26cf2d510a18e3f405b06b24f"
     },
     {
       "file": "assets/offline-D5UGvC8q.css",
@@ -91,9 +91,9 @@
       "sha256": "881c38bc5ba5a92d9a7b46cdd00ec8b1138e8c0218e713f8901eccecb94d17c8"
     },
     {
-      "file": "assets/quadrature-B5xaxubB.js",
+      "file": "assets/quadrature-C_NJUS_1.js",
       "bytes": 58342,
-      "sha256": "f61d9e60b532c935b42877521787fedf9b717ef6c6b7fa059c3687e6c8e83c31"
+      "sha256": "1b45e96d27dcc018127c6f8d5395d0c9b413af78a67d2edbcb2ad30e061ddadf"
     },
     {
       "file": "assets/quadrature-XiT_7MPW.css",
@@ -106,9 +106,14 @@
       "sha256": "c062a55696e49b0fb52dc7b7b50a4f78a4858c8103ffd8d46838212266fc0e1c"
     },
     {
-      "file": "assets/reader-B2m53CE2.js",
+      "file": "assets/reader-B82RFau2.js",
       "bytes": 194656,
-      "sha256": "4eda6b4835dd2dfc8e91935887027023b73361e99ab5de9334a024ce41c528c4"
+      "sha256": "43a6bf337d5558167fa254d4b59950ab7b083837a59b2fc518b2efb47cf0b963"
+    },
+    {
+      "file": "assets/triangle-B5DkbB48.js",
+      "bytes": 44501,
+      "sha256": "ee42235888fb583c899a010e7dcd38896559771e62204a8dae1aeb1074e87cad"
     },
     {
       "file": "assets/triangle-D7DRmLfq.css",
@@ -116,19 +121,14 @@
       "sha256": "6cb88fda39261452f9525464dbac7a34349744d7beb7a95f26f673e47daf26a1"
     },
     {
-      "file": "assets/triangle-DOyPgdUN.js",
-      "bytes": 44501,
-      "sha256": "e4bee63b991475ccbebe168adb45b48fce14ed47bdce137b69a301081237cb3c"
-    },
-    {
       "file": "circle.html",
       "bytes": 1535,
-      "sha256": "0b93134e09ef8bb89327d7fce2bea8ba0ab3bbe560a8978d69cb6936d1c121b2"
+      "sha256": "e326915d5b2eccbca629d7779382d71a0e680a7737b9ce193283d8ed32f142c9"
     },
     {
       "file": "desk.html",
       "bytes": 1590,
-      "sha256": "2b8318fb056b797d68c78125129d600add102303d9ac3b1201b5ff3ef6f3c055"
+      "sha256": "43223d6e31d2d650b619474a550479da609c919a4ffa5d99d7053d62627102c4"
     },
     {
       "file": "favicon.svg",
@@ -148,32 +148,32 @@
     {
       "file": "gnomon.html",
       "bytes": 1639,
-      "sha256": "7553f0f1d71dcfcec92913fcf4a18856b64825e833b167fb1a8447633adea429"
+      "sha256": "7f8b812a4fcbc500a188cf03de06a736c5f59ec4fb3db5879fa0cc2ee9a065d4"
     },
     {
       "file": "horn.html",
       "bytes": 1543,
-      "sha256": "5d745ea60096453ffb30bb714510ddb5651999c0bb984ecff8de3fc4f91ececc"
+      "sha256": "36917d75a6a5716bdbd1ac91b14461c0c11b2e050fe7fd229e6b1d4273840167"
     },
     {
       "file": "index.html",
       "bytes": 1571,
-      "sha256": "220454ef045e05b965836ed97a89db21616f215eabfeb40cd59740b6d6cc5a41"
+      "sha256": "ed921ed0f2dbee4042f1c4787048ed35aeffa7645b4103ecf70b6ab96b224634"
     },
     {
       "file": "measure.html",
       "bytes": 1454,
-      "sha256": "e4b005d362471140f5bacd613fc4308c2634ab9d1cca9443af19f5ee7cc5edad"
+      "sha256": "49d8255f1b2df6dd644acc97c374fc9bd26b07b393413a052f5deb78fbfe4deb"
     },
     {
       "file": "mesolabe.html",
       "bytes": 1477,
-      "sha256": "d57a1c9300e8333bf131b72a5c7726e8102a7f470f60e7c2c30ba3c6e52a7729"
+      "sha256": "40c01719b46312e463b85ab3a07b9173e7398c75eb7e14b54e0e901c236c14b4"
     },
     {
       "file": "quadrature.html",
       "bytes": 1553,
-      "sha256": "9a265076dba48cf3f5ee2c8f1794f9e5f6b2ac66e168e28c0857c11b1c85e9ab"
+      "sha256": "26e4ce52f916fd50fe97837176a739d9aff7a7bf3aa80a107422d34a4a3d56f3"
     },
     {
       "file": "sources/circle/heiberg-262.jpg",
@@ -763,12 +763,12 @@
     {
       "file": "sw.js",
       "bytes": 22388,
-      "sha256": "a88c29ae1da07c07ea3598f0115d9836ebc211754dcccfe792f5993e202c9d45"
+      "sha256": "aeb368e01054228a970baf91adf85b7055a47136cb91f27f5a25e70febe391d5"
     },
     {
       "file": "triangle.html",
       "bytes": 1598,
-      "sha256": "37bd4cee0da7f506df0f777536c150fb27cd642b8986aac928803099aacfc864"
+      "sha256": "4edf11440f4ed99efaef71227bac81f857ab9fbd66186bd8504abd60015d8b55"
     }
   ]
 }

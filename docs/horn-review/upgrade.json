@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-10-26T01:19:19.233Z",
+  "checkedAt": "2026-10-26T01:30:20.934Z",
   "scope": "Actual eight-room edition to nine rooms; held/substituted new source, export refusal, existing-tab controller transition and origin-disabled recovery",
   "previousWorker": "76c7e2302db6e05e4ef8ee9d068397e2b90341045d323ef142ceefc8633f264d",
-  "currentWorker": "a88c29ae1da07c07ea3598f0115d9836ebc211754dcccfe792f5993e202c9d45",
+  "currentWorker": "aeb368e01054228a970baf91adf85b7055a47136cb91f27f5a25e70febe391d5",
   "configurations": [
     {
       "engine": "chromium",

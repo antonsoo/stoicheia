@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-10-26T01:19:19.418Z",
+  "checkedAt": "2026-10-26T01:27:41.341Z",
   "base": null,
-  "edition": "32a8b69d8d68cf94cc277a73782248fcf7388d01511f4ad2292e2cb48f1e5c57",
-  "workerSha256": "a88c29ae1da07c07ea3598f0115d9836ebc211754dcccfe792f5993e202c9d45",
+  "edition": "488d74ef9a34ba20b4a186581a5bf2454306960def0c134a56c86709abf67e4a",
+  "workerSha256": "aeb368e01054228a970baf91adf85b7055a47136cb91f27f5a25e70febe391d5",
   "scope": "Local production build, actual native files and origin-disabled offline journey. No public-hosting claim.",
   "configurations": [
     {
@@ -22,8 +22,8 @@
           "rise": 1,
           "run": 1000000,
           "cropWidth": "4.0000e-12",
-          "renderedScaleX": 0.834375,
-          "renderedScaleY": 0.834375,
+          "renderedScaleX": 0.909375,
+          "renderedScaleY": 0.909375,
           "boundary": [
             [49.9999999925, 252.50027],
             [52.9999999811, 252.500267],
@@ -212,8 +212,8 @@
           "rise": 1,
           "run": 10000,
           "cropWidth": "4.0000e-8",
-          "renderedScaleX": 0.834375,
-          "renderedScaleY": 0.834375,
+          "renderedScaleX": 0.909375,
+          "renderedScaleY": 0.909375,
           "boundary": [
             [50.0000000001, 252.5269973],
             [53, 252.52669736],
@@ -403,14 +403,14 @@
       "axeViolations": 0,
       "cachedFiles": 152,
       "reading": {
-        "file": "/tmp/claude-1000/horn/release-browser/chromium-1440/reading.html",
-        "sha256": "f74a60fd226bc089ac10fa97647c2ed217d1b0ffddb5cf7d16ec25e0da701229",
-        "bytes": 3696662,
+        "file": "/tmp/claude-1000/horn/final-width-browser/chromium-1440/reading.html",
+        "sha256": "32ff3ff15a3a539c144fee6407b56b03e22c9e2de69371cc1fed9cc4761b6c28",
+        "bytes": 3696708,
         "embeddedNativeData": true,
         "sourceImages": 6,
         "readings": 8,
         "automaticRemoteRequests": [],
-        "pdf": "/tmp/claude-1000/horn/release-browser/chromium-1440/reading.pdf"
+        "pdf": "/tmp/claude-1000/horn/final-width-browser/chromium-1440/reading.pdf"
       },
       "offline": "Local origin connections destroyed; reload, source, new trial, illustrated export, course and return passed"
     },
@@ -431,8 +431,8 @@
           "rise": 1,
           "run": 1000000,
           "cropWidth": "4.0000e-12",
-          "renderedScaleX": 0.4671875,
-          "renderedScaleY": 0.4671875,
+          "renderedScaleX": 0.5171875,
+          "renderedScaleY": 0.5171875,
           "boundary": [
             [49.9999999925, 252.50027],
             [52.9999999811, 252.500267],
@@ -621,8 +621,8 @@
           "rise": 1,
           "run": 10000,
           "cropWidth": "4.0000e-8",
-          "renderedScaleX": 0.4671875,
-          "renderedScaleY": 0.4671875,
+          "renderedScaleX": 0.5171875,
+          "renderedScaleY": 0.5171875,
           "boundary": [
             [50.0000000001, 252.5269973],
             [53, 252.52669736],
@@ -812,9 +812,9 @@
       "axeViolations": 0,
       "cachedFiles": 152,
       "reading": {
-        "file": "/tmp/claude-1000/horn/release-browser/chromium-375/reading.html",
-        "sha256": "f74a60fd226bc089ac10fa97647c2ed217d1b0ffddb5cf7d16ec25e0da701229",
-        "bytes": 3696662,
+        "file": "/tmp/claude-1000/horn/final-width-browser/chromium-375/reading.html",
+        "sha256": "32ff3ff15a3a539c144fee6407b56b03e22c9e2de69371cc1fed9cc4761b6c28",
+        "bytes": 3696708,
         "embeddedNativeData": true,
         "sourceImages": 6,
         "readings": 8,
@@ -840,8 +840,8 @@
           "rise": 1,
           "run": 1000000,
           "cropWidth": "4.0000e-12",
-          "renderedScaleX": 0.8343703746795654,
-          "renderedScaleY": 0.8343703746795654,
+          "renderedScaleX": 0.9093703627586365,
+          "renderedScaleY": 0.9093703627586365,
           "boundary": [
             [49.9999999925, 252.50027],
             [52.9999999811, 252.500267],
@@ -1030,8 +1030,8 @@
           "rise": 1,
           "run": 10000,
           "cropWidth": "4.0000e-8",
-          "renderedScaleX": 0.8343703746795654,
-          "renderedScaleY": 0.8343703746795654,
+          "renderedScaleX": 0.9093703627586365,
+          "renderedScaleY": 0.9093703627586365,
           "boundary": [
             [50.0000000001, 252.5269973],
             [53, 252.52669736],
@@ -1221,9 +1221,9 @@
       "axeViolations": 0,
       "cachedFiles": 152,
       "reading": {
-        "file": "/tmp/claude-1000/horn/release-browser/firefox-1440/reading.html",
-        "sha256": "f74a60fd226bc089ac10fa97647c2ed217d1b0ffddb5cf7d16ec25e0da701229",
-        "bytes": 3696662,
+        "file": "/tmp/claude-1000/horn/final-width-browser/firefox-1440/reading.html",
+        "sha256": "32ff3ff15a3a539c144fee6407b56b03e22c9e2de69371cc1fed9cc4761b6c28",
+        "bytes": 3696708,
         "embeddedNativeData": true,
         "sourceImages": 6,
         "readings": 8,
@@ -1249,8 +1249,8 @@
           "rise": 1,
           "run": 1000000,
           "cropWidth": "4.0000e-12",
-          "renderedScaleX": 0.46718519926071167,
-          "renderedScaleY": 0.46718519926071167,
+          "renderedScaleX": 0.5171852111816406,
+          "renderedScaleY": 0.5171852111816406,
           "boundary": [
             [49.9999999925, 252.50027],
             [52.9999999811, 252.500267],
@@ -1439,8 +1439,8 @@
           "rise": 1,
           "run": 10000,
           "cropWidth": "4.0000e-8",
-          "renderedScaleX": 0.46718519926071167,
-          "renderedScaleY": 0.46718519926071167,
+          "renderedScaleX": 0.5171852111816406,
+          "renderedScaleY": 0.5171852111816406,
           "boundary": [
             [50.0000000001, 252.5269973],
             [53, 252.52669736],
@@ -1630,9 +1630,9 @@
       "axeViolations": 0,
       "cachedFiles": 152,
       "reading": {
-        "file": "/tmp/claude-1000/horn/release-browser/firefox-375/reading.html",
-        "sha256": "f74a60fd226bc089ac10fa97647c2ed217d1b0ffddb5cf7d16ec25e0da701229",
-        "bytes": 3696662,
+        "file": "/tmp/claude-1000/horn/final-width-browser/firefox-375/reading.html",
+        "sha256": "32ff3ff15a3a539c144fee6407b56b03e22c9e2de69371cc1fed9cc4761b6c28",
+        "bytes": 3696708,
         "embeddedNativeData": true,
         "sourceImages": 6,
         "readings": 8,
