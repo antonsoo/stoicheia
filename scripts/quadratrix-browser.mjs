@@ -9,6 +9,8 @@ import AxeBuilder from "@axe-core/playwright";
 import { chromium, firefox } from "playwright";
 
 const out = path.resolve(process.argv[2] ?? "/tmp/claude-1000/quadratrix-browser");
+const hosted = process.argv[3];
+if (hosted) assert.match(hosted, /^https:\/\/.+\/$/);
 await mkdir(out, { recursive: true });
 const hash = (b) => createHash("sha256").update(b).digest("hex");
 const manifest = JSON.parse(await readFile("public/sources/quadratrix/manifest.json", "utf8"));
@@ -30,13 +32,17 @@ const edition = /const EDITION = "([a-f0-9]+)"/.exec(worker)[1];
 const inventory = JSON.parse(/const FILES = (\[[^;]+\]);/.exec(worker)[1]);
 const report = {
   checkedAt: new Date().toISOString(),
-  scope: "Local production build and real saved files. No publication claim.",
+  scope: hosted
+    ? "Public HTTPS workflows and real saved files. Browser networking disabled for offline checks; public origin not stopped."
+    : "Local production build and real saved files. No publication claim.",
+  base: hosted ?? null,
   edition,
   configurations: [],
   guards: [],
 };
 
 async function serve() {
+  if (hosted) return { base: hosted, offline() {}, async close() {} };
   let online = true;
   const server = createServer(async (req, res) => {
     if (!online) {
@@ -419,13 +425,15 @@ for (const [engine, type] of [
         assert.deepEqual(cache.paths, [...inventory].sort());
         config.cachedFiles = cache.paths.length;
         server.offline();
-        assert.equal(
-          await fetch(server.base).then(
-            () => true,
-            () => false,
-          ),
-          false,
-        );
+        if (hosted) await context.setOffline(true);
+        else
+          assert.equal(
+            await fetch(server.base).then(
+              () => true,
+              () => false,
+            ),
+            false,
+          );
         await page.reload();
         await ready(page);
         await source(page, 259);
@@ -465,8 +473,9 @@ for (const [engine, type] of [
         await page.getByRole("link", { name: /The point the motion cannot draw/ }).click();
         await ready(page);
         assert.deepEqual(errors, []);
-        config.offline =
-          "Origin connections destroyed; source, native files, saved script-free reading, course and return passed";
+        config.offline = hosted
+          ? "Browser networking disabled; source, native files, saved script-free reading, course and return passed"
+          : "Origin connections destroyed; source, native files, saved script-free reading, course and return passed";
         report.configurations.push(config);
         console.log(
           `${engine} ${width}: real controls, source identities, native files, saved reading and offline journey passed`,
