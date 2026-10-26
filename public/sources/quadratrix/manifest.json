@@ -1,0 +1,91 @@
+{
+  "edition": {
+    "title": "Pappi Alexandrini collectionis quae supersunt",
+    "volume": "I: Insunt librorum II III IV V reliquiae",
+    "editor_and_latin_translator": "Friedrich Hultsch",
+    "publisher": "Apud Weidmannos, Berlin",
+    "year": 1876,
+    "catalog_url": "https://archive.org/details/pappialexandrin00hultgoog",
+    "scan_contributor": "Oxford University; digitized by Google",
+    "rights": "Public domain; Internet Archive metadata reports NOT_IN_COPYRIGHT."
+  },
+  "download": {
+    "url": "https://archive.org/download/pappialexandrin00hultgoog/pappialexandrin00hultgoog.pdf",
+    "bytes": 14647350,
+    "sha256": "5e665adaedc86e15393dfafd8fbef1c67f8fc1b1bf671bb40e190e4a036414f2"
+  },
+  "rendering": "pdftoppm version 24.02.0; PDF pages 283-292 = printed pp.250-259; -scale-to 1800 -jpeg -jpegopt quality=88. Complete uncropped pages, no retouching.",
+  "transcription": "Selected clauses from Collection IV.30-32 (Hultsch chapters 45-50); not a complete transcription. Greek theta normalized to θ, geometric labels to Greek Unicode, line wraps and word hyphens removed. Hultsch Latin reference marks omitted. New English renderings from the retained Greek and Latin, not from a modern translation. The two diagrams use different labels: the theorem at pp.256-259 has centre Γ and intercept Θ, corresponding to A and H in the motion diagram.",
+  "pages": [
+    {
+      "page": 250,
+      "pdfPage": 283,
+      "file": "quadratrix/hultsch-250.jpg",
+      "bytes": 260227,
+      "sha256": "89c12787f74dff3e0cd68425d2a6548205ef03be77d66cb13af6012450057839"
+    },
+    {
+      "page": 251,
+      "pdfPage": 284,
+      "file": "quadratrix/hultsch-251.jpg",
+      "bytes": 230314,
+      "sha256": "eac5ebfb4f4061593611c3499d8ba9bc829acda859d12707e0c85683d0026c91"
+    },
+    {
+      "page": 252,
+      "pdfPage": 285,
+      "file": "quadratrix/hultsch-252.jpg",
+      "bytes": 314921,
+      "sha256": "84dfbf5613beee46c3309b84463e9e920fd229a80a1ec174284c743f9bfc397c"
+    },
+    {
+      "page": 253,
+      "pdfPage": 286,
+      "file": "quadratrix/hultsch-253.jpg",
+      "bytes": 279019,
+      "sha256": "d9a0f9eb0c11eec295286e4155af68e5aeff93e6ae0fdc8ff2bc4b7043b4bb76"
+    },
+    {
+      "page": 254,
+      "pdfPage": 287,
+      "file": "quadratrix/hultsch-254.jpg",
+      "bytes": 322995,
+      "sha256": "1b9bc0197eedd48934c091eb0a632df98390a0ba909c8db64e514db70f283fdb"
+    },
+    {
+      "page": 255,
+      "pdfPage": 288,
+      "file": "quadratrix/hultsch-255.jpg",
+      "bytes": 273083,
+      "sha256": "e7bfe763ee1ca544a64f5ff04f71802af01a42efbf1999be8c85f3a90e720fe7"
+    },
+    {
+      "page": 256,
+      "pdfPage": 289,
+      "file": "quadratrix/hultsch-256.jpg",
+      "bytes": 276392,
+      "sha256": "4d3fa2c01dbd0cbcaa53097dc6212759b6fb225d13e59a402646d41c7b3ef241"
+    },
+    {
+      "page": 257,
+      "pdfPage": 290,
+      "file": "quadratrix/hultsch-257.jpg",
+      "bytes": 282252,
+      "sha256": "5c61dcab496b1f5e1febab77f2d4f59b47a3c694922b473db2a45fd2889052a3"
+    },
+    {
+      "page": 258,
+      "pdfPage": 291,
+      "file": "quadratrix/hultsch-258.jpg",
+      "bytes": 288262,
+      "sha256": "239f988f9a3c7955d475c54cc4f1d6a353da502af2e4d731e4d8f42cf99429fc"
+    },
+    {
+      "page": 259,
+      "pdfPage": 292,
+      "file": "quadratrix/hultsch-259.jpg",
+      "bytes": 262267,
+      "sha256": "bded9dc11e7d90f75fce69b7e2d2344d068e42201c9a172986bb8d78e71e4543"
+    }
+  ]
+}
