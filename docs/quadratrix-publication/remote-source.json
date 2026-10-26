@@ -1,0 +1,32 @@
+{
+  "source": "af1fa96a0df0025526296a7b75232b8b23266d5c",
+  "method": "Fresh HTTPS clone; npm ci; npm run check; Node 24.21.0; all production paths and bytes compared with reviewed build",
+  "files": 167,
+  "checks": "lint, typecheck, 91 tests and production build passed",
+  "nativeReadings": [
+    {
+      "path": "chromium-1440/reading.html",
+      "bytes": 4362582,
+      "sha256": "7e8d0a4bef507db6ad5447b5aad657b49ac843aa9f853857cdf15a7af50e2761",
+      "matchesRetainedExample": true
+    },
+    {
+      "path": "chromium-375/reading.html",
+      "bytes": 4362582,
+      "sha256": "7e8d0a4bef507db6ad5447b5aad657b49ac843aa9f853857cdf15a7af50e2761",
+      "matchesRetainedExample": true
+    },
+    {
+      "path": "firefox-1440/reading.html",
+      "bytes": 4362582,
+      "sha256": "7e8d0a4bef507db6ad5447b5aad657b49ac843aa9f853857cdf15a7af50e2761",
+      "matchesRetainedExample": true
+    },
+    {
+      "path": "firefox-375/reading.html",
+      "bytes": 4362582,
+      "sha256": "7e8d0a4bef507db6ad5447b5aad657b49ac843aa9f853857cdf15a7af50e2761",
+      "matchesRetainedExample": true
+    }
+  ]
+}

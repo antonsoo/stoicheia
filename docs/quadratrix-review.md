@@ -1,7 +1,7 @@
 # Quadratrix workshop: direct review
 
 Local implementation and review, 2026-10-26 UTC. The source changes are
-`ad7d41c`, `66d062b` and `8a01748`. This addition has not been pushed or deployed.
+`ad7d41c`, `66d062b` and `8a01748`. The later [publication review](quadratrix-publication.md) records the push and public behavior separately.
 The [model notes](quadratrix-model.md) explain the source and mathematical
 boundaries; the files below record what was actually operated and saved.
 
@@ -159,4 +159,4 @@ reasoning; the original pages retain a different historical argument.
 No exact physical synchronization device, ancient mechanical reconstruction,
 straightedge-and-compass quadrature, physical print calibration, tagged-PDF
 accessibility, new critical edition or complete Pappus course is claimed.
-The new room remains local pending publication review.
+The public edition was subsequently checked in the separate publication review.

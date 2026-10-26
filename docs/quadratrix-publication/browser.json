@@ -1,0 +1,846 @@
+{
+  "checkedAt": "2026-10-26T23:22:45.788Z",
+  "scope": "Public HTTPS workflows and real saved files. Browser networking disabled for offline checks; public origin not stopped.",
+  "base": "https://antonsoo.github.io/stoicheia/",
+  "edition": "716be3170e2ef9c1c0add6bc7e1b3eb8eb29cf8232d3d128835cc32a4b929dc8",
+  "configurations": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 1440,
+      "csv": [
+        "chromium-1440/midpoint.csv",
+        "chromium-1440/near.csv",
+        "chromium-1440/end-no-limit.csv",
+        "chromium-1440/slider-first-end.csv",
+        "chromium-1440/rotation-first-parallel.csv",
+        "chromium-1440/rotation-first-outside.csv",
+        "chromium-1440/end.csv"
+      ],
+      "geometry": [
+        {
+          "tick": 500000,
+          "timing": "together",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 722.254,
+            "y2": -102.254
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 300,
+            "x2": 540,
+            "y2": 300
+          },
+          "marker": {
+            "x": 320.00000000000006,
+            "y": 300
+          }
+        },
+        {
+          "tick": 999999,
+          "timing": "together",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 519.9986
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 519.9996,
+            "x2": 540,
+            "y2": 519.9996
+          },
+          "marker": {
+            "x": 380.1126998415054,
+            "y": 519.99956
+          }
+        },
+        {
+          "tick": 1000000,
+          "timing": "together",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 520
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 540,
+            "y2": 520
+          },
+          "marker": null
+        },
+        {
+          "tick": 1000000,
+          "timing": "slider-first",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 971.0429,
+            "y2": 394.7629
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 540,
+            "y2": 520
+          },
+          "marker": {
+            "x": 100,
+            "y": 520
+          }
+        },
+        {
+          "tick": 999999,
+          "timing": "rotation-first",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 520
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 519.9996,
+            "x2": 540,
+            "y2": 519.9996
+          },
+          "marker": null
+        },
+        {
+          "tick": 899999,
+          "timing": "rotation-first",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 519.9985
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 475.9996,
+            "x2": 540,
+            "y2": 475.9996
+          },
+          "marker": null
+        },
+        {
+          "tick": 1000000,
+          "timing": "together",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 520
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 540,
+            "y2": 520
+          },
+          "marker": null
+        }
+      ],
+      "errors": [],
+      "csp": [],
+      "axisScales": {
+        "x": 1.0601310483870967,
+        "y": 1.0601310483870967
+      },
+      "animationPause": true,
+      "axeViolations": 0,
+      "cachedFiles": 166,
+      "reading": {
+        "bytes": 4362582,
+        "sha256": "7e8d0a4bef507db6ad5447b5aad657b49ac843aa9f853857cdf15a7af50e2761",
+        "images": 10,
+        "readings": 8,
+        "javaScript": false,
+        "automaticRemoteRequests": []
+      },
+      "offline": "Browser networking disabled; source, native files, saved script-free reading, course and return passed"
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "csv": [
+        "chromium-375/midpoint.csv",
+        "chromium-375/near.csv",
+        "chromium-375/end-no-limit.csv",
+        "chromium-375/slider-first-end.csv",
+        "chromium-375/rotation-first-parallel.csv",
+        "chromium-375/rotation-first-outside.csv",
+        "chromium-375/end.csv"
+      ],
+      "geometry": [
+        {
+          "tick": 500000,
+          "timing": "together",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 722.254,
+            "y2": -102.254
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 300,
+            "x2": 540,
+            "y2": 300
+          },
+          "marker": {
+            "x": 320.00000000000006,
+            "y": 300
+          }
+        },
+        {
+          "tick": 999999,
+          "timing": "together",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 519.9986
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 519.9996,
+            "x2": 540,
+            "y2": 519.9996
+          },
+          "marker": {
+            "x": 380.1126998415054,
+            "y": 519.99956
+          }
+        },
+        {
+          "tick": 1000000,
+          "timing": "together",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 520
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 540,
+            "y2": 520
+          },
+          "marker": null
+        },
+        {
+          "tick": 1000000,
+          "timing": "slider-first",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 971.0429,
+            "y2": 394.7629
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 540,
+            "y2": 520
+          },
+          "marker": {
+            "x": 100,
+            "y": 520
+          }
+        },
+        {
+          "tick": 999999,
+          "timing": "rotation-first",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 520
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 519.9996,
+            "x2": 540,
+            "y2": 519.9996
+          },
+          "marker": null
+        },
+        {
+          "tick": 899999,
+          "timing": "rotation-first",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 519.9985
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 475.9996,
+            "x2": 540,
+            "y2": 475.9996
+          },
+          "marker": null
+        },
+        {
+          "tick": 1000000,
+          "timing": "together",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 520
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 540,
+            "y2": 520
+          },
+          "marker": null
+        }
+      ],
+      "errors": [],
+      "csp": [],
+      "axisScales": {
+        "x": 0.5166582661290322,
+        "y": 0.5166582661290322
+      },
+      "animationPause": true,
+      "axeViolations": 0,
+      "cachedFiles": 166,
+      "reading": {
+        "bytes": 4362582,
+        "sha256": "7e8d0a4bef507db6ad5447b5aad657b49ac843aa9f853857cdf15a7af50e2761",
+        "images": 10,
+        "readings": 8,
+        "javaScript": false,
+        "automaticRemoteRequests": []
+      },
+      "offline": "Browser networking disabled; source, native files, saved script-free reading, course and return passed"
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 1440,
+      "csv": [
+        "firefox-1440/midpoint.csv",
+        "firefox-1440/near.csv",
+        "firefox-1440/end-no-limit.csv",
+        "firefox-1440/slider-first-end.csv",
+        "firefox-1440/rotation-first-parallel.csv",
+        "firefox-1440/rotation-first-outside.csv",
+        "firefox-1440/end.csv"
+      ],
+      "geometry": [
+        {
+          "tick": 500000,
+          "timing": "together",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 722.254,
+            "y2": -102.254
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 300,
+            "x2": 540,
+            "y2": 300
+          },
+          "marker": {
+            "x": 320.00000000000006,
+            "y": 300
+          }
+        },
+        {
+          "tick": 999999,
+          "timing": "together",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 519.9986
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 519.9996,
+            "x2": 540,
+            "y2": 519.9996
+          },
+          "marker": {
+            "x": 380.1126998415054,
+            "y": 519.99956
+          }
+        },
+        {
+          "tick": 1000000,
+          "timing": "together",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 520
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 540,
+            "y2": 520
+          },
+          "marker": null
+        },
+        {
+          "tick": 1000000,
+          "timing": "slider-first",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 971.0429,
+            "y2": 394.7629
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 540,
+            "y2": 520
+          },
+          "marker": {
+            "x": 100,
+            "y": 520
+          }
+        },
+        {
+          "tick": 999999,
+          "timing": "rotation-first",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 520
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 519.9996,
+            "x2": 540,
+            "y2": 519.9996
+          },
+          "marker": null
+        },
+        {
+          "tick": 899999,
+          "timing": "rotation-first",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 519.9985
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 475.9996,
+            "x2": 540,
+            "y2": 475.9996
+          },
+          "marker": null
+        },
+        {
+          "tick": 1000000,
+          "timing": "together",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 520
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 540,
+            "y2": 520
+          },
+          "marker": null
+        }
+      ],
+      "errors": [],
+      "csp": [],
+      "axisScales": {
+        "x": 1.0601515769958496,
+        "y": 1.0601515769958496
+      },
+      "animationPause": true,
+      "axeViolations": 0,
+      "cachedFiles": 166,
+      "reading": {
+        "bytes": 4362582,
+        "sha256": "7e8d0a4bef507db6ad5447b5aad657b49ac843aa9f853857cdf15a7af50e2761",
+        "images": 10,
+        "readings": 8,
+        "javaScript": false,
+        "automaticRemoteRequests": []
+      },
+      "offline": "Browser networking disabled; source, native files, saved script-free reading, course and return passed"
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 375,
+      "csv": [
+        "firefox-375/midpoint.csv",
+        "firefox-375/near.csv",
+        "firefox-375/end-no-limit.csv",
+        "firefox-375/slider-first-end.csv",
+        "firefox-375/rotation-first-parallel.csv",
+        "firefox-375/rotation-first-outside.csv",
+        "firefox-375/end.csv"
+      ],
+      "geometry": [
+        {
+          "tick": 500000,
+          "timing": "together",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 722.254,
+            "y2": -102.254
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 300,
+            "x2": 540,
+            "y2": 300
+          },
+          "marker": {
+            "x": 320.00000000000006,
+            "y": 300
+          }
+        },
+        {
+          "tick": 999999,
+          "timing": "together",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 519.9986
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 519.9996,
+            "x2": 540,
+            "y2": 519.9996
+          },
+          "marker": {
+            "x": 380.1126998415054,
+            "y": 519.99956
+          }
+        },
+        {
+          "tick": 1000000,
+          "timing": "together",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 520
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 540,
+            "y2": 520
+          },
+          "marker": null
+        },
+        {
+          "tick": 1000000,
+          "timing": "slider-first",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 971.0429,
+            "y2": 394.7629
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 540,
+            "y2": 520
+          },
+          "marker": {
+            "x": 100,
+            "y": 520
+          }
+        },
+        {
+          "tick": 999999,
+          "timing": "rotation-first",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 520
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 519.9996,
+            "x2": 540,
+            "y2": 519.9996
+          },
+          "marker": null
+        },
+        {
+          "tick": 899999,
+          "timing": "rotation-first",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 519.9985
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 475.9996,
+            "x2": 540,
+            "y2": 475.9996
+          },
+          "marker": null
+        },
+        {
+          "tick": 1000000,
+          "timing": "together",
+          "square": {
+            "x": 100,
+            "y": 80,
+            "width": 440,
+            "height": 440
+          },
+          "ray": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 980,
+            "y2": 520
+          },
+          "slider": {
+            "x1": 100,
+            "y1": 520,
+            "x2": 540,
+            "y2": 520
+          },
+          "marker": null
+        }
+      ],
+      "errors": [],
+      "csp": [],
+      "axisScales": {
+        "x": 0.5166666507720947,
+        "y": 0.5166666507720947
+      },
+      "animationPause": true,
+      "axeViolations": 0,
+      "cachedFiles": 166,
+      "reading": {
+        "bytes": 4362582,
+        "sha256": "7e8d0a4bef507db6ad5447b5aad657b49ac843aa9f853857cdf15a7af50e2761",
+        "images": 10,
+        "readings": 8,
+        "javaScript": false,
+        "automaticRemoteRequests": []
+      },
+      "offline": "Browser networking disabled; source, native files, saved script-free reading, course and return passed"
+    }
+  ],
+  "guards": [
+    {
+      "engine": "chromium",
+      "returnedToDisplayedPage": true,
+      "lateSourceIgnored": true
+    },
+    {
+      "engine": "chromium",
+      "substitutedSourceRejected": true,
+      "exportRefused": true
+    },
+    {
+      "engine": "firefox",
+      "returnedToDisplayedPage": true,
+      "lateSourceIgnored": true
+    },
+    {
+      "engine": "firefox",
+      "substitutedSourceRejected": true,
+      "exportRefused": true
+    }
+  ]
+}

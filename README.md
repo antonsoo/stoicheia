@@ -45,9 +45,10 @@ independently construct π, demonstrate an exact physical mechanism or square
 the circle with straightedge and compass. Positive-time crossings have a limit;
 that limit is not a unique crossing of the final coincident lines.
 
-This room is committed locally and has not been published. Run the existing
-quickstart below, choose **Explore companion workshops → The point the motion
-cannot draw**, or open `/stoicheia/quadratrix.html` in the local preview.
+Open [the quadratrix workshop](https://antonsoo.github.io/stoicheia/quadratrix.html),
+or choose **The point the motion cannot draw** in the course's companion workshops.
+[Publication evidence](docs/quadratrix-publication.md) records the hosted files,
+four browser configurations and a fresh remote-clone build.
 
 [Source and model](docs/quadratrix-model.md) · [Direct review](docs/quadratrix-review.md) ·
 [Saved reading, gzip](examples/quadratrix-reading.html.gz) ·

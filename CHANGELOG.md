@@ -13,7 +13,9 @@
 - Include the tenth room in the course navigation and complete offline edition.
   Verify actual previous-edition upgrades, source substitution refusal,
   browser downloads, reopening, printed text and independent line geometry.
-  This addition remains local source work pending publication review.
+  Publish after explicit owner authorization. All 167 current build files match
+  canonical public responses; four public browser configurations retain working
+  controls, source identities, downloads and a complete offline edition.
 
 - Add Euclid III.16: try a ray in the circle–tangent gap, inspect an exact
   perpendicular-foot or second-crossing witness, and magnify a tiny interior
