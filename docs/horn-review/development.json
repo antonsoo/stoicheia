@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-26T01:19:20.174Z",
+  "base": "http://127.0.0.1:4437/stoicheia/horn.html",
+  "browser": "153.0.8010.12",
+  "width": 375,
+  "sourcePage": 212,
+  "nativeJson": {
+    "format": "stoicheia-horn-experiment",
+    "version": 1,
+    "state": {
+      "rise": 1,
+      "run": 1000000,
+      "focus": "crossing",
+      "passage": 7,
+      "page": 212
+    }
+  },
+  "offlineText": "Development preview · offline saving is available in the production build.",
+  "errors": []
+}

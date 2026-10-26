@@ -1,6 +1,6 @@
 # Stoicheia
 
-Read Euclid in Greek, Latin and English, with working diagrams, construction workshops and the original printed pages.
+Read Euclid and Archimedes in Greek, Latin and English, with working diagrams, construction workshops and the original printed pages.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-193d60)](LICENSE)
 [![Read the course](https://img.shields.io/badge/read-the_course-193d60)](https://antonsoo.github.io/stoicheia/)
@@ -60,6 +60,57 @@ Ten complete Greek/Latin/English steps, two position controls, two passage
 exercises and the original pages 50–53 complete the sequential course through I.21.
 [Model and review](docs/nested-review.md) · [Saved study](examples/stoicheia-I21-study.html) ·
 [Printed study](examples/stoicheia-I21-study.pdf).
+
+## A line that will not fit
+
+The new `horn.html` room reads **Euclid III.16**. Try to put a straight ray
+between a circle and its tangent, then make it a million times shallower than
+a unit rise. The crossing disappears in the overview. Its exact certificate
+does not: the perpendicular foot remains strictly inside the circle.
+- Compare a normal ray, a crossing below the overview's resolution, the tangent
+  and a ray pointing to the other side. Zero and negative slopes do not become
+  successful positive angles in the curved gap.
+- Inspect the perpendicular-foot argument or the added second crossing. A local
+  crop enlarges the interior distance while keeping equal horizontal and vertical
+  units. Its numerical scale remains readable outside the diagram on phones.
+- Read eight Greek/Latin/English selections, sixteen word notes and six complete
+  1883 pages. The final Greek addition stays in editorial brackets. Its Latin
+  companion is explicitly Heiberg's editorial note, not an invented translation.
+- Save editable JSON, exact CSV, a font-embedded SVG or a script-free illustrated
+  reading with every reading, source page and native data link. The print layout
+  keeps copied Greek and Latin passages in sequence. All nine rooms are included
+  in the complete production offline edition.
+
+The coordinate experiment is modern; the source supplies its geometric
+contradiction. A finite run of tiny slopes is not the universal proof. The
+curved remainder is not assigned a positive degree value. The interface explores
+whole-number rises/runs from −45 to 45 degrees; those are interface limits.
+
+[Source, model and limits](docs/horn-model.md) ·
+[Direct review](docs/horn-review.md) ·
+[Actual saved reading, gzip](examples/horn-reading.html.gz) ·
+[Printed reading](examples/horn-reading.pdf) ·
+[Editable experiment](examples/horn-settings.json) ·
+[Exact CSV](examples/horn.csv) · [Standalone SVG](examples/horn-plates.svg).
+
+Run `npm ci` and `npm run dev`, then open
+`http://127.0.0.1:4327/stoicheia/horn.html` or follow **A line that will not fit**
+from the course's native companion-workshop disclosure. Decompress the retained
+HTML before opening it. The current trial uses rise 1 and run 1,000,000.
+
+```sh
+npm run verify:horn
+npm run verify:horn-sources -- --pdf /path/to/euclidisoperaomn01eucluoft.pdf
+npm run test:horn -- /tmp/stoicheia-horn
+python3 scripts/horn-oracle.py --browser /tmp/stoicheia-horn/review.json
+python3 scripts/horn-print.py /tmp/stoicheia-horn/chromium-1440/reading.pdf
+```
+
+Build `dist/` before the browser review. The source command downloads the
+identified original if `--pdf` is omitted. Source reproduction and PDF inspection
+need Poppler. Browser review uses the existing Playwright Chromium/Firefox
+installations. A visible share link follows later applied changes in both this
+room and the Archimedes workshop.
 
 ## Keep the safe side
 

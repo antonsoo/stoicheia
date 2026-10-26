@@ -1,0 +1,31 @@
+{
+  "files": [
+    {
+      "file": "examples/horn-reading.pdf",
+      "bytes": 2403583,
+      "sha256": "3dd3a74a8687442f1164925470cd0fa08083751069fdbd2ecf4bf24a7beae5ef"
+    },
+    {
+      "file": "examples/horn.csv",
+      "bytes": 911,
+      "sha256": "bfdec2fa44c930a10842e648aa9bdeccebc48c42514c9f19c78d50fc3005e51e"
+    },
+    {
+      "file": "examples/horn-plates.svg",
+      "bytes": 619895,
+      "sha256": "13bfb6027c061a7471e37e02a1bd2e753f337a72bd3046cbe6733fe33a82c503"
+    },
+    {
+      "file": "examples/horn-settings.json",
+      "bytes": 172,
+      "sha256": "020dc5b1ef8e8dd98bbfba4fc60ff66debc2d44ca853a7aae28650bb0108392d"
+    },
+    {
+      "file": "examples/horn-reading.html.gz",
+      "bytes": 2604377,
+      "sha256": "13bc3a1e29d616c3566979c2fc4120efa282b3aabe4ac05a3249462997934b86"
+    }
+  ],
+  "htmlDecompressedSha256": "f74a60fd226bc089ac10fa97647c2ed217d1b0ffddb5cf7d16ec25e0da701229",
+  "htmlDecompressedBytes": 3696662
+}

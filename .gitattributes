@@ -5,3 +5,6 @@ examples/circle.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,
 examples/circle-settings.json -text
 docs/circle-review/*/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 docs/circle-publication/*/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+examples/horn.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+examples/horn-settings.json -text
+docs/horn-review/*/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
