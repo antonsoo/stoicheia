@@ -30,6 +30,7 @@ export default defineConfig(async ({ command }) => {
     "measure.html",
     "circle.html",
     "horn.html",
+    "quadratrix.html",
     "LICENSE",
     "vite.config.ts",
     "tsconfig.json",
@@ -49,6 +50,7 @@ export default defineConfig(async ({ command }) => {
     "public/sources/measure/manifest.json",
     "public/sources/circle/manifest.json",
     "public/sources/horn/manifest.json",
+    "public/sources/quadratrix/manifest.json",
   ]) {
     const sourceManifest = JSON.parse(await readFile(manifest, "utf8")) as {
       pages: { file: string; bytes: number; sha256: string }[];
@@ -85,6 +87,7 @@ export default defineConfig(async ({ command }) => {
           measure: "measure.html",
           circle: "circle.html",
           horn: "horn.html",
+          quadratrix: "quadratrix.html",
         },
       },
     },

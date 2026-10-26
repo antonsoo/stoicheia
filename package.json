@@ -2,7 +2,7 @@
   "name": "@antonsoloviev/stoicheia",
   "version": "0.1.0",
   "private": true,
-  "description": "Read Euclid and Archimedes in Greek, Latin and English with working geometry and original printed pages.",
+  "description": "Read Euclid, Archimedes and Pappus in Greek, Latin and English with working geometry and original printed pages.",
   "type": "module",
   "author": "Anton Soloviev <anton@praviel.com>",
   "license": "MIT",
@@ -20,7 +20,9 @@
     "constructions",
     "archimedes",
     "circles",
-    "horn-angle"
+    "horn-angle",
+    "pappus",
+    "quadratrix"
   ],
   "engines": {
     "node": ">=24"
@@ -72,7 +74,11 @@
     "verify:horn": "node --import tsx scripts/horn-cases.ts | python3 scripts/horn-oracle.py",
     "verify:horn-sources": "python3 scripts/horn-sources.py",
     "test:horn": "node scripts/horn-browser.mjs",
-    "verify:horn-print": "python3 scripts/horn-print.py"
+    "verify:horn-print": "python3 scripts/horn-print.py",
+    "verify:quadratrix": "node --import tsx scripts/quadratrix-cases.ts | python3 scripts/quadratrix-oracle.py",
+    "verify:quadratrix-sources": "python3 scripts/quadratrix-sources.py",
+    "test:quadratrix": "node scripts/quadratrix-browser.mjs",
+    "test:quadratrix-upgrade": "node scripts/quadratrix-upgrade.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",
