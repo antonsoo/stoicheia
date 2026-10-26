@@ -1,0 +1,397 @@
+{
+  "checkedAt": "2026-10-26T00:28:09.225Z",
+  "scope": "Public production site and actual native downloads. Offline checks disable browser networking; they do not stop the public origin. No physical-printing claim.",
+  "base": "https://antonsoo.github.io/stoicheia/",
+  "edition": "02c8ec2b12e55c109fafc8f63535e534fd468ee418a3f106adce1787103a79c7",
+  "workerSha256": "76c7e2302db6e05e4ef8ee9d068397e2b90341045d323ef142ceefc8633f264d",
+  "configurations": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 1440,
+      "csv": [
+        {
+          "file": "chromium-1440/broken.csv",
+          "alteration": {
+            "branch": "outer",
+            "row": 1,
+            "value": "11823/20"
+          }
+        },
+        {
+          "file": "chromium-1440/inner-broken.csv",
+          "alteration": {
+            "branch": "inner",
+            "row": 4,
+            "value": "50431/25"
+          }
+        },
+        {
+          "file": "chromium-1440/printed.csv",
+          "alteration": null
+        },
+        {
+          "file": "chromium-1440/offline.csv",
+          "alteration": {
+            "branch": "outer",
+            "row": 1,
+            "value": "11823/20"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "page": 262,
+          "sha256": "bd5ae5c4e98a7d1d20386645b75a3bc4b6e076c702127c0404294b8e464019e2"
+        },
+        {
+          "page": 263,
+          "sha256": "b191e95add43c564c929de71f18d55e3474613733219111d7e0981170050436c"
+        },
+        {
+          "page": 264,
+          "sha256": "b34fd52b53c986e2bfc59f58ec180e76f0096cddab93eff0ea9a071dfcf1f7d3"
+        },
+        {
+          "page": 265,
+          "sha256": "7f2b5ea2d259d791890d8e27e5338e6d3e9042eaa28ca911bdf346ecb2b6ded2"
+        },
+        {
+          "page": 266,
+          "sha256": "bf8449c836b88aad5f0dd6638b8a0b903cfe900ed3015364e1ee2c9caf65a210"
+        },
+        {
+          "page": 267,
+          "sha256": "34ae521fd660260fc960dd913fa749aa64c0aa6344307bfcd1344af3b388eb79"
+        },
+        {
+          "page": 268,
+          "sha256": "fc2e314d22c0dfefaa93e8094b4c1a836e31481d0aba9cb89edcab3bac9f5318"
+        },
+        {
+          "page": 269,
+          "sha256": "76918a12a4b34ceda4f986d91b7f0f78f9d49e290d376bfc4eb5b8c8b3a6de0f"
+        },
+        {
+          "page": 270,
+          "sha256": "b149f2f35b8f830eb0b2f92aef7ca9e9d1b7d565cc50cbc77ab047fe0464d347"
+        },
+        {
+          "page": 271,
+          "sha256": "b5842e3b855a0598379edf37c3f2d844387d97b7d2b6b96e3fe5324f1cf42ace"
+        }
+      ],
+      "errors": [],
+      "svgFullMitNotice": true,
+      "reading": {
+        "bytes": 5659121,
+        "sha256": "649a81044d9cd034feea3db8a1307d65168aebb0272fdec426ef187c6a414368",
+        "verifiedImages": 10,
+        "remoteRequests": 0,
+        "pdf": "chromium-1440/reading.pdf"
+      },
+      "axeViolations": 0,
+      "cachedFiles": 141,
+      "offlineReading": {
+        "bytes": 5660110,
+        "sha256": "41337db2f52894238fd04fd31bd2e37162dfe067e0d77d1c92c0119ca1bf3ce4",
+        "verifiedImages": 10,
+        "remoteRequests": 0,
+        "pdf": "chromium-1440/offline-reading.pdf"
+      },
+      "offline": "browser networking disabled; reload, source, arithmetic, export, course and return succeeded"
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "csv": [
+        {
+          "file": "chromium-375/broken.csv",
+          "alteration": {
+            "branch": "outer",
+            "row": 1,
+            "value": "11823/20"
+          }
+        },
+        {
+          "file": "chromium-375/inner-broken.csv",
+          "alteration": {
+            "branch": "inner",
+            "row": 4,
+            "value": "50431/25"
+          }
+        },
+        {
+          "file": "chromium-375/printed.csv",
+          "alteration": null
+        },
+        {
+          "file": "chromium-375/offline.csv",
+          "alteration": {
+            "branch": "outer",
+            "row": 1,
+            "value": "11823/20"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "page": 262,
+          "sha256": "bd5ae5c4e98a7d1d20386645b75a3bc4b6e076c702127c0404294b8e464019e2"
+        },
+        {
+          "page": 263,
+          "sha256": "b191e95add43c564c929de71f18d55e3474613733219111d7e0981170050436c"
+        },
+        {
+          "page": 264,
+          "sha256": "b34fd52b53c986e2bfc59f58ec180e76f0096cddab93eff0ea9a071dfcf1f7d3"
+        },
+        {
+          "page": 265,
+          "sha256": "7f2b5ea2d259d791890d8e27e5338e6d3e9042eaa28ca911bdf346ecb2b6ded2"
+        },
+        {
+          "page": 266,
+          "sha256": "bf8449c836b88aad5f0dd6638b8a0b903cfe900ed3015364e1ee2c9caf65a210"
+        },
+        {
+          "page": 267,
+          "sha256": "34ae521fd660260fc960dd913fa749aa64c0aa6344307bfcd1344af3b388eb79"
+        },
+        {
+          "page": 268,
+          "sha256": "fc2e314d22c0dfefaa93e8094b4c1a836e31481d0aba9cb89edcab3bac9f5318"
+        },
+        {
+          "page": 269,
+          "sha256": "76918a12a4b34ceda4f986d91b7f0f78f9d49e290d376bfc4eb5b8c8b3a6de0f"
+        },
+        {
+          "page": 270,
+          "sha256": "b149f2f35b8f830eb0b2f92aef7ca9e9d1b7d565cc50cbc77ab047fe0464d347"
+        },
+        {
+          "page": 271,
+          "sha256": "b5842e3b855a0598379edf37c3f2d844387d97b7d2b6b96e3fe5324f1cf42ace"
+        }
+      ],
+      "errors": [],
+      "svgFullMitNotice": true,
+      "reading": {
+        "bytes": 5659121,
+        "sha256": "649a81044d9cd034feea3db8a1307d65168aebb0272fdec426ef187c6a414368",
+        "verifiedImages": 10,
+        "remoteRequests": 0,
+        "pdf": null
+      },
+      "axeViolations": 0,
+      "cachedFiles": 141,
+      "offlineReading": {
+        "bytes": 5660110,
+        "sha256": "41337db2f52894238fd04fd31bd2e37162dfe067e0d77d1c92c0119ca1bf3ce4",
+        "verifiedImages": 10,
+        "remoteRequests": 0,
+        "pdf": null
+      },
+      "offline": "browser networking disabled; reload, source, arithmetic, export, course and return succeeded"
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 1440,
+      "csv": [
+        {
+          "file": "firefox-1440/broken.csv",
+          "alteration": {
+            "branch": "outer",
+            "row": 1,
+            "value": "11823/20"
+          }
+        },
+        {
+          "file": "firefox-1440/inner-broken.csv",
+          "alteration": {
+            "branch": "inner",
+            "row": 4,
+            "value": "50431/25"
+          }
+        },
+        {
+          "file": "firefox-1440/printed.csv",
+          "alteration": null
+        },
+        {
+          "file": "firefox-1440/offline.csv",
+          "alteration": {
+            "branch": "outer",
+            "row": 1,
+            "value": "11823/20"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "page": 262,
+          "sha256": "bd5ae5c4e98a7d1d20386645b75a3bc4b6e076c702127c0404294b8e464019e2"
+        },
+        {
+          "page": 263,
+          "sha256": "b191e95add43c564c929de71f18d55e3474613733219111d7e0981170050436c"
+        },
+        {
+          "page": 264,
+          "sha256": "b34fd52b53c986e2bfc59f58ec180e76f0096cddab93eff0ea9a071dfcf1f7d3"
+        },
+        {
+          "page": 265,
+          "sha256": "7f2b5ea2d259d791890d8e27e5338e6d3e9042eaa28ca911bdf346ecb2b6ded2"
+        },
+        {
+          "page": 266,
+          "sha256": "bf8449c836b88aad5f0dd6638b8a0b903cfe900ed3015364e1ee2c9caf65a210"
+        },
+        {
+          "page": 267,
+          "sha256": "34ae521fd660260fc960dd913fa749aa64c0aa6344307bfcd1344af3b388eb79"
+        },
+        {
+          "page": 268,
+          "sha256": "fc2e314d22c0dfefaa93e8094b4c1a836e31481d0aba9cb89edcab3bac9f5318"
+        },
+        {
+          "page": 269,
+          "sha256": "76918a12a4b34ceda4f986d91b7f0f78f9d49e290d376bfc4eb5b8c8b3a6de0f"
+        },
+        {
+          "page": 270,
+          "sha256": "b149f2f35b8f830eb0b2f92aef7ca9e9d1b7d565cc50cbc77ab047fe0464d347"
+        },
+        {
+          "page": 271,
+          "sha256": "b5842e3b855a0598379edf37c3f2d844387d97b7d2b6b96e3fe5324f1cf42ace"
+        }
+      ],
+      "errors": [],
+      "svgFullMitNotice": true,
+      "reading": {
+        "bytes": 5659121,
+        "sha256": "649a81044d9cd034feea3db8a1307d65168aebb0272fdec426ef187c6a414368",
+        "verifiedImages": 10,
+        "remoteRequests": 0,
+        "pdf": null
+      },
+      "axeViolations": 0,
+      "cachedFiles": 141,
+      "offlineReading": {
+        "bytes": 5660110,
+        "sha256": "41337db2f52894238fd04fd31bd2e37162dfe067e0d77d1c92c0119ca1bf3ce4",
+        "verifiedImages": 10,
+        "remoteRequests": 0,
+        "pdf": null
+      },
+      "offline": "browser networking disabled; reload, source, arithmetic, export, course and return succeeded"
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 375,
+      "csv": [
+        {
+          "file": "firefox-375/broken.csv",
+          "alteration": {
+            "branch": "outer",
+            "row": 1,
+            "value": "11823/20"
+          }
+        },
+        {
+          "file": "firefox-375/inner-broken.csv",
+          "alteration": {
+            "branch": "inner",
+            "row": 4,
+            "value": "50431/25"
+          }
+        },
+        {
+          "file": "firefox-375/printed.csv",
+          "alteration": null
+        },
+        {
+          "file": "firefox-375/offline.csv",
+          "alteration": {
+            "branch": "outer",
+            "row": 1,
+            "value": "11823/20"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "page": 262,
+          "sha256": "bd5ae5c4e98a7d1d20386645b75a3bc4b6e076c702127c0404294b8e464019e2"
+        },
+        {
+          "page": 263,
+          "sha256": "b191e95add43c564c929de71f18d55e3474613733219111d7e0981170050436c"
+        },
+        {
+          "page": 264,
+          "sha256": "b34fd52b53c986e2bfc59f58ec180e76f0096cddab93eff0ea9a071dfcf1f7d3"
+        },
+        {
+          "page": 265,
+          "sha256": "7f2b5ea2d259d791890d8e27e5338e6d3e9042eaa28ca911bdf346ecb2b6ded2"
+        },
+        {
+          "page": 266,
+          "sha256": "bf8449c836b88aad5f0dd6638b8a0b903cfe900ed3015364e1ee2c9caf65a210"
+        },
+        {
+          "page": 267,
+          "sha256": "34ae521fd660260fc960dd913fa749aa64c0aa6344307bfcd1344af3b388eb79"
+        },
+        {
+          "page": 268,
+          "sha256": "fc2e314d22c0dfefaa93e8094b4c1a836e31481d0aba9cb89edcab3bac9f5318"
+        },
+        {
+          "page": 269,
+          "sha256": "76918a12a4b34ceda4f986d91b7f0f78f9d49e290d376bfc4eb5b8c8b3a6de0f"
+        },
+        {
+          "page": 270,
+          "sha256": "b149f2f35b8f830eb0b2f92aef7ca9e9d1b7d565cc50cbc77ab047fe0464d347"
+        },
+        {
+          "page": 271,
+          "sha256": "b5842e3b855a0598379edf37c3f2d844387d97b7d2b6b96e3fe5324f1cf42ace"
+        }
+      ],
+      "errors": [],
+      "svgFullMitNotice": true,
+      "reading": {
+        "bytes": 5659121,
+        "sha256": "649a81044d9cd034feea3db8a1307d65168aebb0272fdec426ef187c6a414368",
+        "verifiedImages": 10,
+        "remoteRequests": 0,
+        "pdf": null
+      },
+      "axeViolations": 0,
+      "cachedFiles": 141,
+      "offlineReading": {
+        "bytes": 5660110,
+        "sha256": "41337db2f52894238fd04fd31bd2e37162dfe067e0d77d1c92c0119ca1bf3ce4",
+        "verifiedImages": 10,
+        "remoteRequests": 0,
+        "pdf": null
+      },
+      "offline": "browser networking disabled; reload, source, arithmetic, export, course and return succeeded"
+    }
+  ],
+  "chromiumLateSourceIgnored": true,
+  "chromiumSubstitutionRejected": true,
+  "firefoxLateSourceIgnored": true,
+  "firefoxSubstitutionRejected": true
+}

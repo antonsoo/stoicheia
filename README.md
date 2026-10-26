@@ -63,7 +63,7 @@ exercises and the original pages 50–53 complete the sequential course through 
 
 ## Keep the safe side
 
-The new **local** companion workshop at `circle.html` reads Archimedes'
+The **[Keep the safe side workshop](https://antonsoo.github.io/stoicheia/circle.html)** reads Archimedes'
 _Measurement of a Circle_ 3. It asks a different question from a many-digit pi
 calculator: **which direction must an approximation point for the proof to work?**
 
@@ -86,17 +86,19 @@ proof does not by itself establish that its final number is false.
   values and rejected steps. One script-free illustrated reading embeds both
   paths, the original comparison, proof, readings, source pages, font and licenses.
   Save the equal-scale polygon SVG too, or print the saved reading to A4.
-- The complete local eight-room production edition includes the new page and
+- The complete eight-room production edition includes the new page and
   sources offline. Source display and export reject a substituted image.
 
 In this checkout, run `npm ci` and `npm run dev`, then open
 `http://127.0.0.1:4327/stoicheia/circle.html`,
 or choose **Keep the safe side** from the course's companion workshops.
-This addition is committed locally; it has not been pushed or deployed.
-Existing publication records cover the earlier seven-room edition.
+The [publication review](docs/circle-publication.md) separately identifies the source,
+static branch, all 142 canonical files, public browser workflows and the
+seven-room-to-eight-room offline upgrade.
 
 [Source, arithmetic and limits](docs/circle-model.md) ·
 [Direct review and reproducible evidence](docs/circle-review.md) ·
+[Public edition and upgrade](docs/circle-publication.md) ·
 [Actual saved reading, gzip-compressed](examples/circle-reading.html.gz) ·
 [Printed reading](examples/circle-reading.pdf) ·
 [Matching editable record](examples/circle-settings.json) ·

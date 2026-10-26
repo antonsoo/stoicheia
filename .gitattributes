@@ -4,3 +4,4 @@ examples/common-measure.csv whitespace=blank-at-eol,blank-at-eof,space-before-ta
 examples/circle.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 examples/circle-settings.json -text
 docs/circle-review/*/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/circle-publication/*/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

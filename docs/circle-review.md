@@ -1,8 +1,8 @@
 # Circle workshop review
 
-Local implementation and direct review, 2026-10-25. This addition has not been
-pushed or deployed. Existing publication receipts describe the earlier seven-room edition.
-This review makes local claims.
+Local implementation and direct review, 2026-10-25. This review preserves the
+local implementation record. The later [publication review](circle-publication.md)
+separately records the public eight-room edition and upgrade.
 
 ## What the learner can do
 
@@ -143,8 +143,8 @@ gzip -dc examples/circle-reading.html.gz > /tmp/circle-reading.html
 Per-browser HTML/PDF paths in the browser receipt identify that
 execution's output directory; those large duplicate files are not all committed.
 The representative retained reading and PDF have their own byte identities.
-The canonical app link inside the saved file will require this room's publication;
-the reading itself is independent of that link.
+The canonical app link inside the saved file now opens the separately verified
+public room; the reading itself is independent of that link.
 
 The [development receipt](circle-review/development.json) separately exercised
 the actual Vite entry, source viewer, altered bound and JSON download at 375 px,

@@ -9,6 +9,9 @@ import AxeBuilder from "@axe-core/playwright";
 import { chromium, firefox } from "playwright";
 
 const out = path.resolve(process.argv[2] ?? "/tmp/stoicheia-circle");
+const hostedBase = process.argv[3];
+if (hostedBase)
+  assert.match(hostedBase, /^https:\/\/.+\/$/, "Hosted base must be HTTPS with a trailing slash");
 await mkdir(out, { recursive: true });
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
 const readings = JSON.parse(
@@ -33,14 +36,17 @@ assert(edition && files);
 assert(files.includes("/stoicheia/circle.html"));
 const report = {
   checkedAt: new Date().toISOString(),
-  scope:
-    "Local production build and actual downloaded artifacts. No public-hosting or physical-printing claim.",
+  scope: hostedBase
+    ? "Public production site and actual native downloads. Offline checks disable browser networking; they do not stop the public origin. No physical-printing claim."
+    : "Local production build and actual downloaded artifacts. No public-hosting or physical-printing claim.",
+  base: hostedBase ?? null,
   edition,
   workerSha256: hash(workerBytes),
   configurations: [],
 };
 
 async function serve() {
+  if (hostedBase) return { base: hostedBase, offline() {}, async close() {} };
   let online = true,
     requests = 0;
   const server = createServer(async (req, res) => {
@@ -362,13 +368,15 @@ for (const [engine, type] of [
         assert.deepEqual(inventory.paths, [...files].sort());
         config.cachedFiles = inventory.paths.length;
         server.offline();
-        assert.equal(
-          await fetch(server.base).then(
-            () => true,
-            () => false,
-          ),
-          false,
-        );
+        if (hostedBase) await context.setOffline(true);
+        else
+          assert.equal(
+            await fetch(server.base).then(
+              () => true,
+              () => false,
+            ),
+            false,
+          );
         await page.reload();
         await ready(page);
         await source(page, 271);
@@ -398,12 +406,13 @@ for (const [engine, type] of [
         await page.getByRole("link", { name: /Keep the safe side/ }).click();
         await page.locator("#ci-stage-heading").waitFor();
         await ready(page);
-        config.offline =
-          "origin connections destroyed; reload, source, arithmetic, export, course and return succeeded";
+        config.offline = hostedBase
+          ? "browser networking disabled; reload, source, arithmetic, export, course and return succeeded"
+          : "origin connections destroyed; reload, source, arithmetic, export, course and return succeeded";
         assert.deepEqual(errors, []);
         report.configurations.push(config);
         console.log(
-          `${engine} ${width}: controls, exact records, sources, native files and origin-disabled offline journey passed`,
+          `${engine} ${width}: controls, exact records, sources, native files and offline journey passed`,
         );
       } catch (error) {
         await page.screenshot({ path: path.join(folder, "failure.png") });
