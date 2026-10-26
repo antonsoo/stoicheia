@@ -1,0 +1,25 @@
+{
+  "scope": "Actual native files exported by Chromium with the origin disabled; HTML compressed losslessly with gzip mtime zero",
+  "artifacts": [
+    {
+      "file": "examples/circle-reading.html.gz",
+      "bytes": 3864792,
+      "sha256": "b5db5a69f67bbcfc9dffccd4c0db43479087fe24f1a92d5fb0bac12818043f1f"
+    },
+    {
+      "file": "examples/circle-reading.pdf",
+      "bytes": 3909501,
+      "sha256": "a7aa9dccc8aa4ce175ed19118751e08cbdd7b5bd2b858abd0c892c3b78a18d41"
+    },
+    {
+      "file": "examples/circle-settings.json",
+      "bytes": 236,
+      "sha256": "9eccad4919b7195dd32059d567ae07bb5c4b0ef37cab9766679598b2a6a660c0"
+    },
+    {
+      "file": "examples/circle.csv",
+      "bytes": 1712,
+      "sha256": "65b459c16bc73c98a0b1501e1e80951623fcd6445deaa2f7ec040e93e3bfdafc"
+    }
+  ]
+}

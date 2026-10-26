@@ -1,2 +1,6 @@
 # Preserve the actual CSV download, including its CRLF record endings.
 examples/common-measure.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# These retained native downloads must keep their exact bytes across checkouts.
+examples/circle.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+examples/circle-settings.json -text
+docs/circle-review/*/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

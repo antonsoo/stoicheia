@@ -61,6 +61,64 @@ exercises and the original pages 50–53 complete the sequential course through 
 [Model and review](docs/nested-review.md) · [Saved study](examples/stoicheia-I21-study.html) ·
 [Printed study](examples/stoicheia-I21-study.pdf).
 
+## Keep the safe side
+
+The new **local** companion workshop at `circle.html` reads Archimedes'
+_Measurement of a Circle_ 3. It asks a different question from a many-digit pi
+calculator: **which direction must an approximation point for the proof to work?**
+
+![The six-sided inner and outer polygons and the two directions of proof](docs/assets/circle-desktop.png)
+
+Begin with six sides, halve the angle four times, and inspect the exact
+arithmetic behind the two ninety-six-sided bounds. Then replace the printed
+`591 + 1/8` by `591.15`. The new hypotenuse fails its square check; the current
+twelve-sided perimeter bound still holds, but the next bisection loses its
+justification. Later locally safe steps cannot repair that chain. A failed
+proof does not by itself establish that its final number is false.
+- Two proof paths use reduced integer fractions. Polygon coordinates and
+  decimal labels serve display only. Every row distinguishes its local square
+  check, accumulated length estimates and current endpoint's actual status.
+- Eight Greek/Latin/English selections, sixteen contextual word notes and ten
+  complete 1880 pages connect the argument with its printed witness. The reader
+  retains the Latin statement's **sphaerae** against Greek **κύκλου**, and
+  explains why some printed equals signs cannot be exact numerical equalities.
+- Shared addresses and editable JSON preserve a trial. CSV retains all exact
+  values and rejected steps. One script-free illustrated reading embeds both
+  paths, the original comparison, proof, readings, source pages, font and licenses.
+  Save the equal-scale polygon SVG too, or print the saved reading to A4.
+- The complete local eight-room production edition includes the new page and
+  sources offline. Source display and export reject a substituted image.
+
+In this checkout, run `npm ci` and `npm run dev`, then open
+`http://127.0.0.1:4327/stoicheia/circle.html`,
+or choose **Keep the safe side** from the course's companion workshops.
+This addition is committed locally; it has not been pushed or deployed.
+Existing publication records cover the earlier seven-room edition.
+
+[Source, arithmetic and limits](docs/circle-model.md) ·
+[Direct review and reproducible evidence](docs/circle-review.md) ·
+[Actual saved reading, gzip-compressed](examples/circle-reading.html.gz) ·
+[Printed reading](examples/circle-reading.pdf) ·
+[Matching editable record](examples/circle-settings.json) ·
+[Exact trial ledger](examples/circle.csv).
+
+Decompress the HTML before opening it. This example retains the rejected
+`591.15` trial alongside the unchanged printed-number proof.
+
+```sh
+npm run verify:circle-bounds
+npm run verify:circle-sources -- --pdf /path/to/Archimedes_VOL_I.pdf
+npm run test:circle -- /tmp/stoicheia-circle
+python3 scripts/circle-bounds-oracle.py --browser /tmp/stoicheia-circle/review.json
+python3 scripts/circle-print.py /tmp/stoicheia-circle/chromium-1440/offline-reading.pdf
+```
+
+Omit `--pdf` to download the manifest-identified volume. Source reproduction and
+PDF inspection need Poppler; browser review needs the existing Playwright
+Chromium and Firefox installations. Build `dist/` before the browser command,
+and keep it unchanged during the review. The mathematical checker independently
+uses Python `Fraction` and 100-digit half-angle geometry; it imports no app code.
+
 ## A measure in common
 
 The [common-measure workshop](https://antonsoo.github.io/stoicheia/measure.html)

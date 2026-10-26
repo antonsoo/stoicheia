@@ -1,0 +1,49 @@
+{
+  "scope": "Native JSON and CSV downloads from actual saved HTML files with scripts and network disabled",
+  "checks": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "file": "reading.html",
+      "javaScript": false,
+      "network": false,
+      "jsonMatchesEmbeddedRecord": true,
+      "csvMatchesNativeWorkshopExport": true,
+      "jsonSha256": "c42429944d4f08dd5d5c71632147283e0f429c76f7f8c6cd2a1e3cbe48e0697f",
+      "csvSha256": "80ca4819fe40047cdd7097608683661a1ad46dc9905236407577d98e04eed9fc"
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "file": "offline-reading.html",
+      "javaScript": false,
+      "network": false,
+      "jsonMatchesEmbeddedRecord": true,
+      "csvMatchesNativeWorkshopExport": true,
+      "jsonSha256": "9eccad4919b7195dd32059d567ae07bb5c4b0ef37cab9766679598b2a6a660c0",
+      "csvSha256": "65b459c16bc73c98a0b1501e1e80951623fcd6445deaa2f7ec040e93e3bfdafc"
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "file": "reading.html",
+      "javaScript": false,
+      "network": false,
+      "jsonMatchesEmbeddedRecord": true,
+      "csvMatchesNativeWorkshopExport": true,
+      "jsonSha256": "c42429944d4f08dd5d5c71632147283e0f429c76f7f8c6cd2a1e3cbe48e0697f",
+      "csvSha256": "80ca4819fe40047cdd7097608683661a1ad46dc9905236407577d98e04eed9fc"
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "file": "offline-reading.html",
+      "javaScript": false,
+      "network": false,
+      "jsonMatchesEmbeddedRecord": true,
+      "csvMatchesNativeWorkshopExport": true,
+      "jsonSha256": "9eccad4919b7195dd32059d567ae07bb5c4b0ef37cab9766679598b2a6a660c0",
+      "csvSha256": "65b459c16bc73c98a0b1501e1e80951623fcd6445deaa2f7ec040e93e3bfdafc"
+    }
+  ]
+}
