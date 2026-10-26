@@ -2,7 +2,7 @@
   "name": "@antonsoloviev/stoicheia",
   "version": "0.1.0",
   "private": true,
-  "description": "Read Euclid in Greek, Latin and English; construct triangles and equal-area squares with interactive proofs.",
+  "description": "Read Euclid and Archimedes in Greek, Latin and English with working geometry and original printed pages.",
   "type": "module",
   "author": "Anton Soloviev <anton@praviel.com>",
   "license": "MIT",
@@ -17,7 +17,10 @@
     "ancient-greek",
     "latin",
     "education",
-    "constructions"
+    "constructions",
+    "archimedes",
+    "circles",
+    "horn-angle"
   ],
   "engines": {
     "node": ">=24"
@@ -65,7 +68,11 @@
     "verify:circle-sources": "python3 scripts/circle-sources.py",
     "test:circle": "node scripts/circle-browser.mjs",
     "verify:circle-print": "python3 scripts/circle-print.py",
-    "test:circle-upgrade": "node scripts/circle-upgrade.mjs"
+    "test:circle-upgrade": "node scripts/circle-upgrade.mjs",
+    "verify:horn": "node --import tsx scripts/horn-cases.ts | python3 scripts/horn-oracle.py",
+    "verify:horn-sources": "python3 scripts/horn-sources.py",
+    "test:horn": "node scripts/horn-browser.mjs",
+    "verify:horn-print": "python3 scripts/horn-print.py"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

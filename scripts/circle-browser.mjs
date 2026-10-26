@@ -286,6 +286,16 @@ for (const [engine, type] of [
           savedJson = JSON.parse((await save(page, "#ci-json", jsonFile)).toString());
         assert.equal(savedJson.state.alteration.value, "147781/250");
         await page.locator("#ci-share").click();
+        await page.locator('[data-stage="3"]').click();
+        assert.equal(
+          new URL(await page.locator("#ci-share-url").inputValue()).searchParams.get("stage"),
+          "3",
+        );
+        await page.locator('[data-stage="4"]').click();
+        assert.equal(
+          new URL(await page.locator("#ci-share-url").inputValue()).searchParams.get("stage"),
+          "4",
+        );
         const share = await page.locator("#ci-share-url").inputValue();
         await page.goto(share);
         assert.match(await page.locator("#ci-edit-status").textContent(), /147781\/250/);

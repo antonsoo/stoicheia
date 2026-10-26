@@ -46,3 +46,13 @@ drawings are original teaching work under MIT. Printed numerical values are
 not silently converted into exact equalities; transcription choices and the
 retained Latin/Greek discrepancy are explained in `docs/circle-model.md`.
 The existing locally bundled Noto Serif and complete OFL notice are reused.
+
+Euclid horn-angle workshop (`horn.html`):
+
+Six complete 1883 volume-I pages, pp.208–213, from the same Gerstein/Toronto
+Internet Archive scan identified above. Original PDF and whole-page identities
+are retained in `public/sources/horn/manifest.json`. The eight selected readings
+preserve the Greek corollary addition in editorial brackets and distinguish
+Heiberg’s Latin footnote from a parallel translation. Ancient text, Heiberg’s
+Latin and printed pages are public domain. New English, word notes, coordinate
+witness, diagrams, magnification and code are original teaching work under MIT.

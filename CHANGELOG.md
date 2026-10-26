@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-10-26
+
+- Add Euclid III.16: try a ray in the circle–tangent gap, inspect an exact
+  perpendicular-foot or second-crossing witness, and magnify a tiny interior
+  distance with equal horizontal and vertical units. Keep zero and outward
+  rays distinct from a positive angle in the gap.
+- Read eight Greek/Latin/English selections, sixteen word notes and six complete
+  1883 pages. Preserve the bracketed Greek addition and distinguish the Latin
+  editorial note from a translation. Save editable JSON, exact CSV, standalone
+  font-embedded SVG and a script-free illustrated reading with native data links.
+- Wrap source identities on phones; print the languages sequentially so copied
+  PDF text keeps complete passages. XML-escape compiled CSS in saved SVGs.
+- Keep visible circle and horn share links synchronized with later applied
+  changes, including the reading and source page.
+- Publish the Archimedes circle edition and catalogue discovery with separate
+  canonical-file, public-browser and offline-upgrade evidence.
+
 ## 2026-10-25
 
 - Add the local Archimedes circle workshop: six to ninety-six sides, exact

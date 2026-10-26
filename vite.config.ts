@@ -29,6 +29,7 @@ export default defineConfig(async ({ command }) => {
     "desk.html",
     "measure.html",
     "circle.html",
+    "horn.html",
     "LICENSE",
     "vite.config.ts",
     "tsconfig.json",
@@ -47,6 +48,7 @@ export default defineConfig(async ({ command }) => {
     "public/sources/mesolabe/manifest.json",
     "public/sources/measure/manifest.json",
     "public/sources/circle/manifest.json",
+    "public/sources/horn/manifest.json",
   ]) {
     const sourceManifest = JSON.parse(await readFile(manifest, "utf8")) as {
       pages: { file: string; bytes: number; sha256: string }[];
@@ -82,6 +84,7 @@ export default defineConfig(async ({ command }) => {
           desk: "desk.html",
           measure: "measure.html",
           circle: "circle.html",
+          horn: "horn.html",
         },
       },
     },
