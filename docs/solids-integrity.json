@@ -1,0 +1,27 @@
+{
+  "base": "http://127.0.0.1:4365/stoicheia/",
+  "results": [
+    {
+      "engine": "chromium",
+      "lateSourceIgnored": true,
+      "substitutedHTTP200SourceRefused": true,
+      "invalidSourceExportDownloads": 0,
+      "substitutedHTTP200FontRefused": true,
+      "recoveredCapturedReading": "/tmp/claude-1000/solids-integrity-final/chromium-captured.html",
+      "exportPreservedEarlierVertex": 2,
+      "newerVisibleVertex": 0,
+      "delayedImportPreservedNewerQ": 2
+    },
+    {
+      "engine": "firefox",
+      "lateSourceIgnored": true,
+      "substitutedHTTP200SourceRefused": true,
+      "invalidSourceExportDownloads": 0,
+      "substitutedHTTP200FontRefused": true,
+      "recoveredCapturedReading": "/tmp/claude-1000/solids-integrity-final/firefox-captured.html",
+      "exportPreservedEarlierVertex": 2,
+      "newerVisibleVertex": 0,
+      "delayedImportPreservedNewerQ": 2
+    }
+  ]
+}

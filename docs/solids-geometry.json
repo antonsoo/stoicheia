@@ -1,0 +1,66 @@
+{
+  "angleCases": 70,
+  "admittedUniformPairs": [[3, 3], [3, 4], [3, 5], [4, 3], [5, 3]],
+  "independentShortestEdgeMeshes": [
+    {
+      "id": "tetrahedron",
+      "vertices": 4,
+      "edges": 6,
+      "faces": 4,
+      "vertexDegrees": [3, 3, 3, 3],
+      "angleErrorDegrees": 7.105427357601002e-15,
+      "sumDeficitDegrees": "720"
+    },
+    {
+      "id": "octahedron",
+      "vertices": 6,
+      "edges": 12,
+      "faces": 8,
+      "vertexDegrees": [4, 4, 4, 4, 4, 4],
+      "angleErrorDegrees": 7.105427357601002e-15,
+      "sumDeficitDegrees": "720"
+    },
+    {
+      "id": "icosahedron",
+      "vertices": 12,
+      "edges": 30,
+      "faces": 20,
+      "vertexDegrees": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "angleErrorDegrees": 7.105427357601002e-15,
+      "sumDeficitDegrees": "720"
+    },
+    {
+      "id": "cube",
+      "vertices": 8,
+      "edges": 12,
+      "faces": 6,
+      "vertexDegrees": [3, 3, 3, 3, 3, 3, 3, 3],
+      "angleErrorDegrees": 0,
+      "sumDeficitDegrees": "720"
+    },
+    {
+      "id": "dodecahedron",
+      "vertices": 20,
+      "edges": 30,
+      "faces": 12,
+      "vertexDegrees": [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      "angleErrorDegrees": 1.4210854715202004e-14,
+      "sumDeficitDegrees": "720"
+    },
+    {
+      "id": "bipyramid",
+      "vertices": 5,
+      "edges": 9,
+      "faces": 6,
+      "vertexDegrees": [3, 3, 4, 4, 4],
+      "angleErrorDegrees": 2.1316282072803006e-14,
+      "sumDeficitDegrees": "720"
+    }
+  ],
+  "conditionalVertexInferences": 55,
+  "csvCases": 70,
+  "tetrahedronNets": 2,
+  "netEdgeMillimetres": 40,
+  "calibrationMillimetres": 50,
+  "physicalAssemblyVerified": false
+}

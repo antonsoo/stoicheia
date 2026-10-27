@@ -1,0 +1,98 @@
+{
+  "browserJourneys": 4,
+  "artifacts": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "wholeSourceImagesIdentical": 15,
+      "fontIdentical": true,
+      "completeLicenses": 2,
+      "scriptFreeNativeDownloads": 3,
+      "csv": {
+        "exactCases": 70,
+        "bipyramidVertices": 5
+      },
+      "sheet": {
+        "nets": 2,
+        "measuredFaceEdgesMillimetres": [
+          [40.0, 40.00000333300486, 40.00000333300486],
+          [40.0, 40.00000333300486, 40.00000333300486]
+        ],
+        "calibrationMillimetres": 50,
+        "physicalAssemblyVerified": false
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "wholeSourceImagesIdentical": 15,
+      "fontIdentical": true,
+      "completeLicenses": 2,
+      "scriptFreeNativeDownloads": 3,
+      "csv": {
+        "exactCases": 70,
+        "bipyramidVertices": 5
+      },
+      "sheet": {
+        "nets": 2,
+        "measuredFaceEdgesMillimetres": [
+          [40.0, 40.00000333300486, 40.00000333300486],
+          [40.0, 40.00000333300486, 40.00000333300486]
+        ],
+        "calibrationMillimetres": 50,
+        "physicalAssemblyVerified": false
+      }
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "wholeSourceImagesIdentical": 15,
+      "fontIdentical": true,
+      "completeLicenses": 2,
+      "scriptFreeNativeDownloads": 3,
+      "csv": {
+        "exactCases": 70,
+        "bipyramidVertices": 5
+      },
+      "sheet": {
+        "nets": 2,
+        "measuredFaceEdgesMillimetres": [
+          [40.0, 40.00000333300486, 40.00000333300486],
+          [40.0, 40.00000333300486, 40.00000333300486]
+        ],
+        "calibrationMillimetres": 50,
+        "physicalAssemblyVerified": false
+      }
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "wholeSourceImagesIdentical": 15,
+      "fontIdentical": true,
+      "completeLicenses": 2,
+      "scriptFreeNativeDownloads": 3,
+      "csv": {
+        "exactCases": 70,
+        "bipyramidVertices": 5
+      },
+      "sheet": {
+        "nets": 2,
+        "measuredFaceEdgesMillimetres": [
+          [40.0, 40.00000333300486, 40.00000333300486],
+          [40.0, 40.00000333300486, 40.00000333300486]
+        ],
+        "calibrationMillimetres": 50,
+        "physicalAssemblyVerified": false
+      }
+    }
+  ],
+  "pdf": {
+    "pages": 30,
+    "completeGreekLatinEnglishFields": 27,
+    "completeLicenses": 2,
+    "sourceCaptions": 15,
+    "originalJpegStreamsIdentical": 15,
+    "wordsWithinCheckedMargins": 3579,
+    "physicalPrintingVerified": false
+  }
+}

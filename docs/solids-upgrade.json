@@ -1,0 +1,52 @@
+{
+  "checkedAt": "2026-10-27T21:04:06.300Z",
+  "scope": "Actual eleven-room edition to twelve rooms; held/substituted new source, export refusal, existing-tab controller transition and origin-disabled recovery",
+  "previousWorker": "e43a889eb90f3f7feb787ff7073d34181b8c7256f58de35bae1eb9e188936bda",
+  "currentWorker": "5bbdb9eb07decb9b212a1206fa5638aa0c1ca4d9218f95df4db490e7d3fd1eb2",
+  "configurations": [
+    {
+      "savedReading": "/tmp/claude-1000/solids-upgrade-final-chromium-held.html",
+      "engine": "chromium",
+      "substitutedSource": false,
+      "heldSourceRequests": 2,
+      "refusedSubstitutedSourceAndExport": false,
+      "oldTabReloaded": true,
+      "cacheCount": 1,
+      "cachedFiles": 197,
+      "originDisabledTrial": true
+    },
+    {
+      "savedReading": "/tmp/claude-1000/solids-upgrade-final-chromium-substituted.html",
+      "engine": "chromium",
+      "substitutedSource": true,
+      "heldSourceRequests": 2,
+      "refusedSubstitutedSourceAndExport": true,
+      "oldTabReloaded": true,
+      "cacheCount": 1,
+      "cachedFiles": 197,
+      "originDisabledTrial": true
+    },
+    {
+      "savedReading": "/tmp/claude-1000/solids-upgrade-final-firefox-held.html",
+      "engine": "firefox",
+      "substitutedSource": false,
+      "heldSourceRequests": 2,
+      "refusedSubstitutedSourceAndExport": false,
+      "oldTabReloaded": true,
+      "cacheCount": 1,
+      "cachedFiles": 197,
+      "originDisabledTrial": true
+    },
+    {
+      "savedReading": "/tmp/claude-1000/solids-upgrade-final-firefox-substituted.html",
+      "engine": "firefox",
+      "substitutedSource": true,
+      "heldSourceRequests": 2,
+      "refusedSubstitutedSourceAndExport": true,
+      "oldTabReloaded": true,
+      "cacheCount": 1,
+      "cachedFiles": 197,
+      "originDisabledTrial": true
+    }
+  ]
+}

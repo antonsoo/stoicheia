@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297"><title>Two tetrahedra, six outside faces · Stoicheia cutting sheet</title><metadata>MIT License
+
+Copyright (c) 2026 Anton Soloviev
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &quot;Software&quot;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</metadata><rect width="210" height="297" fill="white"/><g font-family="sans-serif" fill="#222"><text x="15" y="16" font-size="5">Two tetrahedra. One hidden face pair.</text><text x="15" y="25" font-size="3.3">Print at 100%. Check the 50 mm bar before cutting.</text><g transform="translate(44 80)"><path d="M -20 34.64102 L 20 -34.64102 L 60 34.64102 Z" fill="none" stroke="#222" stroke-width=".35"/><path d="M 0 0 L 40 0 L 20 34.64102 Z" fill="#dfe9ed" stroke="#222" stroke-dasharray="2 1.3" stroke-width=".25"/><text x="20" y="17.32051" text-anchor="middle" font-size="3.5">SHARED BASE</text><text x="20" y="-40.64102" text-anchor="middle" font-size="4">TETRAHEDRON A · 40 mm edges</text></g><g transform="translate(44 177)"><path d="M -20 34.64102 L 20 -34.64102 L 60 34.64102 Z" fill="none" stroke="#222" stroke-width=".35"/><path d="M 0 0 L 40 0 L 20 34.64102 Z" fill="#dfe9ed" stroke="#222" stroke-dasharray="2 1.3" stroke-width=".25"/><text x="20" y="17.32051" text-anchor="middle" font-size="3.5">SHARED BASE</text><text x="20" y="-40.64102" text-anchor="middle" font-size="4">TETRAHEDRON B · 40 mm edges</text></g><path d="M 130 48 h 50 m -50 -2 v 4 m 50 -4 v 4" stroke="#222" stroke-width=".4"/><text x="155" y="43" text-anchor="middle" font-size="3.5">50 mm</text><text x="117" y="79" font-size="3.2"><tspan x="117">Solid boundary: cut.</tspan><tspan x="117" dy="6">Dashed lines: crease.</tspan><tspan x="117" dy="6">Fold each outer face up;</tspan><tspan x="117" dy="6">tape the free edges.</tspan><tspan x="117" dy="6">Make two tetrahedra.</tspan></text><text x="117" y="175" font-size="3.2"><tspan x="117">Place the shaded bases</tspan><tspan x="117" dy="6">together, tips on opposite</tspan><tspan x="117" dy="6">sides. Tape the join.</tspan><tspan x="117" dy="6">Count six outside faces.</tspan><tspan x="117" dy="6">Compare tips and belt.</tspan></text><text x="15" y="239" font-size="3.3">Each net has four equilateral triangles. The joined solid has six exterior faces:</text><text x="15" y="246" font-size="3.3">the two shaded base faces are internal. Tips meet three faces; belt vertices meet four.</text><text x="15" y="259" font-size="3.3">Modern coordinate-based teaching sheet; not an ancient folding instruction.</text><text x="15" y="266" font-size="3.3">Geometric dimensions verified in software; physical assembly and printing unverified.</text><text x="15" y="283" font-size="3">MIT · Copyright (c) 2026 Anton Soloviev · antonsoo.github.io/stoicheia/solids.html</text></g></svg>

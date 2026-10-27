@@ -1,0 +1,14 @@
+{
+  "format": "stoicheia-solids",
+  "version": 1,
+  "settings": {
+    "p": 3,
+    "q": 3,
+    "yaw": 26,
+    "pitch": 16,
+    "vertex": 2,
+    "example": "bipyramid",
+    "reading": 0,
+    "page": 337
+  }
+}
