@@ -2,10 +2,7 @@
   "source": "https://github.com/antonsoo/stoicheia.git",
   "commit": "7082a2edabff8e6f9c24db82cc484bc9c5d4a7f8",
   "node": "24.21.0",
-  "commands": [
-    "npm ci",
-    "npm run check"
-  ],
+  "commands": ["npm ci", "npm run check"],
   "checks": "lint, strict types, 95 tests, production build",
   "matchedFiles": 177,
   "sha256": {
