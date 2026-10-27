@@ -18,6 +18,9 @@ runtime files byte for byte. The retained native examples survived the clone
 unchanged; the documented `uv` inspection and deliberate-fault commands ran
 against the actual retained PDF and decompressed example HTML.
 
+[Public delivery and actual hosted exports](solids-pdf-publication.md) are
+recorded separately from the local structure review.
+
 ## What the actual file contains
 
 | Inspected property                                        | Actual result |

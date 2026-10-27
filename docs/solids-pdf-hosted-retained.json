@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-10-27T22:01:28.075784+00:00",
+  "sourceRevision": "e7126028947aeed6f8063ac5fb62c70a896524a2",
+  "files": [
+    {
+      "file": "examples/solids-reading.pdf",
+      "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/e7126028947aeed6f8063ac5fb62c70a896524a2/examples/solids-reading.pdf",
+      "bytes": 6882716,
+      "sha256": "e4be233c32088b161f41878e782a793ed523646870ad9cf2a71a98dc1217adbe",
+      "status": 200,
+      "actualBytes": 6882716,
+      "actualSha256": "e4be233c32088b161f41878e782a793ed523646870ad9cf2a71a98dc1217adbe",
+      "matches": true
+    },
+    {
+      "file": "examples/solids-reading.html.gz",
+      "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/e7126028947aeed6f8063ac5fb62c70a896524a2/examples/solids-reading.html.gz",
+      "bytes": 6977935,
+      "sha256": "b7d103ae2d2a1f7c0f17e189961948d8a0e4b5c0c8e5942a5cfa11c6a99c1c11",
+      "status": 200,
+      "actualBytes": 6977935,
+      "actualSha256": "b7d103ae2d2a1f7c0f17e189961948d8a0e4b5c0c8e5942a5cfa11c6a99c1c11",
+      "matches": true
+    },
+    {
+      "file": "docs/assets/solids-pdf-language.png",
+      "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/e7126028947aeed6f8063ac5fb62c70a896524a2/docs/assets/solids-pdf-language.png",
+      "bytes": 128591,
+      "sha256": "d8f7dd2883699d1f729fd84aea9f3401835bcf06befee2ca30ee50963f4add4e",
+      "status": 200,
+      "actualBytes": 128591,
+      "actualSha256": "d8f7dd2883699d1f729fd84aea9f3401835bcf06befee2ca30ee50963f4add4e",
+      "matches": true
+    },
+    {
+      "file": "docs/assets/solids-pdf-table.png",
+      "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/e7126028947aeed6f8063ac5fb62c70a896524a2/docs/assets/solids-pdf-table.png",
+      "bytes": 146033,
+      "sha256": "c9fc5520c6fc6368d155dd09a51226cf0b29f2adcfbf79c35e1d1840718fd076",
+      "status": 200,
+      "actualBytes": 146033,
+      "actualSha256": "c9fc5520c6fc6368d155dd09a51226cf0b29f2adcfbf79c35e1d1840718fd076",
+      "matches": true
+    }
+  ]
+}
