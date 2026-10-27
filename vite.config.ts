@@ -148,12 +148,50 @@ self.addEventListener("message", event => {
     event.ports[0].postMessage({ type: "STOICHEIA_EDITION", edition: EDITION, complete: saved.every(Boolean) });
   }).catch(() => event.ports[0].postMessage({ type: "STOICHEIA_EDITION", edition: EDITION, complete: false })));
 });
+// A saved lesson remains usable when the connection accepts a request but stalls.
+// Cache lookup must not recreate a retired edition. Only a real saved page can
+// supply this fallback; an uncached navigation keeps its normal network result.
+async function navigationResponse(request, page) {
+  const saved = await caches.match(page, { cacheName: CACHE }).catch(() => undefined);
+  if (!saved) return fetch(request);
+  // The edition can be evicted or retired while the origin request is pending.
+  // Re-read at the moment of fallback instead of resurrecting that snapshot.
+  const fallback = async () => (await caches.match(page, { cacheName: CACHE }).catch(() => undefined)) || Response.error();
+  const controller = new AbortController();
+  const cancel = () => controller.abort();
+  request.signal.addEventListener("abort", cancel, { once: true });
+  if (request.signal.aborted) cancel();
+  let deadline;
+  try {
+    const live = fetch(request, { signal: controller.signal }).then(async response => {
+      if (response.status >= 500) {
+        controller.abort();
+        return fallback();
+      }
+      // Wait for a successful HTML body as well as its headers. Return the
+      // original response, preserving redirect metadata and its response URL.
+      // Explicit 4xx responses retain their normal meaning.
+      if (response.ok) await response.clone().arrayBuffer();
+      return response;
+    }).catch(() => fallback());
+    const expired = new Promise(resolve => {
+      deadline = setTimeout(() => {
+        controller.abort();
+        resolve(fallback());
+      }, 2000);
+    });
+    return await Promise.race([live, expired]);
+  } finally {
+    clearTimeout(deadline);
+    request.signal.removeEventListener("abort", cancel);
+  }
+}
 self.addEventListener("fetch", event => {
   const url = new URL(event.request.url);
   if (event.request.method !== "GET" || url.origin !== self.location.origin || !url.pathname.startsWith(BASE)) return;
   if (event.request.mode === "navigate") {
     const page = url.pathname === BASE ? BASE + "index.html" : url.pathname;
-    event.respondWith(fetch(event.request).catch(() => caches.open(CACHE).then(async cache => (await cache.match(page)) || Response.error())));
+    event.respondWith(navigationResponse(event.request, page));
   } else if (FILES.includes(url.pathname)) {
     event.respondWith(caches.open(CACHE).then(cache => cache.match(url.pathname)).then(cached => cached || fetch(event.request)));
   }

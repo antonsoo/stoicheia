@@ -1,0 +1,60 @@
+{
+  "checkedAt": "2026-10-27T22:33:43.943Z",
+  "scope": "Actual eleven-room edition to twelve rooms; held/substituted new source, export refusal, existing-tab controller transition and origin-disabled recovery",
+  "previousWorker": "e43a889eb90f3f7feb787ff7073d34181b8c7256f58de35bae1eb9e188936bda",
+  "currentWorker": "b20715ffee553e45d8a359701ea9ed9962eae30545e0e92d6340def247ce8b19",
+  "configurations": [
+    {
+      "engine": "chromium",
+      "substitutedSource": false,
+      "heldSourceRequests": 2,
+      "refusedSubstitutedSourceAndExport": false,
+      "oldTabReloaded": true,
+      "cacheCount": 1,
+      "cachedFiles": 197,
+      "originDisabledTrial": true,
+      "savedReadingFile": "review-chromium-held.html",
+      "savedReadingBytes": 9587906,
+      "savedReadingSha256": "abb3d258c1df958b360c03f642dbc2b6afd2b87d26ae184032b5604dc9406739"
+    },
+    {
+      "engine": "chromium",
+      "substitutedSource": true,
+      "heldSourceRequests": 2,
+      "refusedSubstitutedSourceAndExport": true,
+      "oldTabReloaded": true,
+      "cacheCount": 1,
+      "cachedFiles": 197,
+      "originDisabledTrial": true,
+      "savedReadingFile": "review-chromium-substituted.html",
+      "savedReadingBytes": 9587906,
+      "savedReadingSha256": "abb3d258c1df958b360c03f642dbc2b6afd2b87d26ae184032b5604dc9406739"
+    },
+    {
+      "engine": "firefox",
+      "substitutedSource": false,
+      "heldSourceRequests": 2,
+      "refusedSubstitutedSourceAndExport": false,
+      "oldTabReloaded": true,
+      "cacheCount": 1,
+      "cachedFiles": 197,
+      "originDisabledTrial": true,
+      "savedReadingFile": "review-firefox-held.html",
+      "savedReadingBytes": 9587906,
+      "savedReadingSha256": "abb3d258c1df958b360c03f642dbc2b6afd2b87d26ae184032b5604dc9406739"
+    },
+    {
+      "engine": "firefox",
+      "substitutedSource": true,
+      "heldSourceRequests": 2,
+      "refusedSubstitutedSourceAndExport": true,
+      "oldTabReloaded": true,
+      "cacheCount": 1,
+      "cachedFiles": 197,
+      "originDisabledTrial": true,
+      "savedReadingFile": "review-firefox-substituted.html",
+      "savedReadingBytes": 9587906,
+      "savedReadingSha256": "abb3d258c1df958b360c03f642dbc2b6afd2b87d26ae184032b5604dc9406739"
+    }
+  ]
+}

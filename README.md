@@ -49,6 +49,10 @@ whole 1885 pages. Keep your view and exact angles as editable JSON or CSV, save
 a script-free illustrated reading, or download two 40 mm tetrahedron nets with
 a 50 mm calibration bar. Source and font identities are verified before use.
 The complete offline edition now includes twelve rooms.
+Once saved, lessons can reload through stalled document responses and temporary
+server errors using their verified copy after a two-second network window. The
+[offline navigation review](docs/offline-navigation.md) records the response
+rules and actual browser evidence.
 
 [Source, assumptions and geometry](docs/solids-model.md) ·
 [Actual illustrated reading, gzip](examples/solids-reading.html.gz) ·

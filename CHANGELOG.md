@@ -2,6 +2,10 @@
 
 ## 2026-10-27
 
+- Keep saved lessons usable when document headers or bodies stall, or the server
+  returns a temporary error. Abort overdue requests and re-read the retained
+  edition before fallback; preserve explicit deletions and uncached failures.
+
 - Retain tagged, bookmarked reading PDFs with Greek/Latin paragraph languages,
   scoped table headers, described figures and original source-image bytes. Keep
   short tables together and inspect actual structure-to-content bindings.

@@ -1,0 +1,80 @@
+{
+  "upgrades": [
+    {
+      "engine": "chromium",
+      "substitutedSource": false,
+      "wholeSourceImagesIdentical": 15,
+      "fontIdentical": true,
+      "csv": {
+        "exactCases": 70,
+        "bipyramidVertices": 5
+      },
+      "sheet": {
+        "nets": 2,
+        "measuredFaceEdgesMillimetres": [
+          [40.0, 40.00000333300486, 40.00000333300486],
+          [40.0, 40.00000333300486, 40.00000333300486]
+        ],
+        "calibrationMillimetres": 50,
+        "physicalAssemblyVerified": false
+      }
+    },
+    {
+      "engine": "chromium",
+      "substitutedSource": true,
+      "wholeSourceImagesIdentical": 15,
+      "fontIdentical": true,
+      "csv": {
+        "exactCases": 70,
+        "bipyramidVertices": 5
+      },
+      "sheet": {
+        "nets": 2,
+        "measuredFaceEdgesMillimetres": [
+          [40.0, 40.00000333300486, 40.00000333300486],
+          [40.0, 40.00000333300486, 40.00000333300486]
+        ],
+        "calibrationMillimetres": 50,
+        "physicalAssemblyVerified": false
+      }
+    },
+    {
+      "engine": "firefox",
+      "substitutedSource": false,
+      "wholeSourceImagesIdentical": 15,
+      "fontIdentical": true,
+      "csv": {
+        "exactCases": 70,
+        "bipyramidVertices": 5
+      },
+      "sheet": {
+        "nets": 2,
+        "measuredFaceEdgesMillimetres": [
+          [40.0, 40.00000333300486, 40.00000333300486],
+          [40.0, 40.00000333300486, 40.00000333300486]
+        ],
+        "calibrationMillimetres": 50,
+        "physicalAssemblyVerified": false
+      }
+    },
+    {
+      "engine": "firefox",
+      "substitutedSource": true,
+      "wholeSourceImagesIdentical": 15,
+      "fontIdentical": true,
+      "csv": {
+        "exactCases": 70,
+        "bipyramidVertices": 5
+      },
+      "sheet": {
+        "nets": 2,
+        "measuredFaceEdgesMillimetres": [
+          [40.0, 40.00000333300486, 40.00000333300486],
+          [40.0, 40.00000333300486, 40.00000333300486]
+        ],
+        "calibrationMillimetres": 50,
+        "physicalAssemblyVerified": false
+      }
+    }
+  ]
+}
