@@ -7,7 +7,7 @@
       "substitutedHTTP200SourceRefused": true,
       "invalidSourceExportDownloads": 0,
       "substitutedHTTP200FontRefused": true,
-      "recoveredCapturedReading": "/tmp/claude-1000/solids-integrity-final/chromium-captured.html",
+      "recoveredCapturedReading": "/tmp/claude-1000/solids-release-integrity/chromium-captured.html",
       "exportPreservedEarlierVertex": 2,
       "newerVisibleVertex": 0,
       "delayedImportPreservedNewerQ": 2
@@ -18,7 +18,7 @@
       "substitutedHTTP200SourceRefused": true,
       "invalidSourceExportDownloads": 0,
       "substitutedHTTP200FontRefused": true,
-      "recoveredCapturedReading": "/tmp/claude-1000/solids-integrity-final/firefox-captured.html",
+      "recoveredCapturedReading": "/tmp/claude-1000/solids-release-integrity/firefox-captured.html",
       "exportPreservedEarlierVertex": 2,
       "newerVisibleVertex": 0,
       "delayedImportPreservedNewerQ": 2

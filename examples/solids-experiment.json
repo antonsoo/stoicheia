@@ -4,8 +4,8 @@
   "settings": {
     "p": 3,
     "q": 3,
-    "yaw": 26,
-    "pitch": 16,
+    "yaw": 11,
+    "pitch": 6,
     "vertex": 2,
     "example": "bipyramid",
     "reading": 0,
