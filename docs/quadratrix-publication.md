@@ -3,16 +3,16 @@
 The [public workshop](https://antonsoo.github.io/stoicheia/quadratrix.html) was
 checked on 2026-10-26 UTC after the owner explicitly authorized pushing.
 
-| Boundary | Observation |
-| --- | --- |
-| Source | `af1fa96a0df0025526296a7b75232b8b23266d5c`, including the public-browser replay |
-| Static branch | `0aa92ca`, a normal fast-forward deployment retaining older hashed assets |
-| Fresh remote source | HTTPS clone, fresh dependencies, Node 24.21.0; lint, types, 91 tests and production build passed; all 167 output paths and bytes match the reviewed build |
-| Canonical public responses | All 167 current build files match length and SHA-256 at canonical URLs, including entry-page aliases checked before and after the inventory |
-| Public browser journey | Chromium 153.0.8010.12 and Firefox 155.0, each at 1440 and 375 pixels: course link, real controls, complete source identities, JSON import and rejection, SVG/CSV/HTML downloads, sharing and browser history |
-| Public offline scope | Browser networking disabled after complete current-edition caching; reload, another source page, new downloads and return through the course work without networking. The public server was not stopped. |
-| Actual saved data | 196 CSV rows and 28 drawn states agree with independent 90-digit line calculations; four native illustrated HTML downloads are byte-identical to the retained example |
-| Actual public print | 19 pages; all sixteen complete Greek/Latin passages in order, ten source captions, embedded fonts and text within checked margins |
+| Boundary                   | Observation                                                                                                                                                                                                   |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Source                     | `af1fa96a0df0025526296a7b75232b8b23266d5c`, including the public-browser replay                                                                                                                               |
+| Static branch              | `0aa92ca`, a normal fast-forward deployment retaining older hashed assets                                                                                                                                     |
+| Fresh remote source        | HTTPS clone, fresh dependencies, Node 24.21.0; lint, types, 91 tests and production build passed; all 167 output paths and bytes match the reviewed build                                                     |
+| Canonical public responses | All 167 current build files match length and SHA-256 at canonical URLs, including entry-page aliases checked before and after the inventory                                                                   |
+| Public browser journey     | Chromium 153.0.8010.12 and Firefox 155.0, each at 1440 and 375 pixels: course link, real controls, complete source identities, JSON import and rejection, SVG/CSV/HTML downloads, sharing and browser history |
+| Public offline scope       | Browser networking disabled after complete current-edition caching; reload, another source page, new downloads and return through the course work without networking. The public server was not stopped.      |
+| Actual saved data          | 196 CSV rows and 28 drawn states agree with independent 90-digit line calculations; four native illustrated HTML downloads are byte-identical to the retained example                                         |
+| Actual public print        | 19 pages; all sixteen complete Greek/Latin passages in order, ten source captions, embedded fonts and text within checked margins                                                                             |
 
 [Canonical file identities](quadratrix-publication/hosted-files.json) ·
 [Four public journeys](quadratrix-publication/browser.json) ·

@@ -22,6 +22,32 @@ geometry and is beginning Greek or Latin.
 [Source repository](https://github.com/antonsoo/stoicheia). The app is a static
 site; no package registry installation is required.
 
+## Thousands agree. One can disagree.
+
+The new **Book V ratio workshop** asks you to find a counterexample to two ratios
+being equal. A square’s diagonal to its side and 99 lengths to 70 agree in all
+4,761 comparisons with multipliers through 69. Extend the square through 100:
+`70√2 < 99`, while `70 × 99 = 99 × 70`. One disagreement defeats the condition
+that every pair of equimultiples agree.
+
+This room is prepared in the current checkout; publication is not claimed.
+After `npm run dev`, open `http://127.0.0.1:4327/stoicheia/ratios.html`, or choose
+**Thousands agree. One can disagree.** from the course’s companion workshops.
+- Choose the two multipliers independently, inspect exact integer comparisons,
+  and enlarge subpixel endpoint differences with a labeled microscope.
+- Search a finite square, distinguish an equality counterexample from the
+  stricter witness in V.7, and compare fractions on both sides of √2.
+- Try the threefold pair `3√2 : 3`. A general scaling argument establishes the
+  condition for every multiplier without requiring a common length measure.
+- Read definitions 3–7 in Greek, Heiberg’s Latin and new English, with contextual
+  word notes and five complete source images from the 1884 volume. The Latin
+  wording and editorial algebra are distinguished from the Greek condition.
+- Keep a script-free illustrated reading, editable JSON and a compact exact
+  search CSV. Reopen the settings, copy an explicit share link, or work offline
+  after the complete edition has been saved.
+
+[Source and model](docs/ratios-model.md) · [Direct review](docs/ratios-review.md).
+
 ## The point the motion cannot draw
 
 The new **quadratrix workshop** reads Pappus, _Collection_ IV.30–32. One line

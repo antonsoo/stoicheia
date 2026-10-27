@@ -1,5 +1,19 @@
 # Third-party materials
 
+Book V ratios workshop (`ratios.html`):
+
+Euclid, _Euclidis opera omnia, Elementa_, volume II, _Libros V–IX continens_,
+edited and translated into Latin by J. L. Heiberg, Leipzig: B. G. Teubner, 1884.
+Public domain. University of Toronto, Gerstein Science Information Centre copy,
+digitized by Internet Archive:
+https://archive.org/details/euclidisoperaomn02eucluoft.
+The title and printed pp.2–5 are complete reductions without cropping or
+retouching. Their identities and original PDF are pinned in
+`public/sources/ratios/manifest.json`. Greek, Latin and scans remain public domain;
+new English, contextual notes, examples, code and diagrams are MIT. Heiberg’s
+algebraic footnotes are editorial explanations, distinguished from Euclid’s text.
+The existing Noto Serif and complete OFL notice are reused in portable readings.
+
 Greek text, Latin translation and source page images:
 
 Euclid, _Euclidis opera omnia_, vol. I, ed. and Latin translation J. L. Heiberg,

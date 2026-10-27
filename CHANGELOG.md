@@ -2,6 +2,18 @@
 
 ## 2026-10-26
 
+- Add the Book V equimultiple experiment: two independent integer multipliers,
+  exact comparisons, bounded search and separate witnesses for failing equality
+  and satisfying V.7’s greater-ratio condition. Pair endpoint magnification with
+  exact text, and give a general scaling argument beyond finite agreement.
+- Retain seven Greek/Latin/English reading units, contextual word notes, four
+  complete definition pages and the title from Heiberg’s 1884 volume II. Preserve
+  the wording difference around “whatever multiplication” and identify the
+  nineteenth-century algebraic footnotes as editorial.
+- Save source-verified illustrated HTML, native JSON and compact exact search
+  CSV; restore validated records and share links, and include the room in the
+  complete offline edition. Prepare locally without a publication claim.
+
 - Add Pappus’s quadratrix workshop: uniform rotation and translation, exact
   final-instant line relations, two altered timing experiments and a separately
   justified limiting intercept. Do not substitute the limit for a non-unique
