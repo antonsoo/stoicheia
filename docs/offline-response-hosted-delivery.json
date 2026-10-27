@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-10-27T22:52:44.947109+00:00",
+  "sourceRevision": "29ce01850c71489b1ed93e5db681d67970bf6ec6",
+  "sourceWorkflowRuns": [
+    {
+      "id": 40597747209,
+      "name": "CI",
+      "url": "https://github.com/antonsoo/stoicheia/actions/runs/40597747209",
+      "status": "completed",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "name": "check",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": 40597747188,
+      "name": "Pages",
+      "url": "https://github.com/antonsoo/stoicheia/actions/runs/40597747188",
+      "status": "completed",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": []
+        }
+      ]
+    }
+  ],
+  "legacyPagesBuild": {
+    "status": "built",
+    "commit": "84b75cdaec40aa960b54aa32e95717081bda9aee",
+    "created_at": "2026-10-27T22:51:20Z",
+    "updated_at": "2026-10-27T22:51:45Z"
+  },
+  "limit": "Source workflow failures with empty step lists are not passing checks. A successful branch Pages build and actual hosted-byte/browser evidence are separate claims."
+}

@@ -1,0 +1,730 @@
+{
+  "pdf": "reading.pdf",
+  "pdfSha256": "c2f8caa835c9580b04fc6865eb48fbb04f75f0244f871d53962919d31ed4a07f",
+  "htmlSha256": "62a3cda970c4ceaff2b0a50595eb9c6bada286639225efac841800c79edfa91b",
+  "parser": "pypdf 6.18.0",
+  "pages": 30,
+  "documentLanguage": "en",
+  "structureCounts": {
+    "/Document": 1,
+    "/NonStruct": 226,
+    "/H1": 1,
+    "/P": 99,
+    "/H2": 6,
+    "/Figure": 35,
+    "/H3": 12,
+    "/Caption": 19,
+    "/Table": 2,
+    "/TR": 10,
+    "/TH": 15,
+    "/TD": 21,
+    "/Art": 9,
+    "/Link": 2
+  },
+  "boundReadingFields": [
+    {
+      "language": "grc",
+      "text": "Λέγω δή, ὅτι παρὰ τὰ εἰρημένα πέντε σχήματα οὐ συσταθήσεται ἕτερον σχῆμα περιεχόμενον ὑπὸ ἰσοπλεύρων τε καὶ ἰσογωνίων ἴσων ἀλλήλοις.",
+      "pageContent": [
+        {
+          "page": 4,
+          "mcid": 7
+        }
+      ]
+    },
+    {
+      "language": "la",
+      "text": "Iam dico, praeter quinque figuras, quas nominauimus, nullam aliam construi posse polygonis et aequilateris et aequiangulis inter se aequalibus comprehensam.",
+      "pageContent": [
+        {
+          "page": 4,
+          "mcid": 9
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "text": "I now say that, besides the five figures already mentioned, no other figure will be constructed that is enclosed by equilateral and equiangular figures equal to one another.",
+      "pageContent": [
+        {
+          "page": 4,
+          "mcid": 2
+        },
+        {
+          "page": 4,
+          "mcid": 10
+        }
+      ]
+    },
+    {
+      "language": "grc",
+      "text": "Ὑπὸ μὲν γὰρ δύο τριγώνων ἢ ὅλως ἐπιπέδων στερεὰ γωνία οὐ συνίσταται.",
+      "pageContent": [
+        {
+          "page": 5,
+          "mcid": 5
+        }
+      ]
+    },
+    {
+      "language": "la",
+      "text": "Nam ex duobus triangulis aut omnino figuris planis angulus solidus construi nequit.",
+      "pageContent": [
+        {
+          "page": 5,
+          "mcid": 7
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "text": "For a solid angle is not formed by two triangles, or by two plane figures in general.",
+      "pageContent": [
+        {
+          "page": 5,
+          "mcid": 1
+        },
+        {
+          "page": 5,
+          "mcid": 8
+        }
+      ]
+    },
+    {
+      "language": "grc",
+      "text": "ὑπὸ δὲ τριῶν τριγώνων ἡ τῆς πυραμίδος, ὑπὸ δὲ τεσσάρων ἡ τοῦ ὀκταέδρου, ὑπὸ δὲ πέντε ἡ τοῦ εἰκοσαέδρου·",
+      "pageContent": [
+        {
+          "page": 6,
+          "mcid": 5
+        }
+      ]
+    },
+    {
+      "language": "la",
+      "text": "ex tribus uero triangulis angulus pyramidis construitur, ex quattuor octaedri, ex quinque icosaedri.",
+      "pageContent": [
+        {
+          "page": 6,
+          "mcid": 7
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "text": "From three triangles comes the corner of the pyramid; from four, that of the octahedron; from five, that of the icosahedron.",
+      "pageContent": [
+        {
+          "page": 6,
+          "mcid": 1
+        },
+        {
+          "page": 6,
+          "mcid": 8
+        }
+      ]
+    },
+    {
+      "language": "grc",
+      "text": "οὔσης γὰρ τῆς τοῦ ἰσοπλεύρου τριγώνου γωνίας διμοίρου ὀρθῆς ἔσονται αἱ ἓξ τέσσαρσιν ὀρθαῖς ἴσαι· ὅπερ ἀδύνατον·",
+      "pageContent": [
+        {
+          "page": 7,
+          "mcid": 5
+        }
+      ]
+    },
+    {
+      "language": "la",
+      "text": "nam cum angulus trianguli aequilateri duae partes sint recti, sex anguli quattuor rectis aequales erunt; quod fieri non potest;",
+      "pageContent": [
+        {
+          "page": 7,
+          "mcid": 7
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "text": "For, since the angle of an equilateral triangle is two thirds of a right angle, the six angles will equal four right angles—which is impossible here.",
+      "pageContent": [
+        {
+          "page": 7,
+          "mcid": 1
+        },
+        {
+          "page": 7,
+          "mcid": 8
+        }
+      ]
+    },
+    {
+      "language": "grc",
+      "text": "ἅπασα γὰρ στερεὰ γωνία ὑπὸ ἐλασσόνων ἢ τεσσάρων ὀρθῶν περιέχεται.",
+      "pageContent": [
+        {
+          "page": 8,
+          "mcid": 5
+        }
+      ]
+    },
+    {
+      "language": "la",
+      "text": "nam omnis angulus solidus minus quattuor rectis comprehenditur.",
+      "pageContent": [
+        {
+          "page": 8,
+          "mcid": 7
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "text": "For every solid angle is enclosed by face angles whose sum is less than four right angles.",
+      "pageContent": [
+        {
+          "page": 8,
+          "mcid": 1
+        },
+        {
+          "page": 8,
+          "mcid": 8
+        }
+      ]
+    },
+    {
+      "language": "grc",
+      "text": "ὑπὸ δὲ τετραγώνων τριῶν ἡ τοῦ κύβου γωνία περιέχεται· ὑπὸ δὲ τεσσάρων ἀδύνατον· ἔσονται γὰρ πάλιν τέσσαρες ὀρθαί.",
+      "pageContent": [
+        {
+          "page": 9,
+          "mcid": 5
+        }
+      ]
+    },
+    {
+      "language": "la",
+      "text": "tribus autem quadratis angulus cubi comprehenditur. quattuor autem nullus; nam rursus quattuor recti erunt.",
+      "pageContent": [
+        {
+          "page": 9,
+          "mcid": 7
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "text": "The corner of the cube is enclosed by three squares. Four cannot enclose such a corner: once again there would be four right angles.",
+      "pageContent": [
+        {
+          "page": 9,
+          "mcid": 1
+        },
+        {
+          "page": 9,
+          "mcid": 8
+        }
+      ]
+    },
+    {
+      "language": "grc",
+      "text": "οὔσης γὰρ τῆς τοῦ πενταγώνου ἰσοπλεύρου γωνίας ὀρθῆς καὶ πέμπτου, ἔσονται αἱ τέσσαρες γωνίαι τεσσάρων ὀρθῶν μείζους· ὅπερ ἀδύνατον.",
+      "pageContent": [
+        {
+          "page": 10,
+          "mcid": 5
+        }
+      ]
+    },
+    {
+      "language": "la",
+      "text": "nam cum angulus pentagoni aequilateri aequalis sit recto angulo cum quinta parte recti, quattuor anguli quattuor rectis maiores erunt; quod fieri non potest.",
+      "pageContent": [
+        {
+          "page": 10,
+          "mcid": 7
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "text": "For, since the angle of the equilateral pentagon is a right angle and a fifth of a right angle, four such angles will exceed four right angles—which is impossible here.",
+      "pageContent": [
+        {
+          "page": 10,
+          "mcid": 1
+        },
+        {
+          "page": 10,
+          "mcid": 8
+        }
+      ]
+    },
+    {
+      "language": "grc",
+      "text": "Ἄλλως· στερεὰ γωνία ἐστὶν ἡ ὑπὸ πλειόνων ἢ δύο γωνιῶν ἐπιπέδων περιεχομένη μὴ οὐσῶν ἐν τῷ αὐτῷ ἐπιπέδῳ πρὸς ἑνὶ σημείῳ συνισταμένων.",
+      "pageContent": [
+        {
+          "page": 11,
+          "mcid": 5
+        }
+      ]
+    },
+    {
+      "language": "la",
+      "text": "Aliter. Solidus angulus est, qui amplius quam duobus angulis planis continetur non in eodem plano positis et ad unum punctum coniunctis.",
+      "pageContent": [
+        {
+          "page": 11,
+          "mcid": 7
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "text": "Alternatively: a solid angle is enclosed by more than two plane angles, not lying in the same plane, coming together at one point.",
+      "pageContent": [
+        {
+          "page": 11,
+          "mcid": 1
+        },
+        {
+          "page": 11,
+          "mcid": 8
+        }
+      ]
+    },
+    {
+      "language": "grc",
+      "text": "Ὅτι δὲ ἡ τοῦ ἰσοπλεύρου καὶ ἰσογωνίου πενταγώνου γωνία ὀρθή ἐστι καὶ πέμπτου, οὕτω δεικτέον.",
+      "pageContent": [
+        {
+          "page": 12,
+          "mcid": 6
+        }
+      ]
+    },
+    {
+      "language": "la",
+      "text": "Angulum autem pentagoni aequilateri et aequianguli aequalem esse angulo recto et quintae parti recti, sic demonstrandum.",
+      "pageContent": [
+        {
+          "page": 12,
+          "mcid": 8
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "text": "That the angle of an equilateral and equiangular pentagon is a right angle and a fifth must be shown as follows.",
+      "pageContent": [
+        {
+          "page": 12,
+          "mcid": 1
+        },
+        {
+          "page": 12,
+          "mcid": 9
+        }
+      ]
+    }
+  ],
+  "scopedTableHeaders": [
+    {
+      "text": "Vertex",
+      "scope": "/Column"
+    },
+    {
+      "text": "Faces at it",
+      "scope": "/Column"
+    },
+    {
+      "text": "Face-angle sum",
+      "scope": "/Column"
+    },
+    {
+      "text": "Deficit",
+      "scope": "/Column"
+    },
+    {
+      "text": "1",
+      "scope": "/Row"
+    },
+    {
+      "text": "2",
+      "scope": "/Row"
+    },
+    {
+      "text": "3",
+      "scope": "/Row"
+    },
+    {
+      "text": "4",
+      "scope": "/Row"
+    },
+    {
+      "text": "5",
+      "scope": "/Row"
+    },
+    {
+      "text": "Count",
+      "scope": "/Column"
+    },
+    {
+      "text": "If every vertex matched",
+      "scope": "/Column"
+    },
+    {
+      "text": "Actual model",
+      "scope": "/Column"
+    },
+    {
+      "text": "Vertices V",
+      "scope": "/Row"
+    },
+    {
+      "text": "Edges E",
+      "scope": "/Row"
+    },
+    {
+      "text": "Faces F",
+      "scope": "/Row"
+    }
+  ],
+  "leafFigures": [
+    {
+      "kind": "diagram",
+      "alt": "3 regular 3-sided faces cut open at one vertex. 3 × 60° = 180°. A 180° deficit passes the local angle test. A complete uniform example is the tetrahedron.",
+      "pageContent": [
+        {
+          "page": 1,
+          "mcid": 8
+        }
+      ],
+      "boundImageHashes": []
+    },
+    {
+      "kind": "diagram",
+      "alt": "Tetrahedron: 4 faces, 6 edges, 4 vertices. Selected vertex 1: 3 faces, sum 180 degrees, deficit 180 degrees.",
+      "pageContent": [
+        {
+          "page": 2,
+          "mcid": 6
+        }
+      ],
+      "boundImageHashes": []
+    },
+    {
+      "kind": "diagram",
+      "alt": "Triangular bipyramid: 6 faces, 9 edges, 5 vertices. Selected vertex 3: 4 faces, sum 240 degrees, deficit 120 degrees.",
+      "pageContent": [
+        {
+          "page": 2,
+          "mcid": 10
+        }
+      ],
+      "boundImageHashes": []
+    },
+    {
+      "kind": "image",
+      "alt": "Complete 1885 volume IV title, with original markings and apparatus.",
+      "sha256": "f4afb75d2d0ddf260fac76689d86285d9ed19304ecab5fbbe11f8edca2539d27",
+      "pageContent": [
+        {
+          "page": 14,
+          "mcid": 0
+        }
+      ],
+      "boundImageHashes": ["f4afb75d2d0ddf260fac76689d86285d9ed19304ecab5fbbe11f8edca2539d27"]
+    },
+    {
+      "kind": "image",
+      "alt": "Complete printed page 4, with original markings and apparatus.",
+      "sha256": "4d0210229e42d4571e25aa820aa8e776d3a8a3689df66663a514489aa206ab40",
+      "pageContent": [
+        {
+          "page": 15,
+          "mcid": 0
+        }
+      ],
+      "boundImageHashes": ["4d0210229e42d4571e25aa820aa8e776d3a8a3689df66663a514489aa206ab40"]
+    },
+    {
+      "kind": "image",
+      "alt": "Complete printed page 5, with original markings and apparatus.",
+      "sha256": "f3ee32bdea92c1acb26a70c5423219e65ab0cadcee3d2506f95990ca8a8f699c",
+      "pageContent": [
+        {
+          "page": 16,
+          "mcid": 0
+        }
+      ],
+      "boundImageHashes": ["f3ee32bdea92c1acb26a70c5423219e65ab0cadcee3d2506f95990ca8a8f699c"]
+    },
+    {
+      "kind": "image",
+      "alt": "Complete printed page 54, with original markings and apparatus.",
+      "sha256": "f452ecf08dca4bb42295b334a7402c60d9d413aad60a01afe937e703907c045a",
+      "pageContent": [
+        {
+          "page": 17,
+          "mcid": 0
+        }
+      ],
+      "boundImageHashes": ["f452ecf08dca4bb42295b334a7402c60d9d413aad60a01afe937e703907c045a"]
+    },
+    {
+      "kind": "image",
+      "alt": "Complete printed page 55, with original markings and apparatus.",
+      "sha256": "8d6daf558a935d3a2a9d147c7c9f22faf6cf675fcfad766117d60c07689001f8",
+      "pageContent": [
+        {
+          "page": 18,
+          "mcid": 0
+        }
+      ],
+      "boundImageHashes": ["8d6daf558a935d3a2a9d147c7c9f22faf6cf675fcfad766117d60c07689001f8"]
+    },
+    {
+      "kind": "image",
+      "alt": "Complete printed page 56, with original markings and apparatus.",
+      "sha256": "6029d0f27e74f0708baa6b64bf9a781bc1f4c6547d7091fcdc4aa163418d9f5d",
+      "pageContent": [
+        {
+          "page": 19,
+          "mcid": 0
+        }
+      ],
+      "boundImageHashes": ["6029d0f27e74f0708baa6b64bf9a781bc1f4c6547d7091fcdc4aa163418d9f5d"]
+    },
+    {
+      "kind": "image",
+      "alt": "Complete printed page 57, with original markings and apparatus.",
+      "sha256": "d1ed8727f3dd4751635711bf00708ce52ce2920aa39869692b273a84c5582ddf",
+      "pageContent": [
+        {
+          "page": 20,
+          "mcid": 0
+        }
+      ],
+      "boundImageHashes": ["d1ed8727f3dd4751635711bf00708ce52ce2920aa39869692b273a84c5582ddf"]
+    },
+    {
+      "kind": "image",
+      "alt": "Complete printed page 58, with original markings and apparatus.",
+      "sha256": "a7d9486edfa5ab26c46867038c0a2da4b0fae27ada505e24663a456f610d878a",
+      "pageContent": [
+        {
+          "page": 21,
+          "mcid": 0
+        }
+      ],
+      "boundImageHashes": ["a7d9486edfa5ab26c46867038c0a2da4b0fae27ada505e24663a456f610d878a"]
+    },
+    {
+      "kind": "image",
+      "alt": "Complete printed page 59, with original markings and apparatus.",
+      "sha256": "04e8eaec5691efb98e2328889c2b8867ebcbd28ef67ff200b7fbb90955c46d82",
+      "pageContent": [
+        {
+          "page": 22,
+          "mcid": 0
+        }
+      ],
+      "boundImageHashes": ["04e8eaec5691efb98e2328889c2b8867ebcbd28ef67ff200b7fbb90955c46d82"]
+    },
+    {
+      "kind": "image",
+      "alt": "Complete printed page 336, with original markings and apparatus.",
+      "sha256": "a9d6ae465dc4e889254b1672df18051a5f89aa9babcf986cc9465dd2f90af64b",
+      "pageContent": [
+        {
+          "page": 23,
+          "mcid": 0
+        }
+      ],
+      "boundImageHashes": ["a9d6ae465dc4e889254b1672df18051a5f89aa9babcf986cc9465dd2f90af64b"]
+    },
+    {
+      "kind": "image",
+      "alt": "Complete printed page 337, with original markings and apparatus.",
+      "sha256": "47960a27f1f8c3c6a300dbab59c848f1f986d7d11ee1c69f1015f5601ed36a90",
+      "pageContent": [
+        {
+          "page": 24,
+          "mcid": 0
+        }
+      ],
+      "boundImageHashes": ["47960a27f1f8c3c6a300dbab59c848f1f986d7d11ee1c69f1015f5601ed36a90"]
+    },
+    {
+      "kind": "image",
+      "alt": "Complete printed page 338, with original markings and apparatus.",
+      "sha256": "41647479b7ab3dd7ecc4ef10324b9eb01b4a5b233ebc5ef17f2e30d03d98fb98",
+      "pageContent": [
+        {
+          "page": 25,
+          "mcid": 0
+        }
+      ],
+      "boundImageHashes": ["41647479b7ab3dd7ecc4ef10324b9eb01b4a5b233ebc5ef17f2e30d03d98fb98"]
+    },
+    {
+      "kind": "image",
+      "alt": "Complete printed page 339, with original markings and apparatus.",
+      "sha256": "51b8425009392820b21cc6691340932cb303f3adf5ebdd22e3f8979331da5e5d",
+      "pageContent": [
+        {
+          "page": 26,
+          "mcid": 0
+        }
+      ],
+      "boundImageHashes": ["51b8425009392820b21cc6691340932cb303f3adf5ebdd22e3f8979331da5e5d"]
+    },
+    {
+      "kind": "image",
+      "alt": "Complete printed page 340, with original markings and apparatus.",
+      "sha256": "90b3f449d0b9bd7c393d861b19c57cc1049566d5c8e58046936696f6ea4b81a7",
+      "pageContent": [
+        {
+          "page": 27,
+          "mcid": 0
+        }
+      ],
+      "boundImageHashes": ["90b3f449d0b9bd7c393d861b19c57cc1049566d5c8e58046936696f6ea4b81a7"]
+    },
+    {
+      "kind": "image",
+      "alt": "Complete printed page 341, with original markings and apparatus.",
+      "sha256": "e458f127cf1d82ee94fed20a2d349f4ba425281efeda022601d561ccebeb7d62",
+      "pageContent": [
+        {
+          "page": 28,
+          "mcid": 0
+        }
+      ],
+      "boundImageHashes": ["e458f127cf1d82ee94fed20a2d349f4ba425281efeda022601d561ccebeb7d62"]
+    }
+  ],
+  "bookmarks": [
+    {
+      "level": 1,
+      "title": "Six faces. Still not one of five.",
+      "page": 1,
+      "topPoints": 796.76996
+    },
+    {
+      "level": 2,
+      "title": "The chosen corner",
+      "page": 1,
+      "topPoints": 590.85809
+    },
+    {
+      "level": 2,
+      "title": "Equal faces do not force equal corners",
+      "page": 2,
+      "topPoints": 634.5481
+    },
+    {
+      "level": 3,
+      "title": "Tetrahedron",
+      "page": 2,
+      "topPoints": 588.82495
+    },
+    {
+      "level": 3,
+      "title": "Two joined tetrahedra",
+      "page": 2,
+      "topPoints": 588.82495
+    },
+    {
+      "level": 3,
+      "title": "Can this one corner count the whole solid?",
+      "page": 3,
+      "topPoints": 517.46741
+    },
+    {
+      "level": 2,
+      "title": "Read the argument",
+      "page": 4,
+      "topPoints": 783.60797
+    },
+    {
+      "level": 3,
+      "title": "1. Which figures does the sentence describe?",
+      "page": 4,
+      "topPoints": 708.71741
+    },
+    {
+      "level": 3,
+      "title": "2. Two planes are not a closed corner",
+      "page": 5,
+      "topPoints": 762.71741
+    },
+    {
+      "level": 3,
+      "title": "3. Three, four, five",
+      "page": 6,
+      "topPoints": 762.71741
+    },
+    {
+      "level": 3,
+      "title": "4. The sixth triangle uses the entire turn",
+      "page": 7,
+      "topPoints": 762.71716
+    },
+    {
+      "level": 3,
+      "title": "5. Less than four right angles",
+      "page": 8,
+      "topPoints": 762.71716
+    },
+    {
+      "level": 3,
+      "title": "6. A fourth square has no turn left",
+      "page": 9,
+      "topPoints": 762.71716
+    },
+    {
+      "level": 3,
+      "title": "7. The pentagon makes the excess visible",
+      "page": 10,
+      "topPoints": 762.71716
+    },
+    {
+      "level": 3,
+      "title": "8. A corner needs more than two face angles",
+      "page": 11,
+      "topPoints": 762.71716
+    },
+    {
+      "level": 3,
+      "title": "9. Equilateral and equiangular both matter",
+      "page": 12,
+      "topPoints": 762.71716
+    },
+    {
+      "level": 2,
+      "title": "Retained files and a paper experiment",
+      "page": 12,
+      "topPoints": 346.54782
+    },
+    {
+      "level": 2,
+      "title": "The complete printed evidence",
+      "page": 13,
+      "topPoints": 727.3584
+    },
+    {
+      "level": 2,
+      "title": "Licenses",
+      "page": 29,
+      "topPoints": 783.60748
+    }
+  ],
+  "limits": [
+    "Structure and content audit only; no screen-reader playback or PDF/UA certification",
+    "Whole historical page images remain facsimiles; selected passages are transcribed in the reading",
+    "Inline word-note language changes can depend on the PDF producer and reader"
+  ]
+}

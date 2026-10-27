@@ -84,6 +84,9 @@ A [fresh Node 24 checkout](offline-response-clean-build.json) reproduced all
 repeated both browser configurations, including the removed-cache boundary.
 All 5 retained native examples survived the clone unchanged.
 
+[Public file identity and complete hosted browser work](offline-navigation-publication.md)
+are recorded separately from the local HTTP fault scenarios.
+
 ## Repeat the controlled check
 
 ```sh
