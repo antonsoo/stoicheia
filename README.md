@@ -24,6 +24,8 @@ site; no package registry installation is required.
 
 ## Thousands agree. One can disagree.
 
+![Two comparisons look identical at ordinary scale; the exact signs and enlarged endpoints disagree](docs/assets/ratios-desktop.png)
+
 The new **Book V ratio workshop** asks you to find a counterexample to two ratios
 being equal. A square’s diagonal to its side and 99 lengths to 70 agree in all
 4,761 comparisons with multipliers through 69. Extend the square through 100:
@@ -47,6 +49,10 @@ After `npm run dev`, open `http://127.0.0.1:4327/stoicheia/ratios.html`, or choo
   after the complete edition has been saved.
 
 [Source and model](docs/ratios-model.md) · [Direct review](docs/ratios-review.md).
+[Saved reading, gzip](examples/ratios-reading.html.gz) ·
+[Printable reading](examples/ratios-reading.pdf) ·
+[Editable experiment](examples/ratios-experiment.json) ·
+[Exact comparison and search CSV](examples/ratios-comparison.csv).
 
 ## The point the motion cannot draw
 

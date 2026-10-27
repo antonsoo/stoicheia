@@ -1,0 +1,40 @@
+{
+  "scope": "Actual native browser downloads; independent integer comparison and PDF extraction",
+  "files": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "comparison_rows": 2,
+      "disagreeing_pairs": 1,
+      "html_sha256": "c9d48eaf1e58dc2d94dd7c11a5ebde79c0e45980a068e172d239f016e5cdf81e"
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "comparison_rows": 2,
+      "disagreeing_pairs": 1,
+      "html_sha256": "c9d48eaf1e58dc2d94dd7c11a5ebde79c0e45980a068e172d239f016e5cdf81e"
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "comparison_rows": 2,
+      "disagreeing_pairs": 1,
+      "html_sha256": "c9d48eaf1e58dc2d94dd7c11a5ebde79c0e45980a068e172d239f016e5cdf81e"
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "comparison_rows": 2,
+      "disagreeing_pairs": 1,
+      "html_sha256": "c9d48eaf1e58dc2d94dd7c11a5ebde79c0e45980a068e172d239f016e5cdf81e"
+    }
+  ],
+  "print": {
+    "pages": 15,
+    "complete_passages_in_order": 21,
+    "source_captions": 5,
+    "words_within_page_margins": 2281,
+    "limits": "Untagged browser PDF; no physical print dimensions, print-device behavior or accessibility tagging asserted."
+  }
+}

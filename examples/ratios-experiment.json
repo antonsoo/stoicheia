@@ -1,0 +1,14 @@
+{
+  "format": "stoicheia-ratios",
+  "version": 1,
+  "state": {
+    "kind": "fraction",
+    "p": 99,
+    "q": 70,
+    "m": 70,
+    "n": 99,
+    "bound": 100,
+    "reading": 6,
+    "page": 5
+  }
+}

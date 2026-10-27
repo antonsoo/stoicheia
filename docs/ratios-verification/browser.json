@@ -1,0 +1,153 @@
+{
+  "checkedAt": "2026-10-27T04:17:56.076Z",
+  "scope": "Local production build. Complete learner journeys, native files and origin-disabled offline reloads. No hosted-publication claim.",
+  "edition": "ecef00712fa60414f52d0fdf063e49dcf0fe5e9d94caa86b160af6ce03de2932",
+  "configurations": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "comparison": {
+        "kind": "fraction",
+        "p": 99,
+        "q": 70,
+        "m": 70,
+        "n": 99,
+        "bound": 100,
+        "reading": 6,
+        "page": 5
+      },
+      "share": "?kind=fraction&p=99&q=70&m=70&n=99&bound=100&reading=6&page=5",
+      "saved": {
+        "bytes": 2766641,
+        "sha256": "c9d48eaf1e58dc2d94dd7c11a5ebde79c0e45980a068e172d239f016e5cdf81e",
+        "sourceImages": 5,
+        "readings": 7,
+        "scripts": 0,
+        "remoteSubrequests": 0
+      },
+      "offline": {
+        "originServing": false,
+        "browserNetworkEnabled": false,
+        "cacheFiles": 176,
+        "sourceAndDownloadWorked": true
+      },
+      "accessibilityViolations": 0,
+      "pageErrors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "comparison": {
+        "kind": "fraction",
+        "p": 99,
+        "q": 70,
+        "m": 70,
+        "n": 99,
+        "bound": 100,
+        "reading": 6,
+        "page": 5
+      },
+      "share": "?kind=fraction&p=99&q=70&m=70&n=99&bound=100&reading=6&page=5",
+      "saved": {
+        "bytes": 2766641,
+        "sha256": "c9d48eaf1e58dc2d94dd7c11a5ebde79c0e45980a068e172d239f016e5cdf81e",
+        "sourceImages": 5,
+        "readings": 7,
+        "scripts": 0,
+        "remoteSubrequests": 0
+      },
+      "offline": {
+        "originServing": false,
+        "browserNetworkEnabled": false,
+        "cacheFiles": 176,
+        "sourceAndDownloadWorked": true
+      },
+      "accessibilityViolations": 0,
+      "pageErrors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "comparison": {
+        "kind": "fraction",
+        "p": 99,
+        "q": 70,
+        "m": 70,
+        "n": 99,
+        "bound": 100,
+        "reading": 6,
+        "page": 5
+      },
+      "share": "?kind=fraction&p=99&q=70&m=70&n=99&bound=100&reading=6&page=5",
+      "saved": {
+        "bytes": 2766641,
+        "sha256": "c9d48eaf1e58dc2d94dd7c11a5ebde79c0e45980a068e172d239f016e5cdf81e",
+        "sourceImages": 5,
+        "readings": 7,
+        "scripts": 0,
+        "remoteSubrequests": 0
+      },
+      "offline": {
+        "originServing": false,
+        "browserNetworkEnabled": false,
+        "cacheFiles": 176,
+        "sourceAndDownloadWorked": true
+      },
+      "accessibilityViolations": 0,
+      "pageErrors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "comparison": {
+        "kind": "fraction",
+        "p": 99,
+        "q": 70,
+        "m": 70,
+        "n": 99,
+        "bound": 100,
+        "reading": 6,
+        "page": 5
+      },
+      "share": "?kind=fraction&p=99&q=70&m=70&n=99&bound=100&reading=6&page=5",
+      "saved": {
+        "bytes": 2766641,
+        "sha256": "c9d48eaf1e58dc2d94dd7c11a5ebde79c0e45980a068e172d239f016e5cdf81e",
+        "sourceImages": 5,
+        "readings": 7,
+        "scripts": 0,
+        "remoteSubrequests": 0
+      },
+      "offline": {
+        "originServing": false,
+        "browserNetworkEnabled": false,
+        "cacheFiles": 176,
+        "sourceAndDownloadWorked": true
+      },
+      "accessibilityViolations": 0,
+      "pageErrors": []
+    }
+  ],
+  "guards": [
+    {
+      "engine": "chromium",
+      "case": "Late Greek page response cannot replace the subsequently selected Latin page",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "case": "HTTP 200 substituted source is not displayed or included in a saved reading",
+      "passed": true
+    },
+    {
+      "engine": "firefox",
+      "case": "Late Greek page response cannot replace the subsequently selected Latin page",
+      "passed": true
+    },
+    {
+      "engine": "firefox",
+      "case": "HTTP 200 substituted source is not displayed or included in a saved reading",
+      "passed": true
+    }
+  ]
+}
