@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-27T21:57:58.279684+00:00",
+  "sourceRevision": "acc572c1edda8e5eb5b8d94d9bf94b45f097eb88",
+  "cleanTreeAfterChecks": true,
+  "node": "24.21.0",
+  "npm": "11.19.0",
+  "commands": [
+    "npm ci",
+    "npm run check",
+    "uv run --python 3.12 scripts/reading-pdf.py <retained PDF> <decompressed retained HTML> <receipt>",
+    "uv run --python 3.12 scripts/reading-pdf-faults.py <retained PDF> <decompressed retained HTML> <receipt>"
+  ],
+  "existingTestsPassed": 95,
+  "runtimeFilesIdentical": 198,
+  "runtimeBytes": 48513095,
+  "inventorySha256": "0ab7165edbd3fd20b5a20bc00b38b89363a93843489561116ad4980e452b9934",
+  "nativeExamplesIdentical": {
+    "solids-angles.csv": {
+      "bytes": 5596,
+      "sha256": "7704cc037e755256c3fe252c08ac5914a792136323fea8b8ddd337ff85c829b8"
+    },
+    "solids-experiment.json": {
+      "bytes": 206,
+      "sha256": "8af9db63c55548c95a4df284fc8527e8e93a01a108568fd86b762ca7f0ce67db"
+    },
+    "solids-reading.html.gz": {
+      "bytes": 6977935,
+      "sha256": "b7d103ae2d2a1f7c0f17e189961948d8a0e4b5c0c8e5942a5cfa11c6a99c1c11"
+    },
+    "solids-reading.pdf": {
+      "bytes": 6882716,
+      "sha256": "e4be233c32088b161f41878e782a793ed523646870ad9cf2a71a98dc1217adbe"
+    },
+    "solids-two-tetrahedra.svg": {
+      "bytes": 3780,
+      "sha256": "006961868a3d16bc9753521a041cc899c381c50e07a1564bd84a25bcef66ee39"
+    }
+  },
+  "pdfMainParagraphBindings": 27,
+  "pdfHeadingBookmarks": 19,
+  "specificPdfFaultRefusals": 6
+}

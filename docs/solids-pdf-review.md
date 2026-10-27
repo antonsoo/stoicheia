@@ -13,6 +13,11 @@ pages remain facsimiles; only the selected passages are transcribed. Inline
 language changes in vocabulary notes can depend on the producer and reader.
 Physical printing is unverified.
 
+A [fresh Node 24 build](solids-pdf-clean-build.json) reproduced all 198
+runtime files byte for byte. The retained native examples survived the clone
+unchanged; the documented `uv` inspection and deliberate-fault commands ran
+against the actual retained PDF and decompressed example HTML.
+
 ## What the actual file contains
 
 | Inspected property                                        | Actual result |
