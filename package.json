@@ -81,7 +81,11 @@
     "test:quadratrix-upgrade": "node scripts/quadratrix-upgrade.mjs",
     "verify:ratios": "node --import tsx scripts/ratios-cases.ts | python3 scripts/ratios-oracle.py",
     "verify:ratios-sources": "python3 scripts/ratios-sources.py",
-    "test:ratios": "node scripts/ratios-browser.mjs"
+    "test:ratios": "node scripts/ratios-browser.mjs",
+    "verify:solids": "node --import tsx scripts/solids-cases.ts | python3 scripts/solids-oracle.py",
+    "verify:solids-sources": "python3 scripts/solids-sources.py",
+    "test:solids": "node scripts/solids-browser.mjs",
+    "verify:solids-files": "python3 scripts/solids-artifacts.py"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

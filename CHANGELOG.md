@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-10-27
+
+- Add the solid-corner workshop: exact p/q angle constraints, all five regular
+  coordinate examples, and a six-faced bipyramid with different vertex types.
+  Compare conditional uniform vertex/edge/face counts with the actual model.
+- Read nine selected Greek/Latin/English units beside fifteen whole Heiberg
+  1885 pages, including XI.21's proof and editorial extension note. Identify the
+  final addendum, its face condition and the modern comparison separately.
+- Save editable JSON, exact angle and incidence CSV, a physical-size tetrahedron
+  cutting sheet, or an illustrated reading with source pages, font and licenses.
+  Preserve captured exports and newer settings against late asynchronous work.
+- Correct a Firefox source-image loading failure and a narrow saved-table
+  overflow found during actual browser review. Extend the offline edition to
+  twelve rooms, retaining the matching-controller and complete-inventory gates.
+
 ## 2026-10-26
 
 - Add the Book V equimultiple experiment: two independent integer multipliers,

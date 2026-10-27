@@ -22,6 +22,44 @@ geometry and is beginning Greek or Latin.
 [Source repository](https://github.com/antonsoo/stoicheia). The app is a static
 site; no package registry installation is required.
 
+## Six faces. Still not one of five.
+
+![Equal triangular faces, a tetrahedron and the mixed corners of two joined tetrahedra](docs/assets/solids-comparison-chromium-1440.png)
+
+Test the addendum after Euclid XIII.18 in the new **solid-corner workshop**.
+Five equilateral triangles leave a 60° gap; the sixth uses the full turn.
+Choose regular faces and their number at one point, compare the five surviving
+uniform cases, and inspect actual complete coordinate models.
+
+Then join two tetrahedra along a base. The outside has six equal equilateral
+triangles, but its tips meet three faces and its belt vertices meet four.
+Equal regular faces alone do not impose the same corner type everywhere.
+Select a tip or a belt vertex: assuming every vertex matches it predicts four
+or six vertices, while the actual model has five. This modern conditional
+calculation makes the uniformity premise explicit.
+
+After `npm ci && npm run dev`, choose **Six faces. Still not one of five.**
+from the course's companion workshops, or open
+`http://127.0.0.1:4327/stoicheia/solids.html`. The addition's public delivery is
+reviewed separately after publication; its [direct review](docs/solids-review.md)
+records the local workflow.
+
+Read nine selected Greek/Latin/English units and contextual notes beside fifteen
+whole 1885 pages. Keep your view and exact angles as editable JSON or CSV, save
+a script-free illustrated reading, or download two 40 mm tetrahedron nets with
+a 50 mm calibration bar. Source and font identities are verified before use.
+The complete offline edition now includes twelve rooms.
+
+[Source, assumptions and geometry](docs/solids-model.md) ·
+[Actual illustrated reading, gzip](examples/solids-reading.html.gz) ·
+[30-page PDF](examples/solids-reading.pdf) ·
+[Editable example](examples/solids-experiment.json) ·
+[A4 cutting sheet](examples/solids-two-tetrahedra.svg).
+Decompress the HTML before opening it. Physical printing and assembly remain
+unverified; the new language notes have not received independent philological
+review. The room examines the stated conditions without deciding the ancient
+author's intent or the addendum's textual history.
+
 ## Thousands agree. One can disagree.
 
 ![Two comparisons look identical at ordinary scale; the exact signs and enlarged endpoints disagree](docs/assets/ratios-desktop.png)

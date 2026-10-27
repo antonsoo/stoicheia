@@ -1,5 +1,19 @@
 # Third-party materials
 
+Solid-corner workshop (`solids.html`):
+
+Euclid, _Euclidis Elementa_, volume IV, _Libros XI–XIII continens_, edited and
+translated into Latin by J. L. Heiberg, Leipzig: B. G. Teubner, 1885.
+Public-domain historical text, Latin and page images. Internet Archive copy:
+https://archive.org/details/euclidisoperaomn04eucl.
+The title and printed pp.4–5, 54–59 and 336–341 are retained as fifteen complete
+reductions without cropping or retouching. The original PDF identity and each
+JPEG's bytes and SHA-256 are in `public/sources/solids/manifest.json`; the
+reproduction script is `scripts/solids-sources.py`. New English, language notes,
+coordinate comparisons, code and paper diagrams are MIT. The room distinguishes
+the ancient excerpts, Heiberg's editorial note and its modern mathematical
+explanations. It reuses the bundled Noto Serif and full SIL OFL notice.
+
 Book V ratios workshop (`ratios.html`):
 
 Euclid, _Euclidis opera omnia, Elementa_, volume II, _Libros V–IX continens_,
