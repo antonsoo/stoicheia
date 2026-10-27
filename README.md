@@ -40,9 +40,9 @@ calculation makes the uniformity premise explicit.
 
 After `npm ci && npm run dev`, choose **Six faces. Still not one of five.**
 from the course's companion workshops, or open
-`http://127.0.0.1:4327/stoicheia/solids.html`. The addition's public delivery is
-reviewed separately after publication; its [direct review](docs/solids-review.md)
-records the local workflow.
+`http://127.0.0.1:4327/stoicheia/solids.html`. The [public verification](docs/solids-publication.md) records canonical bytes,
+actual browser downloads and offline use separately from source workflows.
+The [direct review](docs/solids-review.md) gives the learner workflow.
 
 Read nine selected Greek/Latin/English units and contextual notes beside fifteen
 whole 1885 pages. Keep your view and exact angles as editable JSON or CSV, save

@@ -1,5 +1,9 @@
 # Direct review of the solid-corner workshop
 
+[Subsequent public verification](solids-publication.md) records canonical bytes,
+actual public operation, portable files and offline use separately from this
+local review.
+
 `solids.html` lets an English-speaking learner test the addendum after Euclid
 XIII.18, then inspect a convex six-faced comparison. Equal equilateral outside
 faces alone do not require one common vertex type. The triangular bipyramid's
