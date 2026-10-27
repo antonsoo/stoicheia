@@ -1,0 +1,117 @@
+{
+  "edition": "J. L. Heiberg, Euclidis Elementa, volume IV, Leipzig: B. G. Teubner, 1885",
+  "source": "https://archive.org/download/euclidisoperaomn04eucl/euclidisoperaomn04eucl.pdf",
+  "rights": "Public-domain text and page images; complete pages, no cropping or retouching.",
+  "pdfIdentity": {
+    "bytes": 23500629,
+    "sha256": "11cc842dcf76f37d650f95dcb6a724c2bd0ba90cfbf5b821821d97de1ffdda97"
+  },
+  "render": "pdftoppm -singlefile -scale-to 2200 -jpeg -jpegopt quality=88; Poppler 24.02.0",
+  "pages": [
+    {
+      "printedPage": 0,
+      "pdfPage": 7,
+      "file": "solids/heiberg-title.jpg",
+      "bytes": 331348,
+      "sha256": "f4afb75d2d0ddf260fac76689d86285d9ed19304ecab5fbbe11f8edca2539d27"
+    },
+    {
+      "printedPage": 4,
+      "pdfPage": 14,
+      "file": "solids/heiberg-4.jpg",
+      "bytes": 504976,
+      "sha256": "4d0210229e42d4571e25aa820aa8e776d3a8a3689df66663a514489aa206ab40"
+    },
+    {
+      "printedPage": 5,
+      "pdfPage": 15,
+      "file": "solids/heiberg-5.jpg",
+      "bytes": 508829,
+      "sha256": "f3ee32bdea92c1acb26a70c5423219e65ab0cadcee3d2506f95990ca8a8f699c"
+    },
+    {
+      "printedPage": 54,
+      "pdfPage": 64,
+      "file": "solids/heiberg-54.jpg",
+      "bytes": 501845,
+      "sha256": "f452ecf08dca4bb42295b334a7402c60d9d413aad60a01afe937e703907c045a"
+    },
+    {
+      "printedPage": 55,
+      "pdfPage": 65,
+      "file": "solids/heiberg-55.jpg",
+      "bytes": 495215,
+      "sha256": "8d6daf558a935d3a2a9d147c7c9f22faf6cf675fcfad766117d60c07689001f8"
+    },
+    {
+      "printedPage": 56,
+      "pdfPage": 66,
+      "file": "solids/heiberg-56.jpg",
+      "bytes": 546605,
+      "sha256": "6029d0f27e74f0708baa6b64bf9a781bc1f4c6547d7091fcdc4aa163418d9f5d"
+    },
+    {
+      "printedPage": 57,
+      "pdfPage": 67,
+      "file": "solids/heiberg-57.jpg",
+      "bytes": 417619,
+      "sha256": "d1ed8727f3dd4751635711bf00708ce52ce2920aa39869692b273a84c5582ddf"
+    },
+    {
+      "printedPage": 58,
+      "pdfPage": 68,
+      "file": "solids/heiberg-58.jpg",
+      "bytes": 488583,
+      "sha256": "a7d9486edfa5ab26c46867038c0a2da4b0fae27ada505e24663a456f610d878a"
+    },
+    {
+      "printedPage": 59,
+      "pdfPage": 69,
+      "file": "solids/heiberg-59.jpg",
+      "bytes": 395599,
+      "sha256": "04e8eaec5691efb98e2328889c2b8867ebcbd28ef67ff200b7fbb90955c46d82"
+    },
+    {
+      "printedPage": 336,
+      "pdfPage": 346,
+      "file": "solids/heiberg-336.jpg",
+      "bytes": 523601,
+      "sha256": "a9d6ae465dc4e889254b1672df18051a5f89aa9babcf986cc9465dd2f90af64b"
+    },
+    {
+      "printedPage": 337,
+      "pdfPage": 347,
+      "file": "solids/heiberg-337.jpg",
+      "bytes": 501983,
+      "sha256": "47960a27f1f8c3c6a300dbab59c848f1f986d7d11ee1c69f1015f5601ed36a90"
+    },
+    {
+      "printedPage": 338,
+      "pdfPage": 348,
+      "file": "solids/heiberg-338.jpg",
+      "bytes": 513265,
+      "sha256": "41647479b7ab3dd7ecc4ef10324b9eb01b4a5b233ebc5ef17f2e30d03d98fb98"
+    },
+    {
+      "printedPage": 339,
+      "pdfPage": 349,
+      "file": "solids/heiberg-339.jpg",
+      "bytes": 509530,
+      "sha256": "51b8425009392820b21cc6691340932cb303f3adf5ebdd22e3f8979331da5e5d"
+    },
+    {
+      "printedPage": 340,
+      "pdfPage": 350,
+      "file": "solids/heiberg-340.jpg",
+      "bytes": 232103,
+      "sha256": "90b3f449d0b9bd7c393d861b19c57cc1049566d5c8e58046936696f6ea4b81a7"
+    },
+    {
+      "printedPage": 341,
+      "pdfPage": 351,
+      "file": "solids/heiberg-341.jpg",
+      "bytes": 203818,
+      "sha256": "e458f127cf1d82ee94fed20a2d349f4ba425281efeda022601d561ccebeb7d62"
+    }
+  ]
+}
