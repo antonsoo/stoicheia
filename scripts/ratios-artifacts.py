@@ -31,6 +31,11 @@ def main():
         s = record["state"]
         rows = list(csv.DictReader(io.StringIO((folder / "comparison.csv").read_text())))
         selected = rows[0]
+        assert selected["kind"] == s["kind"]
+        assert selected["A"] == "√2" and selected["B"] == "1"
+        assert selected["C"] == ("3√2" if s["kind"] == "scaled" else str(s["p"]))
+        assert selected["D"] == ("3" if s["kind"] == "scaled" else str(s["q"]))
+        assert int(selected["search_bound"]) == s["bound"]
         first = sign(2 * s["m"] ** 2 - s["n"] ** 2)
         second = first if s["kind"] == "scaled" else sign(s["m"] * s["p"] - s["n"] * s["q"])
         symbols = {-1: "<", 0: "=", 1: ">"}
@@ -47,6 +52,7 @@ def main():
                     expected.add((m, n))
         actual = set()
         for row in rows[1:]:
+            assert int(row["search_bound"]) == s["bound"]
             assert row["record"] == "bounded_disagreement_interval"
             m, lo, hi = int(row["m"]), int(row["n"]), int(row["n_last"])
             assert int(row["count"]) == hi - lo + 1

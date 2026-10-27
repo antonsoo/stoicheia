@@ -194,9 +194,16 @@ export function readRatiosJson(text: string): RatioState {
 
 /** Export the selected comparison and compact inclusive intervals for the bounded search. */
 export function ratiosCsv(s: RatioState): string {
+  const context = [s.kind, ...ratioMagnitudes(s).map(exact), s.bound];
   const rows: (string | number)[][] = [
     [
       "record",
+      "kind",
+      "A",
+      "B",
+      "C",
+      "D",
+      "search_bound",
       "m",
       "n",
       "n_last",
@@ -215,6 +222,7 @@ export function ratiosCsv(s: RatioState): string {
     const t = ratioTrial({ ...s, m, n });
     rows.push([
       record,
+      ...context,
       m,
       n,
       n,
@@ -233,6 +241,7 @@ export function ratiosCsv(s: RatioState): string {
   for (const row of scanRatios(s).rows)
     rows.push([
       "bounded_disagreement_interval",
+      ...context,
       row.m,
       row.lo,
       row.hi,

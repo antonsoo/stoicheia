@@ -4,6 +4,7 @@ import {
   decodeRatios,
   encodeRatios,
   initialRatios,
+  ratiosCsv,
   ratiosJson,
   ratioTrial,
   readRatiosJson,
@@ -20,6 +21,16 @@ test("finite agreement, a failure of equality, and the stricter V.7 witness stay
   assert.deepEqual(scanRatios({ ...initialRatios, bound: 600 }).firstExcess, { m: 239, n: 338 });
   assert.equal(ratioTrial({ ...initialRatios, m: 239, n: 338 }).greater, "second");
   assert.equal(ratioTrial({ ...initialRatios, p: 140, q: 99, m: 99, n: 140 }).greater, "first");
+});
+
+test("a standalone CSV retains its magnitudes and finite search scope", () => {
+  const below = ratiosCsv({ ...initialRatios, m: 70, n: 99, bound: 99 });
+  const above = ratiosCsv({ ...initialRatios, m: 70, n: 99, bound: 100 });
+  assert.notEqual(below, above);
+  assert.match(above, /"search_bound"/);
+  assert.match(above, /"selected","fraction","√2","1","99","70","100"/);
+  const scaled = ratiosCsv({ ...initialRatios, kind: "scaled" });
+  assert.match(scaled, /"selected","scaled","√2","1","3√2","3","69"/);
 });
 
 test("scaling preserves comparisons without asserting a common length measure", () => {

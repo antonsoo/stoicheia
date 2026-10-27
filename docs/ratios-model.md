@@ -129,8 +129,9 @@ reject unknown or repeated keys, string/boolean numbers, invalid fractions and
 out-of-range values. Invalid import preserves the active experiment; valid
 import recomputes the arithmetic.
 
-CSV separates the selected comparison from inclusive disagreement intervals in
-the search. The illustrated HTML embeds the native JSON and CSV, current plate,
+CSV retains the four exact original magnitudes, experiment kind and search bound
+on every row. It separates the selected comparison from inclusive disagreement
+intervals in the search. The illustrated HTML embeds the native JSON and CSV, current plate,
 search summary, applicable general explanation, seven readings, every word note,
 five source images, font and licenses. It has no scripts or remote subresources.
 It can be reopened from disk and printed.
