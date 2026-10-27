@@ -72,12 +72,40 @@ for (const [name, engine] of [
       assert.equal(context.serviceWorkers().length, 0);
       measurement.push({ width, ...appearance, savedReadingBytes: Buffer.byteLength(html) });
     }
+    const ratios = [];
+    for (const width of [1440, 375]) {
+      await page.setViewportSize({ width, height: 1000 });
+      await page.goto(new URL("ratios.html", url).href);
+      await page
+        .locator("#rt-source-status")
+        .filter({ hasText: "Source identity verified" })
+        .waitFor();
+      await page.locator('[data-rt-bound="100"]').click();
+      await page.locator("#rt-find").click();
+      assert.equal(await page.locator("#rt-m").inputValue(), "70");
+      assert.equal(await page.locator("#rt-n").inputValue(), "99");
+      assert.match(await page.locator("#rt-verdict").textContent(), /counterexample/);
+      const appearance = await page.evaluate(() => ({
+        display: getComputedStyle(document.querySelector(".rt-workspace")).display,
+        mode: document.querySelector("#rt-offline").textContent,
+        overflow: document.documentElement.scrollWidth > innerWidth + 1,
+      }));
+      assert.match(appearance.mode, /Development preview/);
+      assert.equal(appearance.overflow, false);
+      const download = page.waitForEvent("download");
+      await page.locator("#rt-save").click();
+      const saved = await download;
+      const html = await readFile(await saved.path(), "utf8");
+      assert.equal((html.match(/<img src="data:image\/jpeg;base64,/g) ?? []).length, 5);
+      ratios.push({ width, ...appearance, savedReadingBytes: Buffer.byteLength(html) });
+    }
     assert.deepEqual(errors, []);
     report.configurations.push({
       browser: name,
       version: browser.version(),
       ...rendered,
       measurement,
+      ratios,
       errors,
     });
   } finally {

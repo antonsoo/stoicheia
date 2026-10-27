@@ -24,6 +24,7 @@ jobs:
       - run: npm run verify:copying
       - run: npm run verify:nested
       - run: npm run verify:measure
+      - run: npm run verify:ratios
       - run: npm run verify:quadratrix
       - run: npx playwright install --with-deps chromium firefox
       - name: Verify the development quickstart
@@ -56,5 +57,7 @@ jobs:
           npm run test:measure -- /tmp/stoicheia-measure
           npm run test:copying -- /tmp/stoicheia-copying
           node scripts/copying-integrity.mjs /tmp/stoicheia-copying-integrity.json
+          npm run test:ratios -- /tmp/stoicheia-ratios
+          python3 scripts/ratios-artifacts.py /tmp/stoicheia-ratios
           npm run test:quadratrix -- /tmp/stoicheia-quadratrix
           python3 scripts/quadratrix-oracle.py --browser /tmp/stoicheia-quadratrix/review.json
