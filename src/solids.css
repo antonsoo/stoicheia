@@ -633,6 +633,7 @@ select:focus-visible {
   }
   .sl-retained table {
     font-size: 9pt;
+    break-inside: avoid;
   }
   .sl-retained .sl-reading-full,
   .sl-retained .sl-word {

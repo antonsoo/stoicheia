@@ -1,5 +1,9 @@
 # Public solid-corner workshop
 
+This records the initial public capture. The later [structured PDF review](solids-pdf-review.md)
+updates the retained reading and print behavior; the older receipts below remain
+evidence of their original edition.
+
 The [canonical workshop](https://antonsoo.github.io/stoicheia/solids.html)
 and [Officina's Latin source-word route](https://antonsoo.github.io/officina/?q=aequiangulis)
 are public. This review was performed on 27 October 2026, separately from the

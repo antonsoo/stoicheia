@@ -2,6 +2,10 @@
 
 ## 2026-10-27
 
+- Retain tagged, bookmarked reading PDFs with Greek/Latin paragraph languages,
+  scoped table headers, described figures and original source-image bytes. Keep
+  short tables together and inspect actual structure-to-content bindings.
+
 - Add the solid-corner workshop: exact p/q angle constraints, all five regular
   coordinate examples, and a six-faced bipyramid with different vertex types.
   Compare conditional uniform vertex/edge/face counts with the actual model.

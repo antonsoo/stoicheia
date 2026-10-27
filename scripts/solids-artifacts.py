@@ -163,6 +163,9 @@ pdf = out / "chromium-1440/reading.pdf"
 pdf_result = None
 if pdf.exists():
     pdf_text = subprocess.check_output(["pdftotext", "-raw", str(pdf), "-"], text=True)
+    pdf_info = subprocess.check_output(["pdfinfo", str(pdf)], text=True)
+    tagged = any(line.split(":", 1)[1].strip() == "yes" for line in pdf_info.splitlines() if line.startswith("Tagged:"))
+    assert tagged, "The retained PDF must contain document tags."
     portable = Reading((pdf.parent / "study.html").read_text())
     def compact(text):
         return "".join(unicodedata.normalize("NFC", text).split()).replace("\u00ad", "")
@@ -190,7 +193,7 @@ if pdf.exists():
                 assert float(word.attrib["xMin"]) >= 28 and float(word.attrib["yMin"]) >= 28
                 assert float(word.attrib["xMax"]) <= width-28 and float(word.attrib["yMax"]) <= height-28
                 words += 1
-        pdf_result = {"pages": len(pages), "completeGreekLatinEnglishFields": 27, "completeLicenses": 2, "sourceCaptions": 15, "originalJpegStreamsIdentical": 15, "wordsWithinCheckedMargins": words, "physicalPrintingVerified": False}
+        pdf_result = {"pages": len(pages), "completeGreekLatinEnglishFields": 27, "completeLicenses": 2, "sourceCaptions": 15, "originalJpegStreamsIdentical": 15, "wordsWithinCheckedMargins": words, "tagged": tagged, "physicalPrintingVerified": False}
 result = {"browserJourneys": len(receipts), "artifacts": receipts, "pdf": pdf_result}
 (out / "artifacts.json").write_text(json.dumps(result, indent=2) + "\n")
 print(json.dumps({"browserJourneys": len(receipts), "pdf": pdf_result, "originalSourcePagesPerReading": 15}, indent=2))

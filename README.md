@@ -52,10 +52,12 @@ The complete offline edition now includes twelve rooms.
 
 [Source, assumptions and geometry](docs/solids-model.md) ·
 [Actual illustrated reading, gzip](examples/solids-reading.html.gz) ·
-[30-page PDF](examples/solids-reading.pdf) ·
+[30-page tagged PDF](examples/solids-reading.pdf) ·
 [Editable example](examples/solids-experiment.json) ·
 [A4 cutting sheet](examples/solids-two-tetrahedra.svg).
-Decompress the HTML before opening it. Physical printing and assembly remain
+Decompress the HTML before opening it. The [PDF structure review](docs/solids-pdf-review.md)
+checks language-tagged passages, heading bookmarks, table scopes and original
+source images; it does not claim PDF/UA certification. Physical printing and assembly remain
 unverified; the new language notes have not received independent philological
 review. The room examines the stated conditions without deciding the ancient
 author's intent or the addendum's textual history.

@@ -1,0 +1,42 @@
+{
+  "originalPdfSha256": "e4be233c32088b161f41878e782a793ed523646870ad9cf2a71a98dc1217adbe",
+  "positiveControl": true,
+  "faults": [
+    {
+      "fault": "swapped-language-tags",
+      "rejected": true,
+      "reason": "AssertionError: No correctly ordered grc paragraph bound to the full text: \u039b\u03ad\u03b3\u03c9 \u03b4\u03ae, \u1f45\u03c4\u03b9 \u03c0\u03b1\u03c1\u1f70 \u03c4\u1f70 \u03b5\u1f30\u03c1\u03b7\u03bc\u03ad\u03bd\u03b1 \u03c0\u03ad\u03bd\u03c4\u03b5 \u03c3\u03c7\u03ae\u03bc\u03b1\u03c4\u03b1 \u03bf\u1f50 \u03c3\u03c5\u03c3\u03c4\u03b1\u03b8\u03ae\u03c3\u03b5\u03c4\u03b1\u03b9 \u1f15\u03c4\u03b5\u03c1\u03bf\u03bd \u03c3\u03c7\u1fc6\u03bc\u03b1 \u03c0\u03b5\u03c1\u03b9\u03b5\u03c7\u03cc",
+      "changedPdfSha256": "7483deabe612deb646e1dd8b0665f256da4ba4d6538b9a5ebbe63dbb9776ea15"
+    },
+    {
+      "fault": "swapped-source-image-bytes",
+      "rejected": true,
+      "reason": "AssertionError: The figure description is bound to different source-image bytes.",
+      "changedPdfSha256": "7d292bc4396e2e90a93a59bb9f760cfc9df20a6b9df636995b9a8bf27e43ada5"
+    },
+    {
+      "fault": "missing-table-header-scope",
+      "rejected": true,
+      "reason": "AssertionError: Wrong PDF table header scope for Vertex.",
+      "changedPdfSha256": "67812be3718b22c4c05bca0d55638f2e0854690776d2bbb6aa066310a8e7e4c7"
+    },
+    {
+      "fault": "missing-figure-description",
+      "rejected": true,
+      "reason": "AssertionError: A leaf figure has lost or changed its description.",
+      "changedPdfSha256": "734ad703fe91641f239c8d1b87dec25e2f79dddf8808cdf3bab2bab12bf8694a"
+    },
+    {
+      "fault": "wrong-bookmark-page",
+      "rejected": true,
+      "reason": "AssertionError: A bookmark points to a page without its heading's content.",
+      "changedPdfSha256": "27c5594d82985d1637f1b2fa2234bc11d155d978f1147932c406b5c51bc1c2e5"
+    },
+    {
+      "fault": "marked-flag-without-structure",
+      "rejected": true,
+      "reason": "AssertionError: PDF has no logical structure tree.",
+      "changedPdfSha256": "9935c0c328b538c54f98bccec8d1ffca2203ef81d7fad2292e34975833a25537"
+    }
+  ]
+}

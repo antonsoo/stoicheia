@@ -52,6 +52,10 @@ choose **Six faces. Still not one of five.** The direct route is
 
 ## What was actually checked
 
+The table records the initial capture. The [current retained PDF](solids-pdf-review.md)
+is a separately reviewed, tagged and bookmarked replacement with the same
+complete selected passages, original source images and full licenses.
+
 | Claim                        | Evidence and observed limit                                                                                                                                                          |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Exact local constraints      | 70 supported p/q cases; five surviving uniform pairs, with the general p ≥ 6 reason stated separately                                                                                |
