@@ -188,7 +188,9 @@ el("sl-vertex").addEventListener("change", () =>
 );
 el("sl-tip").addEventListener("click", () => change({ example: "bipyramid", vertex: 0 }));
 el("sl-belt").addEventListener("click", () => change({ example: "bipyramid", vertex: 2 }));
-el("sl-view-reset").addEventListener("click", () => change({ yaw: 25, pitch: 15 }));
+el("sl-view-reset").addEventListener("click", () =>
+  change({ yaw: initialSolids.yaw, pitch: initialSolids.pitch }),
+);
 el("sl-reading-select").addEventListener("change", () => {
   const reading = Number(el<HTMLSelectElement>("sl-reading-select").value);
   change({ reading, page: at(solidPassages, reading).pages[0] });
