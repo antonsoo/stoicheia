@@ -79,6 +79,11 @@ tab/controller transition and a genuinely unavailable local origin. All four
 source images, fonts, licenses and native outputs. The held-source and image
 substitution checks remain separate from document-response fallback.
 
+A [fresh Node 24 checkout](offline-response-clean-build.json) reproduced all
+198 runtime files byte for byte. Its [actual HTTP/browser check](offline-response-clean-browser.json)
+repeated both browser configurations, including the removed-cache boundary.
+All 5 retained native examples survived the clone unchanged.
+
 ## Repeat the controlled check
 
 ```sh
