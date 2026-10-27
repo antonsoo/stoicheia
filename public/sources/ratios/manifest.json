@@ -1,0 +1,80 @@
+{
+  "edition": {
+    "title": "Euclidis opera omnia, Elementa, vol. II: Libros V-IX continens",
+    "editor_and_latin_translator": "J. L. Heiberg",
+    "publisher": "B. G. Teubner, Leipzig",
+    "year": 1884,
+    "rights": "Public domain. University of Toronto, Gerstein Science Information Centre copy, digitized by the Internet Archive.",
+    "catalogue_date": "1883",
+    "date_note": "Internet Archive metadata gives 1883; this volume II title explicitly prints MDCCCLXXXIV (1884). The workshop follows the volume title.",
+    "catalogue_copyright_status": "NOT_IN_COPYRIGHT"
+  },
+  "download": {
+    "url": "https://archive.org/download/euclidisoperaomn02eucluoft/euclidisoperaomn02eucluoft.pdf",
+    "bytes": 25785657,
+    "sha256": "cd24f03c6e4e6d5f30a908d144c8f0f7003e99813334edb3a4107d748cb41043"
+  },
+  "rendering": "pdftoppm -f 28 -l 31 -scale-to 1800 -jpeg -jpegopt quality=88 INPUT.pdf full; title PDF p.7 at -scale-to 1400. Complete pages without cropping or retouch.",
+  "transcription": {
+    "scope": "V definitions 3-7, with definition 5 also divided into linked reading clauses. The Latin clause for arbitrary multiplication is an explanatory note, not an invented quotation.",
+    "normalizations": [
+      "Line wrapping and end-of-line hyphenation removed.",
+      "Greek theta glyph normalized to Unicode theta; iota subscripts and accents retained.",
+      "Latin u/v spellings retained.",
+      "Apparatus and superscript reference markers omitted in reading selections, retained in the complete pages."
+    ],
+    "boundaries": "English, language notes, square-diagonal examples, exact arithmetic, search ordering, grid and proof exposition are modern teaching work. The algebraic footnotes printed on pp.3 and 5 are Heiberg’s, not Euclid’s."
+  },
+  "pages": [
+    {
+      "page": 0,
+      "printed_page": null,
+      "pdf_page": 7,
+      "file": "ratios/heiberg-title.jpg",
+      "width": 897,
+      "height": 1400,
+      "bytes": 219160,
+      "sha256": "f49ef84abdebf095723b7e07a1ca5a42eea7cdef00b0c1a0a453fe9ec56dc6ee"
+    },
+    {
+      "page": 2,
+      "printed_page": 2,
+      "pdf_page": 28,
+      "file": "ratios/heiberg-002.jpg",
+      "width": 1136,
+      "height": 1800,
+      "bytes": 303268,
+      "sha256": "da6650dc4f346aa9cdbeb38f6a8946bad2e3a9944667abbf534507a81b169e1e"
+    },
+    {
+      "page": 3,
+      "printed_page": 3,
+      "pdf_page": 29,
+      "file": "ratios/heiberg-003.jpg",
+      "width": 1136,
+      "height": 1800,
+      "bytes": 326124,
+      "sha256": "7106357dba44075be804ecd759110cad23f3d874a4a5cf0a484072e304623eed"
+    },
+    {
+      "page": 4,
+      "printed_page": 4,
+      "pdf_page": 30,
+      "file": "ratios/heiberg-004.jpg",
+      "width": 1136,
+      "height": 1800,
+      "bytes": 378167,
+      "sha256": "d62c3b2de1ca92bc31e8b3ed76b7ab41de3e765903e9e57dc53f7d478ced0bf4"
+    },
+    {
+      "page": 5,
+      "printed_page": 5,
+      "pdf_page": 31,
+      "file": "ratios/heiberg-005.jpg",
+      "width": 1136,
+      "height": 1800,
+      "bytes": 349141,
+      "sha256": "f408443870dd850f1657583984dcacd86a9742d9e116072f026e29ee34532bb0"
+    }
+  ]
+}
