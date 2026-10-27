@@ -32,7 +32,7 @@ being equal. A square’s diagonal to its side and 99 lengths to 70 agree in all
 `70√2 < 99`, while `70 × 99 = 99 × 70`. One disagreement defeats the condition
 that every pair of equimultiples agree.
 
-This room is prepared in the current checkout; publication is not claimed.
+[Open the Book V workshop](https://antonsoo.github.io/stoicheia/ratios.html).
 After `npm run dev`, open `http://127.0.0.1:4327/stoicheia/ratios.html`, or choose
 **Thousands agree. One can disagree.** from the course’s companion workshops.
 - Choose the two multipliers independently, inspect exact integer comparisons,

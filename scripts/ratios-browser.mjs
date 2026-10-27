@@ -8,8 +8,10 @@ import { pathToFileURL } from "node:url";
 import AxeBuilder from "@axe-core/playwright";
 import { chromium, firefox } from "playwright";
 
-const selectedEngine = process.argv[3];
-const selectedWidth = Number(process.argv[4]);
+const hosted = process.argv[3]?.startsWith("https://") ? process.argv[3] : null;
+if (hosted) assert.match(hosted, /^https:\/\/.+\/$/);
+const selectedEngine = process.argv[hosted ? 4 : 3];
+const selectedWidth = Number(process.argv[hosted ? 5 : 4]);
 const out = path.resolve(process.argv[2] ?? "/tmp/claude-1000/ratios-browser");
 await mkdir(out, { recursive: true });
 const hash = (b) => createHash("sha256").update(b).digest("hex");
@@ -32,14 +34,17 @@ const inventory = JSON.parse(/const FILES = (\[[^;]+\]);/.exec(worker)[1]);
 const edition = /const EDITION = "([a-f0-9]+)"/.exec(worker)[1];
 const report = {
   checkedAt: new Date().toISOString(),
-  scope:
-    "Local production build. Complete learner journeys, native files and origin-disabled offline reloads. No hosted-publication claim.",
+  scope: hosted
+    ? "Public HTTPS learner journeys and actual native downloads. Browser networking disabled for offline checks; public origin not stopped. Fault injection is covered by the separate local review."
+    : "Local production build. Complete learner journeys, native files and origin-disabled offline reloads. No hosted-publication claim.",
+  base: hosted,
   edition,
   configurations: [],
   guards: [],
 };
 
 async function serve() {
+  if (hosted) return { base: hosted, online() {}, async close() {} };
   let online = true;
   const server = createServer(async (req, res) => {
     if (!online) {
@@ -380,7 +385,7 @@ for (const [engine, type] of [
           share: new URL(shared).search,
           saved,
           offline: {
-            originServing: false,
+            originServing: hosted ? "public origin not stopped" : false,
             browserNetworkEnabled: false,
             cacheFiles: cache.files.length,
             sourceAndDownloadWorked: true,
@@ -420,6 +425,7 @@ for (const [engine, type] of [
         await server.close();
       }
     }
+    if (hosted) continue;
     const server = await serve();
     try {
       const context = await browser.newContext({ serviceWorkers: "block" });

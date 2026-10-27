@@ -5,9 +5,9 @@ equimultiples, inspect the exact comparison, and find the condition in the Greek
 and Latin. Finite agreement, a counterexample to equality, and V.7’s stricter
 greater-ratio witness remain separate conclusions.
 
-This is a local edition, reviewed on 2026-10-27 UTC. No push, deployment,
-hosted-byte verification or CI run is claimed. `HOUSE_STANDARDS.md` requires
-publication to remain with the coordinator.
+This records the local edition reviewed on 2026-10-27 UTC. The owner subsequently
+authorized pushing and deployment. Public publication is verified separately;
+this local review alone does not establish hosted behavior or a CI run.
 
 ## Evidence boundaries
 
