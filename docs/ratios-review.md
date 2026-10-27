@@ -8,6 +8,7 @@ greater-ratio witness remain separate conclusions.
 This records the local edition reviewed on 2026-10-27 UTC. The owner subsequently
 authorized pushing and deployment. Public publication is verified separately;
 this local review alone does not establish hosted behavior or a CI run.
+See the separate [public publication review](ratios-publication.md).
 
 ## Evidence boundaries
 
