@@ -1,0 +1,22 @@
+[
+  {
+    "engine": "chromium",
+    "wrongScanHidden": true,
+    "exportRejectsWrongScan": true,
+    "sourceRetryRecovers": true,
+    "lateSourceCannotReplaceNewPage": true,
+    "lateImportCannotReplaceWork": true,
+    "exportRetainsClickSnapshot": true,
+    "svgRejectsWrongFont": true
+  },
+  {
+    "engine": "firefox",
+    "wrongScanHidden": true,
+    "exportRejectsWrongScan": true,
+    "sourceRetryRecovers": true,
+    "lateSourceCannotReplaceNewPage": true,
+    "lateImportCannotReplaceWork": true,
+    "exportRetainsClickSnapshot": true,
+    "svgRejectsWrongFont": true
+  }
+]

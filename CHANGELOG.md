@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-10-28
+
+- Add Euclid VI.27–29’s application-of-areas workshop. Operate two equal-area
+  fits, the unique maximum, an impossible target and the exceeding construction.
+  Keep shape similarity, perpendicular height and included/excluded regions visible.
+- Check areas, feasibility and root type with exact fractions; certify rational
+  enclosures around irrational fits without treating a near miss as an equality.
+- Pair nine Greek/Latin/English selections and eighteen language notes with fifteen
+  whole 1884 source pages. Retain editorial brackets and source/model boundaries.
+- Save and reopen exact JSON, CSV, a font-embedded SVG or a script-free illustrated
+  reading with verified scans, font and licenses. Add the fourteenth offline room.
+
 ## 2026-10-27
 
 - Replace the IX.20 multiple-choice question with a proposed-witness worksheet.

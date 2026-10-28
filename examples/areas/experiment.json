@@ -1,0 +1,14 @@
+{
+  "format": "stoicheia-areas",
+  "version": 1,
+  "state": {
+    "mode": "short",
+    "base": 12,
+    "target": "28",
+    "shape": "equal",
+    "shear": 40,
+    "trial": "792893/250000",
+    "reading": 1,
+    "page": 162
+  }
+}

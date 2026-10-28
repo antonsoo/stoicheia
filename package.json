@@ -89,7 +89,10 @@
     "verify:primes": "node --import tsx scripts/primes-cases.ts | python3 scripts/primes-oracle.py",
     "verify:primes-sources": "python3 scripts/primes-sources.py",
     "test:primes": "node scripts/primes-browser.mjs",
-    "verify:primes-files": "python3 scripts/primes-artifacts.py"
+    "verify:primes-files": "python3 scripts/primes-artifacts.py",
+    "verify:areas": "node --import tsx scripts/areas-cases.ts | python3 scripts/areas-oracle.py",
+    "verify:areas-sources": "python3 scripts/areas-sources.py",
+    "test:areas": "node scripts/areas-browser.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

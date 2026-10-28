@@ -34,6 +34,7 @@ export default defineConfig(async ({ command }) => {
     "ratios.html",
     "solids.html",
     "primes.html",
+    "areas.html",
     "LICENSE",
     "vite.config.ts",
     "tsconfig.json",
@@ -57,6 +58,7 @@ export default defineConfig(async ({ command }) => {
     "public/sources/ratios/manifest.json",
     "public/sources/solids/manifest.json",
     "public/sources/primes/manifest.json",
+    "public/sources/areas/manifest.json",
   ]) {
     const sourceManifest = JSON.parse(await readFile(manifest, "utf8")) as {
       pages: { file: string; bytes: number; sha256: string }[];
@@ -76,6 +78,7 @@ export default defineConfig(async ({ command }) => {
     "fonts/NotoSerif-Regular.ttf",
     "fonts/OFL.txt",
     "sources/primes/manifest.json",
+    "sources/areas/manifest.json",
   ]) {
     const bytes = await readFile(`public/${file}`);
     studyFiles[file] = {
@@ -101,6 +104,7 @@ export default defineConfig(async ({ command }) => {
           ratios: "ratios.html",
           solids: "solids.html",
           primes: "primes.html",
+          areas: "areas.html",
         },
       },
     },

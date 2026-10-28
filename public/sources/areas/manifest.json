@@ -1,0 +1,146 @@
+{
+  "edition": "Euclidis opera omnia, vol. II: Elementa V-IX, edited and translated into Latin by J. L. Heiberg. Leipzig: B. G. Teubner, 1884. Title prints MDCCCLXXXIV.",
+  "url": "https://archive.org/download/euclidisoperaomn02eucluoft/euclidisoperaomn02eucluoft.pdf",
+  "rights": "Public domain. University of Toronto Gerstein copy, digitized by Internet Archive.",
+  "pdfBytes": 25785657,
+  "pdfSha256": "cd24f03c6e4e6d5f30a908d144c8f0f7003e99813334edb3a4107d748cb41043",
+  "rendering": "Whole pages without crop or retouch. pdftoppm -singlefile -scale-to 2000 -jpeg -jpegopt quality=88. Printed page + 26 = one-based PDF page; title = PDF page 7.",
+  "transcription": "Selected readings, not complete proofs. Line wraps and end-of-line hyphens joined; theta glyphs normalized; apparatus and superscript references omitted; editorial square brackets retained. Geometric letters in the Latin normalized to Greek Unicode; u/v spelling retained. English, language notes, trial numbers and coordinate experiment are modern.",
+  "pages": [
+    {
+      "page": 0,
+      "pdfPage": 7,
+      "file": "areas/heiberg-title.jpg",
+      "width": 1282,
+      "height": 2000,
+      "bytes": 383569,
+      "sha256": "cb79274a052ba661ec7d2973761be9db2e96ebbbb6696a8ccbe847f08658ea25"
+    },
+    {
+      "page": 158,
+      "pdfPage": 184,
+      "file": "areas/heiberg-158.jpg",
+      "width": 1262,
+      "height": 2000,
+      "bytes": 445979,
+      "sha256": "076990ee8192b6091ddd9cc946a20b4405a8812114159bca06b22b83bbc5ec4e"
+    },
+    {
+      "page": 159,
+      "pdfPage": 185,
+      "file": "areas/heiberg-159.jpg",
+      "width": 1262,
+      "height": 2000,
+      "bytes": 478682,
+      "sha256": "ffd8077b6a20716f246ef1dfeb845cfc382e148158bb57a75bc467b98b467050"
+    },
+    {
+      "page": 160,
+      "pdfPage": 186,
+      "file": "areas/heiberg-160.jpg",
+      "width": 1262,
+      "height": 2000,
+      "bytes": 466802,
+      "sha256": "4dd4041de22eebac45160e6dd4fb8dd37f72ac9770297e8821e85661078bed98"
+    },
+    {
+      "page": 161,
+      "pdfPage": 187,
+      "file": "areas/heiberg-161.jpg",
+      "width": 1262,
+      "height": 2000,
+      "bytes": 440593,
+      "sha256": "ce9ed5c70506aa979670a48aec53cef565271d166fd653746f6caa8c89d5f696"
+    },
+    {
+      "page": 162,
+      "pdfPage": 188,
+      "file": "areas/heiberg-162.jpg",
+      "width": 1262,
+      "height": 2000,
+      "bytes": 365740,
+      "sha256": "fdca3912800202f4d120a410a32740c56bc3618c212dd9ceaf4a20e14804a348"
+    },
+    {
+      "page": 163,
+      "pdfPage": 189,
+      "file": "areas/heiberg-163.jpg",
+      "width": 1262,
+      "height": 2000,
+      "bytes": 466757,
+      "sha256": "e70213f92590088bef5f6ef2f985b532f3fa3b10c5fdf0c4bb1ae4205e6b48f2"
+    },
+    {
+      "page": 164,
+      "pdfPage": 190,
+      "file": "areas/heiberg-164.jpg",
+      "width": 1262,
+      "height": 2000,
+      "bytes": 465057,
+      "sha256": "39d217552f556317e4dd0a9984e34c8b32ab1dc44781ab0afd196439b0417568"
+    },
+    {
+      "page": 165,
+      "pdfPage": 191,
+      "file": "areas/heiberg-165.jpg",
+      "width": 1262,
+      "height": 2000,
+      "bytes": 474045,
+      "sha256": "d052fd8ce53f9ec6f3c9b672ca5202c56f9b15571678872fa348ce3265ddc24e"
+    },
+    {
+      "page": 166,
+      "pdfPage": 192,
+      "file": "areas/heiberg-166.jpg",
+      "width": 1262,
+      "height": 2000,
+      "bytes": 429091,
+      "sha256": "f079f0c2f8e9a5bf3473fef92bd03ade26ed514a44cc09ab48df9dfb5ea2bb24"
+    },
+    {
+      "page": 167,
+      "pdfPage": 193,
+      "file": "areas/heiberg-167.jpg",
+      "width": 1262,
+      "height": 2000,
+      "bytes": 435888,
+      "sha256": "cb652a0e5c6694a8c209f6cf7d6e5a2a82d826b6324096d53587f63ba0b42549"
+    },
+    {
+      "page": 168,
+      "pdfPage": 194,
+      "file": "areas/heiberg-168.jpg",
+      "width": 1262,
+      "height": 2000,
+      "bytes": 448870,
+      "sha256": "73681ccbdb423f94ae9f9399088919766afaace6284814fd4b2e310e4bf17e4d"
+    },
+    {
+      "page": 169,
+      "pdfPage": 195,
+      "file": "areas/heiberg-169.jpg",
+      "width": 1262,
+      "height": 2000,
+      "bytes": 391970,
+      "sha256": "802d77528639699312c13dd2c3d3f3d5a65f5f7b7a7b205e802a29943bdfdc81"
+    },
+    {
+      "page": 170,
+      "pdfPage": 196,
+      "file": "areas/heiberg-170.jpg",
+      "width": 1262,
+      "height": 2000,
+      "bytes": 417314,
+      "sha256": "5d8365a1205241f286081b32020a2400469a2625626e5d40ec96133288db2817"
+    },
+    {
+      "page": 171,
+      "pdfPage": 197,
+      "file": "areas/heiberg-171.jpg",
+      "width": 1262,
+      "height": 2000,
+      "bytes": 389893,
+      "sha256": "7a4c627231e293e4ae1f896bfdf55fd6e4bb005f03fed66385599524b8cd378a"
+    }
+  ]
+}

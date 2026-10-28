@@ -1,0 +1,52 @@
+{
+  "browserArtifacts": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "wholePagesIdentical": 15,
+      "readingsInThreeLanguages": 9,
+      "nativeFilesIdentical": 3,
+      "fontIdentical": true,
+      "fullLicensesInHtmlAndSvg": true,
+      "offlineImpossiblePremiseRetained": true
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "wholePagesIdentical": 15,
+      "readingsInThreeLanguages": 9,
+      "nativeFilesIdentical": 3,
+      "fontIdentical": true,
+      "fullLicensesInHtmlAndSvg": true,
+      "offlineImpossiblePremiseRetained": true
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "wholePagesIdentical": 15,
+      "readingsInThreeLanguages": 9,
+      "nativeFilesIdentical": 3,
+      "fontIdentical": true,
+      "fullLicensesInHtmlAndSvg": true,
+      "offlineImpossiblePremiseRetained": true
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "wholePagesIdentical": 15,
+      "readingsInThreeLanguages": 9,
+      "nativeFilesIdentical": 3,
+      "fontIdentical": true,
+      "fullLicensesInHtmlAndSvg": true,
+      "offlineImpossiblePremiseRetained": true
+    }
+  ],
+  "pdf": {
+    "pages": 30,
+    "completeLanguageParagraphs": 27,
+    "wholeSourceJpegsByteIdentical": 15,
+    "textWithinCheckedMargins": true,
+    "taggedReportedByPdfinfo": true
+  },
+  "boundary": "Actual local downloads and PDF bytes. Physical print precision and PDF/UA certification are not claimed."
+}

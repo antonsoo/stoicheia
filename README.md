@@ -22,7 +22,44 @@ geometry and is beginning Greek or Latin.
 [Source repository](https://github.com/antonsoo/stoicheia). The app is a static
 site; no package registry installation is required.
 
-## Six faces. Still not one of five.
+## Two fits. One limit.
+
+![Two equal-area fits with different square shortfalls](docs/assets/areas-desktop.png)
+
+The new **application-of-areas workshop** operates **Euclid VI.27–29**.
+A line of length 12 admits an applied area of 27 with square shortfalls of
+base **3 or 9**. Target 36 has one fit at the half-line. Target 45 is
+impossible under that condition, but extending beyond the line fits it at
+**3**, since (12 + 3) × 3 = 45.
+
+This addition is prepared locally for review; its public route is not yet
+published. After the quickstart below, open
+`http://127.0.0.1:4327/stoicheia/areas.html#ar-bench`, or choose **Two fits.
+One limit.** in the course’s companion workshops.
+- Move the trial or enter a fraction, reflect it and compare both figures at
+  one equal-unit scale. Change the given shape’s height and shear; the
+  shortfall or excess remains a scaled copy of that shape.
+- Inspect exact residuals. The area-28 example has irrational fits; certified
+  fractions bracket each root. Trying an endpoint keeps its nonzero error visible.
+- Read nine selected Greek/Latin/English passages and eighteen contextual word
+  notes beside fifteen complete Heiberg 1884 pages. The VI.28 condition retains
+  the edition’s editorial brackets and allows equality at the maximum.
+- Keep editable JSON, exact CSV, a font-embedded SVG or one independent HTML
+  reading with current settings, all readings, source images, font and licenses.
+  The whole fourteen-room production edition can be saved offline.
+
+The coordinate family, graph and square-completion explanation are modern.
+Euclid’s proof uses similar parallelograms, equal complements and gnomons;
+selected readings and complete scans keep that distinction checkable.
+
+[Source and mathematical model](docs/areas-model.md) ·
+[Direct review and reproduction](docs/areas-review.md#try-the-actual-work) ·
+[30-page reading PDF](examples/areas/reading.pdf) ·
+[Independent illustrated HTML, gzip](examples/areas/reading.html.gz) ·
+[Editable experiment](examples/areas/experiment.json).
+Decompress the HTML before opening it.
+
+## Euclid’s extra prime
 
 ![Exact prime division ledger and the added unit](docs/assets/primes-desktop.png)
 
