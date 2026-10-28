@@ -4,7 +4,7 @@
   "private": true,
   "description": "Read Euclid, Archimedes and Pappus in Greek, Latin and English with working geometry and original printed pages.",
   "type": "module",
-  "author": "Anton Soloviev <anton@praviel.com>",
+  "author": "Anthony Mercer <anthony@praviel.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
