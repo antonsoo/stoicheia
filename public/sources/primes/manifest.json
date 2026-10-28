@@ -1,0 +1,128 @@
+{
+  "work": "Euclidis Elementa, volume II, books V–IX",
+  "editorAndLatinTranslator": "J. L. Heiberg",
+  "place": "Leipzig",
+  "publisher": "B. G. Teubner",
+  "year": 1884,
+  "yearEvidence": "Title page MDCCCLXXXIV; catalogue date is not used.",
+  "sourceUrl": "https://archive.org/download/euclidisoperaomn02eucluoft/euclidisoperaomn02eucluoft.pdf",
+  "pdfBytes": 25785657,
+  "pdfSha256": "cd24f03c6e4e6d5f30a908d144c8f0f7003e99813334edb3a4107d748cb41043",
+  "publicDomain": true,
+  "derivation": "Poppler 24.02.0 pdftoppm; whole unretouched pages, long edge 2200 px, JPEG quality 88. No cropping or compositing.",
+  "pageMap": "Numbered print page + 26 = PDF page (one-based). Title is PDF page 7.",
+  "selection": "IX.20 complete, pp.388–391; VII definitions 1–2 pp.184–185; VII.31 pp.250–253 (selected claims, not the complete proof transcription).",
+  "diagramNote": "The p.389 line orders endpoints Δ–Ε–Ζ, while the text calls ΔΖ the unit and ΕΖ the sum. Modern M/N arithmetic follows the textual quantities, without treating the printed line as a scaled diagram.",
+  "pages": [
+    {
+      "printed": 388,
+      "pdfPage": 414,
+      "file": "primes/heiberg-388.jpg",
+      "language": "Greek",
+      "width": 1388,
+      "height": 2200,
+      "bytes": 532571,
+      "sha256": "452a63259825c59bd9bcdc1f6a7179d9eda5c0d68cbd6ee7be05955d4dbc7cc2"
+    },
+    {
+      "printed": 389,
+      "pdfPage": 415,
+      "file": "primes/heiberg-389.jpg",
+      "language": "Latin",
+      "width": 1388,
+      "height": 2200,
+      "bytes": 446080,
+      "sha256": "0a11f4afa024dd836be31f98ae7cefea60ec9bd90ecaab3008c2b9ae59191cb9"
+    },
+    {
+      "printed": 390,
+      "pdfPage": 416,
+      "file": "primes/heiberg-390.jpg",
+      "language": "Greek",
+      "width": 1388,
+      "height": 2200,
+      "bytes": 528653,
+      "sha256": "c745b20db69c37d4d4dfb1a6c90a4a8bea6ac29f447d7c5493c8075486981b30"
+    },
+    {
+      "printed": 391,
+      "pdfPage": 417,
+      "file": "primes/heiberg-391.jpg",
+      "language": "Latin",
+      "width": 1388,
+      "height": 2200,
+      "bytes": 440267,
+      "sha256": "4273d570062256e0c22643e92e161fa6b5779d5ed026af912a41ecad784ff15c"
+    },
+    {
+      "printed": 184,
+      "pdfPage": 210,
+      "file": "primes/heiberg-184.jpg",
+      "language": "Greek",
+      "width": 1388,
+      "height": 2200,
+      "bytes": 382575,
+      "sha256": "8727e5fad54f649a9c720d3faf9a03d455dd500098a0d3d97832b9668910f5df"
+    },
+    {
+      "printed": 185,
+      "pdfPage": 211,
+      "file": "primes/heiberg-185.jpg",
+      "language": "Latin",
+      "width": 1388,
+      "height": 2200,
+      "bytes": 376180,
+      "sha256": "0839aca8cdfadb90781a21f885cc15dfead2fc3174e497efda617ab502115ce2"
+    },
+    {
+      "printed": 250,
+      "pdfPage": 276,
+      "file": "primes/heiberg-250.jpg",
+      "language": "Greek",
+      "width": 1388,
+      "height": 2200,
+      "bytes": 518054,
+      "sha256": "29ca2948a167bea2ae1b63815c6ae46401c531bf720c3328c2d7a5c28638497e"
+    },
+    {
+      "printed": 251,
+      "pdfPage": 277,
+      "file": "primes/heiberg-251.jpg",
+      "language": "Latin",
+      "width": 1388,
+      "height": 2200,
+      "bytes": 517207,
+      "sha256": "b4aa371ff5a00b59a753669474152fcaa24a3097107a1e1964d00930496d7d59"
+    },
+    {
+      "printed": 252,
+      "pdfPage": 278,
+      "file": "primes/heiberg-252.jpg",
+      "language": "Greek",
+      "width": 1388,
+      "height": 2200,
+      "bytes": 471407,
+      "sha256": "cf11c500e29185f5474e44bfd213d4ad10d81555984c003228a239105e20fe75"
+    },
+    {
+      "printed": 253,
+      "pdfPage": 279,
+      "file": "primes/heiberg-253.jpg",
+      "language": "Latin",
+      "width": 1388,
+      "height": 2200,
+      "bytes": 469078,
+      "sha256": "3cef46673bea2b9cce020800ec7c127e78f8fdd1a7a8bdec6d4f1a84d95fc14d"
+    },
+    {
+      "printed": "title",
+      "pdfPage": 7,
+      "file": "primes/heiberg-title.jpg",
+      "language": "Latin title",
+      "width": 1410,
+      "height": 2200,
+      "bytes": 441709,
+      "sha256": "f1bcf7e5c1dd45e498112668d3dde1025224e4587619e47e37ba633617c110e1"
+    }
+  ]
+}
