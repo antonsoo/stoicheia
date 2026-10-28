@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-28T09:26:36.625118+00:00",
+  "authorization": "User explicitly authorized pushing when ready on 2026-10-28.",
+  "sourceHead": "12089065c250647139027fe117e9713f40de1c6a",
+  "pagesHead": "f6ed45ae4b424cb7f677841bb6e08e3e73d1ecfc",
+  "buildFiles": 232,
+  "nativeSourceFiles": [
+    {
+      "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/12089065c250647139027fe117e9713f40de1c6a/examples/areas/experiment.json",
+      "bytes": 228,
+      "sha256": "931ddb4c8394eb0db70d2a0d5c8a00a707cc06d3ac515c2a1d48e131527c8892"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/12089065c250647139027fe117e9713f40de1c6a/examples/areas/area-account.csv",
+      "bytes": 1220,
+      "sha256": "dcd1028c0c0d3fb20d5b66043aa67ab7e79e596e8cb8cb1979e383253a9d7900"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/12089065c250647139027fe117e9713f40de1c6a/examples/areas/comparison.svg",
+      "bytes": 601591,
+      "sha256": "ff170ae56f709ab05fc6b972a2d6261a4edf493f7b4abb651fcce6c6e2e7d9d8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/12089065c250647139027fe117e9713f40de1c6a/examples/areas/reading.html.gz",
+      "bytes": 7135845,
+      "sha256": "2590b89ff155a399a2ac1b83544c3ffc2e083b789ff3642849fdfcf8c14e3111"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/12089065c250647139027fe117e9713f40de1c6a/examples/areas/reading.pdf",
+      "bytes": 7464127,
+      "sha256": "88e18915275ac1482219572f7129b6a7cac2953fd675fad2af9276f5b30681d8"
+    }
+  ],
+  "CI": "The CI check job failed with steps: []; no remote CI execution is claimed. The legacy Pages build and deployment succeeded independently."
+}

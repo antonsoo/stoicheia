@@ -23,8 +23,11 @@ const edition = /const EDITION = "([a-f0-9]+)"/.exec(worker)[1];
 const inventory = JSON.parse(/const FILES = (\[[^;]+\]);/.exec(worker)[1]);
 const report = {
   checkedAt: new Date().toISOString(),
+  base,
   scope:
-    "Local production browser operation, actual native downloads and browser-offline use after the complete current worker takes control. No hosted-publication claim.",
+    new URL(base).hostname === "antonsoo.github.io"
+      ? "Public production browser operation, actual native downloads and browser-offline use after the complete current worker takes control."
+      : "Local production browser operation, actual native downloads and browser-offline use after the complete current worker takes control. No hosted-publication claim.",
   edition,
   inventory: inventory.length,
   records: [],

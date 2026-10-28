@@ -32,8 +32,8 @@ base **3 or 9**. Target 36 has one fit at the half-line. Target 45 is
 impossible under that condition, but extending beyond the line fits it at
 **3**, since (12 + 3) × 3 = 45.
 
-This addition is prepared locally for review; its public route is not yet
-published. After the quickstart below, open
+The [public workshop](https://antonsoo.github.io/stoicheia/areas.html#ar-bench)
+is published, with separate [hosted-file and browser evidence](docs/areas-review.md#evidence-boundary). After the quickstart below, open
 `http://127.0.0.1:4327/stoicheia/areas.html#ar-bench`, or choose **Two fits.
 One limit.** in the course’s companion workshops.
 - Move the trial or enter a fraction, reflect it and compare both figures at

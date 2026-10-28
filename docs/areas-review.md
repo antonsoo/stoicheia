@@ -51,8 +51,17 @@ The scripts operate the real UI and save real browser downloads.
 
 ## Evidence boundary
 
-This addition is local and prepared for coordinator review under
-`HOUSE_STANDARDS.md`. No push, tag, hosted update or CI execution is claimed.
+The initial review below was completed locally before publication. The user then
+explicitly authorized pushing. On 2026-10-28 the [public lesson](https://antonsoo.github.io/stoicheia/areas.html#ar-bench)
+was published and checked separately: all 232 build files matched; Chromium and
+Firefox at 1440 and 375 pixels operated downloads and all 14 rooms offline.
+Twenty actual public catalogue journeys reached the pinned review and operated
+the lesson. [Publication record](evidence/areas-public/publication.json),
+[hosted files](evidence/areas-public/files.json),
+[public browsers](evidence/areas-public/browser.json) and the
+[catalogue journeys](https://github.com/antonsoo/officina/blob/main/studies/application-of-areas/public/journeys.json)
+retain the boundaries. CI did not start its check steps; legacy Pages deployment
+succeeded independently. The earlier local source/artifact checks follow.
 Source: fifteen whole pages reproduced byte-for-byte from the identified original
 PDF. Mathematical oracle: 2,268 cases passed independent exact polygon shoelace,
 Python Fraction and 70-digit Decimal root checks. See

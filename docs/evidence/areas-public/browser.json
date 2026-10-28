@@ -1,0 +1,85 @@
+{
+  "checkedAt": "2026-10-28T09:13:07.448Z",
+  "scope": "Public production browser operation, actual native downloads and browser-offline use after the complete current worker takes control. The original runner used a hardcoded local scope label; this receipt corrects that label to the actual CLI URL recorded in the publication log.",
+  "edition": "e29a089e2ad06f9189e1964c2c9691f161399f336ec2f9b38169770ebaca5c45",
+  "inventory": 231,
+  "records": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "nativeDownloads": [
+        "JSON",
+        "CSV",
+        "SVG",
+        "HTML",
+        "offline HTML"
+      ],
+      "sourceImagesVerified": 15,
+      "fontVerified": true,
+      "licensesVerified": true,
+      "offlineRooms": 14,
+      "cacheFiles": 231,
+      "standaloneReading": "local file with networking and scripts disabled",
+      "axeViolations": [],
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "nativeDownloads": [
+        "JSON",
+        "CSV",
+        "SVG",
+        "HTML",
+        "offline HTML"
+      ],
+      "sourceImagesVerified": 15,
+      "fontVerified": true,
+      "licensesVerified": true,
+      "offlineRooms": 14,
+      "cacheFiles": 231,
+      "standaloneReading": "local file with networking and scripts disabled",
+      "axeViolations": [],
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "nativeDownloads": [
+        "JSON",
+        "CSV",
+        "SVG",
+        "HTML",
+        "offline HTML"
+      ],
+      "sourceImagesVerified": 15,
+      "fontVerified": true,
+      "licensesVerified": true,
+      "offlineRooms": 14,
+      "cacheFiles": 231,
+      "standaloneReading": "local file with networking and scripts disabled",
+      "axeViolations": [],
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "nativeDownloads": [
+        "JSON",
+        "CSV",
+        "SVG",
+        "HTML",
+        "offline HTML"
+      ],
+      "sourceImagesVerified": 15,
+      "fontVerified": true,
+      "licensesVerified": true,
+      "offlineRooms": 14,
+      "cacheFiles": 231,
+      "standaloneReading": "local file with networking and scripts disabled",
+      "axeViolations": [],
+      "errors": []
+    }
+  ],
+  "base": "https://antonsoo.github.io/stoicheia/"
+}
