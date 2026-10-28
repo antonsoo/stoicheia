@@ -102,3 +102,16 @@ ledger and SVG description retain the fractions. Print review changed paired
 languages to sequential blocks so neither reading is interleaved in extraction.
 
 [Desktop screenshot](assets/areas-desktop.png) · [Phone screenshot](assets/areas-phone.png).
+
+## Fresh source build
+
+A fresh archive of feature commit `2bb7c8d48e406dcccacdee8f0b1f86b7a39ebd37`
+passed `npm ci`, `npm run check` and `npm run verify:areas` on Node 24.22.1.
+The full check includes lint, strict type checking, 114 tests and the production
+build. All 232 output files, including the worker, are byte-identical to the
+locally reviewed build. The offline inventory contains the other 231 files.
+The [complete build receipt](evidence/areas/clean-build.json) records relative
+filenames, byte counts, digests and the matching edition identity.
+
+This verifies local reproducibility. The new route and pinned review have not
+been pushed or served publicly; existing deployed lessons are a separate edition.
