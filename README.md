@@ -53,9 +53,9 @@ After `npm run dev`, the local address is
   with all pages, font, licenses and native downloads. The general finite-list
   reason stays separate from the twelve-prime input limit and bounded search.
 
-[Source and arithmetic](docs/primes-model.md) · [Direct review](docs/primes-review.md) ·
-[First public delivery review](docs/primes-publication.md) ·
-[Proposed-witness review and upgrade](docs/primes-witness-review.md) ·
+[Source and arithmetic](docs/primes-model.md) ·
+[Witness and upgrade review](docs/primes-witness-review.md) ·
+[Current public review](docs/primes-witness-publication.md) ·
 [Actual illustrated reading, gzip](examples/primes/reading.html.gz) ·
 [27-page PDF](examples/primes/reading.pdf) ·
 [Editable example](examples/primes/experiment.json).

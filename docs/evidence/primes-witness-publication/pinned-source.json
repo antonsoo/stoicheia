@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/0e8659039ecdd706bb1827f990d2f5c4d66fcc13/docs/primes-witness-review.md",
+    "bytes": 7282,
+    "sha256": "37cb0bb45440fe7ce41396149f919a2d847d47cbaad6f3f63ce79a327f8820bb",
+    "matchesPinnedSource": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/0e8659039ecdd706bb1827f990d2f5c4d66fcc13/docs/assets/primes-witness-desktop.png",
+    "bytes": 155458,
+    "sha256": "f501fe061b34e554bc9342e7c5e2b91793f816d553222af3c9d299af87907ac9",
+    "matchesPinnedSource": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/0e8659039ecdd706bb1827f990d2f5c4d66fcc13/examples/primes/experiment-v1.json",
+    "bytes": 311,
+    "sha256": "533007feb264a364e4ada2f7ea2a8e2590541ed15d09d97f6e9f2b7018f37a92",
+    "matchesPinnedSource": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/0e8659039ecdd706bb1827f990d2f5c4d66fcc13/examples/primes/reading.pdf",
+    "bytes": 5328237,
+    "sha256": "485965f6fdf07f55b835d5858d67c2708939348aada819afc1a31a2a08f8d34b",
+    "matchesPinnedSource": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/0e8659039ecdd706bb1827f990d2f5c4d66fcc13/LICENSE",
+    "bytes": 1071,
+    "sha256": "f4cec46403514e2601f3b917ad36bfc8cd9a6d97359ac2f9bb554d2062a251eb",
+    "matchesPinnedSource": true
+  }
+]

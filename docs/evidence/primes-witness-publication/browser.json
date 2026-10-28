@@ -1,0 +1,93 @@
+{
+  "checkedAt": "2026-10-28T03:33:59.962Z",
+  "base": "https://antonsoo.github.io/stoicheia/",
+  "edition": "8929a5829779439022444692ec6e3cc4ed52d8120ff03fdb54874a0d5d3c1136",
+  "scope": "Public HTTPS operation and native downloads; browser networking disabled for offline checks. Local fault injection remains separate.",
+  "records": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "settings": {
+        "primes": ["2", "3", "5", "7", "11", "13"],
+        "limit": 100,
+        "selected": 5,
+        "reading": 5,
+        "page": 390,
+        "descent": [2310, 1155, 385, 77, 11],
+        "candidate": "59"
+      },
+      "sourceImagesVerified": 11,
+      "readings": 11,
+      "offlineRooms": 13,
+      "inventoryFiles": 212,
+      "axeViolations": 0,
+      "pageErrors": [],
+      "externalRequests": [],
+      "largeOperationIncludingBrowserRoundTripsMs": 70
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "settings": {
+        "primes": ["2", "3", "5", "7", "11", "13"],
+        "limit": 100,
+        "selected": 5,
+        "reading": 5,
+        "page": 390,
+        "descent": [2310, 1155, 385, 77, 11],
+        "candidate": "59"
+      },
+      "sourceImagesVerified": 11,
+      "readings": 11,
+      "offlineRooms": 13,
+      "inventoryFiles": 212,
+      "axeViolations": 0,
+      "pageErrors": [],
+      "externalRequests": [],
+      "largeOperationIncludingBrowserRoundTripsMs": 70
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "settings": {
+        "primes": ["2", "3", "5", "7", "11", "13"],
+        "limit": 100,
+        "selected": 5,
+        "reading": 5,
+        "page": 390,
+        "descent": [2310, 1155, 385, 77, 11],
+        "candidate": "59"
+      },
+      "sourceImagesVerified": 11,
+      "readings": 11,
+      "offlineRooms": 13,
+      "inventoryFiles": 212,
+      "axeViolations": 0,
+      "pageErrors": [],
+      "externalRequests": [],
+      "largeOperationIncludingBrowserRoundTripsMs": 87
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "settings": {
+        "primes": ["2", "3", "5", "7", "11", "13"],
+        "limit": 100,
+        "selected": 5,
+        "reading": 5,
+        "page": 390,
+        "descent": [2310, 1155, 385, 77, 11],
+        "candidate": "59"
+      },
+      "sourceImagesVerified": 11,
+      "readings": 11,
+      "offlineRooms": 13,
+      "inventoryFiles": 212,
+      "axeViolations": 0,
+      "pageErrors": [],
+      "externalRequests": [],
+      "largeOperationIncludingBrowserRoundTripsMs": 89
+    }
+  ],
+  "guards": []
+}
