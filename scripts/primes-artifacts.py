@@ -17,7 +17,8 @@ from html.parser import HTMLParser
 
 root=pathlib.Path.cwd()
 out=pathlib.Path(sys.argv[1])
-review=json.loads((out/"review.json").read_text())
+upgrade="--upgrade" in sys.argv[2:]
+review=json.loads((out/("upgrade.json" if upgrade else "review.json")).read_text())
 manifest=json.loads((root/"public/sources/primes/manifest.json").read_text())
 def decode(u):
     head,body=u.split(",",1)
@@ -91,6 +92,24 @@ def audit_svg(body,settings):
     units=svg.findall(".//s:rect",ns)
     assert len(units)==2*int(settings["primes"][settings["selected"]])+2
     return {"unitMarks":len(units)-1,"nativeVectorText":True}
+
+if upgrade:
+    receipts=[]
+    assert len(review["records"])==4
+    for r in review["records"]:
+        folder=out/f'{r["engine"]}-{r["width"]}'
+        reading=audit_reading(folder/"reading.html")
+        revised=json.loads(reading.downloads["stoicheia-primes.json"])
+        assert revised==json.loads((folder/"offline-v2.json").read_bytes())==json.loads((folder/"revised-v2.json").read_bytes())
+        assert revised["version"]==2 and revised["settings"]==r["settings"] and r["settings"]["candidate"]=="59"
+        old=json.loads((folder/"original-v1.json").read_bytes())
+        assert old==json.loads((root/"examples/primes/experiment-v1.json").read_bytes()) and old["version"]==1
+        for key in ["primes","selected","reading","page","descent"]:assert old["settings"][key]==r["settings"][key]
+        assert r["settings"]["limit"]==13 and r["currentCacheComplete"] and r["previousCacheComplete"] and r["assetReadDoesNotRecreateDeletedCache"]
+        receipts.append({"engine":r["engine"],"width":r["width"],"originalVersion1Preserved":True,"offlineVersion2Identical":True,"sourceImagesIdentical":11,"fontIdentical":True,"nativeFilesEncoded":4,"csv":audit_csv(reading.downloads["stoicheia-primes.csv"],r["settings"]),"svg":audit_svg(reading.downloads["stoicheia-primes.svg"],r["settings"])})
+    result={"upgrades":receipts,"boundary":"Actual local old/new build transition and origin-disabled downloads. No public transition or physical printer claim."}
+    (out/"artifacts.json").write_text(json.dumps(result,indent=2)+"\n")
+    print(json.dumps(result,indent=2));sys.exit(0)
 
 receipts=[]
 for r in review["records"]:

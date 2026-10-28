@@ -200,7 +200,8 @@ self.addEventListener("fetch", event => {
     const page = url.pathname === BASE ? BASE + "index.html" : url.pathname;
     event.respondWith(navigationResponse(event.request, page));
   } else if (FILES.includes(url.pathname)) {
-    event.respondWith(caches.open(CACHE).then(cache => cache.match(url.pathname)).then(cached => cached || fetch(event.request)));
+    // Reading a source must not recreate an explicitly deleted or retired cache.
+    event.respondWith(caches.match(url.pathname, { cacheName: CACHE }).then(cached => cached || fetch(event.request)));
   }
 });
 `,
