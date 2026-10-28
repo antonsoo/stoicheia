@@ -1,0 +1,712 @@
+.primes-page {
+  --pr-ink: #183746;
+  --pr-blue: #386577;
+  --pr-unit: #99502d;
+  --pr-rule: #a7bdc9;
+  --pr-white: #f8fbfc;
+  --accent: #99502d;
+  color: var(--pr-ink);
+}
+.pr-header,
+.pr-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 4vw;
+}
+.pr-header {
+  border-bottom: 1px solid var(--pr-rule);
+}
+.pr-brand {
+  font:
+    24px "Noto Serif",
+    Georgia,
+    serif;
+  text-decoration: none;
+}
+.pr-brand span {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  margin-top: 4px;
+}
+.pr-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  font-size: 13px;
+}
+.primes-page main {
+  max-width: 1360px;
+  padding: 0 4vw;
+}
+.primes-page p {
+  overflow-wrap: anywhere;
+}
+.pr-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6vw;
+  padding: 54px 0 38px;
+  align-items: center;
+}
+.pr-intro h1 {
+  font-size: clamp(2.7rem, 4.8vw, 4.8rem);
+  letter-spacing: -0.045em;
+  line-height: 1.17;
+  max-width: 650px;
+}
+.pr-intro p {
+  max-width: 64ch;
+  font-size: 17px;
+}
+.pr-intro .pr-fine {
+  font-size: 13px;
+}
+.pr-label {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: var(--pr-blue);
+}
+.pr-fine {
+  font-size: 13px;
+  max-width: 78ch;
+  color: #465e6b;
+}
+.pr-section {
+  border-top: 1px solid var(--pr-rule);
+  padding: 32px 0 40px;
+  scroll-margin-top: 18px;
+}
+.pr-section > h2,
+.pr-bench h2 {
+  font:
+    30px / 1.35 "Noto Serif",
+    Georgia,
+    serif;
+  margin-bottom: 16px;
+}
+.pr-section > p {
+  max-width: 78ch;
+}
+.pr-bench {
+  border-top: 2px solid var(--pr-ink);
+  padding-top: 28px;
+  scroll-margin-top: 18px;
+}
+.pr-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+.primes-page button,
+.primes-page select,
+.primes-page input,
+.primes-page textarea {
+  font: inherit;
+  color: inherit;
+}
+.primes-page button {
+  border: 1px solid var(--pr-blue);
+  padding: 10px 15px;
+  background: var(--pr-white);
+  line-height: 1.4;
+  min-height: 44px;
+}
+.primes-page button:hover:not(:disabled) {
+  background: #d9e6ed;
+  color: var(--pr-ink);
+}
+.primes-page button[aria-pressed="true"],
+.primes-page .pr-primary {
+  background: var(--pr-blue);
+  color: white;
+}
+.primes-page textarea,
+.primes-page select,
+.primes-page input {
+  background: var(--pr-white);
+  border: 1px solid var(--pr-blue);
+  padding: 10px;
+  border-radius: 0;
+  min-height: 44px;
+  max-width: 100%;
+}
+.primes-page textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 78px;
+  margin: 8px 0;
+}
+.primes-page label {
+  display: block;
+  line-height: 1.6;
+}
+.primes-page select:focus-visible,
+.primes-page textarea:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+.pr-actions,
+.pr-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0;
+}
+.pr-presets button {
+  text-align: left;
+  flex: 1 1 150px;
+}
+.pr-presets small {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+.pr-status {
+  margin: 14px 0;
+  font-size: 14px;
+  color: var(--pr-unit);
+  max-width: 78ch;
+}
+.pr-status:empty {
+  display: none;
+}
+.pr-construction {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 24px 0 0;
+  padding: 24px 0;
+  border-top: 1px solid var(--pr-rule);
+}
+.pr-construction dt {
+  font-size: 14px;
+}
+.pr-construction dd {
+  font:
+    34px / 1.4 "Noto Serif",
+    Georgia,
+    serif;
+  font-variant-numeric: tabular-nums;
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+}
+.pr-construction p {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+.pr-division {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px;
+  padding-bottom: 32px;
+  align-items: start;
+}
+.pr-table {
+  overflow-x: auto;
+}
+.primes-page table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+.primes-page caption {
+  text-align: left;
+  font-size: 13px;
+  margin: 0 0 12px;
+  line-height: 1.6;
+}
+.primes-page th,
+.primes-page td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--pr-rule);
+  overflow-wrap: anywhere;
+  vertical-align: top;
+}
+.primes-page th {
+  font-weight: 500;
+}
+.primes-page th:first-child {
+  min-width: 82px;
+}
+.primes-page td strong {
+  color: var(--pr-unit);
+  font-size: 20px;
+}
+.primes-page .pr-selected {
+  background: #d7e5ec;
+}
+.primes-page .pr-selected button {
+  background: var(--pr-blue);
+  color: white;
+}
+.pr-unit-plate {
+  background: var(--pr-white);
+  padding: 20px;
+}
+.pr-unit-plate h3 {
+  font-size: 17px;
+}
+.pr-unit-plate svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.pr-unit-figure {
+  margin: 0;
+}
+.pr-unit-figure figcaption {
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 10px 0;
+}
+.pr-equation {
+  font:
+    18px / 1.8 "Noto Serif",
+    Georgia,
+    serif;
+  overflow-wrap: anywhere;
+}
+.pr-equation strong {
+  color: var(--pr-unit);
+}
+.pr-symbolic {
+  padding: 20px 0;
+}
+.pr-search {
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr);
+  gap: 42px;
+}
+.pr-search select {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+}
+.pr-result-kind {
+  font:
+    26px / 1.4 "Noto Serif",
+    Georgia,
+    serif;
+}
+.pr-factorization {
+  font:
+    23px / 1.6 "Noto Serif",
+    Georgia,
+    serif;
+  overflow-wrap: anywhere;
+}
+.pr-witnesses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.pr-branches {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 24px;
+  border-top: 1px solid var(--pr-rule);
+}
+.pr-branches > div {
+  padding: 24px;
+}
+.pr-branches h3 {
+  font:
+    22px / 1.4 "Noto Serif",
+    Georgia,
+    serif;
+}
+.pr-branches > .pr-branch-active {
+  background: var(--pr-white);
+  border-left: 4px solid var(--pr-blue);
+  padding-left: 20px;
+}
+.pr-branches p {
+  max-width: 62ch;
+  font-size: 15px;
+}
+.pr-reason {
+  max-width: 85ch;
+  padding-left: 22px;
+}
+.pr-reason li {
+  padding: 0 0 14px 8px;
+  line-height: 1.8;
+}
+.pr-chain {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+}
+.pr-chain li {
+  border-left: 3px solid var(--pr-blue);
+  padding-left: 14px;
+  flex: 1 1 150px;
+  max-width: 240px;
+}
+.pr-chain strong {
+  display: block;
+  font:
+    28px / 1.4 "Noto Serif",
+    Georgia,
+    serif;
+}
+.pr-chain span {
+  display: block;
+  line-height: 1.6;
+  font-size: 13px;
+}
+.pr-divisors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 900px;
+}
+.pr-divisors button {
+  min-width: 54px;
+}
+.pr-descent-end {
+  padding: 16px;
+  background: var(--pr-white);
+  max-width: 70ch;
+  border-left: 4px solid var(--pr-blue);
+}
+.pr-reading-picker {
+  max-width: 600px;
+  margin: 20px 0;
+}
+.pr-reading-picker select {
+  width: 100%;
+  margin-top: 8px;
+}
+.pr-reading-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  margin-top: 18px;
+}
+.pr-reading-grid p[lang] {
+  font:
+    20px / 1.95 "Noto Serif",
+    Georgia,
+    serif;
+  max-width: 65ch;
+}
+.pr-translation {
+  font:
+    20px / 1.85 "Noto Serif",
+    Georgia,
+    serif;
+  max-width: 85ch;
+  padding: 16px 0;
+  border-top: 1px solid var(--pr-rule);
+}
+.pr-reading-note {
+  max-width: 90ch;
+  line-height: 1.85;
+}
+.pr-word {
+  border-left: 4px solid var(--pr-blue);
+  padding: 12px 20px;
+  max-width: 90ch;
+  background: var(--pr-white);
+}
+.pr-word p {
+  margin-bottom: 6px;
+}
+.pr-word [lang] {
+  font:
+    19px "Noto Serif",
+    Georgia,
+    serif;
+}
+.pr-reader-actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.pr-source-grid {
+  display: grid;
+  grid-template-columns: minmax(200px, 0.65fr) minmax(0, 1fr);
+  gap: 40px;
+}
+.pr-source-grid select {
+  width: 100%;
+  margin-top: 8px;
+}
+.pr-source-grid figure {
+  margin: 0;
+  min-width: 0;
+}
+.pr-source-pan {
+  max-height: 740px;
+  overflow: auto;
+  background: var(--pr-white);
+  border: 1px solid var(--pr-rule);
+}
+.pr-source-pan:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+.pr-source-sheet img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.pr-source-sheet.pr-enlarged {
+  width: 1250px;
+  max-width: none;
+}
+.pr-caption {
+  font-size: 12px;
+  line-height: 1.7;
+  padding-top: 12px;
+}
+.pr-question {
+  max-width: 800px;
+}
+.pr-question fieldset {
+  border: 1px solid var(--pr-rule);
+  padding: 18px;
+}
+.pr-question legend {
+  font-size: 17px;
+  padding: 0 6px;
+}
+.pr-question label {
+  padding: 12px 0;
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+.pr-question input {
+  min-height: 0;
+  flex: 0 0 auto;
+}
+.pr-share input {
+  width: 100%;
+}
+.pr-footer {
+  font-size: 12px;
+  border-top: 1px solid var(--pr-rule);
+  flex-wrap: wrap;
+}
+.pr-retained .pr-intro {
+  display: block;
+}
+.pr-retained .pr-reading-full {
+  margin: 32px 0;
+  padding: 20px 0;
+  border-top: 1px solid var(--pr-rule);
+}
+.pr-retained .pr-source-full {
+  margin: 28px 0;
+}
+.pr-retained .pr-source-full img {
+  max-width: 750px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.pr-retained .pr-source-full figcaption {
+  overflow-wrap: anywhere;
+  line-height: 1.8;
+  font-size: 12px;
+}
+.pr-retained pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 11px;
+  line-height: 1.6;
+}
+.pr-native a {
+  display: inline-block;
+  margin: 10px 14px 10px 0;
+  padding: 8px 0;
+}
+@media (max-width: 760px) {
+  .pr-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .pr-header nav {
+    font-size: 13px;
+    gap: 12px 18px;
+  }
+  .primes-page main {
+    padding: 0 20px;
+  }
+  .pr-intro {
+    display: block;
+    padding: 32px 0 24px;
+  }
+  .pr-intro h1 {
+    font-size: 44px;
+    margin-bottom: 22px;
+  }
+  .pr-intro p {
+    font-size: 16px;
+  }
+  .pr-controls,
+  .pr-construction,
+  .pr-division,
+  .pr-search,
+  .pr-reading-grid,
+  .pr-source-grid,
+  .pr-branches {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .pr-construction dd {
+    font-size: 29px;
+  }
+  .pr-construction {
+    gap: 22px;
+  }
+  .pr-section {
+    padding: 28px 0;
+  }
+  .pr-section > h2,
+  .pr-bench h2 {
+    font-size: 27px;
+  }
+  .pr-unit-plate {
+    padding: 15px;
+  }
+  .pr-branches {
+    gap: 0;
+  }
+  .pr-branches > div {
+    padding: 18px 0;
+  }
+  .pr-branches > .pr-branch-active {
+    padding: 18px;
+  }
+  .pr-reading-grid {
+    gap: 8px;
+  }
+  .pr-reading-grid p[lang] {
+    font-size: 19px;
+  }
+  .pr-translation {
+    font-size: 19px;
+  }
+  .pr-source-pan {
+    max-height: 600px;
+  }
+  .pr-footer {
+    padding: 24px 20px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media print {
+  @page {
+    size: A4;
+    margin: 15mm;
+  }
+  .primes-page {
+    background: white;
+    color: #183746;
+    font-size: 10pt;
+  }
+  .primes-page main {
+    max-width: none;
+    padding: 0;
+  }
+  .pr-header,
+  .pr-footer,
+  .skip-link {
+    display: none;
+  }
+  .pr-intro {
+    padding: 10px 0 24px;
+    display: block;
+  }
+  .pr-intro h1 {
+    font-size: 32pt;
+  }
+  .pr-section,
+  .pr-bench {
+    padding: 18px 0;
+  }
+  .pr-controls,
+  .pr-search,
+  .pr-construction,
+  .pr-reading-grid,
+  .pr-source-grid,
+  .pr-division {
+    display: block;
+  }
+  .pr-construction > div {
+    margin-bottom: 14px;
+  }
+  .pr-construction dd {
+    font-size: 19pt;
+  }
+  .pr-reading-grid p[lang] {
+    font-size: 12pt;
+    line-height: 1.7;
+  }
+  .pr-translation {
+    font-size: 12pt;
+    line-height: 1.7;
+  }
+  .pr-reading-full {
+    break-inside: auto;
+  }
+  .pr-reading-full h3 {
+    break-after: avoid;
+  }
+  .pr-word {
+    break-inside: avoid;
+  }
+  .pr-retained .pr-source-full {
+    break-before: page;
+    margin: 0;
+  }
+  .pr-retained .pr-source-full img {
+    max-height: 232mm;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .pr-retained .pr-source-full figcaption {
+    font-size: 8pt;
+  }
+  .pr-retained .pr-native {
+    display: none;
+  }
+  .pr-unit-plate svg {
+    max-height: 65mm;
+  }
+  .primes-page table {
+    font-size: 9pt;
+    table-layout: fixed;
+  }
+  .pr-retained pre {
+    font-size: 8pt;
+  }
+  .pr-branches {
+    display: block;
+  }
+  .pr-chain {
+    display: block;
+  }
+  .pr-chain li {
+    display: inline-block;
+    margin: 8px;
+  }
+}

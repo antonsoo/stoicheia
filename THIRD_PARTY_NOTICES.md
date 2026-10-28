@@ -1,5 +1,19 @@
 # Third-party materials
 
+Prime-argument workshop (`primes.html`):
+
+Euclid, _Euclidis Elementa_, volume II, _Libros V–IX continens_, edited and
+translated into Latin by J. L. Heiberg, Leipzig: B. G. Teubner, 1884. The title
+prints MDCCCLXXXIV. Public-domain historical text and images from the University
+of Toronto digitized copy: https://archive.org/details/euclidisoperaomn02eucluoft.
+The title and printed pp.184–185, 250–253 and 388–391 are retained as eleven
+whole unretouched reductions. Original PDF and derivative identities are in
+`public/sources/primes/manifest.json`; reproduction is in `scripts/primes-sources.py`.
+IX.20 is selected in full; VII definitions 1–2 are complete; VII.31 is represented
+by selected clauses beside its complete printed proof. New English, language
+notes, examples, algorithms, code and diagrams are MIT. The existing Noto Serif
+and full SIL OFL notice are reused in portable readings.
+
 Solid-corner workshop (`solids.html`):
 
 Euclid, _Euclidis Elementa_, volume IV, _Libros XI–XIII continens_, edited and

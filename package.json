@@ -85,7 +85,11 @@
     "verify:solids": "node --import tsx scripts/solids-cases.ts | python3 scripts/solids-oracle.py",
     "verify:solids-sources": "python3 scripts/solids-sources.py",
     "test:solids": "node scripts/solids-browser.mjs",
-    "verify:solids-files": "python3 scripts/solids-artifacts.py"
+    "verify:solids-files": "python3 scripts/solids-artifacts.py",
+    "verify:primes": "node --import tsx scripts/primes-cases.ts | python3 scripts/primes-oracle.py",
+    "verify:primes-sources": "python3 scripts/primes-sources.py",
+    "test:primes": "node scripts/primes-browser.mjs",
+    "verify:primes-files": "python3 scripts/primes-artifacts.py"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

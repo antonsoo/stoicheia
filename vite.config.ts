@@ -33,6 +33,7 @@ export default defineConfig(async ({ command }) => {
     "quadratrix.html",
     "ratios.html",
     "solids.html",
+    "primes.html",
     "LICENSE",
     "vite.config.ts",
     "tsconfig.json",
@@ -55,6 +56,7 @@ export default defineConfig(async ({ command }) => {
     "public/sources/quadratrix/manifest.json",
     "public/sources/ratios/manifest.json",
     "public/sources/solids/manifest.json",
+    "public/sources/primes/manifest.json",
   ]) {
     const sourceManifest = JSON.parse(await readFile(manifest, "utf8")) as {
       pages: { file: string; bytes: number; sha256: string }[];
@@ -70,7 +72,11 @@ export default defineConfig(async ({ command }) => {
       studyFiles[file] = { bytes: bytes.length, sha256 };
     }
   }
-  for (const file of ["fonts/NotoSerif-Regular.ttf", "fonts/OFL.txt"]) {
+  for (const file of [
+    "fonts/NotoSerif-Regular.ttf",
+    "fonts/OFL.txt",
+    "sources/primes/manifest.json",
+  ]) {
     const bytes = await readFile(`public/${file}`);
     studyFiles[file] = {
       bytes: bytes.length,
@@ -94,6 +100,7 @@ export default defineConfig(async ({ command }) => {
           quadratrix: "quadratrix.html",
           ratios: "ratios.html",
           solids: "solids.html",
+          primes: "primes.html",
         },
       },
     },

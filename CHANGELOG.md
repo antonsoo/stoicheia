@@ -2,6 +2,18 @@
 
 ## 2026-10-27
 
+- Add Euclid IX.20's two-branch prime workshop: exact division ledger,
+  a bounded factor search that keeps unresolved cofactors explicit, a composite
+  product-plus-one, an additional prime smaller than the givens, and an operable
+  VII.31 divisor descent. Keep the arbitrary finite-list reason separate from
+  the numerical input and search limits.
+- Read the complete IX.20 in seven Greek/Latin/English units, with four supporting
+  readings and eleven whole Heiberg 1884 pages. Expose the printed diagram/text
+  endpoint mismatch and retain the edition's wording and apparatus.
+- Save exact JSON/CSV/SVG and a script-free illustrated reading with verified
+  source images, font, licenses and native downloads. Include the thirteenth
+  room in the complete offline edition.
+
 - Keep saved lessons usable when document headers or bodies stall, or the server
   returns a temporary error. Abort overdue requests and re-read the retained
   edition before fallback; preserve explicit deletions and uncached failures.
