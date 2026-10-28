@@ -1,0 +1,104 @@
+{
+  "checkedAt": "2026-10-28T02:50:46.332Z",
+  "base": null,
+  "edition": "78ca62cdbb2f89a9684c1a7b84a97ef6aa9cea5871d08085d1f442371d2216ae",
+  "scope": "Local production operation and native downloads; origin disabled and browser offline after current complete worker takeover. No publication claim.",
+  "records": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "settings": {
+        "primes": ["2", "3", "5", "7", "11", "13"],
+        "limit": 100,
+        "selected": 5,
+        "reading": 5,
+        "page": 390,
+        "descent": [2310, 1155, 385, 77, 11]
+      },
+      "sourceImagesVerified": 11,
+      "readings": 11,
+      "offlineRooms": 13,
+      "inventoryFiles": 212,
+      "axeViolations": 0,
+      "pageErrors": [],
+      "externalRequests": [],
+      "largeOperationIncludingBrowserRoundTripsMs": 77
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "settings": {
+        "primes": ["2", "3", "5", "7", "11", "13"],
+        "limit": 100,
+        "selected": 5,
+        "reading": 5,
+        "page": 390,
+        "descent": [2310, 1155, 385, 77, 11]
+      },
+      "sourceImagesVerified": 11,
+      "readings": 11,
+      "offlineRooms": 13,
+      "inventoryFiles": 212,
+      "axeViolations": 0,
+      "pageErrors": [],
+      "externalRequests": [],
+      "largeOperationIncludingBrowserRoundTripsMs": 71
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "settings": {
+        "primes": ["2", "3", "5", "7", "11", "13"],
+        "limit": 100,
+        "selected": 5,
+        "reading": 5,
+        "page": 390,
+        "descent": [2310, 1155, 385, 77, 11]
+      },
+      "sourceImagesVerified": 11,
+      "readings": 11,
+      "offlineRooms": 13,
+      "inventoryFiles": 212,
+      "axeViolations": 0,
+      "pageErrors": [],
+      "externalRequests": [],
+      "largeOperationIncludingBrowserRoundTripsMs": 86
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "settings": {
+        "primes": ["2", "3", "5", "7", "11", "13"],
+        "limit": 100,
+        "selected": 5,
+        "reading": 5,
+        "page": 390,
+        "descent": [2310, 1155, 385, 77, 11]
+      },
+      "sourceImagesVerified": 11,
+      "readings": 11,
+      "offlineRooms": 13,
+      "inventoryFiles": 212,
+      "axeViolations": 0,
+      "pageErrors": [],
+      "externalRequests": [],
+      "largeOperationIncludingBrowserRoundTripsMs": 87
+    }
+  ],
+  "guards": [
+    {
+      "engine": "chromium",
+      "wrongHttp200JpegRefused": true,
+      "retry": true,
+      "lateSourceCannotReplaceTitle": true,
+      "exportRetainsClickSettings": true
+    },
+    {
+      "engine": "firefox",
+      "wrongHttp200JpegRefused": true,
+      "retry": true,
+      "lateSourceCannotReplaceTitle": true,
+      "exportRetainsClickSettings": true
+    }
+  ]
+}

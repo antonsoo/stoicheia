@@ -24,6 +24,35 @@ site; no package registry installation is required.
 
 ## Six faces. Still not one of five.
 
+![Exact prime division ledger and the added unit](docs/assets/primes-desktop.png)
+
+**Euclid’s extra prime** operates the two branches of **IX.20**. Start with
+2, 3, 5, 7, 11, 13: their product plus one is 30031. Every given prime leaves
+remainder one, but the sum is composite: **59 × 509**. The proof needs a prime
+outside the list, not a prime sum. With givens 3, 5, 7, the additional prime
+can even be 2.
+
+[Open the prime workshop](https://antonsoo.github.io/stoicheia/primes.html#pr-bench),
+or choose **Euclid’s extra prime** from the course’s companion workshops.
+After `npm run dev`, the local address is
+`http://127.0.0.1:4327/stoicheia/primes.html`.
+- Select a given prime and inspect its exact quotient, remainder and last group
+  of units. Extend the factor search from 13 to 100; unresolved cofactors remain
+  explicit. A proven new prime can join the given list.
+- Choose proper divisors in a separate **VII.31** descent from 2310. Read why the
+  descent must end at a prime, independently of the app’s trial bound.
+- Read the complete **IX.20** in seven Greek/Latin/English units and four supporting
+  readings, with eleven whole Heiberg 1884 pages. Inspect the printed diagram’s
+  endpoint mismatch instead of silently copying it into modern arithmetic.
+- Save exact JSON, division CSV, vector SVG, or a script-free illustrated reading
+  with all pages, font, licenses and native downloads. The general finite-list
+  reason stays separate from the twelve-prime input limit and bounded search.
+
+[Source and arithmetic](docs/primes-model.md) · [Direct review](docs/primes-review.md) ·
+[Actual illustrated reading, gzip](examples/primes/reading.html.gz) ·
+[26-page PDF](examples/primes/reading.pdf) ·
+[Editable example](examples/primes/experiment.json).
+
 ![Equal triangular faces, a tetrahedron and the mixed corners of two joined tetrahedra](docs/assets/solids-comparison-chromium-1440.png)
 
 Test the addendum after Euclid XIII.18 in the new **solid-corner workshop**.

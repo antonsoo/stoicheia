@@ -1,0 +1,12 @@
+{
+  "cases": 456,
+  "listCases": 424,
+  "directNumbers": 32,
+  "classifications": {
+    "prime": 10,
+    "composite": 400,
+    "unresolved": 46
+  },
+  "largestDecimalDigits": 120,
+  "independence": "Python arbitrary integers, Eratosthenes sieve, full factor-product reconstruction and independent prime-divisor checks; no production imports"
+}

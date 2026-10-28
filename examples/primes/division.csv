@@ -1,0 +1,33 @@
+section,quantity,value,meaning
+construction,M,30030,product of distinct given primes; also their least common multiple
+construction,N,30031,M plus one
+given,prime,2,given prime
+division,copies_in_M,15015,M divided by 2
+division,remainder_in_N,1,N modulo 2
+given,prime,3,given prime
+division,copies_in_M,10010,M divided by 3
+division,remainder_in_N,1,N modulo 3
+given,prime,5,given prime
+division,copies_in_M,6006,M divided by 5
+division,remainder_in_N,1,N modulo 5
+given,prime,7,given prime
+division,copies_in_M,4290,M divided by 7
+division,remainder_in_N,1,N modulo 7
+given,prime,11,given prime
+division,copies_in_M,2730,M divided by 11
+division,remainder_in_N,1,N modulo 11
+given,prime,13,given prime
+division,copies_in_M,2310,M divided by 13
+division,remainder_in_N,1,N modulo 13
+search,trial_bound,100,largest permitted trial divisor
+search,trial_count,17,prime divisors actually tried
+search,classification,composite,bounded exact result
+search,complete,true,complete factorization established
+factor,prime_power,59^1,proven prime factor
+factor,prime_power,509^1,proven prime factor
+search,unresolved_cofactor,1,one means nothing remains
+separate_VII_31,step_0,2310,proper-divisor chain starting at 2310
+separate_VII_31,step_1,1155,proper-divisor chain starting at 2310
+separate_VII_31,step_2,385,proper-divisor chain starting at 2310
+separate_VII_31,step_3,77,proper-divisor chain starting at 2310
+separate_VII_31,step_4,11,proper-divisor chain starting at 2310
