@@ -1,0 +1,81 @@
+{
+  "upgrades": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "originalVersion1Preserved": true,
+      "offlineVersion2Identical": true,
+      "sourceImagesIdentical": 11,
+      "fontIdentical": true,
+      "nativeFilesEncoded": 4,
+      "csv": {
+        "givenPrimes": 6,
+        "exactRemainders": 6,
+        "factorProductReconstructed": true,
+        "proposedWitnessIndependentlyChecked": true
+      },
+      "svg": {
+        "unitMarks": 27,
+        "nativeVectorText": true
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "originalVersion1Preserved": true,
+      "offlineVersion2Identical": true,
+      "sourceImagesIdentical": 11,
+      "fontIdentical": true,
+      "nativeFilesEncoded": 4,
+      "csv": {
+        "givenPrimes": 6,
+        "exactRemainders": 6,
+        "factorProductReconstructed": true,
+        "proposedWitnessIndependentlyChecked": true
+      },
+      "svg": {
+        "unitMarks": 27,
+        "nativeVectorText": true
+      }
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "originalVersion1Preserved": true,
+      "offlineVersion2Identical": true,
+      "sourceImagesIdentical": 11,
+      "fontIdentical": true,
+      "nativeFilesEncoded": 4,
+      "csv": {
+        "givenPrimes": 6,
+        "exactRemainders": 6,
+        "factorProductReconstructed": true,
+        "proposedWitnessIndependentlyChecked": true
+      },
+      "svg": {
+        "unitMarks": 27,
+        "nativeVectorText": true
+      }
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "originalVersion1Preserved": true,
+      "offlineVersion2Identical": true,
+      "sourceImagesIdentical": 11,
+      "fontIdentical": true,
+      "nativeFilesEncoded": 4,
+      "csv": {
+        "givenPrimes": 6,
+        "exactRemainders": 6,
+        "factorProductReconstructed": true,
+        "proposedWitnessIndependentlyChecked": true
+      },
+      "svg": {
+        "unitMarks": 27,
+        "nativeVectorText": true
+      }
+    }
+  ],
+  "boundary": "Actual local old/new build transition and origin-disabled downloads. No public transition or physical printer claim."
+}

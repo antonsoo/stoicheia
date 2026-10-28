@@ -1,6 +1,6 @@
 {
   "format": "stoicheia-primes",
-  "version": 1,
+  "version": 2,
   "settings": {
     "primes": [
       "2",
@@ -20,6 +20,7 @@
       385,
       77,
       11
-    ]
+    ],
+    "candidate": "59"
   }
 }

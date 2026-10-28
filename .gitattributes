@@ -14,3 +14,6 @@ docs/horn-publication/*/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-b
 examples/solids-angles.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 examples/solids-experiment.json -text
 *.pdf binary
+
+# Actual native CSV downloads retain RFC 4180 CRLF line endings.
+examples/primes/*.csv whitespace=cr-at-eol

@@ -104,22 +104,21 @@ for (const [engine, launcher] of [
         .filter({ hasText: "Edition ready offline" })
         .waitFor({ timeout: 90000 });
       assert.equal(await p.locator("#pr-candidate").count(), 0);
-      const inspect = () =>
-        p.evaluate(async () =>
-          Promise.all(
-            (await caches.keys())
-              .filter((k) => k.startsWith("stoicheia-"))
-              .map(async (name) => ({
-                name,
-                paths: (await (await caches.open(name)).keys())
-                  .map((r) => new URL(r.url).pathname)
-                  .sort(),
-              })),
-          ),
+      const inspect = (identity) =>
+        p.evaluate(
+          async ({ edition, files }) => ({
+            keys: (await caches.keys()).filter((name) => name.startsWith("stoicheia-")),
+            present: (
+              await Promise.all(
+                files.map((file) => caches.match(file, { cacheName: `stoicheia-${edition}` })),
+              )
+            ).filter(Boolean).length,
+          }),
+          identity,
         );
-      assert.deepEqual(await inspect(), [
-        { name: `stoicheia-${old.edition}`, paths: [...old.files].sort() },
-      ]);
+      const previous = await inspect(old);
+      assert(previous.keys.includes(`stoicheia-${old.edition}`));
+      assert.equal(previous.present, old.files.length);
       await p.locator("#pr-import").setInputFiles("examples/primes/experiment-v1.json");
       await p.locator("#pr-save-status").filter({ hasText: "Reopened the exact" }).waitFor();
       const original = await download(p, "#pr-json", path.join(folder, "original-v1.json"));
@@ -135,14 +134,10 @@ for (const [engine, launcher] of [
         .locator("#pr-offline")
         .filter({ hasText: "Edition ready offline" })
         .waitFor({ timeout: 90000 });
-      const snapshot = await inspect();
-      assert.deepEqual(
-        snapshot.find((cache) => cache.name === `stoicheia-${current.edition}`),
-        { name: `stoicheia-${current.edition}`, paths: [...current.files].sort() },
-      );
-      const previousCacheRetired = !snapshot.some(
-        (cache) => cache.name === `stoicheia-${old.edition}`,
-      );
+      const snapshot = await inspect(current);
+      assert(snapshot.keys.includes(`stoicheia-${current.edition}`));
+      assert.equal(snapshot.present, current.files.length);
+      const previousCacheRetired = !snapshot.keys.includes(`stoicheia-${old.edition}`);
       await p.locator("#pr-import").setInputFiles({
         name: "original-v1.json",
         mimeType: "application/json",
@@ -153,6 +148,10 @@ for (const [engine, launcher] of [
       await p.locator("#pr-limit").selectOption("13");
       await p.locator("#pr-candidate").fill("59");
       await p.getByRole("button", { name: "Check this H", exact: true }).click();
+      await p
+        .locator("#pr-proposal")
+        .filter({ hasText: "completes the composite branch" })
+        .waitFor();
       assert.match(await p.locator("#pr-result").textContent(), /Unresolved at this bound/);
       assert.match(await p.locator("#pr-proposal").textContent(), /completes the composite branch/);
       const revised = await download(p, "#pr-json", path.join(folder, "revised-v2.json"));

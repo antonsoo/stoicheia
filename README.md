@@ -39,6 +39,11 @@ After `npm run dev`, the local address is
 - Select a given prime and inspect its exact quotient, remainder and last group
   of units. Extend the factor search from 13 to 100; unresolved cofactors remain
   explicit. A proven new prime can join the given list.
+- Propose your own H and check primality, exact divisibility and absence from
+  the givens. The unit, a given prime and the whole composite sum each expose
+  a different missing condition. A verified proposal can finish the argument
+  while the bounded search remains unresolved. Save H with the experiment;
+  the originally published version 1 files still reopen.
 - Choose proper divisors in a separate **VII.31** descent from 2310. Read why the
   descent must end at a prime, independently of the app’s trial bound.
 - Read the complete **IX.20** in seven Greek/Latin/English units and four supporting
@@ -49,9 +54,10 @@ After `npm run dev`, the local address is
   reason stays separate from the twelve-prime input limit and bounded search.
 
 [Source and arithmetic](docs/primes-model.md) · [Direct review](docs/primes-review.md) ·
-[Public delivery review](docs/primes-publication.md) ·
+[First public delivery review](docs/primes-publication.md) ·
+[Proposed-witness review and upgrade](docs/primes-witness-review.md) ·
 [Actual illustrated reading, gzip](examples/primes/reading.html.gz) ·
-[26-page PDF](examples/primes/reading.pdf) ·
+[27-page PDF](examples/primes/reading.pdf) ·
 [Editable example](examples/primes/experiment.json).
 
 ![Equal triangular faces, a tetrahedron and the mixed corners of two joined tetrahedra](docs/assets/solids-comparison-chromium-1440.png)

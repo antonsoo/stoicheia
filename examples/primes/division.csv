@@ -26,6 +26,13 @@ search,complete,true,complete factorization established
 factor,prime_power,59^1,proven prime factor
 factor,prime_power,509^1,proven prime factor
 search,unresolved_cofactor,1,one means nothing remains
+proposed_witness,H,59,learner-proposed number; not a factor-search result
+proposed_witness,primality,prime,exact check through 10000000000; larger H unchecked
+proposed_witness,divides_N,true,exact divisibility condition
+proposed_witness,remainder,0,N modulo H; zero H has no division
+proposed_witness,absent_from_givens,true,additional-prime condition
+proposed_witness,valid,true,all three conditions established
+proposed_witness,branch,composite,source branch established by this proposal
 separate_VII_31,step_0,2310,proper-divisor chain starting at 2310
 separate_VII_31,step_1,1155,proper-divisor chain starting at 2310
 separate_VII_31,step_2,385,proper-divisor chain starting at 2310

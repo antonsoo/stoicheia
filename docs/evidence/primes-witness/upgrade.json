@@ -1,0 +1,124 @@
+{
+  "checkedAt": "2026-10-28T03:28:25.677Z",
+  "scope": "Local actual edition transition. Previous public build first controls a complete cache; new build then replaces canonical files while older hashed assets remain available. Import an actual version 1 download, propose H, and save the verified current edition offline. No public-upgrade claim.",
+  "before": "78ca62cdbb2f89a9684c1a7b84a97ef6aa9cea5871d08085d1f442371d2216ae",
+  "after": "8929a5829779439022444692ec6e3cc4ed52d8120ff03fdb54874a0d5d3c1136",
+  "records": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "originalSettings": {
+        "primes": ["2", "3", "5", "7", "11", "13"],
+        "limit": 100,
+        "selected": 5,
+        "reading": 5,
+        "page": 390,
+        "descent": [2310, 1155, 385, 77, 11]
+      },
+      "settings": {
+        "primes": ["2", "3", "5", "7", "11", "13"],
+        "limit": 13,
+        "selected": 5,
+        "reading": 5,
+        "page": 390,
+        "descent": [2310, 1155, 385, 77, 11],
+        "candidate": "59"
+      },
+      "previousCacheComplete": true,
+      "currentCacheComplete": true,
+      "previousCacheRetired": false,
+      "assetReadDoesNotRecreateDeletedCache": true,
+      "version1Reopened": true,
+      "candidatePreservedOffline": true,
+      "reading": "chromium-1440/reading.html",
+      "pageErrors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "originalSettings": {
+        "primes": ["2", "3", "5", "7", "11", "13"],
+        "limit": 100,
+        "selected": 5,
+        "reading": 5,
+        "page": 390,
+        "descent": [2310, 1155, 385, 77, 11]
+      },
+      "settings": {
+        "primes": ["2", "3", "5", "7", "11", "13"],
+        "limit": 13,
+        "selected": 5,
+        "reading": 5,
+        "page": 390,
+        "descent": [2310, 1155, 385, 77, 11],
+        "candidate": "59"
+      },
+      "previousCacheComplete": true,
+      "currentCacheComplete": true,
+      "previousCacheRetired": false,
+      "assetReadDoesNotRecreateDeletedCache": true,
+      "version1Reopened": true,
+      "candidatePreservedOffline": true,
+      "reading": "chromium-375/reading.html",
+      "pageErrors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "originalSettings": {
+        "primes": ["2", "3", "5", "7", "11", "13"],
+        "limit": 100,
+        "selected": 5,
+        "reading": 5,
+        "page": 390,
+        "descent": [2310, 1155, 385, 77, 11]
+      },
+      "settings": {
+        "primes": ["2", "3", "5", "7", "11", "13"],
+        "limit": 13,
+        "selected": 5,
+        "reading": 5,
+        "page": 390,
+        "descent": [2310, 1155, 385, 77, 11],
+        "candidate": "59"
+      },
+      "previousCacheComplete": true,
+      "currentCacheComplete": true,
+      "previousCacheRetired": true,
+      "assetReadDoesNotRecreateDeletedCache": true,
+      "version1Reopened": true,
+      "candidatePreservedOffline": true,
+      "reading": "firefox-1440/reading.html",
+      "pageErrors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "originalSettings": {
+        "primes": ["2", "3", "5", "7", "11", "13"],
+        "limit": 100,
+        "selected": 5,
+        "reading": 5,
+        "page": 390,
+        "descent": [2310, 1155, 385, 77, 11]
+      },
+      "settings": {
+        "primes": ["2", "3", "5", "7", "11", "13"],
+        "limit": 13,
+        "selected": 5,
+        "reading": 5,
+        "page": 390,
+        "descent": [2310, 1155, 385, 77, 11],
+        "candidate": "59"
+      },
+      "previousCacheComplete": true,
+      "currentCacheComplete": true,
+      "previousCacheRetired": true,
+      "assetReadDoesNotRecreateDeletedCache": true,
+      "version1Reopened": true,
+      "candidatePreservedOffline": true,
+      "reading": "firefox-375/reading.html",
+      "pageErrors": []
+    }
+  ]
+}

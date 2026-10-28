@@ -1,0 +1,19 @@
+{
+  "cases": 1205,
+  "listCases": 428,
+  "directNumbers": 32,
+  "proposedWitnesses": 745,
+  "proposalResults": {
+    "verifiedPrimeBranch": 3,
+    "verifiedCompositeBranch": 3,
+    "rejected": 584,
+    "primalityUnchecked": 155
+  },
+  "classifications": {
+    "prime": 10,
+    "composite": 403,
+    "unresolved": 47
+  },
+  "largestDecimalDigits": 120,
+  "independence": "Python arbitrary integers, Eratosthenes sieve, full factor-product reconstruction and independent prime-divisor checks; no production imports"
+}
