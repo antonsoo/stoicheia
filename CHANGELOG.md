@@ -2,6 +2,11 @@
 
 ## 2026-10-27
 
+- Replace the IX.20 multiple-choice question with a proposed-witness worksheet.
+  Check prime/divisor/absence conditions separately, retain H in all native
+  exports and share links, and reopen the original version 1 files without
+  inventing a previously supplied witness. Larger untested H stays unchecked.
+
 - Add Euclid IX.20's two-branch prime workshop: exact division ledger,
   a bounded factor search that keeps unresolved cofactors explicit, a composite
   product-plus-one, an additional prime smaller than the givens, and an operable

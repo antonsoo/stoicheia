@@ -23,6 +23,7 @@ import {
   primeEquation,
   primeGeneralReason,
   primeLedger,
+  primeProposal,
   primeResult,
   primeSvg,
   primeUnits,
@@ -51,8 +52,8 @@ el("app").innerHTML =
 <section class="pr-section" id="pr-descent" aria-labelledby="pr-descent-title"><h2 id="pr-descent-title">Why must a prime divisor exist?</h2><p>VII.31 takes a divisor of a composite divisor, then continues if needed. Try to keep descending without reaching a prime. This separate small example starts at 2310; it is not the current N.</p><div id="pr-chain" aria-live="polite"></div><div class="pr-actions"><button type="button" id="pr-undo">Undo a divisor</button><button type="button" id="pr-reset-descent">Restart at 2310</button><button type="button" id="pr-read-descent">Read VII.31</button></div><p>The chain is strictly decreasing through whole numbers at least two. Only finitely many lie below 2310. In general, below any fixed starting number there are only finitely many choices: a descent cannot continue forever. Each chosen divisor still divides the original.</p></section>
 <section class="pr-section" id="pr-reading" aria-labelledby="pr-reading-title"><h2 id="pr-reading-title" tabindex="-1">Read both cases</h2><p>Seven units cover the complete IX.20 proof. Four supporting readings introduce the unit, number and prime-divisor argument. Heiberg’s Latin is a nineteenth-century translation; the English and contextual language notes are new.</p><label class="pr-reading-picker" for="pr-reading-select">Choose a reading<select id="pr-reading-select">${primePassages.map((p, i) => `<option value="${i}">${i + 1}. ${esc(p.title)}</option>`).join("")}</select></label><article id="pr-reading-text"></article><div class="pr-reader-actions"><button type="button" id="pr-prev">Previous reading</button><span id="pr-reading-count"></span><button type="button" id="pr-next">Next reading</button></div><div class="pr-actions"><button type="button" id="pr-greek">Show the Greek page</button><button type="button" id="pr-latin">Show the Latin page</button></div></section>
 <section class="pr-section" id="pr-evidence" aria-labelledby="pr-evidence-title"><h2 id="pr-evidence-title" tabindex="-1">Inspect the complete printed page</h2><div class="pr-source-grid"><div><label for="pr-page">Heiberg, volume II, 1884<select id="pr-page">${primePages.map((p) => `<option value="${p}">${p ? `p.${p} · ${p % 2 ? "Latin" : "Greek"}` : "1884 title and volume"}</option>`).join("")}</select></label><div class="pr-actions"><button type="button" id="pr-zoom" aria-pressed="false">Enlarge page</button><button type="button" id="pr-retry">Retry source</button></div><p class="pr-status" id="pr-source-status" role="status"></p><p class="pr-fine">Enlarge, focus the page and use arrow keys to pan. Whole images retain footnotes, neighbouring propositions and original marks.</p><p class="pr-fine">Selections join line breaks and line-end hyphens, omit superscript markers and normalize theta glyphs. Greek and Latin letter labels use Greek Unicode; Latin u/v spellings remain. The p.389 line orders Δ–E–Z; the text names ΔZ as the unit and EZ as the sum. Read the note in unit 2 before treating that diagram as a scale drawing.</p><p><a id="pr-original" href="${primeSourceUrl}">Open this page in the original PDF</a></p><p><a id="pr-image-link" href="./sources/primes/heiberg-388.jpg">Open full local image</a> · <a href="./sources/primes/manifest.json">Source and file identities</a></p></div><figure><div id="pr-source-pan" class="pr-source-pan" tabindex="0" role="region" aria-label="Whole printed source page; arrow keys pan enlarged image"><div id="pr-source-sheet" class="pr-source-sheet"><img id="pr-source-image" alt="" hidden/></div></div><figcaption id="pr-source-caption" class="pr-caption"></figcaption></figure></div></section>
-<section class="pr-section"><h2>Check the inference</h2><form id="pr-question" class="pr-question"><fieldset><legend>Given 3, 5 and 7, the sum is 106 = 2 × 53. Which conclusion fits IX.20?</legend><label><input type="radio" name="pr-answer" value="fails" required/>The argument fails, because 106 is composite.</label><label><input type="radio" name="pr-answer" value="next"/>The construction must supply the next prime after 7.</label><label><input type="radio" name="pr-answer" value="divisor"/>The prime divisor 2 is outside the list and completes the argument, although it is smaller than every given.</label></fieldset><div class="pr-actions"><button type="submit">Check the reasoning</button></div><p id="pr-feedback" class="pr-status" role="status"></p></form></section>
-<section class="pr-section"><h2>Keep the argument and its evidence</h2><p>The illustrated reading carries your exact givens, ledger, bounded result, divisor chain, all eleven readings, eleven source images, font and licenses. It opens from disk without scripts and prints. Its native JSON restores the settings here.</p><div class="pr-actions"><button type="button" id="pr-save" class="pr-primary">Save illustrated reading</button><button type="button" id="pr-json">Save editable JSON</button><button type="button" id="pr-csv">Save division CSV</button><button type="button" id="pr-svg">Save construction SVG</button><button type="button" id="pr-share">Make a share link</button></div><label for="pr-import">Reopen an experiment JSON<input type="file" id="pr-import" accept=".json,application/json"/></label><p id="pr-save-status" class="pr-status" role="status"></p><label class="pr-share" id="pr-share-label" for="pr-share-url" hidden>Copy this experiment link<input type="url" id="pr-share-url" readonly/></label><p class="pr-fine">${esc(primeBoundary)}</p><p class="pr-fine">New work is MIT licensed. Historical text and scans are public domain; bundled Noto Serif uses SIL OFL 1.1. New English and language notes have not had independent philological review. No numerical bound on this page is a bound on Euclid’s theorem.</p></section></main><footer class="pr-footer"><a href="./">Stoicheia · read and construct Euclid</a><span id="pr-offline" role="status">Preparing offline edition…</span><button type="button" id="pr-reload" hidden>Reload saved edition</button><a href="https://github.com/antonsoo/stoicheia">Source &amp; MIT license</a></footer>`;
+<section class="pr-section" id="pr-propose" aria-labelledby="pr-propose-title"><h2 id="pr-propose-title">Propose the extra prime yourself</h2><p>Euclid needs one prime H outside the list that divides N. Propose a number, then check each condition. Try the unit, a given prime or the whole sum to see why a single successful check is not enough.</p><form id="pr-propose-form" class="pr-propose-form"><label for="pr-candidate">Your proposed H<input type="text" id="pr-candidate" inputmode="numeric" maxlength="120" autocomplete="off"/></label><button type="submit" class="pr-primary">Check this H</button></form><div class="pr-actions"><button type="button" id="pr-propose-unit">Try the unit 1</button><button type="button" id="pr-propose-given">Try a given prime</button><button type="button" id="pr-propose-sum">Try the whole sum</button></div><p id="pr-proposal-status" class="pr-status" role="status"></p><div id="pr-proposal" aria-live="polite"></div><p class="pr-fine">Division and list membership are exact for up to 120 digits. This worksheet checks primality exactly for H through 10,000,000,000; larger proposals remain unchecked for primality. Its result is separate from the selected trial-search bound. For a composite quotient, use givens 2, 3, 5, 7, 11, 13, 17 and propose H = 19: then N = 510511 = 19 × 26869, while 26869 = 97 × 277. The proposed H is retained in JSON, links, CSV, SVG and the illustrated reading.</p></section>
+<section class="pr-section"><h2>Keep the argument and its evidence</h2><p>The illustrated reading carries your exact givens, ledger, bounded result, proposed H, divisor chain, all eleven readings, eleven source images, font and licenses. It opens from disk without scripts and prints. Its native JSON restores the settings here.</p><div class="pr-actions"><button type="button" id="pr-save" class="pr-primary">Save illustrated reading</button><button type="button" id="pr-json">Save editable JSON</button><button type="button" id="pr-csv">Save division CSV</button><button type="button" id="pr-svg">Save construction SVG</button><button type="button" id="pr-share">Make a share link</button></div><label for="pr-import">Reopen an experiment JSON<input type="file" id="pr-import" accept=".json,application/json"/></label><p id="pr-save-status" class="pr-status" role="status"></p><label class="pr-share" id="pr-share-label" for="pr-share-url" hidden>Copy this experiment link<input type="url" id="pr-share-url" readonly/></label><p class="pr-fine">${esc(primeBoundary)}</p><p class="pr-fine">New work is MIT licensed. Historical text and scans are public domain; bundled Noto Serif uses SIL OFL 1.1. New English and language notes have not had independent philological review. No numerical bound on this page is a bound on Euclid’s theorem.</p></section></main><footer class="pr-footer"><a href="./">Stoicheia · read and construct Euclid</a><span id="pr-offline" role="status">Preparing offline edition…</span><button type="button" id="pr-reload" hidden>Reload saved edition</button><a href="https://github.com/antonsoo/stoicheia">Source &amp; MIT license</a></footer>`;
 
 function bench() {
   const focused =
@@ -163,6 +164,8 @@ function commit(next: PrimeState) {
   )
     bench();
   if (previous.reading !== state.reading) reading();
+  if (previous.candidate !== state.candidate || previous.primes.join() !== state.primes.join())
+    proposal();
   if (previous.descent.join() !== state.descent.join()) descent();
   void source();
 }
@@ -268,16 +271,32 @@ el("pr-source-pan").addEventListener("keydown", (e) => {
     el("pr-source-pan").scrollBy(d[0], d[1]);
   }
 });
-el("pr-question").addEventListener("submit", (e) => {
+function proposal() {
+  el<HTMLInputElement>("pr-candidate").value = state.candidate;
+  el("pr-proposal").innerHTML = primeProposal(state);
+}
+el("pr-propose-form").addEventListener("submit", (e) => {
   e.preventDefault();
-  const a = new FormData(el<HTMLFormElement>("pr-question")).get("pr-answer");
-  el("pr-feedback").textContent =
-    a === "divisor"
-      ? "Yes. 2 divides 106 and is absent from 3, 5, 7. The proof needs an additional prime, not a prime sum or the next larger prime."
-      : a === "fails"
-        ? "The composite branch is explicitly part of IX.20. Its prime divisor supplies the additional prime."
-        : "The statement promises more primes in number, not the next prime in numerical order. 2 already supplies a prime outside this list.";
+  apply(
+    { ...state, candidate: el<HTMLInputElement>("pr-candidate").value.trim() },
+    "pr-proposal-status",
+  );
 });
+for (const [id, kind] of [
+  ["pr-propose-unit", "unit"],
+  ["pr-propose-given", "given"],
+  ["pr-propose-sum", "sum"],
+] as const)
+  el(id).addEventListener("click", () => {
+    const candidate =
+      kind === "unit"
+        ? "1"
+        : kind === "given"
+          ? (state.primes[state.selected] as string)
+          : String(primeTrial(state).number);
+    apply({ ...state, candidate }, "pr-proposal-status");
+  });
+
 function download(name: string, type: string, body: string) {
   const url = URL.createObjectURL(new Blob([body], { type })),
     a = document.createElement("a");
@@ -346,6 +365,7 @@ window.addEventListener("popstate", () => {
   }
 });
 bench();
+proposal();
 reading();
 descent();
 void source();

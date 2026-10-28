@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 import {
   boundedFactors,
@@ -10,6 +11,7 @@ import {
   primesJson,
   primeTrial,
   properDivisors,
+  proposedPrime,
   readPrimesJson,
   validatePrimes,
 } from "../src/core/primes";
@@ -85,7 +87,62 @@ test("strict records and links retain exact strings and reject malformed or ambi
     assert.throws(() => validatePrimes({ ...initialPrimes, descent }));
   assert.throws(() => decodePrimes(`${encodePrimes(s)}&limit=13`));
   assert.throws(() => decodePrimes("?primes=2"));
-  assert.throws(() => readPrimesJson(primesJson(s).replace('"version": 1', '"version": 2')));
+  assert.throws(() => readPrimesJson(primesJson(s).replace('"version": 2', '"version": 3')));
+});
+test("a proposed witness needs primality, divisibility and absence for the same H", () => {
+  const proposal = (candidate: string) => proposedPrime({ ...initialPrimes, candidate });
+  assert.equal(proposal("1")?.primality, "not-prime");
+  assert.equal(proposal("1")?.divides, true);
+  assert.equal(proposal("1")?.valid, false);
+  assert.equal(proposal("13")?.primality, "prime");
+  assert.equal(proposal("13")?.divides, false);
+  assert.equal(proposal("13")?.absent, false);
+  assert.equal(proposal("30031")?.divides, true);
+  assert.equal(proposal("30031")?.absent, true);
+  assert.equal(proposal("30031")?.primality, "not-prime");
+  const h = proposal("59");
+  assert.equal(h?.valid, true);
+  assert.equal(h?.branch, "composite");
+  assert.equal(h?.quotient, 509n);
+  const unfinished = proposedPrime({
+    ...initialPrimes,
+    primes: ["2", "3", "5", "7", "11", "13", "17"],
+    candidate: "19",
+  });
+  assert.equal(unfinished?.valid, true);
+  assert.equal(unfinished?.quotient, 97n * 277n);
+  assert.equal(unfinished?.branch, "composite");
+  assert.equal(primeTrial(initialPrimes).search.classification, "unresolved"); // proposing 59 does not extend the selected search
+  const p = proposedPrime({ ...initialPrimes, primes: ["2", "3", "5"], candidate: "31" });
+  assert.equal(p?.valid, true);
+  assert.equal(p?.branch, "prime");
+  assert.equal(proposal("0")?.remainder, null);
+  assert.equal(proposal("0")?.valid, false);
+});
+test("a large untested H cannot be accepted merely because it divides N and is absent", () => {
+  const s = { ...initialPrimes, primes: ["9999999967", "9999999943"], candidate: "" };
+  s.candidate = String(primeTrial(s).number);
+  const h = proposedPrime(s);
+  assert.equal(h?.divides, true);
+  assert.equal(h?.absent, true);
+  assert.equal(h?.primality, "unchecked");
+  assert.equal(h?.valid, false);
+  for (const candidate of ["01", "-3", "2e2", "1.5", "2".repeat(121)])
+    assert.throws(() => validatePrimes({ ...initialPrimes, candidate }));
+});
+test("the actual published version 1 file and links reopen with an empty proposal", () => {
+  const file = readFileSync(
+    new URL("../examples/primes/experiment-v1.json", import.meta.url),
+    "utf8",
+  );
+  const original = JSON.parse(file) as { settings: Omit<typeof initialPrimes, "candidate"> };
+  const restored = readPrimesJson(file);
+  assert.deepEqual(restored, { ...original.settings, candidate: "" });
+  assert.deepEqual(decodePrimes(encodePrimes(restored).replace(/&candidate=$/, "")), restored);
+  const revised = { ...restored, candidate: "59" };
+  assert.deepEqual(readPrimesJson(primesJson(revised)), revised);
+  assert.deepEqual(decodePrimes(encodePrimes(revised)), revised);
+  assert.throws(() => readPrimesJson(primesJson(revised).replace('"version": 2', '"version": 1')));
 });
 test("every proper-divisor branch of the 2310 example terminates at a prime dividing the original", () => {
   const visit = (n: number) => {

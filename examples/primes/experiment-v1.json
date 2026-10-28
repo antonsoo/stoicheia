@@ -1,0 +1,25 @@
+{
+  "format": "stoicheia-primes",
+  "version": 1,
+  "settings": {
+    "primes": [
+      "2",
+      "3",
+      "5",
+      "7",
+      "11",
+      "13"
+    ],
+    "limit": 100,
+    "selected": 5,
+    "reading": 5,
+    "page": 390,
+    "descent": [
+      2310,
+      1155,
+      385,
+      77,
+      11
+    ]
+  }
+}

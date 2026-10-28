@@ -123,8 +123,9 @@ review and arithmetic verification are separate claims.
 
 ## Retained work and limits
 
-JSON stores decimal strings and six validated settings, including the separate
-descent. CSV stores construction/division/search facts and the chosen chain,
+JSON stores decimal strings and seven validated settings, including the separate
+descent and proposed H. Version 2 records retain H; the originally published
+version 1 files and six-parameter links reopen with an empty proposal. CSV stores construction/division/search facts and the chosen chain,
 not a history of learner actions. Standalone SVG keeps the selected exact
 arithmetic and, when p ≤ 29, the unit diagram. Long decimal strings continue on
 following SVG lines; they are never rounded for saving or reopening.
@@ -139,3 +140,22 @@ These finite computations do not prove infinitude by enumeration. The general
 argument is supplied separately. No proof assistant, independent philological
 review, physical print, manuscript reconstruction or complete assistive-
 technology audit is claimed.
+
+## Proposing a witness
+
+The worksheet checks three conditions on the same H: prime, divides N, and absent
+from the givens. H can be proposed without extending the factor search. For the
+opening list, H = 59 completes the composite branch even while the search through
+13 remains unresolved. H = 1 divides N but is a unit; H = 13 is prime but neither
+divides N nor lies outside the list; H = 30031 divides N and is absent but is
+composite. The three checks must not be confused.
+
+The proposed H is a canonical decimal string of up to 120 digits. Divisibility
+and membership are exact. Primality is checked exactly only through
+10,000,000,000; larger H remains explicitly unchecked, even if the other two
+conditions hold. A verified proper prime divisor establishes the composite
+branch without requiring the quotient to be prime. H = N can establish the
+prime branch when its primality is verified. Changing the givens re-evaluates
+the saved H against the new N. The witness is retained in links, version 2 JSON,
+CSV, SVG and illustrated reading. It is identified as a learner proposal,
+separate from automatically searched factors.

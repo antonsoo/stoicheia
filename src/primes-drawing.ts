@@ -1,4 +1,4 @@
-import { type PrimeState, primeTrial, properDivisors } from "./core/primes";
+import { type PrimeState, primeTrial, properDivisors, proposedPrime } from "./core/primes";
 import { escapeHtml as esc } from "./html";
 
 export function primeConstruction(s: PrimeState): string {
@@ -49,6 +49,32 @@ export function primeBranches(s: PrimeState): string {
 export function primeGeneralReason(): string {
   return `<ol class="pr-reason"><li>Take any nonempty finite list of distinct primes. Their product M is a positive whole number divisible by every listed prime.</li><li>N = M + 1 is greater than one. For each given prime p, N leaves remainder 1 when divided by p. Hence no given prime divides N.</li><li>If N is prime, take H = N. Otherwise VII.31 supplies a prime divisor H of N.</li><li>In either case H is a prime outside the given list. The given finite list therefore cannot contain every prime.</li></ol><p>The product need not be prime; H need not be the next prime or greater than every given prime. The argument works for an arbitrary finite list, independent of the twelve-prime input limit or the 100,000 trial bound.</p><p>For distinct primes the least common multiple equals the product: in any common multiple, divisibility by one prime and Euclid’s lemma (VII.30) retain the other distinct prime factors after division. Repeating this shows their product divides every common multiple. The product is itself a common multiple, so is least. The bench uses that equality; the contradiction needs only a common multiple.</p>`;
 }
+export function primeProposal(s: PrimeState): string {
+  const w = proposedPrime(s);
+  if (!w) return "<p>No H proposed yet. Test a whole number against all three conditions.</p>";
+  const prime =
+    w.primality === "prime"
+      ? "Yes. Exact prime check passed."
+      : w.primality === "unchecked"
+        ? "Unchecked here: H exceeds 10,000,000,000."
+        : w.h === 1n
+          ? "No. 1 is the unit, not a prime."
+          : w.h === 0n
+            ? "No. Zero is not a prime."
+            : "No. H is composite.";
+  const division =
+    w.h > 0n
+      ? `${w.number} = ${w.h} × ${w.quotient} + ${w.remainder}`
+      : "Division by zero is undefined.";
+  const conclusion = w.valid
+    ? w.branch === "prime"
+      ? `This proposal completes the prime branch: H = N = ${w.h} is itself a prime outside the list.`
+      : `This proposal completes the composite branch: H = ${w.h} is prime, ${w.number} = ${w.h} × ${w.quotient}, and H is outside the list. The quotient need not be prime.`
+    : w.primality === "unchecked"
+      ? "The three conditions have not all been established. Exact divisibility and absence alone do not establish a prime witness."
+      : "This proposal does not establish an additional prime. Every condition must hold for the same H.";
+  return `<p class="pr-factorization">Proposed H = ${w.h}</p><div class="pr-table"><table><caption>Three conditions for a prime outside the given list</caption><thead><tr><th scope="col">Condition</th><th scope="col">Exact check</th></tr></thead><tbody><tr><th scope="row">H is prime</th><td>${prime}</td></tr><tr><th scope="row">H divides N</th><td>${w.divides ? "Yes." : "No."} ${esc(division)}</td></tr><tr><th scope="row">H is absent from the givens</th><td>${w.absent ? "Yes. H is not in the given list." : "No. H already occurs in the list."}</td></tr></tbody></table></div><p class="pr-proposal-conclusion">${esc(conclusion)}</p>${w.valid ? "<p>This check verifies your proposed H directly. It does not require the bounded factor search to find H or complete a factorization.</p>" : ""}`;
+}
 export function primeDescent(s: PrimeState, interactive = true): string {
   const last = s.descent.at(-1) as number,
     choices = properDivisors(last);
@@ -57,6 +83,7 @@ export function primeDescent(s: PrimeState, interactive = true): string {
 export function primeSvg(s: PrimeState, license: string): string {
   const t = primeTrial(s),
     r = t.rows[s.selected];
+  const w = proposedPrime(s);
   const paragraphs = [
     `Given: ${s.primes.join(", ")}`,
     `M = ${t.multiple}`,
@@ -68,6 +95,13 @@ export function primeSvg(s: PrimeState, license: string): string {
     `Unclassified cofactor: ${t.search.cofactor}.`,
     "Neither branch requires M + 1 itself to be prime.",
     "If composite, a prime divisor outside the given list suffices.",
+    ...(w
+      ? [
+          `Proposed H = ${w.h}. Prime status: ${w.primality}.`,
+          `Divides N: ${w.divides}; absent from givens: ${w.absent}.`,
+          `All witness conditions established: ${w.valid}. Branch: ${w.branch ?? "unestablished"}.`,
+        ]
+      : []),
   ];
   const lines = paragraphs.flatMap((p) => [...(p.match(/.{1,70}/gu) ?? []), ""]);
   const units = primeUnits(s).match(/<svg[\s\S]*?<\/svg>/)?.[0] ?? "",

@@ -10,6 +10,7 @@ export interface PrimeState {
   reading: number;
   page: number;
   descent: number[];
+  candidate: string;
 }
 export const initialPrimes: PrimeState = {
   primes: ["2", "3", "5", "7", "11", "13"],
@@ -18,6 +19,7 @@ export const initialPrimes: PrimeState = {
   reading: 0,
   page: 388,
   descent: [2310],
+  candidate: "",
 };
 const sieve = new Uint8Array(100001);
 export const trialPrimes: readonly number[] = (() => {
@@ -68,9 +70,11 @@ export function properDivisors(n: number): number[] {
   return [...result].sort((a, b) => b - a);
 }
 export function validatePrimes(value: PrimeState): PrimeState {
-  const keys = ["descent", "limit", "page", "primes", "reading", "selected"];
+  const keys = ["candidate", "descent", "limit", "page", "primes", "reading", "selected"];
   if (!value || typeof value !== "object" || Object.keys(value).sort().join() !== keys.join())
-    throw new Error("This experiment needs exactly the six documented settings.");
+    throw new Error("This experiment needs exactly the seven documented settings.");
+  if (typeof value.candidate !== "string" || !/^(?:|0|[1-9]\d{0,119})$/.test(value.candidate))
+    throw new Error("Write H as a whole decimal number of at most 120 digits, or leave it empty.");
   if (
     !Array.isArray(value.primes) ||
     value.primes.some((p) => typeof p !== "string" || !/^[1-9]\d{0,10}$/.test(p))
@@ -186,16 +190,40 @@ export function primeSourceFile(page: number): string {
     throw new Error("Unknown source page.");
   return `sources/primes/heiberg-${page ? String(page).padStart(3, "0") : "title"}.jpg`;
 }
+export function proposedPrime(s: PrimeState) {
+  if (!s.candidate) return null;
+  const h = BigInt(s.candidate),
+    multiple = s.primes.map(BigInt).reduce((a, p) => a * p, 1n),
+    number = multiple + 1n;
+  const primality = h > maxGivenPrime ? "unchecked" : isGivenPrime(h) ? "prime" : "not-prime";
+  const remainder = h > 0n ? number % h : null,
+    quotient = h > 0n ? number / h : null,
+    divides = remainder === 0n,
+    absent = !s.primes.includes(s.candidate),
+    valid = primality === "prime" && divides && absent;
+  return {
+    h,
+    number,
+    multiple,
+    primality,
+    remainder,
+    quotient,
+    divides,
+    absent,
+    valid,
+    branch: valid ? (h === number ? "prime" : "composite") : null,
+  };
+}
 export function encodePrimes(s: PrimeState): string {
   validatePrimes(s);
-  return `?${new URLSearchParams({ primes: s.primes.join(","), limit: String(s.limit), selected: String(s.selected), reading: String(s.reading), page: String(s.page), descent: s.descent.join(",") })}`;
+  return `?${new URLSearchParams({ primes: s.primes.join(","), limit: String(s.limit), selected: String(s.selected), reading: String(s.reading), page: String(s.page), descent: s.descent.join(","), candidate: s.candidate })}`;
 }
 export function decodePrimes(query: string): PrimeState {
   const p = new URLSearchParams(query);
   if (![...p].length) return validatePrimes(structuredClone(initialPrimes));
   const keys = ["primes", "limit", "selected", "reading", "page", "descent"];
   for (const k of p.keys())
-    if (!keys.includes(k) || p.getAll(k).length !== 1)
+    if ((!keys.includes(k) && k !== "candidate") || p.getAll(k).length !== 1)
       throw new Error("The link has an unknown or repeated setting.");
   if (keys.some((k) => !p.has(k))) throw new Error("The experiment link is incomplete.");
   const integer = (k: string) => {
@@ -212,11 +240,12 @@ export function decodePrimes(query: string): PrimeState {
     reading: integer("reading"),
     page: integer("page"),
     descent: chain.map(Number),
+    candidate: p.get("candidate") ?? "",
   });
 }
 export function primesJson(s: PrimeState): string {
   validatePrimes(s);
-  return `${JSON.stringify({ format: "stoicheia-primes", version: 1, settings: s }, null, 2)}\n`;
+  return `${JSON.stringify({ format: "stoicheia-primes", version: 2, settings: s }, null, 2)}\n`;
 }
 export function readPrimesJson(text: string): PrimeState {
   if (text.length > 12000) throw new Error("This experiment file is too large.");
@@ -226,14 +255,20 @@ export function readPrimesJson(text: string): PrimeState {
     typeof value !== "object" ||
     Object.keys(value).sort().join() !== "format,settings,version" ||
     value.format !== "stoicheia-primes" ||
-    value.version !== 1 ||
+    (value.version !== 1 && value.version !== 2) ||
     !value.settings
   )
-    throw new Error("This is not a version 1 Stoicheia prime experiment.");
+    throw new Error("This is not a supported Stoicheia prime experiment (version 1 or 2).");
+  if (value.version === 1) {
+    if (Object.keys(value.settings).sort().join() !== "descent,limit,page,primes,reading,selected")
+      throw new Error("The original experiment needs its six documented settings.");
+    return validatePrimes({ ...value.settings, candidate: "" });
+  }
   return validatePrimes(value.settings);
 }
 export function primesCsv(s: PrimeState): string {
-  const t = primeTrial(s);
+  const t = primeTrial(s),
+    w = proposedPrime(s);
   return [
     "section,quantity,value,meaning",
     `construction,M,${t.multiple},product of distinct given primes; also their least common multiple`,
@@ -251,6 +286,17 @@ export function primesCsv(s: PrimeState): string {
       (f) => `factor,prime_power,${f.prime}^${f.exponent},proven prime factor`,
     ),
     `search,unresolved_cofactor,${t.search.cofactor},one means nothing remains`,
+    ...(w
+      ? [
+          `proposed_witness,H,${w.h},learner-proposed number; not a factor-search result`,
+          `proposed_witness,primality,${w.primality},exact check through 10000000000; larger H unchecked`,
+          `proposed_witness,divides_N,${w.divides},exact divisibility condition`,
+          `proposed_witness,remainder,${w.remainder ?? "undefined"},N modulo H; zero H has no division`,
+          `proposed_witness,absent_from_givens,${w.absent},additional-prime condition`,
+          `proposed_witness,valid,${w.valid},all three conditions established`,
+          `proposed_witness,branch,${w.branch ?? "unestablished"},source branch established by this proposal`,
+        ]
+      : []),
     ...s.descent.map(
       (n, i) => `separate_VII_31,step_${i},${n},proper-divisor chain starting at 2310`,
     ),

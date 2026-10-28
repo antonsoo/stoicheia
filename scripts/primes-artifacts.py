@@ -67,8 +67,19 @@ def audit_csv(body,settings):
     cofactor=int(by("search","unresolved_cofactor")[0])
     assert math.prod(int(p)**int(e) for p,e in (s.split("^") for s in factors))*cofactor==n
     assert by("search","trial_bound")==[str(settings["limit"])]
+    candidate=settings.get("candidate","")
+    if candidate:
+        h=int(candidate)
+        assert by("proposed_witness","H")==[candidate]
+        assert by("proposed_witness","divides_N")==[str(h>0 and n%h==0).lower()]
+        assert by("proposed_witness","absent_from_givens")==[str(h not in given).lower()]
+        primality="unchecked" if h>10**10 else "prime" if h>=2 and all(h%d for d in range(2,math.isqrt(h)+1)) else "not-prime"
+        valid=primality=="prime" and h>0 and n%h==0 and h not in given
+        assert by("proposed_witness","primality")==[primality]
+        assert by("proposed_witness","valid")==[str(valid).lower()]
+        assert by("proposed_witness","branch")==[("prime" if h==n else "composite") if valid else "unestablished"]
     assert [int(r[2]) for r in rows if r[0]=="separate_VII_31"]==settings["descent"]
-    return {"givenPrimes":len(given),"exactRemainders":len(given),"factorProductReconstructed":True}
+    return {"givenPrimes":len(given),"exactRemainders":len(given),"factorProductReconstructed":True,"proposedWitnessIndependentlyChecked":bool(candidate)}
 
 def audit_svg(body,settings):
     svg=ET.fromstring(body);ns={"s":"http://www.w3.org/2000/svg"}
@@ -76,6 +87,7 @@ def audit_svg(body,settings):
     assert not svg.findall(".//s:foreignObject",ns) and not svg.findall(".//s:script",ns)
     text="".join(svg.itertext());m=math.prod(map(int,settings["primes"]))
     assert str(m) in text and str(m+1) in text
+    if settings.get("candidate"):assert f'Proposed H = {settings["candidate"]}' in text
     units=svg.findall(".//s:rect",ns)
     assert len(units)==2*int(settings["primes"][settings["selected"]])+2
     return {"unitMarks":len(units)-1,"nativeVectorText":True}
@@ -98,6 +110,10 @@ pdf_text=subprocess.check_output(["pdftotext","-layout",str(pdf),"-"],text=True)
 normalize=lambda s:re.sub(r"\s+","",unicodedata.normalize("NFKC",s)).replace("\u00ad","")
 retained=audit_reading(out/"chromium-1440/reading.html")
 for paragraph in retained.fields:assert normalize(paragraph) in normalize(pdf_text),paragraph[:100]
+settings=json.loads(retained.downloads["stoicheia-primes.json"])["settings"]
+if settings.get("candidate"):
+    for field in [f'Proposed H = {settings["candidate"]}',"H is prime","H divides N","H is absent from the givens","This check verifies your proposed H directly."]:
+        assert normalize(field) in normalize(pdf_text),field
 info=subprocess.check_output(["pdfinfo",str(pdf)],text=True)
 pages=int(re.search(r"Pages:\s+(\d+)",info)[1])
 with tempfile.TemporaryDirectory() as tmp:

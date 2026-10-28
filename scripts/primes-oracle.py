@@ -41,8 +41,22 @@ def audit(n,limit,result):
     assert tried==primes[:len(tried)] and all(p<=limit for p in tried)
 
 classifications={"prime":0,"composite":0,"unresolved":0}
+proposals={"verifiedPrimeBranch":0,"verifiedCompositeBranch":0,"rejected":0,"primalityUnchecked":0}
 largest=0
 for row in cases:
+    if row["kind"]=="proposal":
+        s=row["settings"];w=row["witness"];given=list(map(int,s["primes"]));h=int(s["candidate"]);m=math.prod(given);n=m+1
+        primality="unchecked" if h>10**10 else "prime" if is_prime(h) else "not-prime"
+        remainder=n%h if h else None;quotient=n//h if h else None
+        valid=primality=="prime" and remainder==0 and h not in given
+        assert int(w["h"])==h and int(w["number"])==n and int(w["multiple"])==m
+        assert w["primality"]==primality and w["divides"]==(remainder==0) and w["absent"]==(h not in given) and w["valid"]==valid
+        assert (int(w["remainder"]) if w["remainder"] is not None else None)==remainder
+        assert (int(w["quotient"]) if w["quotient"] is not None else None)==quotient
+        branch=("prime" if h==n else "composite") if valid else None
+        assert w["branch"]==branch
+        proposals["verifiedPrimeBranch" if branch=="prime" else "verifiedCompositeBranch" if branch=="composite" else "primalityUnchecked" if primality=="unchecked" else "rejected"]+=1
+        continue
     if row["kind"]=="list":
         s=row["settings"];t=row["trial"];given=list(map(int,s["primes"]))
         assert len(set(given))==len(given) and all(is_prime(p) for p in given)
@@ -57,4 +71,4 @@ for row in cases:
     audit(n,limit,result)
     classifications[result["classification"]]+=1
     largest=max(largest,len(str(n)))
-print(json.dumps({"cases":len(cases),"listCases":sum(r["kind"]=="list" for r in cases),"directNumbers":sum(r["kind"]=="number" for r in cases),"classifications":classifications,"largestDecimalDigits":largest,"independence":"Python arbitrary integers, Eratosthenes sieve, full factor-product reconstruction and independent prime-divisor checks; no production imports"},indent=2))
+print(json.dumps({"cases":len(cases),"listCases":sum(r["kind"]=="list" for r in cases),"directNumbers":sum(r["kind"]=="number" for r in cases),"proposedWitnesses":sum(r["kind"]=="proposal" for r in cases),"proposalResults":proposals,"classifications":classifications,"largestDecimalDigits":largest,"independence":"Python arbitrary integers, Eratosthenes sieve, full factor-product reconstruction and independent prime-divisor checks; no production imports"},indent=2))

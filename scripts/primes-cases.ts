@@ -4,6 +4,7 @@ import {
   type PrimeState,
   parseGiven,
   primeTrial,
+  proposedPrime,
 } from "../src/core/primes.ts";
 
 const rows: unknown[] = [];
@@ -41,6 +42,7 @@ const random = () => {
 };
 const lists = [
   initialPrimes.primes,
+  ["2", "3", "5", "7", "11", "13", "17"],
   ["2", "3", "5"],
   ["3", "5", "7"],
   ["2"],
@@ -62,6 +64,23 @@ for (const primes of lists)
     const s: PrimeState = { ...initialPrimes, primes, limit };
     rows.push({ kind: "list", settings: s, trial: primeTrial(s) });
   }
+for (const primes of lists) {
+  const settings = { ...initialPrimes, primes },
+    t = primeTrial(settings);
+  const candidates = new Set([
+    "0",
+    "1",
+    primes[0] as string,
+    String(t.number),
+    "59",
+    "509",
+    "10000000001",
+  ]);
+  for (const candidate of candidates) {
+    const state = { ...settings, candidate };
+    rows.push({ kind: "proposal", settings: state, witness: proposedPrime(state) });
+  }
+}
 for (const n of [
   4n,
   169n,

@@ -207,6 +207,33 @@ for (const [engine, type] of [
       assert.match(await page.locator("#pr-construction").textContent(), /30031/);
       assert.equal(page.url(), initialUrl);
       await page.locator('[data-pr-case="six"]').click();
+      await page.locator("#pr-propose-unit").click();
+      assert.match(await page.locator("#pr-proposal").textContent(), /1 is the unit/);
+      await page.locator("#pr-propose-given").click();
+      assert.match(await page.locator("#pr-proposal").textContent(), /already occurs/);
+      await page.locator("#pr-propose-sum").click();
+      assert.match(await page.locator("#pr-proposal").textContent(), /H is composite/);
+      await page.locator("#pr-candidate").fill("59");
+      await page.getByRole("button", { name: "Check this H", exact: true }).focus();
+      await page.keyboard.press("Enter");
+      assert.match(
+        await page.locator("#pr-proposal").textContent(),
+        /completes the composite branch/,
+      );
+      assert.match(await page.locator("#pr-result").textContent(), /Unresolved at this bound/);
+      await page.locator("#pr-propose").scrollIntoViewIfNeeded();
+      await page.screenshot({ path: path.join(folder, "proposal.png") });
+      await page.locator("#pr-list").fill("2, 3, 5, 7, 11, 13, 17");
+      await page.getByRole("button", { name: "Use these primes", exact: true }).click();
+      await page.locator("#pr-candidate").fill("19");
+      await page.getByRole("button", { name: "Check this H", exact: true }).click();
+      assert.match(await page.locator("#pr-proposal").textContent(), /510511 = 19 × 26869/);
+      assert.match(
+        await page.locator("#pr-proposal").textContent(),
+        /completes the composite branch/,
+      );
+      assert.match(await page.locator("#pr-result").textContent(), /Unresolved at this bound/);
+      await page.locator('[data-pr-case="six"]').click();
       await page.locator('[data-pr-select="5"]').focus();
       await page.keyboard.press("Enter");
       assert.match(await page.locator("#pr-equation").textContent(), /13 × 2310/);
@@ -221,6 +248,9 @@ for (const [engine, type] of [
       await page.locator('[data-pr-case="three"]').click();
       assert.match(await page.locator("#pr-result").textContent(), /sum itself is prime/);
       assert.match(await page.locator("#pr-result").textContent(), /31 = 31/);
+      await page.locator("#pr-candidate").fill("31");
+      await page.getByRole("button", { name: "Check this H", exact: true }).click();
+      assert.match(await page.locator("#pr-proposal").textContent(), /completes the prime branch/);
       await page.locator('[data-pr-case="smaller"]').click();
       assert.match(await page.locator("#pr-result").textContent(), /106 = 2 × 53/);
       assert.match(await page.locator("#pr-branches").textContent(), /H = 2/);
@@ -240,9 +270,6 @@ for (const [engine, type] of [
       await page.keyboard.press("ArrowRight");
       assert((await page.locator("#pr-source-pan").evaluate((e) => e.scrollLeft)) > 0);
       await page.locator("#pr-zoom").click();
-      await page.locator('input[value="divisor"]').check();
-      await page.getByRole("button", { name: "Check the reasoning", exact: true }).click();
-      assert.match(await page.locator("#pr-feedback").textContent(), /^Yes/);
       const huge =
         "9999999967, 9999999943, 9999999929, 9999999881, 9999999851, 9999999833, 9999999817, 9999999787, 9999999781, 9999999769, 9999999727, 9999999707";
       const start = performance.now();
@@ -255,8 +282,13 @@ for (const [engine, type] of [
         (await page.locator(".pr-construction .pr-exact").first().textContent()).length,
         120,
       );
+      await page.locator("#pr-propose-sum").click();
+      assert.match(await page.locator("#pr-proposal").textContent(), /Unchecked here/);
+      assert.match(await page.locator("#pr-proposal").textContent(), /not all been established/);
       await fits(page);
       await page.locator('[data-pr-case="six"]').click();
+      await page.locator("#pr-candidate").fill("59");
+      await page.getByRole("button", { name: "Check this H", exact: true }).click();
       await page.locator("#pr-extend").click();
       await page.locator('[data-pr-select="5"]').click();
       await page.locator("#pr-reading-select").selectOption("5");
@@ -269,6 +301,12 @@ for (const [engine, type] of [
       await shared.locator("#pr-title").waitFor();
       assert.match(await shared.locator("#pr-result").textContent(), /30031 = 59 × 509/);
       assert.equal(await shared.locator("#pr-reading-select").inputValue(), "5");
+      assert.equal(await shared.locator("#pr-candidate").inputValue(), "59");
+      const originalLink = new URL(link);
+      originalLink.searchParams.delete("candidate");
+      await shared.goto(originalLink.href);
+      await shared.locator("#pr-title").waitFor();
+      assert.equal(await shared.locator("#pr-candidate").inputValue(), "");
       await shared.close();
       await page.locator("#pr-import").setInputFiles({
         name: "bad.json",
@@ -276,6 +314,11 @@ for (const [engine, type] of [
         buffer: Buffer.from('{"format":"stoicheia-primes","version":1,"settings":{}}'),
       });
       await page.locator("#pr-save-status").filter({ hasText: "six documented" }).waitFor();
+      await page.locator("#pr-import").setInputFiles("examples/primes/experiment-v1.json");
+      await page.locator("#pr-save-status").filter({ hasText: "Reopened the exact" }).waitFor();
+      assert.equal(await page.locator("#pr-candidate").inputValue(), "");
+      await page.locator("#pr-candidate").fill("59");
+      await page.getByRole("button", { name: "Check this H", exact: true }).click();
       const record = await save(page, "#pr-json", path.join(folder, "study.json")),
         csv = await save(page, "#pr-csv", path.join(folder, "study.csv")),
         svg = await save(page, "#pr-svg", path.join(folder, "study.svg"));
@@ -283,6 +326,9 @@ for (const [engine, type] of [
       await page
         .locator("#pr-import")
         .setInputFiles({ name: "study.json", mimeType: "application/json", buffer: record });
+      await page.waitForFunction(
+        () => document.getElementById("pr-list").value === "2, 3, 5, 7, 11, 13",
+      );
       await page.locator("#pr-save-status").filter({ hasText: "Reopened the exact" }).waitFor();
       assert.match(await page.locator("#pr-result").textContent(), /30031 = 59 × 509/);
       await save(page, "#pr-save", path.join(folder, "reading.html"));
@@ -442,10 +488,14 @@ if (!hosted)
         await waitExport;
         await route.continue();
       });
+      await p.locator("#pr-candidate").fill("59");
+      await p.getByRole("button", { name: "Check this H", exact: true }).click();
       const download = p.waitForEvent("download");
       await p.locator("#pr-save").click();
       await arrivalExport;
       await p.locator('[data-pr-case="smaller"]').click();
+      await p.locator("#pr-candidate").fill("2");
+      await p.getByRole("button", { name: "Check this H", exact: true }).click();
       await p.locator("#pr-page").selectOption("390");
       releaseExport();
       const d = await download;
@@ -464,6 +514,8 @@ if (!hosted)
       );
       assert.deepEqual(record.settings.primes, ["2", "3", "5", "7", "11", "13"]);
       assert.equal(record.settings.page, 0);
+      assert.equal(record.settings.candidate, "59");
+      assert.equal(await p.locator("#pr-candidate").inputValue(), "2");
       assert.equal(await p.locator("#pr-list").inputValue(), "3, 5, 7");
       report.guards.push({
         engine,
