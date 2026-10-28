@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/0b180f208baa372052b2ec2c173d7edaa9f6baac/docs/primes-review.md",
+    "bytes": 8815,
+    "sha256": "874bb451f66b68b9799ec0e8d6a73b141b89bffb9e42c34d1ca3e51edc57c7f5",
+    "matchesCommittedFile": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/0b180f208baa372052b2ec2c173d7edaa9f6baac/docs/primes-model.md",
+    "bytes": 8785,
+    "sha256": "6733da25ff620f31f301fb8d8cc8a4b80a4f0a4440431281dae04e748dabad1d",
+    "matchesCommittedFile": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/0b180f208baa372052b2ec2c173d7edaa9f6baac/docs/assets/primes-desktop.png",
+    "bytes": 121555,
+    "sha256": "b681014fdc6fdc67c8e711e2d93d79b15b46f2b15a2c3c4ee892c36d3efc1056",
+    "matchesCommittedFile": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/0b180f208baa372052b2ec2c173d7edaa9f6baac/examples/primes/reading.pdf",
+    "bytes": 5320849,
+    "sha256": "4fd77916c7200f3001d19281e5240aa6c3a36227e450cccc99b8e585d008ab94",
+    "matchesCommittedFile": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/antonsoo/stoicheia/0b180f208baa372052b2ec2c173d7edaa9f6baac/public/sources/primes/manifest.json",
+    "bytes": 4124,
+    "sha256": "ceeb259858aadb5f8ff76f6f17a2aafb8665ced667094dcb3f7ab0e89a4b66fa",
+    "matchesCommittedFile": true
+  }
+]

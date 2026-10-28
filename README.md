@@ -49,6 +49,7 @@ After `npm run dev`, the local address is
   reason stays separate from the twelve-prime input limit and bounded search.
 
 [Source and arithmetic](docs/primes-model.md) · [Direct review](docs/primes-review.md) ·
+[Public delivery review](docs/primes-publication.md) ·
 [Actual illustrated reading, gzip](examples/primes/reading.html.gz) ·
 [26-page PDF](examples/primes/reading.pdf) ·
 [Editable example](examples/primes/experiment.json).

@@ -1,0 +1,88 @@
+{
+  "browserArtifacts": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "readingParagraphs": 44,
+      "wholeImagesIdentical": 11,
+      "fontIdentical": true,
+      "completeLicenses": 2,
+      "nativeDownloadsIdentical": 4,
+      "offlineEquivalent": true,
+      "csv": {
+        "givenPrimes": 6,
+        "exactRemainders": 6,
+        "factorProductReconstructed": true
+      },
+      "svg": {
+        "unitMarks": 27,
+        "nativeVectorText": true
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "readingParagraphs": 44,
+      "wholeImagesIdentical": 11,
+      "fontIdentical": true,
+      "completeLicenses": 2,
+      "nativeDownloadsIdentical": 4,
+      "offlineEquivalent": true,
+      "csv": {
+        "givenPrimes": 6,
+        "exactRemainders": 6,
+        "factorProductReconstructed": true
+      },
+      "svg": {
+        "unitMarks": 27,
+        "nativeVectorText": true
+      }
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "readingParagraphs": 44,
+      "wholeImagesIdentical": 11,
+      "fontIdentical": true,
+      "completeLicenses": 2,
+      "nativeDownloadsIdentical": 4,
+      "offlineEquivalent": true,
+      "csv": {
+        "givenPrimes": 6,
+        "exactRemainders": 6,
+        "factorProductReconstructed": true
+      },
+      "svg": {
+        "unitMarks": 27,
+        "nativeVectorText": true
+      }
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "readingParagraphs": 44,
+      "wholeImagesIdentical": 11,
+      "fontIdentical": true,
+      "completeLicenses": 2,
+      "nativeDownloadsIdentical": 4,
+      "offlineEquivalent": true,
+      "csv": {
+        "givenPrimes": 6,
+        "exactRemainders": 6,
+        "factorProductReconstructed": true
+      },
+      "svg": {
+        "unitMarks": 27,
+        "nativeVectorText": true
+      }
+    }
+  ],
+  "pdf": {
+    "pages": 26,
+    "completeReadingParagraphs": 44,
+    "sourceImagesByteIdentical": 11,
+    "textWithinCheckedMargins": true,
+    "taggedReportedByPdfinfo": true
+  },
+  "boundary": "Audits actual downloaded files locally. Delivery and browser scope are recorded separately in review.json. No physical printer or comprehensive PDF accessibility claim."
+}
