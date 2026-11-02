@@ -292,7 +292,7 @@ try {
         }
         const html = await readFile(files.html, "utf8");
         assert.match(html, /SIL OPEN FONT LICENSE/);
-        assert.match(html, /Copyright \(c\) 2026 Anton Soloviev/);
+        assert.match(html, /Copyright \(c\) 2026 Anthony Mercer/);
         assert.equal((html.match(/data:image\/jpeg;base64,/g) || []).length, 4);
         const embeddedScans = [...html.matchAll(/data:image\/jpeg;base64,([A-Za-z0-9+/=]+)/g)];
         for (let i = 0; i < 4; i++)
@@ -338,7 +338,10 @@ try {
         assert.equal(await standalone.locator("svg").getAttribute("data-kind"), "crossing");
         assert.ok((await standalone.locator("svg").boundingBox()).height > 100);
         assert.ok((await standalone.locator("circle").count()) >= 2);
-        assert.match(await standalone.locator("metadata").textContent(), /MIT License/);
+        assert.match(
+          await standalone.locator("metadata").textContent(),
+          /PolyForm Noncommercial License 1.0.0/,
+        );
         result.offline.push("downloaded SVG opens as XML with rendered geometry");
         await standalone.goto(pathToFileURL(files.html).href);
         await standalone.evaluate(() => document.fonts.ready);

@@ -106,7 +106,7 @@ async function checkFile(context, file, proposition, print = false) {
   assert.ok(font);
   assert.equal(digest(Buffer.from(font[1], "base64")), expectedFont);
   assert.match(html, /SIL OPEN FONT LICENSE/);
-  assert.match(html, /MIT License/);
+  assert.match(html, /PolyForm Noncommercial License 1.0.0/);
   const saved = await context.newPage(),
     requests = [];
   saved.on("request", (r) => {

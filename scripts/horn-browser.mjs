@@ -160,7 +160,7 @@ async function artifact(browser, file, folder, width, engine) {
     hash(Buffer.from(font[1].split(",")[1], "base64")),
     hash(await readFile("public/fonts/NotoSerif-Regular.ttf")),
   );
-  assert(html.includes("MIT License"));
+  assert(html.includes("PolyForm Noncommercial License 1.0.0"));
   const context = await browser.newContext({
     javaScriptEnabled: false,
     viewport: { width, height: 1000 },

@@ -440,7 +440,7 @@ for (const [engine, type] of [
         await csv("end");
         const svgFile = path.join(folder, "plate.svg");
         const svg = await save(page, "#qx-svg", svgFile);
-        assert(svg.toString().includes("MIT License"));
+        assert(svg.toString().includes("PolyForm Noncommercial License 1.0.0"));
         const svgContext = await browser.newContext({ javaScriptEnabled: false });
         try {
           const svgPage = await svgContext.newPage();

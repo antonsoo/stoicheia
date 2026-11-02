@@ -11,7 +11,7 @@ whole unretouched reductions. Original PDF and derivative identities are in
 `public/sources/primes/manifest.json`; reproduction is in `scripts/primes-sources.py`.
 IX.20 is selected in full; VII definitions 1–2 are complete; VII.31 is represented
 by selected clauses beside its complete printed proof. New English, language
-notes, examples, algorithms, code and diagrams are MIT. The existing Noto Serif
+notes, examples, algorithms, code and diagrams are PolyForm Noncommercial. The existing Noto Serif
 and full SIL OFL notice are reused in portable readings.
 
 Solid-corner workshop (`solids.html`):
@@ -24,7 +24,7 @@ The title and printed pp.4–5, 54–59 and 336–341 are retained as fifteen co
 reductions without cropping or retouching. The original PDF identity and each
 JPEG's bytes and SHA-256 are in `public/sources/solids/manifest.json`; the
 reproduction script is `scripts/solids-sources.py`. New English, language notes,
-coordinate comparisons, code and paper diagrams are MIT. The room distinguishes
+coordinate comparisons, code and paper diagrams are PolyForm Noncommercial. The room distinguishes
 the ancient excerpts, Heiberg's editorial note and its modern mathematical
 explanations. It reuses the bundled Noto Serif and full SIL OFL notice.
 
@@ -38,7 +38,7 @@ https://archive.org/details/euclidisoperaomn02eucluoft.
 The title and printed pp.2–5 are complete reductions without cropping or
 retouching. Their identities and original PDF are pinned in
 `public/sources/ratios/manifest.json`. Greek, Latin and scans remain public domain;
-new English, contextual notes, examples, code and diagrams are MIT. Heiberg’s
+new English, contextual notes, examples, code and diagrams are PolyForm Noncommercial. Heiberg’s
 algebraic footnotes are editorial explanations, distinguished from Euclid’s text.
 The existing Noto Serif and complete OFL notice are reused in portable readings.
 
@@ -51,7 +51,7 @@ Archive: https://archive.org/details/euclidisoperaomn01eucluoft
 
 The Internet Archive metadata reports `NOT_IN_COPYRIGHT`. Image hashes and the
 source download are recorded in `public/sources/manifest.json`. The project's
-MIT license does not impose new restrictions on these public-domain materials.
+PolyForm Noncommercial license does not impose new restrictions on these public-domain materials.
 
 Noto Serif Regular:
 
@@ -70,7 +70,7 @@ Full pages retain scanned handwriting, the critical apparatus and the Google
 watermark. No textual image has been cropped or retouched. PDF and page
 identities, rendering command and transcription conventions are recorded in
 `public/sources/measure/manifest.json`. New English, grammar notes, diagrams
-and the diagonal specialization are original teaching work under MIT.
+and the diagonal specialization are original teaching work under PolyForm Noncommercial.
 
 Archimedes circle workshop (`circle.html`):
 
@@ -84,7 +84,7 @@ Ten whole-page JPEG reductions retain diagrams, apparatus and editorial notes;
 no image is cropped or retouched. `public/sources/circle/manifest.json`
 identifies the original PDF, one-based page mapping and every retained image.
 The new English, word notes, proof exposition, exact inequality audit, code and
-drawings are original teaching work under MIT. Printed numerical values are
+drawings are original teaching work under PolyForm Noncommercial. Printed numerical values are
 not silently converted into exact equalities; transcription choices and the
 retained Latin/Greek discrepancy are explained in `docs/circle-model.md`.
 The existing locally bundled Noto Serif and complete OFL notice are reused.
@@ -97,4 +97,4 @@ are retained in `public/sources/horn/manifest.json`. The eight selected readings
 preserve the Greek corollary addition in editorial brackets and distinguish
 Heiberg’s Latin footnote from a parallel translation. Ancient text, Heiberg’s
 Latin and printed pages are public domain. New English, word notes, coordinate
-witness, diagrams, magnification and code are original teaching work under MIT.
+witness, diagrams, magnification and code are original teaching work under PolyForm Noncommercial.

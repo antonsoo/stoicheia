@@ -31,7 +31,7 @@ export function casebookSheet(state: CasebookState): string {
     })
     .join(
       "",
-    )}<section>${sourceReading(false)}</section><footer><p>${supplementCredit}</p><p><a href="${casebookSources.heath}">Heath commentary, transcribed by D. R. Wilkins</a> · <a href="${casebookSources.joyce}">David E. Joyce, I.7 commentary</a> · <a href="https://archive.org/details/euclidisoperaomn01eucluoft">Heiberg source volume</a></p><p>Greek and Latin source: public domain. English explanations and calculated diagrams: Stoicheia (2026), MIT.</p></footer></body></html>`;
+    )}<section>${sourceReading(false)}</section><footer><p>${supplementCredit}</p><p><a href="${casebookSources.heath}">Heath commentary, transcribed by D. R. Wilkins</a> · <a href="${casebookSources.joyce}">David E. Joyce, I.7 commentary</a> · <a href="https://archive.org/details/euclidisoperaomn01eucluoft">Heiberg source volume</a></p><p>Greek and Latin source: public domain. English explanations and calculated diagrams: Stoicheia (2026), PolyForm Noncommercial.</p></footer></body></html>`;
 }
 
 interface CasebookHost {

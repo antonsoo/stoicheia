@@ -2,7 +2,7 @@
 
 Read Euclid, Archimedes and Pappus in Greek, Latin and English, with working diagrams, construction workshops and the original printed pages.
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-193d60)](LICENSE)
+[![License: PolyForm Noncommercial](https://img.shields.io/badge/license-PolyForm%20Noncommercial-193d60)](LICENSE)
 [![Read the course](https://img.shields.io/badge/read-the_course-193d60)](https://antonsoo.github.io/stoicheia/)
 
 ![Euclid I.2: the equal remainders construction beside its Greek, Latin and English text](docs/assets/hero.png)
@@ -894,6 +894,8 @@ line, or a reproducible geometric counterexample, are especially useful.
 
 ## License
 
-[MIT](LICENSE) for code, English and teaching notes. Source Greek, Latin and page
+New versions are released under the [PolyForm Noncommercial License 1.0.0](LICENSE). It is free for any noncommercial purpose, including personal study, teaching and research, and for use by charities, schools, universities, research organizations and government institutions. Commercial use needs written permission from Anthony Mercer (anthony@praviel.com). Versions up to commit [`e2b2645`](https://github.com/antonsoo/stoicheia/tree/e2b2645) (2026-11-01) were released under the MIT License, and copies of those versions keep it.
+
+[PolyForm Noncommercial 1.0.0](LICENSE) for code, English and teaching notes. Source Greek, Latin and page
 images are public domain. Noto Serif uses the SIL Open Font License; see
 [third-party notices](THIRD_PARTY_NOTICES.md).

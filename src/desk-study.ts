@@ -44,5 +44,5 @@ export async function deskStudy(session: DeskSession): Promise<string> {
     })
     .join(
       "",
-    )}<details class="dk-notices"><summary>Redistribution notices</summary><p>Historical text and facsimiles: public domain. New English, notes, code and diagrams: MIT.</p><pre>${esc(codeLicense)}</pre><h2>Noto Serif</h2><pre>${esc(fontLicense)}</pre></details></body></html>`;
+    )}<details class="dk-notices"><summary>Redistribution notices</summary><p>Historical text and facsimiles: public domain. New English, notes, code and diagrams: PolyForm Noncommercial.</p><pre>${esc(codeLicense)}</pre><h2>Noto Serif</h2><pre>${esc(fontLicense)}</pre></details></body></html>`;
 }
