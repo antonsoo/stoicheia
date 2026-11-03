@@ -5,6 +5,10 @@ The learner keeps a point exactly on one circle, makes the other side's rounded
 reading agree, then checks the exact nonzero residual. The command, vocabulary,
 Greek and Latin pages remain within reach.
 
+The follow-up [saved-reader audit](saved-reader-audit.md) records draft preservation,
+source-image limits, cancellable downloads, complete-cache repair and recovery.
+The original experiment measurements below retain their own build boundary.
+
 ## Try the actual work
 
 Use Node 24 or later. From the checkout:
@@ -14,7 +18,7 @@ npm ci
 npm run dev
 ```
 
-Open `http://127.0.0.1:4327/stoicheia/#p=1&s=3`. Beside the intersection command,
+Open `http://127.0.0.1:4326/stoicheia/#p=1&s=3`. Beside the intersection command,
 choose **Can a near crossing be exact? Test the point rule**. The invitation
 below the proof opens the same experiment.
 1. At t = 11/19, both side readings are 1.00; the exact squared-length residual
@@ -107,10 +111,10 @@ and checks the displayed lengths against a 60-digit Decimal square root over
 checks cover misleading rounding, the alternating approach, cardinal/extreme
 points, hostile input and state restoration, and the exact CSV fields.
 
-The final whole-course browser run also traverses all 189 reading steps in each
+The initial experiment’s whole-course browser run also traverses all 189 reading steps in each
 of the four browser/width configurations, reopens ordinary course exports and
 checks source pages and offline reloads. Every one of the 233 files served by
-the local production server matches the final build byte for byte. A fresh
+the local production server matches that build byte for byte. A fresh
 Node 24.22.1 installation passes lint, typecheck, all 119 unit checks, the build
 and the independent oracle; its 233 output files are identical to the working
 Node 26.7.0 build.
@@ -126,8 +130,9 @@ Node 26.7.0 build.
 
 The local implementation, source-page inspection, saved artifacts, production
 browser checks and clean-install checks are distinct from public delivery.
-This change has not been pushed or deployed. The historical publication reviews
-elsewhere in the repository describe their own earlier versions.
+These initial receipts stop at local builds. The follow-up
+[saved-reader audit](saved-reader-audit.md) records the subsequent fixes and
+delivery checks. Other publication reviews describe their own earlier versions.
 
 The historical Greek, Latin and scans remain public domain. The new teaching
 material follows the repository's PolyForm Noncommercial license, and the saved

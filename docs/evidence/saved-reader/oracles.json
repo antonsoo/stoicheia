@@ -1,0 +1,153 @@
+{
+  "runtimeCommit": "5dd342bd43f4fed7d311bdfe8bd691cfbe331ce9",
+  "checkedAt": "2026-11-03T21:33:40.937Z",
+  "results": [
+    {
+      "name": "verify:oracle",
+      "command": "node --import tsx scripts/oracle-cases.ts | python3 scripts/circle-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"method\": \"Independent general circle-circle and quadratic line-circle intersections\",\n  \"arithmetic\": \"Python standard-library Decimal, precision 60\",\n  \"cases\": 720,\n  \"point_comparisons\": 4320,\n  \"oracle_equality_checks\": 5760,\n  \"maximum_relative_coordinate_error\": 1.1526305883259686e-15,\n  \"relative_tolerance\": 2e-12,\n  \"coverage\": \"Translated and rotated inputs; both triangle orientations; varying base/reference ratios; I.3 uses the I.2 construction\",\n  \"boundary\": \"Numerical agreement with an independent real-plane calculation, not formal verification of Euclid's axioms\"\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:triangles",
+      "command": "node --import tsx scripts/triangle-cases.ts | python3 scripts/triangle-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"scope\": \"Real-plane numerical model; not formal verification of Euclid's axioms\",\n  \"method\": \"Independent cosine-law angles, shoelace areas, Euclidean distance, rigid-motion invariants, two triangle correspondences, equal-angle remainders and rejection of the I.6 conjunction\",\n  \"cases\": {\n    \"I.4\": 480,\n    \"I.5\": 96,\n    \"I.6\": 96\n  },\n  \"checks\": 8064,\n  \"max_relative_error\": 3.637978807091713e-12,\n  \"tolerance\": 2e-11\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:bisections",
+      "command": "node --import tsx scripts/bisection-cases.ts | python3 scripts/bisection-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"scope\": \"Real-plane numerical model, not a formal axiomatic proof\",\n  \"method\": \"Independent cosine-law angles, circle equations, ray-sum direction, orientation, strict triangle inequalities and midpoint oracle; I.3 copied length also checked\",\n  \"cases\": {\n    \"I.9\": 378,\n    \"I.10\": 126,\n    \"I.8-rejected\": 112,\n    \"I.8\": 144,\n    \"I.7\": 576\n  },\n  \"checks\": 11381,\n  \"maximum_relative_error\": 5.3168197813770184e-14,\n  \"tolerance\": 5e-10\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:cases",
+      "command": "node --import tsx scripts/casebook-cases.ts | python3 scripts/casebook-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"scope\": \"Independent real-plane numerical check; not a formal proof or exhaustive placement classification\",\n  \"cases\": 1632,\n  \"placements\": {\n    \"coincident\": 24,\n    \"outside\": 984,\n    \"inside\": 576,\n    \"boundary\": 24,\n    \"reflection\": 24\n  },\n  \"checks\": 38328,\n  \"lengthRelativeTolerance\": 2e-12,\n  \"maximumRelativeLengthError\": 3.774758283725532e-15,\n  \"angleToleranceDegrees\": 2e-07,\n  \"maximumAngleErrorDegrees\": 8.9273310965865e-12,\n  \"method\": \"Python distances, cosine law, Heron area sums and normal projections; TypeScript point outputs only\"\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:right-angles",
+      "command": "node --import tsx scripts/right-angle-cases.ts | python3 scripts/right-angle-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"scope\": \"Independent Decimal(60) quadratic/projection, analytic midpoint/reflection and determinant containment checks; numerical evidence, not a formal axiomatic proof\",\n  \"cases\": {\n    \"I.11\": 90,\n    \"I.12\": 1680,\n    \"I.16\": 360\n  },\n  \"circle_classifications\": {\n    \"crossings\": 1440,\n    \"miss\": 180,\n    \"degenerate\": 30,\n    \"tangent\": 30\n  },\n  \"comparisons\": 21030,\n  \"maximum_relative_error\": 3.302790677052444e-14,\n  \"tolerance\": 2e-10\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:inequalities",
+      "command": "node --import tsx scripts/inequality-cases.ts | python3 scripts/inequality-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"scope\": \"Independent Decimal(60) normalized-vector cut/copy, segment addition, isosceles angles and strict determinant containment. Numerical evidence, not a formal axiomatic proof.\",\n  \"cases\": {\n    \"I.20\": 1620,\n    \"I.18\": 270\n  },\n  \"comparisons\": 17280,\n  \"maximum_relative_error\": 3.555e-13,\n  \"tolerance\": 2e-10\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:closure",
+      "command": "node --import tsx scripts/closure-cases.ts | python3 scripts/closure-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"method\": \"70-digit Heron area, sorted side criterion and circle distance residuals\",\n  \"cases\": 13490,\n  \"outcomes\": {\n    \"crossing\": 7547,\n    \"internal-tangent\": 462,\n    \"contained\": 3500,\n    \"external-tangent\": 231,\n    \"separate\": 1750\n  },\n  \"maximum_absolute_error\": \"1.202732488887303338991262499386808372543768796162354783E-14\",\n  \"tolerance\": \"1e-12\",\n  \"limitation\": \"Numerical model verification, not formal axiomatic proof\"\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:nested",
+      "command": "node --import tsx scripts/nested-cases.ts | python3 scripts/nested-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"method\": \"Positive barycentric coordinates, independent distances and cosine-law angles\",\n  \"cases\": 648,\n  \"comparisons\": 12960,\n  \"maximumAbsoluteDiscrepancy\": 6.87805368215777e-12,\n  \"tolerance\": 1e-08,\n  \"allPassed\": true\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:quadrature",
+      "command": "node --import tsx scripts/quadrature-cases.ts | python3 scripts/quadrature-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"counts\": {\n    \"construction\": 22801,\n    \"piece\": 505\n  },\n  \"maxHeightError\": 3.552713678800501e-15,\n  \"maxRigidPieceAreaError\": 6.583622536027178e-14,\n  \"method\": \"Exact integer difference of squares; independent Decimal circle intersection; shoelace area and all rigid side lengths.\"\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:gnomon",
+      "command": "node --import tsx scripts/gnomon-cases.ts | python3 scripts/gnomon-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"counts\": {\n    \"complement\": 25205,\n    \"gnomon\": 22801\n  },\n  \"maximumAbsoluteError\": 8.526512829121202e-14,\n  \"method\": \"Exact rational parameter areas, coordinate shoelace areas and an independent diagonal-line intersection. Includes every cut pair, five shears and every input-length pair.\"\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:mesolabe",
+      "command": "node --import tsx scripts/mesolabe-cases.ts | python3 scripts/mesolabe-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"method\": \"Independent square-edge/diagonal intersections; nested bisection for two-contact alignment\",\n  \"cases\": 6771,\n  \"numeric_comparisons\": 108519,\n  \"independently_solved_volume_factors\": 61,\n  \"max_absolute_difference\": 1.7053025658242404e-13,\n  \"tolerance\": 2e-10,\n  \"historical_or_physical_accuracy_established\": false\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:measure",
+      "command": "node --import tsx scripts/measure-cases.ts | python3 scripts/measure-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"cases\": 5556,\n  \"division_turns\": 25730,\n  \"length_readings\": 77190,\n  \"oracle\": \"Python Fraction and 110-digit Decimal; no application imports\",\n  \"status\": \"all exact signs, quotients, remainders, terminal units and decimal conversions agree\"\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:copying",
+      "command": "node --import tsx scripts/copying-cases.ts | python3 scripts/copying-oracle.py",
+      "exitCode": 0,
+      "stdout": "712 complete independent constructions / 18324 side, area, angle, branch and bounds checks passed.",
+      "stderr": ""
+    },
+    {
+      "name": "verify:circle-bounds",
+      "command": "node --import tsx scripts/circle-cases.ts | python3 scripts/circle-bounds-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"cases\": 100,\n  \"exact_rows\": 1000,\n  \"oracle\": \"independent Fraction arithmetic and 100-digit half-angle geometry\",\n  \"status\": \"passed\"\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:horn",
+      "command": "node --import tsx scripts/horn-cases.ts | python3 scripts/horn-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"cases\": 298,\n  \"oracle\": \"independent Fraction vector geometry\",\n  \"status\": \"passed\"\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:quadratrix",
+      "command": "node --import tsx scripts/quadratrix-cases.ts | python3 scripts/quadratrix-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"cases\": 3039,\n  \"actual_svg_diagrams\": 0,\n  \"relations\": {\n    \"point\": 2932,\n    \"parallel\": 105,\n    \"coincident\": 2\n  },\n  \"precision\": 90,\n  \"method\": \"Machin pi; sine/cosine Taylor series; independent determinant intersection\",\n  \"status\": \"passed\"\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:ratios",
+      "command": "node --import tsx scripts/ratios-cases.ts | python3 scripts/ratios-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"cases\": 69,\n  \"independently_enumerated_comparisons\": 10879090,\n  \"status\": \"All compressed scans, first witnesses, V.7 witnesses and selected signs agree with exhaustive integer enumeration.\"\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:solids",
+      "command": "node --import tsx scripts/solids-cases.ts | python3 scripts/solids-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"angleCases\": 70,\n  \"admittedUniformPairs\": [\n    [\n      3,\n      3\n    ],\n    [\n      3,\n      4\n    ],\n    [\n      3,\n      5\n    ],\n    [\n      4,\n      3\n    ],\n    [\n      5,\n      3\n    ]\n  ],\n  \"independentShortestEdgeMeshes\": [\n    {\n      \"id\": \"tetrahedron\",\n      \"vertices\": 4,\n      \"edges\": 6,\n      \"faces\": 4,\n      \"vertexDegrees\": [\n        3,\n        3,\n        3,\n        3\n      ],\n      \"angleErrorDegrees\": 7.105427357601002e-15,\n      \"sumDeficitDegrees\": \"720\"\n    },\n    {\n      \"id\": \"octahedron\",\n      \"vertices\": 6,\n      \"edges\": 12,\n      \"faces\": 8,\n      \"vertexDegrees\": [\n        4,\n        4,\n        4,\n        4,\n        4,\n        4\n      ],\n      \"angleErrorDegrees\": 7.105427357601002e-15,\n      \"sumDeficitDegrees\": \"720\"\n    },\n    {\n      \"id\": \"icosahedron\",\n      \"vertices\": 12,\n      \"edges\": 30,\n      \"faces\": 20,\n      \"vertexDegrees\": [\n        5,\n        5,\n        5,\n        5,\n        5,\n        5,\n        5,\n        5,\n        5,\n        5,\n        5,\n        5\n      ],\n      \"angleErrorDegrees\": 7.105427357601002e-15,\n      \"sumDeficitDegrees\": \"720\"\n    },\n    {\n      \"id\": \"cube\",\n      \"vertices\": 8,\n      \"edges\": 12,\n      \"faces\": 6,\n      \"vertexDegrees\": [\n        3,\n        3,\n        3,\n        3,\n        3,\n        3,\n        3,\n        3\n      ],\n      \"angleErrorDegrees\": 0,\n      \"sumDeficitDegrees\": \"720\"\n    },\n    {\n      \"id\": \"dodecahedron\",\n      \"vertices\": 20,\n      \"edges\": 30,\n      \"faces\": 12,\n      \"vertexDegrees\": [\n        3,\n        3,\n        3,\n        3,\n        3,\n        3,\n        3,\n        3,\n        3,\n        3,\n        3,\n        3,\n        3,\n        3,\n        3,\n        3,\n        3,\n        3,\n        3,\n        3\n      ],\n      \"angleErrorDegrees\": 1.4210854715202004e-14,\n      \"sumDeficitDegrees\": \"720\"\n    },\n    {\n      \"id\": \"bipyramid\",\n      \"vertices\": 5,\n      \"edges\": 9,\n      \"faces\": 6,\n      \"vertexDegrees\": [\n        3,\n        3,\n        4,\n        4,\n        4\n      ],\n      \"angleErrorDegrees\": 2.1316282072803006e-14,\n      \"sumDeficitDegrees\": \"720\"\n    }\n  ],\n  \"conditionalVertexInferences\": 55,\n  \"csvCases\": 70,\n  \"tetrahedronNets\": 2,\n  \"netEdgeMillimetres\": 40,\n  \"calibrationMillimetres\": 50,\n  \"physicalAssemblyVerified\": false\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:primes",
+      "command": "node --import tsx scripts/primes-cases.ts | python3 scripts/primes-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"cases\": 1205,\n  \"listCases\": 428,\n  \"directNumbers\": 32,\n  \"proposedWitnesses\": 745,\n  \"proposalResults\": {\n    \"verifiedPrimeBranch\": 3,\n    \"verifiedCompositeBranch\": 3,\n    \"rejected\": 584,\n    \"primalityUnchecked\": 155\n  },\n  \"classifications\": {\n    \"prime\": 10,\n    \"composite\": 403,\n    \"unresolved\": 47\n  },\n  \"largestDecimalDigits\": 120,\n  \"independence\": \"Python arbitrary integers, Eratosthenes sieve, full factor-product reconstruction and independent prime-divisor checks; no production imports\"\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:areas",
+      "command": "node --import tsx scripts/areas-cases.ts | python3 scripts/areas-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\n  \"cases\": 2268,\n  \"oracles\": [\n    \"exact polygon shoelace\",\n    \"Python Fraction\",\n    \"70-digit Decimal roots\"\n  ],\n  \"status\": \"passed\"\n}",
+      "stderr": ""
+    },
+    {
+      "name": "verify:intersection",
+      "command": "node --import tsx scripts/intersection-cases.ts | python3 scripts/intersection-oracle.py",
+      "exitCode": 0,
+      "stdout": "{\"oracle\": \"Python Fraction point distances and 60-digit Decimal square root\", \"cases\": 4188, \"passed\": true}",
+      "stderr": ""
+    }
+  ]
+}

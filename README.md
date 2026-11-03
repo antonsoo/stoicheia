@@ -26,10 +26,11 @@ site; no package registry installation is required.
 
 ![An exact rational candidate beside rounded lengths and the nonzero residual](docs/assets/intersection-desktop.png)
 
-The opening I.1 lesson now lets you investigate its intersection warning.
+[Open the I.1 experiment](https://antonsoo.github.io/stoicheia/#p=1&s=3&intersection=1).
+The opening lesson lets you investigate its intersection warning.
 Choose **Test the intersection** below the proof, or follow the question beside
 **Join the intersection to the endpoints**. In your local build, open
-`http://127.0.0.1:4327/stoicheia/#p=1&s=3&intersection=1`.
+`http://127.0.0.1:4326/stoicheia/#p=1&s=3&intersection=1`.
 
 Keep P exactly on the first circle. The starting candidate has coordinates
 **120/241, 209/241**: both side readings display **1.00**, but the second squared
@@ -44,8 +45,10 @@ The experiment stays inside the existing reader. Share its precise settings,
 save the exact CSV, or include its diagram and argument in the complete I.1
 illustrated reading. That file embeds ten source pages, the font and notices and
 opens from disk without a connection. The [model](docs/intersection-model.md)
-and [local review](docs/intersection-review.md) explain the limits and actual
-learner journey. This addition has not been published.
+and [experiment review](docs/intersection-review.md) explain the limits and actual
+learner journey. The [saved-reader audit](docs/saved-reader-audit.md) documents
+draft preservation, source limits, cancellable downloads and repair across all
+fourteen rooms.
 
 ## Two fits. One limit.
 
@@ -59,7 +62,7 @@ impossible under that condition, but extending beyond the line fits it at
 
 The [public workshop](https://antonsoo.github.io/stoicheia/areas.html#ar-bench)
 is published, with separate [hosted-file and browser evidence](docs/areas-review.md#evidence-boundary). After the quickstart below, open
-`http://127.0.0.1:4327/stoicheia/areas.html#ar-bench`, or choose **Two fits.
+`http://127.0.0.1:4326/stoicheia/areas.html#ar-bench`, or choose **Two fits.
 One limit.** in the course’s companion workshops.
 - Move the trial or enter a fraction, reflect it and compare both figures at
   one equal-unit scale. Change the given shape’s height and shear; the
@@ -97,7 +100,7 @@ can even be 2.
 [Open the prime workshop](https://antonsoo.github.io/stoicheia/primes.html#pr-bench),
 or choose **Euclid’s extra prime** from the course’s companion workshops.
 After `npm run dev`, the local address is
-`http://127.0.0.1:4327/stoicheia/primes.html`.
+`http://127.0.0.1:4326/stoicheia/primes.html`.
 - Select a given prime and inspect its exact quotient, remainder and last group
   of units. Extend the factor search from 13 to 100; unresolved cofactors remain
   explicit. A proven new prime can join the given list.
@@ -138,7 +141,7 @@ calculation makes the uniformity premise explicit.
 
 After `npm ci && npm run dev`, choose **Six faces. Still not one of five.**
 from the course's companion workshops, or open
-`http://127.0.0.1:4327/stoicheia/solids.html`. The [public verification](docs/solids-publication.md) records canonical bytes,
+`http://127.0.0.1:4326/stoicheia/solids.html`. The [public verification](docs/solids-publication.md) records canonical bytes,
 actual browser downloads and offline use separately from source workflows.
 The [direct review](docs/solids-review.md) gives the learner workflow.
 
@@ -175,7 +178,7 @@ being equal. A square’s diagonal to its side and 99 lengths to 70 agree in all
 that every pair of equimultiples agree.
 
 [Open the Book V workshop](https://antonsoo.github.io/stoicheia/ratios.html).
-After `npm run dev`, open `http://127.0.0.1:4327/stoicheia/ratios.html`, or choose
+After `npm run dev`, open `http://127.0.0.1:4326/stoicheia/ratios.html`, or choose
 **Thousands agree. One can disagree.** from the course’s companion workshops.
 - Choose the two multipliers independently, inspect exact integer comparisons,
   and enlarge subpixel endpoint differences with a labeled microscope.
@@ -306,7 +309,7 @@ whole-number rises/runs from −45 to 45 degrees; those are interface limits.
 [Exact CSV](examples/horn.csv) · [Standalone SVG](examples/horn-plates.svg).
 
 Run `npm ci` and `npm run dev`, then open
-`http://127.0.0.1:4327/stoicheia/horn.html` or follow **A line that will not fit**
+`http://127.0.0.1:4326/stoicheia/horn.html` or follow **A line that will not fit**
 from the course's native companion-workshop disclosure. Decompress the retained
 HTML before opening it. The current trial uses rise 1 and run 1,000,000.
 
@@ -353,7 +356,7 @@ proof does not by itself establish that its final number is false.
   sources offline. Source display and export reject a substituted image.
 
 In this checkout, run `npm ci` and `npm run dev`, then open
-`http://127.0.0.1:4327/stoicheia/circle.html`,
+`http://127.0.0.1:4326/stoicheia/circle.html`,
 or choose **Keep the safe side** from the course's companion workshops.
 The [publication review](docs/circle-publication.md) separately identifies the source,
 static branch, all 142 canonical files, public browser workflows and the
@@ -605,9 +608,10 @@ cd stoicheia && npm ci
 npm run dev
 ```
 
-Open `http://127.0.0.1:4327/stoicheia/`. The production build is `npm run build`,
+Open `http://127.0.0.1:4326/stoicheia/`. The production build is `npm run build`,
 which writes a complete static site to `dist/`. `npm run preview` serves that build
-on the same port; stop the development server before starting the preview.
+at `http://127.0.0.1:4327/stoicheia/`. Development and production use separate
+origins so an installed offline edition cannot hide source edits.
 
 ## Read, construct, inspect
 
@@ -811,7 +815,7 @@ installed with `npx playwright install --with-deps chromium firefox`.
 The [I.21 review](docs/nested-review.md) records 648 independent geometry cases,
 its drawn comparisons, printed readings and actual browser workflows. Reproduce
 the geometry with `npm run verify:nested` and the browser journey with
-`npm run test:nested -- http://127.0.0.1:4327/stoicheia/`.
+`npm run test:nested -- http://127.0.0.1:4326/stoicheia/`.
 
 The earlier [I.17–20 review](docs/inequalities-review.md) links the new clean
 build, independent geometry, rendered-browser, print and offline-upgrade

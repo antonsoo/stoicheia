@@ -1,0 +1,28 @@
+[
+  {
+    "engine": "chromium",
+    "draftAfterPrecision": "11",
+    "corruptCacheStatus": "Edition ready offline, including source pages",
+    "sourceError": "Source unavailable: sources/heiberg-012.jpg does not match this edition. Reload the current edition and try again.",
+    "statusAfterSourceFailure": "Edition ready offline, including source pages",
+    "statusAfterMissingFileAndFocus": "Edition ready offline, including source pages",
+    "statusAfterReload": "Offline copy is incomplete. Keep this tab open to continue reading.",
+    "visibleRepairButton": 0,
+    "statusAfterOnline": "Offline copy is incomplete. Keep this tab open to continue reading.",
+    "page6Alt": "Greek page 6 of Euclidis opera omnia, volume I, 1883. Complete printed text and critical notes.",
+    "page6Status": "Complete printed page verified against this edition’s SHA-256."
+  },
+  {
+    "engine": "firefox",
+    "draftAfterPrecision": "11",
+    "corruptCacheStatus": "Edition ready offline, including source pages",
+    "sourceError": "Source unavailable: sources/heiberg-012.jpg does not match this edition. Reload the current edition and try again.",
+    "statusAfterSourceFailure": "Edition ready offline, including source pages",
+    "statusAfterMissingFileAndFocus": "Edition ready offline, including source pages",
+    "statusAfterReload": "Offline copy is incomplete. Keep this tab open to continue reading.",
+    "visibleRepairButton": 0,
+    "statusAfterOnline": "Offline copy is incomplete. Keep this tab open to continue reading.",
+    "page6Alt": "Greek page 6 of Euclidis opera omnia, volume I, 1883. Complete printed text and critical notes.",
+    "page6Status": "Complete printed page verified against this edition’s SHA-256."
+  }
+]

@@ -1,0 +1,177 @@
+{
+  "scope": "Local production build; no public deployment",
+  "configurations": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "keyboard": true,
+      "openingGeometryTop": 495.75,
+      "compactContentsAndWorkshopMenu": true,
+      "exactVsRounded": true,
+      "customAndInvalid": true,
+      "shareAndReturn": true,
+      "greekAndLatinScans": true,
+      "offlineWithDeadOrigin": true,
+      "nativeCsv": true,
+      "ordinaryCourseReadingWithoutExperiment": true,
+      "independentReading": {
+        "bytes": 4625184,
+        "sha256": "0a1dc58c9d5a23d6dad1259514a2b1db06984e30059bae2106313e6d2652c4b0",
+        "pages": 10,
+        "externalRequests": 0
+      },
+      "accessibility": "no violations in live and independent readings",
+      "pageErrors": 0,
+      "cspViolations": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "keyboard": true,
+      "openingGeometryTop": 593.171875,
+      "compactContentsAndWorkshopMenu": true,
+      "exactVsRounded": true,
+      "customAndInvalid": true,
+      "shareAndReturn": true,
+      "greekAndLatinScans": true,
+      "offlineWithDeadOrigin": true,
+      "nativeCsv": true,
+      "ordinaryCourseReadingWithoutExperiment": true,
+      "independentReading": {
+        "bytes": 4625184,
+        "sha256": "0a1dc58c9d5a23d6dad1259514a2b1db06984e30059bae2106313e6d2652c4b0",
+        "pages": 10,
+        "externalRequests": 0
+      },
+      "accessibility": "no violations in live and independent readings",
+      "pageErrors": 0,
+      "cspViolations": 0
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "keyboard": true,
+      "openingGeometryTop": 498.7166748046875,
+      "compactContentsAndWorkshopMenu": true,
+      "exactVsRounded": true,
+      "customAndInvalid": true,
+      "shareAndReturn": true,
+      "greekAndLatinScans": true,
+      "offlineWithDeadOrigin": true,
+      "nativeCsv": true,
+      "ordinaryCourseReadingWithoutExperiment": true,
+      "independentReading": {
+        "bytes": 4625184,
+        "sha256": "0a1dc58c9d5a23d6dad1259514a2b1db06984e30059bae2106313e6d2652c4b0",
+        "pages": 10,
+        "externalRequests": 0
+      },
+      "accessibility": "no violations in live and independent readings",
+      "pageErrors": 0,
+      "cspViolations": 0
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "keyboard": true,
+      "openingGeometryTop": 597.183349609375,
+      "compactContentsAndWorkshopMenu": true,
+      "exactVsRounded": true,
+      "customAndInvalid": true,
+      "shareAndReturn": true,
+      "greekAndLatinScans": true,
+      "offlineWithDeadOrigin": true,
+      "nativeCsv": true,
+      "ordinaryCourseReadingWithoutExperiment": true,
+      "independentReading": {
+        "bytes": 4625184,
+        "sha256": "0a1dc58c9d5a23d6dad1259514a2b1db06984e30059bae2106313e6d2652c4b0",
+        "pages": 10,
+        "externalRequests": 0
+      },
+      "accessibility": "no violations in live and independent readings",
+      "pageErrors": 0,
+      "cspViolations": 0
+    }
+  ],
+  "sourceFailure": "Substituted source bytes prevent export; retry after recovery saves the complete reading",
+  "snapshot": "A delayed source keeps the starting candidate in the saved reading while the live controls change",
+  "rejectedOriginConnections": 45,
+  "artifacts": [
+    {
+      "file": "chromium-1440-I2.html",
+      "bytes": 4508311,
+      "sha256": "710ee3f9762b3f58022a84af7fe9a17168965279a7acf7ab8fda2c811ca7c54e"
+    },
+    {
+      "file": "chromium-1440.csv",
+      "bytes": 728,
+      "sha256": "850d6d507a175d7ec4c0be859ceacb1fc59c4ef8e88c4d9971c97aef32c7c5d2"
+    },
+    {
+      "file": "chromium-1440.html",
+      "bytes": 4625184,
+      "sha256": "0a1dc58c9d5a23d6dad1259514a2b1db06984e30059bae2106313e6d2652c4b0"
+    },
+    {
+      "file": "chromium-375-I2.html",
+      "bytes": 4508311,
+      "sha256": "710ee3f9762b3f58022a84af7fe9a17168965279a7acf7ab8fda2c811ca7c54e"
+    },
+    {
+      "file": "chromium-375.csv",
+      "bytes": 728,
+      "sha256": "850d6d507a175d7ec4c0be859ceacb1fc59c4ef8e88c4d9971c97aef32c7c5d2"
+    },
+    {
+      "file": "chromium-375.html",
+      "bytes": 4625184,
+      "sha256": "0a1dc58c9d5a23d6dad1259514a2b1db06984e30059bae2106313e6d2652c4b0"
+    },
+    {
+      "file": "firefox-1440-I2.html",
+      "bytes": 4508311,
+      "sha256": "710ee3f9762b3f58022a84af7fe9a17168965279a7acf7ab8fda2c811ca7c54e"
+    },
+    {
+      "file": "firefox-1440.csv",
+      "bytes": 728,
+      "sha256": "850d6d507a175d7ec4c0be859ceacb1fc59c4ef8e88c4d9971c97aef32c7c5d2"
+    },
+    {
+      "file": "firefox-1440.html",
+      "bytes": 4625184,
+      "sha256": "0a1dc58c9d5a23d6dad1259514a2b1db06984e30059bae2106313e6d2652c4b0"
+    },
+    {
+      "file": "firefox-375-I2.html",
+      "bytes": 4508311,
+      "sha256": "710ee3f9762b3f58022a84af7fe9a17168965279a7acf7ab8fda2c811ca7c54e"
+    },
+    {
+      "file": "firefox-375.csv",
+      "bytes": 728,
+      "sha256": "850d6d507a175d7ec4c0be859ceacb1fc59c4ef8e88c4d9971c97aef32c7c5d2"
+    },
+    {
+      "file": "firefox-375.html",
+      "bytes": 4625184,
+      "sha256": "0a1dc58c9d5a23d6dad1259514a2b1db06984e30059bae2106313e6d2652c4b0"
+    },
+    {
+      "file": "frozen-reading.html",
+      "bytes": 4625086,
+      "sha256": "4164a8f77bf7b034fdd2857945e524d2a68e12538403ad7e975a0e17e098658c"
+    },
+    {
+      "file": "initial.csv",
+      "bytes": 645,
+      "sha256": "3a7a40c691379266b8143205341344939da58eef8ee20e7fab431bc398a137c1"
+    },
+    {
+      "file": "recovered.html",
+      "bytes": 4625086,
+      "sha256": "4164a8f77bf7b034fdd2857945e524d2a68e12538403ad7e975a0e17e098658c"
+    }
+  ]
+}

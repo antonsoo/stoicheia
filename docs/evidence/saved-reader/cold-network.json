@@ -1,0 +1,174 @@
+{
+  "scope": "Cold foreground illustrated reading against simultaneous background installation, shared 128000-byte/s origin",
+  "rateBytesPerSecond": 128000,
+  "before": false,
+  "configurations": [
+    {
+      "engine": "chromium",
+      "foregroundSeconds": 49.20121113,
+      "editionSeconds": 512.15377022,
+      "readingBytes": 4625086,
+      "readingSha256": "4164a8f77bf7b034fdd2857945e524d2a68e12538403ad7e975a0e17e098658c",
+      "sourcePages": 10,
+      "totalBytesSent": 65480324,
+      "peakStreams": 6,
+      "progress": [
+        {
+          "seconds": 33.989213567,
+          "state": "Saving offline files: 2 of 232 files checked; 1.2 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 63.988983456,
+          "state": "Saving offline files: 6 of 232 files checked; 3.5 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 93.988092913,
+          "state": "Saving offline files: 14 of 232 files checked; 7.2 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 123.99519867100001,
+          "state": "Saving offline files: 22 of 232 files checked; 10.8 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 153.989133959,
+          "state": "Saving offline files: 30 of 232 files checked; 14.6 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 183.996772606,
+          "state": "Saving offline files: 40 of 232 files checked; 18.2 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 213.990003223,
+          "state": "Saving offline files: 50 of 232 files checked; 21.8 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 243.989368627,
+          "state": "Saving offline files: 60 of 232 files checked; 25.5 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 273.98884539799997,
+          "state": "Saving offline files: 70 of 232 files checked; 29.1 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 303.994220554,
+          "state": "Saving offline files: 82 of 232 files checked; 32.8 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 333.991605527,
+          "state": "Saving offline files: 92 of 232 files checked; 2.7 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 363.99031147899996,
+          "state": "Saving offline files: 104 of 232 files checked; 6.4 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 393.990282772,
+          "state": "Saving offline files: 116 of 232 files checked; 10.0 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 423.989813805,
+          "state": "Saving offline files: 130 of 232 files checked; 13.7 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 453.990506296,
+          "state": "Saving offline files: 144 of 232 files checked; 17.3 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 483.990321002,
+          "state": "Saving offline files: 160 of 232 files checked; 21.1 MiB received. Keep this tab open."
+        }
+      ],
+      "repairClicks": 0,
+      "installationAttempts": 2,
+      "observedWorkerEvents": 2
+    },
+    {
+      "engine": "firefox",
+      "foregroundSeconds": 52.56759199100005,
+      "editionSeconds": 547.4086972599999,
+      "readingBytes": 4625086,
+      "readingSha256": "4164a8f77bf7b034fdd2857945e524d2a68e12538403ad7e975a0e17e098658c",
+      "sourcePages": 10,
+      "totalBytesSent": 70004807,
+      "peakStreams": 6,
+      "progress": [
+        {
+          "seconds": 33.880891446999975,
+          "state": "Saving offline files: 2 of 232 files checked; 1.4 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 63.878094987999994,
+          "state": "Saving offline files: 6 of 232 files checked; 3.5 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 93.88279737400008,
+          "state": "Saving offline files: 12 of 232 files checked; 3.4 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 123.88065167699999,
+          "state": "Saving offline files: 20 of 232 files checked; 7.0 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 153.87959617300007,
+          "state": "Saving offline files: 26 of 232 files checked; 3.3 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 183.881627067,
+          "state": "Saving offline files: 36 of 232 files checked; 6.9 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 213.88294912700005,
+          "state": "Saving offline files: 44 of 232 files checked; 3.2 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 243.88086035199998,
+          "state": "Saving offline files: 54 of 232 files checked; 6.8 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 273.8864646460001,
+          "state": "Saving offline files: 62 of 232 files checked; 3.1 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 303.882866777,
+          "state": "Saving offline files: 72 of 232 files checked; 6.7 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 333.882283467,
+          "state": "Saving offline files: 82 of 232 files checked; 2.9 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 363.88582303900006,
+          "state": "Saving offline files: 94 of 232 files checked; 6.7 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 393.88481471800003,
+          "state": "Saving offline files: 104 of 232 files checked; 2.9 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 423.882867173,
+          "state": "Saving offline files: 118 of 232 files checked; 6.5 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 453.884996223,
+          "state": "Saving offline files: 130 of 232 files checked; 2.8 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 483.884479775,
+          "state": "Saving offline files: 143 of 232 files checked; 6.5 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 513.885269898,
+          "state": "Saving offline files: 156 of 232 files checked; 2.6 MiB received. Keep this tab open."
+        },
+        {
+          "seconds": 543.8857096439999,
+          "state": "Saving offline files: 182 of 232 files checked; 6.3 MiB received. Keep this tab open."
+        }
+      ],
+      "repairClicks": 0,
+      "installationAttempts": null,
+      "observedWorkerEvents": 0,
+      "workerObservationLimit": "Playwright did not expose worker events in this engine; the recorded progress shows continuation and the final full-edition check passed."
+    }
+  ]
+}

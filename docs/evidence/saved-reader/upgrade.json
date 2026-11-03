@@ -1,0 +1,27 @@
+{
+  "scope": "Two distinct edition-aware builds; explicit reload preserves the original reading state before an origin-disabled offline reload",
+  "firstWorkerSha256": "f9748447db189fb8d2097df80c4a549a57604ae6b80e0a8c02d6a032595b6c34",
+  "nextWorkerSha256": "2c4e19de8b67f028942363892d2944f9e925082164120a32d933c38cad68522e",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "prompt": "A different edition is now saved offline. Reload to read that edition.",
+      "readingTabNotAutomaticallyReloaded": true,
+      "explicitReloadPreservesPropositionStepAngleAndChoice": true,
+      "originDisabledOfflineReload": true,
+      "retainedOppositeRayWarning": true,
+      "pageErrors": 0
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "prompt": "A different edition is now saved offline. Reload to read that edition.",
+      "readingTabNotAutomaticallyReloaded": true,
+      "explicitReloadPreservesPropositionStepAngleAndChoice": true,
+      "originDisabledOfflineReload": true,
+      "retainedOppositeRayWarning": true,
+      "pageErrors": 0
+    }
+  ]
+}

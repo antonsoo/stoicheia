@@ -1,0 +1,15 @@
+{
+  "scope": "Cold foreground illustrated reading against simultaneous background installation, shared 128000-byte/s origin",
+  "rateBytesPerSecond": 128000,
+  "before": true,
+  "configurations": [
+    {
+      "engine": "chromium",
+      "foregroundSeconds": 15.072385936,
+      "error": "sources/heiberg-009.jpg: The transfer stopped sending data. Reconnect and try again.",
+      "offlineStatus": "Saving this edition for offline reading…",
+      "totalBytesSent": 2461023,
+      "peakStreams": 6
+    }
+  ]
+}

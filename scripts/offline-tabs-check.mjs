@@ -71,24 +71,30 @@ for (const [name, type] of [
     context.on("page", (p) => p.on("pageerror", (e) => errors.push(String(e))));
     page.on("pageerror", (e) => errors.push(String(e)));
     await page.goto(`${url}#p=9&s=7&a=45&v=1`);
-    await page.waitForFunction(() =>
-      document.querySelector("#offline-state")?.textContent?.includes("ready offline"),
+    await page.waitForFunction(
+      () => document.querySelector("#offline-state")?.textContent?.includes("ready offline"),
+      undefined,
+      { timeout: 120000 },
     );
     const original = page.url();
     assert.match(await page.locator("#diagram-notice").innerText(), /opposite bisector ray/);
     root = next;
     const second = await context.newPage();
     await second.goto(url);
-    await second.waitForFunction(() =>
-      document.querySelector("#offline-state")?.textContent?.includes("ready offline"),
+    await second.waitForFunction(
+      () => document.querySelector("#offline-state")?.textContent?.includes("ready offline"),
+      undefined,
+      { timeout: 120000 },
     );
     await page.waitForFunction(() => document.querySelector("#reload-edition")?.hidden === false);
     assert.doesNotMatch(await page.locator("#offline-state").innerText(), /ready offline/);
     assert.equal(page.url(), original, "updating another tab must not navigate the reading tab");
     const prompt = await page.locator("#offline-state").innerText();
     await page.locator("#reload-edition").click();
-    await page.waitForFunction(() =>
-      document.querySelector("#offline-state")?.textContent?.includes("ready offline"),
+    await page.waitForFunction(
+      () => document.querySelector("#offline-state")?.textContent?.includes("ready offline"),
+      undefined,
+      { timeout: 120000 },
     );
     assert.equal(page.url(), original);
     assert.equal(await page.locator("#variant").inputValue(), "1");

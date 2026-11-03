@@ -1,0 +1,26 @@
+[
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "wrongTypeDetected": true,
+    "metadataRepairedOffline": true,
+    "delayedRepairThenRetirementLeavesNoOldCache": true,
+    "installationWaitedForOldEvent": true,
+    "unchangedSourceFilesReused": true,
+    "sourceDownloadsDuringUpdate": [],
+    "explicitReloadPreservesAddress": true,
+    "pageErrors": 0
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "wrongTypeDetected": true,
+    "metadataRepairedOffline": true,
+    "delayedRepairThenRetirementLeavesNoOldCache": true,
+    "installationWaitedForOldEvent": true,
+    "unchangedSourceFilesReused": true,
+    "sourceDownloadsDuringUpdate": [],
+    "explicitReloadPreservesAddress": true,
+    "pageErrors": 0
+  }
+]
