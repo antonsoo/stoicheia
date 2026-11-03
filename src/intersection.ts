@@ -70,8 +70,8 @@ export function mountIntersection(
       <div class="intersection-audit"><h3>Approach the crossing</h3><label for="intersection-trial">Choose a rational candidate<select id="intersection-trial">${intersectionTrials.map(([m, n], i) => `<option value="${i}">t = ${m}/${n}</option>`).join("")}<option value="custom">Custom candidate</option></select></label>
         <div class="intersection-actions"><button type="button" id="intersection-previous">← Previous candidate</button><button type="button" id="intersection-next">Closer candidate →</button></div>
         <label for="intersection-places">Length display<select id="intersection-places"><option value="2">2 decimal places</option><option value="4">4 decimal places</option><option value="6">6 decimal places</option></select></label>
-        <div id="intersection-ledger"></div><details class="intersection-custom" id="intersection-custom"><summary>Choose your own fraction</summary><p>Every valid t = m/n below supplies a point exactly on the first circle.</p><form id="intersection-form"><label for="intersection-m">m<input id="intersection-m" type="text" inputmode="numeric" maxlength="7" required/></label><label for="intersection-n">n<input id="intersection-n" type="text" inputmode="numeric" maxlength="7" required/></label><button type="submit">Apply candidate</button></form><p id="intersection-error" role="status"></p><p>Whole numbers: m from 0 to 1,000,000; n from 1 to 1,000,000. The bounds keep input manageable; the impossibility argument below has no such bound.</p></details>
-        <div class="intersection-actions"><button type="button" id="intersection-csv">Save exact CSV</button><button type="button" id="intersection-save">Save illustrated reading</button><button type="button" id="intersection-share">Share this experiment</button></div><p id="intersection-save-status" role="status"></p></div></div>
+        <div id="intersection-ledger"></div><details class="intersection-custom" id="intersection-custom"><summary>Choose your own fraction</summary><p>Every valid t = m/n below supplies a point exactly on the first circle.</p><form id="intersection-form"><label for="intersection-m">m<input id="intersection-m" type="text" inputmode="numeric" maxlength="7" aria-describedby="intersection-draft-note intersection-error" required/></label><label for="intersection-n">n<input id="intersection-n" type="text" inputmode="numeric" maxlength="7" aria-describedby="intersection-draft-note intersection-error" required/></label><button type="submit">Apply candidate</button><button type="button" id="intersection-revert" disabled>Discard edits</button></form><p id="intersection-draft-note"></p><p id="intersection-error" role="status"></p><p>Whole numbers: m from 0 to 1,000,000; n from 1 to 1,000,000. The bounds keep input manageable; the impossibility argument below has no such bound.</p></details>
+        <div class="intersection-actions"><button type="button" id="intersection-csv">Save exact CSV</button><button type="button" id="intersection-save">Save illustrated reading</button><button type="button" id="intersection-cancel" hidden>Cancel reading download</button><button type="button" id="intersection-share">Share this experiment</button></div><p id="intersection-save-status" role="status"></p></div></div>
       <div class="intersection-explanation"><details><summary>Why can no rational candidate finish?</summary><p>Set t = m/n. The formulas <b>x = (n² − m²)/(n² + m²)</b> and <b>y = 2mn/(n² + m²)</b> give x² + y² = 1 exactly, by expanding the squares. The second squared length differs from 1 by <b>(3m² − n²)/(m² + n²)</b>.</p>${intersectionArgument}</details><details><summary>Read the permission and the command</summary>${options.sources}<p><b>τέμνουσιν ἀλλήλους / inter se secant</b> says that the circles cut one another. The relative clause identifies Γ by that meeting. Postulate 3 commands a circle’s drawing; it does not explicitly supply this common point. The experiment above asks a modern question about that distinction.</p></details></div>
     </div>`;
   const el = <T extends HTMLElement = HTMLElement>(id: string): T => {
@@ -79,6 +79,25 @@ export function mountIntersection(
     if (!node) throw new Error(`Missing intersection control: ${id}`);
     return node;
   };
+  let renderedPair = "";
+  let dirty = false;
+  function draftNote(): void {
+    const s = options.read();
+    el("draft-note").textContent = dirty
+      ? `Unapplied edits. The diagram, share link and saved files still use ${s.m}/${s.n}. Choose Apply candidate to use your fraction.`
+      : `Applied candidate: ${s.m}/${s.n}. Sharing and saving use this fraction.`;
+    el<HTMLButtonElement>("revert").disabled = !dirty;
+  }
+  function resetDraft(): void {
+    const s = options.read();
+    el<HTMLInputElement>("m").value = String(s.m);
+    el<HTMLInputElement>("n").value = String(s.n);
+    for (const id of ["m", "n"]) el(id).removeAttribute("aria-invalid");
+    el("error").textContent = "";
+    dirty = false;
+    renderedPair = `${s.m}/${s.n}`;
+    draftNote();
+  }
   function render(): void {
     const s = options.read(),
       p = intersectionModel(s);
@@ -102,17 +121,17 @@ export function mountIntersection(
     el<HTMLButtonElement>("previous").disabled = index <= 0;
     el("next").textContent = index < 0 ? "Start candidate sequence →" : "Closer candidate →";
     el<HTMLButtonElement>("next").disabled = index === intersectionTrials.length - 1;
-    el<HTMLInputElement>("m").value = String(s.m);
-    el<HTMLInputElement>("n").value = String(s.n);
-    el("error").textContent = "";
+    if (renderedPair !== `${s.m}/${s.n}`) resetDraft();
+    else draftNote();
   }
-  function update(next: IntersectionState): void {
+  function update(next: IntersectionState, replaceDraft = false): void {
+    if (replaceDraft) renderedPair = "";
     options.change(next);
     render();
   }
   function choose(index: number): void {
     const pair = intersectionTrials[index];
-    if (pair) update({ ...options.read(), m: pair[0], n: pair[1] });
+    if (pair) update({ ...options.read(), m: pair[0], n: pair[1] }, true);
   }
   root.addEventListener("change", (event) => {
     const target = event.target;
@@ -128,16 +147,30 @@ export function mountIntersection(
     if (target.id === "intersection-real")
       update({ ...options.read(), real: (target as HTMLInputElement).checked });
   });
+  root.addEventListener("input", (event) => {
+    const target = event.target;
+    if (
+      !(target instanceof HTMLInputElement) ||
+      !["intersection-m", "intersection-n"].includes(target.id)
+    )
+      return;
+    dirty = true;
+    target.removeAttribute("aria-invalid");
+    el("error").textContent = "";
+    draftNote();
+  });
   el("form").addEventListener("submit", (event) => {
     event.preventDefault();
+    let field = "m";
     try {
-      update({
-        ...options.read(),
-        m: candidateInteger(el<HTMLInputElement>("m").value),
-        n: candidateInteger(el<HTMLInputElement>("n").value, true),
-      });
+      const m = candidateInteger(el<HTMLInputElement>("m").value);
+      field = "n";
+      const n = candidateInteger(el<HTMLInputElement>("n").value, true);
+      update({ ...options.read(), m, n }, true);
     } catch (error) {
-      el("error").textContent = error instanceof Error ? error.message : "Check the fraction.";
+      el(field).setAttribute("aria-invalid", "true");
+      el("error").textContent =
+        `${field === "m" ? "Numerator m" : "Denominator n"}: ${error instanceof Error ? error.message : "Check the fraction."}`;
     }
   });
   root.addEventListener("click", (event) => {
@@ -160,6 +193,10 @@ export function mountIntersection(
         break;
       case "intersection-previous":
         choose(index - 1);
+        break;
+      case "intersection-revert":
+        resetDraft();
+        el("m").focus();
         break;
       case "intersection-csv":
         options.download(

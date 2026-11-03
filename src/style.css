@@ -2512,3 +2512,22 @@ dialog::backdrop {
     display: none;
   }
 }
+.source-limit {
+  border-left: 3px solid var(--accent);
+  padding: 0.8rem 1rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  background: var(--paper);
+}
+.offline-repair {
+  display: inline-block;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  min-height: 44px;
+  padding: 0.4rem 0;
+  text-align: left;
+}
+.offline-repair[hidden] {
+  display: none;
+}

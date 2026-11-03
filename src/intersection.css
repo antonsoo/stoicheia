@@ -147,7 +147,7 @@
   gap: 0.8rem;
 }
 .intersection-custom form button {
-  grid-column: 1 / -1;
+  grid-column: auto;
 }
 #intersection-error {
   color: #8b304e;

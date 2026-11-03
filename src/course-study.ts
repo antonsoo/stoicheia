@@ -13,13 +13,24 @@ export async function illustratedCourseStudy(
   scene: Scene,
   step: number,
   candidate?: IntersectionState,
+  progress?: (checked: number, total: number) => void,
+  signal?: AbortSignal,
 ): Promise<string> {
   const pages = courseSourcePages(lesson);
+  let checked = 0;
+  const track = async (task: Promise<string>) => {
+    const value = await task;
+    signal?.throwIfAborted();
+    progress?.(++checked, pages.length + 2);
+    return value;
+  };
   const [font, license, ...scans] = await Promise.all([
-    studyDataUrl("fonts/NotoSerif-Regular.ttf", "font/ttf"),
-    studyText("fonts/OFL.txt"),
+    track(studyDataUrl("fonts/NotoSerif-Regular.ttf", "font/ttf", signal)),
+    track(studyText("fonts/OFL.txt", signal)),
     ...pages.map((p) =>
-      studyDataUrl(`sources/heiberg-${String(p).padStart(3, "0")}.jpg`, "image/jpeg"),
+      track(
+        studyDataUrl(`sources/heiberg-${String(p).padStart(3, "0")}.jpg`, "image/jpeg", signal),
+      ),
     ),
   ]);
   const style = `<style>@font-face{font-family:"Noto Serif";src:url(${font})}.intersection-saved svg{width:100%;height:auto}.intersection-saved{break-before:page}.intersection-saved td{overflow-wrap:anywhere}body{font-family:"Noto Serif",Georgia,serif}.note,small,footer{font-family:system-ui,"Noto Serif",serif}.source-appendix{margin-top:3rem}.source-page{margin:2rem 0;break-inside:avoid}.source-page img{display:block;width:100%;height:auto;max-height:1100px;object-fit:contain}.source-page figcaption{font:14px/1.5 system-ui,sans-serif;margin-bottom:1rem}.source-identity{overflow-wrap:anywhere;font-size:11px}.study-notices pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.6 monospace}@page{margin:12mm}@media print{body{padding:0}.study-statement{break-inside:avoid}.source-page{break-before:page;margin:0}.source-page img{max-height:230mm}.study-notices{display:none}h2{break-after:avoid}}</style>`;

@@ -76,7 +76,14 @@ async function audit(page, label) {
 async function download(page, selector, name) {
   const pending = page.waitForEvent("download");
   await page.locator(selector).click();
-  const d = await pending;
+  const d = await pending.catch(async (error) => {
+    console.error(
+      "SAVE FAILURE",
+      await page.locator("#save-feedback").innerText(),
+      await page.locator("#offline-state").innerText(),
+    );
+    throw error;
+  });
   const file = join(output, name ?? d.suggestedFilename());
   await d.saveAs(file);
   return file;
@@ -164,16 +171,16 @@ try {
         await page.locator("#intersection-trial").selectOption("custom");
         await page.locator("#intersection-m").fill("564719");
         await page.locator("#intersection-n").fill("978122");
-        await page.locator("#intersection-form button").click();
+        await page.locator("#intersection-form button[type=submit]").click();
         await visible(page, "#intersection-second", "1.000000");
         await visible(page, "#intersection-verdict", "nonzero");
         const prior = await page.locator('[data-exact="residual"]').innerText();
         await page.locator("#intersection-n").fill("0");
-        await page.locator("#intersection-form button").click();
+        await page.locator("#intersection-form button[type=submit]").click();
         await visible(page, "#intersection-error", "1 to 1,000,000");
         assert.equal(await page.locator('[data-exact="residual"]').innerText(), prior);
         await page.locator("#intersection-n").fill("978122");
-        await page.locator("#intersection-form button").click();
+        await page.locator("#intersection-form button[type=submit]").click();
         await page.locator("#intersection-share").click();
         const shared = await page.locator("#share-url").inputValue();
         assert.match(shared, /intersection=1/);

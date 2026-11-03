@@ -83,11 +83,11 @@ async function save(page, button, file) {
   await d.saveAs(file);
   return d.suggestedFilename();
 }
-async function checkFile(context, file, proposition, print = false) {
+async function checkFile(context, file, proposition, print = false, closure = false) {
   const bytes = await readFile(file),
     html = bytes.toString();
   const row = metadata.find((m) => m.lesson.id === proposition);
-  const pages = proposition === 22 ? [52, 53, 54, 55] : row.pages;
+  const pages = closure ? [52, 53, 54, 55] : row.pages;
   if (proposition === 21) assert.deepEqual(pages, [8, 9, 50, 51, 52, 53]);
   const images = [
     ...html.matchAll(
@@ -190,7 +190,9 @@ for (const [name, engine] of [
         await page.goto(`${host.base}triangle.html`);
         const closure = join(output, `${name}-${width}-I22.html`);
         await save(page, "#save-study", closure);
-        files.push(await checkFile(context, closure, 22, name === "chromium" && width === 1440));
+        files.push(
+          await checkFile(context, closure, 22, name === "chromium" && width === 1440, true),
+        );
         host.disconnect();
         await context.setOffline(true);
         await page.goto(host.base);
@@ -201,7 +203,7 @@ for (const [name, engine] of [
         await page.goto(`${host.base}triangle.html`);
         const offline22 = join(output, `${name}-${width}-offline-I22.html`);
         await save(page, "#save-study", offline22);
-        await checkFile(context, offline22, 22);
+        await checkFile(context, offline22, 22, false, true);
         assert.deepEqual(errors, []);
         report.configurations.push({
           browser: name,
@@ -250,7 +252,7 @@ for (const [name, engine] of [
           await context.unroute(`**/${target}`);
           const file = join(output, `${name}-${kind}-${target.split("/").at(-1)}-recovered.html`);
           await save(page, button, file);
-          await checkFile(context, file, kind === "course" ? 21 : 22);
+          await checkFile(context, file, kind === "course" ? 21 : 22, false, kind === "closure");
           report.negativeCases.push({
             browser: name,
             kind,

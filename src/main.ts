@@ -23,6 +23,8 @@ function element<T extends Element = HTMLElement>(selector: string): T {
 let state = decodeState(location.hash);
 let sourcePage = 4;
 let sourceRevision = 0;
+let sourceRequest: AbortController | undefined;
+let studyRequest: AbortController | undefined;
 let sourceBlob = "";
 let practiceIndex = 0;
 let readingMode = "parallel";
@@ -59,7 +61,7 @@ app.innerHTML = `
         <p id="hypothesis-warning" class="warning" role="status" hidden></p>
         <div class="plate-legend"><span><i class="legend-given"></i>given / established</span><span><i class="legend-active"></i>current operation</span></div>
         <details class="parameters" id="parameters"><summary>Change the givens <span>the argument should survive</span></summary><div id="parameter-controls"></div></details>
-        <div class="plate-actions"><button type="button" id="save-diagram">Save diagram</button><button type="button" id="save-sheet">Save illustrated study</button><button type="button" id="share">Share this step</button></div><p id="save-feedback" class="export-note" role="status">The saved study includes the full reading, its printed source pages and a font for Greek.</p>
+        <div class="plate-actions"><button type="button" id="save-diagram">Save diagram</button><button type="button" id="save-sheet">Save illustrated study</button><button type="button" id="cancel-save" hidden>Cancel reading download</button><button type="button" id="share">Share this step</button></div><p id="save-feedback" class="export-note" role="status">The saved study includes the full reading, its printed source pages and a font for Greek.</p>
       </div>
       <article class="reader" aria-labelledby="step-title">
         <div class="reader-top"><span class="eyebrow" id="reading-label">Read the command</span><span class="vocabulary-hint">Underlined words open vocabulary</span></div>
@@ -91,7 +93,7 @@ app.innerHTML = `
     <details class="wordbook"><summary><span>A small working vocabulary</span><span>Words you meet in these proofs</span></summary><div class="glossary-list">${glossary.map((entry) => `<button type="button" data-gloss="${entry.id}"><span lang="grc">${escapeHtml(entry.greek)}</span><span lang="la">${escapeHtml(entry.latin)}</span><small>${escapeHtml(entry.meaning)}</small></button>`).join("")}</div></details>
     <section class="source-note" id="source-note"><div><p class="eyebrow">A printed source you can inspect</p><h2>One edition. Two languages.</h2><p>Greek text and Latin translation from J. L. Heiberg’s <cite>Euclidis opera omnia</cite>, volume I (1883), printed pages 2–57. The English and reading notes are new. Point labels stay Greek in all three languages.</p><button type="button" id="open-edition">Open the printed pages</button></div><div class="editorial-note"><h3>What changed in transcription</h3><p>Line breaks and inline reference marks are omitted. Greek ϑ is written θ; point labels use consistent Greek letters. Latin u/v spelling is retained. Square brackets in the definitions, common notions, I.1, I.4, I.8, I.13 and I.15 reproduce Heiberg’s editorial brackets. Angle and triangle symbols are written ∠ and △. The step divisions, geometry orientation, reasons and annotations are teaching aids. The usual five-common-notion numbering is used in the notes; Heiberg’s expanded list is identified where it differs.</p><p>The English sometimes names intersections implied by the Greek. It is a reading translation, not a critical edition. The language notes cover selected forms, not every word.</p><a href="${import.meta.env.BASE_URL}sources/manifest.json">Source and image provenance</a></div></section>
   </main>
-  <footer class="footer"><p>Stoicheia <span lang="grc">/ στοιχεῖα</span> · elements</p><p>Made for slow reading. No account. No tracking.</p><span class="offline-status"><span id="offline-state" role="status">Preparing offline edition…</span><button type="button" id="reload-edition" hidden>Reload saved edition</button></span></footer>
+  <footer class="footer"><p>Stoicheia <span lang="grc">/ στοιχεῖα</span> · elements</p><p>Made for slow reading. No account. No tracking.<br><a href="https://github.com/antonsoo/stoicheia/blob/main/LICENSE">PolyForm Noncommercial · source &amp; license</a></p><span class="offline-status"><span id="offline-state" role="status">Preparing offline edition…</span><button type="button" id="reload-edition" hidden>Reload saved edition</button></span></footer>
   <dialog id="practice-dialog" class="practice-dialog" aria-labelledby="practice-title"><header><div><p class="eyebrow" id="practice-position"></p><h2 id="practice-title" tabindex="-1">Read the argument</h2></div><button type="button" class="dialog-close" data-close="practice-dialog" aria-label="Close reading practice">×</button></header><div class="practice-body"><p class="practice-intro">Read the highlighted wording in its original sentence. Try an interpretation, then compare the explanation.</p><div id="practice-source"></div><form id="practice-form"><fieldset id="practice-options"></fieldset><p id="practice-feedback" role="status" aria-live="polite"></p></form><div id="practice-translation" hidden></div><button type="button" id="practice-plate">Open this passage on the plate</button></div><footer class="practice-controls"><button type="button" id="practice-previous">← Previous reading</button><button type="button" id="practice-next">Next reading →</button></footer></dialog>
   <dialog id="foundation-dialog" class="foundation-dialog" aria-labelledby="foundation-title"><header><div><p class="eyebrow">The starting permissions</p><h2 id="foundation-title" tabindex="-1">Definitions, postulates &amp; common notions</h2></div><button type="button" class="dialog-close" data-close="foundation-dialog" aria-label="Close foundations">×</button></header><div class="foundation-layout"><nav class="foundation-nav" aria-label="Foundation statements">${(
     ["Definition", "Postulate", "Common notion"] as const
@@ -110,7 +112,7 @@ app.innerHTML = `
       "",
     )}</nav><div class="foundation-reading"><label class="foundation-picker" for="foundation-select">Choose a statement<select id="foundation-select">${foundations.map((f) => `<option value="${f.id}">${escapeHtml(f.category)} · ${escapeHtml(f.title)}</option>`).join("")}</select></label><div id="foundation-content"></div><button type="button" class="primary" data-close="foundation-dialog">Return to the proof</button></div></div></dialog>
   <dialog id="vocabulary-dialog" class="vocabulary-dialog" aria-labelledby="gloss-title"><button type="button" class="dialog-close" data-close="vocabulary-dialog" aria-label="Close vocabulary">×</button><p class="eyebrow">Working vocabulary</p><div id="gloss-content"></div><button type="button" class="primary" data-close="vocabulary-dialog">Return to the proof</button></dialog>
-  <dialog id="source-dialog" class="source-dialog" aria-labelledby="source-title"><header><div><p class="eyebrow">Heiberg · Leipzig, 1883</p><h2 id="source-title"></h2></div><button type="button" id="source-zoom" aria-pressed="false">Zoom page</button><button type="button" class="dialog-close" data-close="source-dialog" aria-label="Close source page">×</button></header><div class="source-navigation"><button type="button" id="source-previous">← Previous page</button><span id="source-language"></span><button type="button" id="source-next">Next page →</button></div><p id="course-source-status" class="scan-status" role="status"></p><div class="scan-scroll" tabindex="0" role="region" aria-label="Scrollable printed page"><img id="source-image" width="987" height="1550" alt="" /></div><p class="scan-credit">University of Toronto scan · public domain. <a href="https://archive.org/details/euclidisoperaomn01eucluoft" target="_blank" rel="noreferrer">Open the complete volume ↗</a></p></dialog>
+  <dialog id="source-dialog" class="source-dialog" aria-labelledby="source-title"><header><div><p class="eyebrow">Heiberg · Leipzig, 1883</p><h2 id="source-title"></h2></div><button type="button" id="source-zoom" aria-pressed="false">Zoom page</button><button type="button" class="dialog-close" data-close="source-dialog" aria-label="Close source page">×</button></header><div class="source-navigation"><button type="button" id="source-previous">← Previous page</button><span id="source-language"></span><button type="button" id="source-next">Next page →</button></div><p id="course-source-status" class="scan-status" role="status"></p><p id="course-source-limits" class="source-limit" hidden>The original Toronto scan is cropped along the right edge. Some line endings and critical notes cannot be inspected in this image.</p><div class="scan-scroll" tabindex="0" role="region" aria-label="Scrollable printed page"><img id="source-image" width="987" height="1550" alt="" /></div><p class="scan-credit">University of Toronto scan · public domain. <a href="https://archive.org/details/euclidisoperaomn01eucluoft" target="_blank" rel="noreferrer">Open the complete volume ↗</a></p></dialog>
   <dialog id="share-dialog" class="share-dialog" aria-labelledby="share-title"><button type="button" class="dialog-close" data-close="share-dialog" aria-label="Close share link">×</button><p class="eyebrow">Continue at the same place</p><h2 id="share-title">Share this step</h2><p>The link keeps the proposition, step and given lengths.</p><label for="share-url">Reader link</label><input id="share-url" type="url" readonly /><button type="button" class="primary" id="copy-link">Copy link</button><p id="copy-status" role="status"></p></dialog>
   <div class="toast" id="toast" role="status" hidden></div>
 `;
@@ -342,13 +344,17 @@ function goTo(proposition: PropositionId, result = false): void {
 }
 
 async function showSource(page: number): Promise<void> {
+  sourceRequest?.abort();
+  const request = new AbortController();
+  sourceRequest = request;
   const requested = Math.min(57, Math.max(2, page)),
     revision = ++sourceRevision;
   sourcePage = requested;
   const greek = requested % 2 === 0;
   element("#source-title").textContent = `Printed page ${requested}`;
   element("#source-language").textContent = greek ? "Greek text" : "Latin translation";
-  element("#course-source-status").textContent = "Verifying the complete printed page…";
+  element("#course-source-status").textContent = "Verifying the retained printed page…";
+  element("#course-source-limits").hidden = requested !== 6;
   element<HTMLImageElement>("#source-image").hidden = true;
   element<HTMLButtonElement>("#source-previous").disabled = requested === 2;
   element<HTMLButtonElement>("#source-next").disabled = requested === 57;
@@ -360,6 +366,7 @@ async function showSource(page: number): Promise<void> {
     pending = await studyBlobUrl(
       `sources/heiberg-${String(requested).padStart(3, "0")}.jpg`,
       "image/jpeg",
+      request.signal,
     );
     if (revision !== sourceRevision) {
       URL.revokeObjectURL(pending);
@@ -375,7 +382,7 @@ async function showSource(page: number): Promise<void> {
     ).sha256;
     next.width = 987;
     next.height = 1550;
-    next.alt = `${greek ? "Greek" : "Latin"} page ${requested} of Euclidis opera omnia, volume I, 1883. Complete printed text and critical notes.`;
+    next.alt = `${greek ? "Greek" : "Latin"} page ${requested} of Euclidis opera omnia, volume I, 1883. ${requested === 6 ? "The original scan’s right edge is cropped; parts of the text and notes are missing." : "Complete printed text and critical notes."}`;
     next.src = pending;
     await next.decode();
     if (revision !== sourceRevision) {
@@ -388,7 +395,9 @@ async function showSource(page: number): Promise<void> {
     element("#source-image").replaceWith(next);
     if (previous) URL.revokeObjectURL(previous);
     element("#course-source-status").textContent =
-      "Complete printed page verified against this edition’s SHA-256.";
+      requested === 6
+        ? "Retained scan verified against this edition’s SHA-256. The right edge is cropped."
+        : "Complete printed page verified against this edition’s SHA-256.";
   } catch (error) {
     if (pending) URL.revokeObjectURL(pending);
     if (revision !== sourceRevision) return;
@@ -479,20 +488,49 @@ async function saveIllustratedStudy(): Promise<void> {
     element("#save-feedback").textContent = message;
     element("#intersection-save-status").textContent = message;
   };
+  const request = new AbortController();
+  studyRequest = request;
+  let preparing = true;
+  const cancelButtons = [
+    element<HTMLButtonElement>("#cancel-save"),
+    element<HTMLButtonElement>("#intersection-cancel"),
+  ];
+  for (const cancel of cancelButtons) cancel.hidden = false;
   button.disabled = true;
   candidateButton.disabled = true;
   feedback(`Preparing ${lesson.numeral}: checking the font and printed pages…`);
   try {
-    const contents = await illustratedCourseStudy(lesson, scene, step, candidate);
+    const contents = await illustratedCourseStudy(
+      lesson,
+      scene,
+      step,
+      candidate,
+      (checked, total) => {
+        if (preparing)
+          feedback(
+            `Preparing ${lesson.numeral}: ${checked} of ${total} source and font files verified…`,
+          );
+      },
+      request.signal,
+    );
+    preparing = false;
     download(contents, "text/html;charset=utf-8", `stoicheia-I${lesson.id}-study.html`);
     feedback(
       `Saved ${lesson.numeral} with its full reading, verified source images, font and notices.`,
     );
   } catch (error) {
+    preparing = false;
     feedback(
-      error instanceof Error ? error.message : "The study could not be saved. Please try again.",
+      request.signal.aborted
+        ? "Reading download cancelled. Your experiment stays open."
+        : error instanceof Error
+          ? error.message
+          : "The study could not be saved. Please try again.",
     );
   } finally {
+    preparing = false;
+    if (studyRequest === request) studyRequest = undefined;
+    for (const cancel of cancelButtons) cancel.hidden = true;
     button.disabled = false;
     candidateButton.disabled = false;
   }
@@ -562,6 +600,10 @@ document.addEventListener("click", (event) => {
     return;
   }
   switch (button.id) {
+    case "cancel-save":
+    case "intersection-cancel":
+      studyRequest?.abort();
+      break;
     case "investigate-intersection":
       element<HTMLButtonElement>("#intersection-open").click();
       break;
@@ -772,6 +814,11 @@ element("#question").addEventListener("change", (event) => {
     choice === question.correct ? "correct-feedback" : "try-feedback";
 });
 
+element<HTMLDialogElement>("#source-dialog").addEventListener("close", () => {
+  sourceRevision++;
+  sourceRequest?.abort();
+});
+
 for (const dialog of document.querySelectorAll<HTMLDialogElement>("dialog")) {
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) {
@@ -844,6 +891,8 @@ document.addEventListener("change", (event) => {
 
 window.addEventListener("pagehide", () => {
   sourceRevision++;
+  sourceRequest?.abort();
+  studyRequest?.abort();
   if (sourceBlob) URL.revokeObjectURL(sourceBlob);
   sourceBlob = "";
 });
