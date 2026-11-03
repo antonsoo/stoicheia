@@ -166,6 +166,9 @@ the final recovery review and build inventory identify their own exact build.
 
 ## Cold-network result
 
+Environment: 14-vCPU WSL2 Linux, 48 GB RAM. This is the controlled local origin,
+not a measurement of the public host.
+
 The [complete cold-network receipt](evidence/saved-reader/cold-network.json) records
 the shared 128,000-byte/second origin, ten embedded scans, progress over each
 interrupted installation and **zero explicit repair clicks** in both engines.
@@ -180,3 +183,5 @@ events in Firefox, so its installation-attempt count is unknown rather than zero
 the progress restarts, downloaded reading and final complete audit are retained.
 These are local browser measurements on a deliberately limited origin, not
 benchmarks of GitHub Pages or guarantees about another connection.
+
+[Subsequent public delivery and browser review](saved-reader-publication.md).

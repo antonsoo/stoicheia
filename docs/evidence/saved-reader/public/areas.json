@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-11-03T21:51:17.842Z",
+  "base": "https://antonsoo.github.io/stoicheia/",
+  "scope": "Public production browser operation, actual native downloads and browser-offline use after the complete current worker takes control.",
+  "edition": "4461c478876441343175cf3f2869c1596d2604bad691fde99e09705e2529cae8",
+  "inventory": 232,
+  "records": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "nativeDownloads": ["JSON", "CSV", "SVG", "HTML", "offline HTML"],
+      "sourceImagesVerified": 15,
+      "fontVerified": true,
+      "licensesVerified": true,
+      "offlineRooms": 14,
+      "cacheFiles": 232,
+      "standaloneReading": "local file with networking and scripts disabled",
+      "axeViolations": [],
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "nativeDownloads": ["JSON", "CSV", "SVG", "HTML", "offline HTML"],
+      "sourceImagesVerified": 15,
+      "fontVerified": true,
+      "licensesVerified": true,
+      "offlineRooms": 14,
+      "cacheFiles": 232,
+      "standaloneReading": "local file with networking and scripts disabled",
+      "axeViolations": [],
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "nativeDownloads": ["JSON", "CSV", "SVG", "HTML", "offline HTML"],
+      "sourceImagesVerified": 15,
+      "fontVerified": true,
+      "licensesVerified": true,
+      "offlineRooms": 14,
+      "cacheFiles": 232,
+      "standaloneReading": "local file with networking and scripts disabled",
+      "axeViolations": [],
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "nativeDownloads": ["JSON", "CSV", "SVG", "HTML", "offline HTML"],
+      "sourceImagesVerified": 15,
+      "fontVerified": true,
+      "licensesVerified": true,
+      "offlineRooms": 14,
+      "cacheFiles": 232,
+      "standaloneReading": "local file with networking and scripts disabled",
+      "axeViolations": [],
+      "errors": []
+    }
+  ]
+}
