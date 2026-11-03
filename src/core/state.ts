@@ -1,4 +1,5 @@
 import { type CasebookState, casebookDefaults, decodeCasebook } from "./casebook";
+import { decodeIntersection, type IntersectionState, initialIntersection } from "./intersection";
 
 export type PropositionId =
   | 1
@@ -40,6 +41,7 @@ export interface ReaderState {
   offset: number;
   pair: 0 | 1 | 2;
   casebook: CasebookState;
+  intersection: IntersectionState;
 }
 
 export const stepCounts: Record<PropositionId, number> = {
@@ -85,6 +87,7 @@ export const defaults: ReaderState = {
   offset: 0,
   pair: 0,
   casebook: casebookDefaults,
+  intersection: { ...initialIntersection },
 };
 
 function bounded(value: string | null, fallback: number, min: number, max: number): number {
@@ -147,6 +150,7 @@ export function decodeState(hash: string): ReaderState {
       ) / 100,
     pair: Math.round(bounded(params.get("pair"), 0, 0, 2)) as 0 | 1 | 2,
     casebook: decodeCasebook(params),
+    intersection: decodeIntersection(params),
   };
 }
 
@@ -165,6 +169,15 @@ export function encodeState(state: ReaderState): string {
     k: String(state.take),
     ...([17, 20].includes(state.proposition) ? { pair: String(state.pair) } : {}),
     ...([12, 23].includes(state.proposition) ? { x: String(state.offset) } : {}),
+    ...(state.proposition === 1 && state.intersection.open
+      ? {
+          intersection: "1",
+          im: String(state.intersection.m),
+          in: String(state.intersection.n),
+          ip: String(state.intersection.places),
+          ir: state.intersection.real ? "1" : "0",
+        }
+      : {}),
     ...(state.proposition === 7 && state.casebook.open
       ? {
           case: "1",
