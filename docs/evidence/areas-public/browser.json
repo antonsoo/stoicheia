@@ -7,13 +7,7 @@
     {
       "engine": "chromium",
       "width": 1440,
-      "nativeDownloads": [
-        "JSON",
-        "CSV",
-        "SVG",
-        "HTML",
-        "offline HTML"
-      ],
+      "nativeDownloads": ["JSON", "CSV", "SVG", "HTML", "offline HTML"],
       "sourceImagesVerified": 15,
       "fontVerified": true,
       "licensesVerified": true,
@@ -26,13 +20,7 @@
     {
       "engine": "chromium",
       "width": 375,
-      "nativeDownloads": [
-        "JSON",
-        "CSV",
-        "SVG",
-        "HTML",
-        "offline HTML"
-      ],
+      "nativeDownloads": ["JSON", "CSV", "SVG", "HTML", "offline HTML"],
       "sourceImagesVerified": 15,
       "fontVerified": true,
       "licensesVerified": true,
@@ -45,13 +33,7 @@
     {
       "engine": "firefox",
       "width": 1440,
-      "nativeDownloads": [
-        "JSON",
-        "CSV",
-        "SVG",
-        "HTML",
-        "offline HTML"
-      ],
+      "nativeDownloads": ["JSON", "CSV", "SVG", "HTML", "offline HTML"],
       "sourceImagesVerified": 15,
       "fontVerified": true,
       "licensesVerified": true,
@@ -64,13 +46,7 @@
     {
       "engine": "firefox",
       "width": 375,
-      "nativeDownloads": [
-        "JSON",
-        "CSV",
-        "SVG",
-        "HTML",
-        "offline HTML"
-      ],
+      "nativeDownloads": ["JSON", "CSV", "SVG", "HTML", "offline HTML"],
       "sourceImagesVerified": 15,
       "fontVerified": true,
       "licensesVerified": true,

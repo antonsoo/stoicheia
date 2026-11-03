@@ -20,6 +20,7 @@ jobs:
       - name: Install portable-reading inspection tools
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - run: npm run check
+      - run: npm run verify:intersection
       - run: npm run verify:oracle
       - run: npm run verify:triangles
       - run: npm run verify:right-angles
@@ -55,6 +56,7 @@ jobs:
             fi
             sleep 1
           done
+          npm run test:intersection -- http://127.0.0.1:4327/stoicheia/ /tmp/stoicheia-intersection
           npm run test:browser
           npm run test:nested -- http://127.0.0.1:4327/stoicheia/
           npm run test:illustrated -- /tmp/stoicheia-illustrated
