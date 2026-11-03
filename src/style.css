@@ -2440,3 +2440,75 @@ dialog::backdrop {
 #source-image[hidden] {
   display: none;
 }
+
+/* Keep the geometric plate in the opening view; the book index opens on request. */
+.course-navigation {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 0 1.5rem;
+  padding: 12px 0;
+  border-block: 1px solid var(--rule);
+}
+.course-navigation .lesson-picker {
+  display: block;
+  max-width: 650px;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  font-size: 0.82rem;
+}
+.course-contents > summary {
+  cursor: pointer;
+  padding: 12px 0;
+  min-height: 44px;
+  font-size: 0.85rem;
+}
+.course-contents[open] {
+  grid-column: 1 / -1;
+}
+.course-contents .lesson-nav {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+}
+.course-contents .lesson-tab {
+  display: flex;
+  border: 0;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  text-align: left;
+}
+.course-contents .lesson-tab:nth-child(4n) {
+  border-right: 0;
+}
+@media (max-width: 700px) {
+  .course-navigation {
+    gap: 0 1rem;
+  }
+  .course-contents > summary {
+    font-size: 0.75rem;
+  }
+  .course-contents .lesson-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .course-contents .lesson-tab {
+    gap: 0.5rem;
+    font-size: 0.75rem;
+  }
+  .course-contents .tab-numeral {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .course-contents .tab-greek {
+    display: none;
+  }
+  .course-contents .lesson-tab:nth-child(2n) {
+    border-right: 0;
+  }
+}
+@media print {
+  .course-navigation {
+    display: none;
+  }
+}

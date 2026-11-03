@@ -1,0 +1,200 @@
+.intersection-workshop {
+  margin: 2rem 0 3rem;
+  border-block: 1px solid var(--rule);
+}
+.intersection-invitation {
+  padding: 2rem 0;
+  max-width: 760px;
+}
+.intersection-workshop h2 {
+  font-family: "Noto Serif", Georgia, serif;
+  font-size: clamp(1.5rem, 2.8vw, 2.4rem);
+}
+.intersection-workshop h3 {
+  font-size: 1rem;
+}
+.intersection-workshop button {
+  min-height: 44px;
+  padding: 0.5rem 0;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.intersection-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-top: 2rem;
+}
+.intersection-heading button {
+  flex-shrink: 0;
+}
+.intersection-intro {
+  max-width: 850px;
+}
+.intersection-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  border-block: 1px solid var(--rule);
+}
+.intersection-plate {
+  background: var(--folio);
+  padding: 0.8rem 1.5rem;
+}
+.intersection-figure {
+  margin: 0;
+}
+.intersection-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+  padding-bottom: 0.8rem;
+}
+.intersection-plate svg {
+  max-height: 380px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.intersection-rounded {
+  display: flex;
+  gap: 1rem 2rem;
+  flex-wrap: wrap;
+  align-items: baseline;
+  border-block: 1px solid var(--rule);
+  padding: 0.7rem 0;
+  font-variant-numeric: tabular-nums;
+}
+.intersection-rounded b {
+  font:
+    1.5rem "Noto Serif",
+    Georgia,
+    serif;
+}
+#intersection-precision-note {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+#intersection-verdict {
+  padding-top: 1rem;
+  font-weight: 600;
+}
+.intersection-real {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 44px;
+}
+#intersection-real-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.intersection-audit {
+  padding: 1.5rem;
+  border-left: 1px solid var(--rule);
+}
+.intersection-audit select,
+.intersection-audit input {
+  display: block;
+  font: inherit;
+  background: var(--folio);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  width: 100%;
+}
+.intersection-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1.3rem;
+  margin: 0.4rem 0 1rem;
+}
+.intersection-exact {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.3rem 0;
+  font-size: 0.9rem;
+}
+.intersection-exact caption {
+  text-align: left;
+  color: var(--muted);
+  font-size: 0.8rem;
+  padding-bottom: 0.5rem;
+}
+.intersection-exact th,
+.intersection-exact td {
+  border-bottom: 1px solid var(--rule);
+  padding: 0.65rem 0.4rem 0.65rem 0;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.intersection-exact th {
+  font-weight: 500;
+  width: 35%;
+}
+.intersection-exact td {
+  font-variant-numeric: tabular-nums;
+}
+.intersection-custom p {
+  font-size: 0.85rem;
+}
+.intersection-custom form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+.intersection-custom form button {
+  grid-column: 1 / -1;
+}
+#intersection-error {
+  color: #8b304e;
+}
+.intersection-explanation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 1.5rem 0;
+}
+.intersection-explanation summary,
+.intersection-custom summary {
+  cursor: pointer;
+  padding: 0.7rem 0;
+}
+.intersection-explanation details > p {
+  max-width: 72ch;
+}
+.intersection-explanation h3 {
+  margin-top: 1.5rem;
+}
+.intersection-explanation .translation p {
+  font-size: 1rem;
+}
+#intersection-bench {
+  scroll-margin-top: 1rem;
+}
+@media (max-width: 850px) {
+  .intersection-layout,
+  .intersection-explanation {
+    grid-template-columns: 1fr;
+  }
+  .intersection-audit {
+    border-left: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .intersection-heading {
+    flex-direction: column;
+    gap: 0;
+  }
+  .intersection-plate,
+  .intersection-audit {
+    padding: 1rem;
+  }
+}
+@media print {
+  .intersection-workshop {
+    display: none;
+  }
+}

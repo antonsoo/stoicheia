@@ -9,6 +9,7 @@ import { makeScene } from "./core/scene";
 import type { PropositionId } from "./core/state";
 import { decodeState, defaults, encodeState, propositionIds, stepCounts } from "./core/state";
 import { illustratedCourseStudy } from "./course-study";
+import { mountIntersection } from "./intersection";
 import { prepareOffline } from "./offline";
 import { annotated, comparisonTable, drawScene, escapeHtml } from "./render";
 import { studyAssetIdentity, studyBlobUrl } from "./study-assets";
@@ -38,11 +39,10 @@ app.innerHTML = `
     <button type="button" class="quiet" id="about-sources">About the texts <span aria-hidden="true">↗</span></button>
   </header>
   <main>
-    <nav class="lesson-nav" aria-label="Propositions">
+    <div class="course-navigation"><label class="lesson-picker" for="lesson-select">Choose a proposition<select id="lesson-select">${propositionIds.map((id) => `<option value="${id}">${lessons[id].numeral} · ${lessons[id].shortTitle}</option>`).join("")}</select></label><details class="course-contents" id="course-contents"><summary>Contents · I.1–23</summary><nav class="lesson-nav" aria-label="Propositions">
       ${propositionIds.map((id) => `<button type="button" data-lesson="${id}" class="lesson-tab"><span class="tab-numeral">${lessons[id].numeral}</span><span>${lessons[id].shortTitle}</span><span class="tab-greek" lang="grc">${lessons[id].greekNumeral}</span></button>`).join("")}
-    </nav>
-    <label class="lesson-picker" for="lesson-select">Choose a proposition<select id="lesson-select">${propositionIds.map((id) => `<option value="${id}">${lessons[id].numeral} · ${lessons[id].shortTitle}</option>`).join("")}</select></label>
-    <details class="companion-workshops" id="companion-workshops" ${matchMedia("(min-width: 701px)").matches ? "open" : ""}><summary>Explore companion workshops</summary><div class="reader-tools"><a href="./areas.html">Two fits. One limit. · Euclid’s application of areas ↗</a><a href="./primes.html">Euclid’s extra prime · IX.20 and the composite case ↗</a><a href="./solids.html">Six faces. Still not one of five. · Euclid’s solid corners ↗</a><a href="./ratios.html">Thousands agree. One can disagree. · Euclid V.5 ↗</a><a href="./quadratrix.html">The point the motion cannot draw · Pappus’s quadratrix ↗</a><a href="./horn.html">A line that will not fit · Euclid III.16 ↗</a><a href="./circle.html">Keep the safe side · Archimedes' circle bounds ↗</a><a href="./measure.html">A measure in common · X.2–3 ↗</a><a href="./desk.html">Make I.2 yourself · Construction desk ↗</a><a href="./mesolabe.html">Twice the stone · Eratosthenes' sliding plates ↗</a><a href="./gnomon.html">Equal leftovers, unequal shapes · I.43 and II.5 ↗</a><a href="./quadrature.html">A square, with nothing added · II.14 workshop ↗</a><a href="./triangle.html">Can three lengths close? · I.22 workshop ↗</a></div></details><div class="reader-tools course-tools"><button type="button" data-foundation="p1">Open definitions, postulates &amp; common notions <span aria-hidden="true">↗</span></button><button type="button" id="open-practice">Practice reading the argument <span aria-hidden="true">↗</span></button></div>
+    </nav></details></div>
+    <details class="companion-workshops" id="companion-workshops"><summary>Explore companion workshops</summary><div class="reader-tools"><a href="./areas.html">Two fits. One limit. · Euclid’s application of areas ↗</a><a href="./primes.html">Euclid’s extra prime · IX.20 and the composite case ↗</a><a href="./solids.html">Six faces. Still not one of five. · Euclid’s solid corners ↗</a><a href="./ratios.html">Thousands agree. One can disagree. · Euclid V.5 ↗</a><a href="./quadratrix.html">The point the motion cannot draw · Pappus’s quadratrix ↗</a><a href="./horn.html">A line that will not fit · Euclid III.16 ↗</a><a href="./circle.html">Keep the safe side · Archimedes' circle bounds ↗</a><a href="./measure.html">A measure in common · X.2–3 ↗</a><a href="./desk.html">Make I.2 yourself · Construction desk ↗</a><a href="./mesolabe.html">Twice the stone · Eratosthenes' sliding plates ↗</a><a href="./gnomon.html">Equal leftovers, unequal shapes · I.43 and II.5 ↗</a><a href="./quadrature.html">A square, with nothing added · II.14 workshop ↗</a><a href="./triangle.html">Can three lengths close? · I.22 workshop ↗</a></div></details><div class="reader-tools course-tools"><button type="button" data-foundation="p1">Open definitions, postulates &amp; common notions <span aria-hidden="true">↗</span></button><button type="button" id="open-practice">Practice reading the argument <span aria-hidden="true">↗</span></button></div>
     <div class="lesson-heading"><div><p class="eyebrow" id="book-label"></p><h1 id="lesson-title"></h1></div><p id="lesson-introduction"></p></div>
     <section id="workbench" class="workbench" aria-label="Geometric plate and parallel reader" tabindex="-1">
       <div class="construction">
@@ -73,8 +73,9 @@ app.innerHTML = `
       <article class="insight"><p class="eyebrow">Beyond the drawing</p><h2 id="insight-title"></h2><p id="insight-text"></p><a id="commentary-link" target="_blank" rel="noreferrer">Read the mathematical commentary <span aria-hidden="true">↗</span></a><div id="edition-extra"></div></article>
       <form class="question" id="question"><p class="eyebrow">Check the reason</p><fieldset id="question-options"></fieldset><p id="question-feedback" role="status" aria-live="polite"></p></form>
     </section>
+    <section id="intersection-root" class="intersection-workshop" aria-label="Investigate the circle intersection" hidden></section>
     <section id="casebook-root" aria-label="The missing case in I.7" hidden></section>
-    <details class="course-map"><summary><span>How the arguments depend on one another</span><span>Twenty propositions · construction and proof</span></summary><table><thead><tr><th scope="col">Proposition</th><th scope="col">Earlier results it uses</th><th scope="col">What it earns</th></tr></thead><tbody>${propositionIds
+    <details class="course-map"><summary><span>How the arguments depend on one another</span><span>Twenty-three propositions · construction and proof</span></summary><table><thead><tr><th scope="col">Proposition</th><th scope="col">Earlier results it uses</th><th scope="col">What it earns</th></tr></thead><tbody>${propositionIds
       .map((id) => {
         const dependencies = [
           ...new Set(
@@ -113,6 +114,23 @@ app.innerHTML = `
   <dialog id="share-dialog" class="share-dialog" aria-labelledby="share-title"><button type="button" class="dialog-close" data-close="share-dialog" aria-label="Close share link">×</button><p class="eyebrow">Continue at the same place</p><h2 id="share-title">Share this step</h2><p>The link keeps the proposition, step and given lengths.</p><label for="share-url">Reader link</label><input id="share-url" type="url" readonly /><button type="button" class="primary" id="copy-link">Copy link</button><p id="copy-status" role="status"></p></dialog>
   <div class="toast" id="toast" role="status" hidden></div>
 `;
+
+const intersectionPermission = foundationById.get("p3"),
+  intersectionCommand = lessons[1].steps[3];
+if (!intersectionPermission || !intersectionCommand) throw new Error("Missing I.1 source reading.");
+const intersection = mountIntersection(element("#intersection-root"), {
+  read: () => state.intersection,
+  change: (next) => {
+    state = { ...state, intersection: next };
+    writeState();
+  },
+  download,
+  save: async () => {
+    await saveIllustratedStudy();
+    return element("#save-feedback").textContent ?? "";
+  },
+  sources: `<h3>Postulate 3 · permission to draw a circle</h3>${parallel(intersectionPermission)}<h3>I.1 · the command at the meeting</h3>${parallel(intersectionCommand)}<button type="button" data-lesson="1" data-intersection-passage="true">Read this command on the course plate ↑</button>`,
+});
 
 const casebook = mountCasebook(element("#casebook-root"), {
   read: () => state.casebook,
@@ -166,6 +184,11 @@ function renderDiagram(): void {
         .join(""),
     );
   }
+  if (state.proposition === 1 && step.reason === "intersection")
+    element("#reason").insertAdjacentHTML(
+      "beforeend",
+      '<button type="button" class="reason-link" id="investigate-intersection">Can a near crossing be exact? Test the point rule ↓</button>',
+    );
   element("#diagram").innerHTML = drawScene(
     scene,
     `${lesson.numeral} · ${lesson.steps[state.step]?.title ?? ""}`,
@@ -271,6 +294,8 @@ function renderLesson(): void {
   const motionControl = element("#motion-control");
   motionControl.innerHTML = explorationControls(state);
   motionControl.hidden = !motionControl.innerHTML;
+  element("#intersection-root").hidden = state.proposition !== 1;
+  intersection.render();
   element("#casebook-root").hidden = state.proposition !== 7;
   casebook.render();
   element("#insight-title").textContent = lesson.insight.title;
@@ -447,20 +472,29 @@ async function saveIllustratedStudy(): Promise<void> {
   if (button.disabled) return;
   const lesson = lessons[state.proposition],
     scene = makeScene(state),
-    step = state.step;
+    step = state.step,
+    candidate = lesson.id === 1 && state.intersection.open ? { ...state.intersection } : undefined;
+  const candidateButton = element<HTMLButtonElement>("#intersection-save");
+  const feedback = (message: string) => {
+    element("#save-feedback").textContent = message;
+    element("#intersection-save-status").textContent = message;
+  };
   button.disabled = true;
-  element("#save-feedback").textContent =
-    `Preparing ${lesson.numeral}: checking the font and printed pages…`;
+  candidateButton.disabled = true;
+  feedback(`Preparing ${lesson.numeral}: checking the font and printed pages…`);
   try {
-    const contents = await illustratedCourseStudy(lesson, scene, step);
+    const contents = await illustratedCourseStudy(lesson, scene, step, candidate);
     download(contents, "text/html;charset=utf-8", `stoicheia-I${lesson.id}-study.html`);
-    element("#save-feedback").textContent =
-      `Saved ${lesson.numeral} with its full reading, verified source images, font and notices.`;
+    feedback(
+      `Saved ${lesson.numeral} with its full reading, verified source images, font and notices.`,
+    );
   } catch (error) {
-    element("#save-feedback").textContent =
-      error instanceof Error ? error.message : "The study could not be saved. Please try again.";
+    feedback(
+      error instanceof Error ? error.message : "The study could not be saved. Please try again.",
+    );
   } finally {
     button.disabled = false;
+    candidateButton.disabled = false;
   }
 }
 
@@ -499,7 +533,12 @@ document.addEventListener("click", (event) => {
   }
   if (button.dataset.lesson) {
     goTo(Number(button.dataset.lesson) as PropositionId, button.dataset.openResult === "true");
-    if (!button.classList.contains("lesson-tab")) {
+    if (button.dataset.intersectionPassage) {
+      state.step = 3;
+      renderStep();
+    }
+    if (!button.classList.contains("lesson-tab") || button.closest("#course-contents")) {
+      element<HTMLDetailsElement>("#course-contents").open = false;
       element("#workbench").scrollIntoView({ behavior: "instant", block: "start" });
       element<HTMLElement>("#step-title").focus({ preventScroll: true });
     }
@@ -523,6 +562,9 @@ document.addEventListener("click", (event) => {
     return;
   }
   switch (button.id) {
+    case "investigate-intersection":
+      element<HTMLButtonElement>("#intersection-open").click();
+      break;
     case "open-casebook":
       casebook.open();
       break;
@@ -767,6 +809,8 @@ window.addEventListener("afterprint", () => {
 });
 
 renderLesson();
+if (state.proposition === 1 && state.intersection.open)
+  element("#intersection-bench").scrollIntoView({ block: "start", behavior: "instant" });
 if (state.proposition === 7 && state.casebook.open) casebook.open();
 
 if (import.meta.env.PROD && "serviceWorker" in navigator) {

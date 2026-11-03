@@ -17,6 +17,15 @@ export const glossary: Gloss[] = [
   ...copyingGlossary,
   ...inequalityGlossary,
   {
+    id: "intersect",
+    greek: "τέμνω",
+    latin: "seco",
+    transliteration: "temnō",
+    meaning: "cut; intersect",
+    note: "In I.1, τέμνουσιν and secant are present active forms with a plural subject: ‘the circles cut’. Greek ἀλλήλους and Latin inter se make the action reciprocal: ‘one another’. The clause identifies Γ by that meeting; it is not a separate command to construct Γ.",
+    forms: ["τέμνουσιν", "secant"],
+  },
+  {
     id: "possible",
     greek: "δυνατός",
     latin: "possum",
