@@ -1,0 +1,13 @@
+quantity,exact_value,meaning
+m,11,modern rational parameter numerator
+n,19,modern rational parameter denominator
+x,120/241,candidate P coordinate
+y,209/241,candidate P coordinate
+AP_squared,1,exact squared distance to A
+BP_squared,242/241,exact squared distance to B
+BP_squared_minus_1,1/241,signed exact residual
+BP_rounded,1.00,approximate length to 2 decimal places
+3m_squared_minus_n_squared,2,integer witness of nonzero residual
+model,rational-coordinate restriction,modern experiment accompanying Euclid I.1
+source,Heiberg 1883 I pp.8-13,Greek and Latin are public domain
+license,PolyForm Noncommercial 1.0.0,Copyright 2026 Anthony Mercer

@@ -1,0 +1,33 @@
+{
+  "scope": "Local baseline HEAD 9f68b05 versus modified production build",
+  "rows": [
+    {
+      "edition": "before",
+      "width": 1440,
+      "diagramTop": 1036.75,
+      "workbenchTop": 1002.75,
+      "overflow": false
+    },
+    {
+      "edition": "after",
+      "width": 1440,
+      "diagramTop": 495.75,
+      "workbenchTop": 461.75,
+      "overflow": false
+    },
+    {
+      "edition": "before",
+      "width": 375,
+      "diagramTop": 598.171875,
+      "workbenchTop": 566.171875,
+      "overflow": false
+    },
+    {
+      "edition": "after",
+      "width": 375,
+      "diagramTop": 593.171875,
+      "workbenchTop": 561.171875,
+      "overflow": false
+    }
+  ]
+}

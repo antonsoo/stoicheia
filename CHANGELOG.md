@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-11-03
+
+- Turn I.1’s circle-intersection warning into an exact rational-point experiment
+  within the existing reader. Compare rounded lengths with nonzero fraction
+  residuals, approach the crossing and inspect the irrational real intersections.
+- Bring the geometric plate into the opening screen with a compact proposition
+  picker and expandable contents, preserving the full book and workshop index.
+- Reuse the Greek and Latin source passages and complete printed pages. Save the
+  experiment in an independent illustrated I.1 reading or as exact CSV; restore
+  its settings through existing course share links.
+
+
 ## 2026-10-28
 
 - Add Euclid VI.27–29’s application-of-areas workshop. Operate two equal-area

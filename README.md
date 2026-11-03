@@ -13,7 +13,7 @@ it. Stoicheia connects both: change the givens, follow the command on the plate,
 read the two source languages, and ask what established the relation.
 
 The opening course is **Book I, propositions 1–23**. It includes the complete
-statements and proofs, divided into 189 aligned reading steps, with 55 selected
+statements and proofs, divided into 189 aligned reading steps, with 56 selected
 vocabulary entries, fourteen foundation statements and forty-six passage-based
 reading exercises. It is intended for an English-speaking reader who knows basic
 geometry and is beginning Greek or Latin.
@@ -21,6 +21,31 @@ geometry and is beginning Greek or Latin.
 **[Open the course](https://antonsoo.github.io/stoicheia/)** ·
 [Source repository](https://github.com/antonsoo/stoicheia). The app is a static
 site; no package registry installation is required.
+
+## Both read one. Only one is exact.
+
+![An exact rational candidate beside rounded lengths and the nonzero residual](docs/assets/intersection-desktop.png)
+
+The opening I.1 lesson now lets you investigate its intersection warning.
+Choose **Test the intersection** below the proof, or follow the question beside
+**Join the intersection to the endpoints**. In your local build, open
+`http://127.0.0.1:4327/stoicheia/#p=1&s=3&intersection=1`.
+
+Keep P exactly on the first circle. The starting candidate has coordinates
+**120/241, 209/241**: both side readings display **1.00**, but the second squared
+length exceeds 1 by **1/241**. Select four decimal places to expose the difference.
+Choose **56/97** and both readings agree again at four places; six separate them.
+Try your own fraction, then reveal why the real intersections have irrational
+heights. No rational candidate can supply that common point, however close it
+looks. This is a modern coordinate restriction, clearly separated from the
+Greek and Latin commands and their full printed pages.
+
+The experiment stays inside the existing reader. Share its precise settings,
+save the exact CSV, or include its diagram and argument in the complete I.1
+illustrated reading. That file embeds ten source pages, the font and notices and
+opens from disk without a connection. The [model](docs/intersection-model.md)
+and [local review](docs/intersection-review.md) explain the limits and actual
+learner journey. This addition has not been published.
 
 ## Two fits. One limit.
 

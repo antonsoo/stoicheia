@@ -1,0 +1,10 @@
+{
+  "scope": "Actual native frozen reading and compressed example",
+  "htmlBytes": 4625086,
+  "htmlSha256": "4164a8f77bf7b034fdd2857945e524d2a68e12538403ad7e975a0e17e098658c",
+  "sourcePagesVerified": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+  "fontBytesVerified": true,
+  "compressedExampleExact": true,
+  "parameter": "11/19",
+  "signedSquaredLengthResidual": "1/241"
+}

@@ -1,0 +1,15 @@
+{
+  "scope": "Fresh Node 24.22.1 install versus working Node 26.7.0 build",
+  "npmCi": "passed; 29 installed packages; 0 vulnerabilities reported",
+  "checks": [
+    "lint",
+    "typecheck",
+    "119 unit tests",
+    "production build",
+    "4188 independent Fraction/Decimal cases"
+  ],
+  "buildCommand": "npm run build",
+  "output": "dist/",
+  "identicalBuildFiles": 233,
+  "workerSha256": "f9748447db189fb8d2097df80c4a549a57604ae6b80e0a8c02d6a032595b6c34"
+}
