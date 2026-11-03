@@ -99,6 +99,7 @@ export function prepareOffline(status: HTMLElement, reload: HTMLButtonElement): 
     installFailed = false,
     hadCurrent = false;
   let refreshAgain = false;
+  let resumedFiles = 0;
   const observed = new WeakSet<ServiceWorker>();
   const installPorts = new WeakMap<ServiceWorker, MessagePort>();
   function progress(p: Progress, operation: string) {
@@ -143,6 +144,7 @@ export function prepareOffline(status: HTMLElement, reload: HTMLButtonElement): 
     }
     if (reply.protocol === 2 && reply.complete && !reply.retired) {
       hadCurrent = true;
+      resumedFiles = 0;
       installFailed = false;
       status.textContent = "Edition ready offline, including source pages";
       reload.hidden = true;
@@ -195,14 +197,19 @@ export function prepareOffline(status: HTMLElement, reload: HTMLButtonElement): 
     if (!worker || observed.has(worker)) return;
     observed.add(worker);
     let activated = worker.state === "activated";
+    const started = performance.now();
+    let verifiedFiles = 0;
+    let resumed = false;
     if (worker.state === "installing") {
       const channel = new MessageChannel();
       installPorts.set(worker, channel.port1);
       channel.port1.onmessage = (event) => {
         if (worker !== registration?.installing || event.data?.edition !== __STOICHEIA_EDITION__)
           return;
-        if (event.data.type === "STOICHEIA_PROGRESS")
+        if (event.data.type === "STOICHEIA_PROGRESS") {
+          verifiedFiles = Math.max(verifiedFiles, Number(event.data.finished) || 0);
           progress(event.data as Progress, "Saving offline files");
+        }
       };
       worker.postMessage({ type: "STOICHEIA_WATCH_INSTALL", edition: __STOICHEIA_EDITION__ }, [
         channel.port2,
@@ -216,6 +223,22 @@ export function prepareOffline(status: HTMLElement, reload: HTMLButtonElement): 
         installPorts.delete(worker);
       }
       void refresh();
+      // Browsers bound a single installation event's lifetime. Continue only
+      // after a long attempt that added verified files. A repeated failure at
+      // the same file count stops here and leaves the explicit repair action.
+      if (
+        worker.state === "redundant" &&
+        !activated &&
+        !resumed &&
+        performance.now() - started >= 45000 &&
+        verifiedFiles > resumedFiles &&
+        navigator.onLine &&
+        !document.hidden
+      ) {
+        resumed = true;
+        resumedFiles = verifiedFiles;
+        setTimeout(() => void register(), 500);
+      }
     };
     worker.addEventListener("statechange", changed);
     changed();
