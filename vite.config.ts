@@ -1,7 +1,9 @@
 import { createHash } from "node:crypto";
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { defineConfig } from "vite";
+import { defineConfig, transformWithOxc } from "vite";
+import { verifiedTransfer } from "./src/core/verified-transfer";
+import { offlineRecovery } from "./src/offline-recovery";
 
 const base = "/stoicheia/";
 
@@ -38,6 +40,7 @@ export default defineConfig(async ({ command }) => {
     "LICENSE",
     "vite.config.ts",
     "tsconfig.json",
+    "tsconfig.worker.json",
     "package.json",
     "package-lock.json",
   ].sort();
@@ -114,6 +117,18 @@ export default defineConfig(async ({ command }) => {
     },
     plugins: [
       {
+        name: "edition-navigation-mark",
+        transformIndexHtml() {
+          return [
+            {
+              tag: "meta",
+              attrs: { name: "stoicheia-edition", content: edition },
+              injectTo: "head",
+            },
+          ];
+        },
+      },
+      {
         name: "offline-book",
         apply: "build",
         async closeBundle() {
@@ -121,15 +136,26 @@ export default defineConfig(async ({ command }) => {
           const urls = files.map(
             (file) => base + path.relative("dist", file).split(path.sep).join("/"),
           );
-          const integrity = Object.fromEntries(
+          const identities = Object.fromEntries(
             await Promise.all(
-              files.map(async (file, index) => [
-                urls[index],
-                `sha256-${createHash("sha256")
-                  .update(await readFile(file))
-                  .digest("base64")}`,
-              ]),
+              files.map(async (file, index) => {
+                const bytes = await readFile(file);
+                return [
+                  urls[index],
+                  { bytes: bytes.length, sha256: createHash("sha256").update(bytes).digest("hex") },
+                ];
+              }),
             ),
+          );
+          const recoveryScript = `(${offlineRecovery.toString()})(${JSON.stringify(edition)},${JSON.stringify(base)});`;
+          const recoveryStyle =
+            "body{margin:0;padding:clamp(20px,6vw,80px);max-width:850px;background:#e8eff4;color:#193d60;font:17px/1.6 system-ui,sans-serif}h1{font:clamp(28px,5vw,42px) Georgia,serif}button,a{color:inherit}button{font:inherit;padding:12px;border:1px solid #193d60;background:#fbfcfe;cursor:pointer}button:disabled{opacity:.5}button:focus-visible,a:focus-visible{outline:3px solid #694780;outline-offset:4px}code{display:block;overflow-wrap:anywhere;font-size:14px}p{max-width:70ch}summary{cursor:pointer;padding:12px 0;min-height:44px}";
+          const scriptHash = createHash("sha256").update(recoveryScript).digest("base64");
+          const styleHash = createHash("sha256").update(recoveryStyle).digest("base64");
+          const recovery = `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-${scriptHash}'; style-src 'sha256-${styleHash}'; connect-src 'self'; worker-src 'self'; img-src data:; base-uri 'none'; form-action 'none'"><link rel="icon" href="data:,"><title>Stoicheia · Recover the saved reader</title><style>${recoveryStyle}</style><main><p>STOICHEIA · SAVED READER</p><h1>This lesson’s saved files are incomplete.</h1><p>The reader could not open from its saved copy. Your lesson address and applied settings remain below. Reconnect, repair the files, then return to the same address.</p><p id="recovery-context">Your workshop and applied settings remain at this lesson’s address.</p><details><summary>Keep this lesson’s address</summary><code id="recovery-address"></code></details><p id="recovery-status" role="status">Check or repair the saved reader. No account or reset is required.</p><button id="recovery-repair" type="button">Repair the saved reader</button><p><a id="recovery-home" href="${base}">Return to the course opening</a></p><noscript>Reconnect and reload this address to restore the reader.</noscript></main><script>${recoveryScript}</script></html>`;
+          const worker = await transformWithOxc(
+            await readFile("src/offline-worker.ts", "utf8"),
+            "offline-worker.ts",
           );
           await writeFile(
             "dist/sw.js",
@@ -138,76 +164,10 @@ const CACHE = "stoicheia-${edition}";
 const EDITION = ${JSON.stringify(edition)};
 const BASE = ${JSON.stringify(base)};
 const FILES = ${JSON.stringify(urls)};
-const INTEGRITY = ${JSON.stringify(integrity)};
-self.addEventListener("install", event => {
-  // HTTP success does not establish edition identity. A stale entry page or
-  // substituted scan must fail the complete install before this worker activates.
-  const requests = FILES.map(url => new Request(url, { cache: "reload", integrity: INTEGRITY[url] }));
-  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(requests)).then(() => self.skipWaiting()));
-});
-self.addEventListener("activate", event => {
-  event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith("stoicheia-") && key !== CACHE).map(key => caches.delete(key)))).then(() => self.clients.claim()));
-});
-self.addEventListener("message", event => {
-  if (event.data?.type === "STOICHEIA_CLAIM_EDITION" && event.data.edition === EDITION) {
-    event.waitUntil(self.clients.claim());
-    return;
-  }
-  if (event.data?.type !== "STOICHEIA_INSPECT_EDITION" || !event.ports[0]) return;
-  // Inspection must not recreate a deleted or retired edition cache.
-  event.waitUntil(Promise.all(FILES.map(file => caches.match(file, { cacheName: CACHE }))).then(saved => {
-    event.ports[0].postMessage({ type: "STOICHEIA_EDITION", edition: EDITION, complete: saved.every(Boolean) });
-  }).catch(() => event.ports[0].postMessage({ type: "STOICHEIA_EDITION", edition: EDITION, complete: false })));
-});
-// A saved lesson remains usable when the connection accepts a request but stalls.
-// Cache lookup must not recreate a retired edition. Only a real saved page can
-// supply this fallback; an uncached navigation keeps its normal network result.
-async function navigationResponse(request, page) {
-  const saved = await caches.match(page, { cacheName: CACHE }).catch(() => undefined);
-  if (!saved) return fetch(request);
-  // The edition can be evicted or retired while the origin request is pending.
-  // Re-read at the moment of fallback instead of resurrecting that snapshot.
-  const fallback = async () => (await caches.match(page, { cacheName: CACHE }).catch(() => undefined)) || Response.error();
-  const controller = new AbortController();
-  const cancel = () => controller.abort();
-  request.signal.addEventListener("abort", cancel, { once: true });
-  if (request.signal.aborted) cancel();
-  let deadline;
-  try {
-    const live = fetch(request, { signal: controller.signal }).then(async response => {
-      if (response.status >= 500) {
-        controller.abort();
-        return fallback();
-      }
-      // Wait for a successful HTML body as well as its headers. Return the
-      // original response, preserving redirect metadata and its response URL.
-      // Explicit 4xx responses retain their normal meaning.
-      if (response.ok) await response.clone().arrayBuffer();
-      return response;
-    }).catch(() => fallback());
-    const expired = new Promise(resolve => {
-      deadline = setTimeout(() => {
-        controller.abort();
-        resolve(fallback());
-      }, 2000);
-    });
-    return await Promise.race([live, expired]);
-  } finally {
-    clearTimeout(deadline);
-    request.signal.removeEventListener("abort", cancel);
-  }
-}
-self.addEventListener("fetch", event => {
-  const url = new URL(event.request.url);
-  if (event.request.method !== "GET" || url.origin !== self.location.origin || !url.pathname.startsWith(BASE)) return;
-  if (event.request.mode === "navigate") {
-    const page = url.pathname === BASE ? BASE + "index.html" : url.pathname;
-    event.respondWith(navigationResponse(event.request, page));
-  } else if (FILES.includes(url.pathname)) {
-    // Reading a source must not recreate an explicitly deleted or retired cache.
-    event.respondWith(caches.match(url.pathname, { cacheName: CACHE }).then(cached => cached || fetch(event.request)));
-  }
-});
+const IDENTITIES = ${JSON.stringify(identities)};
+const RECOVERY_HTML = ${JSON.stringify(recovery)};
+const transfer = ${verifiedTransfer.toString()};
+${worker.code}
 `,
           );
         },

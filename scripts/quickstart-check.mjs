@@ -3,7 +3,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { chromium, firefox } from "playwright";
 import { openLesson } from "./navigation.mjs";
 
-const url = process.argv[2] ?? "http://127.0.0.1:4327/stoicheia/";
+const url = process.argv[2] ?? "http://127.0.0.1:4326/stoicheia/";
 const report = { scope: "Documented development quickstart", configurations: [] };
 
 for (const [name, engine] of [
