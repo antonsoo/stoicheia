@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
-import { readFile, writeFile } from "node:fs/promises";
+import { access, readdir, readFile, writeFile } from "node:fs/promises";
 import { createServer } from "node:http";
 import path from "node:path";
 import { chromium, firefox } from "playwright";
@@ -9,6 +9,25 @@ if (!process.argv[2]) throw new Error("Pass the pre-desk production dist directo
 const previous = path.resolve(process.argv[2]),
   current = path.resolve(process.argv[3] ?? "dist");
 const output = process.argv[4] ?? "/tmp/desk-upgrade.json";
+// Hold a source page this edition must download. Since 408ce61 the new worker reuses
+// cached files whose bytes still match, so a page the earlier edition already saved
+// (heiberg-015.jpg before) is never requested.
+const absent = (file) =>
+  access(path.join(previous, file)).then(
+    () => false,
+    () => true,
+  );
+const sources = (await readdir(path.join(current, "sources"), { recursive: true }))
+  .filter((file) => file.endsWith(".jpg"))
+  .map((file) => `sources/${file.split(path.sep).join("/")}`)
+  .sort();
+let target;
+for (const file of sources)
+  if (await absent(file)) {
+    target = file;
+    break;
+  }
+assert(target, "the current edition must add at least one source page");
 const digest = (bytes) => createHash("sha256").update(bytes).digest("hex");
 const report = {
   scope:
@@ -60,7 +79,7 @@ for (const [name, type] of [
         }
         const file =
           new URL(request.url, "http://local").pathname.slice("/stoicheia/".length) || "index.html";
-        if (edition === current && file === "sources/heiberg-015.jpg") {
+        if (edition === current && file === target) {
           if (unavailable) {
             response.writeHead(503).end();
             return;
@@ -88,10 +107,16 @@ for (const [name, type] of [
         edition = current;
         await desk.goto(`${base}desk.html`);
         await desk.waitForFunction(() => document.querySelector("#dk-offline"));
-        const deadline = Date.now() + 10000;
+        // Since 408ce61 the install verifies each file as it goes, so it can reach this
+        // page later than 10 s after the desk opens.
+        const started = Date.now(),
+          deadline = started + 60000;
         while (!held && Date.now() < deadline)
           await new Promise((resolve) => setTimeout(resolve, 25));
         assert(held > 0, "new worker must attempt the held source page");
+        console.log(
+          `${name} ${fail ? "failed" : "held"}: held page requested after ${Date.now() - started} ms`,
+        );
         assert.doesNotMatch(await desk.locator("#dk-offline").textContent(), /ready offline/);
         hold = false;
         if (fail) {
@@ -103,10 +128,7 @@ for (const [name, type] of [
             .waitFor();
           unavailable = false;
           await desk.evaluate(() => dispatchEvent(new Event("online")));
-        } else
-          await Promise.all(
-            pending.splice(0).map((response) => send(response, "sources/heiberg-015.jpg")),
-          );
+        } else await Promise.all(pending.splice(0).map((response) => send(response, target)));
         await desk
           .locator("#dk-offline")
           .filter({ hasText: /Edition ready offline/ })
@@ -139,9 +161,11 @@ for (const [name, type] of [
         });
         assert(inventory.files.includes("/stoicheia/desk.html"));
         assert(inventory.files.includes("/stoicheia/sources/heiberg-015.jpg"));
+        assert(inventory.files.includes(`/stoicheia/${target}`));
         report.configurations.push({
           browser: name,
           failedInstallRecovered: fail,
+          heldSource: target,
           heldSourceRequests: held,
           oldTabReloaded: true,
           currentCaches: inventory.caches.length,
