@@ -1,0 +1,47 @@
+{
+  "previousWorker": "6658fab42817f460190faf33c37fea8d1b0db5b12ea2bae9940b68659b2daac5",
+  "currentWorker": "d2d4018bdbc5d1594881873125fbe5b0e669dfa16f38f43bc3b144db1c373107",
+  "scope": "Old course to two-page edition with new source held or failed; origin-disabled navigation after recovery",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "failedAndRecovered": false,
+      "heldRequests": 1,
+      "pendingStatus": "Saving offline files: 156 of 232 files checked; 39.6 MiB received. Keep this tab open.",
+      "offlineWorkshop": true,
+      "offlineReader": true,
+      "offlineScanSha256": "3134a0577c2f607bff31b7735bdc169c1efac08e6f42b75b6ead766dac579612"
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "failedAndRecovered": true,
+      "heldRequests": 1,
+      "pendingStatus": "Saving offline files: 155 of 232 files checked; 39.4 MiB received. Keep this tab open.",
+      "offlineWorkshop": true,
+      "offlineReader": true,
+      "offlineScanSha256": "3134a0577c2f607bff31b7735bdc169c1efac08e6f42b75b6ead766dac579612"
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "failedAndRecovered": false,
+      "heldRequests": 1,
+      "pendingStatus": "Saving offline files: 157 of 232 files checked; 39.8 MiB received. Keep this tab open.",
+      "offlineWorkshop": true,
+      "offlineReader": true,
+      "offlineScanSha256": "3134a0577c2f607bff31b7735bdc169c1efac08e6f42b75b6ead766dac579612"
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "failedAndRecovered": true,
+      "heldRequests": 1,
+      "pendingStatus": "Saving offline files: 156 of 232 files checked; 39.6 MiB received. Keep this tab open.",
+      "offlineWorkshop": true,
+      "offlineReader": true,
+      "offlineScanSha256": "3134a0577c2f607bff31b7735bdc169c1efac08e6f42b75b6ead766dac579612"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "oldEdition": "f0e096ed1f5055a9cdfaba14c15c910b4bc78239643c41eb3d783d645e4b7351",
+  "newEdition": "cf6e28f0c2ae6923d81cedee836d196ca5f7bb1ad2abf3035dc0bf7ffd047daf",
+  "scope": "Existing four-room tab, new five-room tab, held new image, failed-and-retried install, origin-disabled navigation",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "failedAndRecovered": false,
+      "heldImage": "sources/mesolabe/eutocius-102.jpg",
+      "heldRequests": 1,
+      "pendingStatus": "Saving offline files: 79 of 232 files checked; 28.2 MiB received. Keep this tab open.",
+      "oldActiveEditionWhileHeld": "f0e096ed1f5055a9cdfaba14c15c910b4bc78239643c41eb3d783d645e4b7351",
+      "existingTabReloadOffer": true,
+      "oldTabReloadsNewCourseOffline": true,
+      "newRoomPreservesFactorOffline": 3,
+      "sourceSha256": "36ad55389fedbfad28139fad3f3934ab50241ebc214ed12f00cffeea11c6544e",
+      "caches": [
+        {
+          "name": "stoicheia-cf6e28f0c2ae6923d81cedee836d196ca5f7bb1ad2abf3035dc0bf7ffd047daf",
+          "count": 232
+        }
+      ],
+      "errors": []
+    },
+    {
+      "browser": "chromium",
+      "failedAndRecovered": true,
+      "heldImage": "sources/mesolabe/eutocius-102.jpg",
+      "heldRequests": 1,
+      "pendingStatus": "Saving offline files: 79 of 232 files checked; 28.2 MiB received. Keep this tab open.",
+      "oldActiveEditionWhileHeld": "f0e096ed1f5055a9cdfaba14c15c910b4bc78239643c41eb3d783d645e4b7351",
+      "existingTabReloadOffer": true,
+      "oldTabReloadsNewCourseOffline": true,
+      "newRoomPreservesFactorOffline": 3,
+      "sourceSha256": "36ad55389fedbfad28139fad3f3934ab50241ebc214ed12f00cffeea11c6544e",
+      "caches": [
+        {
+          "name": "stoicheia-cf6e28f0c2ae6923d81cedee836d196ca5f7bb1ad2abf3035dc0bf7ffd047daf",
+          "count": 232
+        }
+      ],
+      "errors": []
+    },
+    {
+      "browser": "firefox",
+      "failedAndRecovered": false,
+      "heldImage": "sources/mesolabe/eutocius-102.jpg",
+      "heldRequests": 1,
+      "pendingStatus": "Saving offline files: 79 of 232 files checked; 28.2 MiB received. Keep this tab open.",
+      "oldActiveEditionWhileHeld": "f0e096ed1f5055a9cdfaba14c15c910b4bc78239643c41eb3d783d645e4b7351",
+      "existingTabReloadOffer": true,
+      "oldTabReloadsNewCourseOffline": true,
+      "newRoomPreservesFactorOffline": 3,
+      "sourceSha256": "36ad55389fedbfad28139fad3f3934ab50241ebc214ed12f00cffeea11c6544e",
+      "caches": [
+        {
+          "name": "stoicheia-cf6e28f0c2ae6923d81cedee836d196ca5f7bb1ad2abf3035dc0bf7ffd047daf",
+          "count": 232
+        }
+      ],
+      "errors": []
+    },
+    {
+      "browser": "firefox",
+      "failedAndRecovered": true,
+      "heldImage": "sources/mesolabe/eutocius-102.jpg",
+      "heldRequests": 1,
+      "pendingStatus": "Saving offline files: 78 of 232 files checked; 27.9 MiB received. Keep this tab open.",
+      "oldActiveEditionWhileHeld": "f0e096ed1f5055a9cdfaba14c15c910b4bc78239643c41eb3d783d645e4b7351",
+      "existingTabReloadOffer": true,
+      "oldTabReloadsNewCourseOffline": true,
+      "newRoomPreservesFactorOffline": 3,
+      "sourceSha256": "36ad55389fedbfad28139fad3f3934ab50241ebc214ed12f00cffeea11c6544e",
+      "caches": [
+        {
+          "name": "stoicheia-cf6e28f0c2ae6923d81cedee836d196ca5f7bb1ad2abf3035dc0bf7ffd047daf",
+          "count": 232
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

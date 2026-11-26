@@ -1,0 +1,51 @@
+{
+  "previousWorker": "21f876cffaaef05d889b56353e65d2732a61e092d9e5551a55a76a2e91a04146",
+  "currentWorker": "d2d4018bdbc5d1594881873125fbe5b0e669dfa16f38f43bc3b144db1c373107",
+  "scope": "Two-page edition to quadrature, with a new source held or substituted; origin-disabled navigation after recovery",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "substitutionRejectedAndRecovered": false,
+      "heldRequests": 1,
+      "pendingStatus": "Saving offline files: 32 of 232 files checked; 14.2 MiB received. Keep this tab open.",
+      "offlineQuadrature": true,
+      "offlineTriangle": true,
+      "offlineReader": true,
+      "offlineScanSha256": "eba385c54a559688de59a4523fcfb6c945d7065ba263d64e93d771ca1ff74f55"
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "substitutionRejectedAndRecovered": true,
+      "heldRequests": 1,
+      "pendingStatus": "Saving offline files: 31 of 232 files checked; 13.8 MiB received. Keep this tab open.",
+      "offlineQuadrature": true,
+      "offlineTriangle": true,
+      "offlineReader": true,
+      "offlineScanSha256": "eba385c54a559688de59a4523fcfb6c945d7065ba263d64e93d771ca1ff74f55"
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "substitutionRejectedAndRecovered": false,
+      "heldRequests": 1,
+      "pendingStatus": "Saving offline files: 30 of 232 files checked; 13.4 MiB received. Keep this tab open.",
+      "offlineQuadrature": true,
+      "offlineTriangle": true,
+      "offlineReader": true,
+      "offlineScanSha256": "eba385c54a559688de59a4523fcfb6c945d7065ba263d64e93d771ca1ff74f55"
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "substitutionRejectedAndRecovered": true,
+      "heldRequests": 1,
+      "pendingStatus": "Saving offline files: 32 of 232 files checked; 14.2 MiB received. Keep this tab open.",
+      "offlineQuadrature": true,
+      "offlineTriangle": true,
+      "offlineReader": true,
+      "offlineScanSha256": "eba385c54a559688de59a4523fcfb6c945d7065ba263d64e93d771ca1ff74f55"
+    }
+  ]
+}

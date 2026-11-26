@@ -83,6 +83,17 @@ for (const [name, type] of [
       await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
       const base = `http://127.0.0.1:${server.address().port}/stoicheia/`;
       const context = await browser.newContext();
+      // Since 0f76dda the reader shows a verified scan through a blob URL and revokes it
+      // once drawn; keep each blob so the displayed bytes can still be hashed.
+      await context.addInitScript(() => {
+        window.sourceBlobs = new Map();
+        const make = URL.createObjectURL;
+        URL.createObjectURL = (blob) => {
+          const url = make.call(URL, blob);
+          window.sourceBlobs.set(url, blob);
+          return url;
+        };
+      });
       try {
         const page = await context.newPage();
         const pageErrors = [];
@@ -90,7 +101,12 @@ for (const [name, type] of [
         await page.goto(`${base}#p=10&s=6`);
         await page.waitForFunction(() => {
           const status = document.querySelector("#offline-state")?.textContent;
-          return status?.includes("ready offline") || status?.includes("could not be saved");
+          // Since 408ce61 a refused first install pauses ("Offline saving paused").
+          return (
+            status?.includes("ready offline") ||
+            status?.includes("could not be saved") ||
+            status?.includes("saving paused")
+          );
         });
         assert.ok(substitutions > 0);
         const status = await page.locator("#offline-state").innerText();
@@ -104,7 +120,7 @@ for (const [name, type] of [
         if (before) {
           assert.match(status, /ready offline/);
         } else {
-          assert.match(status, /could not be saved/);
+          assert.match(status, /could not be saved|saving paused/);
           assert.equal(
             await page.evaluate(() => Boolean(navigator.serviceWorker.controller)),
             false,
@@ -140,9 +156,8 @@ for (const [name, type] of [
             return image?.complete && image.naturalWidth > 0;
           });
           record.offlineSourceSha256 = await page.evaluate(async () => {
-            const bytes = await (
-              await fetch(document.querySelector("#source-image").src)
-            ).arrayBuffer();
+            const src = document.querySelector("#source-image").src;
+            const bytes = await (window.sourceBlobs.get(src) ?? (await fetch(src))).arrayBuffer();
             return Array.from(
               new Uint8Array(await crypto.subtle.digest("SHA-256", bytes)),
               (value) => value.toString(16).padStart(2, "0"),

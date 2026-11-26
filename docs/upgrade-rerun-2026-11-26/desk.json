@@ -1,0 +1,47 @@
+{
+  "scope": "Pre-desk five-room edition to six rooms; held or failed source install; existing-tab controller transition; disabled-origin construction after recovery.",
+  "previousWorker": "299ca0002bf9d0e6e05f1ec0243cc01f7b4fb05cd3085b32741193265859d94b",
+  "currentWorker": "d2d4018bdbc5d1594881873125fbe5b0e669dfa16f38f43bc3b144db1c373107",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "failedInstallRecovered": false,
+      "heldSource": "sources/areas/heiberg-158.jpg",
+      "heldSourceRequests": 1,
+      "oldTabReloaded": true,
+      "currentCaches": 1,
+      "cachedFiles": 232,
+      "offlineConstruction": true
+    },
+    {
+      "browser": "chromium",
+      "failedInstallRecovered": true,
+      "heldSource": "sources/areas/heiberg-158.jpg",
+      "heldSourceRequests": 1,
+      "oldTabReloaded": true,
+      "currentCaches": 1,
+      "cachedFiles": 232,
+      "offlineConstruction": true
+    },
+    {
+      "browser": "firefox",
+      "failedInstallRecovered": false,
+      "heldSource": "sources/areas/heiberg-158.jpg",
+      "heldSourceRequests": 1,
+      "oldTabReloaded": true,
+      "currentCaches": 1,
+      "cachedFiles": 232,
+      "offlineConstruction": true
+    },
+    {
+      "browser": "firefox",
+      "failedInstallRecovered": true,
+      "heldSource": "sources/areas/heiberg-158.jpg",
+      "heldSourceRequests": 1,
+      "oldTabReloaded": true,
+      "currentCaches": 1,
+      "cachedFiles": 232,
+      "offlineConstruction": true
+    }
+  ]
+}

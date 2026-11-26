@@ -127,8 +127,11 @@ for (const [name, engine] of [
           await page.goto(`${base}quadrature.html#a=110&b=20&s=4&m=100&c=1&k=0&r=8`);
           await page.evaluate(() => window.dispatchEvent(new Event("online")));
         } else await Promise.all(pending.splice(0).map((response) => send(response, sourceFile)));
-        await page.waitForFunction(() =>
-          document.querySelector("#qa-offline").textContent.includes("ready offline"),
+        // Moving from a one- to four-page edition downloads most of today's edition.
+        await page.waitForFunction(
+          () => document.querySelector("#qa-offline").textContent.includes("ready offline"),
+          null,
+          { timeout: 120000 },
         );
         online = false;
         server.closeAllConnections();
@@ -153,7 +156,11 @@ for (const [name, engine] of [
         });
         assert.equal(hash, sourceHash);
         await page.goto(`${base}#p=21&s=9`);
-        assert.equal(await page.locator(".lesson-tab").count(), 21);
+        // The current course: 21 propositions when this check was written, 23 on 2026-11-26.
+        assert.equal(await page.locator(".lesson-tab").count(), 23);
+        // The companion workshops start collapsed at every width (since 93aa602).
+        if ((await page.locator("#companion-workshops").getAttribute("open")) === null)
+          await page.locator("#companion-workshops summary").click();
         await page.locator('a[href="./triangle.html"]').click();
         assert.equal(await page.locator("#givens-title").innerText(), "Choose the three givens");
         await page.locator('a[href="./quadrature.html"]').click();

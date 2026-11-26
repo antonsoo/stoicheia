@@ -121,17 +121,20 @@ for (const [name, engine] of [
           unavailable = false;
           await page.evaluate(() => dispatchEvent(new Event("online")));
         } else await Promise.all(pending.splice(0).map((res) => send(res, heldFile)));
+        // Moving from the four-room edition downloads most of today's edition.
         await page
           .locator("#ml-offline")
           .filter({ hasText: /ready offline/ })
-          .waitFor();
+          .waitFor({ timeout: 120000 });
         await old.locator("#reload-edition").waitFor({ state: "visible" });
         assert.match(await old.locator("#offline-state").textContent(), /different edition/);
         online = false;
         server.closeAllConnections();
         await assert.rejects(fetch(base));
         await old.locator("#reload-edition").click();
-        await old.getByRole("link", { name: /Twice the stone/ }).waitFor();
+        // The link sits in the companion-workshop panel, collapsed since 93aa602: the
+        // reloaded reader must contain it, visible or not.
+        await old.locator('a[href="./mesolabe.html"]').waitFor({ state: "attached" });
         await old
           .locator("#offline-state")
           .filter({ hasText: /ready offline/ })

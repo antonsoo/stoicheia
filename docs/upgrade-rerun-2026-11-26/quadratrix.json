@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-11-26T14:08:59.588Z",
+  "scope": "Actual nine-room edition to ten rooms; held/substituted new source, export refusal, existing-tab controller transition and origin-disabled recovery",
+  "previousWorker": "aeb368e01054228a970baf91adf85b7055a47136cb91f27f5a25e70febe391d5",
+  "currentWorker": "d2d4018bdbc5d1594881873125fbe5b0e669dfa16f38f43bc3b144db1c373107",
+  "configurations": [
+    {
+      "engine": "chromium",
+      "substitutedSource": false,
+      "heldSourceRequests": 2,
+      "refusedSubstitutedSourceAndExport": false,
+      "oldTabReloaded": true,
+      "cacheCount": 1,
+      "cachedFiles": 232,
+      "originDisabledTrial": true
+    },
+    {
+      "engine": "chromium",
+      "substitutedSource": true,
+      "heldSourceRequests": 2,
+      "refusedSubstitutedSourceAndExport": true,
+      "oldTabReloaded": true,
+      "cacheCount": 1,
+      "cachedFiles": 232,
+      "originDisabledTrial": true
+    },
+    {
+      "engine": "firefox",
+      "substitutedSource": false,
+      "heldSourceRequests": 2,
+      "refusedSubstitutedSourceAndExport": false,
+      "oldTabReloaded": true,
+      "cacheCount": 1,
+      "cachedFiles": 232,
+      "originDisabledTrial": true
+    },
+    {
+      "engine": "firefox",
+      "substitutedSource": true,
+      "heldSourceRequests": 2,
+      "refusedSubstitutedSourceAndExport": true,
+      "oldTabReloaded": true,
+      "cacheCount": 1,
+      "cachedFiles": 232,
+      "originDisabledTrial": true
+    }
+  ]
+}

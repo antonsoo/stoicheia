@@ -8,7 +8,8 @@
   which pointed readers back to the older edition.
 - Bring the browser reviews up to date with the collapsed companion-workshop
   panel, the paused-install wording and the per-file mismatch wording, so the
-  production-reader and upgrade checks run again.
+  production-reader and upgrade checks run again. Every per-room upgrade check
+  passes again from its baseline; see docs/upgrade-rerun-2026-11-26/.
 
 ## 2026-11-03
 

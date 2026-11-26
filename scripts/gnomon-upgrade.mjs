@@ -129,8 +129,11 @@ for (const [name, engine] of [
           await page.goto(`${base}gnomon.html#u=35&v=65&h=20&d=0&s=0&a=110&b=20&g=5&book=II5&r=8`);
           await page.evaluate(() => window.dispatchEvent(new Event("online")));
         } else await Promise.all(pending.splice(0).map((response) => send(response, sourceFile)));
-        await page.waitForFunction(() =>
-          document.querySelector("#gn-offline").textContent.includes("ready offline"),
+        // Moving from a one- to four-page edition downloads most of today's edition.
+        await page.waitForFunction(
+          () => document.querySelector("#gn-offline").textContent.includes("ready offline"),
+          null,
+          { timeout: 120000 },
         );
         online = false;
         server.closeAllConnections();
@@ -155,7 +158,11 @@ for (const [name, engine] of [
         });
         assert.equal(hash, sourceHash);
         await page.goto(`${base}#p=21&s=9`);
-        assert.equal(await page.locator(".lesson-tab").count(), 21);
+        // The course had 21 propositions when this check was written; 23 on 2026-11-26.
+        assert.equal(await page.locator(".lesson-tab").count(), 23);
+        // The companion workshops start collapsed at every width (since 93aa602).
+        if ((await page.locator("#companion-workshops").getAttribute("open")) === null)
+          await page.locator("#companion-workshops summary").click();
         await page.locator('a[href="./triangle.html"]').click();
         assert.equal(await page.locator("#givens-title").innerText(), "Choose the three givens");
         await page.locator('a[href="./quadrature.html"]').click();
