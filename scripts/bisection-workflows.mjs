@@ -68,6 +68,8 @@ export async function verifyBisections(page, viewport, browser, accessible, audi
   assert.match(await page.locator("#diagram-notice").innerText(), /same point/);
   assert.equal(await page.locator('#diagram [data-entity="CD"]').count(), 0);
   await page.keyboard.press("End");
+  // The hash is rewritten after the input event; wait for it rather than racing it.
+  await page.waitForFunction(() => /(?:^|[#&])q=32(?:&|$)/.test(location.hash));
   assert.match(page.url(), /q=32/);
 
   await reset(page, 8);

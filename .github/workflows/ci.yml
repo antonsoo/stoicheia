@@ -74,9 +74,9 @@ jobs:
       - name: Verify an authentic eleven-room to twelve-room upgrade
         run: |
           git fetch --depth=1 origin c4ceb91ed96d1eb5fbc5c9687f2b7b690d4bf677
-          mkdir /tmp/stoicheia-eleven
-          git archive FETCH_HEAD | tar -x -C /tmp/stoicheia-eleven
-          ln -s "$GITHUB_WORKSPACE/node_modules" /tmp/stoicheia-eleven/node_modules
-          (cd /tmp/stoicheia-eleven && npm run build)
-          node scripts/solids-upgrade.mjs /tmp/stoicheia-eleven/dist /tmp/stoicheia-solids-upgrade.json
+          eleven=$(mktemp -d)
+          git archive FETCH_HEAD | tar -x -C "$eleven"
+          ln -s "$GITHUB_WORKSPACE/node_modules" "$eleven/node_modules"
+          (cd "$eleven" && npm run build)
+          node scripts/solids-upgrade.mjs "$eleven/dist" /tmp/stoicheia-solids-upgrade.json
           python3 scripts/solids-artifacts.py /tmp/stoicheia-solids-upgrade.json --upgrade
