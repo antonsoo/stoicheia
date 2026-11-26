@@ -9,8 +9,8 @@ locator.waitFor: Timeout 60000ms exceeded.
 Call log:
 [2m  - waiting for getByText('Edition ready offline').first() to be visible[22m
 
-    at ready (/home/antonsoloviev/work/projects/showcases/stoicheia/scripts/copying-browser.mjs:80:72)
-    at /home/antonsoloviev/work/projects/showcases/stoicheia/scripts/copying-browser.mjs:197:15 {
+    at ready (<workspace>/stoicheia/scripts/copying-browser.mjs:80:72)
+    at <workspace>/stoicheia/scripts/copying-browser.mjs:197:15 {
   log: [
     "  - waiting for getByText('Edition ready offline').first() to be visible"
   ],
