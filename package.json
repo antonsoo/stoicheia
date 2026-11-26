@@ -1,5 +1,5 @@
 {
-  "name": "@antonsoloviev/stoicheia",
+  "name": "@anthonymercer/stoicheia",
   "version": "0.1.0",
   "private": true,
   "description": "Read Euclid, Archimedes and Pappus in Greek, Latin and English with working geometry and original printed pages.",
