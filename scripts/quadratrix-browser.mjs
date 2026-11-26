@@ -496,6 +496,7 @@ for (const [engine, type] of [
         await server.close();
       }
     }
+    let release = () => {};
     const server = await serve(),
       context = await browser.newContext({ serviceWorkers: "block" });
     try {
@@ -509,7 +510,7 @@ for (const [engine, type] of [
           return url;
         };
       });
-      let release, requested;
+      let requested;
       const held = new Promise((r) => {
           release = r;
         }),
@@ -535,6 +536,9 @@ for (const [engine, type] of [
       assert(await page.locator("#qx-source-image").isVisible());
       report.guards.push({ engine, returnedToDisplayedPage: true, lateSourceIgnored: true });
     } finally {
+      // A held route handler would keep context.close() waiting forever and hide the
+      // failure that brought us here.
+      release();
       await context.close();
       await server.close();
     }
