@@ -270,8 +270,17 @@ try {
         assert.equal(await word.evaluate((button) => button === document.activeElement), true);
 
         // Verify original printed pages, including zoom/pan and keyboard dismissal.
+        // Each page change hides the scan until it loads, which moves the controls; wait
+        // for the page in between so the second click lands on the button.
+        const scanShown = () =>
+          page.waitForFunction(() => {
+            const image = document.querySelector("#source-image");
+            return !image.hidden && image.complete && image.naturalWidth > 0;
+          });
         await page.locator("#open-edition").click();
+        await scanShown();
         await page.locator("#source-previous").click();
+        await scanShown();
         await page.locator("#source-previous").click();
         for (let printedPage = 2; printedPage <= 57; printedPage++) {
           await page.waitForFunction(() => {
