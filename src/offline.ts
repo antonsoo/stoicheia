@@ -106,6 +106,16 @@ export function prepareOffline(status: HTMLElement, reload: HTMLButtonElement): 
     status.textContent = `${operation}: ${p.finished} of ${p.total} files checked${p.loaded ? `; ${(p.loaded / 1048576).toFixed(1)} MiB received` : ""}. Keep this tab open.`;
   }
   function mismatch() {
+    // This tab's own edition failed to install while an earlier saved edition still
+    // controls it: say so, rather than suggesting a reload into the older edition.
+    if (installFailed) {
+      status.textContent =
+        "This edition could not be saved offline. The earlier saved edition is kept; check or repair to try again.";
+      reload.hidden = true;
+      repair.hidden = false;
+      repair.disabled = false;
+      return;
+    }
     status.textContent = "A different edition is now saved offline. Reload to read that edition.";
     reload.hidden = false;
     repair.hidden = true;

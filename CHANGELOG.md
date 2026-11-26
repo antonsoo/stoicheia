@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-26
+
+- When a new edition cannot be saved offline while an earlier saved edition is
+  still in use, every room says so and offers Check or repair, instead of
+  "A different edition is now saved offline. Reload to read that edition.",
+  which pointed readers back to the older edition.
+- Bring the browser reviews up to date with the collapsed companion-workshop
+  panel, the paused-install wording and the per-file mismatch wording, so the
+  production-reader and upgrade checks run again.
+
 ## 2026-11-03
 
 - Turn I.1’s circle-intersection warning into an exact rational-point experiment

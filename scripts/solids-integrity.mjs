@@ -90,7 +90,8 @@ for (const [name, engine] of [
     await work.waitForFunction(() =>
       document
         .getElementById("sl-save-status")
-        .textContent.includes("fonts/NotoSerif-Regular.ttf does not match"),
+        // Since 0f76dda: "fonts/NotoSerif-Regular.ttf: The file does not match this edition (…)".
+        .textContent.match(/fonts\/NotoSerif-Regular\.ttf: .*does not match this edition/),
     );
     fontMode = "held";
     await work.locator('[data-sl-save="html"]').click();

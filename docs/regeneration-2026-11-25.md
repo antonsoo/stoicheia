@@ -89,3 +89,14 @@ and so on; the local closure receipt names the tested commit). The October
 receipts (`desk-browser.json`, `copying-review/browser.json`,
 `measure-browser.json`, `closure-browser.json`, `measure-feedback-browser.json`)
 are unchanged: other October records cite their build and worker hashes.
+
+The repository's own CI checks then stopped at three more scripts whose expected
+wording predates November changes. `copying-integrity.mjs` now also accepts
+"Offline saving paused" (408ce61), and `solids-integrity.mjs` the per-file
+"fonts/NotoSerif-Regular.ttf: The file does not match this edition (…)"
+(0f76dda). `solids-upgrade.mjs` exposed a page fault: when the new edition's
+install failed while the earlier edition still controlled the tab, the page said
+"A different edition is now saved offline. Reload to read that edition." It now
+says the new edition could not be saved and offers Check or repair (`src/offline.ts`);
+the upgrade check passes unchanged in both engines for held and substituted
+sources.

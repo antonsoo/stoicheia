@@ -90,7 +90,8 @@ for (const [name, engine] of [
           assert.equal(downloads, 0);
           await p
             .locator("#offline-state")
-            .filter({ hasText: /could not be saved|not saved/ })
+            // Since 408ce61 a refused install pauses ("Offline saving paused") instead.
+            .filter({ hasText: /could not be saved|not saved|saving paused/ })
             .waitFor();
           assert.equal(await p.evaluate(() => navigator.serviceWorker.controller), null);
           assert(bad >= 3);
