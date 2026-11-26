@@ -12,7 +12,7 @@ const hosted = process.argv[3]?.startsWith("https://") ? process.argv[3] : null;
 if (hosted) assert.match(hosted, /^https:\/\/.+\/$/);
 const selectedEngine = process.argv[hosted ? 4 : 3];
 const selectedWidth = Number(process.argv[hosted ? 5 : 4]);
-const out = path.resolve(process.argv[2] ?? "/tmp/claude-1000/ratios-browser");
+const out = path.resolve(process.argv[2] ?? "/tmp/ratios-browser");
 await mkdir(out, { recursive: true });
 const hash = (b) => createHash("sha256").update(b).digest("hex");
 const manifest = JSON.parse(await readFile("public/sources/ratios/manifest.json", "utf8"));

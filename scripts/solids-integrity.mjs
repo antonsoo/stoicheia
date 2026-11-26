@@ -4,7 +4,7 @@ import path from "node:path";
 import { chromium, firefox } from "playwright";
 
 const base = process.argv[2] ?? "http://127.0.0.1:4365/stoicheia/",
-  out = process.argv[3] ?? "/tmp/claude-1000/solids-integrity";
+  out = process.argv[3] ?? "/tmp/solids-integrity";
 await mkdir(out, { recursive: true });
 const results = [];
 const until = async (test) => {

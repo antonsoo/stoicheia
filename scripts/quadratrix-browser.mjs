@@ -8,7 +8,7 @@ import { pathToFileURL } from "node:url";
 import AxeBuilder from "@axe-core/playwright";
 import { chromium, firefox } from "playwright";
 
-const out = path.resolve(process.argv[2] ?? "/tmp/claude-1000/quadratrix-browser");
+const out = path.resolve(process.argv[2] ?? "/tmp/quadratrix-browser");
 const hosted = process.argv[3];
 if (hosted) assert.match(hosted, /^https:\/\/.+\/$/);
 await mkdir(out, { recursive: true });

@@ -6,7 +6,7 @@ import { extname, join, resolve } from "node:path";
 import { chromium, firefox } from "playwright";
 
 const root = resolve(process.argv[2] ?? "dist");
-const output = resolve(process.argv[3] ?? "/tmp/claude-1000/stoicheia-cancellation");
+const output = resolve(process.argv[3] ?? "/tmp/stoicheia-cancellation");
 await mkdir(output, { recursive: true });
 let held = new Map(),
   requests = [];

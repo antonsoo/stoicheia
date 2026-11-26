@@ -10,7 +10,7 @@ import AxeBuilder from "@axe-core/playwright";
 import { chromium, firefox } from "playwright";
 
 const upstream = process.argv[2] ?? "http://127.0.0.1:4327/stoicheia/";
-const output = process.argv[3] ?? "/tmp/claude-1000/stoicheia-casebook/browser";
+const output = process.argv[3] ?? "/tmp/stoicheia-casebook/browser";
 await mkdir(output, { recursive: true });
 let online = true;
 let rejectedConnections = 0;

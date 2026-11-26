@@ -9,7 +9,7 @@ import { chromium, firefox } from "playwright";
 import { openLesson } from "./navigation.mjs";
 
 const base = process.argv[2] ?? "http://127.0.0.1:4385/stoicheia/";
-const out = resolve(process.argv[3] ?? "/tmp/claude-1000/stoicheia-inequalities/browser");
+const out = resolve(process.argv[3] ?? "/tmp/stoicheia-inequalities/browser");
 await mkdir(out, { recursive: true });
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
 const report = {

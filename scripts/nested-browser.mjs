@@ -10,7 +10,7 @@ import { chromium, firefox } from "playwright";
 import { openLesson } from "./navigation.mjs";
 
 const base = process.argv[2] ?? "http://127.0.0.1:4405/stoicheia/";
-const output = resolve(process.argv[3] ?? "/tmp/claude-1000/stoicheia-nested/browser");
+const output = resolve(process.argv[3] ?? "/tmp/stoicheia-nested/browser");
 await mkdir(output, { recursive: true });
 const lesson = JSON.parse(
   execFileSync(

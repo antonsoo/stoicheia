@@ -8,7 +8,7 @@ import { chromium, firefox } from "playwright";
 const first = resolve(process.argv[2] ?? ""),
   next = resolve(process.argv[3] ?? "");
 assert.ok(process.argv[2] && process.argv[3] && first !== next);
-const output = process.argv[4] ?? "/tmp/claude-1000/stoicheia-retirement.json";
+const output = process.argv[4] ?? "/tmp/stoicheia-retirement.json";
 const reports = [];
 for (const [name, engine] of [
   ["chromium", chromium],

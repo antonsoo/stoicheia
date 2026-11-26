@@ -9,7 +9,7 @@ import { chromium, firefox } from "playwright";
 if (!process.argv[2]) throw new Error("Pass the old twenty-proposition dist directory.");
 const previous = resolve(process.argv[2]),
   current = resolve(process.argv[3] ?? "dist");
-const output = process.argv[4] ?? "/tmp/claude-1000/stoicheia-triangle/upgrade.json";
+const output = process.argv[4] ?? "/tmp/stoicheia-triangle/upgrade.json";
 const digest = (bytes) => createHash("sha256").update(bytes).digest("hex");
 const sourceFile = "sources/heiberg-055.jpg",
   sourceHash = digest(await readFile(join(current, sourceFile)));

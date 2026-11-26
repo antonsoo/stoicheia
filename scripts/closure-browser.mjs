@@ -9,7 +9,7 @@ import AxeBuilder from "@axe-core/playwright";
 import { chromium, firefox } from "playwright";
 
 const upstream = process.argv[2] ?? "http://127.0.0.1:4397/stoicheia/";
-const out = resolve(process.argv[3] ?? "/tmp/claude-1000/stoicheia-triangle/browser");
+const out = resolve(process.argv[3] ?? "/tmp/stoicheia-triangle/browser");
 await mkdir(out, { recursive: true });
 const digest = (data) => createHash("sha256").update(data).digest("hex");
 let available = true;

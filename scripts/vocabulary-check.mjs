@@ -5,7 +5,7 @@ import AxeBuilder from "@axe-core/playwright";
 import { chromium, firefox } from "playwright";
 
 const base = process.argv[2] ?? "http://127.0.0.1:4327/stoicheia/";
-const output = process.argv[3] ?? "/tmp/claude-1000/stoicheia-casebook/vocabulary-after.json";
+const output = process.argv[3] ?? "/tmp/stoicheia-casebook/vocabulary-after.json";
 const report = {
   scope: "Actual positive and negative I.7 vocabulary popups; no full philological certification",
   url: base,

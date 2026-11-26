@@ -6,7 +6,7 @@ import AxeBuilder from "@axe-core/playwright";
 import { chromium, firefox } from "playwright";
 
 const base = process.argv[2] ?? "http://127.0.0.1:4365/stoicheia/",
-  out = path.resolve(process.argv[3] ?? "/tmp/claude-1000/solids-review");
+  out = path.resolve(process.argv[3] ?? "/tmp/solids-review");
 await mkdir(out, { recursive: true });
 const manifest = JSON.parse(await readFile("public/sources/solids/manifest.json", "utf8")),
   records = [];
