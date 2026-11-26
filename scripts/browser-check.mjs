@@ -195,10 +195,13 @@ try {
         console.log(`Checking ${name} ${viewport.width}px`);
         await page.goto(browserUrl, { waitUntil: "networkidle" });
         await page.evaluate(() => document.fonts.ready);
+        // Saving the whole edition can take longer than 15 s on a loaded machine.
         await page.waitForFunction(
           () =>
             Boolean(navigator.serviceWorker.controller) &&
             document.querySelector("#offline-state").textContent.includes("ready offline"),
+          null,
+          { timeout: 60000 },
         );
         assert.match(await page.locator("#offline-state").innerText(), /ready offline/);
         assert.equal(await page.evaluate(() => document.fonts.check('20px "Noto Serif"')), true);

@@ -117,7 +117,8 @@ for (const engine of [chromium, firefox]) {
           .locator("#sl-offline")
           .filter({ hasText: "Edition ready offline" })
           .waitFor({ timeout: 60000 });
-        await old.locator("#reload-edition").waitFor();
+        // The earlier tab learns of the new edition from its worker; allow the same 60 s.
+        await old.locator("#reload-edition").waitFor({ timeout: 60000 });
         assert.doesNotMatch(await old.locator("#offline-state").textContent(), /ready offline/);
         await old.locator("#reload-edition").click();
         await old.locator("#offline-state").filter({ hasText: "Edition ready offline" }).waitFor();
