@@ -12,6 +12,19 @@ const out = path.resolve(process.argv[2] ?? "/tmp/claude-1000/quadratrix-browser
 const hosted = process.argv[3];
 if (hosted) assert.match(hosted, /^https:\/\/.+\/$/);
 await mkdir(out, { recursive: true });
+// Promises without their own timeout: fail with a named step instead of hanging the run.
+const within = (promise, what, ms = 30000) => {
+  let timer;
+  return Promise.race([
+    promise,
+    new Promise((_, reject) => {
+      timer = setTimeout(
+        () => reject(new Error(`Timed out after ${ms} ms waiting for ${what}`)),
+        ms,
+      );
+    }),
+  ]).finally(() => clearTimeout(timer));
+};
 const hash = (b) => createHash("sha256").update(b).digest("hex");
 const manifest = JSON.parse(await readFile("public/sources/quadratrix/manifest.json", "utf8"));
 const passages = JSON.parse(
@@ -525,12 +538,20 @@ for (const [engine, type] of [
       await page.goto(`${server.base}quadratrix.html`);
       await source(page, 252);
       await page.locator("#qx-page").selectOption("254");
-      await hit;
+      await within(hit, "the request for printed p.254");
+      // Returning to p.252 may cancel the held p.254 fetch, which then fails instead of
+      // finishing; either way it must settle without replacing the displayed page.
+      const settled = new Promise((resolve) => {
+        const done = (request) => {
+          if (request.url().endsWith("hultsch-254.jpg")) resolve();
+        };
+        page.on("requestfinished", done);
+        page.on("requestfailed", done);
+      });
       await page.locator("#qx-page").selectOption("252");
       await page.locator("#qx-source-caption").filter({ hasText: "Printed p.252" }).waitFor();
-      const response = page.waitForResponse((r) => r.url().endsWith("hultsch-254.jpg"));
       release();
-      await (await response).finished();
+      await within(settled, "the released p.254 request to finish or be cancelled");
       await page.waitForLoadState("networkidle");
       assert.match(await page.locator("#qx-source-caption").textContent(), /Printed p.252/);
       assert(await page.locator("#qx-source-image").isVisible());
