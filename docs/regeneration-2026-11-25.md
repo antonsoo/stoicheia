@@ -67,3 +67,25 @@ receipts (`illustrated-review/hosted.json`, `mesolabe-hosted-browser.json`,
 (`desk-browser.json`, `measure-browser.json`, `measure-feedback-browser.json`,
 `closure-browser.json`, `copying-review/browser.json`), and the solids and
 offline-response clean-build, PDF-structure, fault and retained receipts.
+
+## Follow-up, 2026-11-26: the four browser reviews
+
+The four scripts stopped at the same change. Since `93aa602` (2026-11-03) the
+course's "Explore companion workshops" panel starts collapsed at every width;
+`cdb4bec` had opened it above 700 px. The newer intersection review presses
+Enter on its summary at both widths and expects the links to appear, so the
+collapsed panel is the intended page and the scripts were stale. Each script
+now opens the panel before following a workshop link, and the copying review
+asserts that it starts collapsed at both widths. The closure review also waits
+up to 60 s, as the desk review does, for the edition to be ready offline: through
+its buffering gate the public site needed longer than the 15 s default.
+
+All four scripts passed in Chromium 153 and Firefox 155 at 1440 and 375 px,
+against the local production build of `e069c87` and against
+https://antonsoo.github.io/stoicheia/ (which served the same build). Their
+receipts are new files in [`review-rerun-2026-11-26/`](review-rerun-2026-11-26/),
+one local and one public run per script (`desk-local.json`, `desk-public.json`
+and so on; the local closure receipt names the tested commit). The October
+receipts (`desk-browser.json`, `copying-review/browser.json`,
+`measure-browser.json`, `closure-browser.json`, `measure-feedback-browser.json`)
+are unchanged: other October records cite their build and worker hashes.

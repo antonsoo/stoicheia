@@ -113,6 +113,9 @@ for (const [name, type] of [
       });
       try {
         await page.goto(base);
+        // The companion workshops start collapsed at every width (since 93aa602).
+        if ((await page.locator("#companion-workshops").getAttribute("open")) === null)
+          await page.locator("#companion-workshops summary").click();
         await page.getByRole("link", { name: /Make I.2 yourself/ }).click();
         await page
           .locator("#dk-offline")
@@ -324,6 +327,9 @@ for (const [name, type] of [
           .locator("#offline-state")
           .filter({ hasText: /Edition ready offline/ })
           .waitFor();
+        // The companion workshops start collapsed at every width (since 93aa602).
+        if ((await page.locator("#companion-workshops").getAttribute("open")) === null)
+          await page.locator("#companion-workshops summary").click();
         await page.getByRole("link", { name: /Make I.2 yourself/ }).click();
         await page
           .locator("#dk-offline")

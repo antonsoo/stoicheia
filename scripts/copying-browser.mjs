@@ -196,16 +196,12 @@ for (const [name, engine] of [
         await p.goto(`${base}#p=23&s=5&r=1.15&a=32&x=.25`);
         await ready(p);
         await fits(p);
-        assert.equal(
-          (await p.locator("#companion-workshops").getAttribute("open")) !== null,
-          width > 700,
-        );
-        if (width === 375) {
-          await p.locator("#companion-workshops summary").focus();
-          await p.keyboard.press("Enter");
-          await p.getByRole("link", { name: /Can three lengths close/ }).waitFor();
-          await p.locator("#companion-workshops summary").click();
-        }
+        // Collapsed at every width since 93aa602; the keyboard still opens it.
+        assert.equal(await p.locator("#companion-workshops").getAttribute("open"), null);
+        await p.locator("#companion-workshops summary").focus();
+        await p.keyboard.press("Enter");
+        await p.getByRole("link", { name: /Can three lengths close/ }).waitFor();
+        await p.locator("#companion-workshops summary").click();
         const views = [],
           downloads = [];
         for (const item of metadata) {

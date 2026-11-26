@@ -117,8 +117,12 @@ try {
           result.accessibility.push(label);
         };
         await page.goto(`${base}triangle.html`);
-        await page.waitForFunction(() =>
-          document.querySelector("#offline-status").textContent.includes("ready offline"),
+        // Through the buffering gate a public origin needs longer than the 15 s default
+        // to save the whole edition (the desk review allows the same 60 s).
+        await page.waitForFunction(
+          () => document.querySelector("#offline-status").textContent.includes("ready offline"),
+          null,
+          { timeout: 60000 },
         );
         await audit("initial workshop");
         for (const [a, b, c, kind] of [
@@ -315,6 +319,9 @@ try {
           /two sides|remaining side|triangle/i,
         );
         result.offline.push("existing I.20 reader navigation");
+        // The companion workshops start collapsed at every width (since 93aa602).
+        if ((await page.locator("#companion-workshops").getAttribute("open")) === null)
+          await page.locator("#companion-workshops summary").click();
         await page.locator('a[href="./triangle.html"]').click();
         await page.locator("#source-page").selectOption("55");
         await page.locator("#source-image").scrollIntoViewIfNeeded();

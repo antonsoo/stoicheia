@@ -1,0 +1,132 @@
+{
+  "checkedAt": "2026-11-26T09:48:56.984Z",
+  "scope": "Public production site, browser operations and native downloads. Hosted offline checks disable browser networking; the public origin remains available.",
+  "base": "https://antonsoo.github.io/stoicheia/",
+  "configurations": [
+    {
+      "browser": "chromium",
+      "browserVersion": "153.0.8010.12",
+      "width": 1440,
+      "operations": 11,
+      "wrongCrossingsRejected": 2,
+      "imageHashesVerified": 4,
+      "nativeJsonSha256": "c76966b68927365c62bdaf246a6edfe032c064e016cd5a3e6ce8eef7e61aa92f",
+      "nativeSvgSha256": "7ff4f8388c1efdf37493fe42b7026ca724785bdaae9b15823a6b00f5e92090f7",
+      "savedReadingSha256": "37899b45b1b21447d2a745e7abbbc66d35b7f2bf340ac5d93ce9123f863fde1d",
+      "axeViolations": 0,
+      "pageErrors": [],
+      "externalRequests": [],
+      "portableRemoteRequests": [],
+      "offlineOriginDisabled": false,
+      "adaptiveHintsFollowC": true,
+      "offlineRooms": [
+        "index.html",
+        "triangle.html",
+        "quadrature.html",
+        "gnomon.html",
+        "mesolabe.html",
+        "desk.html"
+      ],
+      "offlineAlternateConstruction": {
+        "layout": "long",
+        "anchor": "C",
+        "reflected": true,
+        "operations": 11
+      }
+    },
+    {
+      "browser": "chromium",
+      "browserVersion": "153.0.8010.12",
+      "width": 375,
+      "operations": 11,
+      "wrongCrossingsRejected": 2,
+      "imageHashesVerified": 4,
+      "nativeJsonSha256": "c76966b68927365c62bdaf246a6edfe032c064e016cd5a3e6ce8eef7e61aa92f",
+      "nativeSvgSha256": "7ff4f8388c1efdf37493fe42b7026ca724785bdaae9b15823a6b00f5e92090f7",
+      "savedReadingSha256": "37899b45b1b21447d2a745e7abbbc66d35b7f2bf340ac5d93ce9123f863fde1d",
+      "axeViolations": 0,
+      "pageErrors": [],
+      "externalRequests": [],
+      "portableRemoteRequests": [],
+      "offlineOriginDisabled": false,
+      "adaptiveHintsFollowC": true,
+      "offlineRooms": [
+        "index.html",
+        "triangle.html",
+        "quadrature.html",
+        "gnomon.html",
+        "mesolabe.html",
+        "desk.html"
+      ],
+      "offlineAlternateConstruction": {
+        "layout": "long",
+        "anchor": "C",
+        "reflected": true,
+        "operations": 11
+      }
+    },
+    {
+      "browser": "firefox",
+      "browserVersion": "155.0",
+      "width": 1440,
+      "operations": 11,
+      "wrongCrossingsRejected": 2,
+      "imageHashesVerified": 4,
+      "nativeJsonSha256": "c76966b68927365c62bdaf246a6edfe032c064e016cd5a3e6ce8eef7e61aa92f",
+      "nativeSvgSha256": "7ff4f8388c1efdf37493fe42b7026ca724785bdaae9b15823a6b00f5e92090f7",
+      "savedReadingSha256": "37899b45b1b21447d2a745e7abbbc66d35b7f2bf340ac5d93ce9123f863fde1d",
+      "axeViolations": 0,
+      "pageErrors": [],
+      "externalRequests": [],
+      "portableRemoteRequests": [],
+      "offlineOriginDisabled": false,
+      "adaptiveHintsFollowC": true,
+      "offlineRooms": [
+        "index.html",
+        "triangle.html",
+        "quadrature.html",
+        "gnomon.html",
+        "mesolabe.html",
+        "desk.html"
+      ],
+      "offlineAlternateConstruction": {
+        "layout": "long",
+        "anchor": "C",
+        "reflected": true,
+        "operations": 11
+      }
+    },
+    {
+      "browser": "firefox",
+      "browserVersion": "155.0",
+      "width": 375,
+      "operations": 11,
+      "wrongCrossingsRejected": 2,
+      "imageHashesVerified": 4,
+      "nativeJsonSha256": "c76966b68927365c62bdaf246a6edfe032c064e016cd5a3e6ce8eef7e61aa92f",
+      "nativeSvgSha256": "7ff4f8388c1efdf37493fe42b7026ca724785bdaae9b15823a6b00f5e92090f7",
+      "savedReadingSha256": "37899b45b1b21447d2a745e7abbbc66d35b7f2bf340ac5d93ce9123f863fde1d",
+      "axeViolations": 0,
+      "pageErrors": [],
+      "externalRequests": [],
+      "portableRemoteRequests": [],
+      "offlineOriginDisabled": false,
+      "adaptiveHintsFollowC": true,
+      "offlineRooms": [
+        "index.html",
+        "triangle.html",
+        "quadrature.html",
+        "gnomon.html",
+        "mesolabe.html",
+        "desk.html"
+      ],
+      "offlineAlternateConstruction": {
+        "layout": "long",
+        "anchor": "C",
+        "reflected": true,
+        "operations": 11
+      }
+    }
+  ],
+  "workerSha256": "b670f10d319a0d2d12c0f723c02f22eafd8f4341339840fa75cea8512e5e294b"
+}

@@ -126,6 +126,9 @@ for (const engine of [chromium, firefox])
     const result = { engine: engine.name(), width, drawings: [] };
     try {
       await page.goto(server.base);
+      // The companion workshops start collapsed at every width (since 93aa602).
+      if ((await page.locator("#companion-workshops").getAttribute("open")) === null)
+        await page.locator("#companion-workshops summary").click();
       await page.locator('a[href="./measure.html"]').click();
       await page.locator("#mr-source-status").filter({ hasText: "Verified p.2" }).waitFor();
       await noOverflow(page);
@@ -273,6 +276,9 @@ for (const engine of [chromium, firefox])
       await download(page, "#mr-save", dir, "offline-reading.html");
       result.offlineDownload = true;
       await page.locator('a[href="./"]').first().click();
+      // The companion workshops start collapsed at every width (since 93aa602).
+      if ((await page.locator("#companion-workshops").getAttribute("open")) === null)
+        await page.locator("#companion-workshops summary").click();
       await page.locator('a[href="./measure.html"]').click();
       await page.locator("#mr-fit").click();
       assert.match(await page.locator("#mr-status").textContent(), /positive remainder/);
