@@ -1,10 +1,10 @@
 {
   "scope": "Actual Chromium PDF; physical printing and tagged-PDF accessibility unverified",
-  "pages": 15,
-  "words_within_page_bounds": 2818,
+  "pages": 17,
+  "words_within_page_bounds": 3357,
   "byte_identical_source_images": 6,
   "embedded_fonts": 7,
-  "complete_reading_fields_and_mit_notice": 97,
-  "bytes": 2403583,
-  "sha256": "89e5f9ecfd5570f68a5f9d2c1c3aec5d33f46f98561b0b58bf7c45fc860a847b"
+  "complete_reading_fields_and_license": 97,
+  "bytes": 2409402,
+  "sha256": "a75fca0f3127ed3e5a3f676e09379ed7f72469f62a3a837100720f5a34e03167"
 }

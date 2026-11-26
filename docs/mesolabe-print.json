@@ -1,6 +1,6 @@
 {
   "pdf_engine": "PyMuPDF 1.28.2",
-  "reading_pages": 27,
+  "reading_pages": 28,
   "source_images": [
     {
       "pdf_page": 13,
@@ -81,9 +81,9 @@
   "calibration_bar_mm_in_svg": 25,
   "physical_printing_and_assembly": "Unverified. Browser PDF rounding is separate from exact SVG units.",
   "sha256": {
-    "reading.html": "3ca31950230a09e12dd6ad75597ec09569f65a938f0a06991e16da71bdf2a54a",
-    "reading.pdf": "6106ee8e3cdaf90ec79ac7108c009ebfabe3db3c90e34264f49e964e511edf05",
-    "paper.svg": "5f23d3f24b31a44f645e7115e3656d04f78f5f603c16cfe15019715468997667",
-    "paper.pdf": "99fd9695bc468ad2f748ab4ffba9461a8ff1f392f5abc7667a03b3f4cef2b3bd"
+    "reading.html": "2697dd4dcd449600126eb9a8acdf777b4b0f4b0da69295b0a2ff50e47c91b8d4",
+    "reading.pdf": "878f32ba2495217afe47f6966f1ec3a53bb936e58aa6e2049e8b48954ef97f74",
+    "paper.svg": "72fcfbf630e788c85ad0392b6cfd37cda354482497334348e9c2bf0918f5d3f9",
+    "paper.pdf": "4f41e321e450ab626498febeeda26794ba1c280fb63ee18b69f0c70f5da2f1ee"
   }
 }

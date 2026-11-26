@@ -59,7 +59,9 @@ standalone CSVs retain the bounded search’s scope even when two different boun
 produce exactly the same disagreement set.
 
 The original HTML digest is
-`c9d48eaf1e58dc2d94dd7c11a5ebde79c0e45980a068e172d239f016e5cdf81e`.
+`c9d48eaf1e58dc2d94dd7c11a5ebde79c0e45980a068e172d239f016e5cdf81e`; the reading
+regenerated on 2026-11-25 for the author-name and license change is
+`461b31bcf317ff83ed827683f66a8031dea7c5f4fb58fa61c092cf54adeedd75`.
 To open the retained compressed example:
 
 ```sh

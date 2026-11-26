@@ -91,7 +91,7 @@ setting that merely reports itself offline.
 
 The actual retained Chromium exports are:
 - [Illustrated HTML](../examples/stoicheia-mesolabe-reading.html)
-- [27-page reading PDF](../examples/stoicheia-mesolabe-reading.pdf)
+- [28-page reading PDF](../examples/stoicheia-mesolabe-reading.pdf)
 - [Machine SVG](../examples/stoicheia-mesolabe-machine.svg)
 - [Measurements CSV](../examples/stoicheia-mesolabe-measurements.csv)
 - [Landscape A4 paper SVG](../examples/stoicheia-mesolabe-paper.svg)

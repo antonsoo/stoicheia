@@ -98,7 +98,7 @@ saved phone table. The final records do not describe the earlier failed runs.
 [Greek and Latin source pages](assets/solids-source-chromium-1440.png).
 
 [Actual illustrated HTML, gzip](../examples/solids-reading.html.gz) ·
-[Actual 30-page PDF](../examples/solids-reading.pdf) ·
+[Actual 31-page PDF](../examples/solids-reading.pdf) ·
 [Editable record](../examples/solids-experiment.json) ·
 [Exact CSV](../examples/solids-angles.csv) ·
 [A4 paper experiment](../examples/solids-two-tetrahedra.svg).

@@ -50,4 +50,4 @@ with tempfile.TemporaryDirectory(prefix="horn-print-") as directory:
     assert normalize('1/1000000000001') in normalize(text)
 
     assert "JavaScript:      no" in command("pdfinfo", str(args.pdf))
-    print(json.dumps({"scope": "Actual Chromium PDF; physical printing and tagged-PDF accessibility unverified", "pages": len(pages), "words_within_page_bounds": words, "byte_identical_source_images": len(scans), "embedded_fonts": len(fonts.splitlines()[2:]), "complete_reading_fields_and_mit_notice": len(fields), "bytes": args.pdf.stat().st_size, "sha256": hashlib.sha256(args.pdf.read_bytes()).hexdigest()}, indent=2))
+    print(json.dumps({"scope": "Actual Chromium PDF; physical printing and tagged-PDF accessibility unverified", "pages": len(pages), "words_within_page_bounds": words, "byte_identical_source_images": len(scans), "embedded_fonts": len(fonts.splitlines()[2:]), "complete_reading_fields_and_license": len(fields), "bytes": args.pdf.stat().st_size, "sha256": hashlib.sha256(args.pdf.read_bytes()).hexdigest()}, indent=2))

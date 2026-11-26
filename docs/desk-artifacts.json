@@ -1,13 +1,13 @@
 [
   {
     "file": "examples/stoicheia-construction-reading.html",
-    "bytes": 2199877,
-    "sha256": "cd77700cab0c527930ae10f3dd1a998efdfd5460f947d366a4fcf37d730a0d32"
+    "bytes": 2203483,
+    "sha256": "37899b45b1b21447d2a745e7abbbc66d35b7f2bf340ac5d93ce9123f863fde1d"
   },
   {
     "file": "examples/stoicheia-construction-reading.pdf",
     "bytes": 1695658,
-    "sha256": "88a739c223d8c94259fe1091adee60f63ce53a59b2a63cd42b9fc90bed7fb81d"
+    "sha256": "f7a46d2b876dc1cec103998014c4ebaeb82186039f2e00907b8ae7a8ab744056"
   },
   {
     "file": "examples/stoicheia-construction.json",
@@ -16,7 +16,7 @@
   },
   {
     "file": "examples/stoicheia-construction.svg",
-    "bytes": 14556,
-    "sha256": "9d6960b74c62e3338e8716618efe96370ebed622ddb32a5884b35df7ba307d02"
+    "bytes": 18143,
+    "sha256": "7ff4f8388c1efdf37493fe42b7026ca724785bdaae9b15823a6b00f5e92090f7"
   }
 ]

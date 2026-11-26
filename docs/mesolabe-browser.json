@@ -1,5 +1,7 @@
 {
+  "checkedAt": "2026-11-25T23:31:56.572Z",
   "scope": "Local production build; source, browser and native-file evidence. No public deployment or physical assembly claim.",
+  "base": null,
   "configurations": [
     {
       "browser": "chromium",
@@ -17,10 +19,10 @@
       "sourceZoom": true,
       "sharedPose": true,
       "downloadSha256": {
-        "html": "3ca31950230a09e12dd6ad75597ec09569f65a938f0a06991e16da71bdf2a54a",
+        "html": "2697dd4dcd449600126eb9a8acdf777b4b0f4b0da69295b0a2ff50e47c91b8d4",
         "csv": "d93119fe6ed6d82bbee6a17deb42829fa10932501d8be78cc567ae7145b77f44",
-        "svg": "ffb63703984bd27b75ac42247e40fbb2874ef087590f9ce299a3fe5917197372",
-        "paper": "5f23d3f24b31a44f645e7115e3656d04f78f5f603c16cfe15019715468997667"
+        "svg": "e275aeca9c8925949615281b6baca3120fe236772520e628eea7e406b62b0d93",
+        "paper": "72fcfbf630e788c85ad0392b6cfd37cda354482497334348e9c2bf0918f5d3f9"
       },
       "nativeFile": {
         "images": 12,
@@ -56,10 +58,10 @@
       "sourceZoom": true,
       "sharedPose": true,
       "downloadSha256": {
-        "html": "3ca31950230a09e12dd6ad75597ec09569f65a938f0a06991e16da71bdf2a54a",
+        "html": "2697dd4dcd449600126eb9a8acdf777b4b0f4b0da69295b0a2ff50e47c91b8d4",
         "csv": "d93119fe6ed6d82bbee6a17deb42829fa10932501d8be78cc567ae7145b77f44",
-        "svg": "ffb63703984bd27b75ac42247e40fbb2874ef087590f9ce299a3fe5917197372",
-        "paper": "5f23d3f24b31a44f645e7115e3656d04f78f5f603c16cfe15019715468997667"
+        "svg": "e275aeca9c8925949615281b6baca3120fe236772520e628eea7e406b62b0d93",
+        "paper": "72fcfbf630e788c85ad0392b6cfd37cda354482497334348e9c2bf0918f5d3f9"
       },
       "nativeFile": {
         "images": 12,
@@ -95,10 +97,10 @@
       "sourceZoom": true,
       "sharedPose": true,
       "downloadSha256": {
-        "html": "b9c21f4cafeb03e4ff090f76aea162835a75f6a23f435f524194485e982ef151",
+        "html": "60cbfb55e4f88df95f2117970b9fd40fca347cc97c1eb088c0b05de22503b3ef",
         "csv": "773c544a7d7c8b783eed04391e42b56fdfd422802e50630a1b3a3913b216b5dd",
-        "svg": "ffb63703984bd27b75ac42247e40fbb2874ef087590f9ce299a3fe5917197372",
-        "paper": "5f23d3f24b31a44f645e7115e3656d04f78f5f603c16cfe15019715468997667"
+        "svg": "e275aeca9c8925949615281b6baca3120fe236772520e628eea7e406b62b0d93",
+        "paper": "72fcfbf630e788c85ad0392b6cfd37cda354482497334348e9c2bf0918f5d3f9"
       },
       "nativeFile": {
         "images": 12,
@@ -134,10 +136,10 @@
       "sourceZoom": true,
       "sharedPose": true,
       "downloadSha256": {
-        "html": "b9c21f4cafeb03e4ff090f76aea162835a75f6a23f435f524194485e982ef151",
+        "html": "60cbfb55e4f88df95f2117970b9fd40fca347cc97c1eb088c0b05de22503b3ef",
         "csv": "773c544a7d7c8b783eed04391e42b56fdfd422802e50630a1b3a3913b216b5dd",
-        "svg": "ffb63703984bd27b75ac42247e40fbb2874ef087590f9ce299a3fe5917197372",
-        "paper": "5f23d3f24b31a44f645e7115e3656d04f78f5f603c16cfe15019715468997667"
+        "svg": "e275aeca9c8925949615281b6baca3120fe236772520e628eea7e406b62b0d93",
+        "paper": "72fcfbf630e788c85ad0392b6cfd37cda354482497334348e9c2bf0918f5d3f9"
       },
       "nativeFile": {
         "images": 12,
@@ -160,32 +162,108 @@
   ],
   "build": [
     {
+      "file": "areas.html",
+      "sha256": "8077d52371dc14a9e8125ffbebaad2ef82cb02e440b32ab995c5aafb73051c03"
+    },
+    {
+      "file": "assets/areas-B3W4OOFI.js",
+      "sha256": "87f5a5eb7d3dd80d5d73138ed97ff8650f17815c37148288d298d0cad5a52a85"
+    },
+    {
+      "file": "assets/areas-CS9WJzw6.css",
+      "sha256": "9bcd025b54078078ccae04cca1fb7b676bee34e7d2dc4626a87fc7328af98aec"
+    },
+    {
+      "file": "assets/circle-DDXK4_JN.js",
+      "sha256": "00f7cbdae20a8ba76eb019f88ffddd2511bcd6353a290ea4312c367ed878d1f3"
+    },
+    {
+      "file": "assets/circle-DEbToBEZ.css",
+      "sha256": "0d98a36db93dcea622551113d4ca59ba1d139b775dc1711ef30553985387a6e7"
+    },
+    {
+      "file": "assets/circle-DeFcr-O5.js",
+      "sha256": "9007fa14899f37793e0ccd717791af960ede8e07a352bf7a78d04bac833e38b5"
+    },
+    {
+      "file": "assets/closure-C78fP2go.js",
+      "sha256": "2a195b2666ae9ee085e2bc4359324022a8e9b01a620d3dc514e2af1033bd4b08"
+    },
+    {
+      "file": "assets/desk-CSBNE5QJ.css",
+      "sha256": "a7b3c3f53d54dd6dae0ddf9bdbe3210940865f4ea987223e0952d89e01de7161"
+    },
+    {
+      "file": "assets/desk-CotR8lYM.js",
+      "sha256": "e49a33587c42a7fcd08626eee59a741de342f766f8fca783229d3ab0b7b708b1"
+    },
+    {
+      "file": "assets/geometry-4f0nyLSJ.js",
+      "sha256": "53dd800e045c605e09d77a62dc4f172ed839a05ccefb7dad65f289b3f2ace838"
+    },
+    {
       "file": "assets/gnomon-Ba77ooJT.css",
       "sha256": "2661adc6e90a0f1ea4d4068451f06f259d75c3924810ecdb9e64fcd0e46d4725"
     },
     {
-      "file": "assets/gnomon-CMAC0yAH.js",
-      "sha256": "9679a3fa1412028d9d117392677bb72efec54c091be4f429251fae649b1a7e15"
+      "file": "assets/gnomon-Cr477On4.js",
+      "sha256": "88caf4a5f0470a2501c84193a721339f4a6ae49a44246c731a0b9f16cb0e428e"
+    },
+    {
+      "file": "assets/horn-BeHZRNW8.css",
+      "sha256": "51994d4aec1fc303fe34430c505f5c77cdfc9c8aab4eaddc592890a8c8de3c1d"
+    },
+    {
+      "file": "assets/horn-UKEao_CV.js",
+      "sha256": "c112686f10c473878a67e40445b89c410edabd29d1574392ff4ed5b36920aae9"
+    },
+    {
+      "file": "assets/measure-CUIrZU7t.css",
+      "sha256": "061f891d146a05b132fc7d70ac7cc0065e5c54d0c11b59c4ce5e80a61065247f"
+    },
+    {
+      "file": "assets/measure-CjahGs_9.js",
+      "sha256": "ca31e8fb572ce2aae2ffdf5f757b26b9439a7e208b5d9bc65ec4b5f453d64a61"
+    },
+    {
+      "file": "assets/measure-GG_PpYDc.js",
+      "sha256": "d95126806360678ec0fd6da06de9f3f549d4eebc7ef5160255344913e7b88d59"
     },
     {
       "file": "assets/mesolabe-7AwiFx9G.css",
       "sha256": "df3da746f41b1559ecb66efc02278cded702b5a387b6ad8468ba671d6420498e"
     },
     {
-      "file": "assets/mesolabe-BHYx45dk.js",
-      "sha256": "e2a4c5b4b8689397e33e579b0cd1595fe5b27b2024bdc93daee1e5f5090b77e4"
+      "file": "assets/mesolabe-C3FBtO2p.js",
+      "sha256": "42756c2b2e5d4e0c4916d0edd3b42a58124e6185003eee26cd9c630867fae9c3"
     },
     {
-      "file": "assets/offline-D6km1F0i.css",
-      "sha256": "e99bb00edaa3e3a083caed8b66bd079fccf020ff786838754be7cd986f72edbf"
+      "file": "assets/offline-FZr_N4aW.js",
+      "sha256": "333510ec1a29bf886592feb08dc346f48ccc3d27714f411431bc2aa41988cbbb"
     },
     {
-      "file": "assets/offline-mrGAZEty.js",
-      "sha256": "7c85a176855648f34c2f74936eb5666d3e1bff9bf1c6bcc197159905940c169c"
+      "file": "assets/offline-iKHYx9Hz.css",
+      "sha256": "5c616124bf453a9db2185ac3cffe53926d873f7a4e2e625232e09c8b20132e0b"
     },
     {
-      "file": "assets/quadrature-Cr_3gYqD.js",
-      "sha256": "c3f4ba15847ae01a7a3b2426d63eafca70bfea50715a22811e7fa6f767441c11"
+      "file": "assets/primes-CRxjiSqn.css",
+      "sha256": "ca102103cce1066c1c54d30563e3cf8b58f666bc679e53f845a7e43be40b4995"
+    },
+    {
+      "file": "assets/primes-Nqrr3Iqv.js",
+      "sha256": "22c14c51e88d6f5a575c8b5e15c90c67ec56c6b29e665b4cae1e38a083f06197"
+    },
+    {
+      "file": "assets/quadratrix-Cbg0HveL.css",
+      "sha256": "804bea95df4fdbc79aec13442f43506a0a76411c1afc6513dc30b4c409562ce9"
+    },
+    {
+      "file": "assets/quadratrix-CyzzN5kY.js",
+      "sha256": "55c4736882069770b0d45185b79f48d56646684c9080ebbb31d8e0a372472406"
+    },
+    {
+      "file": "assets/quadrature-CieyoPXk.js",
+      "sha256": "8bd6e889ffa0f3bbd82d62e718ba977195fc150a639a5ee197ede9637d2cf815"
     },
     {
       "file": "assets/quadrature-XiT_7MPW.css",
@@ -196,16 +274,48 @@
       "sha256": "c062a55696e49b0fb52dc7b7b50a4f78a4858c8103ffd8d46838212266fc0e1c"
     },
     {
-      "file": "assets/reader-DU0zx_nG.js",
-      "sha256": "25c3f3a61457b21f310987d8108e1ff657c2e709f2facff532287a9833bf7a41"
+      "file": "assets/ratios-KGX41iDh.js",
+      "sha256": "fcde9c32eed67615436170910e0b741da6c8f12d33d81bffd29d085d2f9ed723"
     },
     {
-      "file": "assets/triangle-BLG5m71w.js",
-      "sha256": "2ccd9ccb37818016b1fa921493e7106d4d79fff2b51cc624ab5bfa5cf8957ea2"
+      "file": "assets/ratios-LVoxKTu_.css",
+      "sha256": "4999b1025393856c8cd1f244bc8a0f179b8301457752c959d2449a520febd187"
+    },
+    {
+      "file": "assets/reader-BSShPP2w.css",
+      "sha256": "7136b0c00ded54641cf0f7885cdb16647e883b9f3695a8cfd98342e390023602"
+    },
+    {
+      "file": "assets/reader-DzDV-4wQ.js",
+      "sha256": "ee399b2c11d057e1acc7e72b250eee0694549af51ed06e2b9e1b605b4fdcc717"
+    },
+    {
+      "file": "assets/solids-BZxQVP4g.js",
+      "sha256": "f20e9cb9196b466dae81a8c863073b93d90d8dba8b4634d25cf3effd4ee36817"
+    },
+    {
+      "file": "assets/solids-CiH8De4i.css",
+      "sha256": "03d5ecfc001191506874727afbd5d80907126f7e72c459d25b50c377471bd805"
+    },
+    {
+      "file": "assets/style-5KaGg5HP.js",
+      "sha256": "c7bdd049e800630f288f806c6918d687ba3aa4aef8e28be39a0ae594ce9d36ec"
     },
     {
       "file": "assets/triangle-D7DRmLfq.css",
       "sha256": "6cb88fda39261452f9525464dbac7a34349744d7beb7a95f26f673e47daf26a1"
+    },
+    {
+      "file": "assets/triangle-DNLOTZFg.js",
+      "sha256": "441b65353c01c069180024c906f9b09373be2ab70d865d814cd45b36941e4363"
+    },
+    {
+      "file": "circle.html",
+      "sha256": "1bd55538533146cb847d9ccf4177045aa2ae08ea4bf207b28a13684678b3889a"
+    },
+    {
+      "file": "desk.html",
+      "sha256": "21579ffcef366bae6d02bb2b9b55023ead5d1218117497144a37f56ac3726e16"
     },
     {
       "file": "favicon.svg",
@@ -221,19 +331,151 @@
     },
     {
       "file": "gnomon.html",
-      "sha256": "efc505ee8097959701d26d9bf6d454916ea460e974916eb3940bf2d89ea85cf6"
+      "sha256": "443ab04b27e50d6396c1d538b147f6c85ad89345f4c582caa4730efa3be5fa68"
+    },
+    {
+      "file": "horn.html",
+      "sha256": "0142a3b35824007c720aaf5f1be1b2ab3408401f30d28f36bda0aaed37c0b8e5"
     },
     {
       "file": "index.html",
-      "sha256": "62d1911d49ecbddb8ed4e43bd28e25b880f136236619a29df969a50cf9b54ddd"
+      "sha256": "928e7640b02273914a96cff2f876120078a5e96cf04c898cc83ebe5bbb742e5b"
+    },
+    {
+      "file": "measure.html",
+      "sha256": "2d9157db1d81ff755228be8c675c5d784c6bab33b82d151f1a3b926a23667fb8"
     },
     {
       "file": "mesolabe.html",
-      "sha256": "75c3bc05530108b9b4f3124c778212e17315e0dc54241c8820a30870c9c39f5c"
+      "sha256": "47b4c7fd683310b15d6526ab308fc2cc13465b5bb27c0324afbcc141e6ccc5c3"
+    },
+    {
+      "file": "primes.html",
+      "sha256": "55b45a3ea809bb8955aa9747f601b75eeb8624b0661a505df563e3a0611e37e5"
+    },
+    {
+      "file": "quadratrix.html",
+      "sha256": "87f5a440f127f959ed02394a0fc77ecca7e4e3ecd26680b3d4462257748b31a8"
     },
     {
       "file": "quadrature.html",
-      "sha256": "330d75fb805e92fea832ce7302ccf641bc0d6c7ed394542094fbd8599b64effe"
+      "sha256": "96737b18756e45e33f4d79ba15529e87456eeb17973b997553d0728c3248f4a3"
+    },
+    {
+      "file": "ratios.html",
+      "sha256": "8bf76b9e830d633b5a25546a84eb6e78ca000c386f38ce864460ce6256eebc0d"
+    },
+    {
+      "file": "solids.html",
+      "sha256": "a24896b842bbf395762f889046a65a37866a826d524a8b18a2a49728274ade1e"
+    },
+    {
+      "file": "sources/areas/heiberg-158.jpg",
+      "sha256": "076990ee8192b6091ddd9cc946a20b4405a8812114159bca06b22b83bbc5ec4e"
+    },
+    {
+      "file": "sources/areas/heiberg-159.jpg",
+      "sha256": "ffd8077b6a20716f246ef1dfeb845cfc382e148158bb57a75bc467b98b467050"
+    },
+    {
+      "file": "sources/areas/heiberg-160.jpg",
+      "sha256": "4dd4041de22eebac45160e6dd4fb8dd37f72ac9770297e8821e85661078bed98"
+    },
+    {
+      "file": "sources/areas/heiberg-161.jpg",
+      "sha256": "ce9ed5c70506aa979670a48aec53cef565271d166fd653746f6caa8c89d5f696"
+    },
+    {
+      "file": "sources/areas/heiberg-162.jpg",
+      "sha256": "fdca3912800202f4d120a410a32740c56bc3618c212dd9ceaf4a20e14804a348"
+    },
+    {
+      "file": "sources/areas/heiberg-163.jpg",
+      "sha256": "e70213f92590088bef5f6ef2f985b532f3fa3b10c5fdf0c4bb1ae4205e6b48f2"
+    },
+    {
+      "file": "sources/areas/heiberg-164.jpg",
+      "sha256": "39d217552f556317e4dd0a9984e34c8b32ab1dc44781ab0afd196439b0417568"
+    },
+    {
+      "file": "sources/areas/heiberg-165.jpg",
+      "sha256": "d052fd8ce53f9ec6f3c9b672ca5202c56f9b15571678872fa348ce3265ddc24e"
+    },
+    {
+      "file": "sources/areas/heiberg-166.jpg",
+      "sha256": "f079f0c2f8e9a5bf3473fef92bd03ade26ed514a44cc09ab48df9dfb5ea2bb24"
+    },
+    {
+      "file": "sources/areas/heiberg-167.jpg",
+      "sha256": "cb652a0e5c6694a8c209f6cf7d6e5a2a82d826b6324096d53587f63ba0b42549"
+    },
+    {
+      "file": "sources/areas/heiberg-168.jpg",
+      "sha256": "73681ccbdb423f94ae9f9399088919766afaace6284814fd4b2e310e4bf17e4d"
+    },
+    {
+      "file": "sources/areas/heiberg-169.jpg",
+      "sha256": "802d77528639699312c13dd2c3d3f3d5a65f5f7b7a7b205e802a29943bdfdc81"
+    },
+    {
+      "file": "sources/areas/heiberg-170.jpg",
+      "sha256": "5d8365a1205241f286081b32020a2400469a2625626e5d40ec96133288db2817"
+    },
+    {
+      "file": "sources/areas/heiberg-171.jpg",
+      "sha256": "7a4c627231e293e4ae1f896bfdf55fd6e4bb005f03fed66385599524b8cd378a"
+    },
+    {
+      "file": "sources/areas/heiberg-title.jpg",
+      "sha256": "cb79274a052ba661ec7d2973761be9db2e96ebbbb6696a8ccbe847f08658ea25"
+    },
+    {
+      "file": "sources/areas/manifest.json",
+      "sha256": "e02cc46c3bbccd571b997af61d9265ab75ce6ab7a36b7c55ce599416817540c6"
+    },
+    {
+      "file": "sources/circle/heiberg-262.jpg",
+      "sha256": "bd5ae5c4e98a7d1d20386645b75a3bc4b6e076c702127c0404294b8e464019e2"
+    },
+    {
+      "file": "sources/circle/heiberg-263.jpg",
+      "sha256": "b191e95add43c564c929de71f18d55e3474613733219111d7e0981170050436c"
+    },
+    {
+      "file": "sources/circle/heiberg-264.jpg",
+      "sha256": "b34fd52b53c986e2bfc59f58ec180e76f0096cddab93eff0ea9a071dfcf1f7d3"
+    },
+    {
+      "file": "sources/circle/heiberg-265.jpg",
+      "sha256": "7f2b5ea2d259d791890d8e27e5338e6d3e9042eaa28ca911bdf346ecb2b6ded2"
+    },
+    {
+      "file": "sources/circle/heiberg-266.jpg",
+      "sha256": "bf8449c836b88aad5f0dd6638b8a0b903cfe900ed3015364e1ee2c9caf65a210"
+    },
+    {
+      "file": "sources/circle/heiberg-267.jpg",
+      "sha256": "34ae521fd660260fc960dd913fa749aa64c0aa6344307bfcd1344af3b388eb79"
+    },
+    {
+      "file": "sources/circle/heiberg-268.jpg",
+      "sha256": "fc2e314d22c0dfefaa93e8094b4c1a836e31481d0aba9cb89edcab3bac9f5318"
+    },
+    {
+      "file": "sources/circle/heiberg-269.jpg",
+      "sha256": "76918a12a4b34ceda4f986d91b7f0f78f9d49e290d376bfc4eb5b8c8b3a6de0f"
+    },
+    {
+      "file": "sources/circle/heiberg-270.jpg",
+      "sha256": "b149f2f35b8f830eb0b2f92aef7ca9e9d1b7d565cc50cbc77ab047fe0464d347"
+    },
+    {
+      "file": "sources/circle/heiberg-271.jpg",
+      "sha256": "b5842e3b855a0598379edf37c3f2d844387d97b7d2b6b96e3fe5324f1cf42ace"
+    },
+    {
+      "file": "sources/circle/manifest.json",
+      "sha256": "b654bae5862c200257c5ff5af17da9a4a8e00b3c7be6b140ee3c23d8aad2ec09"
     },
     {
       "file": "sources/heiberg-002.jpg",
@@ -452,6 +694,14 @@
       "sha256": "3134a0577c2f607bff31b7735bdc169c1efac08e6f42b75b6ead766dac579612"
     },
     {
+      "file": "sources/heiberg-056.jpg",
+      "sha256": "fd74d41bda21ecce2f0da703c12548597ff8727f72dd0afd4a4018fdd3b5a0fc"
+    },
+    {
+      "file": "sources/heiberg-057.jpg",
+      "sha256": "56e7b1a7cdaf39aa240207c7ef3dfe4414f390da202be0802110135f042c02fe"
+    },
+    {
       "file": "sources/heiberg-100.jpg",
       "sha256": "b9d18a8d174fd2c11c69f01d87de2bfc73d37b0351c3399a482d59a3283c49e5"
     },
@@ -516,8 +766,88 @@
       "sha256": "e35e91ff595c6cdaf04e44d03de874bb5e64bb8b98cdf79f8e25e252b9c4c57e"
     },
     {
+      "file": "sources/horn/heiberg-208.jpg",
+      "sha256": "eb78b04fee7b2a0f809785f41c5d305f91371d9193d83209181a3c4a82f95962"
+    },
+    {
+      "file": "sources/horn/heiberg-209.jpg",
+      "sha256": "ea9752a7a65d7524abf979d43e14fc68ba85139b899f73884e294a555f8c8b03"
+    },
+    {
+      "file": "sources/horn/heiberg-210.jpg",
+      "sha256": "f00bb2c8524eb0897226258dd4eea7d941c97cf5dc4d807cbc2dbb2760d592f3"
+    },
+    {
+      "file": "sources/horn/heiberg-211.jpg",
+      "sha256": "79fc82efc0750e379f0e4aa2e75b8fefdd98f10dec28bd6698dfb7ee3b25ada1"
+    },
+    {
+      "file": "sources/horn/heiberg-212.jpg",
+      "sha256": "7997d8c15f8183c551a3cdaf07ad71e51cf9a11cf4ee8ac1dcbd8930b73ff068"
+    },
+    {
+      "file": "sources/horn/heiberg-213.jpg",
+      "sha256": "03932af05224f0df23b5c126aaec12ec94a03cf4cd3bd13ed01d33eca2955494"
+    },
+    {
+      "file": "sources/horn/manifest.json",
+      "sha256": "cd29e601f111dc7b198bcb10e70ffce705b31ebbab4f8c6fc071a6acebcdfd7f"
+    },
+    {
       "file": "sources/manifest.json",
-      "sha256": "00935907e6e96defeee05c64a2f4c210f1b5a769c578d45f0f35985f2ab81ce6"
+      "sha256": "dc03327f511d7d64294d99712efc52249c85e11106ee71ce4f7bb32793d99419"
+    },
+    {
+      "file": "sources/measure/heiberg-002.jpg",
+      "sha256": "8f82773e7065d2487ba8817850d3b154d41a2948e71b1c0a42b270e529e6a748"
+    },
+    {
+      "file": "sources/measure/heiberg-003.jpg",
+      "sha256": "e247ede61d8b197b4fc4e056ec0985779363172dc287cebc11de334b948017ea"
+    },
+    {
+      "file": "sources/measure/heiberg-004.jpg",
+      "sha256": "282c9de2c1c827757ae222ae696ba81dc9db955c91cdc91fb459320c46b39ef5"
+    },
+    {
+      "file": "sources/measure/heiberg-005.jpg",
+      "sha256": "f3aa7ac2b3a0f879ef6b087628aa4018b9057ad9719e957daad748656288a476"
+    },
+    {
+      "file": "sources/measure/heiberg-006.jpg",
+      "sha256": "406adb0ce2852b27710a08259c27edfd04ae10a857bc95bcd7ae8a03118a29e7"
+    },
+    {
+      "file": "sources/measure/heiberg-007.jpg",
+      "sha256": "c58925fd043dafd255385457669fb5c1c454e3bccf0fa099e815ede48ca4b2ac"
+    },
+    {
+      "file": "sources/measure/heiberg-008.jpg",
+      "sha256": "ec084792ca6512a19c6cffc2258d0d6f58a94bfa14ca87bc8cd156b783a1a8de"
+    },
+    {
+      "file": "sources/measure/heiberg-009.jpg",
+      "sha256": "22ba6751d61521c01d55de15769f275b75cdde836e57c70d2df98bae40309b68"
+    },
+    {
+      "file": "sources/measure/heiberg-010.jpg",
+      "sha256": "bca1144225bd3a0f65b7dd56b6c658ef5168a1c91d320d2820aaed3df0395338"
+    },
+    {
+      "file": "sources/measure/heiberg-011.jpg",
+      "sha256": "57ff0b0093a4e0191d5d1001ede64ec73e2ee48606834e937d24d963459b4fe4"
+    },
+    {
+      "file": "sources/measure/heiberg-012.jpg",
+      "sha256": "a90aa3b165c012f4f2b24a21f5e203bceb4d6f29dfbe229813e7e7386b4bbdb5"
+    },
+    {
+      "file": "sources/measure/heiberg-013.jpg",
+      "sha256": "3f11c8e68af357cb630da5788b93776ba050cc0f89785531087c5e455db770e9"
+    },
+    {
+      "file": "sources/measure/manifest.json",
+      "sha256": "8ed41043d930855f2f69a084a18bd9dcd57a9734348316fd275215ff12677ab1"
     },
     {
       "file": "sources/mesolabe/eutocius-102.jpg",
@@ -572,12 +902,196 @@
       "sha256": "1c171ac791a4338a9dde58a0d4d99f8a6832ea4e91136ced9a6e0c4fc4a4058c"
     },
     {
+      "file": "sources/primes/heiberg-184.jpg",
+      "sha256": "8727e5fad54f649a9c720d3faf9a03d455dd500098a0d3d97832b9668910f5df"
+    },
+    {
+      "file": "sources/primes/heiberg-185.jpg",
+      "sha256": "0839aca8cdfadb90781a21f885cc15dfead2fc3174e497efda617ab502115ce2"
+    },
+    {
+      "file": "sources/primes/heiberg-250.jpg",
+      "sha256": "29ca2948a167bea2ae1b63815c6ae46401c531bf720c3328c2d7a5c28638497e"
+    },
+    {
+      "file": "sources/primes/heiberg-251.jpg",
+      "sha256": "b4aa371ff5a00b59a753669474152fcaa24a3097107a1e1964d00930496d7d59"
+    },
+    {
+      "file": "sources/primes/heiberg-252.jpg",
+      "sha256": "cf11c500e29185f5474e44bfd213d4ad10d81555984c003228a239105e20fe75"
+    },
+    {
+      "file": "sources/primes/heiberg-253.jpg",
+      "sha256": "3cef46673bea2b9cce020800ec7c127e78f8fdd1a7a8bdec6d4f1a84d95fc14d"
+    },
+    {
+      "file": "sources/primes/heiberg-388.jpg",
+      "sha256": "452a63259825c59bd9bcdc1f6a7179d9eda5c0d68cbd6ee7be05955d4dbc7cc2"
+    },
+    {
+      "file": "sources/primes/heiberg-389.jpg",
+      "sha256": "0a11f4afa024dd836be31f98ae7cefea60ec9bd90ecaab3008c2b9ae59191cb9"
+    },
+    {
+      "file": "sources/primes/heiberg-390.jpg",
+      "sha256": "c745b20db69c37d4d4dfb1a6c90a4a8bea6ac29f447d7c5493c8075486981b30"
+    },
+    {
+      "file": "sources/primes/heiberg-391.jpg",
+      "sha256": "4273d570062256e0c22643e92e161fa6b5779d5ed026af912a41ecad784ff15c"
+    },
+    {
+      "file": "sources/primes/heiberg-title.jpg",
+      "sha256": "f1bcf7e5c1dd45e498112668d3dde1025224e4587619e47e37ba633617c110e1"
+    },
+    {
+      "file": "sources/primes/manifest.json",
+      "sha256": "ceeb259858aadb5f8ff76f6f17a2aafb8665ced667094dcb3f7ab0e89a4b66fa"
+    },
+    {
+      "file": "sources/quadratrix/hultsch-250.jpg",
+      "sha256": "89c12787f74dff3e0cd68425d2a6548205ef03be77d66cb13af6012450057839"
+    },
+    {
+      "file": "sources/quadratrix/hultsch-251.jpg",
+      "sha256": "eac5ebfb4f4061593611c3499d8ba9bc829acda859d12707e0c85683d0026c91"
+    },
+    {
+      "file": "sources/quadratrix/hultsch-252.jpg",
+      "sha256": "84dfbf5613beee46c3309b84463e9e920fd229a80a1ec174284c743f9bfc397c"
+    },
+    {
+      "file": "sources/quadratrix/hultsch-253.jpg",
+      "sha256": "d9a0f9eb0c11eec295286e4155af68e5aeff93e6ae0fdc8ff2bc4b7043b4bb76"
+    },
+    {
+      "file": "sources/quadratrix/hultsch-254.jpg",
+      "sha256": "1b9bc0197eedd48934c091eb0a632df98390a0ba909c8db64e514db70f283fdb"
+    },
+    {
+      "file": "sources/quadratrix/hultsch-255.jpg",
+      "sha256": "e7bfe763ee1ca544a64f5ff04f71802af01a42efbf1999be8c85f3a90e720fe7"
+    },
+    {
+      "file": "sources/quadratrix/hultsch-256.jpg",
+      "sha256": "4d3fa2c01dbd0cbcaa53097dc6212759b6fb225d13e59a402646d41c7b3ef241"
+    },
+    {
+      "file": "sources/quadratrix/hultsch-257.jpg",
+      "sha256": "5c61dcab496b1f5e1febab77f2d4f59b47a3c694922b473db2a45fd2889052a3"
+    },
+    {
+      "file": "sources/quadratrix/hultsch-258.jpg",
+      "sha256": "239f988f9a3c7955d475c54cc4f1d6a353da502af2e4d731e4d8f42cf99429fc"
+    },
+    {
+      "file": "sources/quadratrix/hultsch-259.jpg",
+      "sha256": "bded9dc11e7d90f75fce69b7e2d2344d068e42201c9a172986bb8d78e71e4543"
+    },
+    {
+      "file": "sources/quadratrix/manifest.json",
+      "sha256": "3422b953226cff3a7ca0489ada8467e6c58ec7302ff1f92f8a1acfebef84a80e"
+    },
+    {
+      "file": "sources/ratios/heiberg-002.jpg",
+      "sha256": "da6650dc4f346aa9cdbeb38f6a8946bad2e3a9944667abbf534507a81b169e1e"
+    },
+    {
+      "file": "sources/ratios/heiberg-003.jpg",
+      "sha256": "7106357dba44075be804ecd759110cad23f3d874a4a5cf0a484072e304623eed"
+    },
+    {
+      "file": "sources/ratios/heiberg-004.jpg",
+      "sha256": "d62c3b2de1ca92bc31e8b3ed76b7ab41de3e765903e9e57dc53f7d478ced0bf4"
+    },
+    {
+      "file": "sources/ratios/heiberg-005.jpg",
+      "sha256": "f408443870dd850f1657583984dcacd86a9742d9e116072f026e29ee34532bb0"
+    },
+    {
+      "file": "sources/ratios/heiberg-title.jpg",
+      "sha256": "f49ef84abdebf095723b7e07a1ca5a42eea7cdef00b0c1a0a453fe9ec56dc6ee"
+    },
+    {
+      "file": "sources/ratios/manifest.json",
+      "sha256": "3280a5b4eea383c8b3c6d52186b994a6579d26a98dfabbaaeb7712598bb2e198"
+    },
+    {
+      "file": "sources/solids/LICENSE.txt",
+      "sha256": "e204b636c02cdadb45ab6a1e24615d0c5f624475835c802477bffea71dd29393"
+    },
+    {
+      "file": "sources/solids/heiberg-336.jpg",
+      "sha256": "a9d6ae465dc4e889254b1672df18051a5f89aa9babcf986cc9465dd2f90af64b"
+    },
+    {
+      "file": "sources/solids/heiberg-337.jpg",
+      "sha256": "47960a27f1f8c3c6a300dbab59c848f1f986d7d11ee1c69f1015f5601ed36a90"
+    },
+    {
+      "file": "sources/solids/heiberg-338.jpg",
+      "sha256": "41647479b7ab3dd7ecc4ef10324b9eb01b4a5b233ebc5ef17f2e30d03d98fb98"
+    },
+    {
+      "file": "sources/solids/heiberg-339.jpg",
+      "sha256": "51b8425009392820b21cc6691340932cb303f3adf5ebdd22e3f8979331da5e5d"
+    },
+    {
+      "file": "sources/solids/heiberg-340.jpg",
+      "sha256": "90b3f449d0b9bd7c393d861b19c57cc1049566d5c8e58046936696f6ea4b81a7"
+    },
+    {
+      "file": "sources/solids/heiberg-341.jpg",
+      "sha256": "e458f127cf1d82ee94fed20a2d349f4ba425281efeda022601d561ccebeb7d62"
+    },
+    {
+      "file": "sources/solids/heiberg-4.jpg",
+      "sha256": "4d0210229e42d4571e25aa820aa8e776d3a8a3689df66663a514489aa206ab40"
+    },
+    {
+      "file": "sources/solids/heiberg-5.jpg",
+      "sha256": "f3ee32bdea92c1acb26a70c5423219e65ab0cadcee3d2506f95990ca8a8f699c"
+    },
+    {
+      "file": "sources/solids/heiberg-54.jpg",
+      "sha256": "f452ecf08dca4bb42295b334a7402c60d9d413aad60a01afe937e703907c045a"
+    },
+    {
+      "file": "sources/solids/heiberg-55.jpg",
+      "sha256": "8d6daf558a935d3a2a9d147c7c9f22faf6cf675fcfad766117d60c07689001f8"
+    },
+    {
+      "file": "sources/solids/heiberg-56.jpg",
+      "sha256": "6029d0f27e74f0708baa6b64bf9a781bc1f4c6547d7091fcdc4aa163418d9f5d"
+    },
+    {
+      "file": "sources/solids/heiberg-57.jpg",
+      "sha256": "d1ed8727f3dd4751635711bf00708ce52ce2920aa39869692b273a84c5582ddf"
+    },
+    {
+      "file": "sources/solids/heiberg-58.jpg",
+      "sha256": "a7d9486edfa5ab26c46867038c0a2da4b0fae27ada505e24663a456f610d878a"
+    },
+    {
+      "file": "sources/solids/heiberg-59.jpg",
+      "sha256": "04e8eaec5691efb98e2328889c2b8867ebcbd28ef67ff200b7fbb90955c46d82"
+    },
+    {
+      "file": "sources/solids/heiberg-title.jpg",
+      "sha256": "f4afb75d2d0ddf260fac76689d86285d9ed19304ecab5fbbe11f8edca2539d27"
+    },
+    {
+      "file": "sources/solids/manifest.json",
+      "sha256": "ec0087126a6fb6eccf8b2e0823f0508cce75570680e8308df8f905bc4d09fadb"
+    },
+    {
       "file": "sw.js",
-      "sha256": "299ca0002bf9d0e6e05f1ec0243cc01f7b4fb05cd3085b32741193265859d94b"
+      "sha256": "2c4e19de8b67f028942363892d2944f9e925082164120a32d933c38cad68522e"
     },
     {
       "file": "triangle.html",
-      "sha256": "ba4824367e0356eb3d72fcca982cb004e15f8be3c0d013fcc21fa1fb0ab7e34f"
+      "sha256": "263d9a6cf3d894355c242f35c23fd8019bb713df4f43a58bd1b758d2c3374278"
     }
   ]
 }

@@ -3,13 +3,13 @@
   "files": [
     {
       "file": "examples/stoicheia-I22-course.html.gz",
-      "bytes": 3273016,
-      "sha256": "a309bd179a1330cd339da5bd229007f17d3d1affc7c0e7e0af0f66f8ea8303a2"
+      "bytes": 3270808,
+      "sha256": "f7c0399e6d432b3be712886e3f6ae27e9913c4dbabb76e2cfd503e108de3e7ec"
     },
     {
       "file": "examples/stoicheia-I22-course.pdf",
-      "bytes": 3211198,
-      "sha256": "92d66070b2909cb0220dc62c8e0a48a582827aac556df35d4c82ff6e75a827c4"
+      "bytes": 3211233,
+      "sha256": "b3182874ea256ab9120da17f2feb59fb07e4f25a0f3120383a06dc1674c4aa21"
     },
     {
       "file": "examples/stoicheia-I22-course.svg",
@@ -18,13 +18,13 @@
     },
     {
       "file": "examples/stoicheia-I23-course.html.gz",
-      "bytes": 2005431,
-      "sha256": "217f86a4e6351f434788b3522f8aa0a44b21edb9dc9195c501d8ce979c3a2ad6"
+      "bytes": 2004438,
+      "sha256": "e4ad72c8e59f9d2c031686656eed4d79be0491cafdd3a5a9f666cb3125da6eb9"
     },
     {
       "file": "examples/stoicheia-I23-course.pdf",
-      "bytes": 1883736,
-      "sha256": "e1babdc7cf320891cbad8a31ff4121c410b274acea653e39dd86a9f7c00fe776"
+      "bytes": 1883728,
+      "sha256": "531051cc78e50f3dafc02b208b753594d0d42504df76d9658157f372d58b0f97"
     },
     {
       "file": "examples/stoicheia-I23-course.svg",

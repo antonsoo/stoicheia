@@ -1,8 +1,9 @@
 {
-  "checkedAt": "2026-10-26T00:13:01.266Z",
+  "checkedAt": "2026-11-25T23:34:48.907Z",
   "scope": "Local production build and actual downloaded artifacts. No public-hosting or physical-printing claim.",
-  "edition": "02c8ec2b12e55c109fafc8f63535e534fd468ee418a3f106adce1787103a79c7",
-  "workerSha256": "76c7e2302db6e05e4ef8ee9d068397e2b90341045d323ef142ceefc8633f264d",
+  "base": null,
+  "edition": "4461c478876441343175cf3f2869c1596d2604bad691fde99e09705e2529cae8",
+  "workerSha256": "2c4e19de8b67f028942363892d2944f9e925082164120a32d933c38cad68522e",
   "configurations": [
     {
       "engine": "chromium",
@@ -83,17 +84,17 @@
       "errors": [],
       "svgFullMitNotice": true,
       "reading": {
-        "bytes": 5659121,
-        "sha256": "649a81044d9cd034feea3db8a1307d65168aebb0272fdec426ef187c6a414368",
+        "bytes": 5662727,
+        "sha256": "c4cc7670b72add0968e19350bbc2661f75bfbdae142dbffb10bd1612a456f28d",
         "verifiedImages": 10,
         "remoteRequests": 0,
         "pdf": "chromium-1440/reading.pdf"
       },
       "axeViolations": 0,
-      "cachedFiles": 141,
+      "cachedFiles": 232,
       "offlineReading": {
-        "bytes": 5660110,
-        "sha256": "41337db2f52894238fd04fd31bd2e37162dfe067e0d77d1c92c0119ca1bf3ce4",
+        "bytes": 5663716,
+        "sha256": "53fb85be070d172ed778f0cb4a546f951c243f38b8c854344b76b69676db7836",
         "verifiedImages": 10,
         "remoteRequests": 0,
         "pdf": "chromium-1440/offline-reading.pdf"
@@ -179,17 +180,17 @@
       "errors": [],
       "svgFullMitNotice": true,
       "reading": {
-        "bytes": 5659121,
-        "sha256": "649a81044d9cd034feea3db8a1307d65168aebb0272fdec426ef187c6a414368",
+        "bytes": 5662727,
+        "sha256": "c4cc7670b72add0968e19350bbc2661f75bfbdae142dbffb10bd1612a456f28d",
         "verifiedImages": 10,
         "remoteRequests": 0,
         "pdf": null
       },
       "axeViolations": 0,
-      "cachedFiles": 141,
+      "cachedFiles": 232,
       "offlineReading": {
-        "bytes": 5660110,
-        "sha256": "41337db2f52894238fd04fd31bd2e37162dfe067e0d77d1c92c0119ca1bf3ce4",
+        "bytes": 5663716,
+        "sha256": "53fb85be070d172ed778f0cb4a546f951c243f38b8c854344b76b69676db7836",
         "verifiedImages": 10,
         "remoteRequests": 0,
         "pdf": null
@@ -275,17 +276,17 @@
       "errors": [],
       "svgFullMitNotice": true,
       "reading": {
-        "bytes": 5659121,
-        "sha256": "649a81044d9cd034feea3db8a1307d65168aebb0272fdec426ef187c6a414368",
+        "bytes": 5662727,
+        "sha256": "c4cc7670b72add0968e19350bbc2661f75bfbdae142dbffb10bd1612a456f28d",
         "verifiedImages": 10,
         "remoteRequests": 0,
         "pdf": null
       },
       "axeViolations": 0,
-      "cachedFiles": 141,
+      "cachedFiles": 232,
       "offlineReading": {
-        "bytes": 5660110,
-        "sha256": "41337db2f52894238fd04fd31bd2e37162dfe067e0d77d1c92c0119ca1bf3ce4",
+        "bytes": 5663716,
+        "sha256": "53fb85be070d172ed778f0cb4a546f951c243f38b8c854344b76b69676db7836",
         "verifiedImages": 10,
         "remoteRequests": 0,
         "pdf": null
@@ -371,17 +372,17 @@
       "errors": [],
       "svgFullMitNotice": true,
       "reading": {
-        "bytes": 5659121,
-        "sha256": "649a81044d9cd034feea3db8a1307d65168aebb0272fdec426ef187c6a414368",
+        "bytes": 5662727,
+        "sha256": "c4cc7670b72add0968e19350bbc2661f75bfbdae142dbffb10bd1612a456f28d",
         "verifiedImages": 10,
         "remoteRequests": 0,
         "pdf": null
       },
       "axeViolations": 0,
-      "cachedFiles": 141,
+      "cachedFiles": 232,
       "offlineReading": {
-        "bytes": 5660110,
-        "sha256": "41337db2f52894238fd04fd31bd2e37162dfe067e0d77d1c92c0119ca1bf3ce4",
+        "bytes": 5663716,
+        "sha256": "53fb85be070d172ed778f0cb4a546f951c243f38b8c854344b76b69676db7836",
         "verifiedImages": 10,
         "remoteRequests": 0,
         "pdf": null

@@ -121,6 +121,13 @@ async function source(page, printed) {
 async function savedReading(browser, filename, folder, engine, width) {
   const html = await readFile(filename, "utf8");
   assert(!/<script\b|\son\w+=/i.test(html));
+  // A saved file has no app beside it: every link must be absolute or in-page.
+  assert.deepEqual(
+    [...html.matchAll(/href="([^"]*)"/g)]
+      .map((m) => m[1])
+      .filter((href) => !/^(https?:|data:|#)/.test(href)),
+    [],
+  );
   const images = [...html.matchAll(/<img src="data:image\/jpeg;base64,([^"]+)"/g)];
   assert.equal(images.length, 10);
   images.forEach((m, i) => {

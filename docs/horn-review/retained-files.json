@@ -2,18 +2,18 @@
   "files": [
     {
       "file": "examples/horn-plates.svg",
-      "bytes": 619941,
-      "sha256": "84fd24cb2efab9e22cc22571d307eb6dceb6073da754a14eb7c97ec52828d92c"
+      "bytes": 623528,
+      "sha256": "902b37f91160f4dc3d238da315238ab39b7461cf09767607843866aa818f818e"
     },
     {
       "file": "examples/horn-reading.html.gz",
-      "bytes": 2604384,
-      "sha256": "c729cf3ab9a96cd68a5c60d459a8215804703a105151b962852c864a7105d72d"
+      "bytes": 2603690,
+      "sha256": "5a8b09c7713e71db23faa2a76ee76577236c1479207d96582b71514bc6395846"
     },
     {
       "file": "examples/horn-reading.pdf",
-      "bytes": 2403583,
-      "sha256": "89e5f9ecfd5570f68a5f9d2c1c3aec5d33f46f98561b0b58bf7c45fc860a847b"
+      "bytes": 2409402,
+      "sha256": "a75fca0f3127ed3e5a3f676e09379ed7f72469f62a3a837100720f5a34e03167"
     },
     {
       "file": "examples/horn-settings.json",

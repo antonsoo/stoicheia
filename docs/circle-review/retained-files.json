@@ -3,13 +3,13 @@
   "artifacts": [
     {
       "file": "examples/circle-reading.html.gz",
-      "bytes": 3864792,
-      "sha256": "b5db5a69f67bbcfc9dffccd4c0db43479087fe24f1a92d5fb0bac12818043f1f"
+      "bytes": 3861334,
+      "sha256": "8aea12c89ebdd981ccc27becf94e153cc4430880aabb9d4fa18032219b5df960"
     },
     {
       "file": "examples/circle-reading.pdf",
-      "bytes": 3909501,
-      "sha256": "a7aa9dccc8aa4ce175ed19118751e08cbdd7b5bd2b858abd0c892c3b78a18d41"
+      "bytes": 3915489,
+      "sha256": "3608595fa97d9fd0242a2b2b9c14f69e786efc82c45e4570d7b38780523c40b9"
     },
     {
       "file": "examples/circle-settings.json",

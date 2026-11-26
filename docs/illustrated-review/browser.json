@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-23T21:24:48.972Z",
+  "checkedAt": "2026-11-25T23:26:44.371Z",
   "configurations": [
     {
       "browser": "chromium",
@@ -9,8 +9,8 @@
         {
           "proposition": 1,
           "file": "chromium-1440-I1.html",
-          "bytes": 4616831,
-          "sha256": "ee0e8537fb362c20964d3643f6763ae448c0056d28f24009a07cc874a7715d14",
+          "bytes": 4620628,
+          "sha256": "624098f760e941002d1c7088f2d71a982cbc1893a9657797f9bb49c47c8ae9a2",
           "sourcePages": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
           "fontVerified": true,
           "standaloneComplete": true
@@ -18,8 +18,8 @@
         {
           "proposition": 2,
           "file": "chromium-1440-I2.html",
-          "bytes": 4507146,
-          "sha256": "46bb6810d21de5063fb48b03474d2c0dc0776635c782cc51824b82f5ccf63525",
+          "bytes": 4510943,
+          "sha256": "87a91934af6205dffa54f7e1eab059c1d24629d0d85e81e6c73a2d7cd3afcfe9",
           "sourcePages": [4, 5, 8, 9, 10, 11, 12, 13, 14, 15],
           "fontVerified": true,
           "standaloneComplete": true
@@ -27,8 +27,8 @@
         {
           "proposition": 3,
           "file": "chromium-1440-I3.html",
-          "bytes": 3643275,
-          "sha256": "a4b77b436aa2efca13f5e2d3fa42d67a23b68b2431d52f81fef83c0a18e80d1a",
+          "bytes": 3647072,
+          "sha256": "64faa902503e68613e30f15453ed6e368c4543a20fa0dbe5b37b3fab86e3225d",
           "sourcePages": [8, 9, 10, 11, 14, 15, 16, 17],
           "fontVerified": true,
           "standaloneComplete": true
@@ -36,8 +36,8 @@
         {
           "proposition": 4,
           "file": "chromium-1440-I4.html",
-          "bytes": 2911505,
-          "sha256": "6e99d860fea005d0ba858e5038717bd8b04ae5522c9bbcb23887d72e05cbb340",
+          "bytes": 2915302,
+          "sha256": "f295cafaf293baea73941b8c546037994e9910bf206ec40093bed059b461bdf7",
           "sourcePages": [10, 11, 16, 17, 18, 19],
           "fontVerified": true,
           "standaloneComplete": true
@@ -45,8 +45,8 @@
         {
           "proposition": 5,
           "file": "chromium-1440-I5.html",
-          "bytes": 3665503,
-          "sha256": "e166ee1869828bd4a996557ed50d6b014a35cb3ef310000dec4121ae84e67363",
+          "bytes": 3669300,
+          "sha256": "c4a29e9c5ca5f6c4a3f07cc1f249a15008571bcc2de69ccbb45071a24a732888",
           "sourcePages": [8, 9, 10, 11, 20, 21, 22, 23],
           "fontVerified": true,
           "standaloneComplete": true
@@ -54,8 +54,8 @@
         {
           "proposition": 6,
           "file": "chromium-1440-I6.html",
-          "bytes": 2921339,
-          "sha256": "dcc0fa93c8f1cedb6a15d054ec677bb6ead3015afd27781f48ef9070e836180d",
+          "bytes": 2925136,
+          "sha256": "fa6e8eb13a8861334f5dd78ed75413aa95fa208e79f4dd140dd883de5ba895a5",
           "sourcePages": [10, 11, 22, 23, 24, 25],
           "fontVerified": true,
           "standaloneComplete": true
@@ -63,8 +63,8 @@
         {
           "proposition": 7,
           "file": "chromium-1440-I7.html",
-          "bytes": 3676035,
-          "sha256": "4a7a0cf05b3965015ff5ddf9aae2c839ed2f359ab78415deae79cce71206d5d9",
+          "bytes": 3679832,
+          "sha256": "b6b63ac73cb39f34bd2ccfeec504365ee3879f70681b91a15955fdb5c98d47a0",
           "sourcePages": [8, 9, 10, 11, 24, 25, 26, 27],
           "fontVerified": true,
           "standaloneComplete": true
@@ -72,8 +72,8 @@
         {
           "proposition": 8,
           "file": "chromium-1440-I8.html",
-          "bytes": 2907406,
-          "sha256": "b467b164f70826c0a6072ca664fa9aa77bf6f2cf4deb1540f2d5a9d1e8e55df2",
+          "bytes": 2911203,
+          "sha256": "6351c0b102a79c20d1e28c516cb3131c3d8fa714ee70e3badc62ac622f4184b1",
           "sourcePages": [10, 11, 26, 27, 28, 29],
           "fontVerified": true,
           "standaloneComplete": true
@@ -81,8 +81,8 @@
         {
           "proposition": 9,
           "file": "chromium-1440-I9.html",
-          "bytes": 3705942,
-          "sha256": "ac75fbab31260cb5cfb97b773b8b5e567728ffc437c2340e6ba8a7da9806eeec",
+          "bytes": 3709739,
+          "sha256": "a3da87f7e104720eddd3aa728fc6307c2ff28313a53190eeff75a5df82edeb0a",
           "sourcePages": [6, 7, 8, 9, 28, 29, 30, 31],
           "fontVerified": true,
           "standaloneComplete": true
@@ -90,8 +90,8 @@
         {
           "proposition": 10,
           "file": "chromium-1440-I10.html",
-          "bytes": 2164625,
-          "sha256": "5bfd25d14b8a805d07d3e0325360941d0147f364c01731c0761009cfc042b5bf",
+          "bytes": 2168422,
+          "sha256": "0429c18551fd4f28ec14fe0019c5d1a527aef41d02be97c43b700520c051a39b",
           "sourcePages": [6, 7, 30, 31],
           "fontVerified": true,
           "standaloneComplete": true
@@ -99,8 +99,8 @@
         {
           "proposition": 11,
           "file": "chromium-1440-I11.html",
-          "bytes": 3574544,
-          "sha256": "a8ea8c5660785718918214d320aa727192462796a008a8f59c2f4275ffbf8184",
+          "bytes": 3578341,
+          "sha256": "084a62bf2c1c5da148612f617c88d716b271282382b0c4d8f6f4be4b8ae89987",
           "sourcePages": [2, 3, 4, 5, 8, 9, 32, 33],
           "fontVerified": true,
           "standaloneComplete": true
@@ -108,8 +108,8 @@
         {
           "proposition": 12,
           "file": "chromium-1440-I12.html",
-          "bytes": 3705957,
-          "sha256": "5f334e50fd3155524cf104512775f920a4ca707e902da40482a252c99c3ed958",
+          "bytes": 3709754,
+          "sha256": "2a972c9a36488d84abf303194e9e4d22e621ff498fdc0ea3224369b1de544138",
           "sourcePages": [2, 3, 4, 5, 8, 9, 34, 35],
           "fontVerified": true,
           "standaloneComplete": true
@@ -117,8 +117,8 @@
         {
           "proposition": 13,
           "file": "chromium-1440-I13.html",
-          "bytes": 5221835,
-          "sha256": "61cbd24a7da6ca9688c5c4df10f163e9afdaea8e0bd1a51a4f1b72dd8efc8ee0",
+          "bytes": 5225632,
+          "sha256": "e7e707cd7ad658301fe827da918b17e5539f6f7a367553627c89da56b7b09667",
           "sourcePages": [2, 3, 4, 5, 8, 9, 10, 11, 36, 37, 38, 39],
           "fontVerified": true,
           "standaloneComplete": true
@@ -126,8 +126,8 @@
         {
           "proposition": 14,
           "file": "chromium-1440-I14.html",
-          "bytes": 3691787,
-          "sha256": "37447d3c313fa5db0a9078ec7e43cee2f339e8297902f0b03ae7efc2795b69fa",
+          "bytes": 3695584,
+          "sha256": "176803e3dbbfd14ee83936045eb0c1b1cf61f0812ae6ef77adf795786a62c9dd",
           "sourcePages": [8, 9, 10, 11, 38, 39, 40, 41],
           "fontVerified": true,
           "standaloneComplete": true
@@ -135,8 +135,8 @@
         {
           "proposition": 15,
           "file": "chromium-1440-I15.html",
-          "bytes": 3325342,
-          "sha256": "54fc3845fa3c4de763cd4b18110a2c7c1d6c93a58009cfc24173518f5228ab6e",
+          "bytes": 3329139,
+          "sha256": "8a61dc3fea4536e90573cdded9ba9ce2aef30d8550028332fb9fa44cd94c0346",
           "sourcePages": [8, 9, 10, 11, 40, 41, 42],
           "fontVerified": true,
           "standaloneComplete": true
@@ -144,8 +144,8 @@
         {
           "proposition": 16,
           "file": "chromium-1440-I16.html",
-          "bytes": 3784227,
-          "sha256": "249a04adcfc55b2c2232e6d64dc1e06a30278b7c7b1d5cac0cbff8c33f8e23ae",
+          "bytes": 3788024,
+          "sha256": "80e9e986a4812f36cb5ca9c795c3e0eb83017f28f101088daad16f4de1a1f2ac",
           "sourcePages": [8, 9, 10, 11, 42, 43, 44, 45],
           "fontVerified": true,
           "standaloneComplete": true
@@ -153,8 +153,8 @@
         {
           "proposition": 17,
           "file": "chromium-1440-I17.html",
-          "bytes": 2160328,
-          "sha256": "e0744ee74d9bb1af292b5550c581cf4e75ed39326103c79e809dda578ace6123",
+          "bytes": 2164125,
+          "sha256": "61cc79e0a09e00506b7823718241ad71fe2857bcc04454928e4a63bdd19d5b8f",
           "sourcePages": [8, 9, 44, 45],
           "fontVerified": true,
           "standaloneComplete": true
@@ -162,8 +162,8 @@
         {
           "proposition": 18,
           "file": "chromium-1440-I18.html",
-          "bytes": 2852468,
-          "sha256": "f96a02a6b634847f751af7ef1df53ee7ab073358aea0dd65640b994b8d896e29",
+          "bytes": 2856265,
+          "sha256": "a7818959e908756c41c159d0f04f45c732217d301e9f7d584cdf99d8588a98d6",
           "sourcePages": [8, 9, 10, 11, 46, 47],
           "fontVerified": true,
           "standaloneComplete": true
@@ -171,8 +171,8 @@
         {
           "proposition": 19,
           "file": "chromium-1440-I19.html",
-          "bytes": 2147834,
-          "sha256": "90f1bde8d03eceb5d7949b44b2b8d259201ec7c5ced7373c9043734f34a2e938",
+          "bytes": 2151631,
+          "sha256": "5eb750c559d35d4e2ea3fb4cf556d548a234194b12fa3ca40c32f93f90b4ed82",
           "sourcePages": [46, 47, 48, 49],
           "fontVerified": true,
           "standaloneComplete": true
@@ -180,8 +180,8 @@
         {
           "proposition": 20,
           "file": "chromium-1440-I20.html",
-          "bytes": 3664042,
-          "sha256": "8b92233a97b910ad96d7364406b493aefd8284494374b1722b75778431192bdb",
+          "bytes": 3667839,
+          "sha256": "c396b4cace13eab056ba9bfbc4e9e31896930999ff0ec81e8812518bbdee1ecd",
           "sourcePages": [8, 9, 10, 11, 48, 49, 50, 51],
           "fontVerified": true,
           "standaloneComplete": true
@@ -189,8 +189,8 @@
         {
           "proposition": 21,
           "file": "chromium-1440-I21.html",
-          "bytes": 2972443,
-          "sha256": "4d87abbd487e221757d2b2bf303211a880bce6fa93d43e0e35a376e8bf234538",
+          "bytes": 2976240,
+          "sha256": "e30e6a801d3f413f4e0086182b20eb76f888312d5964af3ed4bc169fb9c9c408",
           "sourcePages": [8, 9, 50, 51, 52, 53],
           "fontVerified": true,
           "standaloneComplete": true
@@ -198,15 +198,33 @@
         {
           "proposition": 22,
           "file": "chromium-1440-I22.html",
-          "bytes": 2228487,
-          "sha256": "aa682c4811114a1b3a9838276d30c062ab4394fbe230eb79ca182cdd58de7af8",
+          "bytes": 4571143,
+          "sha256": "8a9e17b77fc14420aa583c55648ea394e392f267d9f591d2687ab589c4b4750f",
+          "sourcePages": [4, 5, 8, 9, 10, 11, 52, 53, 54, 55],
+          "fontVerified": true,
+          "standaloneComplete": true
+        },
+        {
+          "proposition": 23,
+          "file": "chromium-1440-I23.html",
+          "bytes": 2891475,
+          "sha256": "6d66ce42f47353df47fa7f34ced5abc7d45268ba5d1a484b50bc8a2769b65501",
+          "sourcePages": [8, 9, 54, 55, 56, 57],
+          "fontVerified": true,
+          "standaloneComplete": true
+        },
+        {
+          "proposition": 22,
+          "file": "chromium-1440-I22.html",
+          "bytes": 2232112,
+          "sha256": "a82bed1c2d192d2858e9103b8edb7fb420f8dfbd52a0afe161ddb287c0cd3e0c",
           "sourcePages": [52, 53, 54, 55],
           "fontVerified": true,
           "standaloneComplete": true
         }
       ],
       "originDisconnected": true,
-      "originRejectedConnections": 3,
+      "originRejectedConnections": 4,
       "offlineExports": [21, 22],
       "pageErrors": []
     },
@@ -218,8 +236,8 @@
         {
           "proposition": 1,
           "file": "chromium-375-I1.html",
-          "bytes": 4616831,
-          "sha256": "ee0e8537fb362c20964d3643f6763ae448c0056d28f24009a07cc874a7715d14",
+          "bytes": 4620628,
+          "sha256": "624098f760e941002d1c7088f2d71a982cbc1893a9657797f9bb49c47c8ae9a2",
           "sourcePages": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
           "fontVerified": true,
           "standaloneComplete": true
@@ -227,8 +245,8 @@
         {
           "proposition": 15,
           "file": "chromium-375-I15.html",
-          "bytes": 3325342,
-          "sha256": "54fc3845fa3c4de763cd4b18110a2c7c1d6c93a58009cfc24173518f5228ab6e",
+          "bytes": 3329139,
+          "sha256": "8a61dc3fea4536e90573cdded9ba9ce2aef30d8550028332fb9fa44cd94c0346",
           "sourcePages": [8, 9, 10, 11, 40, 41, 42],
           "fontVerified": true,
           "standaloneComplete": true
@@ -236,8 +254,8 @@
         {
           "proposition": 21,
           "file": "chromium-375-I21.html",
-          "bytes": 2972449,
-          "sha256": "ad8f916daf3b4a6b7bab17aceb23388393952ab55510e23873e5cbea22531c1d",
+          "bytes": 2976246,
+          "sha256": "a324759c5e94d187cfb357e61b905e2f21105f0458b98ef0428eea1ce35e92c4",
           "sourcePages": [8, 9, 50, 51, 52, 53],
           "fontVerified": true,
           "standaloneComplete": true
@@ -245,15 +263,15 @@
         {
           "proposition": 22,
           "file": "chromium-375-I22.html",
-          "bytes": 2228487,
-          "sha256": "aa682c4811114a1b3a9838276d30c062ab4394fbe230eb79ca182cdd58de7af8",
+          "bytes": 2232112,
+          "sha256": "a82bed1c2d192d2858e9103b8edb7fb420f8dfbd52a0afe161ddb287c0cd3e0c",
           "sourcePages": [52, 53, 54, 55],
           "fontVerified": true,
           "standaloneComplete": true
         }
       ],
       "originDisconnected": true,
-      "originRejectedConnections": 6,
+      "originRejectedConnections": 4,
       "offlineExports": [21, 22],
       "pageErrors": []
     },
@@ -265,8 +283,8 @@
         {
           "proposition": 1,
           "file": "firefox-1440-I1.html",
-          "bytes": 4616831,
-          "sha256": "ee0e8537fb362c20964d3643f6763ae448c0056d28f24009a07cc874a7715d14",
+          "bytes": 4620628,
+          "sha256": "624098f760e941002d1c7088f2d71a982cbc1893a9657797f9bb49c47c8ae9a2",
           "sourcePages": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
           "fontVerified": true,
           "standaloneComplete": true
@@ -274,8 +292,8 @@
         {
           "proposition": 15,
           "file": "firefox-1440-I15.html",
-          "bytes": 3325342,
-          "sha256": "54fc3845fa3c4de763cd4b18110a2c7c1d6c93a58009cfc24173518f5228ab6e",
+          "bytes": 3329139,
+          "sha256": "8a61dc3fea4536e90573cdded9ba9ce2aef30d8550028332fb9fa44cd94c0346",
           "sourcePages": [8, 9, 10, 11, 40, 41, 42],
           "fontVerified": true,
           "standaloneComplete": true
@@ -283,8 +301,8 @@
         {
           "proposition": 21,
           "file": "firefox-1440-I21.html",
-          "bytes": 2972449,
-          "sha256": "ad8f916daf3b4a6b7bab17aceb23388393952ab55510e23873e5cbea22531c1d",
+          "bytes": 2976246,
+          "sha256": "a324759c5e94d187cfb357e61b905e2f21105f0458b98ef0428eea1ce35e92c4",
           "sourcePages": [8, 9, 50, 51, 52, 53],
           "fontVerified": true,
           "standaloneComplete": true
@@ -292,8 +310,8 @@
         {
           "proposition": 22,
           "file": "firefox-1440-I22.html",
-          "bytes": 2228487,
-          "sha256": "aa682c4811114a1b3a9838276d30c062ab4394fbe230eb79ca182cdd58de7af8",
+          "bytes": 2232112,
+          "sha256": "a82bed1c2d192d2858e9103b8edb7fb420f8dfbd52a0afe161ddb287c0cd3e0c",
           "sourcePages": [52, 53, 54, 55],
           "fontVerified": true,
           "standaloneComplete": true
@@ -312,8 +330,8 @@
         {
           "proposition": 1,
           "file": "firefox-375-I1.html",
-          "bytes": 4616831,
-          "sha256": "ee0e8537fb362c20964d3643f6763ae448c0056d28f24009a07cc874a7715d14",
+          "bytes": 4620628,
+          "sha256": "624098f760e941002d1c7088f2d71a982cbc1893a9657797f9bb49c47c8ae9a2",
           "sourcePages": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
           "fontVerified": true,
           "standaloneComplete": true
@@ -321,8 +339,8 @@
         {
           "proposition": 15,
           "file": "firefox-375-I15.html",
-          "bytes": 3325342,
-          "sha256": "54fc3845fa3c4de763cd4b18110a2c7c1d6c93a58009cfc24173518f5228ab6e",
+          "bytes": 3329139,
+          "sha256": "8a61dc3fea4536e90573cdded9ba9ce2aef30d8550028332fb9fa44cd94c0346",
           "sourcePages": [8, 9, 10, 11, 40, 41, 42],
           "fontVerified": true,
           "standaloneComplete": true
@@ -330,8 +348,8 @@
         {
           "proposition": 21,
           "file": "firefox-375-I21.html",
-          "bytes": 2972449,
-          "sha256": "ad8f916daf3b4a6b7bab17aceb23388393952ab55510e23873e5cbea22531c1d",
+          "bytes": 2976246,
+          "sha256": "a324759c5e94d187cfb357e61b905e2f21105f0458b98ef0428eea1ce35e92c4",
           "sourcePages": [8, 9, 50, 51, 52, 53],
           "fontVerified": true,
           "standaloneComplete": true
@@ -339,8 +357,8 @@
         {
           "proposition": 22,
           "file": "firefox-375-I22.html",
-          "bytes": 2228487,
-          "sha256": "aa682c4811114a1b3a9838276d30c062ab4394fbe230eb79ca182cdd58de7af8",
+          "bytes": 2232112,
+          "sha256": "a82bed1c2d192d2858e9103b8edb7fb420f8dfbd52a0afe161ddb287c0cd3e0c",
           "sourcePages": [52, 53, 54, 55],
           "fontVerified": true,
           "standaloneComplete": true

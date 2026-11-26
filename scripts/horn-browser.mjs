@@ -231,15 +231,16 @@ async function artifact(browser, file, folder, width, engine) {
   }
   assert.deepEqual(remote, []);
   await context.close();
+  // Record names inside the output folder, not this machine's absolute paths.
   return {
-    file,
+    file: path.relative(out, file),
     sha256: hash(bytes),
     bytes: bytes.length,
     embeddedNativeData: true,
     sourceImages: 6,
     readings: 8,
     automaticRemoteRequests: remote,
-    pdf,
+    pdf: pdf && path.relative(out, pdf),
   };
 }
 for (const [engine, type] of [

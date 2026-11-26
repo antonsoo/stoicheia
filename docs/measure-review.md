@@ -118,7 +118,7 @@ retained in the upgrade record.
   `never`, in Greek, Latin and new English with a contextual note.
 - [Saved HTML, gzip-compressed](../examples/common-measure.html.gz): extract
   before opening; decompression gives the original 6,189,784 downloaded bytes.
-- [30-page PDF](../examples/common-measure.pdf), [exact CSV](../examples/common-measure.csv),
+- [31-page PDF](../examples/common-measure.pdf), [exact CSV](../examples/common-measure.csv),
   and [ruler SVG](../examples/common-measure.svg): actual browser downloads.
 
 All three retained screenshots were opened and inspected. The local drawing,

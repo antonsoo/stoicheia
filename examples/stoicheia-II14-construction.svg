@@ -1,24 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" role="img" aria-labelledby="qa-construction-title qa-construction-desc"><metadata>MIT License
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" role="img" aria-labelledby="qa-construction-title qa-construction-desc"><metadata>Required Notice: Copyright (c) 2026 Anthony Mercer (https://github.com/antonsoo/stoicheia)
 
-Copyright (c) 2026 Anton Soloviev
+# PolyForm Noncommercial License 1.0.0
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the &quot;Software&quot;), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+&lt;https://polyformproject.org/licenses/noncommercial/1.0.0&gt;
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## Acceptance
 
-THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+In order to get any license under these terms, you must agree to them as both strict obligations and conditions to all your licenses.
+
+## Copyright License
+
+The licensor grants you a copyright license for the software to do everything you might do with the software that would otherwise infringe the licensor&#39;s copyright in it for any permitted purpose.  However, you may only distribute the software according to [Distribution License](#distribution-license) and make changes or new works based on the software according to [Changes and New Works License](#changes-and-new-works-license).
+
+## Distribution License
+
+The licensor grants you an additional copyright license to distribute copies of the software.  Your license to distribute covers distributing the software with changes and new works permitted by [Changes and New Works License](#changes-and-new-works-license).
+
+## Notices
+
+You must ensure that anyone who gets a copy of any part of the software from you also gets a copy of these terms or the URL for them above, as well as copies of any plain-text lines beginning with `Required Notice:` that the licensor provided with the software.  For example:
+
+&gt; Required Notice: Copyright Yoyodyne, Inc. (http://example.com)
+
+## Changes and New Works License
+
+The licensor grants you an additional copyright license to make changes and new works based on the software for any permitted purpose.
+
+## Patent License
+
+The licensor grants you a patent license for the software that covers patent claims the licensor can license, or becomes able to license, that you would infringe by using the software.
+
+## Noncommercial Purposes
+
+Any noncommercial purpose is a permitted purpose.
+
+## Personal Uses
+
+Personal use for research, experiment, and testing for the benefit of public knowledge, personal study, private entertainment, hobby projects, amateur pursuits, or religious observance, without any anticipated commercial application, is use for a permitted purpose.
+
+## Noncommercial Organizations
+
+Use by any charitable organization, educational institution, public research organization, public safety or health organization, environmental protection organization, or government institution is use for a permitted purpose regardless of the source of funding or obligations resulting from the funding.
+
+## Fair Use
+
+You may have &quot;fair use&quot; rights for the software under the law. These terms do not limit them.
+
+## No Other Rights
+
+These terms do not allow you to sublicense or transfer any of your licenses to anyone else, or prevent the licensor from granting licenses to anyone else.  These terms do not imply any other licenses.
+
+## Patent Defense
+
+If you make any written claim that the software infringes or contributes to infringement of any patent, your patent license for the software granted under these terms ends immediately. If your company makes such a claim, your patent license ends immediately for work on behalf of your company.
+
+## Violations
+
+The first time you are notified in writing that you have violated any of these terms, or done anything with the software not covered by your licenses, your licenses can nonetheless continue if you come into full compliance with these terms, and take practical steps to correct past violations, within 32 days of receiving notice.  Otherwise, all your licenses end immediately.
+
+## No Liability
+
+***As far as the law allows, the software comes as is, without any warranty or condition, and the licensor will not be liable to you for any damages arising out of these terms or the use or nature of the software, under any kind of legal claim.***
+
+## Definitions
+
+The **licensor** is the individual or entity offering these terms, and the **software** is the software the licensor makes available under these terms.
+
+**You** refers to the individual or entity agreeing to these terms.
+
+**Your company** is any legal entity, sole proprietorship, or other kind of organization that you work for, plus all organizations that have control over, are under the control of, or are under common control with that organization.  **Control** means ownership of substantially all the assets of an entity, or the power to direct its management and policies by vote, contract, or otherwise.  Control can be direct or indirect.
+
+**Your licenses** are all the licenses granted to you for the software under these terms.
+
+**Use** means anything you do with the software requiring one of your licenses.
  Source: Euclid II.14, Heiberg 1883. Modern coordinate drawing in arbitrary units.</metadata><style>.quadrature-page{--qa-rule:#b7c8d6;--qa-brown:#875029;--qa-green:#32654d;color:#193d60}.quadrature-page main{max-width:1460px;margin:auto;padding:0 clamp(20px,4vw,64px)}.qa-header{border-bottom:1px solid var(--qa-rule);justify-content:space-between;align-items:center;gap:26px;max-width:1460px;margin:auto;padding:28px clamp(20px,4vw,64px);display:flex}.qa-brand{font:1.5rem Noto Serif,Georgia,serif;text-decoration:none}.qa-brand span{letter-spacing:.25em;margin-top:5px;font-size:.65rem;display:block}.qa-header nav{flex-wrap:wrap;gap:12px 22px;font-size:.86rem;display:flex}.qa-intro{grid-template-columns:1.1fr 1fr;align-items:end;gap:8%;padding:56px 0 42px;display:grid}.qa-intro h1{letter-spacing:-.05em;margin-bottom:0;font-size:clamp(2.8rem,4.8vw,4.9rem);line-height:1.1}.qa-intro&gt;div&gt;p:not(.qa-kicker){max-width:540px}.qa-intro&gt;div&gt;p:first-child:not(.qa-kicker){font:1.17rem/1.65 Noto Serif,Georgia,serif}.qa-kicker{letter-spacing:.12em;color:#52677b;margin:0 0 12px;font:650 .7rem/1.5 ui-sans-serif,sans-serif}.quadrature-page h2{letter-spacing:-.035em;font:clamp(1.7rem,2.8vw,2.6rem)/1.2 Noto Serif,Georgia,serif}.quadrature-page h3{font:1.2rem/1.4 Noto Serif,Georgia,serif}.quadrature-page button{background:#fbfcfe;border:1px solid #8ca3b6;min-height:44px;padding:10px 14px;line-height:1.4}.quadrature-page button[aria-pressed=true],.quadrature-page .qa-primary{color:#fff;background:#193d60;border-color:#193d60}.quadrature-page button:hover:not(:disabled){color:#193d60;background:#dce6ef}.quadrature-page input[type=range]{accent-color:#315d88;width:100%;min-height:36px}.quadrature-page select{color:#193d60;width:100%;font:inherit;background:#fbfcfe;border:1px solid #8ca3b6;margin:8px 0 18px;padding:10px;display:block}.quadrature-page select:focus-visible{outline-offset:3px;outline:3px solid #694780}.quadrature-page label{font-size:.9rem;line-height:1.5;display:block}.qa-workshop{border:1px solid var(--qa-rule);background:#fbfcfe;grid-template-columns:minmax(0,1fr) 300px;scroll-margin-top:20px;display:grid}.qa-board{border-right:1px solid var(--qa-rule);min-width:0;padding:24px}.qa-board-heading{justify-content:space-between;gap:16px;display:flex}.qa-board-heading p{margin:0}.qa-phone{display:none}.qa-givens{padding:25px}.qa-givens h2{font-size:1.75rem}.qa-length{margin:23px 0}.qa-length label{justify-content:space-between;gap:8px;display:flex}.qa-length label span{color:#52677b;font-size:.78rem}.qa-length input[type=number]{color:#193d60;background:#fff;border:1px solid #8ca3b6;width:100%;margin-top:8px;padding:9px 12px;font:1.3rem Noto Serif,Georgia,serif}.qa-check{align-items:center;gap:10px;margin:20px 0 8px;display:flex!important}.qa-check input{accent-color:#193d60;width:18px;height:18px}.qa-presets{flex-wrap:wrap;gap:6px;margin:20px 0 10px;display:flex}.qa-presets button{padding:8px 9px;font-size:.85rem}.qa-small{color:#52677b;font-size:.82rem;line-height:1.65}.qa-stages{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;display:grid}.qa-stages button{text-align:left;align-items:center;gap:9px;padding:10px;font-size:.8rem;display:flex}.qa-stages button span{flex-shrink:0;font:1.3rem Noto Serif,Georgia,serif}#qa-stage-note{min-height:3.3em;margin:20px 0 12px}.qa-result{background:#dce8e1;border-top:1px solid #adc1b4;grid-column:1/-1;padding:22px 26px;line-height:1.8}.qa-result strong{font:1.4rem Noto Serif,Georgia,serif;display:block}.qa-section{border-bottom:1px solid var(--qa-rule);padding:58px 0;scroll-margin-top:24px}.qa-section-intro{grid-template-columns:1fr 1fr;align-items:start;gap:8%;margin-bottom:28px;display:grid}.qa-section-intro h2{margin:0}.qa-two{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:6%;display:grid}.qa-actions{flex-wrap:wrap;align-items:center;gap:10px 16px;margin:16px 0;display:flex}.qa-actions a{font-size:.88rem}.qa-finding{margin:24px 0 18px;font:1.16rem/1.65 Noto Serif,Georgia,serif}#qa-move-output{float:right}.qa-table-wrap{margin:25px 0;overflow:auto}.qa-table-wrap table{border-collapse:collapse;text-align:left;width:100%;font-size:.87rem}.qa-table-wrap caption{text-align:left;margin:10px 0 15px;font-weight:600}.qa-table-wrap td,.qa-table-wrap th{border-bottom:1px solid var(--qa-rule);padding:12px;line-height:1.5}.qa-table-wrap thead{background:#dce6ef}.qa-math,.quadrature-page details{margin:22px 0;line-height:1.65}.quadrature-page summary{cursor:pointer;padding:12px 0;font-weight:600}.qa-languages{grid-template-columns:1fr 1fr 1fr;gap:30px;display:grid}.qa-languages p[lang]{font:1.12rem/1.95 Noto Serif,Georgia,serif}.qa-language-label{color:#52677b;letter-spacing:.12em;margin-bottom:15px;font-size:.68rem}#qa-passage-text&gt;h3{margin:28px 0;font-size:1.55rem}.qa-word-note{background:#fbfcfe;border-left:3px solid #875029;padding:12px 22px}.qa-word-note p{max-width:1000px}.qa-word-note p:first-child{font:1.05rem/1.7 Noto Serif,Georgia,serif}.qa-full-passage{border-bottom:1px solid var(--qa-rule);margin:30px 0}.qa-full-passage p[lang]{font:1.05rem/1.8 Noto Serif,Georgia,serif}#qa-question-options{border:0;margin:0 0 20px;padding:0}#qa-question-options legend{margin-bottom:18px;font:1.1rem/1.6 Noto Serif,Georgia,serif}#qa-question-options label{border-bottom:1px solid var(--qa-rule);cursor:pointer;align-items:center;gap:10px;padding:13px 10px;display:flex}#qa-question-options input{flex-shrink:0;width:17px;height:17px}.qa-notice,#qa-input-error{color:#654320;background:#fff5dd;border:1px solid #b99056;padding:14px;font-size:.85rem}#qa-sources .qa-two{align-items:start}.quadrature-page figure{min-width:0;margin:0}.qa-scan-scroll{background:#d3c4a9;border:1px solid #b7a78b;max-height:780px;overflow:auto}.qa-scan-scroll img{width:100%;max-width:none;height:auto;display:block}.qa-scan-scroll.qa-zoomed img{width:200%}.quadrature-page figcaption{overflow-wrap:anywhere;margin:12px 0;font-size:.8rem;line-height:1.6}.qa-save{grid-template-columns:1fr 1fr;gap:8%;display:grid}#qa-share-url{width:100%;margin-top:8px;padding:10px;display:block}.qa-footer{flex-wrap:wrap;justify-content:space-between;gap:16px;max-width:1460px;margin:auto;padding:28px clamp(20px,4vw,64px);font-size:.8rem;display:flex}#qa-construction svg,#qa-pieces svg,#qa-ledger svg,.qa-saved svg{width:100%;height:auto;display:block;overflow:visible}#qa-ledger{max-width:1000px;margin:auto}.qa-given{fill:#dae5ef;stroke:#315d88;stroke-width:2px}.qa-circle{fill:none;stroke:#52677b;stroke-width:1.6px}.qa-copy-line{stroke:#875029;stroke-width:4px}.qa-baseline{stroke:#52677b;stroke-width:1.2px}.qa-result-line{stroke:#32654d;stroke-width:4px}.qa-radius-line{stroke:#875029;stroke-width:2px;stroke-dasharray:6 4}.qa-angle{fill:none;stroke:#52677b;stroke-width:1.5px}.qa-centre{fill:#875029}.qa-result-dot{fill:#32654d}.qa-point-label{fill:#193d60;font:20px Noto Serif,Georgia,serif}.qa-area-label{fill:#193d60;font:21px Noto Serif,Georgia,serif}.qa-dimension{fill:#193d60;font:14px ui-sans-serif,sans-serif}.qa-caption{fill:#52677b;font:12px ui-sans-serif,sans-serif}.qa-square-outline{fill:none;stroke:#875029;stroke-width:1.7px;stroke-dasharray:6 4}.qa-extra{stroke:#875029;stroke-width:1.2px}.qa-piece-one{fill:#d1e1ef;stroke:#315d88;stroke-width:2px}.qa-piece-two{fill:#d7c6aa;stroke:#875029;stroke-width:2px}.qa-piece-label{fill:#193d60;font:15px ui-sans-serif,sans-serif}.qa-result-square{fill:#cfe1d6;stroke:#32654d;stroke-width:2px}.qa-shared-square{fill:#e7d6b9;stroke:#875029;stroke-width:2px}.qa-ledger-heading{fill:#193d60;font:16px Noto Serif,Georgia,serif}.qa-cancelled{opacity:.12}.qa-saved .qa-plate{break-inside:avoid;margin:24px 0}.qa-saved .qa-plate svg{max-height:480px}.qa-saved .qa-source-sheet{page-break-before:always;break-inside:avoid;padding:20px 0}.qa-saved .qa-source-sheet img{max-width:100%;height:auto;max-height:235mm;margin:auto;display:block}.qa-saved .qa-saved-intro{padding:36px 0}.qa-saved .qa-languages{grid-template-columns:1fr;gap:0}.qa-saved .qa-full-passage{break-inside:avoid;padding:10px 0}.qa-saved .qa-full-passage h3{font-size:1.1rem}.qa-saved .qa-full-passage p{margin-bottom:12px}.qa-saved .qa-license{white-space:pre-wrap;overflow-wrap:anywhere;font-size:.65rem}@media (width&lt;=1000px){.qa-workshop{grid-template-columns:minmax(0,1fr) 265px}.qa-board{padding:18px}.qa-givens{padding:20px}.qa-languages{grid-template-columns:1fr;gap:10px}.qa-languages p[lang]{margin-bottom:18px}}@media (width&lt;=760px){.qa-header{display:block}.qa-header nav{gap:12px 18px;margin-top:20px}.qa-intro,.qa-section-intro,.qa-save,.qa-two{grid-template-columns:1fr;gap:22px}.qa-intro{padding:35px 0}.qa-intro h1{font-size:3.1rem}.qa-intro&gt;div&gt;p:last-child{margin-bottom:0}.qa-workshop{grid-template-columns:1fr}.qa-board{border-right:0;border-bottom:1px solid var(--qa-rule);padding:16px 10px}.qa-board-heading{flex-wrap:wrap;padding:0 8px}.qa-phone{font-size:.8rem;display:block}.qa-stages{grid-template-columns:repeat(2,minmax(0,1fr))}.qa-result{padding:20px}.qa-section{padding:38px 0}.qa-givens{padding:25px 22px}.qa-givens h2 br{display:none}.qa-length{margin:18px 0}.qa-scan-scroll{max-height:600px}.qa-languages p[lang]{font-size:1.08rem}.qa-word-note{padding:15px}.qa-table-wrap table{min-width:550px}.qa-board&gt;p,.qa-board&gt;a{margin-left:8px;margin-right:8px}.qa-saved .qa-plate svg{max-height:none}}@media print{:root{color:#172b3e;background:#fff;font-size:10pt}.quadrature-page main{max-width:none;padding:0}.qa-saved h1{font-size:28pt}.qa-saved h2{font-size:20pt}.qa-saved h3{break-after:avoid}.qa-saved .qa-saved-intro{padding:10px 0}.qa-saved .qa-table-wrap{overflow:visible}.qa-saved table{min-width:0}.qa-saved .qa-full-passage p[lang]{font-size:10.5pt;line-height:1.7}.qa-saved .qa-plate{break-inside:avoid}.qa-saved a{color:inherit}.qa-saved .qa-source-sheet img{max-height:230mm}.qa-saved details{display:block}}@page{size:A4;margin:14mm 12mm}@media print{body.quadrature-page{background:#fff;font-size:10pt;line-height:1.55}.qa-saved h2,.qa-saved h3{break-after:avoid}.qa-saved .qa-source-sheet{padding:10px 0}}</style><title id="qa-construction-title">Euclid II.14: 9 by 4 rectangle</title><desc id="qa-construction-desc">Extend the long side by 4. The midpoint gives radius 6.5. The perpendicular meets the semicircle at height 6. Horizontal and vertical distances use the same scale.</desc>
   <rect x="115.7143" y="271.0476" width="317.1429" height="140.9524" class="qa-given"/>
   <rect x="432.8571" y="59.619" width="211.4286" height="211.4286" class="qa-result-square qa-constructed-square"/><text x="538.5714" y="170.3333" class="qa-area-label" text-anchor="middle">36 u²</text>

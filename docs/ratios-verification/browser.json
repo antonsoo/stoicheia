@@ -1,7 +1,8 @@
 {
-  "checkedAt": "2026-10-27T04:17:56.076Z",
+  "checkedAt": "2026-11-25T23:42:32.644Z",
   "scope": "Local production build. Complete learner journeys, native files and origin-disabled offline reloads. No hosted-publication claim.",
-  "edition": "ecef00712fa60414f52d0fdf063e49dcf0fe5e9d94caa86b160af6ce03de2932",
+  "base": null,
+  "edition": "4461c478876441343175cf3f2869c1596d2604bad691fde99e09705e2529cae8",
   "configurations": [
     {
       "engine": "chromium",
@@ -18,8 +19,8 @@
       },
       "share": "?kind=fraction&p=99&q=70&m=70&n=99&bound=100&reading=6&page=5",
       "saved": {
-        "bytes": 2766641,
-        "sha256": "c9d48eaf1e58dc2d94dd7c11a5ebde79c0e45980a068e172d239f016e5cdf81e",
+        "bytes": 2775238,
+        "sha256": "461b31bcf317ff83ed827683f66a8031dea7c5f4fb58fa61c092cf54adeedd75",
         "sourceImages": 5,
         "readings": 7,
         "scripts": 0,
@@ -28,7 +29,7 @@
       "offline": {
         "originServing": false,
         "browserNetworkEnabled": false,
-        "cacheFiles": 176,
+        "cacheFiles": 232,
         "sourceAndDownloadWorked": true
       },
       "accessibilityViolations": 0,
@@ -49,8 +50,8 @@
       },
       "share": "?kind=fraction&p=99&q=70&m=70&n=99&bound=100&reading=6&page=5",
       "saved": {
-        "bytes": 2766641,
-        "sha256": "c9d48eaf1e58dc2d94dd7c11a5ebde79c0e45980a068e172d239f016e5cdf81e",
+        "bytes": 2775238,
+        "sha256": "461b31bcf317ff83ed827683f66a8031dea7c5f4fb58fa61c092cf54adeedd75",
         "sourceImages": 5,
         "readings": 7,
         "scripts": 0,
@@ -59,7 +60,7 @@
       "offline": {
         "originServing": false,
         "browserNetworkEnabled": false,
-        "cacheFiles": 176,
+        "cacheFiles": 232,
         "sourceAndDownloadWorked": true
       },
       "accessibilityViolations": 0,
@@ -80,8 +81,8 @@
       },
       "share": "?kind=fraction&p=99&q=70&m=70&n=99&bound=100&reading=6&page=5",
       "saved": {
-        "bytes": 2766641,
-        "sha256": "c9d48eaf1e58dc2d94dd7c11a5ebde79c0e45980a068e172d239f016e5cdf81e",
+        "bytes": 2775238,
+        "sha256": "461b31bcf317ff83ed827683f66a8031dea7c5f4fb58fa61c092cf54adeedd75",
         "sourceImages": 5,
         "readings": 7,
         "scripts": 0,
@@ -90,7 +91,7 @@
       "offline": {
         "originServing": false,
         "browserNetworkEnabled": false,
-        "cacheFiles": 176,
+        "cacheFiles": 232,
         "sourceAndDownloadWorked": true
       },
       "accessibilityViolations": 0,
@@ -111,8 +112,8 @@
       },
       "share": "?kind=fraction&p=99&q=70&m=70&n=99&bound=100&reading=6&page=5",
       "saved": {
-        "bytes": 2766641,
-        "sha256": "c9d48eaf1e58dc2d94dd7c11a5ebde79c0e45980a068e172d239f016e5cdf81e",
+        "bytes": 2775238,
+        "sha256": "461b31bcf317ff83ed827683f66a8031dea7c5f4fb58fa61c092cf54adeedd75",
         "sourceImages": 5,
         "readings": 7,
         "scripts": 0,
@@ -121,7 +122,7 @@
       "offline": {
         "originServing": false,
         "browserNetworkEnabled": false,
-        "cacheFiles": 176,
+        "cacheFiles": 232,
         "sourceAndDownloadWorked": true
       },
       "accessibilityViolations": 0,

@@ -157,7 +157,7 @@ rules and actual browser evidence.
 
 [Source, assumptions and geometry](docs/solids-model.md) ·
 [Actual illustrated reading, gzip](examples/solids-reading.html.gz) ·
-[30-page tagged PDF](examples/solids-reading.pdf) ·
+[31-page tagged PDF](examples/solids-reading.pdf) ·
 [Editable example](examples/solids-experiment.json) ·
 [A4 cutting sheet](examples/solids-two-tetrahedra.svg).
 Decompress the HTML before opening it. The [PDF structure review](docs/solids-pdf-review.md)
@@ -427,7 +427,7 @@ offline; the source viewer and export refuse a substituted image.
 
 [Source and model](docs/measure-model.md) · [Review and evidence](docs/measure-review.md) ·
 [Actual saved reading, gzip-compressed](examples/common-measure.html.gz) ·
-[30-page PDF](examples/common-measure.pdf) · [Exact record](examples/common-measure.csv).
+[31-page PDF](examples/common-measure.pdf) · [Exact record](examples/common-measure.csv).
 Extract the HTML before opening it. These artifacts preserve a diagonal run at
 turn eight, alongside the distinct terminating fraction comparison.
 
@@ -885,6 +885,8 @@ retried; changing lessons during a save does not alter the saved snapshot.
 The same verification now protects the I.22 workshop. An earlier export accepted
 a substituted HTTP-200 image under the wrong page caption; that case now refuses
 the download. [Actual file workflows and limits](docs/illustrated-review.md).
+The retained examples were regenerated on 2026-11-25 for the author-name and
+license change ([what changed](docs/regeneration-2026-11-25.md)).
 
 ## Accuracy and limitations
 
